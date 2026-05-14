@@ -1,0 +1,259 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\lim_{x \\to 5} (2x^2 - 3x + 1) = ?",
+      "answer": 36,
+      "tolerance": 0,
+      "hints": [
+        "Polynomial → continuous → just substitute.",
+        "$2(25) - 15 + 1 = 36$."
+      ],
+      "explanation": "$2(25) - 15 + 1 = 50 - 15 + 1 = 36$.",
+      "steps": [
+        "**Recognize the function type.** A polynomial — and polynomials are CONTINUOUS everywhere. That means: $\\lim_{x \\to a} f(x) = f(a)$ — direct substitution just works.",
+        "**Apply: substitute $x = 5$.** $2 \\cdot 5^2 - 3 \\cdot 5 + 1 = 50 - 15 + 1 = 36$.",
+        "**Mental flowchart for limits.** First TRY substitution. If the function is built from polynomials, sines, cosines, exponentials, etc. AND the substitution gives a normal number, you're done. Only escalate to algebra (factoring, conjugates, etc.) when substitution fails."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\lim_{x \\to 4} \\dfrac{x^2 - 16}{x - 4} = ?",
+      "answer": 8,
+      "tolerance": 0,
+      "hints": [
+        "Direct sub gives $0/0$ — factor first.",
+        "$(x-4)(x+4)/(x-4) = x+4$. Limit is $4 + 4 = 8$."
+      ],
+      "explanation": "Factor: $(x - 4)(x + 4)/(x - 4) = x + 4$. Limit: $4 + 4 = 8$.",
+      "steps": [
+        "**Always try direct substitution first.** $x = 4$ gives $\\dfrac{16 - 16}{4 - 4} = \\dfrac{0}{0}$ — INDETERMINATE. We need another technique.",
+        "**Recognize the form.** Numerator and denominator both vanish at the same $x$ — that means they share a common factor $(x - 4)$. Strategy: factor and CANCEL the offending zero.",
+        "**Factor the numerator (difference of squares).** $x^2 - 16 = (x - 4)(x + 4)$.",
+        "**Cancel the $(x-4)$.** $\\dfrac{(x-4)(x+4)}{x-4} = x + 4$ for $x \\neq 4$.",
+        "**Why the cancellation is legal.** The limit asks about behavior NEAR $x = 4$, never AT $x = 4$. The cancelled expression matches the original everywhere except $x = 4$, and limits don't care about a single point.",
+        "**Substitute into the simplified expression.** $\\lim_{x \\to 4}(x + 4) = 8$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\lim_{x \\to -3} \\dfrac{x^2 + 5x + 6}{x + 3} = ?",
+      "answer": -1,
+      "tolerance": 0,
+      "hints": [
+        "Factor numerator: $(x + 3)(x + 2)$.",
+        "Cancel $(x+3)$, then sub: $-3 + 2 = -1$."
+      ],
+      "explanation": "$(x + 3)(x + 2)/(x + 3) = x + 2$. Limit: $-3 + 2 = -1$.",
+      "steps": [
+        "**Try direct substitution.** $x = -3$: numerator $= 9 - 15 + 6 = 0$; denominator $= 0$. $0/0$ — indeterminate.",
+        "**Same template as Q2: factor and cancel.** Numerator must share factor $(x + 3)$ with denominator.",
+        "**Factor.** $x^2 + 5x + 6 = (x + 3)(x + 2)$.",
+        "**Cancel.** $\\dfrac{(x+3)(x+2)}{x+3} = x + 2$ for $x \\neq -3$.",
+        "**Substitute.** $\\lim_{x \\to -3}(x + 2) = -3 + 2 = -1$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\lim_{x \\to 0} \\dfrac{\\sqrt{x + 9} - 3}{x} = ?",
+      "answer": 0.1667,
+      "tolerance": 0.001,
+      "hints": [
+        "$0/0$ — multiply by conjugate $\\sqrt{x+9} + 3$.",
+        "Get $\\dfrac{1}{\\sqrt{x+9}+3}$ → at $x=0$: $1/6$."
+      ],
+      "explanation": "Multiply by conjugate → $\\dfrac{1}{\\sqrt{x+9}+3}$. At $x=0$: $\\dfrac{1}{6} \\approx 0.1667$.",
+      "steps": [
+        "**Try direct substitution.** At $x = 0$: $\\dfrac{\\sqrt{9} - 3}{0} = \\dfrac{0}{0}$. Indeterminate.",
+        "**Pattern recognition: square root in numerator + $0/0$ → use the conjugate trick.** Whenever you see $\\sqrt{\\ldots} - c$ or $c - \\sqrt{\\ldots}$ in a $0/0$ limit, multiply top and bottom by the conjugate. The trick converts the troublesome root difference into a clean polynomial difference via $(a - b)(a + b) = a^2 - b^2$.",
+        "**Multiply by $\\dfrac{\\sqrt{x+9} + 3}{\\sqrt{x+9} + 3}$** (multiplying by 1 — always legal).",
+        "**Numerator becomes:** $(\\sqrt{x+9})^2 - 3^2 = (x + 9) - 9 = x$.",
+        "**Denominator becomes:** $x \\cdot (\\sqrt{x+9} + 3)$.",
+        "**Cancel the $x$:** $\\dfrac{x}{x(\\sqrt{x+9} + 3)} = \\dfrac{1}{\\sqrt{x+9} + 3}$.",
+        "**Substitute $x = 0$.** $\\dfrac{1}{\\sqrt{9} + 3} = \\dfrac{1}{6} \\approx 0.1667$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If direct substitution gives } 0/0, \\text{ the limit:}",
+      "choices": [
+        "doesn't exist",
+        "is exactly 0",
+        "is indeterminate — needs more work",
+        "is 1"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "$0/0$ is the most famous indeterminate form.",
+        "Need algebra (factor, rationalize) to evaluate."
+      ],
+      "explanation": "$0/0$ is **indeterminate**. The limit might be 0, 1, ∞, or anything else — substitution just failed. Algebraic manipulation is needed.",
+      "steps": [
+        "**Key vocabulary.** 'Indeterminate' = direct substitution doesn't determine the answer — but the limit might still exist after more work.",
+        "**The seven famous indeterminate forms.** $\\dfrac{0}{0}$, $\\dfrac{\\infty}{\\infty}$, $0 \\cdot \\infty$, $\\infty - \\infty$, $0^0$, $1^\\infty$, $\\infty^0$.",
+        "**Contrast with 'genuinely infinite'.** $\\dfrac{5}{0}$ is NOT indeterminate — it's a clear sign of divergence (limit is $\\pm \\infty$ or DNE).",
+        "**Resolution.** When you hit $0/0$, escalate: factor, rationalize, expand, combine, or (later) L'Hôpital's rule."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\lim_{x \\to 2} \\dfrac{x^3 - 8}{x - 2} = ?",
+      "answer": 12,
+      "tolerance": 0,
+      "hints": [
+        "Factor: $x^3 - 8 = (x - 2)(x^2 + 2x + 4)$ (difference of cubes).",
+        "Cancel $(x-2)$, sub: $4 + 4 + 4 = 12$."
+      ],
+      "explanation": "$(x - 2)(x^2 + 2x + 4)/(x - 2) = x^2 + 2x + 4$. At $x=2$: $4 + 4 + 4 = 12$.",
+      "steps": [
+        "**Substitute.** $\\dfrac{8 - 8}{2 - 2} = \\dfrac{0}{0}$ — indeterminate.",
+        "**Recognize a difference of cubes.** $x^3 - 8 = x^3 - 2^3$. Identity: $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$.",
+        "**Factor.** $x^3 - 8 = (x - 2)(x^2 + 2x + 4)$.",
+        "**Cancel** the $(x - 2)$: $x^2 + 2x + 4$.",
+        "**Substitute.** $2^2 + 2 \\cdot 2 + 4 = 4 + 4 + 4 = 12$.",
+        "**Memorize $a^3 - b^3 = (a-b)(a^2+ab+b^2)$ and $a^3 + b^3 = (a+b)(a^2-ab+b^2)$** — they show up regularly in $0/0$ limits."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\lim_{x \\to 0} \\dfrac{(x + 3)^2 - 9}{x} = ?",
+      "answer": 6,
+      "tolerance": 0,
+      "hints": [
+        "Expand: $(x+3)^2 - 9 = x^2 + 6x + 9 - 9 = x^2 + 6x = x(x + 6)$.",
+        "Cancel $x$: $x + 6$. At $x=0$: $6$."
+      ],
+      "explanation": "Expand top: $x^2 + 6x = x(x+6)$. Cancel: $x + 6 \\to 6$.",
+      "steps": [
+        "**Substitute.** $x = 0$: $\\dfrac{9 - 9}{0} = \\dfrac{0}{0}$ — indeterminate.",
+        "**Strategy: expand the squared expression to expose the common factor $x$.**",
+        "**Expand.** $(x + 3)^2 - 9 = x^2 + 6x + 9 - 9 = x^2 + 6x$.",
+        "**Factor.** $x(x + 6)$ — the $x$ matches the $x$ in the denominator. Cancel.",
+        "**Substitute.** $x + 6 \\to 0 + 6 = 6$.",
+        "**This is a difference-quotient pattern.** $\\dfrac{f(0 + h) - f(0)}{h}$ where $f(x) = x^2$ and $h = x$... wait, here $f(x) = (x+3)^2$, $h = x$, base point $x_0 = 0$. The answer 6 IS $f'(0) = 2(0+3) = 6$ — the derivative of $(x+3)^2$ at 0. The limit is sneakily computing a derivative from first principles."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\lim_{h \\to 0} \\dfrac{(2 + h)^2 - 4}{h} = ?",
+      "answer": 4,
+      "tolerance": 0,
+      "hints": [
+        "Expand: $4 + 4h + h^2 - 4 = 4h + h^2 = h(4 + h)$.",
+        "Cancel $h$: $4 + h$. At $h=0$: $4$."
+      ],
+      "explanation": "$\\dfrac{4h + h^2}{h} = 4 + h \\to 4$.",
+      "steps": [
+        "**Recognize the form.** $\\dfrac{f(2 + h) - f(2)}{h}$ with $f(x) = x^2$. This is LITERALLY the derivative of $x^2$ at $x = 2$ (definition of derivative). Expected answer: $f'(2) = 2 \\cdot 2 = 4$.",
+        "**Substitute to confirm $0/0$.** $\\dfrac{4 - 4}{0} = \\dfrac{0}{0}$.",
+        "**Expand and simplify.** $(2 + h)^2 - 4 = 4 + 4h + h^2 - 4 = 4h + h^2 = h(4 + h)$.",
+        "**Cancel $h$.** $\\dfrac{h(4 + h)}{h} = 4 + h$.",
+        "**Limit.** $h \\to 0 \\Rightarrow 4$.",
+        "**Lesson.** Limits of the form $\\dfrac{f(a + h) - f(a)}{h}$ as $h \\to 0$ are ALWAYS derivatives. Recognizing this pattern saves time later when you can just compute $f'(a)$ directly."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\lim_{x \\to 1} \\dfrac{x^2 - 1}{x^2 + 2x - 3} = ?",
+      "answer": 0.5,
+      "tolerance": 0.005,
+      "hints": [
+        "Factor numerator: $(x-1)(x+1)$. Denominator: $(x-1)(x+3)$.",
+        "Cancel: $(x+1)/(x+3)$. At $x=1$: $2/4 = 1/2$."
+      ],
+      "explanation": "$\\dfrac{(x-1)(x+1)}{(x-1)(x+3)} = \\dfrac{x+1}{x+3}$. At $x = 1$: $\\dfrac{2}{4} = 0.5$.",
+      "steps": [
+        "**Substitute.** $\\dfrac{0}{0}$ at $x = 1$.",
+        "**BOTH top and bottom need factoring** when they're both polynomials of degree $\\geq 2$ that vanish at the same point.",
+        "**Factor numerator.** $x^2 - 1 = (x - 1)(x + 1)$ (difference of squares).",
+        "**Factor denominator.** $x^2 + 2x - 3 = (x - 1)(x + 3)$. (Look for the $(x - 1)$ factor that must be there.)",
+        "**Cancel.** $\\dfrac{(x-1)(x+1)}{(x-1)(x+3)} = \\dfrac{x+1}{x+3}$.",
+        "**Substitute.** $\\dfrac{1+1}{1+3} = \\dfrac{2}{4} = 0.5$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\lim_{h \\to 0} \\dfrac{\\dfrac{1}{2 + h} - \\dfrac{1}{2}}{h} = ? \\text{ (decimal)}",
+      "answer": -0.25,
+      "tolerance": 0.005,
+      "hints": [
+        "Combine top: $\\dfrac{2 - (2+h)}{2(2+h)} = \\dfrac{-h}{2(2+h)}$.",
+        "Divide by $h$: $\\dfrac{-1}{2(2+h)}$. At $h=0$: $-1/4 = -0.25$."
+      ],
+      "explanation": "Combine fractions → $\\dfrac{-1}{2(2+h)} \\to -1/4 = -0.25$.",
+      "steps": [
+        "**Recognize the derivative pattern.** $\\dfrac{f(2 + h) - f(2)}{h}$ with $f(x) = 1/x$. Predicted answer: $f'(2) = -1/4 = -0.25$.",
+        "**Substitute to confirm $0/0$.** $\\dfrac{1/2 - 1/2}{0} = \\dfrac{0}{0}$.",
+        "**Pattern for 'difference of fractions' on top: combine first.** $\\dfrac{1}{2+h} - \\dfrac{1}{2} = \\dfrac{2 - (2+h)}{2(2+h)} = \\dfrac{-h}{2(2+h)}$. (Common denominator.)",
+        "**Divide by $h$.** $\\dfrac{-h}{2(2+h)} \\div h = \\dfrac{-1}{2(2+h)}$. (The $h$ in the top cancels with the $h$ in the bottom.)",
+        "**Substitute $h = 0$.** $\\dfrac{-1}{2 \\cdot 2} = -\\dfrac{1}{4} = -0.25$.",
+        "**Confirms the derivative prediction.** $f(x) = 1/x \\Rightarrow f'(x) = -1/x^2$, so $f'(2) = -1/4$. ✓"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q11",
+      "type": "multiple-choice",
+      "promptTex": "\\text{When the limit produces } \\dfrac{5}{0} \\text{ on direct substitution (nonzero/zero), the limit is:}",
+      "choices": [
+        "0",
+        "5",
+        "infinite (or DNE)",
+        "indeterminate"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Nonzero / 0 is NOT indeterminate.",
+        "It's infinite — possibly $+\\infty$, $-\\infty$, or DNE depending on the side."
+      ],
+      "explanation": "$5/0$ is **not** indeterminate — the function diverges. Limit is $\\pm\\infty$ or DNE (depends on signs from the left vs right).",
+      "steps": [
+        "**Distinguish two failures of substitution:**",
+        "**$0/0$ — INDETERMINATE.** The limit might be anything; algebra needed.",
+        "**Nonzero/0 — INFINITE.** The function blows up. The limit is $+\\infty$, $-\\infty$, or DNE (depending on the sign approaching from left vs right).",
+        "**Example.** $\\lim_{x \\to 0} \\dfrac{1}{x}$: from the right, $+\\infty$; from the left, $-\\infty$. So the two-sided limit DNE. But $\\lim_{x \\to 0} \\dfrac{1}{x^2} = +\\infty$ unambiguously."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\lim_{x \\to 9} \\dfrac{\\sqrt{x} - 3}{x - 9} = ? \\text{ (decimal)}",
+      "answer": 0.1667,
+      "tolerance": 0.001,
+      "hints": [
+        "Multiply by conjugate $\\sqrt{x} + 3$.",
+        "Numerator: $x - 9$. Cancel with denominator. Get $1/(\\sqrt{x}+3) \\to 1/6 \\approx 0.167$."
+      ],
+      "explanation": "$\\dfrac{(\\sqrt{x}-3)(\\sqrt{x}+3)}{(x-9)(\\sqrt{x}+3)} = \\dfrac{x - 9}{(x-9)(\\sqrt{x}+3)} = \\dfrac{1}{\\sqrt{x}+3}$. Limit: $1/6 \\approx 0.167$.",
+      "steps": [
+        "**Substitute.** $\\dfrac{3 - 3}{9 - 9} = \\dfrac{0}{0}$.",
+        "**Square root in the numerator → conjugate trick.** Same template as Q4.",
+        "**Multiply by $\\dfrac{\\sqrt{x} + 3}{\\sqrt{x} + 3}$:** numerator becomes $(\\sqrt{x})^2 - 3^2 = x - 9$. Denominator: $(x - 9)(\\sqrt{x} + 3)$.",
+        "**Cancel the $(x - 9)$.** $\\dfrac{x - 9}{(x - 9)(\\sqrt{x} + 3)} = \\dfrac{1}{\\sqrt{x} + 3}$.",
+        "**Substitute $x = 9$.** $\\dfrac{1}{3 + 3} = \\dfrac{1}{6} \\approx 0.1667$.",
+        "**Notice:** This is $f'(9)$ for $f(x) = \\sqrt{x}$. Predicted via power rule: $f'(x) = \\dfrac{1}{2\\sqrt{x}}$, so $f'(9) = \\dfrac{1}{6}$. ✓ Another difference-quotient → derivative."
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

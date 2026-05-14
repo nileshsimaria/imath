@@ -1,0 +1,271 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{What is the slope of any line parallel to } y = 4x - 7?",
+      "answer": 4,
+      "tolerance": 0.001,
+      "hints": [
+        "Parallel lines have the same slope.",
+        "The slope of $y = 4x - 7$ is the coefficient of $x$."
+      ],
+      "explanation": "Parallel lines have equal slopes. The given line has slope $4$, so any parallel line also has slope $4$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the slope of any line perpendicular to } y = 4x - 7?",
+      "choices": [
+        "4",
+        "-4",
+        "\\dfrac{1}{4}",
+        "-\\dfrac{1}{4}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 3,
+      "hints": [
+        "Perpendicular slopes multiply to $-1$.",
+        "The negative reciprocal of $4$ is $-\\tfrac{1}{4}$."
+      ],
+      "explanation": "Perpendicular = negative reciprocal. The given slope is $4$, so the perpendicular slope is $-\\tfrac{1}{4}$. Check: $4 \\cdot \\left(-\\tfrac{1}{4}\\right) = -1$. ✓",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which line is perpendicular to } y = \\tfrac{2}{3}x + 1?",
+      "choices": [
+        "y = \\tfrac{2}{3}x - 5",
+        "y = -\\tfrac{2}{3}x + 1",
+        "y = -\\tfrac{3}{2}x + 4",
+        "y = \\tfrac{3}{2}x"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "Perpendicular slope = negative reciprocal.",
+        "Negative reciprocal of $\\tfrac{2}{3}$ is $-\\tfrac{3}{2}$ — flip the fraction, then negate."
+      ],
+      "explanation": "Negative reciprocal of $\\tfrac{2}{3}$ is $-\\tfrac{3}{2}$. The line $y = -\\tfrac{3}{2}x + 4$ has that slope.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the relationship between } y = 2x + 3 \\\\ \\text{and } y = 2x - 5?",
+      "choices": [
+        "Parallel",
+        "Perpendicular",
+        "Same line",
+        "Neither"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Compare the slopes first.",
+        "Same slope, different y-intercepts means…"
+      ],
+      "explanation": "Both have slope $2$ but different y-intercepts ($3$ and $-5$). That's the definition of **parallel**.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Find the equation of the line through } (0, 5) \\\\ \\text{that is perpendicular to } y = -\\tfrac{1}{2}x + 1.",
+      "choices": [
+        "y = -\\tfrac{1}{2}x + 5",
+        "y = 2x + 5",
+        "y = -2x + 5",
+        "y = \\tfrac{1}{2}x + 5"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "The perpendicular slope of $-\\tfrac{1}{2}$ is its negative reciprocal: $2$.",
+        "Use slope-intercept with $m = 2$ and the y-intercept $(0, 5)$."
+      ],
+      "explanation": "Perpendicular slope $= -\\dfrac{1}{-1/2} = 2$. With y-intercept at $(0, 5)$: $y = 2x + 5$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** The perpendicular slope of $-\\tfrac{1}{2}$ is its negative reciprocal: $2$."
+        },
+        {
+          "text": "Use slope-intercept with $m = 2$ and the y-intercept $(0, 5)$."
+        },
+        {
+          "text": "**Solution.** Perpendicular slope $= -\\dfrac{1}{-1/2} = 2$. With y-intercept at $(0, 5)$: $y = 2x + 5$."
+        }
+      ]
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which line is parallel to } y = -2x + 5?",
+      "choices": [
+        "y = 2x - 1",
+        "y = -2x + 7",
+        "y = \\dfrac{1}{2}x - 3",
+        "y = -\\dfrac{1}{2}x + 5"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Parallel lines have the same slope.",
+        "Slope of given line: $-2$. Match it."
+      ],
+      "explanation": "Parallel = same slope. $y = -2x + 7$ has slope $-2$, matching the original.",
+      "steps": [
+        "Parallel lines have the **same slope**.",
+        "Original slope: $-2$.",
+        "$y = -2x + 7$ also has slope $-2$ → parallel ✓."
+      ],
+      "id": "q6",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which line is perpendicular to } y = 4x - 3?",
+      "choices": [
+        "y = 4x + 5",
+        "y = -4x + 5",
+        "y = -\\dfrac{1}{4}x + 5",
+        "y = \\dfrac{1}{4}x - 3"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "Perpendicular slopes are negative reciprocals.",
+        "$4 \\to -\\dfrac{1}{4}$."
+      ],
+      "explanation": "Perpendicular = negative reciprocal slope. $4 \\to -\\dfrac{1}{4}$. So $y = -\\dfrac{1}{4}x + 5$.",
+      "steps": [
+        "Perpendicular slope = negative reciprocal of original.",
+        "Original slope: $4$. Negative reciprocal: $-\\dfrac{1}{4}$.",
+        "$y = -\\dfrac{1}{4}x + 5$ has slope $-\\dfrac{1}{4}$ ✓."
+      ],
+      "id": "q7",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Find the equation of the line parallel to } y = 3x - 2 \\\\ \\text{that passes through } (1, 5).",
+      "choices": [
+        "y = 3x + 2",
+        "y = 3x - 2",
+        "y = -\\dfrac{1}{3}x + \\dfrac{16}{3}",
+        "y = 3x + 5"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Same slope (3). Use point-slope: $y - 5 = 3(x - 1)$.",
+        "$y - 5 = 3x - 3 \\Rightarrow y = 3x + 2$."
+      ],
+      "explanation": "Slope 3. $y - 5 = 3(x - 1) \\Rightarrow y = 3x + 2$.",
+      "steps": [
+        "Parallel slope = original slope = 3.",
+        "Use point-slope at $(1, 5)$: $y - 5 = 3(x - 1)$.",
+        "Distribute: $y - 5 = 3x - 3$.",
+        "Solve: $y = 3x + 2$."
+      ],
+      "id": "q8",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Find the equation of the line perpendicular to } y = -\\dfrac{2}{3}x + 1 \\\\ \\text{that passes through } (2, -4).",
+      "choices": [
+        "y = \\dfrac{3}{2}x - 7",
+        "y = -\\dfrac{2}{3}x + 1",
+        "y = \\dfrac{2}{3}x - 4",
+        "y = -\\dfrac{3}{2}x - 1"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Perpendicular slope: negative reciprocal of $-\\dfrac{2}{3}$ is $\\dfrac{3}{2}$.",
+        "Use point-slope at $(2, -4)$: $y + 4 = \\dfrac{3}{2}(x - 2) \\Rightarrow y = \\dfrac{3}{2}x - 7$."
+      ],
+      "explanation": "Perpendicular slope $= +\\dfrac{3}{2}$. Through $(2, -4)$: $y = \\dfrac{3}{2}x - 7$.",
+      "steps": [
+        "Negative reciprocal of $-\\dfrac{2}{3}$: flip sign and invert → $\\dfrac{3}{2}$.",
+        "Point-slope at $(2, -4)$: $y - (-4) = \\dfrac{3}{2}(x - 2)$, i.e., $y + 4 = \\dfrac{3}{2}(x - 2)$.",
+        "Distribute: $y + 4 = \\dfrac{3}{2}x - 3$.",
+        "Solve: $y = \\dfrac{3}{2}x - 7$."
+      ],
+      "id": "q9",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Are the lines } 2x + 3y = 6 \\text{ and } 4x + 6y = 18 \\text{ parallel?}",
+      "choices": [
+        "Yes — same line",
+        "Yes — distinct parallel lines",
+        "No — they intersect",
+        "No — they're perpendicular"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Convert each to slope-intercept and compare slopes and intercepts.",
+        "Both have slope $-\\dfrac{2}{3}$ but different y-intercepts."
+      ],
+      "explanation": "Both slopes: $-2/3$. y-intercepts: $2$ vs $3$. Same slope, different intercept → distinct parallel lines.",
+      "steps": [
+        "Convert each line to slope-intercept form.",
+        "$2x + 3y = 6 \\Rightarrow 3y = -2x + 6 \\Rightarrow y = -\\dfrac{2}{3}x + 2$.",
+        "$4x + 6y = 18 \\Rightarrow 6y = -4x + 18 \\Rightarrow y = -\\dfrac{2}{3}x + 3$.",
+        "Same slope ($-2/3$) — parallel. Different y-intercepts ($2$ vs $3$) — not the same line.",
+        "**Distinct parallel lines.**"
+      ],
+      "id": "q10",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the slope of any line perpendicular to a horizontal line?}",
+      "choices": [
+        "0",
+        "1",
+        "undefined",
+        "any value"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Horizontal lines have slope 0. What's perpendicular to horizontal?",
+        "Vertical lines — slope is undefined."
+      ],
+      "explanation": "Perpendicular to horizontal = vertical. Vertical lines have **undefined** slope (no run).",
+      "steps": [
+        "A horizontal line has slope $0$.",
+        "Perpendicular to a horizontal line is a **vertical** line.",
+        "Vertical lines have **undefined** slope (the rise/run formula has 0 in the denominator).",
+        "Note: there's no negative reciprocal of 0 — that's why this case is special."
+      ],
+      "id": "q11",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Is } y = 3x + 2 \\text{ perpendicular to } x + 3y = 9?",
+      "choices": [
+        "Yes",
+        "No"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Find slope of each. First: $3$. Second: convert to slope-intercept.",
+        "$3y = -x + 9 \\Rightarrow y = -\\dfrac{1}{3}x + 3$. Slopes are negative reciprocals!"
+      ],
+      "explanation": "Slope 1: $3$. Slope 2: $-\\dfrac{1}{3}$. Product $= -1$ → perpendicular ✓.",
+      "steps": [
+        "First slope: $3$ (from slope-intercept form).",
+        "Second equation: $x + 3y = 9 \\Rightarrow 3y = -x + 9 \\Rightarrow y = -\\dfrac{1}{3}x + 3$. Slope: $-\\dfrac{1}{3}$.",
+        "Check: $3 \\cdot (-\\dfrac{1}{3}) = -1$ → negative reciprocals → **perpendicular** ✓."
+      ],
+      "id": "q12",
+      "difficulty": "medium"
+    }
+  ]
+}

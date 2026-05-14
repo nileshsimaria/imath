@@ -1,0 +1,81 @@
+{
+  "title": "Composition & Symmetry",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### Putting transformations together",
+        "Once you have the four basic transformations — translation, reflection, rotation, dilation — you can chain them. The result of doing one transformation after another is called a **composition**.",
+        "Composition is written right-to-left like function composition: $T_2 \\circ T_1$ means 'first apply $T_1$, then apply $T_2$'."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "transformation",
+      "config": {
+        "mode": "compose",
+        "dx": 3,
+        "dy": 0,
+        "angle": 90,
+        "k": 1
+      }
+    },
+    {
+      "type": "callout",
+      "title": "Order usually matters!",
+      "body": "Most composite transformations are NOT commutative. Translating then rotating gives a different result from rotating then translating.\n\n**Example.** Start at $(1, 0)$.\n- Translate by $(3, 0)$ → $(4, 0)$. Then rotate 90° CCW → $(0, 4)$.\n- Rotate 90° CCW → $(0, 1)$. Then translate by $(3, 0)$ → $(3, 1)$.\n\nDifferent results! The composition $R_{90} \\circ T_{(3,0)}$ is different from $T_{(3,0)} \\circ R_{90}$.\n\n*Special case:* two translations DO commute — adding vectors is commutative."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Famous composition identities",
+        "**Two reflections over parallel lines** = a translation perpendicular to the lines, by twice their distance.",
+        "**Two reflections over intersecting lines** = a rotation about their intersection, by twice the angle between them.",
+        "**Reflection then rotation about a point on the mirror** = another reflection (over a different line).",
+        "**Two rotations about the same center** = a single rotation (add the angles).",
+        "**Two dilations about the same center** = a single dilation (multiply the scale factors)."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Symmetry: what shapes look the same after a transformation",
+        "A shape has a **symmetry** if some transformation maps it exactly onto itself. The set of all such transformations is the **symmetry group** of the shape.",
+        "Three flavors of symmetry come up everywhere:"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The three classical symmetries",
+      "body": "**Reflection symmetry** (a.k.a. line, mirror, or bilateral symmetry): there's a line such that reflecting the shape across it gives back the same shape.\n\n**Rotational symmetry**: rotating by some angle less than 360° about a center gives back the same shape.\n\n**Translational symmetry** (only for infinite patterns): translating by some vector preserves the pattern. Wallpaper, tiles, crystals."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Counting symmetries of common shapes",
+        "**Equilateral triangle** — 3 reflection symmetries (one through each vertex) + 3 rotational symmetries (120°, 240°, 360°) = 6 symmetries total. This is the *dihedral group* $D_3$.",
+        "**Square** — 4 reflection symmetries + 4 rotations (90°, 180°, 270°, 360°) = 8 symmetries. Dihedral group $D_4$.",
+        "**Regular $n$-gon** — $n$ reflections + $n$ rotations = $2n$ symmetries. Dihedral group $D_n$.",
+        "**Circle** — infinitely many reflection symmetries (any diameter) + infinitely many rotation symmetries (any angle). The most symmetric 2D shape.",
+        "**Letter F** — *no* nontrivial symmetries. Used as a 'test letter' because reflections/rotations of F are easy to spot.",
+        "**Letter H** — 2 reflection symmetries (horizontal + vertical) + 1 rotation (180°) + identity = 4."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example: composing two transformations",
+        "Apply: first reflect over the y-axis, then translate by $(3, 0)$, to the point $(2, 5)$.",
+        "**Step 1.** Reflect $(2, 5)$ over y-axis: $(-2, 5)$.",
+        "**Step 2.** Translate by $(3, 0)$: $(-2 + 3,\\; 5 + 0) = (1, 5)$.",
+        "**Final answer:** $(1, 5)$.",
+        "Try reversing the order — translate first, then reflect — and see that you get a different answer. (Spoiler: $(-5, 5)$.)"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Glide reflections",
+      "body": "A **glide reflection** is a reflection composed with a translation parallel to the mirror line. It's the fourth and final type of rigid motion in the plane (after translations, rotations, reflections).\n\nFootprints in the sand are a classic example: each footprint is a translated reflection of the previous one. Every isometry of the plane is one of these four types — and that's it."
+    }
+  ]
+}

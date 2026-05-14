@@ -1,0 +1,82 @@
+{
+  "title": "Solving Rational Equations",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "A **rational equation** sets one or more rational expressions equal to something. The standard strategy: get rid of the fractions by multiplying through, then solve the resulting polynomial equation. There's one trap to watch out for — extraneous solutions. We'll get to that."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The recipe",
+        "**1.** Find the **LCD** (least common denominator) of all the fractions.",
+        "**2.** Multiply *every term* on both sides by the LCD. The denominators disappear.",
+        "**3.** Solve the resulting polynomial equation.",
+        "**4.** **Check every solution** in the *original* equation — reject any that make a denominator zero. Those are *extraneous*."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 1",
+        "Solve $\\dfrac{1}{x} + \\dfrac{1}{2} = \\dfrac{3}{4}$.",
+        "**Step 1.** LCD of $x$, $2$, $4$ is $4x$.",
+        "**Step 2.** Multiply every term by $4x$:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{4x}{x} + \\dfrac{4x}{2} = \\dfrac{12x}{4}"
+    },
+    {
+      "type": "math",
+      "tex": "4 + 2x = 3x"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Step 3.** Solve: $4 = 3x - 2x \\Rightarrow x = 4$.",
+        "**Step 4.** Check in the original. $x = 4$ doesn't make any denominator zero ✓. Plug back: $\\dfrac{1}{4} + \\dfrac{1}{2} = \\dfrac{1}{4} + \\dfrac{2}{4} = \\dfrac{3}{4}$ ✓.",
+        "**Solution: $x = 4$.**"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Extraneous solutions",
+      "body": "Multiplying both sides by the LCD can introduce solutions that don't actually satisfy the original equation — values where one of the original denominators was zero. Always **plug back into the original** and discard any that fail."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 2 — extraneous solutions in action",
+        "Solve $\\dfrac{1}{x - 2} = \\dfrac{x}{x - 2} - 1$.",
+        "**Step 1.** LCD is $x - 2$.",
+        "**Step 2.** Multiply every term by $x - 2$:",
+        "$1 = x - (x - 2)$.",
+        "**Step 3.** $1 = x - x + 2 = 2$. That's **never true**. No solution.",
+        "Wait — what would happen if we'd multiplied differently? Let's try setting up as one big rational equation: $\\dfrac{1 - x}{x - 2} = -1$. Cross-multiply: $1 - x = -(x - 2) = -x + 2 \\Rightarrow 1 = 2$ — same contradiction. **No solution.**",
+        "And here's an instructive variant. Solve $\\dfrac{1}{x - 2} + 1 = \\dfrac{x - 1}{x - 2}$. Multiply by $x - 2$: $1 + (x - 2) = x - 1 \\Rightarrow x - 1 = x - 1$, always true. Looks like every $x$ is a solution. But $x = 2$ makes the denominator zero — so $x = 2$ must be **excluded**. Solution: all $x \\neq 2$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 3 — a real one",
+        "Solve $\\dfrac{x}{x - 3} = \\dfrac{6}{x - 3} + 2$.",
+        "**Step 1.** LCD is $x - 3$.",
+        "**Step 2.** Multiply by $x - 3$: $x = 6 + 2(x - 3)$.",
+        "**Step 3.** $x = 6 + 2x - 6 = 2x \\Rightarrow x = 0$ ... wait, $x - 2x = 0 \\Rightarrow -x = 0 \\Rightarrow x = 0$.",
+        "Hmm, recheck: $x = 2x$ → $0 = x$ → $x = 0$.",
+        "**Step 4.** Check $x = 0$: denominators become $0 - 3 = -3 \\neq 0$ ✓. Plug into original: $\\dfrac{0}{-3} = \\dfrac{6}{-3} + 2 = -2 + 2 = 0$ ✓.",
+        "**Solution: $x = 0$.**"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "Multiply every term by the LCD to clear fractions. Solve the resulting polynomial. **Always check** in the original — any value that makes a denominator zero is extraneous, even if it solved the cleared equation. Three possible outcomes: a normal solution, no solution (contradiction), or excluded values that look like solutions but aren't."
+    }
+  ]
+}

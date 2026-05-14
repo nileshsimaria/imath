@@ -1,0 +1,280 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The limit definition of the derivative is:}",
+      "choices": [
+        "f'(a) = \\lim_{h \\to 0} \\dfrac{f(a + h) - f(a)}{h}",
+        "f'(a) = f(a + 1) - f(a)",
+        "f'(a) = \\lim_{x \\to \\infty} f(x)",
+        "f'(a) = f(a)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "The 'difference quotient' formula.",
+        "Slope of the tangent = limit of secant slopes."
+      ],
+      "explanation": "$f'(a) = \\lim_{h \\to 0} (f(a + h) - f(a))/h$ — the limit definition (difference quotient).",
+      "steps": [
+        "**The derivative comes from a secant→tangent shrinking process.**",
+        "**Step 1: Average rate of change.** Pick two points on the curve: $(a, f(a))$ and $(a + h, f(a + h))$. The line through them is the SECANT. Its slope: $\\dfrac{f(a + h) - f(a)}{h}$ — known as the *difference quotient*.",
+        "**Step 2: Shrink the interval.** Let $h \\to 0$. The second point slides toward the first; the secant rotates and becomes the TANGENT line.",
+        "**Step 3: The derivative.** $f'(a) = \\lim_{h \\to 0} \\dfrac{f(a + h) - f(a)}{h}$. This limit IS the slope of the tangent — the instantaneous rate of change.",
+        "**Pattern to remember.** Whenever you see a limit of the form $\\lim_{h \\to 0} \\dfrac{f(\\square + h) - f(\\square)}{h}$, it's a DERIVATIVE in disguise. Recognizing this saves time on limit problems."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{For } f(x) = x^2, \\text{ find } f'(3) \\text{ using the rule } f'(x) = 2x.",
+      "answer": 6,
+      "tolerance": 0,
+      "hints": [
+        "$f'(x) = 2x$ from the limit definition.",
+        "$f'(3) = 6$."
+      ],
+      "explanation": "$f'(x) = 2x$. $f'(3) = 6$.",
+      "steps": [
+        "**Power rule or growing-square argument both give the same answer:** $\\dfrac{d}{dx}(x^2) = 2x$.",
+        "**Evaluate at $x = 3$:** $f'(3) = 2 \\cdot 3 = 6$.",
+        "**Meaning.** At the point $(3, 9)$ on the parabola, the tangent line has slope 6. Anything climbing along that curve at $x = 3$ is rising 6 units per 1 unit of $x$ at that instant."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{Average rate of change of } f(x) = x^2 \\text{ on } [2, 5] = ?",
+      "answer": 7,
+      "tolerance": 0,
+      "hints": [
+        "$(f(5) - f(2))/(5 - 2) = (25 - 4)/3$.",
+        "$21/3 = 7$."
+      ],
+      "explanation": "$(25 - 4)/(5 - 2) = 21/3 = 7$.",
+      "steps": [
+        "**'Average rate of change' = secant slope, NOT derivative.** Compute it using endpoint values — no calculus needed.",
+        "**Formula.** $\\dfrac{f(b) - f(a)}{b - a}$ — exactly the slope formula from algebra.",
+        "**Compute endpoint values.** $f(2) = 4$, $f(5) = 25$.",
+        "**Apply.** $\\dfrac{25 - 4}{5 - 2} = \\dfrac{21}{3} = 7$.",
+        "**Compare with the derivative.** $f'(x) = 2x$ at $x = 3.5$ (the midpoint of $[2, 5]$) gives 7 — same as the average. That's the Mean Value Theorem at work: for a polynomial, the average rate over an interval equals the derivative at some interior point."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The slope of the tangent line to } f \\text{ at } x = a \\text{ equals:}",
+      "choices": [
+        "f(a)",
+        "f'(a)",
+        "f''(a)",
+        "the average rate"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Derivative = slope of tangent.",
+        "$f'(a)$."
+      ],
+      "explanation": "$f'(a)$ IS the slope of the tangent line at $x = a$. That's the geometric meaning of the derivative.",
+      "steps": [
+        "**Geometric meaning of the derivative.** The derivative $f'(a)$ IS the slope of the tangent line to the curve $y = f(x)$ at the point $(a, f(a))$.",
+        "**Why this is the SAME as 'instantaneous rate of change'.** Slope = rise/run = $\\Delta y / \\Delta x$. As $\\Delta x \\to 0$, this approaches the instantaneous rate. So 'slope of tangent' and 'instantaneous rate' are two names for the same thing — $f'(a)$.",
+        "**Why NOT $f(a)$ (option a).** $f(a)$ is the function VALUE — the height of the curve, not its slope.",
+        "**Why NOT $f''(a)$.** $f''$ is the second derivative — it measures concavity, not slope."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Find the tangent line to } f(x) = x^2 \\text{ at } x = 1.",
+      "choices": [
+        "y = 2x - 1",
+        "y = x^2",
+        "y = x + 1",
+        "y = 2x + 1"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "$f(1) = 1$. $f'(1) = 2$. Use point-slope: $y - 1 = 2(x - 1)$.",
+        "$y = 2x - 1$."
+      ],
+      "explanation": "Slope = $f'(1) = 2$. Point: $(1, 1)$. Tangent: $y - 1 = 2(x - 1) \\Rightarrow y = 2x - 1$.",
+      "steps": [
+        "**Recipe for tangent line — always 3 steps.**",
+        "**Step 1: Find the POINT.** Plug $x = 1$ into $f$: $f(1) = 1^2 = 1$. Point: $(1, 1)$.",
+        "**Step 2: Find the SLOPE.** Differentiate: $f'(x) = 2x$. At $x = 1$: $f'(1) = 2$.",
+        "**Step 3: Use point-slope form.** $y - y_0 = m(x - x_0)$ with $m = 2$, $(x_0, y_0) = (1, 1)$. So $y - 1 = 2(x - 1) \\Rightarrow y = 2x - 1$.",
+        "**Sanity-check.** At $x = 1$ the tangent gives $y = 1$ — matches the original. ✓ And slope is 2. ✓",
+        "**Use the same 3-step recipe whenever a problem says 'find the tangent line'.** Point → Slope → Point-slope form. Universal."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{Use the limit definition to find } f'(2) \\text{ for } f(x) = 3x + 5.",
+      "answer": 3,
+      "tolerance": 0,
+      "hints": [
+        "$f(2 + h) - f(2) = 3(2 + h) + 5 - (6 + 5) = 3h$.",
+        "$/h = 3$. Limit: 3."
+      ],
+      "explanation": "$(f(2+h) - f(2))/h = 3h/h = 3$. Limit: 3.",
+      "steps": [
+        "**Use the limit definition deliberately** — we want to PRACTICE the definition, not jump to a derivative rule.",
+        "**Set up the difference quotient.** $\\dfrac{f(2 + h) - f(2)}{h}$.",
+        "**Compute $f(2 + h)$.** $3(2 + h) + 5 = 6 + 3h + 5 = 11 + 3h$.",
+        "**Compute $f(2)$.** $3 \\cdot 2 + 5 = 11$.",
+        "**Subtract.** $f(2 + h) - f(2) = (11 + 3h) - 11 = 3h$. (The constant terms cancel — that's the GENERAL pattern for linear functions.)",
+        "**Divide by $h$.** $\\dfrac{3h}{h} = 3$.",
+        "**Take the limit.** $\\lim_{h \\to 0}(3) = 3$.",
+        "**General fact you've just verified.** For any linear function $f(x) = mx + b$, the derivative is the slope $m$ everywhere. The constant $b$ doesn't matter — only the rate $m$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{Position } s(t) = -16t^2 + 80t. \\\\ \\text{Find velocity (derivative) at } t = 2.",
+      "answer": 16,
+      "tolerance": 0,
+      "hints": [
+        "$s'(t) = -32t + 80$ (using rules from next chapter).",
+        "$s'(2) = -64 + 80 = 16$."
+      ],
+      "explanation": "$s'(t) = -32t + 80$. $s'(2) = -64 + 80 = 16$ ft/sec.",
+      "steps": [
+        "**Recognize the physics translation.** Position $s(t)$ → its derivative $s'(t)$ is VELOCITY. (Just like 'rate of change of position with respect to time' = velocity, intuitively.)",
+        "**Differentiate term by term.** $s'(t) = \\dfrac{d}{dt}(-16t^2) + \\dfrac{d}{dt}(80t) = -32t + 80$.",
+        "**Evaluate at $t = 2$.** $s'(2) = -32(2) + 80 = -64 + 80 = 16$ ft/sec.",
+        "**Interpret physically.** At $t = 2$ seconds, the object is moving UPWARD at 16 ft/sec. (Positive velocity = upward; negative would be downward.)",
+        "**Real-world significance.** This problem describes an object thrown upward at 80 ft/sec from ground level. At $t = 2$, it's still going up but slowing down (because gravity = $-32$ ft/s² is pulling it back). At $t = 2.5$, $s'(2.5) = -80 + 80 = 0$ — momentarily at rest at the peak."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which represents the } \\textbf{average} \\text{ rate of change?}",
+      "choices": [
+        "secant line slope",
+        "tangent line slope",
+        "x-intercept",
+        "y-intercept"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Average over an interval = slope of secant connecting two points.",
+        "Tangent slope = instantaneous rate."
+      ],
+      "explanation": "Average rate over $[a, b]$ = slope of secant from $(a, f(a))$ to $(b, f(b))$.",
+      "steps": [
+        "**Two kinds of rate of change. Both important; don't confuse them.**",
+        "**AVERAGE rate of change** over an interval $[a, b]$ = slope of the SECANT line connecting the two endpoint points $(a, f(a))$ and $(b, f(b))$. Computed with a simple formula — no calculus needed.",
+        "**INSTANTANEOUS rate of change** at a single point = slope of the TANGENT line at that point = the derivative $f'$. Needs calculus to compute.",
+        "**Connection between them.** The derivative is the LIMIT of average rates over shrinking intervals: as $b \\to a$, secant → tangent."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{Use the limit definition for } f(x) = x^2 + 3x. \\\\ \\text{Find } f'(1).",
+      "answer": 5,
+      "tolerance": 0,
+      "hints": [
+        "$f'(x) = 2x + 3$. $f'(1) = 5$.",
+        "Or via limit: $f(1+h) - f(1) = (1 + 2h + h^2) + (3 + 3h) - 4 = 5h + h^2$. /h = 5+h → 5."
+      ],
+      "explanation": "Either by rules ($f'(x) = 2x + 3$) or limit: $f'(1) = 5$.",
+      "steps": [
+        "**Two paths — both arrive at the same answer.**",
+        "**Path A (derivative rules, faster).** $f'(x) = 2x + 3$. $f'(1) = 2 + 3 = 5$.",
+        "**Path B (limit definition, builds intuition).**",
+        "  $f(1 + h) = (1 + h)^2 + 3(1 + h) = 1 + 2h + h^2 + 3 + 3h = 4 + 5h + h^2$.",
+        "  $f(1) = 1 + 3 = 4$.",
+        "  Difference: $f(1+h) - f(1) = 5h + h^2 = h(5 + h)$.",
+        "  Divide by $h$: $5 + h$.",
+        "  Limit: $\\lim_{h \\to 0}(5 + h) = 5$.",
+        "**Lesson.** Once you have the rules (power rule, etc.), use them — they're much faster. But the LIMIT DEFINITION is what justifies the rules and is sometimes asked for in proofs."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q10",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Tangent line to } f(x) = 1/x \\text{ at } x = 2 \\text{ has slope:}",
+      "choices": [
+        "1/2",
+        "-1/4",
+        "-1/2",
+        "2"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "$f'(x) = -1/x^2$ (derived earlier).",
+        "$f'(2) = -1/4$."
+      ],
+      "explanation": "$f'(x) = -1/x^2$. $f'(2) = -1/4$.",
+      "steps": [
+        "**Rewrite to apply the power rule.** $f(x) = 1/x = x^{-1}$.",
+        "**Power rule with $n = -1$.** $f'(x) = -1 \\cdot x^{-2} = -\\dfrac{1}{x^2}$.",
+        "**Evaluate at $x = 2$.** $f'(2) = -\\dfrac{1}{4}$.",
+        "**Sign sanity-check.** $f(x) = 1/x$ is DECREASING for $x > 0$. So the slope must be negative. ✓"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{Average rate of change of } f(x) = \\sqrt{x} \\text{ over } [1, 9] = ? \\text{ (decimal)}",
+      "answer": 0.25,
+      "tolerance": 0.005,
+      "hints": [
+        "$(\\sqrt{9} - \\sqrt{1})/(9 - 1) = (3 - 1)/8 = 2/8 = 0.25$.",
+        "$0.25$."
+      ],
+      "explanation": "$(3 - 1)/8 = 0.25$.",
+      "steps": [
+        "**Average rate of change = endpoint formula.** $\\dfrac{f(b) - f(a)}{b - a}$ — no calculus needed.",
+        "**Compute endpoint values.** $f(1) = \\sqrt{1} = 1$. $f(9) = \\sqrt{9} = 3$.",
+        "**Apply.** $\\dfrac{3 - 1}{9 - 1} = \\dfrac{2}{8} = 0.25$.",
+        "**Why $x = 1$ and $9$ are chosen.** Both are perfect squares → clean square roots. The problem deliberately picks 'nice' endpoints to avoid messy arithmetic."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "promptTex": "\\text{In } dy/dx \\text{ notation, the derivative emphasizes:}",
+      "choices": [
+        "Just the function value",
+        "The variable being differentiated with respect to",
+        "The integration constant",
+        "Nothing — it's just notation"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Leibniz notation: $dy/dx$ shows you're differentiating $y$ with respect to $x$.",
+        "Useful when there are multiple variables."
+      ],
+      "explanation": "Leibniz notation $dy/dx$ explicitly shows the variable of differentiation — useful when there are multiple variables (e.g., implicit differentiation, related rates).",
+      "steps": [
+        "**Two equivalent notations for derivative.** Pick whichever is cleaner for the situation.",
+        "**$f'(x)$ (Lagrange's notation)** — compact, but doesn't say which variable you're differentiating with respect to. Fine when there's only one variable in play.",
+        "**$dy/dx$ (Leibniz's notation)** — explicit about the variable. The 'd' means 'a little bit of', so $dy/dx$ reads as 'little-bit-of-$y$ per little-bit-of-$x$'.",
+        "**When Leibniz wins.** RELATED RATES ($dV/dt$ for volume changing in time), IMPLICIT DIFFERENTIATION ($dy/dx$ when $y$ is buried inside an equation), PARTIAL DERIVATIVES ($\\partial f/\\partial x$ for multi-variable functions).",
+        "**Lesson.** Both notations mean the same thing — the choice is about which detail you want to make visible."
+      ],
+      "difficulty": "easy"
+    }
+  ]
+}

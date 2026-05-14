@@ -1,0 +1,384 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If } P(5) = 0, \\text{ what does the Factor Theorem say?}",
+      "choices": [
+        "$x = 5$ is a factor",
+        "$(x - 5)$ is a factor",
+        "$(x + 5)$ is a factor",
+        "$P$ is divisible by 5"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Factor Theorem: $P(r) = 0$ ⟺ $(x - r)$ is a factor.",
+        "Root at $r = 5$ → factor is $(x - 5)$."
+      ],
+      "explanation": "$P(5) = 0$ means $5$ is a root → $(x - 5)$ is a factor of $P(x)$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{According to the rational root theorem, possible rational roots of } x^3 - 7x + 6 \\text{ are:}",
+      "choices": [
+        "\\{\\pm 1, \\pm 2, \\pm 3, \\pm 6\\}",
+        "\\{\\pm 1, \\pm 6, \\pm 7\\}",
+        "\\{\\pm 1, \\pm 7\\}",
+        "\\{\\pm 1, \\pm 2, \\pm 3, \\pm 6, \\pm 7\\}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "$p$ divides constant term ($6$). $q$ divides leading coefficient ($1$).",
+        "Divisors of $6$: $1, 2, 3, 6$. Divisors of $1$: just $1$."
+      ],
+      "explanation": "Rational candidates are $p/q$ where $p \\mid 6$ and $q \\mid 1$. So $p \\in \\{1, 2, 3, 6\\}$ (with both signs) and $q = \\pm 1$. Candidates: $\\pm 1, \\pm 2, \\pm 3, \\pm 6$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** $p$ divides constant term ($6$). $q$ divides leading coefficient ($1$)."
+        },
+        {
+          "text": "Divisors of $6$: $1, 2, 3, 6$. Divisors of $1$: just $1$."
+        },
+        {
+          "text": "**Solution.** Rational candidates are $p/q$ where $p \\mid 6$ and $q \\mid 1$. So $p \\in \\{1, 2, 3, 6\\}$ (with both signs) and $q = \\pm 1$. Candidates: $\\pm 1, \\pm 2, \\pm 3, \\pm 6$."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{Is } x = 2 \\text{ a root of } P(x) = x^3 - 3x^2 + 4? \\\\ \\text{(Enter } 1 \\text{ for yes, } 0 \\text{ for no.)}",
+      "answer": 1,
+      "tolerance": 0,
+      "hints": [
+        "Plug in $x = 2$: $P(2) = ?$",
+        "$8 - 12 + 4 = 0$."
+      ],
+      "explanation": "$P(2) = 8 - 12 + 4 = 0$. Yes — $x = 2$ is a root.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The polynomial } P(x) = (x - 1)^2 (x + 3) \\text{ has:}",
+      "choices": [
+        "Root 1 with multiplicity 1, root −3 with multiplicity 1",
+        "Root 1 with multiplicity 2, root −3 with multiplicity 1",
+        "Root −1 with multiplicity 2, root 3 with multiplicity 1",
+        "Three distinct roots: 1, 1, −3"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Each factor's exponent = the multiplicity of that root.",
+        "$(x - 1)^2$ contributes the root $1$ twice."
+      ],
+      "explanation": "$(x - 1)^2$ → root $x = 1$ with multiplicity 2. $(x + 3)$ → root $x = -3$ with multiplicity 1. Total degree: $2 + 1 = 3$ ✓.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If you find one root of a degree-5 polynomial, what's left after dividing out } (x - r)?",
+      "choices": [
+        "A degree-4 polynomial",
+        "A degree-5 polynomial",
+        "A constant",
+        "Another root"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Each factor pulled out reduces the degree by 1.",
+        "$5 - 1 = 4$."
+      ],
+      "explanation": "Dividing a polynomial of degree $n$ by a linear factor $(x - r)$ gives a polynomial of degree $n - 1$. So degree 5 → degree 4.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{If } x = 2 \\text{ is a root of } P(x), \\text{ what is a factor of } P(x)?",
+      "choices": [
+        "$(x - 2)$",
+        "$(x + 2)$",
+        "$(2x - 1)$",
+        "$(x - 4)$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Factor theorem: $r$ is a root iff $(x - r)$ is a factor.",
+        "Root $2$ → factor $(x - 2)$."
+      ],
+      "explanation": "By the factor theorem: if $r$ is a root, then $(x - r)$ is a factor.",
+      "steps": [
+        "**Factor theorem:** $P(r) = 0 \\Leftrightarrow (x - r)$ is a factor of $P(x)$.",
+        "Here $r = 2$ → factor is $(x - 2)$."
+      ],
+      "id": "q6",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Use the rational root theorem to list possible rational roots of} \\\\ P(x) = 2x^3 - 5x^2 + 1.",
+      "choices": [
+        "\\pm 1, \\pm 1/2",
+        "\\pm 1, \\pm 2, \\pm 5",
+        "\\pm 1, \\pm 5, \\pm 1/2",
+        "\\pm 1, \\pm 1/2, \\pm 1/3"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Rational roots: $\\pm p/q$ where $p | $ constant ($=1$) and $q | $ leading ($=2$).",
+        "Factors of 1: $\\{1\\}$. Factors of 2: $\\{1, 2\\}$. So $\\pm 1, \\pm 1/2$."
+      ],
+      "explanation": "Possible rational roots: $\\pm \\dfrac{p}{q}$ where $p$ divides 1, $q$ divides 2. Options: $\\pm 1, \\pm 1/2$.",
+      "steps": [
+        "**Rational root theorem:** possible rational roots are $\\pm \\dfrac{p}{q}$ where:",
+        "  $p$ = factor of the constant term.",
+        "  $q$ = factor of the leading coefficient.",
+        "Constant: $1$. Factors: $\\{1\\}$.",
+        "Leading: $2$. Factors: $\\{1, 2\\}$.",
+        "Possible rational roots: $\\pm \\{1/1, 1/2\\} = \\pm 1, \\pm 1/2$."
+      ],
+      "id": "q7",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Given } P(x) = x^3 - 4x^2 + x + 6 \\text{ and that } x = -1 \\text{ is a root,} \\\\ \\text{factor } P(x) \\text{ completely.}",
+      "choices": [
+        "(x + 1)(x - 2)(x - 3)",
+        "(x - 1)(x + 2)(x - 3)",
+        "(x + 1)(x + 2)(x + 3)",
+        "(x - 1)(x - 2)(x - 3)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "$(x + 1)$ is a factor. Divide $P(x)$ by $(x + 1)$.",
+        "Result: $x^2 - 5x + 6$. Factor: $(x - 2)(x - 3)$."
+      ],
+      "explanation": "Divide by $(x + 1)$: $x^2 - 5x + 6 = (x - 2)(x - 3)$. Full factorization: $(x + 1)(x - 2)(x - 3)$.",
+      "steps": [
+        "Use synthetic division with root $-1$ on coefficients $[1, -4, 1, 6]$:",
+        "$1, -4 + (-1) = -5, 1 + 5 = 6, 6 + (-6) = 0$ ✓.",
+        "Quotient: $x^2 - 5x + 6$.",
+        "Factor: $(x - 2)(x - 3)$.",
+        "Full: $P(x) = (x + 1)(x - 2)(x - 3)$."
+      ],
+      "id": "q8",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{The polynomial } P(x) = (x - 2)^2(x + 5) \\text{ has } x = 2 \\\\ \\text{as a root with multiplicity:}",
+      "answer": 2,
+      "tolerance": 0,
+      "hints": [
+        "Multiplicity = exponent on the factor.",
+        "$(x - 2)^2$ → multiplicity 2."
+      ],
+      "explanation": "$(x - 2)^2$ → multiplicity 2.",
+      "steps": [
+        "Multiplicity = the exponent on $(x - r)$ in the factorization.",
+        "Here $(x - 2)^2$ → multiplicity 2."
+      ],
+      "id": "q9",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{If a polynomial has roots } 1, -2, 3 \\text{ (each multiplicity 1) and leading coefficient 1,} \\\\ \\text{what is the polynomial?}",
+      "choices": [
+        "(x - 1)(x + 2)(x - 3)",
+        "(x + 1)(x - 2)(x + 3)",
+        "(x - 1)(x - 2)(x - 3)",
+        "x^3 - 4x"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Root $r$ → factor $(x - r)$.",
+        "$1 → (x-1)$, $-2 → (x+2)$, $3 → (x-3)$."
+      ],
+      "explanation": "Factor for each root: $(x - 1)(x + 2)(x - 3)$.",
+      "steps": [
+        "Each root $r$ contributes a factor $(x - r)$.",
+        "Roots $\\{1, -2, 3\\}$ → factors $(x - 1)(x - (-2))(x - 3) = (x - 1)(x + 2)(x - 3)$."
+      ],
+      "id": "q10",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Use the remainder theorem: what is the remainder when} \\\\ P(x) = x^3 - 5x^2 + 2x + 1 \\text{ is divided by } (x - 2)?",
+      "answer": -7,
+      "tolerance": 0,
+      "hints": [
+        "Remainder = $P(2)$.",
+        "$P(2) = 8 - 20 + 4 + 1 = -7$."
+      ],
+      "explanation": "Remainder theorem: $P(2) = 8 - 20 + 4 + 1 = -7$.",
+      "steps": [
+        "**Remainder theorem:** when $P(x)$ is divided by $(x - c)$, the remainder is $P(c)$.",
+        "Compute $P(2) = (2)^3 - 5(2)^2 + 2(2) + 1 = 8 - 20 + 4 + 1 = -7$."
+      ],
+      "id": "q11",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{A polynomial of degree 4 with real coefficients has roots} \\\\ x = 1 \\text{ (mult. 1) and } x = -3 \\text{ (mult. 2)}. \\text{ What other root must it have?}",
+      "choices": [
+        "Another root with total mult = 1 (so degree adds to 4)",
+        "x = 0",
+        "x = 3",
+        "Cannot determine without more info"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Total multiplicity = degree. Have $1 + 2 = 3$ so far. Need $1$ more.",
+        "There must be one more root (mult 1) — but its value isn't determined."
+      ],
+      "explanation": "Multiplicities sum to the degree (4 here). So far: $1 + 2 = 3$. Need 1 more root of mult 1. Its value depends on the polynomial.",
+      "steps": [
+        "**Fundamental theorem:** a degree-$n$ polynomial has $n$ roots counted with multiplicity (in complex numbers).",
+        "Degree 4 → 4 roots total.",
+        "Have: $1$ (mult 1) and $-3$ (mult 2). Total: 3.",
+        "Need 1 more root (mult 1) — but its value isn't pinned down by the given info."
+      ],
+      "id": "q12",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Find the zeros of } x^2 - 3x - m(m+3).",
+      "choices": [
+        "x = m + 3 \\text{ and } x = -m",
+        "x = m \\text{ and } x = -(m+3)",
+        "x = m + 3 \\text{ and } x = m",
+        "x = -(m+3) \\text{ and } x = -m"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Look for two numbers whose product is $-m(m+3)$ and sum is $-3$.",
+        "Try $-(m+3)$ and $m$: product $= -m(m+3)$ ✓, sum $= m - (m+3) = -3$ ✓.",
+        "So $x^2 - 3x - m(m+3) = (x - (m+3))(x + m)$."
+      ],
+      "explanation": "Factor as $(x - (m+3))(x + m)$. Setting each factor to zero gives $x = m + 3$ and $x = -m$.",
+      "steps": [
+        "Want $(x - a)(x - b) = x^2 - (a+b)x + ab$ to match $x^2 - 3x - m(m+3)$.",
+        "Need $a + b = 3$ and $ab = -m(m+3)$.",
+        "Take $a = m + 3$ and $b = -m$: sum $= (m+3) + (-m) = 3$ ✓, product $= -m(m+3)$ ✓.",
+        "So $x^2 - 3x - m(m+3) = (x - (m+3))(x + m)$.",
+        "**Zeros:** $x = m + 3$ and $x = -m$.",
+        "*Check via quadratic formula:* $x = \\dfrac{3 \\pm \\sqrt{9 + 4m(m+3)}}{2} = \\dfrac{3 \\pm \\sqrt{(2m+3)^2}}{2} = \\dfrac{3 \\pm (2m+3)}{2}$ → $m+3$ or $-m$. ✓"
+      ],
+      "id": "q13",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Find the largest real root of } 2x^4 - 5x^3 + 4x^2 - 5x + 2 = 0.",
+      "answer": 2,
+      "tolerance": 0,
+      "hints": [
+        "Coefficients read the same forwards and backwards: $2, -5, 4, -5, 2$. That's a *palindromic* polynomial.",
+        "Divide by $x^2$ and substitute $y = x + 1/x$.",
+        "You'll get a quadratic in $y$: $2y^2 - 5y = 0 \\Rightarrow y(2y - 5) = 0 \\Rightarrow y = 0$ or $y = 5/2$. Solve $x + 1/x = 5/2$ for the real roots."
+      ],
+      "explanation": "The polynomial is palindromic ($2,-5,4,-5,2$). Divide by $x^2$ and substitute $y = x + 1/x$, using $x^2 + 1/x^2 = y^2 - 2$. Get $2y^2 - 5y = 0$, so $y = 0$ or $y = 5/2$. $y = 5/2$ gives $2x^2 - 5x + 2 = 0 \\Rightarrow x = 2$ or $x = 1/2$. $y = 0$ gives complex roots. Largest real root: $\\mathbf{2}$.",
+      "steps": [
+        "**Notice the symmetry.** Coefficients read $2, -5, 4, -5, 2$ — the same forwards and backwards. This is a *palindromic* polynomial. Whenever you spot this pattern, the $y = x + \\tfrac{1}{x}$ substitution is the right move.",
+        "**WHY palindromic polynomials have reciprocal roots — derive it.** If the coefficients of $P(x) = a_n x^n + a_{n-1} x^{n-1} + \\cdots + a_0$ are palindromic ($a_k = a_{n-k}$), then $x^n P(1/x) = a_n + a_{n-1} x + \\cdots + a_0 x^n = P(x)$. So $P(r) = 0 \\Rightarrow P(1/r) = 0$. Roots come in reciprocal pairs $\\{r, 1/r\\}$ — which is why $x + 1/x$ is the right new variable.",
+        "**Apply the trick.** Divide both sides of the original equation by $x^2$ (note: $x = 0$ is not a root, since the constant is $2 \\neq 0$): $2x^2 - 5x + 4 - \\dfrac{5}{x} + \\dfrac{2}{x^2} = 0$.",
+        "**Group reciprocal pairs.** $2\\left(x^2 + \\dfrac{1}{x^2}\\right) - 5\\left(x + \\dfrac{1}{x}\\right) + 4 = 0$. The grouping was forced by the palindromic structure.",
+        "**Substitute $y = x + \\tfrac{1}{x}$.** We need $x^2 + \\tfrac{1}{x^2}$ in terms of $y$. Derive: $y^2 = (x + \\tfrac{1}{x})^2 = x^2 + 2 + \\tfrac{1}{x^2}$, so $x^2 + \\tfrac{1}{x^2} = y^2 - 2$.",
+        "**The original quartic reduces to a quadratic.** $2(y^2 - 2) - 5y + 4 = 0 \\;\\Longrightarrow\\; 2y^2 - 4 - 5y + 4 = 0 \\;\\Longrightarrow\\; 2y^2 - 5y = 0 \\;\\Longrightarrow\\; y(2y - 5) = 0$. So $y = 0$ or $y = \\tfrac{5}{2}$.",
+        "**Recover $x$ from each $y$.** Case 1: $y = \\tfrac{5}{2}$. Then $x + \\tfrac{1}{x} = \\tfrac{5}{2}$, i.e., $2x^2 - 5x + 2 = 0$. Discriminant $= 25 - 16 = 9 > 0$, real roots. Factor: $(2x - 1)(x - 2) = 0$, so $x = 2$ or $x = \\tfrac{1}{2}$ — a reciprocal pair, as predicted.",
+        "**Case 2: $y = 0$.** Then $x + \\tfrac{1}{x} = 0$, i.e., $x^2 + 1 = 0$, giving $x = \\pm i$ — also a reciprocal pair ($i$ and $-i$), but complex.",
+        "**Largest real root.** $\\{2, \\tfrac{1}{2}\\}$ are the real roots; $\\mathbf{2}$ is the largest.",
+        "**Pattern lesson — degree-halving via symmetry.** A palindromic polynomial of degree $2n$ reduces to a polynomial of degree $n$ in $y = x + \\tfrac{1}{x}$. We collapsed a quartic to a quadratic. Same idea handles palindromic polynomials of any even degree."
+      ],
+      "id": "q14",
+      "difficulty": "hard"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{If } x + \\dfrac{1}{x} = 5, \\text{ find } x^5 + \\dfrac{1}{x^5}.",
+      "answer": 2525,
+      "tolerance": 0,
+      "hints": [
+        "Notice $5 = 2 + 3$. Multiply $(x^2 + 1/x^2)$ by $(x^3 + 1/x^3)$ and see what pops out.",
+        "$x^2 + 1/x^2 = 5^2 - 2 = 23$. $x^3 + 1/x^3 = 5^3 - 3\\cdot 5 = 110$.",
+        "$(x^2 + 1/x^2)(x^3 + 1/x^3) = x^5 + 1/x^5 + (x + 1/x)$, so $x^5 + 1/x^5 = 23 \\cdot 110 - 5 = 2525$."
+      ],
+      "explanation": "Use $5 = 2 + 3$: $(x^2 + 1/x^2)(x^3 + 1/x^3)$ expands to $x^5 + 1/x^5 + x + 1/x$. Compute $x^2 + 1/x^2 = 23$ and $x^3 + 1/x^3 = 110$. Then $x^5 + 1/x^5 = 23 \\cdot 110 - 5 = \\mathbf{2525}$.",
+      "steps": [
+        "**Spot the addition trick.** We need $x^5 + \\tfrac{1}{x^5}$ where $5 = 2 + 3$. So try multiplying $(x^2 + \\tfrac{1}{x^2})$ by $(x^3 + \\tfrac{1}{x^3})$ — the exponents will add, and reciprocal-symmetric structure should let us pick out the piece we want.",
+        "**Expand the product to see what comes out.** $(x^2 + \\tfrac{1}{x^2})(x^3 + \\tfrac{1}{x^3}) = x^2 \\cdot x^3 + x^2 \\cdot \\tfrac{1}{x^3} + \\tfrac{1}{x^2} \\cdot x^3 + \\tfrac{1}{x^2} \\cdot \\tfrac{1}{x^3} = x^5 + \\tfrac{1}{x} + x + \\tfrac{1}{x^5}$.",
+        "**Group reciprocal pairs.** $= \\left(x^5 + \\tfrac{1}{x^5}\\right) + \\left(x + \\tfrac{1}{x}\\right)$. So the target appears, plus the *given* expression as a known constant.",
+        "**Rearrange to isolate the target.** $\\boxed{x^5 + \\tfrac{1}{x^5} = \\left(x^2 + \\tfrac{1}{x^2}\\right)\\left(x^3 + \\tfrac{1}{x^3}\\right) - \\left(x + \\tfrac{1}{x}\\right)}$. We've reduced the problem to two ingredients we already know how to compute.",
+        "**Ingredient 1 — $x^2 + \\tfrac{1}{x^2}$ via the squaring identity.** $(x + \\tfrac{1}{x})^2 = x^2 + 2 + \\tfrac{1}{x^2}$, so $x^2 + \\tfrac{1}{x^2} = 5^2 - 2 = 23$.",
+        "**Ingredient 2 — $x^3 + \\tfrac{1}{x^3}$ via the cubing identity.** $(x + \\tfrac{1}{x})^3 = x^3 + 3x + \\tfrac{3}{x} + \\tfrac{1}{x^3} = (x^3 + \\tfrac{1}{x^3}) + 3(x + \\tfrac{1}{x})$, so $x^3 + \\tfrac{1}{x^3} = 5^3 - 3 \\cdot 5 = 125 - 15 = 110$.",
+        "**Combine.** $x^5 + \\tfrac{1}{x^5} = 23 \\cdot 110 - 5 = 2530 - 5 = 2525$.",
+        "**Why this works — exponent addition.** Whenever $m + n = p$, the product $(x^m + \\tfrac{1}{x^m})(x^n + \\tfrac{1}{x^n})$ expands to $(x^{m+n} + \\tfrac{1}{x^{m+n}}) + (x^{m-n} + \\tfrac{1}{x^{m-n}})$ — the target plus a 'difference' piece. Choose the split so the difference piece is something simple. For $5$: split as $2+3$ gives difference $|2-3| = 1$, and $x + \\tfrac{1}{x}$ is the given. (Splitting as $1+4$ also works: $(x + \\tfrac{1}{x})(x^4 + \\tfrac{1}{x^4}) = x^5 + \\tfrac{1}{x^5} + x^3 + \\tfrac{1}{x^3}$ — also clean.)",
+        "**Pattern lesson — same idea, two named tools.** This 'multiply $S_m \\cdot S_n$' approach IS the recurrence $S_{n+1} = k S_n - S_{n-1}$ in disguise (special case $m = 1$). For a single exponent, the direct multiplication is cleaner; for many exponents in sequence, the recurrence wins by reusing $S_{n-1}$ each step. Both are descendants of the same identity $S_m S_n = S_{m+n} + S_{|m-n|}$ — closely related to Chebyshev polynomials, where this is the cosine product-to-sum identity in algebraic disguise."
+      ],
+      "id": "q15",
+      "difficulty": "hard"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{If } x + \\dfrac{1}{x} = -2 \\text{ (with } x \\text{ real)}, \\text{ find } x^7 + \\dfrac{1}{x^7}.",
+      "answer": -2,
+      "tolerance": 0,
+      "hints": [
+        "$k = -2$ pins $x$ down — solve $x + 1/x = -2$ first.",
+        "Multiply by $x$: $(x + 1)^2 = 0 \\Rightarrow x = -1$.",
+        "$x = -1 \\Rightarrow x^7 + 1/x^7 = -1 + (-1) = -2$."
+      ],
+      "explanation": "$x + 1/x = -2$ gives $x^2 + 2x + 1 = (x + 1)^2 = 0$, so $x = -1$. Then $x^7 + 1/x^7 = (-1)^7 + 1/(-1)^7 = -1 - 1 = -2$.",
+      "steps": [
+        "**Boundary value alert.** When $k = \\pm 2$, the constraint $x + \\tfrac{1}{x} = k$ pins $x$ to a single value. Always solve for $x$ first — the 'hard' question with a big exponent then trivializes.",
+        "**Solve $x + \\tfrac{1}{x} = -2$.** Multiply by $x$: $x^2 + 1 = -2x \\;\\Longrightarrow\\; x^2 + 2x + 1 = 0 \\;\\Longrightarrow\\; (x + 1)^2 = 0$. Only real solution: $x = -1$ (a double root).",
+        "**Compute directly.** $x^7 + \\tfrac{1}{x^7} = (-1)^7 + \\tfrac{1}{(-1)^7} = -1 + \\tfrac{1}{-1} = -1 - 1 = -2$.",
+        "**WHY $k = -2$ is the floor for negatives — derive.** For negative real $x$, let $x = -t$ with $t > 0$. Then $x + \\tfrac{1}{x} = -t - \\tfrac{1}{t} = -(t + \\tfrac{1}{t})$. By AM-GM, $t + \\tfrac{1}{t} \\geq 2$ for $t > 0$, so $x + \\tfrac{1}{x} \\leq -2$ for negative $x$, with equality only at $t = 1$, i.e., $x = -1$.",
+        "**Cross-check via the recurrence.** $S_{n+1} = -2 S_n - S_{n-1}$ with $S_0 = 2, S_1 = -2$. $S_2 = (-2)(-2) - 2 = 2$. $S_3 = (-2)(2) - (-2) = -4 + 2 = -2$. $S_4 = (-2)(-2) - 2 = 2$. The sequence is $2, -2, 2, -2, 2, -2, 2, -2$ — and $S_7 = -2$ ✓. Pattern: $S_n = 2(-1)^n$, matching $x = -1$.",
+        "**Pattern lesson — parity at the boundary.** When $k = -2$: $x = -1$, and $x^n + \\tfrac{1}{x^n} = (-1)^n + (-1)^n = 2(-1)^n$ — flips sign with $n$. When $k = +2$ (Problem A7): $x = 1$, and every $S_n = 2$ regardless of parity. Same trivialization, slightly different result."
+      ],
+      "id": "q16",
+      "difficulty": "hard"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{If } x + \\dfrac{1}{x} = \\sqrt{3}, \\text{ then } x^{18} + x^{12} + x^{6} + 1 = ?",
+      "choices": ["1", "3", "0", "2"],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "Each term is a power of $x^6$. So first find $x^6$.",
+        "Square the given: $x^2 + 1/x^2 = 1$. Multiply by $x^2$: $x^4 - x^2 + 1 = 0$.",
+        "Notice $x^6 + 1 = (x^2 + 1)(x^4 - x^2 + 1) = (x^2+1) \\cdot 0 = 0$, so $x^6 = -1$. Then $x^{18} + x^{12} + x^6 + 1 = -1 + 1 - 1 + 1 = 0$."
+      ],
+      "explanation": "Squaring gives $x^2 + 1/x^2 = 1$, so $x^4 - x^2 + 1 = 0$. Use $x^6 + 1 = (x^2+1)(x^4 - x^2 + 1) = 0 \\Rightarrow x^6 = -1$. Then $x^{18} = -1$, $x^{12} = 1$, $x^6 = -1$. Sum $= -1 + 1 - 1 + 1 = \\mathbf{0}$.",
+      "steps": [
+        "**Notice every term is a power of $x^6$.** $x^{18} = (x^6)^3$, $x^{12} = (x^6)^2$, and the third term is $x^6$ itself. If we can find $x^6$, the entire expression collapses to four numbers.",
+        "**Step 1 — square the given to climb to power 2.** $(x + \\tfrac{1}{x})^2 = (\\sqrt 3)^2 = 3$, so $x^2 + 2 + \\tfrac{1}{x^2} = 3$, giving $x^2 + \\tfrac{1}{x^2} = 1$.",
+        "**Step 2 — clear the fraction to get a polynomial in $x$.** Multiply both sides by $x^2$: $x^4 + 1 = x^2$, i.e., $\\boxed{x^4 - x^2 + 1 = 0}$.",
+        "**Step 3 — find $x^6$ via a cyclotomic factorization.** Recall the sum-of-cubes pattern $a^3 + b^3 = (a + b)(a^2 - ab + b^2)$. Apply with $a = x^2, b = 1$: $x^6 + 1 = (x^2)^3 + 1^3 = (x^2 + 1)(x^4 - x^2 + 1)$.",
+        "**Substitute Step 2's result.** The second factor is exactly $x^4 - x^2 + 1 = 0$, so $x^6 + 1 = (x^2 + 1) \\cdot 0 = 0$. Therefore $\\boxed{x^6 = -1}$.",
+        "**Step 4 — reduce every power.** $x^{18} = (x^6)^3 = (-1)^3 = -1$. $x^{12} = (x^6)^2 = (-1)^2 = 1$. $x^6 = -1$.",
+        "**Step 5 — sum.** $x^{18} + x^{12} + x^6 + 1 = -1 + 1 + (-1) + 1 = \\mathbf{0}$.",
+        "**Why this works — $x$ is a 12th root of unity.** The quadratic $x^2 - \\sqrt 3 \\, x + 1 = 0$ (obtained by multiplying the given by $x$) has roots $x = \\tfrac{\\sqrt 3 \\pm i}{2} = e^{\\pm i \\pi/6}$ — points on the unit circle at angle $\\pm 30°$. So $x^{12} = e^{\\pm 2\\pi i} = 1$: $x$ has *order 12*. Every power cycles, with the pretty intermediate fact $x^6 = e^{\\pm i \\pi} = -1$.",
+        "**Pattern lesson — $k$ values that make $x$ a root of unity.** The set $k \\in \\{\\pm 2, \\pm \\sqrt 3, \\pm \\sqrt 2, \\pm 1, 0\\}$ corresponds to orders $\\{1\\text{ or }2, 12, 8, 3\\text{ or }6, 4\\}$ respectively (all $= 2\\cos(\\pi/n)$ for some $n$). Whenever you see a $k$ of the form $2\\cos(\\pi/n)$, expect a finite-order shortcut. Other $k$ values need the recurrence."
+      ],
+      "id": "q17",
+      "difficulty": "hard"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "title": "Adding & Multiplying Polynomials",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "A **polynomial** is a sum of *terms* — numbers or products of a number with one or more variable powers.",
+        "$3x^2 + 5x - 2$, $x^3 - 7$, and even just $x$ or $5$ are all polynomials. The variables can only be raised to **non-negative whole-number powers**: no $x^{1/2}$, no $\\dfrac{1}{x}$, no $x^{-3}$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Vocabulary",
+        "**Term.** A single piece of the polynomial: $3x^2$, $-5x$, $7$ are each terms.",
+        "**Coefficient.** The number multiplying the variable part: in $3x^2$, the coefficient is $3$.",
+        "**Degree.** The highest power of $x$ in the polynomial. $3x^2 + 5x - 2$ has degree $2$ (a *quadratic*). $x^3 - 7$ has degree $3$ (a *cubic*).",
+        "**Like terms.** Terms with the *same variable raised to the same power*. $3x^2$ and $-5x^2$ are like terms; $3x^2$ and $-5x$ are not."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Adding polynomials",
+        "Combine like terms. Just add (or subtract) the coefficients of terms with matching variable parts.",
+        "**Example.** $(3x^2 + 5x - 2) + (x^2 - 7x + 4)$.",
+        "Group like: $(3x^2 + x^2) + (5x - 7x) + (-2 + 4)$.",
+        "Combine: $4x^2 - 2x + 2$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Multiplying — the distributive property does it all",
+        "**Monomial × monomial.** Multiply coefficients, add exponents on like variables.",
+        "$3x^2 \\cdot 4x^3 = 12x^{2+3} = 12x^5$.",
+        "**Monomial × polynomial.** Distribute.",
+        "$2x(x^2 + 3x - 5) = 2x^3 + 6x^2 - 10x$.",
+        "**Polynomial × polynomial.** Distribute every term in the first by every term in the second. For two binomials, this is the famous **FOIL** pattern (First, Outer, Inner, Last)."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The area model — why FOIL works",
+        "Think of $(x + a)(x + b)$ as the area of a rectangle with width $(x + a)$ and height $(x + b)$. Splitting along the $x$ markings gives **four sub-rectangles**, and their areas add up to the whole."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "polynomial-area",
+      "config": {
+        "a": 3,
+        "b": 2,
+        "range": [
+          1,
+          6
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "Try it. Each colored rectangle's area is its width times its height. The four areas — $x^2$, $ax$, $bx$, $ab$ — add up to $x^2 + (a+b)x + ab$. That's exactly the FOIL result for $(x+a)(x+b)$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "FOIL — First, Outer, Inner, Last",
+      "body": "$(x + 3)(x + 2)$ → **F**irst: $x \\cdot x = x^2$. **O**uter: $x \\cdot 2 = 2x$. **I**nner: $3 \\cdot x = 3x$. **L**ast: $3 \\cdot 2 = 6$. Sum: $x^2 + 5x + 6$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked examples",
+        "**$(x + 4)(x - 3)$.** $x^2 - 3x + 4x - 12 = x^2 + x - 12$.",
+        "**$(2x - 1)(x + 5)$.** $2x^2 + 10x - x - 5 = 2x^2 + 9x - 5$.",
+        "**$(x + 7)(x - 7)$.** $x^2 - 7x + 7x - 49 = x^2 - 49$. (Notice the middle terms cancel — this is the *difference of squares* pattern: $(a+b)(a-b) = a^2 - b^2$.)"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "**Add** polynomials by combining like terms. **Multiply** by distributing — for binomials use FOIL, or visualize as the area of a rectangle. The result of multiplying polynomials is always another polynomial."
+    }
+  ]
+}

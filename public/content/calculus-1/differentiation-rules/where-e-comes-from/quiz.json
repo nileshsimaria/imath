@@ -1,0 +1,504 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "prompt": "What does the 'law of organic growth' mean (Thompson's phrase)?",
+      "choices": [
+        "A quantity grows by a fixed amount each second.",
+        "A quantity's growth rate is proportional to its current size — the bigger it is, the faster it grows.",
+        "A quantity grows only when fertilized.",
+        "A quantity grows once and then stops."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Compare to compound interest — the bigger your balance, the more interest you earn.",
+        "It's the defining property of $e^x$ and exponential growth in general."
+      ],
+      "explanation": "Organic growth = $dy/dt = k\\,y$. The bigger the quantity, the more rapidly it grows. Bacterial colonies, compound interest, radioactive decay, populations — anywhere this proportional-rate property holds, $e$ shows up. The solution is $y = y_0 e^{kt}$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\$100\\text{ in a bank that pays }10\\%\\text{ per year, compounded CONTINUOUSLY.}\\\\\\text{How much do you have after 10 years (to the nearest cent)?}",
+      "answer": 271.83,
+      "tolerance": 0.05,
+      "hints": [
+        "Continuous compounding: $A = P\\,e^{rt}$.",
+        "Here $r = 0.10$, $t = 10$, so $rt = 1$. $A = 100\\,e^{1}$.",
+        "$e \\approx 2.71828$, so $A \\approx \\$271.83$."
+      ],
+      "explanation": "Continuous compounding formula: $A = P e^{rt}$. With $P = 100$, $r = 0.10$, $t = 10$: $A = 100 \\cdot e^{1} \\approx 271.83$. This is the ceiling for any 10%-per-year scheme — annual gave \\$259, monthly gave \\$270.70, and the *limit* is exactly $100 e$.",
+      "steps": [
+        "**Recognize the type.** Continuous-compounding question — use the formula $A = P\\,e^{rt}$. The word 'continuous' is the cue.",
+        "**Identify the inputs.** Principal $P = 100$, rate $r = 0.10$ (always write percentages as decimals — 10% = 0.10), time $t = 10$ years.",
+        "**Compute the exponent first.** $rt = 0.10 \\cdot 10 = 1$. (Computing the exponent separately makes the rest of the arithmetic easier — and reveals the nice answer.)",
+        "**Apply the formula.** $A = 100 \\cdot e^1 = 100 e \\approx 100 \\cdot 2.71828 \\approx \\$271.83$.",
+        "**Why this beautiful number.** Whenever $rt = 1$ (e.g., 10%/yr for 10 yr, or 5%/yr for 20 yr), the multiplier is exactly $e$. That's how *e* was historically discovered — Bernoulli noticed it computing this exact compound-interest limit."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\dfrac{d}{dx}\\!\\left(e^x\\right)\\text{ at }x = 0 = ?",
+      "answer": 1,
+      "tolerance": 0,
+      "hints": [
+        "$e^x$ is its own derivative.",
+        "So $\\dfrac{d}{dx}(e^x)|_{x=0} = e^0 = 1$."
+      ],
+      "explanation": "$\\dfrac{d}{dx}(e^x) = e^x$. At $x = 0$: $e^0 = 1$. This is the *defining* slope of $e^x$ — the curve $y = e^x$ passes through $(0, 1)$ with slope exactly 1. No other exponential $a^x$ has slope 1 at the origin — only $a = e$.",
+      "steps": [
+        "**The magic fact.** $e^x$ is its OWN derivative: $\\dfrac{d}{dx}(e^x) = e^x$. Memorize this — it's the most-used formula in calculus after the power rule.",
+        "**Apply at $x = 0$.** $e^0 = 1$. (Recall: any positive number raised to the 0 power is 1.)",
+        "**Interpretation.** The curve $y = e^x$ crosses the $y$-axis at height 1 with slope 1 — this is what makes $e$ uniquely 'natural'. No other base behaves so cleanly."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\dfrac{d}{dx}\\!\\left(e^{3x}\\right)\\text{ at }x = 0 = ?",
+      "answer": 3,
+      "tolerance": 0,
+      "hints": [
+        "Chain rule: $\\dfrac{d}{dx}(e^{kx}) = k \\, e^{kx}$.",
+        "$\\dfrac{d}{dx}(e^{3x}) = 3 e^{3x}$. At $x=0$: $3 \\cdot e^0 = 3$."
+      ],
+      "explanation": "Chain rule gives $\\dfrac{d}{dx}(e^{kx}) = k\\,e^{kx}$. With $k = 3$: $\\dfrac{d}{dx}(e^{3x}) = 3 e^{3x}$. At $x = 0$: $3 \\cdot 1 = 3$. The multiplier $k$ controls the *rate*: $e^{3x}$ grows three times as fast (per unit $x$) as $e^x$.",
+      "steps": [
+        "**Recognize the chain rule trigger.** $e^{(\\text{something})}$ where the 'something' isn't just $x$. Whenever an exponential's argument is more complex than $x$, you need the chain rule.",
+        "**Chain rule formula for $e$.** $\\dfrac{d}{dx}(e^{u}) = e^u \\cdot u'$. For $u = 3x$: $u' = 3$. So derivative = $3 e^{3x}$.",
+        "**Memorable shortcut.** $\\dfrac{d}{dx}(e^{kx}) = k\\,e^{kx}$ — *the coefficient of $x$ in the exponent comes out front*. Worth memorizing.",
+        "**Evaluate.** At $x = 0$: $3 \\cdot e^0 = 3$.",
+        "**Interpretation.** $e^{3x}$ grows three times faster than $e^x$ at $x = 0$. The chain-rule factor $k$ IS the growth rate."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\dfrac{d}{dx}(\\ln x)\\text{ at }x = 5 = ?",
+      "answer": 0.2,
+      "tolerance": 0.001,
+      "hints": [
+        "$\\dfrac{d}{dx}(\\ln x) = \\dfrac{1}{x}$.",
+        "At $x = 5$: $\\dfrac{1}{5} = 0.2$."
+      ],
+      "explanation": "$\\dfrac{d}{dx}(\\ln x) = \\dfrac{1}{x}$. At $x = 5$: $\\dfrac{1}{5} = 0.2$. The natural log's slope at $x$ is the reciprocal of $x$ — small $x$ means steep slope (the log climbs fast near 0); large $x$ means gentle slope (the log climbs slowly).",
+      "steps": [
+        "**The natural-log derivative formula.** $\\dfrac{d}{dx}(\\ln x) = \\dfrac{1}{x}$. Memorize — this is the OTHER half of the calculus 'natural' family alongside $e^x$.",
+        "**Why this is striking.** The power rule $\\int x^n\\,dx = x^{n+1}/(n+1)$ explodes at $n = -1$. The natural log fills the gap: it's the function whose derivative is $1/x$. A symbiotic relationship.",
+        "**Evaluate at $x = 5$.** $\\dfrac{1}{5} = 0.2$.",
+        "**Shape intuition.** Slope of $\\ln$ is large near $x = 0$ and small for big $x$ — the log 'climbs quickly at first, then crawls'. That's what makes log scales useful for spanning huge ranges (sound, earthquake magnitudes, etc.)."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "prompt": "Why is $\\ln$ (base $e$) called the 'NATURAL' logarithm?",
+      "choices": [
+        "Because $e$ is a natural number (a positive integer).",
+        "Because base 10 is too unfamiliar to most people.",
+        "Because $\\dfrac{d}{dx}(\\ln x) = \\dfrac{1}{x}$ with no extra constants — base $e$ is the ONLY base for which the derivative is this clean.",
+        "Because logarithms occur in nature only at base $e$."
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Compare $\\dfrac{d}{dx}(\\log_{10} x) = \\dfrac{1}{x \\ln 10}$ — an extra $\\ln 10 \\approx 2.303$ in the denominator.",
+        "Base $e$ kills the extra factor."
+      ],
+      "explanation": "Base $e$ is privileged because $\\dfrac{d}{dx}(\\ln x) = \\dfrac{1}{x}$ — clean, no extra constants. For any other base $a$: $\\dfrac{d}{dx}(\\log_a x) = \\dfrac{1}{x \\ln a}$. The price of using a non-natural base is an extra $\\ln a$ floating around in every derivative. That's why calculus universally uses $\\ln$ (= $\\log_e$) — it's the base nature picks if you let her.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\$1000\\text{ at }5\\%\\text{ continuous compounding for }20\\text{ years.}\\\\\\text{Final value (to the nearest dollar)?}",
+      "answer": 2718,
+      "tolerance": 1,
+      "hints": [
+        "$A = P\\,e^{rt}$. Here $rt = 0.05 \\cdot 20 = 1$.",
+        "$A = 1000 \\cdot e^1 \\approx \\$2718.28$."
+      ],
+      "explanation": "$A = P e^{rt} = 1000 \\cdot e^{0.05 \\cdot 20} = 1000 \\cdot e^1 \\approx 2718.28$. Round to \\$2718. (Same exponent as the previous problem because $r \\cdot t = 1$ — your money multiplies exactly by $e$ when you let it compound continuously for as long as it takes the *interest* to equal the *principal* once.)",
+      "steps": [
+        "**Same formula as Q2 — only the numbers changed.** $A = P\\,e^{rt}$ for continuous compounding.",
+        "**Inputs.** $P = 1000$, $r = 0.05$, $t = 20$.",
+        "**Exponent.** $rt = 0.05 \\cdot 20 = 1$. (Again $rt = 1$! Whenever the product of rate and time equals 1, your money multiplies by exactly $e$.)",
+        "**Compute.** $A = 1000 \\cdot e \\approx 1000 \\cdot 2.71828 \\approx \\$2718.28$. Round to nearest dollar: \\$2718.",
+        "**Pattern.** Any continuous-compounding scenario with $rt = 1$ — 4%/25yr, 5%/20yr, 10%/10yr — gives the same multiplier. Notice the symmetry: a low rate over a long time = a high rate over a short time, *if* the product $rt$ matches."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{A radioactive sample halves every }10\\text{ hours.}\\\\\\text{What fraction of the original sample is left after }30\\text{ hours?}",
+      "answer": 0.125,
+      "tolerance": 0.001,
+      "hints": [
+        "30 hours = 3 half-lives.",
+        "After $n$ half-lives, fraction left is $(1/2)^n$.",
+        "$(1/2)^3 = 1/8 = 0.125$."
+      ],
+      "explanation": "Each half-life cuts the amount in half. After 3 half-lives: $\\left(\\tfrac{1}{2}\\right)^3 = \\tfrac{1}{8} = 0.125$. Equivalently, the decay equation is $N(t) = N_0 e^{-kt}$ with $k = \\ln 2 / 10$ per hour. At $t = 30$: $N/N_0 = e^{-3 \\ln 2} = 2^{-3} = 1/8$.",
+      "steps": [
+        "**Recognize the half-life pattern.** Anytime you hear 'halves every X', you can solve without solving any equations: just count how many half-lives fit, and multiply by $1/2$ each time.",
+        "**Count half-lives.** Total time / half-life $= 30/10 = 3$ half-lives.",
+        "**Apply $(1/2)^n$.** Fraction remaining $= (1/2)^3 = 1/8 = 0.125$.",
+        "**Equivalent calculus formulation.** $N(t) = N_0 e^{-kt}$ with $k = \\ln 2 / T_{1/2}$. Either formula works — but for whole numbers of half-lives, the $(1/2)^n$ shortcut is much faster."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "prompt": "Why does the rule $\\int x^n \\, dx = \\dfrac{x^{n+1}}{n+1} + C$ NOT give the antiderivative of $\\dfrac{1}{x}$?",
+      "choices": [
+        "Because $\\dfrac{1}{x}$ isn't a function.",
+        "Because $\\dfrac{1}{x} = x^{-1}$, and applying the rule gives $\\dfrac{x^{0}}{0}$ — division by zero.",
+        "Because $\\dfrac{1}{x}$ has no antiderivative.",
+        "Because $x$ can be negative."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Substitute $n = -1$ into the rule.",
+        "Look at the denominator $n + 1$."
+      ],
+      "explanation": "Plugging $n = -1$ into $\\dfrac{x^{n+1}}{n+1}$ gives $\\dfrac{x^0}{0}$ — undefined. The rule has a singular point at $n = -1$. But $\\dfrac{1}{x}$ DOES have an antiderivative — namely $\\ln|x| + C$ — which is found NOT from the power rule but from inverting the derivative of $\\ln x$.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\dfrac{d}{dx}(2^x)\\text{ at }x = 0.\\ \\text{ (Give to 4 decimal places.)}",
+      "answer": 0.6931,
+      "tolerance": 0.001,
+      "hints": [
+        "$\\dfrac{d}{dx}(a^x) = a^x \\ln a$.",
+        "At $x = 0$: $a^0 \\ln a = \\ln a$.",
+        "$\\ln 2 \\approx 0.6931$."
+      ],
+      "explanation": "Rewrite $2^x = e^{x \\ln 2}$. By chain rule, $\\dfrac{d}{dx}(2^x) = 2^x \\cdot \\ln 2$. At $x = 0$: $\\ln 2 \\approx 0.6931$. Notice: every base other than $e$ has this extra $\\ln a$ factor. For $e^x$ it's $\\ln e = 1$ — clean. For $2^x$ or $10^x$ — extra baggage. That's the privilege of $e$.",
+      "steps": [
+        "**Generalized exponential rule.** $\\dfrac{d}{dx}(a^x) = a^x \\ln a$ for any base $a > 0$. The factor $\\ln a$ is the 'penalty' for using a base other than $e$.",
+        "**Derivation worth knowing.** Rewrite $a^x = e^{x \\ln a}$. Chain rule: derivative $= e^{x \\ln a} \\cdot \\ln a = a^x \\ln a$. (This is WHY the formula is what it is — the $\\ln a$ comes from the chain rule.)",
+        "**Apply with $a = 2$.** Derivative $= 2^x \\ln 2$.",
+        "**Evaluate at $x = 0$.** $2^0 \\cdot \\ln 2 = 1 \\cdot \\ln 2 = \\ln 2 \\approx 0.6931$.",
+        "**Big takeaway.** Slope of $a^x$ at $x = 0$ is exactly $\\ln a$. For $a = e$: slope is $\\ln e = 1$ — the cleanest case. For $a = 10$: slope is $\\ln 10 \\approx 2.303$. The slope is the 'fingerprint' of the base."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\$100\\text{ at }5\\%\\text{ SIMPLE interest for 8 years.}\\\\\\text{Final value?}",
+      "answer": 140,
+      "tolerance": 0,
+      "hints": [
+        "Simple interest: $A = P + P \\cdot r \\cdot t = P(1 + rt)$.",
+        "$100(1 + 0.05 \\cdot 8) = 100 \\cdot 1.4 = \\$140$."
+      ],
+      "explanation": "Simple interest: interest is paid only on the original principal, never on past interest. $A = P(1 + rt) = 100(1 + 0.4) = \\$140$. Compare: at 5% **continuous** compounding, the same \\$100 for 8 years would grow to $100\\,e^{0.4} \\approx \\$149.18$ — \\$9 more.",
+      "steps": [
+        "**Distinguish SIMPLE from COMPOUND interest.** *Simple* = interest paid only on principal. *Compound* = interest paid on principal AND on past interest. Different formulas.",
+        "**Simple interest formula.** $A = P(1 + rt)$. (Equivalently: $A = P + P \\cdot rt$ — principal plus interest, where interest is a linear function of time.)",
+        "**Inputs.** $P = 100$, $r = 0.05$, $t = 8$. $rt = 0.4$.",
+        "**Compute.** $A = 100(1 + 0.4) = 100 \\cdot 1.4 = \\$140$.",
+        "**Compare with continuous compounding.** Same parameters with continuous: $A = 100 e^{0.4} \\approx \\$149.18$. The \\$9 difference is the value of 'interest on interest'."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\$1000\\text{ at }6\\%\\text{ compounded ANNUALLY for 5 years.}\\\\\\text{Final value to nearest cent?}",
+      "answer": 1338.23,
+      "tolerance": 0.05,
+      "hints": [
+        "Annual compounding: $A = P(1+r)^t = 1000(1.06)^5$.",
+        "$(1.06)^5 \\approx 1.33823$.",
+        "$1000 \\cdot 1.33823 \\approx \\$1338.23$."
+      ],
+      "explanation": "Annual compounding: $A = P(1 + r)^t$. $1000 \\cdot (1.06)^5 \\approx 1000 \\cdot 1.33823 \\approx \\$1338.23$. Continuous version would be $1000 \\, e^{0.30} \\approx \\$1349.86$ — a few dollars more.",
+      "steps": [
+        "**Annual compounding formula.** $A = P(1+r)^t$ — interest compounds once a year.",
+        "**Inputs.** $P = 1000$, $r = 0.06$, $t = 5$.",
+        "**Compute $(1.06)^5$ step-by-step.** $1.06^2 = 1.1236$. $1.06^4 = 1.1236^2 = 1.2625$. $1.06^5 = 1.2625 \\cdot 1.06 = 1.3382$. (Repeated squaring is faster than multiplying 1.06 by itself 5 times.)",
+        "**Final value.** $A = 1000 \\cdot 1.3382 = \\$1338.23$.",
+        "**Hierarchy check.** Continuous version of this would be $1000 e^{0.30} \\approx \\$1349.86$. Order: simple < annual < monthly < daily < continuous. Always."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q13",
+      "type": "numeric",
+      "promptTex": "\\$1000\\text{ at }4\\%\\text{ CONTINUOUS compounding for 5 years.}\\\\\\text{Final value to nearest cent?}",
+      "answer": 1221.40,
+      "tolerance": 0.1,
+      "hints": [
+        "Continuous: $A = P\\,e^{rt}$.",
+        "$rt = 0.04 \\cdot 5 = 0.2$.",
+        "$e^{0.2} \\approx 1.2214$.",
+        "$1000 \\cdot 1.2214 \\approx \\$1221.40$."
+      ],
+      "explanation": "$A = P\\,e^{rt} = 1000 \\cdot e^{0.2} \\approx 1000 \\cdot 1.2214 \\approx \\$1221.40$.",
+      "steps": [
+        "**Same continuous-compounding template.** $A = P\\,e^{rt}$.",
+        "**Inputs.** $P = 1000$, $r = 0.04$, $t = 5$.",
+        "**Exponent.** $rt = 0.20$.",
+        "**Look up or estimate $e^{0.2}$.** $e^{0.2} \\approx 1.2214$. (For small $rt$, the Taylor approximation $e^x \\approx 1 + x + x^2/2 = 1 + 0.2 + 0.02 = 1.22$ is already very close — useful for mental math.)",
+        "**Final.** $A = 1000 \\cdot 1.2214 \\approx \\$1221.40$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q14",
+      "type": "numeric",
+      "promptTex": "\\text{At }5\\%\\text{ CONTINUOUS interest, how long does your money take to DOUBLE? (years, 2 dp)}",
+      "answer": 13.86,
+      "tolerance": 0.05,
+      "hints": [
+        "Set $e^{rt} = 2$. Solve for $t$.",
+        "$rt = \\ln 2 \\Rightarrow t = \\dfrac{\\ln 2}{r}$.",
+        "$\\dfrac{\\ln 2}{0.05} = \\dfrac{0.6931}{0.05} \\approx 13.86$ years."
+      ],
+      "explanation": "Doubling time at continuous rate $r$: $e^{rt} = 2 \\Rightarrow t = \\dfrac{\\ln 2}{r}$. At $r = 0.05$: $t = \\dfrac{0.6931}{0.05} \\approx 13.86$ years. (Rule of 70 estimate: $70 / 5 = 14$ years — very close to the exact answer.)",
+      "steps": [
+        "**Recognize the question type.** 'How long to double?' = solve $A = 2P$ for time. Standard template — both inputs and outputs are different from the usual.",
+        "**Set up the equation.** $P\\,e^{rt} = 2P$, divide by $P$: $e^{rt} = 2$.",
+        "**Solve for the variable in an exponent — take the log.** Whenever the unknown sits in an exponent, the natural move is $\\ln$ of both sides.",
+        "**Take $\\ln$.** $\\ln(e^{rt}) = \\ln 2$, simplify left side: $rt = \\ln 2$.",
+        "**Solve for $t$.** $t = \\dfrac{\\ln 2}{r} = \\dfrac{0.6931}{0.05} \\approx 13.86$ years.",
+        "**Rule-of-70 mental-math shortcut.** Doubling time at $r$% per year ≈ $70/r$ years. Here $70/5 = 14$ — agrees with the exact answer to within 1%. Useful for back-of-envelope estimates."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q15",
+      "type": "numeric",
+      "promptTex": "\\text{Bacteria colony starts at 1000 cells; doubles every 3 hours.}\\\\\\text{How many cells after 9 hours?}",
+      "answer": 8000,
+      "tolerance": 0,
+      "hints": [
+        "9 hours = 3 doubling periods.",
+        "After $n$ doublings: $1000 \\cdot 2^n$.",
+        "$1000 \\cdot 2^3 = 8000$."
+      ],
+      "explanation": "Doubling 3 times: $1000 \\to 2000 \\to 4000 \\to 8000$. Formally: $N(t) = N_0 \\, 2^{t/T_d}$ where $T_d = 3$. At $t = 9$: $N = 1000 \\cdot 2^3 = 8000$.",
+      "steps": [
+        "**Recognize doubling-time problem.** When the problem says 'doubles every X', count whole doublings — no need for the full $e^{kt}$ machinery if the time is a whole multiple of the doubling period.",
+        "**Count doubling periods.** $9$ hours $\\div$ $3$ hours/doubling $= 3$ doublings.",
+        "**Apply.** Each doubling multiplies by 2. After 3 doublings: $1000 \\cdot 2^3 = 1000 \\cdot 8 = 8000$.",
+        "**Mental walk-through.** Hour 0: 1000. Hour 3: 2000. Hour 6: 4000. Hour 9: 8000. ✓"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q16",
+      "type": "numeric",
+      "promptTex": "\\text{Radioactive substance with half-life 100 years.}\\\\\\text{Fraction remaining after 250 years? (4 dp)}",
+      "answer": 0.1768,
+      "tolerance": 0.001,
+      "hints": [
+        "Number of half-lives: $250 / 100 = 2.5$.",
+        "Fraction left: $(1/2)^{2.5} = 2^{-2.5}$.",
+        "$2^{2.5} = 4\\sqrt{2} \\approx 5.657$, so $1/2^{2.5} \\approx 0.1768$."
+      ],
+      "explanation": "Fraction remaining $= (1/2)^{t / T_{1/2}}$. With $t/T_{1/2} = 2.5$: $(1/2)^{2.5} = 2^{-2.5} = \\dfrac{1}{2^{2.5}} = \\dfrac{1}{4\\sqrt{2}} \\approx 0.1768$.",
+      "steps": [
+        "**Generalize the half-life rule to non-integer cases.** The formula $(1/2)^n$ works for ANY $n$ — including 2.5. The interpretation is just that 2.5 half-lives have passed.",
+        "**Count half-lives.** $250 / 100 = 2.5$.",
+        "**Compute $(1/2)^{2.5}$.** Split: $(1/2)^{2.5} = (1/2)^2 \\cdot (1/2)^{0.5} = \\dfrac{1}{4} \\cdot \\dfrac{1}{\\sqrt{2}} = \\dfrac{1}{4\\sqrt{2}}$.",
+        "**Rationalize and decimal-ize.** $\\dfrac{1}{4\\sqrt{2}} = \\dfrac{\\sqrt{2}}{8} \\approx \\dfrac{1.4142}{8} \\approx 0.1768$."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q17",
+      "type": "numeric",
+      "promptTex": "\\dfrac{d}{dx}\\!\\left(e^{5x}\\right)\\text{ at }x = 0 = ?",
+      "answer": 5,
+      "tolerance": 0,
+      "hints": [
+        "Chain rule: $\\dfrac{d}{dx}(e^{kx}) = k\\,e^{kx}$.",
+        "$\\dfrac{d}{dx}(e^{5x}) = 5\\,e^{5x}$. At $x = 0$: $5 \\cdot 1 = 5$."
+      ],
+      "explanation": "Chain rule: $\\dfrac{d}{dx}(e^{kx}) = k\\,e^{kx}$ for any constant $k$. With $k = 5$: $5\\,e^{5x}$. At $x = 0$: $5$.",
+      "steps": [
+        "**Standard chain-rule pattern.** $\\dfrac{d}{dx}(e^{kx}) = k\\,e^{kx}$ — coefficient of $x$ pops out front.",
+        "**With $k = 5$:** derivative $= 5\\,e^{5x}$.",
+        "**At $x = 0$:** $5 \\cdot e^0 = 5$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q18",
+      "type": "numeric",
+      "promptTex": "\\dfrac{d}{dx}\\!\\left(e^{-2x}\\right)\\text{ at }x = 0 = ?",
+      "answer": -2,
+      "tolerance": 0,
+      "hints": [
+        "$\\dfrac{d}{dx}(e^{-2x}) = -2 e^{-2x}$.",
+        "At $x = 0$: $-2$."
+      ],
+      "explanation": "$\\dfrac{d}{dx}(e^{-2x}) = -2 e^{-2x}$. At $x = 0$: $-2$. (Negative coefficient $k = -2$ means the function is DECAYING — derivative is negative.)",
+      "steps": [
+        "**Same chain-rule pattern, NEGATIVE coefficient.** With $k = -2$: $\\dfrac{d}{dx}(e^{-2x}) = -2\\,e^{-2x}$.",
+        "**Evaluate at $x = 0$.** $-2 \\cdot 1 = -2$.",
+        "**Sign meaning.** Negative $k$ = exponential DECAY (function decreasing). Negative derivative confirms it. (This is the pattern behind radioactive decay, cooling, drug elimination, RC discharge — all governed by $e^{-kt}$ with $k > 0$.)"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q19",
+      "type": "numeric",
+      "promptTex": "\\dfrac{d}{dx}\\!\\left(e^{x^2}\\right)\\text{ at }x = 1.\\ \\text{(3 decimal places)}",
+      "answer": 5.437,
+      "tolerance": 0.01,
+      "hints": [
+        "Chain rule: $\\dfrac{d}{dx}(e^{u}) = e^u \\cdot u'$ with $u = x^2$.",
+        "$u' = 2x$. So $\\dfrac{d}{dx}(e^{x^2}) = 2x\\,e^{x^2}$.",
+        "At $x = 1$: $2 \\cdot e \\approx 2 \\cdot 2.7183 \\approx 5.437$."
+      ],
+      "explanation": "Chain rule: let $u = x^2$, so $\\dfrac{d}{dx}(e^{x^2}) = e^{x^2} \\cdot 2x$. At $x = 1$: $2 \\cdot e \\approx 5.437$.",
+      "steps": [
+        "**Recognize the chain rule.** The exponent is $x^2$ — not just $kx$. Need the FULL chain rule, not the shortcut.",
+        "**Identify the inner function.** $u = x^2$. Outer function: $e^u$.",
+        "**Compute derivatives separately.** Outer: $\\dfrac{d}{du}(e^u) = e^u$. Inner: $\\dfrac{du}{dx} = 2x$.",
+        "**Multiply (chain rule).** $\\dfrac{d}{dx}(e^{x^2}) = e^{x^2} \\cdot 2x = 2x\\,e^{x^2}$.",
+        "**Evaluate at $x = 1$.** $2 \\cdot 1 \\cdot e^1 = 2e \\approx 2 \\cdot 2.7183 \\approx 5.437$.",
+        "**Pattern.** Whenever you see $e^{(\\text{anything})}$, the derivative is $(\\text{anything})' \\cdot e^{(\\text{anything})}$ — derivative of the exponent, times the original $e$-expression. Universal."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q20",
+      "type": "numeric",
+      "promptTex": "\\dfrac{d}{dx}\\!\\left(\\ln(3x)\\right)\\text{ at }x = 2 = ?",
+      "answer": 0.5,
+      "tolerance": 0.001,
+      "hints": [
+        "$\\ln(3x) = \\ln 3 + \\ln x$, so derivative = derivative of $\\ln x$.",
+        "$\\dfrac{d}{dx}\\ln(3x) = \\dfrac{1}{x}$.",
+        "At $x = 2$: $1/2 = 0.5$."
+      ],
+      "explanation": "Method 1: $\\ln(3x) = \\ln 3 + \\ln x$; the $\\ln 3$ is constant and disappears. So derivative = $\\dfrac{1}{x}$. Method 2: chain rule, $\\dfrac{d}{dx}\\ln(3x) = \\dfrac{1}{3x} \\cdot 3 = \\dfrac{1}{x}$. Either way, at $x = 2$: $1/2 = 0.5$. (Cool: a *scale factor* in the argument of $\\ln$ doesn't affect its derivative.)",
+      "steps": [
+        "**Two valid approaches — pick whichever you find easier.**",
+        "**Approach A (log property).** $\\ln(3x) = \\ln 3 + \\ln x$. The $\\ln 3$ is a constant (derivative $= 0$); the $\\ln x$ has derivative $1/x$. Total: $\\dfrac{1}{x}$.",
+        "**Approach B (chain rule).** $u = 3x$, $u' = 3$. $\\dfrac{d}{dx}\\ln(u) = \\dfrac{u'}{u} = \\dfrac{3}{3x} = \\dfrac{1}{x}$. Same answer.",
+        "**Surprising lesson.** A multiplicative constant inside $\\ln$ does NOT change the derivative. $\\ln(3x), \\ln(100x), \\ln(0.5x)$ — all have derivative $1/x$. Worth knowing.",
+        "**Evaluate at $x = 2$.** $1/2 = 0.5$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q21",
+      "type": "numeric",
+      "promptTex": "\\dfrac{d}{dx}\\!\\left(\\ln(x^2 + 1)\\right)\\text{ at }x = 1 = ?",
+      "answer": 1,
+      "tolerance": 0,
+      "hints": [
+        "Chain rule: $\\dfrac{d}{dx}\\ln(u) = \\dfrac{u'}{u}$ with $u = x^2 + 1$, $u' = 2x$.",
+        "Derivative: $\\dfrac{2x}{x^2 + 1}$.",
+        "At $x = 1$: $\\dfrac{2}{2} = 1$."
+      ],
+      "explanation": "Chain rule on $\\ln$: $\\dfrac{d}{dx}\\ln(u) = \\dfrac{1}{u} \\cdot u'$. With $u = x^2 + 1$, $u' = 2x$: derivative = $\\dfrac{2x}{x^2+1}$. At $x = 1$: $\\dfrac{2}{2} = 1$.",
+      "steps": [
+        "**Identify chain rule on $\\ln$.** Pattern: $\\dfrac{d}{dx}\\ln(u) = \\dfrac{u'}{u}$. (Memorize this form — it shows up constantly.)",
+        "**Identify $u$ and compute $u'$.** $u = x^2 + 1$; $u' = 2x$.",
+        "**Apply.** Derivative $= \\dfrac{u'}{u} = \\dfrac{2x}{x^2 + 1}$.",
+        "**Evaluate at $x = 1$.** $\\dfrac{2 \\cdot 1}{1 + 1} = \\dfrac{2}{2} = 1$."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q22",
+      "type": "numeric",
+      "promptTex": "\\text{Coffee at }90^\\circ\\text{C cools in a }20^\\circ\\text{C room. After 5 min it is }70^\\circ\\text{C.}\\\\\\text{Using Newton's law of cooling, what is its temperature after 10 min? (1 dp)}",
+      "answer": 55.7,
+      "tolerance": 0.5,
+      "hints": [
+        "Newton: $T(t) - 20 = 70\\,e^{-kt}$.",
+        "At $t = 5$: $50 = 70 e^{-5k} \\Rightarrow e^{-5k} = 5/7$.",
+        "At $t = 10$: $T - 20 = 70 (e^{-5k})^2 = 70 \\cdot (5/7)^2 = 70 \\cdot 25/49 = 250/7 \\approx 35.71$.",
+        "$T = 20 + 35.71 \\approx 55.71^\\circ$C."
+      ],
+      "explanation": "Newton's law of cooling: $T(t) - T_{\\text{room}} = (T_0 - T_{\\text{room}})\\,e^{-kt}$. Here $T_0 - 20 = 70$, and at $t = 5$: $T - 20 = 50 = 70\\,e^{-5k}$, so $e^{-5k} = 5/7$. At $t = 10$: $T - 20 = 70 \\cdot e^{-10k} = 70 \\cdot (e^{-5k})^2 = 70 \\cdot 25/49 = 250/7 \\approx 35.71$. So $T \\approx 55.71^\\circ$C. (Notice: the excess temperature dropped from 70 to 50 in 5 min, so it should drop by ratio $5/7$ again to about 35.7 in the next 5 min.)",
+      "steps": [
+        "**Recognize Newton's law of cooling.** The temperature DIFFERENCE between the object and the room decays exponentially: $T(t) - T_{\\text{room}} = (T_0 - T_{\\text{room}})\\,e^{-kt}$. Work with the DIFFERENCE, not the temperature itself.",
+        "**Set up.** Room: $20^\\circ$C. Initial coffee: $90^\\circ$. Initial difference: $70^\\circ$. So $T(t) - 20 = 70\\,e^{-kt}$.",
+        "**Use the 5-min measurement to find $k$ (or sidestep it).** At $t = 5$: $T = 70$, so $T - 20 = 50 = 70 e^{-5k}$. Hence $e^{-5k} = 50/70 = 5/7$. (We *could* solve for $k$, but a smarter move: keep $e^{-5k}$ as a unit.)",
+        "**Clever shortcut.** $e^{-10k} = (e^{-5k})^2 = (5/7)^2 = 25/49$. (Avoids logarithms entirely — the temperature difference shrinks by the SAME ratio $5/7$ every 5 minutes.)",
+        "**Apply at $t = 10$.** $T(10) - 20 = 70 \\cdot 25/49 = 1750/49 = 250/7 \\approx 35.71$.",
+        "**Final.** $T(10) \\approx 20 + 35.71 \\approx 55.71^\\circ$C.",
+        "**Universal pattern.** Anything obeying 'rate of change proportional to distance from equilibrium' approaches the equilibrium exponentially — temperature → room temp, drug concentration → 0, voltage on a capacitor → final value. All cases of the same equation: $\\dot{y} = -k(y - y_\\infty)$."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q23",
+      "type": "numeric",
+      "promptTex": "\\ln\\!\\left(e^{2x+1}\\right)\\text{ at }x = 2 = ?",
+      "answer": 5,
+      "tolerance": 0,
+      "hints": [
+        "$\\ln(e^y) = y$ for any $y$.",
+        "So $\\ln(e^{2x+1}) = 2x + 1$. At $x = 2$: $5$."
+      ],
+      "explanation": "$\\ln$ and $e^{(\\cdot)}$ are inverse functions; $\\ln(e^y) = y$ identically. So $\\ln(e^{2x+1}) = 2x + 1$. At $x = 2$: $4 + 1 = 5$.",
+      "steps": [
+        "**Recognize inverse functions cancelling.** $\\ln$ and $e^{(\\cdot)}$ are inverses: $\\ln(e^y) = y$ for any $y$. No derivatives, no algebra — just collapse them.",
+        "**Apply.** $\\ln(e^{2x+1}) = 2x + 1$. The whole expression simplifies to a linear function.",
+        "**Evaluate at $x = 2$.** $2 \\cdot 2 + 1 = 5$.",
+        "**Lesson.** When you see $\\ln(e^{\\ldots})$ or $e^{\\ln(\\ldots)}$, *cancel first, compute second*. Don't differentiate before simplifying."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q24",
+      "type": "numeric",
+      "promptTex": "\\text{Drug half-life in the bloodstream is 4 hours.}\\\\\\text{What fraction of the dose remains after 12 hours?}",
+      "answer": 0.125,
+      "tolerance": 0.001,
+      "hints": [
+        "12 hours = 3 half-lives.",
+        "Fraction left: $(1/2)^3 = 1/8 = 0.125$."
+      ],
+      "explanation": "Each half-life cuts the dose in half. After 3 half-lives: $(1/2)^3 = 1/8 = 0.125$. (This is why dosing schedules for many drugs use intervals comparable to one half-life: you maintain a stable level somewhere between the trough and the peak.)",
+      "steps": [
+        "**Same half-life template as Q8 and Q16.** Count half-lives; raise $1/2$ to that power.",
+        "**Count.** $12 / 4 = 3$ half-lives.",
+        "**Compute.** $(1/2)^3 = 1/8 = 0.125$.",
+        "**Real-world insight.** Pharmacists target dosing intervals near 1 half-life so the blood level stays between two specific bounds. Knowing the half-life is enough to design a dosing schedule — no other calculus needed."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q25",
+      "type": "numeric",
+      "promptTex": "\\text{A quantity grows by }y = y_0\\,e^{kt}.\\ \\text{It triples in 5 seconds.}\\\\\\text{What is the growth rate }k\\text{? (4 dp)}",
+      "answer": 0.2197,
+      "tolerance": 0.001,
+      "hints": [
+        "Tripling means $y/y_0 = 3$, so $e^{5k} = 3$.",
+        "$5k = \\ln 3 \\approx 1.0986$.",
+        "$k = \\ln 3 / 5 \\approx 0.2197$."
+      ],
+      "explanation": "$e^{5k} = 3 \\Rightarrow 5k = \\ln 3 \\Rightarrow k = \\dfrac{\\ln 3}{5} \\approx \\dfrac{1.0986}{5} \\approx 0.2197$. The growth rate is about $22\\%$ per second.",
+      "steps": [
+        "**Recognize the template.** 'Multiplies by factor $M$ in time $T$' → solve $e^{kT} = M$ for $k$. General formula: $k = \\ln(M) / T$.",
+        "**Set up equation.** $y/y_0 = 3$, so $e^{5k} = 3$.",
+        "**Take $\\ln$ of both sides.** $5k = \\ln 3 \\approx 1.0986$.",
+        "**Solve.** $k = \\ln 3 / 5 \\approx 0.2197$ per second.",
+        "**Sanity-check the magnitude.** Growth rate $\\approx 22\\%$/sec. Triples in 5 sec → starts at 1, becomes 3 in 5 sec. Average growth: $(3-1)/5 = 0.4$/sec — close to but greater than our $k = 0.22$ because the function ACCELERATES (more growth in later seconds than earlier)."
+      ],
+      "difficulty": "hard"
+    }
+  ]
+}

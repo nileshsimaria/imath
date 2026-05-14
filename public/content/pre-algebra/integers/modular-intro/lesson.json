@@ -1,0 +1,68 @@
+{
+  "title": "Clock Arithmetic (Modular Numbers)",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### Why does 9 + 7 sometimes equal 4?",
+        "On a 12-hour clock, if it's 9 o'clock and 7 hours pass, what time is it? **4 o'clock.** Not 16. Time wraps around — that's because clocks live on a circle, not a line.",
+        "This 'wrap-around' arithmetic is called **modular arithmetic**. The number 12 in our clock example is the **modulus**. We write:",
+        "$9 + 7 \\equiv 4 \\pmod{12}$",
+        "Read aloud: '9 plus 7 is congruent to 4, modulo 12.' The symbol $\\equiv$ (three lines) signals modular equivalence."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "modular-clock",
+      "config": {
+        "mode": "step",
+        "N": 12,
+        "start": 9,
+        "add": 7
+      }
+    },
+    {
+      "type": "callout",
+      "title": "What 'mod N' really means",
+      "body": "Two numbers are **congruent mod N** if they differ by a multiple of $N$. Equivalently: they leave the same remainder when divided by $N$.\n\n$16 \\equiv 4 \\pmod{12}$ because $16 = 1 \\cdot 12 + 4$ — they both leave remainder 4 when divided by 12.\n\nFormally: $a \\equiv b \\pmod{N}$ iff $N \\mid (a - b)$ ('N divides $a - b$').\n\nThink of mod N as 'collapse the integers down so that anything differing by a multiple of N is treated as the same'."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Working with the clock",
+        "Drag the **Modulus** slider in the widget — try $N = 7$ for days of the week, $N = 24$ for 24-hour clocks, $N = 60$ for minutes. Drag **Start** and **Add** to step around the clock.",
+        "**Key insight:** the same arithmetic works for any modulus. The clock is just a visualization."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The rules — they work just like regular addition (mostly)",
+      "body": "If $a \\equiv b \\pmod{N}$ and $c \\equiv d \\pmod{N}$, then:\n\n**Addition:** $a + c \\equiv b + d \\pmod{N}$.\n**Subtraction:** $a - c \\equiv b - d \\pmod{N}$.\n**Multiplication:** $a \\cdot c \\equiv b \\cdot d \\pmod{N}$.\n\nDivision is tricky — it doesn't always work. (You can divide only when you can find a 'multiplicative inverse' in mod N, which exists iff $\\gcd(\\text{divisor}, N) = 1$.)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why this matters — divisibility tricks",
+        "**Divisibility by 3:** A number is divisible by 3 iff the sum of its digits is divisible by 3. Why? Because $10 \\equiv 1 \\pmod{3}$, so $10^k \\equiv 1$ too. Hence $\\overline{d_n d_{n-1} \\cdots d_0} \\equiv \\sum d_i \\pmod 3$.",
+        "**Divisibility by 9:** Same trick — $10 \\equiv 1 \\pmod 9$. Digit sum tells you the remainder mod 9.",
+        "**Divisibility by 11:** $10 \\equiv -1 \\pmod{11}$, so digits alternate in sign. Add digits at even positions, subtract at odd — if the result is divisible by 11, the original is too.",
+        "These tricks are *consequences* of modular arithmetic, not separate magic."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked examples",
+        "**What is $47 \\bmod 6$?** Compute $47 = 7 \\cdot 6 + 5$, so $47 \\equiv 5 \\pmod 6$.",
+        "**What is $(8 + 15) \\bmod 7$?** $8 + 15 = 23 = 3 \\cdot 7 + 2 \\Rightarrow 23 \\equiv 2 \\pmod 7$.",
+        "**What is $5 \\cdot 9 \\bmod 11$?** $5 \\cdot 9 = 45 = 4 \\cdot 11 + 1 \\Rightarrow 45 \\equiv 1 \\pmod{11}$.",
+        "**$100 \\bmod 7$?** $100 = 14 \\cdot 7 + 2 = 98 + 2$, so $100 \\equiv 2 \\pmod 7$. (Useful: a week before today has the same day-of-week.)"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Tip: negative mod",
+      "body": "Some textbooks use ranges like $(-3) \\pmod 7 = -3$ or $4$. By convention in this lesson we always reduce to the range $0, 1, 2, \\ldots, N-1$, so $-3 \\bmod 7 = 4$ (since $-3 + 7 = 4$). Both are correct — just be consistent."
+    }
+  ]
+}

@@ -1,0 +1,393 @@
+{
+  "title": "Trigonometric Function Graphs",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "On the unit circle, every angle $\\theta$ gives you a point $(\\cos\\theta, \\sin\\theta)$. As $\\theta$ rotates, that point sweeps around the circle. But what if we *unroll* that motion into a graph — plotting $y = \\sin\\theta$ on regular x-y axes? You get one of the most iconic curves in all of mathematics: the **sine wave**.",
+        "There are six trig functions, and each has its own graph. Three of them — sine, cosine, tangent — are the originals. The other three (cotangent, secant, cosecant) are reciprocals of the originals. Once you understand the first three graphs, the others follow."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## $y = \\sin x$",
+        "### Linking the circle to the wave",
+        "The widget below has two parts: the unit circle on the left, and the graph of $y = \\sin\\theta$ on the right. As you change $\\theta$, both update together. The y-coordinate of the point on the circle is exactly the height of the wave at that angle."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "unit-circle",
+      "config": {
+        "mode": "with-wave",
+        "curve": "sin",
+        "initialAngle": 60
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "Try sweeping $\\theta$ from $0°$ to $360°$. The wave traces out one full cycle: starts at $0$, peaks at $1$ (when $\\theta = 90°$), back to $0$ (at $180°$), bottoms at $-1$ (at $270°$), and back to $0$ (at $360°$)."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Period and amplitude",
+        "Two numbers describe the shape of a sinusoidal wave:",
+        "**Period** — the horizontal length of one full cycle. For $y = \\sin x$, the period is **$2\\pi$** (i.e., $360°$). After that, the pattern repeats forever.",
+        "**Amplitude** — the vertical 'height' from the middle to the peak. For $y = \\sin x$, the amplitude is **$1$**, because $\\sin x$ never goes above $1$ or below $-1$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Why is it periodic?",
+      "body": "Adding $2\\pi$ (a full revolution) puts you back at the same point on the circle. So $\\sin(x + 2\\pi) = \\sin x$. The wave repeats because the circle does."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## $y = \\cos x$",
+        "Switch the toggle in the widget above to **cos θ**. You'll see the same shape — but shifted to the **left** by $\\pi/2$ (i.e., $90°$). Cosine starts at $1$ (when $x = 0$), drops to $0$ (at $\\pi/2$), bottoms at $-1$ (at $\\pi$), back to $0$ (at $3\\pi/2$), and back to $1$ (at $2\\pi$)."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\cos x = \\sin\\!\\left(x + \\dfrac{\\pi}{2}\\right)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "The cosine curve *is* the sine curve, just shifted. Same shape, different starting point. They're said to be **out of phase** by $\\pi/2$ ($90°$)."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Key values to remember",
+        "**$\\sin x$ is $0$** at $x = 0, \\pi, 2\\pi, \\ldots$",
+        "**$\\sin x$ is $1$** at $x = \\pi/2$ (max).",
+        "**$\\sin x$ is $-1$** at $x = 3\\pi/2$ (min).",
+        "**$\\cos x$ is $0$** at $x = \\pi/2, 3\\pi/2, \\ldots$",
+        "**$\\cos x$ is $1$** at $x = 0, 2\\pi, \\ldots$ (max).",
+        "**$\\cos x$ is $-1$** at $x = \\pi$ (min)."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## $y = \\tan x$",
+        "Tangent is **fundamentally different** from sine and cosine. Because $\\tan x = \\sin x / \\cos x$, it blows up to infinity wherever $\\cos x = 0$.",
+        "Pick the **tan** tab in the widget below to see it. Notice the dashed red **vertical asymptotes** at $x = \\pm\\pi/2, \\pm 3\\pi/2, \\ldots$ — the function approaches $+\\infty$ from one side and $-\\infty$ from the other.",
+        "**Period of tan:** $\\pi$ (not $2\\pi$). The full pattern repeats every $\\pi$.",
+        "**No amplitude** — $\\tan x$ has no max or min. It goes to $\\pm\\infty$."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "trig-graph",
+      "config": {
+        "func": "tan",
+        "controls": [
+          "func"
+        ],
+        "yMin": -4,
+        "yMax": 4
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "## $y = \\cot x$",
+        "Cotangent is the reciprocal of tangent: $\\cot x = 1/\\tan x = \\cos x / \\sin x$.",
+        "Asymptotes happen wherever $\\sin x = 0$: at $x = 0, \\pm\\pi, \\pm 2\\pi, \\ldots$",
+        "Like tangent, $\\cot x$ has period $\\pi$ and no amplitude. But while tan goes from $-\\infty$ to $+\\infty$ on each cycle, cot goes from $+\\infty$ to $-\\infty$. Click **cot** in the widget above to compare."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## $y = \\sec x$ and $y = \\csc x$",
+        "**Secant:** $\\sec x = 1/\\cos x$. Asymptotes wherever $\\cos x = 0$: at $\\pm\\pi/2, \\pm 3\\pi/2, \\ldots$ Between asymptotes, sec looks like a U-shape (right-side-up or upside-down). The minimum of each U has $|\\sec x| = 1$ — so sec **never has values strictly between -1 and 1**.",
+        "**Cosecant:** $\\csc x = 1/\\sin x$. Same idea, asymptotes wherever $\\sin x = 0$: at $0, \\pm\\pi, \\pm 2\\pi, \\ldots$ Csc also stays outside $[-1, 1]$.",
+        "Both have period $2\\pi$. Try the **sec** and **csc** tabs in the widget above."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Quick reference: periods",
+      "body": "**$2\\pi$:** $\\sin x$, $\\cos x$, $\\sec x$, $\\csc x$. **$\\pi$:** $\\tan x$, $\\cot x$. The reciprocal functions inherit the period of their parent."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## Transformations of trig functions",
+        "Once you know one base curve, you get *all* its transformed versions for free. Every trig function we'll write looks like:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "y = a \\cdot f(b(x - c)) + d"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Each parameter has a clean geometric meaning:",
+        "**$a$** — vertical stretch / **amplitude** (for sin and cos). $a = 2$ doubles the peak; $a = -1$ flips the curve upside-down.",
+        "**$b$** — horizontal stretch / **frequency**. The new period is $\\dfrac{2\\pi}{b}$ for sin/cos/sec/csc, or $\\dfrac{\\pi}{b}$ for tan/cot. Bigger $b$ → squeezed tighter (shorter period).",
+        "**$c$** — **phase shift** (horizontal translation). $c > 0$ shifts the graph to the **right**; $c < 0$ shifts left.",
+        "**$d$** — **vertical shift**. Moves the whole graph up ($d > 0$) or down ($d < 0$). The 'midline' moves to $y = d$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Heads up: phase shift sign",
+      "body": "It's $f(b(x - c))$, with a *minus*. So if you see $y = \\sin(2x - \\pi)$, factor it: $\\sin(2(x - \\pi/2))$. Phase shift is $\\pi/2$ to the **right**, not $\\pi$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Play with the transformations",
+        "The widget below lets you pick a base function and adjust all four parameters. Watch the equation update at the top, and notice how the period and phase shift readouts respond."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "trig-graph",
+      "config": {
+        "func": "sin",
+        "a": 1,
+        "b": 1,
+        "c": 0,
+        "d": 0
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Things to try:**",
+        "Set $a = 2$, $b = 1$, $c = 0$, $d = 0$ — sine wave doubled in height.",
+        "Set $a = 1$, $b = 2$ — period halved (now $\\pi$ instead of $2\\pi$).",
+        "Set $c = \\pi/2 \\approx 1.57$ — sine wave shifted right by a quarter period (now looks like negative cosine, then continue shifting!).",
+        "Set $d = 1$ — wave's midline rises to $y = 1$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example: graph $y = 3\\sin(2x) - 1$",
+        "Read off the parameters: $a = 3$, $b = 2$, $c = 0$, $d = -1$.",
+        "**Amplitude:** $|a| = 3$. The wave swings from $-1 \\pm 3$ — i.e., from $-4$ (min) to $2$ (max).",
+        "**Period:** $\\dfrac{2\\pi}{b} = \\dfrac{2\\pi}{2} = \\pi$. One full cycle every $\\pi$ units (instead of $2\\pi$).",
+        "**Phase shift:** $0$ — no horizontal shift.",
+        "**Vertical shift:** $-1$ — the midline moves down to $y = -1$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## Determining the function from a graph",
+        "Reverse the process: given a transformed sin/cos curve, read off $a, b, c, d$ from features of the picture.",
+        "**Step 1 — find the midline.** The horizontal line halfway between the max and min. That's $y = d$. So:",
+        "$$d = \\dfrac{\\max + \\min}{2}$$",
+        "**Step 2 — find the amplitude.** Half the vertical distance from min to max:",
+        "$$a = \\dfrac{\\max - \\min}{2}$$",
+        "(Use a positive $a$ for the un-flipped curve, negative if the graph is upside-down compared to standard.)",
+        "**Step 3 — find the period.** Measure the horizontal distance for one complete cycle (e.g., peak to next peak). Then $b = \\dfrac{2\\pi}{\\text{period}}$ (or $\\dfrac{\\pi}{\\text{period}}$ for tan/cot).",
+        "**Step 4 — find the phase shift.** Pick a known feature of the base curve (e.g., 'sine starts at $0$ going up'). Where does that feature appear on the graph? That x-value is $c$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example: identify the function",
+        "*A sinusoidal graph has max $5$, min $-1$, period $\\pi$, and reaches its first max at $x = \\pi/4$. Find the equation as a sine function.*",
+        "**Midline:** $d = (5 + (-1))/2 = 2$.",
+        "**Amplitude:** $a = (5 - (-1))/2 = 3$.",
+        "**Period:** $\\pi$, so $b = 2\\pi / \\pi = 2$.",
+        "**Phase shift:** Sine reaches its first max at $x = \\pi/2$ in the standard form. Here it's at $\\pi/4$. So the curve is shifted left by $\\pi/4$ — but careful: 'shifted left by $\\pi/4$' means $c = -\\pi/4$? No: the transformed first max occurs when $b(x - c) = \\pi/2$, so $x = c + \\pi/(2b) = c + \\pi/4$. For this to equal $\\pi/4$: $c = 0$.",
+        "**Final answer:** $y = 3\\sin(2x) + 2$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Why this matters",
+      "body": "Sinusoidal curves describe everything that oscillates: pendulums, sound waves, light, alternating current, tides, even simple harmonic motion in physics. The math you're learning here drives a *lot* of how the real world works."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## Modeling Real-World Phenomena with Sinusoids"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Anything that **oscillates regularly** — repeats with a steady period — can be modeled by a sinusoidal function. The transformation parameters $a, b, c, d$ encode the physics:",
+        "**Amplitude $a$** — the range of swing (half the distance from min to max).",
+        "**Period $\\dfrac{2\\pi}{b}$** — how long one full cycle takes.",
+        "**Phase shift $c$** — when the cycle starts (offset from $t = 0$).",
+        "**Vertical shift $d$** — the average / equilibrium / midline value.",
+        "Three classic contexts."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Ferris Wheel Problems"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "A point on a Ferris wheel traces a **circle**. Plot its **height above the ground** vs. time and you get a sinusoidal curve.",
+        "**Identify the parameters:**",
+        "**Amplitude $a$** = radius of the wheel (how far up/down from center).",
+        "**Vertical shift $d$** = height of the wheel's center above the ground.",
+        "**Period $T$** = time for one full revolution. $b = \\dfrac{2\\pi}{T}$.",
+        "**Phase shift $c$** = depends on where the rider starts (top, bottom, side)."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Choosing sin or cos",
+      "body": "Use **cos** when the rider starts at a **max or min** at $t = 0$. Use **sin** when they start at the **midline** going up or down. Either form works — they're just shifted versions of each other."
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Worked example.** A Ferris wheel has radius $20$ m, with its center $25$ m above the ground. It completes one revolution every $40$ seconds. Riders board at the lowest point. Write the height $h(t)$ as a function of time.",
+        "**Setup.** $a = 20$ (radius). $d = 25$ (center height). Period $= 40$ → $b = 2\\pi / 40 = \\pi/20$.",
+        "At $t = 0$, height is the **minimum** ($25 - 20 = 5$ m). The minimum of $-\\cos$ is at $t = 0$ (since $-\\cos 0 = -1$, the lowest). So use:",
+        "$$h(t) = -20\\cos\\!\\left(\\dfrac{\\pi}{20}\\,t\\right) + 25$$",
+        "Check: $h(0) = -20 + 25 = 5$ m. $h(20) = +20 + 25 = 45$ m (top of the wheel)."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "trig-graph",
+      "config": {
+        "func": "cos",
+        "a": -20,
+        "b": 0.157,
+        "c": 0,
+        "d": 25,
+        "xMin": 0,
+        "xMax": 80,
+        "yMin": 0,
+        "yMax": 50,
+        "controls": []
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "The widget plots $h(t)$ for $80$ seconds (two full revolutions). Bottom = $5$ m, top = $45$ m, period = $40$ s. (Slider controls are hidden here so the model parameters stay fixed; play with the sliders elsewhere in the lesson to see how each one affects the shape.)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Tides and Water Depth"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Tides rise and fall in a near-perfect sinusoid. The lunar cycle drives a period of about **$12.4$ hours** (one cycle from high tide → low tide → next high tide).",
+        "**Identify the parameters:**",
+        "**Vertical shift $d$** = mean (average) water depth.",
+        "**Amplitude $a$** = half the **tidal range** = $(\\text{max depth} - \\text{min depth}) / 2$.",
+        "**Period $T$** ≈ $12.4$ h (semi-diurnal) or $\\sim 24.8$ h (diurnal).",
+        "**Phase shift $c$** = lined up so the model peaks at high tide."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Worked example.** At a harbor, high tide is $8$ m at $3{:}00$ AM and the next low tide is $2$ m at $9{:}00$ AM. Model depth $D(t)$ where $t$ is hours after midnight.",
+        "**Setup.** Mean depth $d = (8 + 2)/2 = 5$ m. Amplitude $a = (8 - 2)/2 = 3$ m. The cycle from high to low takes $9 - 3 = 6$ h, so the **full** period is $T = 12$ h, and $b = 2\\pi / 12 = \\pi/6$.",
+        "High tide is at $t = 3$. Cosine peaks at $0$ in standard form, so we shift right by $3$:",
+        "$$D(t) = 3\\cos\\!\\left(\\dfrac{\\pi}{6}(t - 3)\\right) + 5$$",
+        "Check: $D(3) = 3 \\cdot 1 + 5 = 8$ m (high tide). $D(9) = 3\\cos(\\pi) + 5 = -3 + 5 = 2$ m (low tide)."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "trig-graph",
+      "config": {
+        "func": "cos",
+        "a": 3,
+        "b": 0.524,
+        "c": 3,
+        "d": 5,
+        "xMin": 0,
+        "xMax": 24,
+        "yMin": 0,
+        "yMax": 10,
+        "controls": []
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "Plotted for $24$ hours. You see two full tide cycles, peaks at $3{:}00$ and $15{:}00$ ($3$ PM)."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Spring Motion (Simple Harmonic Motion)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Pull a mass on a spring down from equilibrium and let go — it bounces up and down with **simple harmonic motion (SHM)**. The position vs. time is a perfect sinusoid.",
+        "**Identify the parameters:**",
+        "**Equilibrium = midline $d$** (often $d = 0$ if measured from rest position).",
+        "**Amplitude $a$** = how far the mass was pulled from equilibrium.",
+        "**Period $T$** = $2\\pi \\sqrt{m/k}$ for a spring of stiffness $k$ holding mass $m$ (Hooke's law). $b = 2\\pi/T$.",
+        "**Phase shift $c$** = depends on where motion starts and which direction."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Worked example.** A mass is pulled $5$ cm below equilibrium and released. It oscillates with period $2$ s. Find position $x(t)$ measured upward from equilibrium.",
+        "**Setup.** $|a| = 5$ cm. $d = 0$. $b = 2\\pi/2 = \\pi$.",
+        "At $t = 0$, the mass is at its **minimum** position ($x = -5$). For $-\\cos$, the min at $t = 0$ matches: $-5\\cos(0) = -5$.",
+        "$$x(t) = -5\\cos(\\pi t)$$",
+        "Check: $x(0) = -5$ (released from below). $x(1) = -5\\cos(\\pi) = +5$ (half period later, $5$ cm above equilibrium). $x(2) = -5\\cos(2\\pi) = -5$ (back to start)."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "trig-graph",
+      "config": {
+        "func": "cos",
+        "a": -5,
+        "b": 3.14159,
+        "c": 0,
+        "d": 0,
+        "xMin": 0,
+        "xMax": 6,
+        "yMin": -8,
+        "yMax": 8,
+        "controls": []
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "Position vs time for $6$ seconds (three full cycles)."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The general modeling recipe",
+      "body": "For *any* periodic phenomenon: (1) Find the **midline** = (max + min)/2 → $d$. (2) Find the **amplitude** = (max − min)/2 → $a$. (3) Find the **period** $T$ → $b = 2\\pi/T$. (4) Find a known reference time (peak, trough, midline crossing) → $c$. (5) Plug into $y = a\\sin(b(t - c)) + d$ or $a\\cos(b(t - c)) + d$."
+    }
+  ]
+}

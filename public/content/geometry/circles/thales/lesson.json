@@ -1,0 +1,54 @@
+{
+  "title": "Thales' Theorem",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### A 2500-year-old gift",
+        "**Thales' Theorem** is one of the oldest named theorems in mathematics, attributed to Thales of Miletus (~600 BC). It says:",
+        "**If you draw a triangle inside a circle with one side as the diameter, the angle opposite that diameter is a right angle.**",
+        "Equivalently: any inscribed angle that subtends a diameter is $90°$. Drag $P$ around the circle below — the angle at $P$ is always exactly $90°$, no matter where $P$ goes."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "circle-theorems",
+      "config": {
+        "mode": "thales"
+      }
+    },
+    {
+      "type": "math",
+      "tex": "\\boxed{\\;AB \\text{ is a diameter} \\;\\Longrightarrow\\; \\angle APB = 90°\\;}"
+    },
+    {
+      "type": "callout",
+      "title": "Why this works — two ways to see it",
+      "body": "**Inscribed angle reasoning.** Diameter $AB$ subtends a *straight angle* (180°) at the center. By the Inscribed Angle Theorem, the inscribed angle is half of that = $90°$. Done.\n\n**Isosceles reasoning.** Connect $P$ to the center $O$. Then $OA = OP = OB$ are all radii. So $\\triangle OAP$ and $\\triangle OBP$ are both isosceles. Let $\\angle OAP = \\alpha$ and $\\angle OBP = \\beta$. By Base Angles, $\\angle OPA = \\alpha$ and $\\angle OPB = \\beta$. Triangle $APB$ has angles $\\alpha, \\beta, (\\alpha + \\beta)$ summing to $180°$, so $\\alpha + \\beta = 90°$. That's $\\angle APB$.∎"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The converse is also true",
+        "**If $\\angle APB = 90°$, then $P$ lies on a circle with $AB$ as diameter.**",
+        "Why is this useful? Because it gives you a powerful construction: given any segment $AB$, the set of points $P$ that see $AB$ at a right angle is exactly the circle with diameter $AB$ (minus $A$ and $B$ themselves).",
+        "This is the **Thales' circle** of segment $AB$. It's used constantly in compass-and-straightedge constructions and proofs."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example",
+        "$AB$ is a diameter of a circle of radius 10. Point $P$ is on the circle with $AP = 12$. Find $BP$.",
+        "**By Thales:** $\\angle APB = 90°$. So $\\triangle APB$ is a right triangle with hypotenuse $AB = 20$ (the diameter).",
+        "**Pythagoras:** $AP^2 + BP^2 = AB^2$ $\\Rightarrow$ $144 + BP^2 = 400$ $\\Rightarrow$ $BP = \\sqrt{256} = 16$.",
+        "Sanity check: 12-16-20 is a 3-4-5 right triangle scaled by 4. ✓"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Applications",
+      "body": "**Constructing a right angle without a protractor.** Given any segment, draw its perpendicular bisector to find the midpoint. Draw a semicircle with the segment as diameter. Any point on the arc gives you a right angle.\n\n**Tangent from external point.** To draw the tangent from an external point $E$ to a circle with center $O$: draw circle with diameter $OE$, find where it meets the original circle — those points $T$ satisfy $\\angle OTE = 90°$ (Thales), which is the tangent condition.\n\n**Locus problems.** 'Find all points seeing $AB$ at $90°$' has a clean answer: the Thales circle of $AB$."
+    }
+  ]
+}

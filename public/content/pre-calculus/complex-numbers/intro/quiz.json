@@ -1,0 +1,360 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Compute } i^{30}.",
+      "choices": [
+        "$1$",
+        "$-1$",
+        "$i$",
+        "$-i$"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Powers of $i$ cycle with period 4.",
+        "$30 \\bmod 4 = 2$, so $i^{30} = i^2 = -1$."
+      ],
+      "explanation": "$30 = 4 \\times 7 + 2$, so $i^{30} = i^2 = -1$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "(3 + 2i) + (5 - 7i) = ?",
+      "choices": [
+        "$8 + 5i$",
+        "$8 - 5i$",
+        "$2 + 9i$",
+        "$2 - 9i$"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Add real parts and imaginary parts separately.",
+        "$(3+5) + (2-7)i$."
+      ],
+      "explanation": "$(3 + 5) + (2 - 7)i = 8 - 5i$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "(2 + i)(3 - 2i) = ?",
+      "choices": [
+        "$6 - 2i$",
+        "$6 + 2i$",
+        "$8 - i$",
+        "$4 - i$"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "FOIL and use $i^2 = -1$.",
+        "$6 - 4i + 3i - 2i^2 = 6 - i + 2 = 8 - i$."
+      ],
+      "explanation": "$6 - 4i + 3i - 2i^2 = 6 - i + 2 = 8 - i$.",
+      "steps": [
+        {
+          "text": "**FOIL the product:**"
+        },
+        {
+          "math": "(2 + i)(3 - 2i) = 6 - 4i + 3i - 2i^2"
+        },
+        {
+          "text": "**Combine and use $i^2 = -1$:**"
+        },
+        {
+          "math": "= 6 - i - 2(-1) = 6 - i + 2 = 8 - i"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "|3 + 4i| = ?",
+      "answer": 5,
+      "tolerance": 0.001,
+      "hints": [
+        "$|a + bi| = \\sqrt{a^2 + b^2}$.",
+        "$\\sqrt{9 + 16} = \\sqrt{25} = 5$."
+      ],
+      "explanation": "$|3 + 4i| = \\sqrt{9 + 16} = 5$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Conjugate of } 5 - 3i.",
+      "choices": [
+        "$5 + 3i$",
+        "$-5 - 3i$",
+        "$-5 + 3i$",
+        "$3 + 5i$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Conjugate flips the sign of the imaginary part.",
+        "$5 + 3i$."
+      ],
+      "explanation": "Conjugate of $5 - 3i$ is $5 + 3i$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{1}{2 + 3i} = ?",
+      "choices": [
+        "$\\dfrac{2 - 3i}{13}$",
+        "$\\dfrac{2 + 3i}{13}$",
+        "$\\dfrac{1}{13}$",
+        "$\\dfrac{2 - 3i}{5}$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Multiply top and bottom by conjugate $2 - 3i$.",
+        "Denominator: $(2)^2 + 3^2 = 13$. Numerator: $2 - 3i$."
+      ],
+      "explanation": "$\\dfrac{1}{2 + 3i} \\cdot \\dfrac{2 - 3i}{2 - 3i} = \\dfrac{2 - 3i}{4 + 9} = \\dfrac{2 - 3i}{13}$.",
+      "steps": [
+        {
+          "text": "**Multiply top and bottom by the conjugate** $2 - 3i$:"
+        },
+        {
+          "math": "\\dfrac{1}{2 + 3i} \\cdot \\dfrac{2 - 3i}{2 - 3i}"
+        },
+        {
+          "text": "**Denominator becomes** $(2)^2 + (3)^2 = 13$ (sum of squares of real and imag parts):"
+        },
+        {
+          "math": "= \\dfrac{2 - 3i}{13}"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Polar form of } 1 + i?",
+      "choices": [
+        "$\\sqrt{2}(\\cos(\\pi/4) + i \\sin(\\pi/4))$",
+        "$\\sqrt{2}(\\cos(\\pi/2) + i \\sin(\\pi/2))$",
+        "$2(\\cos(\\pi/4) + i \\sin(\\pi/4))$",
+        "$1 + i$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "$r = \\sqrt{2}$.",
+        "Argument: $\\tan\\theta = 1/1 = 1$, first quadrant ⇒ $\\theta = \\pi/4$."
+      ],
+      "explanation": "$|1 + i| = \\sqrt{2}$. $\\arg = \\pi/4$. So polar = $\\sqrt{2}(\\cos(\\pi/4) + i\\sin(\\pi/4))$.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "promptTex": "(1 + i)^8 = ?",
+      "choices": [
+        "$16$",
+        "$-16$",
+        "$16i$",
+        "$-16i$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Polar form: $\\sqrt{2}(\\cos\\pi/4 + i\\sin\\pi/4)$.",
+        "Raise to 8th: $(\\sqrt{2})^8 (\\cos 2\\pi + i\\sin 2\\pi) = 16 \\cdot 1 = 16$."
+      ],
+      "explanation": "$|1+i|^8 = (\\sqrt{2})^8 = 16$. Argument $\\times 8 = 2\\pi$, cos = 1, sin = 0. So $16$.",
+      "steps": [
+        {
+          "text": "**Polar form:** $1 + i = \\sqrt{2}\\,e^{i\\pi/4}$."
+        },
+        {
+          "text": "**Apply De Moivre:**"
+        },
+        {
+          "math": "(1 + i)^8 = (\\sqrt{2})^8 \\cdot e^{i \\cdot 8\\pi/4} = 16 \\cdot e^{i \\cdot 2\\pi}"
+        },
+        {
+          "math": "= 16(\\cos 2\\pi + i\\sin 2\\pi) = 16 \\cdot 1 = 16"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "(2 + 3i)^2 = ?",
+      "choices": [
+        "$-5 + 12i$",
+        "$13 + 12i$",
+        "$4 + 9i$",
+        "$-5 - 12i$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "$(a+bi)^2 = a^2 + 2abi + (bi)^2 = a^2 - b^2 + 2abi$.",
+        "$4 - 9 + 12i = -5 + 12i$."
+      ],
+      "explanation": "$(2)^2 - (3)^2 + 2(2)(3)i = 4 - 9 + 12i = -5 + 12i$.",
+      "steps": [
+        {
+          "text": "**Square using $(a + bi)^2 = a^2 + 2abi + (bi)^2$:**"
+        },
+        {
+          "math": "(2 + 3i)^2 = 4 + 12i + 9i^2"
+        },
+        {
+          "text": "**Use $i^2 = -1$:**"
+        },
+        {
+          "math": "= 4 + 12i - 9 = -5 + 12i"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{If } z = 3 + 4i, \\text{ find } z \\cdot \\bar z.",
+      "answer": 25,
+      "tolerance": 0.001,
+      "hints": [
+        "$z \\cdot \\bar z = a^2 + b^2 = |z|^2$.",
+        "$9 + 16 = 25$."
+      ],
+      "explanation": "$z \\cdot \\bar z = 9 + 16 = 25$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{If } z_1 = 2(\\cos 30° + i\\sin 30°) \\text{ and } z_2 = 3(\\cos 60° + i\\sin 60°), \\text{ find } |z_1 z_2|.",
+      "answer": 6,
+      "tolerance": 0.001,
+      "hints": [
+        "$|z_1 z_2| = |z_1| \\cdot |z_2|$.",
+        "$2 \\times 3 = 6$."
+      ],
+      "explanation": "$|z_1 z_2| = 2 \\cdot 3 = 6$. The arguments add: $90°$.",
+      "steps": [
+        {
+          "text": "**Read moduli from polar form:** $|z_1| = 2, |z_2| = 3$."
+        },
+        {
+          "text": "**Modulus of product = product of moduli:**"
+        },
+        {
+          "math": "|z_1 z_2| = |z_1| \\cdot |z_2| = 2 \\cdot 3 = 6"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{(1 + i)}{(1 - i)} = ?",
+      "choices": [
+        "$i$",
+        "$-i$",
+        "$1$",
+        "$-1$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Multiply top and bottom by $(1 + i)$.",
+        "Top: $(1 + i)^2 = 1 + 2i - 1 = 2i$. Bottom: $(1)^2 + (1)^2 = 2$. Result: $2i/2 = i$."
+      ],
+      "explanation": "$\\dfrac{(1+i)^2}{(1-i)(1+i)} = \\dfrac{2i}{2} = i$.",
+      "steps": [
+        {
+          "text": "**Multiply top and bottom by conjugate** $(1 + i)$:"
+        },
+        {
+          "math": "\\dfrac{(1 + i)(1 + i)}{(1 - i)(1 + i)}"
+        },
+        {
+          "text": "**Numerator:** $(1 + i)^2 = 1 + 2i + i^2 = 1 + 2i - 1 = 2i$."
+        },
+        {
+          "text": "**Denominator:** $1 - i^2 = 1 + 1 = 2$."
+        },
+        {
+          "math": "= \\dfrac{2i}{2} = i"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q13",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Find argument of } -1 + i \\text{ (degrees).}",
+      "choices": [
+        "$45°$",
+        "$90°$",
+        "$135°$",
+        "$225°$"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Point $(-1, 1)$ is in Quadrant II.",
+        "Reference angle: $\\tan^{-1}(1/1) = 45°$. In Q2 → $180° - 45° = 135°$."
+      ],
+      "explanation": "$(-1, 1)$ is in second quadrant. Argument = $180° - 45° = 135°$.",
+      "steps": [
+        {
+          "text": "**Plot the point** $(-1, 1)$ — it's in the **second quadrant** (negative $x$, positive $y$)."
+        },
+        {
+          "text": "**Reference angle** (positive acute angle with the $x$-axis):"
+        },
+        {
+          "math": "\\tan^{-1}\\left|\\dfrac{1}{-1}\\right| = \\tan^{-1}(1) = 45°"
+        },
+        {
+          "text": "**In Q2, argument = $180° - $ reference:**"
+        },
+        {
+          "math": "\\arg = 180° - 45° = 135°"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q14",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Compute } i^{99}.",
+      "choices": [
+        "$1$",
+        "$-1$",
+        "$i$",
+        "$-i$"
+      ],
+      "answerIndex": 3,
+      "hints": [
+        "$99 \\bmod 4 = 3$.",
+        "$i^3 = -i$."
+      ],
+      "explanation": "$99 = 4 \\cdot 24 + 3$, so $i^{99} = i^3 = -i$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q15",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Sum: } 1 + i + i^2 + i^3 + i^4 + i^5 + i^6 + i^7 = ?",
+      "choices": [
+        "$0$",
+        "$1$",
+        "$2$",
+        "$i$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Group in 4s: $1 + i + i^2 + i^3 = 1 + i - 1 - i = 0$.",
+        "Similarly $i^4 + \\ldots + i^7 = 0$."
+      ],
+      "explanation": "$1 + i - 1 - i + 1 + i - 1 - i = 0$. Powers of $i$ in cycles of 4 sum to 0.",
+      "difficulty": "medium"
+    }
+  ]
+}

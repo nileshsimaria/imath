@@ -1,0 +1,733 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{What is the common difference of } 7, 11, 15, 19, 23, \\ldots?",
+      "answer": 4,
+      "tolerance": 0,
+      "hints": [
+        "Subtract any two consecutive terms.",
+        "$11 - 7 = ?$"
+      ],
+      "explanation": "$11 - 7 = 4$. Same gap between every pair: $d = 4$.",
+      "steps": [
+        "Common difference = (any term) − (previous term).",
+        "$11 - 7 = 4$.",
+        "Verify with another pair: $15 - 11 = 4$ ✓.",
+        "All consecutive differences are $4$, so $d = 4$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{Find } a_{10} \\text{ for the sequence } 3, 8, 13, 18, \\ldots",
+      "answer": 48,
+      "tolerance": 0,
+      "hints": [
+        "$a_1 = 3$, $d = 5$.",
+        "$a_{10} = 3 + 9 \\cdot 5$."
+      ],
+      "explanation": "$a_n = a_1 + (n - 1)d$. So $a_{10} = 3 + (10 - 1)(5) = 3 + 45 = 48$.",
+      "steps": [
+        "Identify $a_1 = 3$ and $d = 8 - 3 = 5$.",
+        "Use the explicit formula: $$a_n = a_1 + (n - 1)d$$",
+        "Plug in $n = 10$: $$a_{10} = 3 + (10 - 1)(5) = 3 + 9 \\cdot 5$$",
+        "$$a_{10} = 3 + 45 = 48$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which sequence is arithmetic?}",
+      "choices": [
+        "1, 2, 4, 8, 16, ...",
+        "1, 4, 9, 16, 25, ...",
+        "5, 8, 11, 14, 17, ...",
+        "2, 6, 18, 54, ..."
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Check that consecutive differences are equal.",
+        "Only one option has constant differences."
+      ],
+      "explanation": "Differences for $5, 8, 11, 14, 17$: all $3$ — constant. Arithmetic. (The first and fourth options are geometric; the second is squares.)",
+      "steps": [
+        "For each option, compute the differences between consecutive terms.",
+        "Option 1: $1, 1, 2, 4, 8$ — geometric ratios but not arithmetic.",
+        "Option 2: $1, 3, 5, 7, 9$ — increasing differences (squares: $1, 4, 9, \\ldots$).",
+        "Option 3: $3, 3, 3, 3$ — constant! Arithmetic with $d = 3$. ✓",
+        "Option 4: $4, 12, 36$ — not constant; this is geometric with $r = 3$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Sum of the first 50 positive integers: } 1 + 2 + 3 + \\cdots + 50 = ?",
+      "answer": 1275,
+      "tolerance": 0,
+      "hints": [
+        "Use $S_n = \\dfrac{n(a_1 + a_n)}{2}$.",
+        "$S = \\dfrac{50(1 + 50)}{2}$."
+      ],
+      "explanation": "$S = \\dfrac{50 \\cdot 51}{2} = 1275$.",
+      "steps": [
+        "This is an arithmetic sum with $a_1 = 1$, $a_{50} = 50$, $n = 50$.",
+        "Use the sum formula: $$S_n = \\dfrac{n(a_1 + a_n)}{2}$$",
+        "$$S_{50} = \\dfrac{50(1 + 50)}{2} = \\dfrac{50 \\cdot 51}{2}$$",
+        "$$S_{50} = \\dfrac{2550}{2} = 1275$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{An arithmetic sequence has } a_1 = -2 \\text{ and } d = 3. \\\\ \\text{What is } a_{12}?",
+      "answer": 31,
+      "tolerance": 0,
+      "hints": [
+        "$a_n = a_1 + (n - 1)d$.",
+        "$a_{12} = -2 + 11 \\cdot 3$."
+      ],
+      "explanation": "$a_{12} = -2 + (12 - 1)(3) = -2 + 33 = 31$.",
+      "steps": [
+        "Apply the explicit formula $a_n = a_1 + (n - 1)d$.",
+        "Plug in $a_1 = -2$, $d = 3$, $n = 12$: $$a_{12} = -2 + (12 - 1)(3)$$",
+        "$$a_{12} = -2 + 11 \\cdot 3 = -2 + 33 = 31$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{An arithmetic sequence has } a_1 = 100 \\text{ and } d = -7. \\\\ \\text{Find } a_{15}.",
+      "answer": 2,
+      "tolerance": 0,
+      "hints": [
+        "$d$ is negative — the sequence is decreasing.",
+        "$a_{15} = 100 + 14 \\cdot (-7)$."
+      ],
+      "explanation": "$a_{15} = 100 + (15-1)(-7) = 100 - 98 = 2$.",
+      "steps": [
+        "$a_n = a_1 + (n - 1)d$.",
+        "Substitute $a_1 = 100$, $d = -7$, $n = 15$: $$a_{15} = 100 + 14 \\cdot (-7)$$",
+        "$$a_{15} = 100 - 98 = 2$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{An arithmetic sequence has } a_5 = 23 \\text{ and } a_{10} = 48. \\\\ \\text{Find the common difference } d.",
+      "answer": 5,
+      "tolerance": 0,
+      "hints": [
+        "Going from term 5 to term 10 is 5 jumps of $d$.",
+        "$a_{10} - a_5 = 5d$. Solve for $d$."
+      ],
+      "explanation": "$a_{10} - a_5 = 5d \\Rightarrow 48 - 23 = 25 = 5d \\Rightarrow d = 5$.",
+      "steps": [
+        "Going from $a_5$ to $a_{10}$ takes $10 - 5 = 5$ jumps of $d$.",
+        "So $a_{10} - a_5 = 5d$.",
+        "$$48 - 23 = 25 = 5d$$",
+        "$$d = \\dfrac{25}{5} = 5$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{An arithmetic sequence has } a_5 = 23 \\text{ and } a_{10} = 48. \\\\ \\text{Find } a_1.",
+      "answer": 3,
+      "tolerance": 0,
+      "hints": [
+        "From the prior question, $d = 5$.",
+        "$a_5 = a_1 + 4d \\Rightarrow 23 = a_1 + 20$."
+      ],
+      "explanation": "From $d = 5$: $a_5 = a_1 + 4d \\Rightarrow 23 = a_1 + 20 \\Rightarrow a_1 = 3$.",
+      "steps": [
+        "First find $d$: $a_{10} - a_5 = 5d \\Rightarrow 48 - 23 = 5d \\Rightarrow d = 5$.",
+        "Use $a_5 = a_1 + (5-1)d = a_1 + 4d$.",
+        "$$23 = a_1 + 4 \\cdot 5 = a_1 + 20$$",
+        "$$a_1 = 23 - 20 = 3$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The recursive form for the sequence } 4, 9, 14, 19, \\ldots \\text{ is:}",
+      "choices": [
+        "a_n = a_{n-1} + 5, \\quad a_1 = 4",
+        "a_n = 5n - 1",
+        "a_n = a_{n-1} - 5, \\quad a_1 = 4",
+        "a_n = a_{n-1} \\cdot 5, \\quad a_1 = 4"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Recursive: each term in terms of the previous one.",
+        "Common difference is $9 - 4 = 5$."
+      ],
+      "explanation": "$d = 5$, $a_1 = 4$. Recursive: $a_1 = 4$, $a_n = a_{n-1} + 5$. (Option 2 is the explicit form, also valid but not recursive.)",
+      "steps": [
+        "Recursive form needs **two parts**: a starting value and a rule for the next term.",
+        "Starting value: $a_1 = 4$.",
+        "Common difference: $d = 9 - 4 = 5$. So each new term is the previous plus $5$.",
+        "Recursive form: $a_n = a_{n-1} + 5$ with $a_1 = 4$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{Find the sum of the first 25 terms of the arithmetic} \\\\ \\text{sequence with } a_1 = 4 \\text{ and } d = 6.",
+      "answer": 1900,
+      "tolerance": 0,
+      "hints": [
+        "Use $S_n = \\dfrac{n}{2}[2a_1 + (n-1)d]$.",
+        "$S_{25} = \\dfrac{25}{2}[2 \\cdot 4 + 24 \\cdot 6]$."
+      ],
+      "explanation": "$S_{25} = \\dfrac{25}{2}[8 + 144] = \\dfrac{25}{2} \\cdot 152 = 25 \\cdot 76 = 1900$.",
+      "steps": [
+        "Use the form: $$S_n = \\dfrac{n}{2}\\bigl[2a_1 + (n - 1)d\\bigr]$$",
+        "Substitute $n = 25$, $a_1 = 4$, $d = 6$: $$S_{25} = \\dfrac{25}{2}\\bigl[2 \\cdot 4 + 24 \\cdot 6\\bigr]$$",
+        "Compute the bracket: $8 + 144 = 152$.",
+        "$$S_{25} = \\dfrac{25}{2} \\cdot 152 = 25 \\cdot 76 = 1900$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{Find the sum of all even integers from } 2 \\text{ to } 100, \\text{ inclusive.}",
+      "answer": 2550,
+      "tolerance": 0,
+      "hints": [
+        "Sequence: $2, 4, 6, \\ldots, 100$. Arithmetic with $a_1 = 2$, $d = 2$.",
+        "How many terms? $n = 50$. Then $S_n = \\dfrac{n(a_1 + a_n)}{2}$."
+      ],
+      "explanation": "$n = 50$ terms, $a_{50} = 100$. $S = \\dfrac{50(2 + 100)}{2} = \\dfrac{50 \\cdot 102}{2} = 2550$.",
+      "steps": [
+        "List the sequence: $2, 4, 6, \\ldots, 100$ — arithmetic with $a_1 = 2$, $d = 2$.",
+        "Find $n$. Use $a_n = a_1 + (n-1)d$ and solve for $n$ when $a_n = 100$: $$100 = 2 + (n-1)(2) \\Rightarrow n - 1 = 49 \\Rightarrow n = 50$$",
+        "Apply the sum formula: $$S_{50} = \\dfrac{50(2 + 100)}{2} = \\dfrac{50 \\cdot 102}{2}$$",
+        "$$S_{50} = 25 \\cdot 102 = 2550$$"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\text{In an arithmetic sequence, } a_4 = 11 \\text{ and } a_9 = 26. \\\\ \\text{What is the } 30\\text{th term?}",
+      "answer": 89,
+      "tolerance": 0,
+      "hints": [
+        "First find $d$: $a_9 - a_4 = 5d$.",
+        "Then use either known term to find $a_1$, then compute $a_{30}$."
+      ],
+      "explanation": "$d = (26 - 11)/5 = 3$. $a_4 = a_1 + 3d \\Rightarrow 11 = a_1 + 9 \\Rightarrow a_1 = 2$. Then $a_{30} = 2 + 29 \\cdot 3 = 89$.",
+      "steps": [
+        "Find $d$: $a_9 - a_4 = 5d \\Rightarrow 26 - 11 = 15 = 5d \\Rightarrow d = 3$.",
+        "Find $a_1$: $a_4 = a_1 + 3d \\Rightarrow 11 = a_1 + 9 \\Rightarrow a_1 = 2$.",
+        "Apply the formula at $n = 30$: $$a_{30} = a_1 + 29d = 2 + 29 \\cdot 3$$",
+        "$$a_{30} = 2 + 87 = 89$$"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q13",
+      "type": "numeric",
+      "promptTex": "\\text{A theater has 20 rows. The first row has } 18 \\text{ seats and each row} \\\\ \\text{has } 2 \\text{ more seats than the previous. How many seats total?}",
+      "answer": 740,
+      "tolerance": 0,
+      "hints": [
+        "Arithmetic sum with $a_1 = 18$, $d = 2$, $n = 20$.",
+        "$S = \\dfrac{n}{2}[2a_1 + (n - 1)d]$."
+      ],
+      "explanation": "$S_{20} = \\dfrac{20}{2}[36 + 38] = 10 \\cdot 74 = 740$ seats.",
+      "steps": [
+        "Set up: $a_1 = 18$, $d = 2$, $n = 20$. Need $S_{20}$.",
+        "Use $S_n = \\dfrac{n}{2}[2a_1 + (n-1)d]$: $$S_{20} = \\dfrac{20}{2}[2 \\cdot 18 + 19 \\cdot 2]$$",
+        "Inside the bracket: $36 + 38 = 74$.",
+        "$$S_{20} = 10 \\cdot 74 = 740 \\text{ seats}$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which is the } \\textbf{series} \\text{ corresponding to the sequence } 3, 7, 11, 15?",
+      "choices": [
+        "3 + 7 + 11 + 15",
+        "3, 7, 11, 15",
+        "3 \\cdot 7 \\cdot 11 \\cdot 15",
+        "(3 + 7 + 11 + 15)/4"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "A series is the **sum** of the terms of a sequence.",
+        "List vs sum — the series is the sum."
+      ],
+      "explanation": "A sequence is a list; the series is the sum of that list. So $3 + 7 + 11 + 15$.",
+      "steps": [
+        "**Sequence** = ordered list of numbers.",
+        "**Series** = sum of those numbers.",
+        "Sequence $3, 7, 11, 15$ → series $3 + 7 + 11 + 15$."
+      ],
+      "id": "q14",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Find the sum: } 4 + 7 + 10 + \\cdots + 88.",
+      "answer": 1334,
+      "tolerance": 0,
+      "hints": [
+        "Arithmetic with $a_1 = 4$, $d = 3$, last term $88$.",
+        "First find $n$: $88 = 4 + 3(n-1)$. Then $S_n = \\dfrac{n(a_1 + a_n)}{2}$."
+      ],
+      "explanation": "$n = 29$. $S = \\dfrac{29(4 + 88)}{2} = 29 \\cdot 46 = 1334$.",
+      "steps": [
+        "Identify: $a_1 = 4$, $d = 3$, $a_n = 88$.",
+        "Find $n$ from the explicit formula: $$88 = 4 + 3(n - 1) \\Rightarrow n - 1 = 28 \\Rightarrow n = 29$$",
+        "Apply the sum formula: $$S_{29} = \\dfrac{29(4 + 88)}{2} = \\dfrac{29 \\cdot 92}{2}$$",
+        "$$S_{29} = 29 \\cdot 46 = 1334$$"
+      ],
+      "id": "q15",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{How many terms are in the arithmetic sequence } 7, 10, 13, \\ldots, 100?",
+      "answer": 32,
+      "tolerance": 0,
+      "hints": [
+        "$a_1 = 7$, $d = 3$, $a_n = 100$. Solve for $n$.",
+        "$100 = 7 + 3(n - 1)$."
+      ],
+      "explanation": "$100 - 7 = 93 = 3(n-1) \\Rightarrow n - 1 = 31 \\Rightarrow n = 32$.",
+      "steps": [
+        "Use the explicit formula $a_n = a_1 + (n-1)d$ and solve for $n$.",
+        "Substitute $a_1 = 7$, $d = 3$, $a_n = 100$: $$100 = 7 + 3(n-1)$$",
+        "Subtract 7: $$93 = 3(n - 1)$$",
+        "Divide by 3: $$n - 1 = 31 \\Rightarrow n = 32$$"
+      ],
+      "id": "q16",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Sum of all multiples of } 4 \\text{ from } 4 \\text{ to } 200, \\text{ inclusive.}",
+      "answer": 5100,
+      "tolerance": 0,
+      "hints": [
+        "Sequence: $4, 8, 12, \\ldots, 200$. Arithmetic with $a_1 = 4$, $d = 4$.",
+        "Number of terms: $n = 200/4 = 50$. Then $S = \\dfrac{50(4 + 200)}{2}$."
+      ],
+      "explanation": "$n = 50$. $S = \\dfrac{50 \\cdot 204}{2} = 25 \\cdot 204 = 5100$.",
+      "steps": [
+        "Identify: $a_1 = 4$, $d = 4$, $a_n = 200$.",
+        "Number of terms: $n = 200 / 4 = 50$ (or via $200 = 4 + 4(n-1)$).",
+        "Apply: $$S_{50} = \\dfrac{50(4 + 200)}{2} = \\dfrac{50 \\cdot 204}{2}$$",
+        "$$S_{50} = 25 \\cdot 204 = 5100$$"
+      ],
+      "id": "q17",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Sum of integers from } 1 \\text{ to } 100 \\text{ that are } \\textbf{not} \\text{ multiples of } 5.",
+      "answer": 4000,
+      "tolerance": 0,
+      "hints": [
+        "Compute the full sum, then subtract the unwanted ones.",
+        "Total: $1 + 2 + \\cdots + 100 = 5050$. Multiples of 5: $5 + 10 + \\cdots + 100$ (20 terms)."
+      ],
+      "explanation": "$5050 - 1050 = 4000$ where $1050 = \\dfrac{20(5+100)}{2}$.",
+      "steps": [
+        "**Total sum** $1 + 2 + \\cdots + 100 = \\dfrac{100 \\cdot 101}{2} = 5050$.",
+        "**Multiples of 5 from 5 to 100:** sequence $5, 10, 15, \\ldots, 100$. Number of terms = $20$. Sum = $\\dfrac{20(5 + 100)}{2} = 10 \\cdot 105 = 1050$.",
+        "**Subtract:** $5050 - 1050 = 4000$."
+      ],
+      "id": "q18",
+      "difficulty": "hard"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{An arithmetic series of } 20 \\text{ terms has first term } 4 \\\\ \\text{and total } 530. \\text{ Find the common difference } d \\\\ \\text{(round to 2 decimals).}",
+      "answer": 2.37,
+      "tolerance": 0.05,
+      "hints": [
+        "Use $S_n = \\dfrac{n}{2}[2a_1 + (n-1)d]$ and solve for $d$.",
+        "$530 = 10(8 + 19d)$."
+      ],
+      "explanation": "$530 = 10(8 + 19d) \\Rightarrow 53 = 8 + 19d \\Rightarrow d = 45/19 \\approx 2.37$.",
+      "steps": [
+        "Apply $S_n = \\dfrac{n}{2}[2a_1 + (n-1)d]$ with $n = 20$, $a_1 = 4$, $S_{20} = 530$.",
+        "$$530 = \\dfrac{20}{2}[2 \\cdot 4 + 19 d] = 10(8 + 19d)$$",
+        "Divide by 10: $$53 = 8 + 19d$$",
+        "$$19d = 45 \\Rightarrow d = \\dfrac{45}{19} \\approx 2.37$$"
+      ],
+      "id": "q19",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Compute } \\displaystyle \\sum_{k=1}^{30}(3k + 5).",
+      "answer": 1545,
+      "tolerance": 0,
+      "hints": [
+        "Use linearity: split into $3\\sum k + \\sum 5$.",
+        "$\\sum_{k=1}^{30} k = \\dfrac{30 \\cdot 31}{2} = 465$. $\\sum_{k=1}^{30} 5 = 150$."
+      ],
+      "explanation": "$3 \\cdot 465 + 150 = 1395 + 150 = 1545$.",
+      "steps": [
+        "Apply linearity to split the sum: $$\\sum_{k=1}^{30}(3k + 5) = 3\\sum_{k=1}^{30} k + \\sum_{k=1}^{30} 5$$",
+        "Use closed forms: $$\\sum_{k=1}^{30} k = \\dfrac{30 \\cdot 31}{2} = 465$$",
+        "$$\\sum_{k=1}^{30} 5 = 5 \\cdot 30 = 150$$",
+        "Combine: $$3 \\cdot 465 + 150 = 1395 + 150 = 1545$$"
+      ],
+      "id": "q20",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Compute } \\displaystyle \\sum_{k=1}^{20} k^2 \\text{ using the closed form } \\dfrac{n(n+1)(2n+1)}{6}.",
+      "answer": 2870,
+      "tolerance": 0,
+      "hints": [
+        "Substitute $n = 20$ into $\\dfrac{n(n+1)(2n+1)}{6}$.",
+        "$\\dfrac{20 \\cdot 21 \\cdot 41}{6}$."
+      ],
+      "explanation": "$\\dfrac{20 \\cdot 21 \\cdot 41}{6} = \\dfrac{17220}{6} = 2870$.",
+      "steps": [
+        "Closed form: $\\sum_{k=1}^{n} k^2 = \\dfrac{n(n+1)(2n+1)}{6}$.",
+        "Substitute $n = 20$: $$\\dfrac{20 \\cdot 21 \\cdot 41}{6}$$",
+        "Compute numerator: $20 \\cdot 21 = 420$, then $420 \\cdot 41 = 17220$.",
+        "Divide: $$\\dfrac{17220}{6} = 2870$$"
+      ],
+      "id": "q21",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Compute } \\displaystyle \\sum_{k=1}^{50}(2k - 1) \\\\ \\text{(sum of the first 50 odd positive integers).}",
+      "answer": 2500,
+      "tolerance": 0,
+      "hints": [
+        "The first 50 odd numbers are $1, 3, 5, \\ldots, 99$.",
+        "Sum of first $n$ odd numbers is famously $n^2$. With $n = 50$: $50^2 = 2500$."
+      ],
+      "explanation": "$\\sum_{k=1}^{50}(2k-1) = 2 \\cdot \\dfrac{50 \\cdot 51}{2} - 50 = 2550 - 50 = 2500 = 50^2$.",
+      "steps": [
+        "Split using linearity: $$\\sum_{k=1}^{50}(2k - 1) = 2\\sum_{k=1}^{50} k - \\sum_{k=1}^{50} 1$$",
+        "Apply closed forms: $$2 \\cdot \\dfrac{50 \\cdot 51}{2} - 50 = 2550 - 50 = 2500$$",
+        "**Cool fact:** the sum of the first $n$ odd numbers is exactly $n^2$. Try it: $1 = 1^2$, $1+3 = 4 = 2^2$, $1+3+5 = 9 = 3^2$, …"
+      ],
+      "id": "q22",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{An arithmetic sequence has } a_1 = 50 \\text{ and } a_8 = 8. \\text{ Find the common difference } d.",
+      "answer": -6,
+      "tolerance": 0,
+      "hints": [
+        "Use $a_n = a_1 + (n - 1)d$.",
+        "$8 = 50 + 7d$, so $7d = -42$."
+      ],
+      "explanation": "$a_8 = a_1 + 7d \\Rightarrow 8 = 50 + 7d \\Rightarrow d = -6$. (Common trap: writing $8d$ instead of $7d$.)",
+      "steps": [
+        "Apply the formula: $a_n = a_1 + (n - 1)d$.",
+        "$a_8 = a_1 + 7d$ (note: 7, not 8 — that's the off-by-one trap).",
+        "$8 = 50 + 7d \\Rightarrow 7d = -42 \\Rightarrow d = -6$."
+      ],
+      "id": "q23",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{For the sequence } 87, 83, 79, 75, \\ldots \\text{, find the index } n \\text{ of the first negative term.}",
+      "answer": 23,
+      "tolerance": 0,
+      "hints": [
+        "$a_n = 87 - 4(n - 1)$. Solve $a_n < 0$.",
+        "$n > 22.75$, so the smallest integer $n$ is $23$."
+      ],
+      "explanation": "$a_n = 87 - 4(n-1) < 0 \\Rightarrow n > 22.75$. So the smallest integer $n$ with $a_n < 0$ is $n = 23$. Check: $a_{22} = 3$, $a_{23} = -1$ ✓.",
+      "steps": [
+        "Write the formula: $a_n = 87 - 4(n - 1)$.",
+        "Require $a_n < 0$: $87 - 4(n-1) < 0$.",
+        "Solve: $n - 1 > 21.75 \\Rightarrow n > 22.75$.",
+        "Smallest integer $n$ with $n > 22.75$ is $23$.",
+        "Verify: $a_{22} = 3$, $a_{23} = -1$ — first negative is at $n = 23$."
+      ],
+      "id": "q24",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{For } 5 + 8 + 11 + 14 + \\cdots, \\text{ find the smallest } n \\text{ with } S_n > 1000.",
+      "answer": 25,
+      "tolerance": 0,
+      "hints": [
+        "$S_n = \\frac{n}{2}(2 \\cdot 5 + 3(n-1)) = \\frac{n(3n + 7)}{2}$.",
+        "Solve $\\frac{n(3n+7)}{2} > 1000$, i.e., $3n^2 + 7n - 2000 > 0$."
+      ],
+      "explanation": "$S_n = \\frac{n(3n + 7)}{2}$. Setting $S_n > 1000$ gives $3n^2 + 7n - 2000 > 0$. Quadratic formula: $n > \\frac{-7 + \\sqrt{49 + 24000}}{6} \\approx 24.7$. Smallest integer: $n = 25$. Check: $S_{25} = \\frac{25 \\cdot 82}{2} = 1025$ ✓.",
+      "steps": [
+        "Closed form: $S_n = \\frac{n}{2}(2a_1 + (n-1)d) = \\frac{n(3n + 7)}{2}$.",
+        "Set $\\frac{n(3n + 7)}{2} > 1000 \\Rightarrow 3n^2 + 7n > 2000$.",
+        "Solve quadratic equality $3n^2 + 7n - 2000 = 0$: $n \\approx 24.7$.",
+        "Smallest integer above: $n = 25$. Sanity check: $S_{25} = 1025$ ✓."
+      ],
+      "id": "q25",
+      "difficulty": "hard"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Three numbers in arithmetic progression sum to } 24 \\text{ and have product } 384. \\\\ \\text{Find the largest of the three.}",
+      "answer": 12,
+      "tolerance": 0,
+      "hints": [
+        "Use symmetric labels: $a - d, a, a + d$. The sum gives you $a$ immediately.",
+        "$3a = 24$, so $a = 8$. Then product = $a(a^2 - d^2) = 384$."
+      ],
+      "explanation": "Let the three numbers be $a-d$, $a$, $a+d$. Sum: $3a = 24 \\Rightarrow a = 8$. Product: $8(64 - d^2) = 384 \\Rightarrow 64 - d^2 = 48 \\Rightarrow d^2 = 16 \\Rightarrow d = 4$. Largest = $a + d = 12$. (The three numbers are $4, 8, 12$.)",
+      "steps": [
+        "Symmetric labels: $a - d, a, a + d$.",
+        "Sum: $(a-d) + a + (a+d) = 3a = 24 \\Rightarrow a = 8$.",
+        "Product: $(a-d)(a)(a+d) = a(a^2 - d^2) = 8(64 - d^2) = 384$.",
+        "$64 - d^2 = 48 \\Rightarrow d = 4$. Largest = $a + d = 12$."
+      ],
+      "id": "q26",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Compute } 1^2 + 2^2 + 3^2 + \\cdots + 30^2.",
+      "answer": 9455,
+      "tolerance": 0,
+      "hints": [
+        "Formula: $\\sum_{k=1}^{n} k^2 = \\dfrac{n(n+1)(2n+1)}{6}$.",
+        "$\\dfrac{30 \\cdot 31 \\cdot 61}{6}$. Cancel a factor of $6$ first."
+      ],
+      "explanation": "$\\sum_{k=1}^{30} k^2 = \\dfrac{30 \\cdot 31 \\cdot 61}{6} = 5 \\cdot 31 \\cdot 61 = 9455$.",
+      "steps": [
+        "Apply the closed-form: $\\sum_{k=1}^{n} k^2 = \\dfrac{n(n+1)(2n+1)}{6}$.",
+        "Plug in $n = 30$: $\\dfrac{30 \\cdot 31 \\cdot 61}{6}$.",
+        "Simplify: $30/6 = 5$, so $5 \\cdot 31 \\cdot 61 = 9455$."
+      ],
+      "id": "q27",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{The identity } 1^3 + 2^3 + \\cdots + n^3 = (1 + 2 + \\cdots + n)^2 \\text{ is famous.} \\\\ \\text{Use it to compute } 1^3 + 2^3 + \\cdots + 12^3.",
+      "answer": 6084,
+      "tolerance": 0,
+      "hints": [
+        "First find $T_{12} = 1 + 2 + \\cdots + 12 = \\dfrac{12 \\cdot 13}{2}$.",
+        "Then square the result."
+      ],
+      "explanation": "$T_{12} = \\dfrac{12 \\cdot 13}{2} = 78$. By the identity, $1^3 + 2^3 + \\cdots + 12^3 = 78^2 = 6084$.",
+      "steps": [
+        "Apply $T_n = \\dfrac{n(n+1)}{2}$ for $n = 12$: $T_{12} = 78$.",
+        "Square it: $78^2 = 6084$.",
+        "By the identity, that's the sum of cubes from $1^3$ to $12^3$."
+      ],
+      "id": "q28",
+      "difficulty": "hard"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{The arithmetic mean of the first } n \\text{ positive odd integers is } 50. \\text{ Find } n.",
+      "answer": 50,
+      "tolerance": 0,
+      "hints": [
+        "The sum of the first $n$ odd integers is a famous closed form: $1 + 3 + 5 + \\cdots + (2n-1) = n^2$.",
+        "Mean = sum / $n = n^2/n = n$."
+      ],
+      "explanation": "Sum of first $n$ odd integers $= n^2$. Mean $= n^2/n = n$. Set $n = 50$.",
+      "steps": [
+        "Recall: $1 + 3 + 5 + \\cdots + (2n - 1) = n^2$.",
+        "Mean = sum / $n = n^2 / n = n$.",
+        "Setting mean to $50$ gives $n = 50$."
+      ],
+      "id": "q29",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A worker is paid } \\$30 \\text{ on day 1, with each day's pay } \\$5 \\text{ more than the previous.} \\\\ \\text{What is the total pay over 60 days?}",
+      "answer": 10650,
+      "tolerance": 0,
+      "hints": [
+        "First find $a_{60} = 30 + 59 \\cdot 5$.",
+        "Then $S_{60} = \\dfrac{60}{2}(a_1 + a_{60})$."
+      ],
+      "explanation": "$a_{60} = 30 + 59 \\cdot 5 = 325$. $S_{60} = \\dfrac{60}{2}(30 + 325) = 30 \\cdot 355 = 10{,}650$.",
+      "steps": [
+        "Day 60 pay: $a_{60} = a_1 + 59d = 30 + 295 = 325$.",
+        "Sum: $S_{60} = \\dfrac{60}{2}(a_1 + a_{60}) = 30 \\cdot 355 = 10{,}650$.",
+        "Total earnings over 60 days: $\\$10{,}650$."
+      ],
+      "id": "q30",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q31",
+      "type": "numeric",
+      "promptTex": "\\text{Evaluate the arithmetic series with } a_1 = 33, \\; a_n = 273, \\; n = 25.",
+      "answer": 3825,
+      "tolerance": 0,
+      "hints": [
+        "Use $S_n = \\dfrac{n}{2}(a_1 + a_n)$.",
+        "$\\dfrac{25}{2}(33 + 273) = \\dfrac{25 \\cdot 306}{2}$."
+      ],
+      "explanation": "$S_n = \\dfrac{n}{2}(a_1 + a_n) = \\dfrac{25}{2}(33 + 273) = \\dfrac{25 \\cdot 306}{2} = 25 \\cdot 153 = 3825$.",
+      "steps": [
+        "Apply $S_n = \\dfrac{n}{2}(a_1 + a_n)$.",
+        "$a_1 + a_n = 33 + 273 = 306$.",
+        "$S_{25} = \\dfrac{25 \\cdot 306}{2} = 25 \\cdot 153 = 3825$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q32",
+      "type": "numeric",
+      "promptTex": "\\text{Evaluate the arithmetic series with } a_1 = 11, \\; d = 3, \\; n = 25.",
+      "answer": 1175,
+      "tolerance": 0,
+      "hints": [
+        "First find $a_{25}$ using $a_n = a_1 + (n-1)d$.",
+        "$a_{25} = 11 + 24 \\cdot 3 = 83$. Then $S_{25} = \\dfrac{25}{2}(11 + 83)$."
+      ],
+      "explanation": "$a_{25} = 11 + 24 \\cdot 3 = 11 + 72 = 83$. $S_{25} = \\dfrac{25}{2}(11 + 83) = \\dfrac{25 \\cdot 94}{2} = 1175$.",
+      "steps": [
+        "Find $a_{25}$: $a_n = a_1 + (n-1)d \\Rightarrow a_{25} = 11 + 24 \\cdot 3 = 83$.",
+        "Apply sum formula: $S_n = \\dfrac{n}{2}(a_1 + a_n)$.",
+        "$S_{25} = \\dfrac{25}{2}(11 + 83) = \\dfrac{25 \\cdot 94}{2} = 1175$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q33",
+      "type": "numeric",
+      "promptTex": "\\text{Determine } n: \\; a_1 = -4, \\; a_n = 290, \\; S_n = 7150.",
+      "answer": 50,
+      "tolerance": 0,
+      "hints": [
+        "$S_n = \\dfrac{n}{2}(a_1 + a_n)$. Plug in and solve for $n$.",
+        "$7150 = \\dfrac{n}{2}(-4 + 290) = 143n$."
+      ],
+      "explanation": "$S_n = \\dfrac{n}{2}(a_1 + a_n) \\Rightarrow 7150 = \\dfrac{n}{2}(286) = 143n \\Rightarrow n = 50$.",
+      "steps": [
+        "Apply $S_n = \\dfrac{n}{2}(a_1 + a_n)$.",
+        "$7150 = \\dfrac{n}{2}(-4 + 290) = \\dfrac{286n}{2} = 143n$.",
+        "$n = \\dfrac{7150}{143} = 50$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q34",
+      "type": "numeric",
+      "promptTex": "\\text{Determine } n: \\; a_1 = 39, \\; a_n = 149, \\; S_n = 1128.",
+      "answer": 12,
+      "tolerance": 0,
+      "hints": [
+        "Same setup: $S_n = \\dfrac{n}{2}(a_1 + a_n)$.",
+        "$1128 = \\dfrac{n}{2}(188) = 94n$."
+      ],
+      "explanation": "$1128 = \\dfrac{n}{2}(39 + 149) = 94n \\Rightarrow n = 12$.",
+      "steps": [
+        "Apply formula: $1128 = \\dfrac{n}{2}(39 + 149)$.",
+        "$\\dfrac{n}{2}(188) = 94n = 1128$.",
+        "$n = 12$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q35",
+      "type": "numeric",
+      "promptTex": "\\text{Determine } n: \\quad 27 + 37 + 47 + 57 + \\cdots, \\quad S_n = 1288.",
+      "answer": 14,
+      "tolerance": 0,
+      "hints": [
+        "$a_1 = 27$, $d = 10$. Use $S_n = \\dfrac{n}{2}(2a_1 + (n-1)d)$.",
+        "Get $5n^2 + 22n - 1288 = 0$. Discriminant: $484 + 25760 = 26244 = 162^2$."
+      ],
+      "explanation": "$a_1 = 27$, $d = 10$. $S_n = \\dfrac{n}{2}(54 + 10(n-1)) = \\dfrac{n}{2}(44 + 10n) = n(22 + 5n) = 1288$. So $5n^2 + 22n - 1288 = 0$. Quadratic formula: $n = \\dfrac{-22 + \\sqrt{484 + 25760}}{10} = \\dfrac{-22 + 162}{10} = 14$.",
+      "steps": [
+        "Identify $a_1 = 27$, $d = 10$.",
+        "$S_n = \\dfrac{n}{2}(2a_1 + (n-1)d) = n(22 + 5n)$.",
+        "Set $n(22 + 5n) = 1288 \\Rightarrow 5n^2 + 22n - 1288 = 0$.",
+        "Discriminant: $22^2 + 4 \\cdot 5 \\cdot 1288 = 26244 = 162^2$.",
+        "$n = \\dfrac{-22 + 162}{10} = 14$."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q36",
+      "type": "numeric",
+      "promptTex": "\\text{Determine } n: \\quad 36 + 44 + 52 + 60 + \\cdots, \\quad S_n = 1092.",
+      "answer": 13,
+      "tolerance": 0,
+      "hints": [
+        "$a_1 = 36$, $d = 8$. $S_n = \\dfrac{n}{2}(72 + 8(n-1))$.",
+        "Reduces to $n^2 + 8n - 273 = 0$."
+      ],
+      "explanation": "$a_1 = 36$, $d = 8$. $S_n = \\dfrac{n}{2}(72 + 8(n-1)) = n(32 + 4n) = 1092 \\Rightarrow n^2 + 8n - 273 = 0$. Discriminant $= 64 + 1092 = 1156 = 34^2$. $n = \\dfrac{-8 + 34}{2} = 13$.",
+      "steps": [
+        "$a_1 = 36$, $d = 8$, $S_n = \\dfrac{n}{2}(2 \\cdot 36 + (n-1) \\cdot 8) = n(32 + 4n)$.",
+        "Set $n(32 + 4n) = 1092 \\Rightarrow 4n^2 + 32n - 1092 = 0 \\Rightarrow n^2 + 8n - 273 = 0$.",
+        "Discriminant: $64 + 1092 = 1156 = 34^2$.",
+        "$n = \\dfrac{-8 + 34}{2} = 13$."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q37",
+      "type": "numeric",
+      "promptTex": "\\text{Find } n: \\quad \\displaystyle\\sum_{k=1}^{n} (4 - 8k) = -6400.",
+      "answer": 40,
+      "tolerance": 0,
+      "hints": [
+        "From $a_k = 4 - 8k$: $a_1 = -4$, $a_2 = -12$ — arithmetic with $d = -8$.",
+        "$a_n = 4 - 8n$. Sum: $S_n = \\dfrac{n}{2}(a_1 + a_n) = \\dfrac{n}{2}(-8n) = -4n^2$. Set $= -6400$."
+      ],
+      "explanation": "$a_k = 4 - 8k$: $a_1 = -4$, $d = -8$, $a_n = 4 - 8n$. $S_n = \\dfrac{n}{2}(a_1 + a_n) = \\dfrac{n}{2}(-4 + 4 - 8n) = -4n^2 = -6400 \\Rightarrow n^2 = 1600 \\Rightarrow n = 40$.",
+      "steps": [
+        "From the $\\sum$ form: $a_k = 4 - 8k$, so $a_1 = -4$, $d = -8$.",
+        "Last term: $a_n = 4 - 8n$.",
+        "$S_n = \\dfrac{n}{2}(a_1 + a_n) = \\dfrac{n}{2}(-4 + 4 - 8n) = \\dfrac{n}{2}(-8n) = -4n^2$.",
+        "$-4n^2 = -6400 \\Rightarrow n^2 = 1600 \\Rightarrow n = 40$."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q38",
+      "type": "numeric",
+      "promptTex": "\\text{Find } n: \\quad \\displaystyle\\sum_{m=1}^{n} (11 - 7m) = -341.",
+      "answer": 11,
+      "tolerance": 0,
+      "hints": [
+        "$a_m = 11 - 7m$ gives $a_1 = 4$, $d = -7$, $a_n = 11 - 7n$.",
+        "$S_n = \\dfrac{n(15 - 7n)}{2} = -341$. Quadratic: $7n^2 - 15n - 682 = 0$. Discriminant $= 19321 = 139^2$."
+      ],
+      "explanation": "$a_1 = 4$, $d = -7$, $a_n = 11 - 7n$. $S_n = \\dfrac{n}{2}(4 + 11 - 7n) = \\dfrac{n(15 - 7n)}{2} = -341 \\Rightarrow 15n - 7n^2 = -682 \\Rightarrow 7n^2 - 15n - 682 = 0$. Discriminant $= 225 + 19096 = 19321 = 139^2$. $n = \\dfrac{15 + 139}{14} = 11$.",
+      "steps": [
+        "From $a_m = 11 - 7m$: $a_1 = 4$, $d = -7$, $a_n = 11 - 7n$.",
+        "$S_n = \\dfrac{n}{2}(4 + 11 - 7n) = \\dfrac{n(15 - 7n)}{2}$.",
+        "Set $= -341$: $n(15 - 7n) = -682 \\Rightarrow 7n^2 - 15n - 682 = 0$.",
+        "Discriminant: $225 + 4 \\cdot 7 \\cdot 682 = 19321 = 139^2$.",
+        "$n = \\dfrac{15 + 139}{14} = 11$."
+      ],
+      "difficulty": "hard"
+    }
+  ]
+}

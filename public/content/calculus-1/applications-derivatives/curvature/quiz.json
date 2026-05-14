@@ -1,0 +1,234 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "prompt": "Why isn't the SIGN of $f''$ enough to describe how a curve bends?",
+      "choices": [
+        "Because $f''$ is sometimes a complex number.",
+        "Because a gentle upward bend and a sharp upward bend both give the same sign — we need a MAGNITUDE for 'how much' it bends.",
+        "Because $f''$ depends on the units of $x$.",
+        "Because $f''$ is the same for every curve."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Compare $y = x^2$ and $y = 100 x^2$ at the same point.",
+        "Both have $f'' > 0$ — but one bends much more sharply than the other."
+      ],
+      "explanation": "Sign of $f''$ tells you only the *direction* of the bend (up vs. down). Two curves with the same sign can have wildly different bending strengths. Curvature $\\kappa = 1/R$ captures the *strength*: small $R$ means tight bend, large $R$ means nearly straight.",
+      "steps": [
+        "**Recognize the limitation.** The sign of $f''$ classifies but doesn't measure. It answers 'which way?', not 'how much?'.",
+        "**Concrete example.** $y = x^2$ has $f'' = 2$. $y = 100 x^2$ has $f'' = 200$. Both are concave up, but the second is 100 times more bent.",
+        "**The fix.** We need a single number — the radius of curvature $R$ (or equivalently $\\kappa = 1/R$) — that combines the sign and the strength."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "prompt": "What is the radius of curvature $R$ at any point on a circle of radius $r$?",
+      "choices": [
+        "$r$ — the circle's own radius.",
+        "$2r$ — the diameter.",
+        "$r^2$.",
+        "It changes depending on where on the circle you are."
+      ],
+      "answerIndex": 0,
+      "choicesTex": false,
+      "hints": [
+        "The osculating circle is the one that 'kisses' the curve — best matches its bend at a point.",
+        "For a circle, what circle BEST matches a circle?"
+      ],
+      "explanation": "The osculating circle at any point on a circle IS the circle itself — no other circle matches a circle better. So $R$ equals the original radius. This is the natural sanity check on the curvature formula.",
+      "steps": [
+        "**Recognize the pattern.** The osculating circle is the unique circle that matches the curve's slope and second derivative at a point.",
+        "**Apply to a circle.** A circle obviously matches itself at every point — its slope and second derivative agree with its own at every point.",
+        "**Conclude.** So the osculating circle of a circle of radius $r$ is the same circle, and $R = r$ everywhere.",
+        "**Sanity-check the formula.** For $y = \\sqrt{r^2 - x^2}$ (the top half), plug into $R = (1 + y'^2)^{3/2} / |y''|$ — after cancellation, you get exactly $r$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "At an inflection point of a curve (where $f''(x_0) = 0$), what does the formula say about $R$?",
+      "choices": [
+        "$R = 0$ — infinitely tight bend.",
+        "$R$ is undefined.",
+        "$R \\to \\infty$ — the curve is momentarily straight.",
+        "$R = 1$ — unit circle."
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "$R = (1 + f'^2)^{3/2} / |f''|$. What happens when $|f''| \\to 0$?",
+        "Dividing by something that approaches 0..."
+      ],
+      "explanation": "The formula has $|f''|$ in the denominator. As $f'' \\to 0$, $R \\to \\infty$. Physically: an inflection point is a moment when the curve isn't bending at all — it's locally a straight line. A straight line has no finite osculating circle (it's a 'circle of infinite radius').",
+      "steps": [
+        "**Recall the formula.** $R = \\dfrac{(1 + f'^2)^{3/2}}{|f''|}$.",
+        "**Plug $f'' = 0$.** The numerator is finite but the denominator is 0 — so $R \\to \\infty$.",
+        "**Geometric meaning.** At an inflection point, the curve is *flat for an instant* — no bending. A straight line is the limiting case of a circle as the radius grows without bound.",
+        "**Try it in the widget.** Switch to **Cubic** $y = x^3/3$. As you slide across $x = 0$, watch $R$ explode and the kissing circle FLIP from one side to the other. $f''(x) = 2x$ goes through 0 right at $x = 0$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "prompt": "Curvature $\\kappa$ is defined as:",
+      "choices": [
+        "$\\kappa = R$",
+        "$\\kappa = R^2$",
+        "$\\kappa = 1/R$",
+        "$\\kappa = f''(x)$"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Curvature is large when the curve bends a lot. $R$ is small when the curve bends a lot. The relationship is...",
+        "Take the reciprocal."
+      ],
+      "explanation": "$\\kappa = 1/R$. This makes $\\kappa$ behave the way intuition wants: $\\kappa = 0$ for a straight line, larger for tighter bends. A circle of radius $r$ has constant curvature $1/r$ — a small circle bends a lot, a big one bends gently.",
+      "steps": [
+        "**Why a reciprocal?** $R$ is the radius of the best-fit circle — *big* when the curve is *nearly straight*. We want a number that's small for straight lines and big for sharp bends. Reciprocal flips the relationship.",
+        "**Definition.** $\\kappa = 1/R$.",
+        "**Pattern.** Straight line: $R = \\infty \\Rightarrow \\kappa = 0$. Circle of radius $r$: $R = r \\Rightarrow \\kappa = 1/r$. Tight bend: $R$ small $\\Rightarrow \\kappa$ large."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{For } y = \\tfrac{1}{2} x^2,\\ \\text{find } R \\text{ at } x = 1.",
+      "answer": 2.828,
+      "tolerance": 0.01,
+      "hints": [
+        "$y' = x$, $y'' = 1$.",
+        "$R = (1 + y'^2)^{3/2} / |y''| = (1 + 1)^{3/2} / 1$.",
+        "$2^{3/2} = 2\\sqrt{2} \\approx 2.828$."
+      ],
+      "explanation": "$y = \\tfrac{1}{2} x^2 \\Rightarrow y' = x \\Rightarrow y'' = 1$. At $x = 1$: $y' = 1$. $R = (1 + 1^2)^{3/2} / |1| = 2^{3/2} = 2\\sqrt{2} \\approx 2.828$.",
+      "steps": [
+        "**Recognize the recipe.** Plug $f'$ and $f''$ into $R = (1 + f'^2)^{3/2}/|f''|$.",
+        "**Compute the derivatives.** $f(x) = \\tfrac{1}{2} x^2 \\Rightarrow f'(x) = x$, $f''(x) = 1$.",
+        "**Evaluate at $x = 1$.** $f'(1) = 1$, $f''(1) = 1$.",
+        "**Plug in.** $R = (1 + 1)^{3/2} / 1 = 2\\sqrt{2} \\approx 2.828$.",
+        "**Compare to the vertex.** At $x = 0$ the same parabola has $R = 1$ (since $f' = 0$). Same bend $f'' = 1$, but the curve is now *also* steep, so the kissing circle has to be bigger to match."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "prompt": "Why does the curvature formula have the $(1 + f'^2)^{3/2}$ factor in the numerator (rather than just $1/|f''|$)?",
+      "choices": [
+        "Because $f''$ is sometimes negative.",
+        "Because $(1+f'^2)^{3/2}$ corrects for the fact that a tilted curve LOOKS less bent when measured by $f''$ alone — but the geometric bend is the same.",
+        "It's a calculus convention with no real reason.",
+        "It only matters for circles."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Curvature is a geometric property — it should not depend on the orientation of the curve.",
+        "Without the correction, a tilted parabola would 'look' less curved than a flat one with the same $f''$."
+      ],
+      "explanation": "$|f''|$ alone is a 'how bent does $y$ change with $x$' answer. But if the curve is also tilted (large $f'$), the actual geometric bending is more gradual along the curve than $f''$ suggests. The $(1 + f'^2)^{3/2}$ factor undoes that distortion. The result depends only on the *shape* of the curve, not its tilt.",
+      "steps": [
+        "**Imagine tilting a parabola.** Take $y = \\tfrac{1}{2} x^2$ at the vertex ($x = 0$): $f'' = 1$, $f' = 0$, $R = 1$. Now move to $x = 2$: same $f'' = 1$, but $f' = 2$. The piece of curve at $x = 2$ is the same shape as the vertex — just tilted.",
+        "**Without the correction.** $R$ would still be $1$ everywhere — *but the kissing circle plainly has to be bigger* at $x = 2$ to match the tilted curve.",
+        "**With the correction.** $R = (1 + 4)^{3/2}/1 = 5\\sqrt{5} \\approx 11.2$ at $x = 2$. The bigger number reflects the geometric reality.",
+        "**Pattern lesson.** A purely *geometric* quantity must be invariant under tilt. The exponent $3/2$ is exactly what's needed to make $R$ measure shape, not orientation."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{For } y = x^2,\\ \\text{find the curvature } \\kappa = 1/R \\text{ at } x = 0.",
+      "answer": 2,
+      "tolerance": 0.01,
+      "hints": [
+        "$y' = 2x$, $y'' = 2$.",
+        "At $x = 0$: $y' = 0$, $y'' = 2$. $R = (1 + 0)^{3/2} / 2 = 1/2$.",
+        "$\\kappa = 1/R = 2$."
+      ],
+      "explanation": "$y = x^2 \\Rightarrow y' = 2x \\Rightarrow y'' = 2$. At the vertex $x = 0$: $y' = 0$, $y'' = 2$. So $R = 1^{3/2}/2 = 1/2$, and $\\kappa = 1/R = 2$. The parabola bends twice as tight at the vertex as the milder $y = \\tfrac{1}{2} x^2$ (whose $\\kappa$ at the vertex is $1$).",
+      "steps": [
+        "**Strategy.** Find $R$ first, then take its reciprocal for $\\kappa$.",
+        "**Derivatives.** $y' = 2x$, $y'' = 2$.",
+        "**At $x = 0$.** $y' = 0$ (vertex is flat, naturally), $y'' = 2$.",
+        "**Plug in.** $R = (1 + 0)^{3/2}/|2| = 1/2$.",
+        "**Reciprocate.** $\\kappa = 1/R = 2$.",
+        "**Compare.** $y = x^2$ bends twice as tightly at the vertex as $y = \\tfrac{1}{2} x^2$ does. Doubling the leading coefficient doubles the curvature at the vertex — natural, given that the coefficient *is* $\\tfrac{1}{2} f''$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "prompt": "Why is the osculating circle called a 'kissing' circle? (Latin *osculari* means to kiss.)",
+      "choices": [
+        "Because it touches the curve at exactly one point.",
+        "Because it touches the curve, matches its slope, AND matches its bend at that point — three matches, an unusually intimate contact.",
+        "Because it's drawn in red.",
+        "Because mathematicians like dramatic names."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Think about what 'kiss' implies geometrically: more than a glancing touch.",
+        "Ordinary tangent lines also touch a curve, but match only the slope."
+      ],
+      "explanation": "A tangent line just touches and matches slope. The osculating circle goes further: it touches AND matches slope AND matches second derivative (the bend itself). That's three matches at a single point — the closest contact two different curves can have without sharing a whole arc. The 'kiss' metaphor captures this special closeness.",
+      "steps": [
+        "**Three orders of contact.** First-order contact: same point. Second-order: same point + same slope (a tangent line). **Third-order: same point + same slope + same second derivative** — the kissing circle.",
+        "**Why it's worth a Latin name.** It's the unique circle with maximal contact to the curve at $P$ — closer than any other circle can manage without actually coinciding with the curve.",
+        "**Connection to Taylor series.** First three terms of the Taylor expansion of $f$ at $P$ — $f(x_0) + f'(x_0)(x-x_0) + \\tfrac{1}{2}f''(x_0)(x-x_0)^2$ — match the osculating circle exactly through order $(x - x_0)^2$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{For } y = \\sin x,\\ \\text{find } R \\text{ at the peak } x = \\pi/2.",
+      "answer": 1,
+      "tolerance": 0.001,
+      "hints": [
+        "At $x = \\pi/2$: $y' = \\cos(\\pi/2) = 0$ (peak is flat).",
+        "$y'' = -\\sin(\\pi/2) = -1$.",
+        "$R = (1 + 0)^{3/2} / |-1| = 1$."
+      ],
+      "explanation": "Differentiate twice: $y' = \\cos x$, $y'' = -\\sin x$. At the peak $x = \\pi/2$: $y' = 0$ (horizontal tangent), $y'' = -1$. So $R = 1^{3/2}/|-1| = 1$. The kissing circle has radius 1, sits BELOW the curve (because $y'' < 0$ → bends down), and is tangent at the peak.",
+      "steps": [
+        "**Recognize the type.** Curvature at a peak (where $y' = 0$). The formula simplifies to $R = 1/|y''|$ at any horizontal-tangent point.",
+        "**Compute derivatives.** $y' = \\cos x$, $y'' = -\\sin x$.",
+        "**Evaluate at $x = \\pi/2$.** $y' = \\cos(\\pi/2) = 0$. $y'' = -\\sin(\\pi/2) = -1$.",
+        "**Apply the formula.** $R = (1+0)^{3/2}/|-1| = 1$.",
+        "**Interpret the sign.** $y'' < 0$ → curve bends DOWN → kissing circle sits below the peak, tangent from underneath. Try this in the widget — Switch to **Sine** and drag to $x = \\pi/2$: a unit circle hugging the bottom of the sine peak."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q10",
+      "type": "multiple-choice",
+      "prompt": "A car is driving along a curved road at constant speed $v$. The sideways force you feel pushing you into the seat depends on the local curvature. Which formula correctly relates the centripetal acceleration $a_c$ to the speed $v$ and the road's radius of curvature $R$?",
+      "choices": [
+        "$a_c = v R$",
+        "$a_c = v / R$",
+        "$a_c = v^2 / R$",
+        "$a_c = R^2 / v$"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Centripetal acceleration grows quickly with speed — go twice as fast and you feel four times the push.",
+        "And it grows when the bend gets tighter ($R$ smaller)."
+      ],
+      "explanation": "Newton: $a_c = v^2 / R$. Doubling the speed quadruples the sideways acceleration. Halving $R$ (a sharper turn) doubles it. This is why race tracks are banked and why speed limits drop on sharp curves — the very same $R$ from curvature analysis governs how hard you're pushed into the seat. Engineers compute $R$ exactly so they can bound $a_c$ to keep cars on the road.",
+      "steps": [
+        "**Recognize the type.** A physics question grounded in calculus's curvature concept. The path you're traveling has a local osculating circle of radius $R$; while on that arc you behave like you're on a circle of that radius.",
+        "**Recall the result for circular motion.** $a_c = v^2/R$ — Newton's centripetal acceleration for an object moving at speed $v$ on a circle of radius $r = R$.",
+        "**Check intuition.** Higher speed → much bigger push (quadratic). Tighter bend ($R$ smaller) → bigger push (inverse). Both match driving intuition.",
+        "**Pattern lesson.** Curvature isn't just a geometric curiosity — it's the same $R$ that controls forces on real objects following the path. Calculus and physics meet exactly here."
+      ],
+      "difficulty": "hard"
+    }
+  ]
+}

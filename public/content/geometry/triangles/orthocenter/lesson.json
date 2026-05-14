@@ -1,0 +1,72 @@
+{
+  "title": "Orthocenter & Altitudes",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### Where altitudes meet",
+        "An **altitude** of a triangle is a perpendicular segment from a vertex to the opposite side (extended if necessary). Every triangle has three altitudes.",
+        "The three altitudes meet at a single point: the **orthocenter** $H$. Toggle it on below and drag a vertex around — three dashed purple lines, each perpendicular to a side, always concur at $H$."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "triangle-centers",
+      "config": {
+        "showCentroid": false,
+        "showCircumcenter": false,
+        "showOrthocenter": true
+      }
+    },
+    {
+      "type": "callout",
+      "title": "Three places $H$ can hide",
+      "body": "**Acute triangle:** $H$ is *inside* the triangle.\n**Right triangle:** $H$ is *at* the right-angle vertex itself.\n**Obtuse triangle:** $H$ is *outside* the triangle.\n\nThe orthocenter has the widest range of any of the classical centers — try dragging a vertex to make an obtuse triangle and watch $H$ flee."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why three altitudes concur",
+        "There are a few proofs. One slick way: through each vertex draw a line *parallel to the opposite side*. This creates a bigger triangle whose sides have the original triangle's vertices as midpoints. The altitudes of the small triangle become the **perpendicular bisectors of the big triangle**'s sides. The perpendicular bisectors of the big triangle concur (at *its* circumcenter), so the altitudes of the small triangle concur too. ∎"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The Euler relation",
+        "There's a beautiful identity tying $H$ to the circumcenter $O$ and centroid $G$:",
+        "$\\vec{OH} = 3 \\vec{OG}$",
+        "Equivalently, $H = 3G - 2O$. So $H$, $G$, $O$ are **collinear** for every triangle, with $G$ between $O$ and $H$, dividing $OH$ in ratio $OG : GH = 1 : 2$.",
+        "This common line is the **Euler line** of the triangle — covered in the next lesson."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Coordinates of $H$ (when you need them)",
+      "body": "There's no clean averaging formula like centroid's $(A+B+C)/3$. But the Euler relation gives a usable identity:\n\n$H = A + B + C - 2O$\n\nIf you know the circumcenter $O$, then $H$ is just $(A + B + C) - 2O$. This works for any triangle.\n\nAlternatively, write down two altitude line equations and solve the system — straightforward but tedious."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example",
+        "Right triangle with legs $a = 6$ (vertical) and $b = 8$ (horizontal). Place it with vertices at $A(0, 0)$ (right angle), $B(8, 0)$, $C(0, 6)$.",
+        "**The two legs ARE altitudes themselves.** Altitude from $A$ to $BC$ is *not* a leg, but altitudes from $B$ and $C$ to the opposite sides ARE the legs.",
+        "**They meet at the right-angle vertex** $A$. So $H = A = (0, 0)$.",
+        "**General rule:** in any right triangle, the orthocenter sits exactly at the right-angle vertex. (Two of the altitudes coincide with the two legs.)"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Equilateral special case",
+      "body": "For an equilateral triangle, all four classical centers ($I$, $G$, $O$, $H$) coincide. So the orthocenter is just the geometric center.\n\nFor an isosceles (non-equilateral) triangle, $H$ lies on the axis of symmetry (the altitude from the apex IS one of the altitudes)."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Cool fact: each vertex is the orthocenter of the 'other' triangle",
+        "If $H$ is the orthocenter of $\\triangle ABC$, then $A$ is the orthocenter of $\\triangle HBC$, $B$ is the orthocenter of $\\triangle AHC$, and $C$ is the orthocenter of $\\triangle ABH$.",
+        "Each of these four points plays the role of orthocenter for the triangle made of the other three. This is called an **orthocentric system** — a beautiful symmetry that pops up in olympiad geometry."
+      ]
+    }
+  ]
+}

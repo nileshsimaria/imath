@@ -1,0 +1,405 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{Find the mean: } 12, 15, 18, 21, 24.",
+      "answer": 18,
+      "tolerance": 0,
+      "hints": [
+        "Sum / count.",
+        "$(12+15+18+21+24)/5 = 90/5$."
+      ],
+      "explanation": "$\\bar{x} = 90/5 = 18$.",
+      "steps": [
+        "Sum: $12+15+18+21+24 = 90$.",
+        "Divide by count (5): $90/5 = 18$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{Find the median: } 5, 12, 7, 14, 9.",
+      "answer": 9,
+      "tolerance": 0,
+      "hints": [
+        "Sort first: $5, 7, 9, 12, 14$.",
+        "Middle of 5 sorted values is the 3rd."
+      ],
+      "explanation": "Sorted: $5, 7, 9, 12, 14$. Middle (3rd) = $9$.",
+      "steps": [
+        "Sort: $5, 7, 9, 12, 14$.",
+        "5 values → middle is the 3rd: $9$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{Find the median: } 6, 10, 14, 22.",
+      "answer": 12,
+      "tolerance": 0,
+      "hints": [
+        "Even count → average of two middle values.",
+        "Middle two: $10$ and $14$. Average $= 12$."
+      ],
+      "explanation": "Average of two middles: $(10+14)/2 = 12$.",
+      "steps": [
+        "Sorted: $6, 10, 14, 22$.",
+        "Even count (4) → average the two middle values.",
+        "Middle two: $10$ and $14$. Median = $(10+14)/2 = 12$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Find the mode of } 3, 5, 7, 5, 9, 5, 11, 7.",
+      "answer": 5,
+      "tolerance": 0,
+      "hints": [
+        "Count occurrences. 5 appears most.",
+        "5 appears 3 times."
+      ],
+      "explanation": "$5$ appears 3 times, more than any other.",
+      "steps": [
+        "Count: 3→1, 5→3, 7→2, 9→1, 11→1.",
+        "Most frequent: 5 (3 times). **Mode = 5**."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which measure of center is most affected by outliers?}",
+      "choices": [
+        "Mean",
+        "Median",
+        "Mode",
+        "All affected equally"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Outliers change the sum a lot, but barely change the middle.",
+        "Mean uses every value; median doesn't."
+      ],
+      "explanation": "The mean uses every value in the sum, so an extreme value drags it. Median and mode are largely unaffected.",
+      "steps": [
+        "Mean: depends on every data point — outliers drag it strongly.",
+        "Median: depends only on position — outliers shift it at most one position.",
+        "Mode: depends on frequency — outliers (often unique) don't change it.",
+        "**Mean is most affected.**"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{The mean of 6 numbers is 50. Five of them are } 40, 45, 55, 60, 50. \\\\ \\text{Find the sixth.}",
+      "answer": 50,
+      "tolerance": 0,
+      "hints": [
+        "Total = mean × count = $50 \\cdot 6 = 300$.",
+        "Subtract the 5 known: $300 - (40+45+55+60+50) = 300 - 250 = 50$."
+      ],
+      "explanation": "Total = $300$. Sum of known = $250$. Sixth = $50$.",
+      "steps": [
+        "Total of all 6 numbers = mean × n = $50 \\cdot 6 = 300$.",
+        "Sum of the five known: $40+45+55+60+50 = 250$.",
+        "Sixth: $300 - 250 = 50$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{A student's grades on 4 tests are } 85, 90, 78, 87. \\\\ \\text{What grade on the 5th test gives a mean of 88?}",
+      "answer": 100,
+      "tolerance": 0,
+      "hints": [
+        "Total needed: $88 \\cdot 5 = 440$.",
+        "Subtract: $440 - (85+90+78+87) = 440 - 340 = 100$."
+      ],
+      "explanation": "Need total 440. Have 340. 5th test: 100.",
+      "steps": [
+        "Total needed: $88 \\cdot 5 = 440$.",
+        "Sum of known: $85+90+78+87 = 340$.",
+        "Need: $440 - 340 = 100$ on the 5th test."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{Compute the weighted mean: 30\\% homework (90), 30\\% midterm (70),} \\\\ 40\\% \\text{ final (85).}",
+      "answer": 82,
+      "tolerance": 0.1,
+      "hints": [
+        "Multiply each by its weight, sum.",
+        "$0.3(90) + 0.3(70) + 0.4(85) = 27 + 21 + 34$."
+      ],
+      "explanation": "$0.3(90) + 0.3(70) + 0.4(85) = 82$.",
+      "steps": [
+        "Weighted mean = $\\sum w_i x_i$ where $\\sum w_i = 1$.",
+        "$0.3 \\cdot 90 + 0.3 \\cdot 70 + 0.4 \\cdot 85 = 27 + 21 + 34 = 82$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\text{House prices in a small town: } 200{,}000, 250{,}000, 220{,}000, 240{,}000, 5{,}000{,}000. \\\\ \\text{Which measure best describes a 'typical' house price?}",
+      "choices": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Range"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "The 5M outlier drags the mean way up.",
+        "Median is robust to outliers."
+      ],
+      "explanation": "The 5M outlier inflates the mean to over 1.18M — misleading. Median (240K) reflects the actual market.",
+      "steps": [
+        "Mean: $(200+250+220+240+5000)/5 \\cdot 1000 = 5910/5 \\cdot 1000 = \\$1{,}182{,}000$ — way above any actual price!",
+        "Median: middle of sorted $200, 220, 240, 250, 5000$ = $\\$240{,}000$ — a typical house price.",
+        "**Median** is the right measure for skewed data with outliers like income or house prices."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A dataset has values } 4, 7, 7, 9, 12, 12, 15. \\text{ The mode is:}",
+      "choices": [
+        "7 only",
+        "12 only",
+        "7 and 12 (bimodal)",
+        "No mode"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Both 7 and 12 appear twice — tied for most.",
+        "Multiple modes is fine!"
+      ],
+      "explanation": "Both 7 and 12 appear twice (tied). The data is bimodal.",
+      "steps": [
+        "Count occurrences: 4→1, 7→2, 9→1, 12→2, 15→1.",
+        "Two values tied at 2 occurrences each.",
+        "**Bimodal**: both 7 and 12 are modes."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{If you add 10 to every value in a dataset, what happens to the mean?} \\\\ \\text{(Enter the change in the mean.)}",
+      "answer": 10,
+      "tolerance": 0,
+      "hints": [
+        "Adding a constant $c$ to every value adds $c$ to the mean.",
+        "Mean is linear: $\\bar{x + c} = \\bar{x} + c$."
+      ],
+      "explanation": "Adding 10 to every value adds 10 to the mean. (And to the median, and to the mode.) Spread measures don't change.",
+      "steps": [
+        "If new values are $x_i + 10$, new sum = old sum + $10n$.",
+        "New mean = (old sum + $10n$)/n = old mean + 10.",
+        "**Mean increases by 10.**"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\text{If you multiply every value in a dataset by 3, what happens to the mean?} \\\\ \\text{(Enter the multiplier.)}",
+      "answer": 3,
+      "tolerance": 0,
+      "hints": [
+        "Multiplying by a constant $c$ multiplies the mean by $c$.",
+        "Mean is linear: $\\bar{cx} = c\\bar{x}$."
+      ],
+      "explanation": "Multiplying every value by 3 multiplies the mean by 3.",
+      "steps": [
+        "New values: $3x_i$. New sum = $3 \\cdot$ old sum.",
+        "New mean = $3 \\cdot$ old mean.",
+        "**Mean is multiplied by 3.**"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q13",
+      "type": "multiple-choice",
+      "prompt": "For a right-skewed distribution (long right tail — e.g., income, house prices), what is the typical order of mean, median, and mode?",
+      "choices": [
+        "mean < median < mode",
+        "mode < median < mean",
+        "mean = median = mode",
+        "median < mode < mean"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "The mean is pulled toward the long tail (right) by extreme values.",
+        "Mode = peak of the data (left, in a right-skewed shape).",
+        "Median sits between mode and mean for typical skewed distributions."
+      ],
+      "explanation": "For right-skewed data: mode is at the peak (leftmost of the three), median is the middle, and mean is pulled rightward by the long tail of large values. So $\\text{mode} < \\text{median} < \\text{mean}$. The reverse holds for left-skewed data ($\\text{mean} < \\text{median} < \\text{mode}$).",
+      "steps": [
+        "**Pattern recognition.** Skewness pulls the *mean* into the tail (which uses every value); the *mode* stays at the peak (frequency); the *median* lands between (position-based).",
+        { "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M 30 170 Q 70 60 110 100 Q 160 160 290 170\" fill=\"rgba(37,99,235,0.18)\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><line x1=\"80\" y1=\"170\" x2=\"80\" y2=\"70\" stroke=\"#dc2626\" stroke-width=\"1.6\" stroke-dasharray=\"4 3\"/><line x1=\"125\" y1=\"170\" x2=\"125\" y2=\"100\" stroke=\"#16a34a\" stroke-width=\"1.6\" stroke-dasharray=\"4 3\"/><line x1=\"160\" y1=\"170\" x2=\"160\" y2=\"125\" stroke=\"#b45309\" stroke-width=\"1.6\" stroke-dasharray=\"4 3\"/><text x=\"80\" y=\"187\" font-size=\"12\" font-weight=\"700\" fill=\"#dc2626\" text-anchor=\"middle\">mode</text><text x=\"125\" y=\"187\" font-size=\"12\" font-weight=\"700\" fill=\"#16a34a\" text-anchor=\"middle\">median</text><text x=\"160\" y=\"187\" font-size=\"12\" font-weight=\"700\" fill=\"#b45309\" text-anchor=\"middle\">mean</text><text x=\"30\" y=\"195\" font-size=\"11\" fill=\"#475569\" font-style=\"italic\">right-skewed: mode &lt; median &lt; mean</text></svg>" },
+        "**Order for right-skewed.** $\\text{mode} < \\text{median} < \\text{mean}$.",
+        "**Mirror for left-skewed.** Long LEFT tail (e.g., test scores where most students do well): $\\text{mean} < \\text{median} < \\text{mode}$.",
+        "**Symmetric (e.g., normal).** Mean = median = mode, all coinciding at the center.",
+        "**Pattern lesson — which measure to report.** For skewed data, the median is usually the better summary of 'typical'. The mean is misleading because it's distorted by the tail. House prices, incomes, and reaction times are classic right-skewed examples where reporting the mean overstates 'typical'."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q14",
+      "type": "numeric",
+      "promptTex": "\\text{A class has these grades:} \\\\ 5 \\text{ students at } 70, \\;\\; 8 \\text{ at } 80, \\;\\; 4 \\text{ at } 90, \\;\\; 3 \\text{ at } 100. \\\\ \\text{Find the mean (round to 2 decimals).}",
+      "answer": 82.5,
+      "tolerance": 0.05,
+      "hints": [
+        "Total sum = $5 \\cdot 70 + 8 \\cdot 80 + 4 \\cdot 90 + 3 \\cdot 100$.",
+        "$= 350 + 640 + 360 + 300 = 1650$.",
+        "Total count: $5 + 8 + 4 + 3 = 20$. Mean = $1650/20 = 82.5$."
+      ],
+      "explanation": "Frequency-table mean: $\\bar{x} = \\dfrac{\\sum f_i x_i}{\\sum f_i} = \\dfrac{5 \\cdot 70 + 8 \\cdot 80 + 4 \\cdot 90 + 3 \\cdot 100}{20} = \\dfrac{1650}{20} = 82.5$.",
+      "steps": [
+        "**Recognize the type — frequency-table mean.** Each value is weighted by how often it occurs.",
+        "**Compute the weighted sum (numerator).** $\\sum f_i x_i = 5 \\cdot 70 + 8 \\cdot 80 + 4 \\cdot 90 + 3 \\cdot 100 = 350 + 640 + 360 + 300 = 1650$.",
+        "**Total count (denominator).** $\\sum f_i = 5 + 8 + 4 + 3 = 20$.",
+        "**Divide.** $\\bar{x} = 1650/20 = 82.5$.",
+        "**Why this works.** Listing every score and summing would give the same answer — frequencies just compress the repeated arithmetic. For large data sets the frequency form is almost mandatory."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q15",
+      "type": "numeric",
+      "promptTex": "\\text{Class A has 15 students with mean 80. Class B has 25 students with mean 70.} \\\\ \\text{Find the mean of all 40 students combined (round to 2 decimals).}",
+      "answer": 73.75,
+      "tolerance": 0.05,
+      "hints": [
+        "Total sum across both = $15 \\cdot 80 + 25 \\cdot 70 = 1200 + 1750 = 2950$.",
+        "Combined count: 40. Mean: $2950/40 = 73.75$."
+      ],
+      "explanation": "Sum of all scores = sum from A + sum from B = $15 \\cdot 80 + 25 \\cdot 70 = 2950$. Divide by total count: $2950/40 = 73.75$.",
+      "steps": [
+        "**Recover the totals from the means.** Mean × count = sum. So Class A total: $15 \\cdot 80 = 1200$. Class B total: $25 \\cdot 70 = 1750$.",
+        "**Combine.** Total of all 40 scores: $1200 + 1750 = 2950$.",
+        "**New mean.** $2950 / 40 = 73.75$.",
+        "**Sanity check — between the two class means.** Combined mean must lie between $70$ and $80$. $73.75$ ✓ — and closer to $70$ since class B has more students. Weighted average always pulls toward the larger group.",
+        "**Pattern lesson — never average the means.** $(80 + 70)/2 = 75$ is WRONG (treats both classes as equal weight). Always weight by sample size."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q16",
+      "type": "numeric",
+      "promptTex": "\\text{Equal-weight masses sit on a number line at positions } 2, 4, 6, 10. \\\\ \\text{What is the balance point (the mean) of these masses?}",
+      "answer": 5.5,
+      "tolerance": 0.01,
+      "hints": [
+        "Mean = sum of positions / count.",
+        "$(2 + 4 + 6 + 10)/4 = 22/4 = 5.5$."
+      ],
+      "explanation": "Mean = $(2 + 4 + 6 + 10)/4 = 5.5$. Physically, the mean is the *center of mass* — the point where the data would balance if each value were a unit mass on a seesaw.",
+      "steps": [
+        "**Visualize as masses on a seesaw.** Each data point is a unit mass at its position. The balance point is the mean.",
+        { "svg": "<svg viewBox=\"0 0 320 160\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"100\" x2=\"300\" y2=\"100\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"20\" y1=\"96\" x2=\"20\" y2=\"104\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><line x1=\"75\" y1=\"96\" x2=\"75\" y2=\"104\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><line x1=\"130\" y1=\"96\" x2=\"130\" y2=\"104\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><line x1=\"185\" y1=\"96\" x2=\"185\" y2=\"104\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><line x1=\"240\" y1=\"96\" x2=\"240\" y2=\"104\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><line x1=\"295\" y1=\"96\" x2=\"295\" y2=\"104\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><text x=\"20\" y=\"122\" font-size=\"11\" fill=\"#475569\" text-anchor=\"middle\">0</text><text x=\"75\" y=\"122\" font-size=\"11\" fill=\"#475569\" text-anchor=\"middle\">2</text><text x=\"130\" y=\"122\" font-size=\"11\" fill=\"#475569\" text-anchor=\"middle\">4</text><text x=\"185\" y=\"122\" font-size=\"11\" fill=\"#475569\" text-anchor=\"middle\">6</text><text x=\"240\" y=\"122\" font-size=\"11\" fill=\"#475569\" text-anchor=\"middle\">8</text><text x=\"295\" y=\"122\" font-size=\"11\" fill=\"#475569\" text-anchor=\"middle\">10</text><rect x=\"71\" y=\"75\" width=\"8\" height=\"22\" fill=\"#2563eb\"/><rect x=\"126\" y=\"75\" width=\"8\" height=\"22\" fill=\"#2563eb\"/><rect x=\"181\" y=\"75\" width=\"8\" height=\"22\" fill=\"#2563eb\"/><rect x=\"291\" y=\"75\" width=\"8\" height=\"22\" fill=\"#2563eb\"/><polygon points=\"171,108 161,128 181,128\" fill=\"#dc2626\"/><line x1=\"171\" y1=\"108\" x2=\"171\" y2=\"75\" stroke=\"#dc2626\" stroke-width=\"1\" stroke-dasharray=\"3 2\"/><text x=\"170\" y=\"148\" font-size=\"12\" font-weight=\"700\" fill=\"#dc2626\" text-anchor=\"middle\">mean = 5.5</text></svg>" },
+        "**Compute.** Mean = $(2 + 4 + 6 + 10)/4 = 22/4 = 5.5$.",
+        "**Verify the balance.** Deviations from $5.5$: $-3.5, -1.5, +0.5, +4.5$. Sum: $0$ ✓ — the seesaw balances exactly when total torque (signed deviation) is zero.",
+        "**Pattern lesson.** The mean is *defined* by the balance property: it's the unique point where deviations sum to zero. This is why moving any data point shifts the mean (the balance has to adjust)."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q17",
+      "type": "numeric",
+      "promptTex": "\\text{An investment grows by } 20\\% \\text{ in year 1 and } 5\\% \\text{ in year 2.} \\\\ \\text{Find the equivalent average annual growth rate as a percentage (round to 2 decimals).}",
+      "answer": 12.25,
+      "tolerance": 0.05,
+      "hints": [
+        "Growth multipliers: $1.20$ and $1.05$. The right average is the GEOMETRIC mean of multipliers.",
+        "$\\sqrt{1.20 \\cdot 1.05} = \\sqrt{1.26} \\approx 1.1225$.",
+        "Annual growth rate ≈ $12.25\\%$."
+      ],
+      "explanation": "For growth rates / multiplicative factors, use the GEOMETRIC mean. Multipliers: $1.20$ and $1.05$. Geometric mean: $\\sqrt{1.20 \\cdot 1.05} = \\sqrt{1.26} \\approx 1.1225$. Average growth: about $12.25\\%$.",
+      "steps": [
+        "**Why not the arithmetic mean?** $(20\\% + 5\\%)/2 = 12.5\\%$ — close but wrong. Two years at $12.5\\%$: $1.125^2 = 1.2656$, NOT the actual final $1.20 \\cdot 1.05 = 1.26$. The arithmetic mean overstates.",
+        "**Use the geometric mean of multipliers.** Multipliers are $1.20$ and $1.05$. Geometric mean: $\\sqrt[n]{m_1 \\cdot m_2 \\cdots m_n}$. For 2 years: $\\sqrt{1.20 \\cdot 1.05} = \\sqrt{1.26} \\approx 1.1225$.",
+        "**Convert to percent.** $1.1225 - 1 = 0.1225 = 12.25\\%$.",
+        "**Verify.** Two years at $12.25\\%$: $1.1225^2 = 1.26$ ✓ — matches the actual total growth.",
+        "**Pattern lesson.** When averaging *rates* or *factors*, geometric mean is correct. Arithmetic mean is for *amounts*. Mixing them up is one of the most common errors in finance, biology (growth rates), and chemistry (concentrations)."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q18",
+      "type": "multiple-choice",
+      "prompt": "For categorical (nominal) data — like 'favorite color: red, blue, green, blue, red, blue' — which measure of center is meaningful?",
+      "choices": [
+        "Mean — average all the colors",
+        "Median — find the middle color",
+        "Mode — the most-frequent category",
+        "All three apply equally"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Mean and median require an ORDERING or numerical operation. Categories don't have one.",
+        "Mode just counts frequency — works for any data type."
+      ],
+      "explanation": "Mean requires arithmetic on the values; median requires ordering. Categorical data (colors, brands, genres) has neither — there's no average of 'red and blue', no in-between of 'red and green'. Only the MODE — the most frequent category — applies.",
+      "steps": [
+        "**Data-type test.** What can you do with the data?\n\n• *Nominal* (categories): can only count.\n• *Ordinal* (ordered categories): can rank.\n• *Interval/ratio* (numbers): full arithmetic.",
+        "**Each measure of center needs which?**\n\n• *Mean*: needs arithmetic (sum, divide) → interval/ratio.\n• *Median*: needs ordering → ordinal or higher.\n• *Mode*: needs only counting → works for any data type.",
+        "**Apply.** Favorite colors are nominal. Only the mode is meaningful.",
+        "**Pattern lesson — match the measure to the data type.** Using a mean on category-coded data ('blue = 1, red = 2, green = 3, mean = 1.83') gives nonsense — moving the encoding changes the answer. Stay disciplined about what arithmetic the data type supports."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q19",
+      "type": "numeric",
+      "promptTex": "\\text{Compute the trimmed mean (removing the highest and lowest values) of:} \\\\ 2, 4, 5, 6, 7, 8, 50.",
+      "answer": 6,
+      "tolerance": 0.01,
+      "hints": [
+        "Remove the largest (50) and smallest (2). Take the mean of the remaining 5.",
+        "$(4 + 5 + 6 + 7 + 8)/5 = 30/5 = 6$."
+      ],
+      "explanation": "Drop the extremes (2 and 50). Trimmed mean = $(4 + 5 + 6 + 7 + 8)/5 = 6$. The regular mean of all 7 values would be $82/7 \\approx 11.7$ — heavily distorted by the outlier $50$. Trimming gives a more representative center.",
+      "steps": [
+        "**Recognize the type — robust mean.** Outliers can drag the regular mean far from 'typical'. The trimmed mean removes the most extreme values before averaging.",
+        "**Remove extremes.** Drop the largest ($50$) and smallest ($2$). Remaining 5 values: $4, 5, 6, 7, 8$.",
+        "**Average the rest.** $(4 + 5 + 6 + 7 + 8)/5 = 30/5 = 6$.",
+        "**Compare to regular mean.** Regular: $(2 + 4 + 5 + 6 + 7 + 8 + 50)/7 = 82/7 \\approx 11.71$. The outlier $50$ shifts it from $\\sim 6$ up to $\\sim 12$ — trimming brings the answer back to the bulk of the data.",
+        "**Pattern lesson — robust statistics.** Trimmed mean, median, IQR (instead of std dev) are all 'robust' alternatives to mean / variance. Use them when outliers or skewness make the standard measures misleading. Olympic-style scoring (drop the highest and lowest judges' scores) is exactly this idea."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q20",
+      "type": "numeric",
+      "promptTex": "\\text{Dataset: } 5, 7, 8, 9, 100. \\\\ \\text{Find the mean AFTER removing the outlier } 100. \\\\ \\text{Round to 2 decimals.}",
+      "answer": 7.25,
+      "tolerance": 0.05,
+      "hints": [
+        "Drop 100. Remaining: $5, 7, 8, 9$.",
+        "Mean = $(5+7+8+9)/4 = 29/4 = 7.25$."
+      ],
+      "explanation": "Without the outlier: mean = $(5+7+8+9)/4 = 7.25$. With the outlier: $(5+7+8+9+100)/5 = 25.8$ — drastically inflated. One outlier shifted the mean by $\\sim 18$. Median (around 8 either way) barely budges.",
+      "steps": [
+        "**Find the mean with the outlier (for comparison).** $(5+7+8+9+100)/5 = 129/5 = 25.8$.",
+        "**Now remove the outlier.** Remaining: $5, 7, 8, 9$. Mean = $(5+7+8+9)/4 = 29/4 = 7.25$.",
+        "**The shift.** $25.8 \\to 7.25$ — the mean dropped by $\\sim 18$ when one outlier (out of 5 values) was removed.",
+        "**Compare with the median.** Original median (5 values, sorted $5,7,8,9,100$): middle = $8$. After removing $100$: middle of $5,7,8,9$ = $(7+8)/2 = 7.5$. Shift: just $0.5$. The median is *robust*; the mean is *sensitive*.",
+        "**Pattern lesson — outliers test your data.** When a single point moves the mean dramatically, that's a sign the mean might not represent 'typical' well. Either remove the outlier (if it's an error or a different population) or use the median."
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

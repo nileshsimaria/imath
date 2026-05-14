@@ -1,0 +1,442 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{Compute } P(8, 3).",
+      "answer": 336,
+      "tolerance": 0,
+      "hints": [
+        "$P(8,3) = 8 \\cdot 7 \\cdot 6$.",
+        "$336$."
+      ],
+      "explanation": "$P(8, 3) = 8 \\cdot 7 \\cdot 6 = 336$.",
+      "steps": [
+        "$P(n, r) = n(n-1)(n-2)\\cdots$ ($r$ terms).",
+        "$P(8, 3) = 8 \\cdot 7 \\cdot 6 = 336$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{Compute } C(8, 3).",
+      "answer": 56,
+      "tolerance": 0,
+      "hints": [
+        "$C = P/r! = 336/6$.",
+        "$56$."
+      ],
+      "explanation": "$C(8, 3) = 336/3! = 336/6 = 56$.",
+      "steps": [
+        "$C(n, r) = \\dfrac{P(n, r)}{r!}$.",
+        "$P(8, 3) = 336$. $r! = 3! = 6$.",
+        "$C(8, 3) = 336/6 = 56$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{From 10 candidates, how many ways to elect a president and vice president (distinct positions)?}",
+      "choices": [
+        "P(10, 2) = 90",
+        "C(10, 2) = 45",
+        "P(10, 10)",
+        "10 + 9"
+      ],
+      "choicesTex": false,
+      "answerIndex": 0,
+      "hints": [
+        "Distinct positions → ORDER matters → permutation.",
+        "$P(10, 2) = 10 \\cdot 9 = 90$."
+      ],
+      "explanation": "Distinct positions → order matters → permutation. $P(10, 2) = 10 \\cdot 9 = 90$.",
+      "steps": [
+        "Order matters (president ≠ vice president) → permutation.",
+        "$P(10, 2) = 10 \\cdot 9 = 90$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{From 10 candidates, pick a 2-person committee (no titles).} \\\\ \\text{Number of committees?}",
+      "choices": [
+        "P(10, 2) = 90",
+        "C(10, 2) = 45",
+        "P(10, 10)",
+        "10 + 9"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "No titles → ORDER doesn't matter → combination.",
+        "$C(10, 2) = 45$."
+      ],
+      "explanation": "No titles → order doesn't matter → combination. $C(10, 2) = 45$.",
+      "steps": [
+        "Order doesn't matter (Alice + Bob = Bob + Alice) → combination.",
+        "$C(10, 2) = \\dfrac{10 \\cdot 9}{2!} = 45$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{How many ways to arrange the letters of WORD?}",
+      "answer": 24,
+      "tolerance": 0,
+      "hints": [
+        "$4! = 24$.",
+        "All distinct, just arrange."
+      ],
+      "explanation": "$4! = 24$ arrangements.",
+      "steps": [
+        "4 distinct letters → all permutations: $4! = 24$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{Compute } 6!.",
+      "answer": 720,
+      "tolerance": 0,
+      "hints": [
+        "$6! = 6 \\cdot 5 \\cdot 4 \\cdot 3 \\cdot 2 \\cdot 1$.",
+        "$720$."
+      ],
+      "explanation": "$6! = 720$.",
+      "steps": [
+        "$6 \\cdot 5 \\cdot 4 \\cdot 3 \\cdot 2 \\cdot 1 = 720$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{How many 5-card poker hands from a 52-card deck?}",
+      "answer": 2598960,
+      "tolerance": 0,
+      "hints": [
+        "Hands are unordered → combination.",
+        "$C(52, 5)$."
+      ],
+      "explanation": "$C(52, 5) = \\dfrac{52 \\cdot 51 \\cdot 50 \\cdot 49 \\cdot 48}{120} = 2{,}598{,}960$.",
+      "steps": [
+        "Poker hand: order of dealing doesn't change the hand → combination.",
+        "$C(52, 5) = \\dfrac{52!}{5! \\cdot 47!} = \\dfrac{52 \\cdot 51 \\cdot 50 \\cdot 49 \\cdot 48}{5!}$.",
+        "$= \\dfrac{311{,}875{,}200}{120} = 2{,}598{,}960$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{Race with 12 runners. Top 3 get gold, silver, bronze.} \\\\ \\text{Number of possible podium outcomes?}",
+      "answer": 1320,
+      "tolerance": 0,
+      "hints": [
+        "Order matters (gold ≠ silver). Permutation.",
+        "$P(12, 3) = 12 \\cdot 11 \\cdot 10 = 1320$."
+      ],
+      "explanation": "$P(12, 3) = 12 \\cdot 11 \\cdot 10 = 1320$.",
+      "steps": [
+        "Different medal positions = order matters → permutation.",
+        "$P(12, 3) = 12 \\cdot 11 \\cdot 10 = 1320$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Lottery: pick 6 numbers from 1 to 49. Number of possible tickets?}",
+      "choices": [
+        "P(49, 6)",
+        "C(49, 6)",
+        "49^6",
+        "6 \\cdot 49"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Lottery numbers are unordered.",
+        "Combination."
+      ],
+      "explanation": "Lottery numbers are typically unordered → $C(49, 6)$.",
+      "steps": [
+        "Lottery winning numbers don't depend on the order they were drawn — order doesn't matter.",
+        "$C(49, 6) = 13{,}983{,}816$ — about 14 million possible tickets."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{Calculate } \\binom{6}{4}.",
+      "answer": 15,
+      "tolerance": 0,
+      "hints": [
+        "Use symmetry: $\\binom{6}{4} = \\binom{6}{2}$. Easier!",
+        "$\\binom{6}{2} = 15$."
+      ],
+      "explanation": "$\\binom{6}{4} = \\binom{6}{2} = \\dfrac{6 \\cdot 5}{2} = 15$.",
+      "steps": [
+        "Use the symmetry $\\binom{n}{k} = \\binom{n}{n-k}$: $\\binom{6}{4} = \\binom{6}{2}$.",
+        "$\\binom{6}{2} = \\dfrac{6 \\cdot 5}{2!} = 15$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{In how many ways can you arrange 7 books on a shelf if 2 specific books must be together?}",
+      "answer": 1440,
+      "tolerance": 0,
+      "hints": [
+        "Treat the 2 books as a single unit → 6 things to arrange = 6!. Then × 2! for ordering of the pair.",
+        "$6! \\cdot 2 = 720 \\cdot 2 = 1440$."
+      ],
+      "explanation": "Glue the 2 books together → 6 arrangeable units = $6! = 720$. Times $2!$ for internal order = $1440$.",
+      "steps": [
+        "Group the 2 special books as one 'super-book'.",
+        "Now we're arranging 6 things (5 books + 1 super-book): $6! = 720$ ways.",
+        "Within the super-book, 2 ways to order the pair: $\\times 2! = 2$.",
+        "Total: $720 \\cdot 2 = 1440$."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\text{From 8 boys and 6 girls, choose a committee of 3 boys and 2 girls.} \\\\ \\text{Number of committees?}",
+      "answer": 840,
+      "tolerance": 0,
+      "hints": [
+        "Choose 3 boys from 8: $C(8, 3) = 56$. Choose 2 girls from 6: $C(6, 2) = 15$.",
+        "Multiply: $56 \\cdot 15 = 840$."
+      ],
+      "explanation": "$C(8, 3) \\cdot C(6, 2) = 56 \\cdot 15 = 840$.",
+      "steps": [
+        "Two independent choices: pick boys, then pick girls. Multiply.",
+        "Boys: $C(8, 3) = \\dfrac{8 \\cdot 7 \\cdot 6}{6} = 56$.",
+        "Girls: $C(6, 2) = \\dfrac{6 \\cdot 5}{2} = 15$.",
+        "Total: $56 \\cdot 15 = 840$ committees."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q13",
+      "type": "multiple-choice",
+      "prompt": "Which scenario requires PERMUTATIONS (order matters)?",
+      "choices": [
+        "Choose 5 students from 20 for a committee",
+        "Arrange 5 students in a line for a photo",
+        "Pick a hand of 5 cards from a deck",
+        "Pick 5 lottery numbers (where order of drawing doesn't matter)"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Permutation = order matters. Photo lineup has distinct left-to-right positions.",
+        "Committees, hands of cards, and lottery picks are typically unordered (combinations)."
+      ],
+      "explanation": "A photo lineup has *distinct positions* — 'Alice next to Bob' looks different from 'Bob next to Alice'. Order matters → permutation. Committees, card hands, and lottery picks: swapping members doesn't change the result → combinations.",
+      "steps": [
+        "**The test.** Ask: 'If I swap two of the chosen items, is the answer the same?' Yes → combination. No → permutation.",
+        "**Apply.** Committee of 5: swap Alice and Bob in 'committee = {Alice, Bob, ...}' — same committee. Combination. Photo line: swap Alice and Bob in 'line: Alice, Bob, Charlie' vs 'line: Bob, Alice, Charlie' — different photo. Permutation.",
+        "**Mnemonic.** *Arrangements* and *sequences* (lineups, codes, rankings) → permutation. *Selections* and *groups* (teams, hands, sets) → combination."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q14",
+      "type": "numeric",
+      "promptTex": "\\text{There are 8 people at a party. Each person shakes hands with every other person exactly once.} \\\\ \\text{How many handshakes occur?}",
+      "answer": 28,
+      "tolerance": 0,
+      "hints": [
+        "A handshake is an *unordered pair* — order doesn't matter.",
+        "$\\binom{8}{2} = \\dfrac{8 \\cdot 7}{2} = 28$."
+      ],
+      "explanation": "Each handshake involves an unordered pair of two distinct people. Number of such pairs: $\\binom{8}{2} = 28$.",
+      "steps": [
+        "**Recognize the type.** A handshake is an unordered pair $\\{A, B\\}$ with $A \\neq B$. Counting pairs from $n$ people = $\\binom{n}{2}$.",
+        { "svg": "<svg viewBox=\"0 0 280 220\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke=\"#94a3b8\" stroke-width=\"0.8\" opacity=\"0.6\"><line x1=\"140\" y1=\"30\" x2=\"232\" y2=\"75\"/><line x1=\"140\" y1=\"30\" x2=\"232\" y2=\"155\"/><line x1=\"140\" y1=\"30\" x2=\"140\" y2=\"200\"/><line x1=\"140\" y1=\"30\" x2=\"48\" y2=\"155\"/><line x1=\"140\" y1=\"30\" x2=\"48\" y2=\"75\"/><line x1=\"232\" y1=\"75\" x2=\"232\" y2=\"155\"/><line x1=\"232\" y1=\"75\" x2=\"140\" y2=\"200\"/><line x1=\"232\" y1=\"75\" x2=\"48\" y2=\"155\"/><line x1=\"232\" y1=\"75\" x2=\"48\" y2=\"75\"/><line x1=\"232\" y1=\"155\" x2=\"140\" y2=\"200\"/><line x1=\"232\" y1=\"155\" x2=\"48\" y2=\"155\"/><line x1=\"232\" y1=\"155\" x2=\"48\" y2=\"75\"/><line x1=\"140\" y1=\"200\" x2=\"48\" y2=\"155\"/><line x1=\"140\" y1=\"200\" x2=\"48\" y2=\"75\"/><line x1=\"48\" y1=\"155\" x2=\"48\" y2=\"75\"/></g><circle cx=\"140\" cy=\"30\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"232\" cy=\"75\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"232\" cy=\"155\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"140\" cy=\"200\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"48\" cy=\"155\" r=\"7\" fill=\"#2563eb\"/><circle cx=\"48\" cy=\"75\" r=\"7\" fill=\"#2563eb\"/><text x=\"40\" y=\"215\" font-size=\"11\" fill=\"#475569\" font-style=\"italic\">6 people, 15 edges — for 8 people: C(8,2) = 28</text></svg>" },
+        "**Compute.** $\\binom{8}{2} = \\dfrac{8 \\cdot 7}{2} = 28$.",
+        "**Why not 8×7?** $8 \\cdot 7 = 56$ counts ORDERED pairs (Alice→Bob and Bob→Alice as two different handshakes). Each handshake double-counted → divide by 2.",
+        "**Pattern lesson — handshakes everywhere.** Number of edges in a complete graph on $n$ vertices = $\\binom{n}{2}$. Same count covers: 2-element subsets, line segments between $n$ points, games in a round-robin tournament, etc."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q15",
+      "type": "numeric",
+      "promptTex": "\\text{How many diagonals does a regular octagon have?} \\\\ \\text{(A diagonal connects two NON-adjacent vertices.)}",
+      "answer": 20,
+      "tolerance": 0,
+      "hints": [
+        "Total segments between any 2 vertices: $\\binom{8}{2} = 28$.",
+        "Of these, $8$ are sides (adjacent pairs).",
+        "Diagonals = $28 - 8 = 20$."
+      ],
+      "explanation": "Total segments between any 2 of 8 vertices: $\\binom{8}{2} = 28$. Of these, exactly 8 are sides of the octagon. Diagonals: $28 - 8 = 20$.",
+      "steps": [
+        "**Count all vertex pairs.** Each pair of vertices defines a segment. $\\binom{8}{2} = 28$.",
+        "**Subtract the sides.** An octagon has 8 sides. Each side connects two ADJACENT vertices.",
+        "**Diagonals = pairs minus sides.** $28 - 8 = 20$.",
+        "**General formula.** $n$-gon diagonals = $\\binom{n}{2} - n = \\dfrac{n(n-3)}{2}$. For $n = 8$: $8 \\cdot 5 / 2 = 20$ ✓."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q16",
+      "type": "numeric",
+      "promptTex": "\\text{Arrange the letters of TRIANGLE (8 distinct letters) so that all 3 vowels (I, A, E) are together. How many arrangements?}",
+      "answer": 4320,
+      "tolerance": 0,
+      "hints": [
+        "Treat the 3 vowels as a single block. Now there are 5 consonants + 1 block = 6 entities to arrange.",
+        "$6! = 720$ arrangements of the 6 entities.",
+        "Inside the block, 3 vowels can be ordered $3! = 6$ ways.",
+        "$720 \\cdot 6 = 4320$."
+      ],
+      "explanation": "Block trick. Treat IAE as one super-letter; now 5 consonants + 1 block = 6 entities. Arrange in $6! = 720$ ways. Then the 3 vowels inside the block can be ordered $3! = 6$ ways. $720 \\cdot 6 = 4320$.",
+      "steps": [
+        "**Recognize the type — 'together' constraint.** Standard technique: bundle the constrained items into a single 'super-item', count arrangements of the new collection, then multiply by internal arrangements of the bundle.",
+        "**Bundle the vowels.** Treat I, A, E as one inseparable block. We now arrange: T, R, N, G, L (5 consonants) + 1 block = 6 entities.",
+        "**Arrange the 6 entities.** $6! = 720$.",
+        "**Internal arrangements of the bundle.** Inside the IAE block, the 3 vowels permute in $3! = 6$ ways.",
+        "**Multiply (independent choices).** $720 \\cdot 6 = 4320$ total arrangements.",
+        "**Why the technique works.** The block constraint reduces a complicated 'arrange with adjacency' problem to a clean 'arrange 6 items' problem. Then independence between block-placement and within-block-arrangement lets you multiply."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q17",
+      "type": "numeric",
+      "promptTex": "\\text{From 5 men and 4 women, choose a committee of 4 with AT LEAST 2 women.} \\\\ \\text{Number of committees?}",
+      "answer": 81,
+      "tolerance": 0,
+      "hints": [
+        "Three cases (mutually exclusive): exactly 2 W, exactly 3 W, exactly 4 W.",
+        "Case 2W+2M: $\\binom{4}{2}\\binom{5}{2} = 6 \\cdot 10 = 60$.",
+        "Case 3W+1M: $\\binom{4}{3}\\binom{5}{1} = 4 \\cdot 5 = 20$.",
+        "Case 4W+0M: $\\binom{4}{4}\\binom{5}{0} = 1$.",
+        "Total: $60 + 20 + 1 = 81$."
+      ],
+      "explanation": "'At least 2 women' = 2 women OR 3 women OR 4 women. Three mutually exclusive cases. Sum: $60 + 20 + 1 = 81$ committees.",
+      "steps": [
+        "**Recognize the type — 'at least k' on combinations.** Enumerate disjoint cases by exact count, then add.",
+        "**Case 2 women, 2 men.** Choose 2 women from 4 AND 2 men from 5: $\\binom{4}{2} \\cdot \\binom{5}{2} = 6 \\cdot 10 = 60$.",
+        "**Case 3 women, 1 man.** $\\binom{4}{3} \\cdot \\binom{5}{1} = 4 \\cdot 5 = 20$.",
+        "**Case 4 women, 0 men.** $\\binom{4}{4} \\cdot \\binom{5}{0} = 1 \\cdot 1 = 1$.",
+        "**Add (mutually exclusive cases).** $60 + 20 + 1 = 81$.",
+        "**Alternative — complement.** $\\binom{9}{4} = 126$ total. Subtract committees with 0 or 1 women: $\\binom{5}{4}\\binom{4}{0} + \\binom{5}{3}\\binom{4}{1} = 5 + 40 = 45$. So $126 - 45 = 81$ ✓. Same answer, different work. When 'at-least' has many cases, complement is often shorter."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q18",
+      "type": "numeric",
+      "promptTex": "\\text{Compute } \\binom{20}{18} \\text{ using the symmetry of binomial coefficients.}",
+      "answer": 190,
+      "tolerance": 0,
+      "hints": [
+        "Symmetry: $\\binom{n}{k} = \\binom{n}{n-k}$.",
+        "$\\binom{20}{18} = \\binom{20}{2}$ — much easier to compute.",
+        "$\\binom{20}{2} = \\dfrac{20 \\cdot 19}{2} = 190$."
+      ],
+      "explanation": "Symmetry of binomial coefficients: $\\binom{n}{k} = \\binom{n}{n-k}$. So $\\binom{20}{18} = \\binom{20}{2} = 20 \\cdot 19 / 2 = 190$.",
+      "steps": [
+        "**Recognize the trick — symmetry.** $\\binom{n}{k} = \\binom{n}{n-k}$. Computing $\\binom{20}{18}$ directly involves 18 factors; computing $\\binom{20}{2}$ involves 2. Same answer, vastly less work.",
+        "**Why is the symmetry true?** Choosing 18 of 20 items is equivalent to choosing the 2 to LEAVE OUT. Same set of partitions, counted two ways.",
+        "**Compute the easier form.** $\\binom{20}{2} = \\dfrac{20 \\cdot 19}{2!} = \\dfrac{380}{2} = 190$.",
+        "**Pattern lesson — always use the smaller $k$.** When computing $\\binom{n}{k}$ by hand and $k > n/2$, switch to $\\binom{n}{n-k}$ for easier arithmetic."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q19",
+      "type": "numeric",
+      "promptTex": "\\text{Number of distinct arrangements of the letters of BALLOON?}",
+      "answer": 1260,
+      "tolerance": 0,
+      "hints": [
+        "7 letters total. L appears 2 times, O appears 2 times. B, A, N each once.",
+        "$\\dfrac{7!}{2! \\cdot 2!} = \\dfrac{5040}{4} = 1260$."
+      ],
+      "explanation": "Letters in BALLOON: B, A, L, L, O, O, N — 7 total with L appearing 2 times and O appearing 2 times. Divide $7!$ by the factorials of repeat counts: $7!/(2! \\cdot 2!) = 5040/4 = 1260$.",
+      "steps": [
+        "**Recognize the type — arrangements with identical letters.** When some letters repeat, divide $n!$ by the factorial of each repeat-count.",
+        "**Catalog the letters.** BALLOON: 7 letters. B × 1, A × 1, L × 2, O × 2, N × 1.",
+        "**Apply the formula.** Total arrangements = $\\dfrac{n!}{a! \\cdot b! \\cdots}$ where $a, b, \\ldots$ are the repeat-counts.",
+        "**Plug in.** $\\dfrac{7!}{2! \\cdot 2!} = \\dfrac{5040}{2 \\cdot 2} = \\dfrac{5040}{4} = 1260$.",
+        "**Why divide by repeat-factorials?** Treating the two L's as distinct gives $7! = 5040$ orderings, but each true arrangement gets counted $2!$ times (swapping the two L's gives the same word). Similarly for the two O's. So divide by $2! \\cdot 2! = 4$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q20",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Pascal's triangle identity: } \\binom{n}{r-1} + \\binom{n}{r} = ?",
+      "choices": [
+        "$\\binom{n}{r}$",
+        "$\\binom{n+1}{r}$",
+        "$\\binom{n-1}{r}$",
+        "$\\binom{n+1}{r-1}$"
+      ],
+      "choicesTex": false,
+      "answerIndex": 1,
+      "hints": [
+        "This is the recurrence that BUILDS Pascal's triangle: each entry is the sum of the two above it.",
+        "$\\binom{n}{r-1} + \\binom{n}{r} = \\binom{n+1}{r}$."
+      ],
+      "explanation": "Pascal's identity: $\\binom{n}{r-1} + \\binom{n}{r} = \\binom{n+1}{r}$. This is exactly the rule that builds Pascal's triangle row by row — each entry is the sum of the two entries directly above it.",
+      "steps": [
+        "**Recall how Pascal's triangle is constructed.** Each row starts and ends with 1; every other entry is the sum of the two diagonally-above entries.",
+        "**Reading entries as binomials.** Row $n$, position $r$ (zero-indexed) holds $\\binom{n}{r}$. The two entries above are $\\binom{n-1}{r-1}$ and $\\binom{n-1}{r}$.",
+        "**Equivalent form.** Sliding by one: $\\binom{n}{r-1} + \\binom{n}{r} = \\binom{n+1}{r}$.",
+        "**Combinatorial proof.** $\\binom{n+1}{r}$ counts $r$-element subsets of an $(n+1)$-set. Split into 'subsets containing element $x$' (choose remaining $r-1$ from $n$: $\\binom{n}{r-1}$) plus 'subsets not containing $x$' (choose all $r$ from remaining $n$: $\\binom{n}{r}$). Adds to $\\binom{n+1}{r}$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q21",
+      "type": "numeric",
+      "promptTex": "\\text{From 10 people, choose a 3-person committee.} \\\\ \\text{How many committees do NOT include person X (a specific person)?}",
+      "answer": 84,
+      "tolerance": 0,
+      "hints": [
+        "If X is excluded, you're choosing from the other 9 people.",
+        "$\\binom{9}{3} = 84$."
+      ],
+      "explanation": "Excluding person X leaves 9 candidates. Choose 3 from 9: $\\binom{9}{3} = 84$.",
+      "steps": [
+        "**Recognize — 'must exclude' constraint.** Just shrink the pool. X is out, so we choose from the remaining $n - 1 = 9$ people.",
+        "**Compute.** $\\binom{9}{3} = \\dfrac{9 \\cdot 8 \\cdot 7}{6} = \\dfrac{504}{6} = 84$.",
+        "**Sanity check via complement.** Total committees: $\\binom{10}{3} = 120$. Committees that INCLUDE X (one slot used, choose 2 more from 9): $\\binom{9}{2} = 36$. Committees excluding X: $120 - 36 = 84$ ✓.",
+        "**Pattern lesson.** 'Must include X' = pre-place X, choose remaining from pool − 1: $\\binom{n-1}{r-1}$. 'Must exclude X' = remove X from pool: $\\binom{n-1}{r}$. These two count complementary cases of $\\binom{n}{r}$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q22",
+      "type": "numeric",
+      "promptTex": "\\text{There are 8 points in a plane, no three of which are collinear.} \\\\ \\text{How many distinct triangles can be drawn using these points as vertices?}",
+      "answer": 56,
+      "tolerance": 0,
+      "hints": [
+        "Each triangle = a choice of 3 points (order doesn't matter; collinearity ruled out).",
+        "$\\binom{8}{3} = 56$."
+      ],
+      "explanation": "Each triangle is determined by a choice of 3 points. With 8 points (no 3 collinear), every 3-point subset gives a valid triangle: $\\binom{8}{3} = 56$.",
+      "steps": [
+        "**Recognize — triangles correspond to 3-point subsets.** A triangle is a set of 3 vertices (order doesn't matter). The 'no 3 collinear' condition guarantees every 3-subset is a genuine triangle (not degenerate).",
+        "**Compute.** $\\binom{8}{3} = \\dfrac{8 \\cdot 7 \\cdot 6}{3!} = \\dfrac{336}{6} = 56$.",
+        "**What if some are collinear?** Then those collinear triples don't form triangles. Subtract the bad cases. E.g., if 4 specific points are collinear: bad triples = $\\binom{4}{3} = 4$. Triangles = $\\binom{8}{3} - 4 = 52$.",
+        "**Pattern lesson.** Geometric counting problems often reduce to subset counting, with constraints handled by subtracting degenerate cases."
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

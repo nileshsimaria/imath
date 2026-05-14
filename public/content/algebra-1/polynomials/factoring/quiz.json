@@ -1,0 +1,284 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Factor: } x^2 + 7x + 12",
+      "choices": [
+        "(x + 2)(x + 6)",
+        "(x + 3)(x + 4)",
+        "(x + 1)(x + 12)",
+        "(x - 3)(x - 4)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Find two numbers that multiply to $12$ and add to $7$.",
+        "Pairs that multiply to $12$: $1 \\cdot 12, 2 \\cdot 6, 3 \\cdot 4$. Which adds to $7$?"
+      ],
+      "explanation": "Need $p + q = 7$ and $pq = 12$. The pair $3, 4$ works ($3 + 4 = 7$, $3 \\cdot 4 = 12$). So $x^2 + 7x + 12 = (x + 3)(x + 4)$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Factor: } x^2 - 9",
+      "choices": [
+        "(x - 3)^2",
+        "(x + 3)(x - 3)",
+        "(x - 9)(x + 9)",
+        "(x - 3)(x + 3)(x - 1)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Difference of squares: $a^2 - b^2 = (a + b)(a - b)$.",
+        "$x^2 - 9 = x^2 - 3^2$."
+      ],
+      "explanation": "$x^2 - 9 = x^2 - 3^2 = (x + 3)(x - 3)$ — a textbook difference of squares.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Factor: } 2x^2 + 8x",
+      "choices": [
+        "2(x^2 + 4x)",
+        "x(2x + 8)",
+        "2x(x + 4)",
+        "(x + 2)(x + 4)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "Both terms share a factor.",
+        "GCF is $2x$ — pull it out."
+      ],
+      "explanation": "Both terms share $2x$. Factoring it out: $2x^2 + 8x = 2x(x + 4)$. (Choice A and B are partial factorings — neither pulls out the *greatest* common factor.)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Factor: } x^2 - 5x - 6",
+      "choices": [
+        "(x - 2)(x - 3)",
+        "(x + 2)(x - 3)",
+        "(x - 6)(x + 1)",
+        "(x + 6)(x - 1)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "Need $p + q = -5$ and $pq = -6$.",
+        "Negative product means one is positive, one is negative. Try $-6$ and $1$."
+      ],
+      "explanation": "Need $p + q = -5$ and $pq = -6$. The pair $-6, 1$ works ($-6 + 1 = -5$, $-6 \\cdot 1 = -6$). So $(x - 6)(x + 1)$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** Need $p + q = -5$ and $pq = -6$."
+        },
+        {
+          "text": "Negative product means one is positive, one is negative. Try $-6$ and $1$."
+        },
+        {
+          "text": "**Solution.** Need $p + q = -5$ and $pq = -6$. The pair $-6, 1$ works ($-6 + 1 = -5$, $-6 \\cdot 1 = -6$). So $(x - 6)(x + 1)$."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The roots of } (x - 4)(x + 7) \\text{ are:}",
+      "choices": [
+        "x = 4 \\text{ and } x = 7",
+        "x = -4 \\text{ and } x = 7",
+        "x = 4 \\text{ and } x = -7",
+        "x = -4 \\text{ and } x = -7"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "Set each factor to zero: $x - 4 = 0$ and $x + 7 = 0$.",
+        "Solve each."
+      ],
+      "explanation": "$x - 4 = 0 \\Rightarrow x = 4$. $x + 7 = 0 \\Rightarrow x = -7$. Roots: $x = 4$ and $x = -7$.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Factor: } x^2 + 7x + 12.",
+      "choices": [
+        "(x + 3)(x + 4)",
+        "(x + 2)(x + 6)",
+        "(x + 1)(x + 12)",
+        "(x + 5)(x + 7)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Find two numbers that multiply to 12 and add to 7.",
+        "$3 \\cdot 4 = 12$ and $3 + 4 = 7$."
+      ],
+      "explanation": "$3 \\cdot 4 = 12$, $3 + 4 = 7$ ✓. Factors: $(x+3)(x+4)$.",
+      "steps": [
+        "Find two numbers that **multiply** to $12$ (constant) and **add** to $7$ (middle coefficient).",
+        "Pairs of 12: $(1, 12), (2, 6), (3, 4)$. Sum: $13, 8, 7$.",
+        "$(3, 4)$ works.",
+        "Factored: $(x + 3)(x + 4)$."
+      ],
+      "id": "q6",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Factor: } x^2 - 5x - 14.",
+      "choices": [
+        "(x - 7)(x + 2)",
+        "(x + 7)(x - 2)",
+        "(x - 7)(x - 2)",
+        "(x + 7)(x + 2)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Two numbers that multiply to $-14$ (negative product → opposite signs) and add to $-5$.",
+        "$-7$ and $+2$: $-7 \\cdot 2 = -14$ ✓, $-7 + 2 = -5$ ✓."
+      ],
+      "explanation": "$-7 \\cdot 2 = -14$ and $-7 + 2 = -5$. Factors: $(x - 7)(x + 2)$.",
+      "steps": [
+        "Need two numbers with product $-14$ (negative → opposite signs) and sum $-5$.",
+        "Pairs: $(-1, 14), (1, -14), (-2, 7), (2, -7)$. Sums: $13, -13, 5, -5$.",
+        "$(2, -7)$ gives sum $-5$ ✓.",
+        "Factored: $(x + 2)(x - 7)$."
+      ],
+      "id": "q7",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Factor: } x^2 - 16.",
+      "choices": [
+        "(x - 4)(x + 4)",
+        "(x - 4)^2",
+        "(x + 4)^2",
+        "Cannot factor"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Difference of squares: $a^2 - b^2 = (a - b)(a + b)$.",
+        "$x^2 - 4^2 = (x - 4)(x + 4)$."
+      ],
+      "explanation": "$x^2 - 16 = x^2 - 4^2 = (x - 4)(x + 4)$ (difference of squares).",
+      "steps": [
+        "Recognize the **difference of squares** pattern: $a^2 - b^2 = (a - b)(a + b)$.",
+        "Here $a = x$, $b = 4$.",
+        "Factored: $(x - 4)(x + 4)$."
+      ],
+      "id": "q8",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Factor completely: } 2x^2 + 8x.",
+      "choices": [
+        "2x(x + 4)",
+        "2(x^2 + 4x)",
+        "x(2x + 8)",
+        "(2x + 4)(x + 2)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "GCF of $2x^2$ and $8x$ is $2x$.",
+        "Factor it out: $2x(x + 4)$."
+      ],
+      "explanation": "GCF $= 2x$. Factor: $2x(x + 4)$.",
+      "steps": [
+        "Find the GCF (greatest common factor) of $2x^2$ and $8x$.",
+        "Numbers: $\\gcd(2, 8) = 2$. Variables: lowest power of $x$ shared = $x$.",
+        "GCF $= 2x$.",
+        "Factor: $2x^2 + 8x = 2x(x + 4)$."
+      ],
+      "id": "q9",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Factor completely: } 3x^2 + 18x + 27.",
+      "choices": [
+        "3(x + 3)^2",
+        "(3x + 9)(x + 3)",
+        "3(x + 9)(x - 3)",
+        "(3x + 3)(x + 9)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "First factor out GCF (3): $3(x^2 + 6x + 9)$.",
+        "$x^2 + 6x + 9 = (x + 3)^2$."
+      ],
+      "explanation": "$3(x^2 + 6x + 9) = 3(x + 3)^2$.",
+      "steps": [
+        "GCF $= 3$. Factor it out: $3(x^2 + 6x + 9)$.",
+        "Now factor $x^2 + 6x + 9$. Two numbers with product $9$ and sum $6$: $3, 3$.",
+        "$(x + 3)(x + 3) = (x + 3)^2$.",
+        "Final: $3(x + 3)^2$."
+      ],
+      "id": "q10",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Factor: } 2x^2 + 7x + 3.",
+      "choices": [
+        "(2x + 1)(x + 3)",
+        "(2x + 3)(x + 1)",
+        "(2x - 1)(x - 3)",
+        "(x + 2)(x + 3)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "AC method: $a \\cdot c = 2 \\cdot 3 = 6$. Need two numbers that multiply to 6 and add to 7. → $1, 6$.",
+        "Split middle: $2x^2 + x + 6x + 3 = x(2x + 1) + 3(2x + 1) = (2x + 1)(x + 3)$."
+      ],
+      "explanation": "$ac = 6$. Pair: $1, 6$. Split: $2x^2 + x + 6x + 3 = (2x + 1)(x + 3)$.",
+      "steps": [
+        "AC method (for $ax^2 + bx + c$): find two numbers with product $ac$ and sum $b$.",
+        "$ac = 2 \\cdot 3 = 6$. Sum = $7$. Numbers: $1$ and $6$.",
+        "Split the middle: $2x^2 + x + 6x + 3$.",
+        "Group and factor: $x(2x + 1) + 3(2x + 1) = (2x + 1)(x + 3)$."
+      ],
+      "id": "q11",
+      "difficulty": "hard"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Factor: } x^2 - 12x + 36.",
+      "choices": [
+        "(x - 6)^2",
+        "(x + 6)^2",
+        "(x - 6)(x + 6)",
+        "(x - 4)(x - 9)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Perfect square trinomial: $a^2 - 2ab + b^2 = (a - b)^2$.",
+        "$36 = 6^2$, $12 = 2 \\cdot 6$. So $(x - 6)^2$."
+      ],
+      "explanation": "Perfect square: $x^2 - 12x + 36 = (x - 6)^2$.",
+      "steps": [
+        "Check perfect-square trinomial pattern: $a^2 - 2ab + b^2 = (a - b)^2$.",
+        "$a^2 = x^2 \\Rightarrow a = x$. $b^2 = 36 \\Rightarrow b = 6$.",
+        "Middle: $-2ab = -2(x)(6) = -12x$ ✓.",
+        "Factored: $(x - 6)^2$."
+      ],
+      "id": "q12",
+      "difficulty": "medium"
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{Area of a rectangle with length 9 and width 4.}",
+      "answer": 36,
+      "tolerance": 0,
+      "hints": [
+        "$A = lw$.",
+        "$9 \\cdot 4$."
+      ],
+      "explanation": "$A = 9 \\cdot 4 = 36$ square units.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{Area of a triangle with base 10 and height 7.}",
+      "answer": 35,
+      "tolerance": 0,
+      "hints": [
+        "$A = \\frac{1}{2}bh$.",
+        "$\\frac{1}{2}(10)(7)$."
+      ],
+      "explanation": "$A = \\frac{1}{2}(10)(7) = 35$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{Area of a trapezoid with parallel sides 5 and 11, height 4.}",
+      "answer": 32,
+      "tolerance": 0,
+      "hints": [
+        "$A = \\frac{1}{2}(b_1 + b_2)h$.",
+        "$\\frac{1}{2}(5 + 11)(4) = \\frac{1}{2}(16)(4)$."
+      ],
+      "explanation": "$A = \\frac{1}{2}(5 + 11)(4) = \\frac{1}{2}(16)(4) = 32$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The area of a circle with radius 5 is exactly:}",
+      "choices": [
+        "10π",
+        "25π",
+        "5π²",
+        "100π"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "$A = \\pi r^2$.",
+        "$\\pi (5)^2$."
+      ],
+      "explanation": "$A = \\pi r^2 = \\pi \\cdot 25 = 25\\pi$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{A parallelogram has a base of 8 and a slanted side of 6, with perpendicular height 5.} \\\\ \\text{What is its area?}",
+      "answer": 40,
+      "tolerance": 0,
+      "hints": [
+        "$A = bh$ — use the *perpendicular* height, not the slanted side.",
+        "$8 \\cdot 5$."
+      ],
+      "explanation": "Use the perpendicular height ($h = 5$), not the slanted side. $A = bh = 8 \\cdot 5 = 40$. (The 6 is a distractor — it's the slant.)",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Find the area of a triangle with base } 12 \\text{ and height } 7.",
+      "answer": 42,
+      "tolerance": 0,
+      "hints": [
+        "$A = \\dfrac{1}{2} bh$.",
+        "$\\dfrac{1}{2} \\cdot 12 \\cdot 7 = 42$."
+      ],
+      "explanation": "$A = \\tfrac{1}{2}(12)(7) = 42$.",
+      "steps": [
+        "Triangle area formula: $A = \\dfrac{1}{2} bh$.",
+        "$A = \\dfrac{1}{2} \\cdot 12 \\cdot 7 = 42$ square units."
+      ],
+      "id": "q6",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Find the area of a parallelogram with base } 8 \\text{ and height } 5.",
+      "answer": 40,
+      "tolerance": 0,
+      "hints": [
+        "$A = bh$ (no $\\dfrac{1}{2}$ for parallelogram).",
+        "$8 \\cdot 5 = 40$."
+      ],
+      "explanation": "$A = bh = 8 \\cdot 5 = 40$.",
+      "steps": [
+        "Parallelogram area: $A = bh$ (base times perpendicular height).",
+        "$A = 8 \\cdot 5 = 40$ square units."
+      ],
+      "id": "q7",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Find the area of a trapezoid with parallel sides } 5 \\text{ and } 9, \\\\ \\text{and height } 4.",
+      "answer": 28,
+      "tolerance": 0,
+      "hints": [
+        "$A = \\dfrac{1}{2}(b_1 + b_2)h$.",
+        "$\\dfrac{1}{2}(5 + 9)(4) = \\dfrac{1}{2}(14)(4)$."
+      ],
+      "explanation": "$A = \\dfrac{1}{2}(5 + 9)(4) = \\dfrac{1}{2}(14)(4) = 28$.",
+      "steps": [
+        "Trapezoid area: $A = \\dfrac{1}{2}(b_1 + b_2)h$ (average of parallel sides times height).",
+        "$A = \\dfrac{1}{2}(5 + 9)(4) = \\dfrac{1}{2}(14)(4) = 7 \\cdot 4 = 28$."
+      ],
+      "id": "q8",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A rectangle has area } 84 \\text{ cm}^2 \\text{ and width } 7 \\text{ cm.} \\\\ \\text{Find its length.}",
+      "answer": 12,
+      "tolerance": 0,
+      "hints": [
+        "$A = LW$, so $L = A/W$.",
+        "$84/7 = 12$."
+      ],
+      "explanation": "$L = A/W = 84/7 = 12$ cm.",
+      "steps": [
+        "Rectangle area: $A = LW$. Rearrange: $L = A/W$.",
+        "$L = 84 / 7 = 12$ cm."
+      ],
+      "id": "q9",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A composite figure: a } 10 \\text{×} 6 \\text{ rectangle with a semicircle of} \\\\ \\text{radius } 3 \\text{ on one short end. Find total area} \\\\ \\text{(round to 2 decimals).}",
+      "answer": 74.14,
+      "tolerance": 0.1,
+      "hints": [
+        "Total = rectangle + semicircle.",
+        "$60 + \\dfrac{1}{2}\\pi(3)^2 = 60 + 4.5\\pi \\approx 74.14$."
+      ],
+      "explanation": "Rectangle: $60$. Semicircle: $\\dfrac{1}{2}\\pi(9) = 4.5\\pi \\approx 14.14$. Total: $\\approx 74.14$.",
+      "steps": [
+        "Break the figure into a rectangle plus a semicircle.",
+        "Rectangle: $10 \\cdot 6 = 60$ sq units.",
+        "Semicircle (half of $\\pi r^2$): $\\dfrac{1}{2}\\pi(3)^2 = 4.5\\pi \\approx 14.14$.",
+        "Total: $60 + 14.14 = 74.14$."
+      ],
+      "id": "q10",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A square garden has area } 144 \\text{ m}^2. \\text{ What is its perimeter?}",
+      "answer": 48,
+      "tolerance": 0,
+      "hints": [
+        "Side = $\\sqrt{144} = 12$. Perimeter = $4 \\cdot 12$.",
+        "$48$."
+      ],
+      "explanation": "Side $= 12$ m. Perimeter $= 4 \\cdot 12 = 48$ m.",
+      "steps": [
+        "Square area: $A = s^2$. So $s = \\sqrt{A} = \\sqrt{144} = 12$ m.",
+        "Perimeter: $P = 4s = 4 \\cdot 12 = 48$ m."
+      ],
+      "id": "q11",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A right triangle has legs } 6 \\text{ and } 8. \\\\ \\text{Find the area AND the perimeter (return area as the answer).}",
+      "answer": 24,
+      "tolerance": 0,
+      "hints": [
+        "Area = $\\dfrac{1}{2}(6)(8) = 24$.",
+        "Perimeter = $6 + 8 + 10 = 24$ (hypotenuse via Pythagorean)."
+      ],
+      "explanation": "Area $= 24$ sq units. Perimeter $= 6 + 8 + 10 = 24$ units. (Coincidence: numerical area = perimeter.)",
+      "steps": [
+        "Area of a right triangle: $\\dfrac{1}{2} \\cdot \\text{leg}_1 \\cdot \\text{leg}_2 = \\dfrac{1}{2}(6)(8) = 24$.",
+        "(Bonus: hypotenuse $= \\sqrt{36 + 64} = 10$, perimeter $= 6 + 8 + 10 = 24$. Numerically equal — a 'perfect' right triangle.)"
+      ],
+      "id": "q12",
+      "difficulty": "easy"
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "prompt": "What does $s''(t)$ mean in physics?",
+      "choices": [
+        "Distance traveled, squared.",
+        "Velocity — rate of change of position.",
+        "Acceleration — rate of change of velocity.",
+        "Jerk — rate of change of acceleration."
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Each prime mark means 'differentiate with respect to $t$ once'.",
+        "One prime → velocity. Two primes → ?"
+      ],
+      "explanation": "$s$ is position. $s' = \\dfrac{ds}{dt}$ is the rate of change of position — velocity. $s'' = \\dfrac{d^2 s}{dt^2}$ is the rate of change of *velocity* — acceleration. Add another prime and you'd get jerk.",
+      "steps": [
+        "**Recognize the notation.** Each prime ($'$) means 'differentiate once with respect to the underlying variable'. Two primes means 'differentiate twice'.",
+        "**Apply to $s(t)$.** $s'(t)$ = velocity. Apply the same operation again: $s''(t)$ = rate of change of velocity = acceleration.",
+        "**Pattern lesson.** $s, s', s'', s'''$ are position, velocity, acceleration, jerk. Each one is the rate of change of the previous one."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{A ball is thrown up. Its height is } s(t) = 20 + 25t - 4.9 t^2 \\text{ (meters). What is its acceleration } s''(t)?",
+      "answer": -9.8,
+      "tolerance": 0.05,
+      "hints": [
+        "Differentiate $s$ once: $s'(t) = 25 - 9.8\\,t$.",
+        "Differentiate again. The $25$ vanishes (constant); the $-9.8\\,t$ becomes $-9.8$.",
+        "Acceleration is a CONSTANT for this motion."
+      ],
+      "explanation": "$s(t) = 20 + 25t - 4.9 t^2 \\Rightarrow s'(t) = 25 - 9.8 t \\Rightarrow s''(t) = -9.8$. Constant. That's gravity — the same $-9.8\\text{ m/s}^2$ the whole flight, whether the ball is climbing or falling. Time and the throw speed do not appear in the answer.",
+      "steps": [
+        "**Recognize the recipe.** Differentiate position twice in a row to get acceleration. Power rule + constant-vanishes on each term.",
+        "**First differentiation.** $\\dfrac{d}{dt}(20) = 0$. $\\dfrac{d}{dt}(25t) = 25$. $\\dfrac{d}{dt}(-4.9 t^2) = -9.8\\,t$. So $s'(t) = 25 - 9.8\\,t$.",
+        "**Second differentiation.** $\\dfrac{d}{dt}(25) = 0$. $\\dfrac{d}{dt}(-9.8 t) = -9.8$. So $s''(t) = -9.8$.",
+        "**Why the answer has no $t$.** Gravity doesn't care about time or starting speed — it just pulls at the same rate continuously. That's why $a$ is a CONSTANT."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "At the very top of the ball's arc, what is true?",
+      "choices": [
+        "Velocity is zero AND acceleration is zero.",
+        "Velocity is zero, but acceleration is still $-9.8\\text{ m/s}^2$.",
+        "Velocity is $-9.8\\text{ m/s}$ and acceleration is zero.",
+        "Velocity is large and positive; acceleration is large and negative."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "At the peak, the ball is momentarily not moving — what's $v$?",
+        "Gravity doesn't switch off at the peak. What's $a$?"
+      ],
+      "explanation": "At the peak, $v = 0$ (the ball is momentarily stationary). But $a = -9.8$ is unchanged — gravity is still pulling, which is exactly why the ball doesn't hover there. The acceleration tells the velocity to keep decreasing, so a fraction of a second later $v$ goes negative and the ball starts falling.",
+      "steps": [
+        "**Read the three plots together.** At the peak of $s(t)$ (top plot), the velocity curve $v(t)$ (middle plot) crosses zero. The acceleration curve $a(t)$ (bottom plot) is unchanged — still $-9.8$.",
+        "**Why $v = 0$ doesn't imply $a = 0$.** Velocity zero means 'momentarily not moving'. Acceleration zero means 'velocity not changing'. These are completely different conditions. A ball at its peak has $v = 0$ but $v$ is rapidly changing — so $a \\neq 0$.",
+        "**Pattern lesson.** A function being zero at a point does NOT mean its derivative is zero there. This is the same idea that makes critical points interesting in optimization."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{For } s(t) = t^3 + 4t,\\ \\text{find } s''(2).",
+      "answer": 12,
+      "tolerance": 0,
+      "hints": [
+        "$s'(t) = 3t^2 + 4$.",
+        "$s''(t) = 6t$.",
+        "Plug $t = 2$."
+      ],
+      "explanation": "$s'(t) = 3t^2 + 4 \\Rightarrow s''(t) = 6t$. At $t = 2$: $s''(2) = 12$.",
+      "steps": [
+        "**Recognize the recipe.** 'Find $s''$' means: differentiate twice using power rule + linearity.",
+        "**First derivative — term by term.** $\\dfrac{d}{dt}(t^3) = 3t^2$. $\\dfrac{d}{dt}(4t) = 4$. So $s'(t) = 3t^2 + 4$.",
+        "**Second derivative — differentiate that.** $\\dfrac{d}{dt}(3t^2) = 6t$. $\\dfrac{d}{dt}(4) = 0$ (constants vanish). So $s''(t) = 6t$.",
+        "**Evaluate.** $s''(2) = 6 \\cdot 2 = 12$.",
+        "**Pattern lesson.** Each differentiation strips one power of $t$: $t^3 \\to 3t^2 \\to 6t \\to 6 \\to 0$. After enough applications, *every polynomial* becomes zero."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "prompt": "For a spring oscillation $s(t) = 2\\sin t$, which statement is correct?",
+      "choices": [
+        "$v = 2\\sin t$ and $a = 2\\cos t$.",
+        "$v = 2\\cos t$ and $a = -2\\sin t = -s(t)$.",
+        "$v = -2\\cos t$ and $a = 2\\sin t = s(t)$.",
+        "$v$ and $a$ are always equal."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$\\dfrac{d}{dt}(\\sin t) = \\cos t$ and $\\dfrac{d}{dt}(\\cos t) = -\\sin t$.",
+        "Differentiate $2\\sin t$ once to get $v$. Differentiate $v$ once to get $a$."
+      ],
+      "explanation": "$s = 2\\sin t \\Rightarrow v = s' = 2\\cos t \\Rightarrow a = v' = -2\\sin t$. So $a = -s$: acceleration is the negative of position. This is the famous SHM relation $a = -\\omega^2 s$ with $\\omega = 1$. The spring pulls back hardest when you stretch farthest.",
+      "steps": [
+        "**Recognize the type.** A sinusoidal position function. Use the trig derivatives: $\\dfrac{d}{dt}(\\sin t) = \\cos t$, $\\dfrac{d}{dt}(\\cos t) = -\\sin t$.",
+        "**First differentiation.** $v(t) = \\dfrac{d}{dt}(2\\sin t) = 2\\cos t$.",
+        "**Second differentiation.** $a(t) = \\dfrac{d}{dt}(2\\cos t) = -2\\sin t$.",
+        "**Compare $a$ with $s$.** $a(t) = -2\\sin t$ and $s(t) = 2\\sin t$, so $a = -s$ for every $t$.",
+        "**Pattern lesson — the SHM law.** $a = -\\omega^2 s$ is the defining equation of every oscillator: springs, pendulums, AC current, sound, light. We discovered it by differentiating $\\sin$ twice — no physics needed."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{A drag car starts at rest with constant acceleration } 4\\text{ m/s}^2.\\ \\text{What is its speed after } 3 \\text{ seconds?}",
+      "answer": 12,
+      "tolerance": 0,
+      "hints": [
+        "Constant acceleration $a$ means $v(t)$ is a STRAIGHT LINE.",
+        "$v(t) = v_0 + a t$. Here $v_0 = 0$ (starts at rest).",
+        "$v(3) = 0 + 4 \\cdot 3$."
+      ],
+      "explanation": "With constant acceleration $a$ from rest, $v(t) = a\\,t$. At $t = 3$: $v = 4 \\cdot 3 = 12\\text{ m/s}$. Each differentiation/integration steps you between $s, v, a$ — here we used 'integrate $a$ once to get $v$'.",
+      "steps": [
+        "**Recognize the type.** Constant acceleration starting from rest. Three quantities: $s(t), v(t), a(t)$. Given $a$ and $v(0)$, find $v$ later.",
+        "**Recipe — integrate once.** Going from $a$ to $v$ is the REVERSE of going from $v$ to $a$. Integrate: $v(t) = \\int a\\,dt = a\\,t + C$, where $C = v_0$ (the starting speed).",
+        "**Plug in the starting condition.** Starts at rest → $v_0 = 0$. So $v(t) = 4 t$.",
+        "**Evaluate.** $v(3) = 4 \\cdot 3 = 12\\text{ m/s}$.",
+        "**Sanity check via differentiation.** If $v(t) = 4t$, then $v'(t) = 4 = a$. ✓ — the original $a$ comes back."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "prompt": "A car's position graph is curving **downward** (concave down) but still rising. Which is true?",
+      "choices": [
+        "Velocity is negative; acceleration is positive.",
+        "Velocity is positive; acceleration is positive.",
+        "Velocity is positive; acceleration is negative.",
+        "Velocity is negative; acceleration is negative."
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "\"Rising\" tells you about $s$ — what about its derivative $v$?",
+        "\"Concave down\" is the SHAPE — what does that say about the second derivative?"
+      ],
+      "explanation": "Rising → $s$ is increasing → $v = s' > 0$. Concave down → the graph of $s$ bends downward → the rate of increase is slowing → $v$ is decreasing → $a = v' < 0$. In plain English: the car is still moving forward but braking — speed is shrinking. This is exactly what concavity *means* visually: the sign of $f''$.",
+      "steps": [
+        "**Translate 'rising' to a derivative.** Rising means $s$ getting bigger, so $\\dfrac{ds}{dt} = v > 0$.",
+        "**Translate 'concave down' to a derivative.** Concave down means the curve bends like a frown — the slope (which is $v$) is DECREASING as $t$ grows. A decreasing $v$ means $\\dfrac{dv}{dt} = a < 0$.",
+        "**Combine.** $v > 0$ and $a < 0$.",
+        "**Pattern lesson — the second derivative IS concavity.** $f'' > 0$ means concave up (smile / accelerating); $f'' < 0$ means concave down (frown / braking). Use this trick to read motion graphs at a glance: shape of the curve = sign of $a$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{For } s(t) = 20 + 25t - 4.9 t^2,\\ \\text{at what time is } v(t) = 0?\\ \\text{(That is the peak of the ball's arc, in seconds.)}",
+      "answer": 2.551,
+      "tolerance": 0.01,
+      "hints": [
+        "Differentiate $s$ to find $v(t)$.",
+        "$v(t) = 25 - 9.8\\,t$.",
+        "Set $v = 0$ and solve."
+      ],
+      "explanation": "$v(t) = s'(t) = 25 - 9.8 t$. Setting $v = 0$: $25 = 9.8\\,t \\Rightarrow t = 25/9.8 \\approx 2.551\\text{ s}$. This is the moment of the peak. The same answer comes out of the physics formula $t = v_0 / g$.",
+      "steps": [
+        "**Recognize the recipe.** Find when velocity is zero. Step 1: get $v(t)$ by differentiating position.",
+        "**Differentiate.** $s'(t) = 25 - 9.8\\,t$ — this is the velocity at time $t$.",
+        "**Set $v = 0$.** $25 - 9.8\\,t = 0$.",
+        "**Solve.** $t = \\dfrac{25}{9.8} \\approx 2.551\\text{ s}$.",
+        "**Physical meaning.** This is the *peak* of the toss — the ball is momentarily not moving. Before, it was rising; after, it's falling. The acceleration at this moment is still $-9.8\\text{ m/s}^2$ — gravity does not pause."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "prompt": "Why do passengers feel pushed back into their seats when a plane accelerates for takeoff, but feel nothing during cruise at 250 m/s?",
+      "choices": [
+        "Because the cabin gravity changes during takeoff.",
+        "Because the human body senses **acceleration** (force), not velocity. During cruise, $a = 0$; during takeoff, $a$ is large and positive.",
+        "Because the windows make the ground look like it's moving only during takeoff.",
+        "Because the plane vibrates more during takeoff."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Newton: $F = m a$. What you feel is force — which is mass times what?",
+        "At constant velocity (cruise), what is the acceleration?"
+      ],
+      "explanation": "The body is essentially an acceleration sensor (your inner ear, your stomach). $F = m a$ — without acceleration there is no net force, and you feel weightless of the motion. Cruise at constant velocity has $a = 0$, so no felt force. Takeoff has $a > 0$ — your seat shoves you forward, you feel it as a push backward. This is why $s''$ — the second derivative — is the one quantity humans physically feel.",
+      "steps": [
+        "**Recognize the underlying physics.** Newton's law: $F = m a$. Force is mass times acceleration — *not* mass times velocity.",
+        "**Apply to cruise.** Cruise at constant speed: $v$ is constant → $a = \\dfrac{dv}{dt} = 0$. So $F = 0$. No force, nothing to feel — drinks sit still, you can walk to the bathroom.",
+        "**Apply to takeoff.** Speed is increasing rapidly → $a > 0$ → $F > 0$. The seat must push you forward to keep you accelerating with the plane. You feel that push as 'getting shoved back'.",
+        "**Pattern lesson.** Your body is a built-in *second-derivative meter*. It reports $\\ddot{s}$ (g-force), not $\\dot{s}$ (speed). The first derivative is the speedometer; the second is your stomach."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{A spring oscillates as } s(t) = 5\\sin(3 t).\\ \\text{What is the maximum magnitude of its acceleration?}",
+      "answer": 45,
+      "tolerance": 0.01,
+      "hints": [
+        "Differentiate twice. Chain rule: $\\dfrac{d}{dt}(\\sin(3t)) = 3\\cos(3t)$.",
+        "$v(t) = 15\\cos(3t)$. $a(t) = -45\\sin(3t)$.",
+        "Max magnitude of $-45 \\sin(\\cdot)$ is $45$."
+      ],
+      "explanation": "$s(t) = 5\\sin(3t)$. Differentiating with the chain rule: $v(t) = 5 \\cdot 3\\cos(3t) = 15\\cos(3t)$. Differentiate again: $a(t) = 15 \\cdot (-3\\sin(3t)) = -45\\sin(3t)$. The sine factor oscillates between $-1$ and $1$, so $|a|$ peaks at $45$. Note: $a = -45\\sin(3t) = -9 \\cdot 5\\sin(3t) = -9 s(t)$, i.e. $a = -\\omega^2 s$ with $\\omega = 3$.",
+      "steps": [
+        "**Recognize the type.** Sinusoidal motion with a frequency factor inside — chain rule territory. To get $a$, differentiate $s$ twice.",
+        "**Differentiate once — chain rule.** $\\dfrac{d}{dt}\\sin(3t) = 3\\cos(3t)$ (multiply by the inner derivative). So $v(t) = 5 \\cdot 3 \\cos(3t) = 15\\cos(3t)$.",
+        "**Differentiate again — chain rule again.** $\\dfrac{d}{dt}\\cos(3t) = -3\\sin(3t)$. So $a(t) = 15 \\cdot (-3\\sin(3t)) = -45\\sin(3t)$.",
+        "**Max magnitude.** $|-45\\sin(3t)|$ peaks when $|\\sin(3t)| = 1$, giving $|a|_{\\max} = 45\\text{ m/s}^2$.",
+        "**Sanity check — the SHM relation.** $a(t) = -45\\sin(3t) = -9 \\cdot [5\\sin(3t)] = -9\\,s(t)$. So $a = -\\omega^2 s$ with $\\omega^2 = 9$, i.e. $\\omega = 3$. The angular frequency is exactly the factor inside the sine. ✓"
+      ],
+      "difficulty": "hard"
+    }
+  ]
+}

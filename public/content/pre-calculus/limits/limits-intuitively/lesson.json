@@ -1,0 +1,101 @@
+{
+  "title": "Limits Intuitively",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "**Limits** are the foundation of calculus — and the answer to a question that sounds almost trivial:",
+        "*'As $x$ gets really, really close to some value $a$, what value does $f(x)$ get really, really close to?'*",
+        "That target value is called the **limit** of $f(x)$ as $x$ approaches $a$, written:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\lim_{x \\to a} f(x) = L"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Notice — the limit is about the function's *behavior* near $a$, not its actual value at $a$. The two can differ; in fact, $f$ might not even be defined at $a$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The simple case — just plug in",
+        "For 'nice' functions (polynomials, the basic trig, exponentials, and most things you'll see), limits are *easy*:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\lim_{x \\to a} f(x) = f(a)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Example.** $\\displaystyle\\lim_{x \\to 3} (x^2 + 1) = 9 + 1 = 10$. Just plug in $x = 3$.",
+        "Functions where this works are called **continuous** at $a$ — no jumps, no holes, no breaks."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### When plugging in fails",
+        "Sometimes plugging in gives $\\dfrac{0}{0}$ — an *indeterminate form*. The limit might still exist; you just can't see it directly. Algebraic manipulation often reveals it."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The classic example",
+      "body": "$$\\lim_{x \\to 1} \\dfrac{x^2 - 1}{x - 1}$$\nPlugging in $x = 1$ gives $0/0$ — indeterminate. But factor the numerator: $x^2 - 1 = (x - 1)(x + 1)$. Cancel the common factor: $\\dfrac{x^2 - 1}{x - 1} = x + 1$ (for $x \\neq 1$). Now the limit is just $\\displaystyle\\lim_{x \\to 1} (x + 1) = 2$. **The limit is 2** — even though the original function was undefined at $x = 1$. The graph has a 'hole' at $(1, 2)$ but everything around the hole points right at it."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Numerical exploration",
+        "When you can't see what to do algebraically, sometimes a *table of values* tells you what's happening:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\begin{array}{c|c} x & f(x) = \\dfrac{x^2 - 1}{x - 1} \\\\ \\hline 0.9 & 1.9 \\\\ 0.99 & 1.99 \\\\ 0.999 & 1.999 \\\\ 1.001 & 2.001 \\\\ 1.01 & 2.01 \\\\ 1.1 & 2.1 \\end{array}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "From both sides, $f(x)$ is approaching $2$. The limit is $2$.",
+        "(This isn't a *proof*, but it's a powerful diagnostic — and how problems often start.)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### One-sided limits",
+        "Sometimes the function approaches different values from each side. We use:",
+        "$\\displaystyle\\lim_{x \\to a^-} f(x)$ — limit as $x$ approaches $a$ **from the left** (smaller values).",
+        "$\\displaystyle\\lim_{x \\to a^+} f(x)$ — limit as $x$ approaches $a$ **from the right** (larger values).",
+        "**The two-sided limit exists if and only if both one-sided limits exist AND are equal.** Otherwise, $\\lim_{x \\to a} f(x)$ does not exist."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Example with a jump",
+        "Define $f(x) = \\begin{cases} 1 & \\text{if } x < 0 \\\\ 2 & \\text{if } x \\geq 0 \\end{cases}$.",
+        "$\\displaystyle\\lim_{x \\to 0^-} f(x) = 1$ (from the left, $f$ is 1).",
+        "$\\displaystyle\\lim_{x \\to 0^+} f(x) = 2$ (from the right, $f$ is 2).",
+        "Two different values → $\\displaystyle\\lim_{x \\to 0} f(x)$ **does not exist**. The function has a *jump* at zero."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Why limits matter",
+      "body": "Limits are the foundation of calculus — derivatives are limits of slopes, integrals are limits of sums. They're how we make 'instantaneous' rates and continuous areas mathematically rigorous, instead of hand-waving 'infinitely small'."
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "$\\lim_{x \\to a} f(x) = L$ means 'as $x$ approaches $a$, $f(x)$ approaches $L$'. For continuous functions just plug in. For $0/0$ forms, simplify algebraically. The two-sided limit exists only when left and right limits agree."
+    }
+  ]
+}

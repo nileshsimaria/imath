@@ -1,0 +1,440 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{Roll a fair die. } E[X] = ? \\text{ (decimal)}",
+      "answer": 3.5,
+      "tolerance": 0.001,
+      "hints": [
+        "Average of 1, 2, 3, 4, 5, 6.",
+        "$(1+2+3+4+5+6)/6 = 21/6 = 3.5$."
+      ],
+      "explanation": "$E[X] = (1+2+...+6)/6 = 3.5$.",
+      "steps": [
+        "Each value has probability $1/6$.",
+        "$E[X] = \\sum x \\cdot P = (1+2+3+4+5+6)/6 = 21/6 = 3.5$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{A game pays \\$5 with probability 0.2, and -\\$1 (you lose) with probability 0.8.} \\\\ \\text{Expected winnings (\\$)?}",
+      "answer": 0.2,
+      "tolerance": 0.005,
+      "hints": [
+        "$E = 5 \\cdot 0.2 + (-1) \\cdot 0.8$.",
+        "$1 - 0.8 = 0.2$."
+      ],
+      "explanation": "$E = 5(0.2) + (-1)(0.8) = 1 - 0.8 = \\$0.20$.",
+      "steps": [
+        "$E[X] = \\sum x \\cdot P$",
+        "$= 5 \\cdot 0.2 + (-1) \\cdot 0.8$",
+        "$= 1.00 - 0.80 = \\$0.20$.",
+        "Positive → favorable game."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{Lottery: \\$1 ticket, prize \\$500 with probability 1/1000.} \\\\ \\text{Expected net \\$ per ticket (round to 2 dec)?}",
+      "answer": -0.5,
+      "tolerance": 0.01,
+      "hints": [
+        "Win net = +499 (prize - ticket cost). Lose net = -1.",
+        "$E = 499 \\cdot (1/1000) + (-1) \\cdot (999/1000) = 0.499 - 0.999 = -0.5$."
+      ],
+      "explanation": "$E = 499(0.001) + (-1)(0.999) = 0.499 - 0.999 = -\\$0.50$.",
+      "steps": [
+        "Outcomes: win (net +\\$499) or lose (net -\\$1).",
+        "$E = 499 \\cdot \\dfrac{1}{1000} + (-1) \\cdot \\dfrac{999}{1000} = 0.499 - 0.999 = -\\$0.50$.",
+        "Negative — bad bet on average."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{For a binomial distribution with } n \\text{ trials and success probability } p, \\\\ E[X] = ?",
+      "choices": [
+        "np",
+        "n + p",
+        "np(1-p)",
+        "p"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Expected number of successes = number of trials × success rate.",
+        "$np$."
+      ],
+      "explanation": "$E[X] = np$ for binomial. Intuition: each trial contributes $p$ to expected count.",
+      "steps": [
+        "Each trial succeeds with probability $p$ → contributes expected $p$ to the count.",
+        "$n$ trials → total expected $= np$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{Flip a fair coin 10 times. Expected number of heads?}",
+      "answer": 5,
+      "tolerance": 0,
+      "hints": [
+        "Binomial: $E = np = 10 \\cdot 0.5 = 5$.",
+        "$5$."
+      ],
+      "explanation": "$np = 10 \\cdot 0.5 = 5$.",
+      "steps": [
+        "Binomial: $n = 10$, $p = 0.5$.",
+        "$E[X] = np = 5$ heads on average."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{Roll a die 60 times. Expected number of 6s?}",
+      "answer": 10,
+      "tolerance": 0,
+      "hints": [
+        "$n = 60$, $p = 1/6$. $E = np$.",
+        "$60 \\cdot 1/6 = 10$."
+      ],
+      "explanation": "$E = 60 \\cdot 1/6 = 10$.",
+      "steps": [
+        "Binomial: $n = 60$ rolls, $p = 1/6$ probability of 6.",
+        "$E[X] = np = 10$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{Flip a fair coin 5 times.} \\\\ P(\\text{exactly 3 heads}) = ? \\text{ (round to 4 decimals)}",
+      "answer": 0.3125,
+      "tolerance": 0.001,
+      "hints": [
+        "$P = \\binom{5}{3}(0.5)^3 (0.5)^2 = 10 \\cdot 0.125 \\cdot 0.25 = 0.3125$.",
+        "Or just $\\binom{5}{3}(0.5)^5 = 10/32$."
+      ],
+      "explanation": "$P = \\binom{5}{3}(0.5)^5 = 10/32 = 0.3125$.",
+      "steps": [
+        "Binomial probability: $P(X = k) = \\binom{n}{k}p^k(1-p)^{n-k}$.",
+        "$\\binom{5}{3} = 10$. $p = 0.5$, $1-p = 0.5$.",
+        "$P = 10 \\cdot 0.5^3 \\cdot 0.5^2 = 10 \\cdot 0.5^5 = 10 \\cdot \\dfrac{1}{32} = \\dfrac{10}{32} = 0.3125$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{Flip a fair coin 4 times.} \\\\ P(\\text{exactly 2 heads}) = ? \\text{ (round to 4 decimals)}",
+      "answer": 0.375,
+      "tolerance": 0.005,
+      "hints": [
+        "$\\binom{4}{2}(0.5)^4 = 6/16$.",
+        "$0.375$."
+      ],
+      "explanation": "$\\binom{4}{2}(0.5)^4 = 6 \\cdot 1/16 = 6/16 = 0.375$.",
+      "steps": [
+        "$\\binom{4}{2} = 6$.",
+        "$(0.5)^4 = 1/16$.",
+        "$P = 6 \\cdot 1/16 = 6/16 = 0.375$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A discrete probability distribution must satisfy:}",
+      "choices": [
+        "All P(X) ≥ 0 AND they sum to 1",
+        "All P(X) > 0",
+        "Sum can equal anything",
+        "Mean = 0"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Probabilities must be non-negative.",
+        "And must sum to exactly 1."
+      ],
+      "explanation": "Two requirements: each $P(X = x_i) \\geq 0$, and $\\sum P(X = x_i) = 1$.",
+      "steps": [
+        "**Required for any probability distribution:**",
+        "1. Each individual probability is at least 0.",
+        "2. All probabilities together sum to exactly 1."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{A free-throw shooter has 80\\% accuracy. In 10 shots,} \\\\ \\text{expected number of makes?}",
+      "answer": 8,
+      "tolerance": 0,
+      "hints": [
+        "Binomial: $n = 10$, $p = 0.8$. $E = np$.",
+        "$8$."
+      ],
+      "explanation": "$E = 10 \\cdot 0.8 = 8$.",
+      "steps": [
+        "$n = 10$ shots, $p = 0.8$ make rate.",
+        "Expected makes: $np = 10 \\cdot 0.8 = 8$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{Probability of exactly 0 heads in 4 flips of a fair coin?} \\text{(decimal, 4 places)}",
+      "answer": 0.0625,
+      "tolerance": 0.001,
+      "hints": [
+        "$\\binom{4}{0}(0.5)^4 = 1/16$.",
+        "$0.0625$."
+      ],
+      "explanation": "$P(X = 0) = (1-p)^4 = (0.5)^4 = 1/16 = 0.0625$.",
+      "steps": [
+        "All 4 flips must be tails (no heads).",
+        "$(1/2)^4 = 1/16 = 0.0625$.",
+        "Same formula: $\\binom{4}{0}(0.5)^0(0.5)^4 = 1 \\cdot 1 \\cdot 1/16 = 1/16$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which is a valid probability distribution?}",
+      "choices": [
+        "P(X=1)=0.3, P(X=2)=0.3, P(X=3)=0.4",
+        "P(X=1)=0.5, P(X=2)=0.5, P(X=3)=0.1",
+        "P(X=1)=-0.1, P(X=2)=0.5, P(X=3)=0.6",
+        "P(X=1)=0.4, P(X=2)=0.4, P(X=3)=0.4"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Check: all ≥ 0, all sum to 1.",
+        "Option A: $0.3 + 0.3 + 0.4 = 1.0$ ✓."
+      ],
+      "explanation": "Option A: probabilities $\\geq 0$ AND sum to 1 ✓. Others fail one or both conditions.",
+      "steps": [
+        "Check each:",
+        "(a) $0.3 + 0.3 + 0.4 = 1.0$ and all ≥ 0 ✓",
+        "(b) $0.5 + 0.5 + 0.1 = 1.1$ — sum > 1 ✗",
+        "(c) Has $-0.1$ ✗",
+        "(d) $0.4 + 0.4 + 0.4 = 1.2$ ✗"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q13",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The variance of a discrete random variable } X \\text{ with mean } \\mu \\text{ is defined as:}",
+      "choices": [
+        "$\\sum (x_i - \\mu) \\cdot P(X = x_i)$ — average deviation",
+        "$\\sum (x_i - \\mu)^2 \\cdot P(X = x_i)$ — average SQUARED deviation",
+        "$\\sum x_i \\cdot P(X = x_i)$ — the mean again",
+        "$\\sum x_i^2$ — sum of squared values, no probabilities"
+      ],
+      "choicesTex": false,
+      "answerIndex": 1,
+      "hints": [
+        "Variance penalizes deviations from the mean — and squaring makes positive and negative deviations both contribute.",
+        "$\\text{Var}(X) = E[(X - \\mu)^2]$ — expected SQUARED deviation."
+      ],
+      "explanation": "$\\text{Var}(X) = E[(X - \\mu)^2] = \\sum_i (x_i - \\mu)^2 P(X = x_i)$. The squaring is what makes variance work: positive and negative deviations both contribute (they don't cancel), and large deviations are penalized quadratically (an outlier 4 units away contributes 16× as much as one 1 unit away).",
+      "steps": [
+        "**Why not $\\sum (x_i - \\mu) \\cdot P$?** That sum equals zero by definition of the mean! Positive and negative deviations cancel out perfectly. Useless as a spread measure.",
+        "**The fix: square the deviations first.** Then they're all non-negative, and large deviations dominate.",
+        "**Definition.** $\\text{Var}(X) = E[(X - \\mu)^2] = \\sum (x_i - \\mu)^2 \\cdot P(X = x_i)$.",
+        "**Standard deviation.** $\\sigma_X = \\sqrt{\\text{Var}(X)}$ — take the square root to restore the original units.",
+        "**Pattern lesson.** 'Why squared, not absolute value?' Squaring is mathematically smoother (differentiable, sums of independent variances add cleanly). Absolute deviation works but loses these nice properties."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q14",
+      "type": "numeric",
+      "promptTex": "\\text{Roll a fair die. Compute } \\text{Var}(X). \\\\ \\text{Round to 3 decimals.}",
+      "answer": 2.917,
+      "tolerance": 0.01,
+      "hints": [
+        "Mean $\\mu = 3.5$. Each face has probability $1/6$.",
+        "Sum of $(x - 3.5)^2$ over $x = 1, \\ldots, 6$: $6.25 + 2.25 + 0.25 + 0.25 + 2.25 + 6.25 = 17.5$.",
+        "$\\text{Var} = 17.5/6 \\approx 2.917$."
+      ],
+      "explanation": "$\\mu = 3.5$. Compute $\\sum (x_i - 3.5)^2 \\cdot 1/6$. The squared deviations are $6.25, 2.25, 0.25, 0.25, 2.25, 6.25$ summing to $17.5$. Divide by $6$: $\\text{Var}(X) = 17.5/6 \\approx 2.917$.",
+      "steps": [
+        "**Find the mean first.** Already known: $\\mu = 3.5$ for a fair die.",
+        "**Compute each squared deviation.** $(1-3.5)^2 = 6.25$, $(2-3.5)^2 = 2.25$, $(3-3.5)^2 = 0.25$, $(4-3.5)^2 = 0.25$, $(5-3.5)^2 = 2.25$, $(6-3.5)^2 = 6.25$.",
+        "**Weight by probability ($1/6$ each) and sum.** Sum of squared deviations: $17.5$. $\\text{Var}(X) = 17.5 \\cdot (1/6) = 35/12 \\approx 2.917$.",
+        "**Alternate: shortcut formula.** $E[X^2] = (1+4+9+16+25+36)/6 = 91/6$. $\\text{Var}(X) = E[X^2] - \\mu^2 = 91/6 - 12.25 = 91/6 - 49/4 = (182 - 147)/12 = 35/12 \\approx 2.917$ ✓. Same answer two ways."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q15",
+      "type": "numeric",
+      "promptTex": "\\text{Standard deviation of a fair die roll (round to 3 decimals)?}",
+      "answer": 1.708,
+      "tolerance": 0.01,
+      "hints": [
+        "$\\sigma = \\sqrt{\\text{Var}(X)}$.",
+        "$\\sigma = \\sqrt{35/12} \\approx \\sqrt{2.917} \\approx 1.708$."
+      ],
+      "explanation": "$\\sigma = \\sqrt{\\text{Var}} = \\sqrt{35/12} \\approx 1.708$. So a typical die roll is about $1.7$ units away from the mean $3.5$.",
+      "steps": [
+        "**Take square root of variance.** From Q14: $\\text{Var}(X) = 35/12 \\approx 2.917$.",
+        "**Compute.** $\\sigma = \\sqrt{35/12} \\approx 1.708$.",
+        "**Interpretation.** SD is in the *same units* as $X$ — so we can say 'a typical roll is about $1.7$ away from the mean'. Variance ($\\approx 2.9$ 'squared roll-units') is mathematically convenient but harder to interpret."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q16",
+      "type": "numeric",
+      "promptTex": "\\text{Flip a fair coin 100 times. Find the standard deviation of the number of heads.}",
+      "answer": 5,
+      "tolerance": 0.01,
+      "hints": [
+        "Binomial: $\\text{Var}(X) = np(1-p) = 100 \\cdot 0.5 \\cdot 0.5 = 25$.",
+        "$\\sigma = \\sqrt{25} = 5$."
+      ],
+      "explanation": "For Binomial$(n, p)$: $\\text{Var}(X) = np(1-p)$. Here $n = 100, p = 1/2$: $\\text{Var} = 25$, $\\sigma = 5$. So typical outcome is $50 \\pm 5$ heads.",
+      "steps": [
+        "**Recognize the type.** Number of successes in fixed trials = Binomial$(n, p)$ with $n = 100$, $p = 1/2$.",
+        "**Variance formula.** $\\text{Var}(X) = np(1-p) = 100 \\cdot (1/2) \\cdot (1/2) = 25$.",
+        "**Take square root.** $\\sigma = \\sqrt{25} = 5$.",
+        "**Build intuition.** Typical heads count: $50 \\pm 5$ (within 1 SD). About 95% within $\\pm 2\\sigma$ → $40$ to $60$ heads. 'About half heads' really means '50 plus or minus a handful'.",
+        "**Scaling with $n$.** SD scales as $\\sqrt{n}$, not $n$. Quadruple the flips → SD only doubles. The histogram widens absolutely but narrows in *relative* terms (SD/n shrinks)."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q17",
+      "type": "multiple-choice",
+      "prompt": "When is E[X + Y] = E[X] + E[Y] true?",
+      "choices": [
+        "Only when X and Y are independent",
+        "Only when X and Y have the same distribution",
+        "Always — independence is NOT required",
+        "Never — this identity isn't valid"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Linearity of expectation is one of the most useful theorems in probability — and it's stronger than it looks.",
+        "It holds even for *dependent* random variables."
+      ],
+      "explanation": "Linearity of expectation: $E[X + Y] = E[X] + E[Y]$ ALWAYS — even when $X, Y$ are dependent. This is a remarkable fact that powers many surprisingly easy solutions in probability (e.g., 'expected number of fixed points in a random permutation = 1, regardless of $n$' via linearity).",
+      "steps": [
+        "**Surprising fact.** Independence is required for $\\text{Var}(X+Y) = \\text{Var}(X) + \\text{Var}(Y)$, but NOT for $E[X+Y] = E[X] + E[Y]$.",
+        "**Why?** $E[X+Y] = \\sum_{x,y} (x + y) P(X=x, Y=y) = \\sum_{x,y} x P(X=x, Y=y) + \\sum_{x,y} y P(X=x, Y=y) = E[X] + E[Y]$. The decomposition needs no independence assumption.",
+        "**Concrete example.** Roll two dice, $X$ = first roll, $Y$ = sum of the two. $X, Y$ are dependent (knowing $X$ constrains $Y$). Yet $E[X + Y] = E[X] + E[Y]$: 3.5 + 7 = 10.5. Same as directly computing $E[X+Y] = E[X + (X+\\text{die 2})] = 2E[X] + 3.5 = 10.5$ ✓.",
+        "**Pattern lesson.** Linearity of expectation is the most-broken rule of intuition. Many problems that look hard become trivial once you realize you can sum expectations without worrying about correlations."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q18",
+      "type": "numeric",
+      "promptTex": "\\text{If } E[X] = 4, \\text{ find } E[3X + 5].",
+      "answer": 17,
+      "tolerance": 0,
+      "hints": [
+        "Linearity: $E[aX + b] = a \\cdot E[X] + b$.",
+        "$E[3X + 5] = 3 \\cdot 4 + 5 = 17$."
+      ],
+      "explanation": "Linearity of expectation: $E[aX + b] = aE[X] + b = 3 \\cdot 4 + 5 = 17$. Constants pass through; $X$ scales by its coefficient; additive constant adds directly.",
+      "steps": [
+        "**Apply linearity.** $E[3X + 5] = 3 \\cdot E[X] + 5$.",
+        "**Plug in.** $= 3 \\cdot 4 + 5 = 12 + 5 = 17$.",
+        "**Pattern lesson.** This is the same as $E[\\text{any linear function of } X]$ — just substitute $E[X]$ for $X$ and you're done. For example, profit per ticket = $5X - 10$ where $X$ is items sold. If $E[X] = 100$ then $E[\\text{profit}] = 5 \\cdot 100 - 10 = 490$. Linearity makes these calculations effortless."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q19",
+      "type": "numeric",
+      "promptTex": "\\text{If } \\text{Var}(X) = 9, \\text{ find } \\text{Var}(2X + 5).",
+      "answer": 36,
+      "tolerance": 0,
+      "hints": [
+        "$\\text{Var}(aX + b) = a^2 \\cdot \\text{Var}(X)$. The $+b$ doesn't affect spread.",
+        "$\\text{Var}(2X + 5) = 2^2 \\cdot 9 = 36$."
+      ],
+      "explanation": "$\\text{Var}(aX + b) = a^2 \\, \\text{Var}(X)$. The additive constant $b$ shifts the distribution but doesn't change its spread. The multiplicative $a$ scales spread by $|a|$, so variance (squared spread) scales by $a^2$. Here: $\\text{Var}(2X + 5) = 4 \\cdot 9 = 36$.",
+      "steps": [
+        "**Variance transformation rule.** $\\text{Var}(aX + b) = a^2 \\text{Var}(X)$. Constants don't shift spread; scaling multiplies spread linearly, variance quadratically.",
+        "**Plug in.** $\\text{Var}(2X + 5) = 2^2 \\cdot \\text{Var}(X) = 4 \\cdot 9 = 36$.",
+        "**Equivalent in SD.** $\\sigma_{2X+5} = 2 \\sigma_X = 2 \\cdot 3 = 6$. Then $\\sigma^2 = 36$ ✓.",
+        "**Why the $+5$ doesn't matter.** Shifting every outcome by the same constant moves the mean by 5 but leaves all the deviations from the (new) mean unchanged. So variance is preserved.",
+        "**Pattern lesson.** Scaling and shifting affect mean and variance differently. Mean: $E[aX+b] = a\\mu + b$ (linear in both $a$ and $b$). Variance: $\\text{Var}(aX+b) = a^2 \\sigma^2$ (quadratic in $a$, independent of $b$). Mix them up and you'll get tripped up on stats problems."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q20",
+      "type": "numeric",
+      "promptTex": "\\text{Roll a fair die until you get a } 6. \\\\ \\text{What is the expected number of rolls?}",
+      "answer": 6,
+      "tolerance": 0,
+      "hints": [
+        "This is a Geometric distribution: number of trials until first success.",
+        "$E[X] = 1/p$, where $p$ is the success probability.",
+        "$p = 1/6 \\Rightarrow E[X] = 6$."
+      ],
+      "explanation": "Number of trials until first success in independent Bernoulli$(p)$ trials = Geometric$(p)$. $E[\\text{Geom}(p)] = 1/p$. Here $p = 1/6$ (rolling a 6 on a die), so $E[X] = 6$ rolls on average.",
+      "steps": [
+        "**Recognize the type.** 'Number of trials until first success' = Geometric distribution.",
+        "**Formula.** $E[\\text{Geom}(p)] = 1/p$ — the rarer the event, the more trials needed on average.",
+        "**Plug in.** $p = P(\\text{rolling a 6}) = 1/6$. $E[X] = 1/(1/6) = 6$.",
+        "**Intuition.** 'On average, 1 in 6 rolls is a 6, so expect about 6 rolls before one'. This intuition is right, but the geometric distribution is also *heavily skewed* — the median is just 4, while the mean is 6 (mean is pulled up by occasional long runs without a 6)."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q21",
+      "type": "numeric",
+      "promptTex": "\\text{Random variable } X \\text{ takes values 0, 1, 2, 3 with probabilities 0.1, 0.3, 0.4, 0.2 respectively.} \\\\ \\text{Find } \\text{Var}(X) \\text{ (round to 2 decimals).}",
+      "answer": 0.81,
+      "tolerance": 0.01,
+      "hints": [
+        "$E[X] = 0 \\cdot 0.1 + 1 \\cdot 0.3 + 2 \\cdot 0.4 + 3 \\cdot 0.2 = 1.7$.",
+        "$E[X^2] = 0 + 1 \\cdot 0.3 + 4 \\cdot 0.4 + 9 \\cdot 0.2 = 3.7$.",
+        "$\\text{Var}(X) = E[X^2] - (E[X])^2 = 3.7 - 2.89 = 0.81$."
+      ],
+      "explanation": "Use shortcut $\\text{Var}(X) = E[X^2] - (E[X])^2$. Compute $E[X] = 1.7$, $E[X^2] = 3.7$. $\\text{Var}(X) = 3.7 - 1.7^2 = 3.7 - 2.89 = 0.81$.",
+      "steps": [
+        "**Compute the mean.** $E[X] = \\sum x_i P(X=x_i) = 0(0.1) + 1(0.3) + 2(0.4) + 3(0.2) = 0 + 0.3 + 0.8 + 0.6 = 1.7$.",
+        "**Compute $E[X^2]$.** $E[X^2] = \\sum x_i^2 P(X=x_i) = 0 \\cdot 0.1 + 1 \\cdot 0.3 + 4 \\cdot 0.4 + 9 \\cdot 0.2 = 0 + 0.3 + 1.6 + 1.8 = 3.7$.",
+        "**Apply the shortcut.** $\\text{Var}(X) = E[X^2] - (E[X])^2 = 3.7 - (1.7)^2 = 3.7 - 2.89 = 0.81$.",
+        "**Cross-check with direct formula.** $\\text{Var}(X) = \\sum (x_i - 1.7)^2 P(X=x_i) = (1.7^2)(0.1) + (0.7^2)(0.3) + (0.3^2)(0.4) + (1.3^2)(0.2) = 0.289 + 0.147 + 0.036 + 0.338 = 0.81$ ✓.",
+        "**Pattern lesson.** The shortcut $\\text{Var}(X) = E[X^2] - \\mu^2$ is usually faster than the definition for hand calculation — one pass through the values to compute $E[X^2]$, then subtract."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q22",
+      "type": "numeric",
+      "promptTex": "\\text{In a Poisson distribution with parameter } \\lambda = 4, \\\\ \\text{what is } \\sigma \\text{ (the standard deviation)?}",
+      "answer": 2,
+      "tolerance": 0.01,
+      "hints": [
+        "Poisson signature: $\\text{Var}(X) = \\lambda$ (variance equals the mean).",
+        "$\\sigma = \\sqrt{\\lambda} = \\sqrt{4} = 2$."
+      ],
+      "explanation": "For Poisson$(\\lambda)$: mean and variance BOTH equal $\\lambda$. So $\\sigma = \\sqrt{\\lambda} = \\sqrt{4} = 2$.",
+      "steps": [
+        "**Poisson's defining signature.** For $X \\sim \\text{Poisson}(\\lambda)$: $E[X] = \\lambda$ AND $\\text{Var}(X) = \\lambda$. (Same value for both — unusual!)",
+        "**Take the square root.** $\\sigma = \\sqrt{\\text{Var}} = \\sqrt{4} = 2$.",
+        "**Where Poisson shows up.** Rare events in a fixed window: calls per hour at a call center, decays per second of radioactive material, typos per page, mutations per gene per generation. Whenever the rate is roughly constant and events happen independently, the count follows Poisson.",
+        "**Diagnostic check.** If you have data and the sample variance is roughly the sample mean, Poisson is a plausible model. If variance >> mean, you have *over-dispersion* (more variability than Poisson predicts) — common in real-world count data with hidden heterogeneity."
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

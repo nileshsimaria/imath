@@ -1,0 +1,492 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "prompt": "Why must we use RADIANS (not degrees) for the formula $\\dfrac{d}{d\\theta}(\\sin\\theta) = \\cos\\theta$?",
+      "choices": [
+        "Because radians are more accurate than degrees.",
+        "Because the proof uses the small-angle approximation $\\sin x \\approx x$, which only holds when $x$ is in radians.",
+        "Because cosines are only defined in radians.",
+        "Because of a historical convention; the formula works equally well in degrees."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "In degrees, $\\sin 30^\\circ \\neq 30$. In radians, $\\sin(0.01) \\approx 0.01$.",
+        "The approximation $\\sin x \\approx x$ for small $x$ is the linchpin of the derivation."
+      ],
+      "explanation": "The geometric derivation of $\\sin' = \\cos$ relies on $\\sin(d\\theta) \\approx d\\theta$ for small $d\\theta$. That's only true in radians. In degrees, $\\sin(d\\theta) \\approx \\dfrac{\\pi}{180} \\, d\\theta$ — an extra constant of $\\pi/180 \\approx 0.01745$ would have to be carried through every derivative formula. Radians remove the noise — that's why calculus uses them.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\dfrac{d}{d\\theta}(\\sin\\theta)\\text{ at }\\theta = 0 = ?",
+      "answer": 1,
+      "tolerance": 0,
+      "hints": [
+        "$\\sin' = \\cos$.",
+        "$\\cos(0) = 1$."
+      ],
+      "explanation": "$\\dfrac{d}{d\\theta}(\\sin\\theta) = \\cos\\theta$. At $\\theta = 0$: $\\cos(0) = 1$. Sine starts at the origin with slope 1 — climbing as steeply as the line $y = \\theta$ for the first few moments, then bending away.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\dfrac{d}{d\\theta}(\\cos\\theta)\\text{ at }\\theta = \\dfrac{\\pi}{2} = ?",
+      "answer": -1,
+      "tolerance": 0,
+      "hints": [
+        "$\\cos' = -\\sin$.",
+        "$\\sin(\\pi/2) = 1$, so $-\\sin(\\pi/2) = -1$."
+      ],
+      "explanation": "$\\dfrac{d}{d\\theta}(\\cos\\theta) = -\\sin\\theta$. At $\\theta = \\pi/2$: $-\\sin(\\pi/2) = -1$. Cosine crosses zero going DOWN at this angle — slope is $-1$, the steepest descent on its cycle.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\dfrac{d}{dx}(\\sin(3x))\\text{ at }x = 0 = ?",
+      "answer": 3,
+      "tolerance": 0,
+      "hints": [
+        "Chain rule: $\\dfrac{d}{dx}(\\sin(kx)) = k\\cos(kx)$.",
+        "$\\dfrac{d}{dx}(\\sin(3x)) = 3\\cos(3x)$. At $x = 0$: $3 \\cos(0) = 3$."
+      ],
+      "explanation": "Chain rule: $\\dfrac{d}{dx}\\sin(kx) = k \\cos(kx)$. With $k = 3$: $3 \\cos(3x)$. At $x = 0$: $3 \\cdot 1 = 3$. (The factor of $k$ is why faster-oscillating signals have steeper slopes — frequency scales the derivative.)",
+      "steps": [
+        "**Recognize chain rule.** Inside $\\sin$ is $3x$, not just $x$ — chain rule needed.",
+        "**Pattern.** $\\dfrac{d}{dx}\\sin(kx) = k\\cos(kx)$. The coefficient inside pops out front.",
+        "**Why this matters intuitively.** $\\sin(3x)$ oscillates THREE TIMES as fast as $\\sin x$. The derivative records that: slope is 3 times bigger.",
+        "**Apply with $k = 3$.** Derivative $= 3\\cos(3x)$.",
+        "**Evaluate at $x = 0$.** $3 \\cdot \\cos(0) = 3 \\cdot 1 = 3$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "prompt": "What is unique about sine and cosine that makes them the math behind every oscillation in nature?",
+      "choices": [
+        "Their values are bounded between $-1$ and $+1$.",
+        "Their second derivative equals MINUS themselves: $y'' = -y$. They are the unique functions with this property.",
+        "They are the only periodic functions in mathematics.",
+        "They can both be written as series."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Apply the derivative twice to $\\sin\\theta$ — what do you get?",
+        "$\\sin \\to \\cos \\to -\\sin$. So $\\sin'' = -\\sin$.",
+        "Physical interpretation: acceleration equals negative displacement = restoring-force equation."
+      ],
+      "explanation": "$\\sin'' = -\\sin$ (and same for cosine). Physically: when *acceleration* of a quantity is proportional to *negative* of its position, you get oscillation. Springs, pendulums, AC circuits, sound, light — all governed by $y'' = -\\omega^2 y$, which sines and cosines uniquely solve. That is the reason waves are sinusoidal.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\dfrac{d^2}{d\\theta^2}(\\sin\\theta)\\text{ at }\\theta = \\dfrac{\\pi}{2} = ?",
+      "answer": -1,
+      "tolerance": 0,
+      "hints": [
+        "$\\sin'' = -\\sin$.",
+        "$\\sin(\\pi/2) = 1$, so $-\\sin(\\pi/2) = -1$."
+      ],
+      "explanation": "First derivative: $\\sin' = \\cos$. Second: $\\cos' = -\\sin$. So $\\sin'' = -\\sin$. At $\\theta = \\pi/2$: $-\\sin(\\pi/2) = -1$. (At its peak, sine is curving *back down* at unit rate — maximum 'restoring' tendency.)",
+      "steps": [
+        "**Apply derivative TWICE.**",
+        "**First derivative.** $\\dfrac{d}{d\\theta}\\sin\\theta = \\cos\\theta$.",
+        "**Second derivative.** $\\dfrac{d}{d\\theta}\\cos\\theta = -\\sin\\theta$.",
+        "**Combine.** $\\dfrac{d^2}{d\\theta^2}\\sin\\theta = -\\sin\\theta$. The 'second-derivative is minus original' property.",
+        "**Evaluate at $\\theta = \\pi/2$.** $-\\sin(\\pi/2) = -1$.",
+        "**Geometric meaning.** At the PEAK of sine ($\\theta = \\pi/2$, $y = 1$), the curve is bending DOWN as hard as it can. Negative second derivative = concave down = peak. ✓"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "y = \\sin\\theta + 2\\cos\\theta.\\text{ Find }y'(0).",
+      "answer": 1,
+      "tolerance": 0,
+      "hints": [
+        "$y'(\\theta) = \\cos\\theta - 2\\sin\\theta$.",
+        "At $\\theta = 0$: $\\cos 0 - 2\\sin 0 = 1 - 0 = 1$."
+      ],
+      "explanation": "$y' = \\cos\\theta - 2\\sin\\theta$. At $\\theta = 0$: $\\cos(0) - 2\\sin(0) = 1 - 0 = 1$.",
+      "steps": [
+        "**Linearity → differentiate each term separately.**",
+        "**Term 1.** $\\dfrac{d}{d\\theta}\\sin\\theta = \\cos\\theta$.",
+        "**Term 2.** $\\dfrac{d}{d\\theta}(2\\cos\\theta) = -2\\sin\\theta$. (Constants pass through; $\\cos' = -\\sin$.)",
+        "**Combined.** $y'(\\theta) = \\cos\\theta - 2\\sin\\theta$.",
+        "**Evaluate at $\\theta = 0$.** $\\cos(0) - 2\\sin(0) = 1 - 0 = 1$.",
+        "**Watch out for signs.** It's easy to forget that $\\cos' = -\\sin$ (with the minus). Triple-check whenever a problem mixes sines and cosines."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{A vibrating mass moves as }y(t) = 2\\sin(3t)\\text{ meters.}\\\\\\text{What is its MAXIMUM speed (m/s)?}",
+      "answer": 6,
+      "tolerance": 0,
+      "hints": [
+        "Velocity: $y'(t) = 6\\cos(3t)$.",
+        "Maximum value of $\\cos$ is $1$, so max speed $= 6$ m/s."
+      ],
+      "explanation": "Velocity $v(t) = \\dfrac{dy}{dt} = 2 \\cdot 3 \\cos(3t) = 6\\cos(3t)$. The cosine ranges over $[-1, 1]$, so max speed is $6$ m/s. (General SHM rule: max speed $= A\\omega$, where $A$ is amplitude and $\\omega$ is angular frequency. Here $A = 2$, $\\omega = 3$, $A\\omega = 6$.)",
+      "steps": [
+        "**Recognize SHM.** $y(t) = A\\sin(\\omega t)$ with amplitude $A = 2$, angular frequency $\\omega = 3$. Classic simple harmonic motion.",
+        "**Velocity = derivative of position.** $v(t) = y'(t) = 2 \\cdot 3\\cos(3t) = 6\\cos(3t)$. (Chain rule pulls the $\\omega = 3$ out.)",
+        "**Find the maximum speed.** Cosine ranges $[-1, 1]$. So $v(t)$ ranges $[-6, 6]$. Max SPEED (magnitude) = 6 m/s.",
+        "**Universal SHM rule.** For $y = A\\sin(\\omega t)$: max speed $= A\\omega$, max acceleration $= A\\omega^2$. Memorize this — saves derivation time on every SHM problem.",
+        "**Verification.** $A\\omega = 2 \\cdot 3 = 6$. ✓"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{Same mass, same motion }y = 0.1\\sin(4t)\\text{ meters.}\\\\\\text{What is its acceleration (m/s}^2\\text{) at }t = \\dfrac{\\pi}{8}?",
+      "answer": -1.6,
+      "tolerance": 0.001,
+      "hints": [
+        "Acceleration = $y''(t) = -0.1 \\cdot 16 \\sin(4t) = -1.6 \\sin(4t)$.",
+        "At $t = \\pi/8$: $4t = \\pi/2$. $\\sin(\\pi/2) = 1$.",
+        "So $a = -1.6 \\cdot 1 = -1.6$ m/s²."
+      ],
+      "explanation": "$y'(t) = 0.4 \\cos(4t)$. $y''(t) = -1.6 \\sin(4t)$. At $t = \\pi/8$: $4t = \\pi/2$, so $\\sin(\\pi/2) = 1$ and $a = -1.6$ m/s². Note: this is when displacement $y$ is at its MAXIMUM ($+0.1$ m), and acceleration is at its most NEGATIVE. That's the signature $y'' = -16\\,y$ relationship — restoring force at its strongest when the displacement is largest.",
+      "steps": [
+        "**Acceleration = second derivative of position.** Differentiate twice.",
+        "**First derivative (velocity).** $v(t) = 0.1 \\cdot 4\\cos(4t) = 0.4\\cos(4t)$.",
+        "**Second derivative (acceleration).** $a(t) = -0.4 \\cdot 4\\sin(4t) = -1.6\\sin(4t)$.",
+        "**Compute the argument at $t = \\pi/8$.** $4t = 4 \\cdot \\pi/8 = \\pi/2$.",
+        "**Plug in.** $\\sin(\\pi/2) = 1$, so $a = -1.6 \\cdot 1 = -1.6$ m/s².",
+        "**Where does the $-16$ come from? It's $-\\omega^2$.** Look at $y$ and $a$ side by side: $y(t) = 0.1 \\sin(4t)$ and $a(t) = -1.6 \\sin(4t)$. Same $\\sin(4t)$ shape — $a$ is just $-16$ times $y$, because $-1.6 = -16 \\cdot 0.1$. So $\\boxed{a = -16\\, y}$ for EVERY $t$. The constant $16$ isn't a coincidence: it's $\\omega^2$ where $\\omega = 4$ is the angular frequency in $\\sin(4t)$. Differentiating $\\sin(\\omega t)$ twice always pulls out a factor of $-\\omega^2$.",
+        "**Why this matters — Simple Harmonic Motion.** The relation $a = -\\omega^2\\, y$ is the *defining equation* of SHM: acceleration always points back toward equilibrium ($y = 0$) with strength proportional to how far you are from it. The further you stretch, the harder you get pulled back. At $t = \\pi/8$ the mass is at its peak ($y = +0.1$ m), so $a = -16 \\cdot 0.1 = -1.6$ — most-negative acceleration, pulling back hardest. ✓"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q10",
+      "type": "multiple-choice",
+      "prompt": "For $y = 0.1\\sin(4t)$, the equation $y''(t) = -16 \\, y(t)$ holds for every $t$. What does this tell you physically?",
+      "choices": [
+        "The mass is gradually slowing down.",
+        "The mass's acceleration is always proportional to and OPPOSITE to its displacement — the hallmark of simple harmonic motion.",
+        "The mass is at rest.",
+        "Friction is reducing the amplitude."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$y$ is displacement; $y''$ is acceleration. They satisfy $y'' = -16 \\, y$.",
+        "What kind of force law produces 'acceleration proportional to negative displacement'?",
+        "Hooke's law: spring force = $-k\\,x$, so $m\\,\\ddot{x} = -k\\,x \\Rightarrow \\ddot{x} = -(k/m)\\,x$."
+      ],
+      "explanation": "$y'' = -\\omega^2 y$ with $\\omega^2 = 16$ (so $\\omega = 4$ rad/s) is the equation of simple harmonic motion. It arises whenever the restoring force is proportional to displacement — Hooke's law for springs, small-angle pendulum, LC circuit, etc. Sines and cosines are the unique solutions, which is *why* SHM looks like a sine wave.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\dfrac{d}{dx}(\\cos x)\\text{ at }x = 0 = ?",
+      "answer": 0,
+      "tolerance": 0,
+      "hints": [
+        "$\\cos' = -\\sin$.",
+        "$\\sin(0) = 0$."
+      ],
+      "explanation": "$\\dfrac{d}{dx}(\\cos x) = -\\sin x$. At $x = 0$: $-\\sin(0) = 0$. (Cosine is at its peak — horizontal tangent.)",
+      "steps": [
+        "**Cosine derivative formula.** $\\cos' = -\\sin$. Memorize.",
+        "**Evaluate.** $-\\sin(0) = 0$.",
+        "**Geometric check.** $\\cos x$ peaks at $x = 0$ (max value 1). At a peak, the tangent is horizontal — slope 0. ✓"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\dfrac{d}{dx}(\\sin(2x))\\text{ at }x = \\dfrac{\\pi}{4} = ?",
+      "answer": 0,
+      "tolerance": 0,
+      "hints": [
+        "Chain rule: $\\dfrac{d}{dx}\\sin(2x) = 2\\cos(2x)$.",
+        "At $x = \\pi/4$: $2\\cos(\\pi/2) = 2 \\cdot 0 = 0$."
+      ],
+      "explanation": "$\\dfrac{d}{dx}\\sin(2x) = 2\\cos(2x)$. At $x = \\pi/4$: $2\\cos(\\pi/2) = 0$. (At this $x$, $\\sin(2x) = \\sin(\\pi/2) = 1$ — the peak of the doubled-frequency sine wave, where the slope is zero.)",
+      "steps": [
+        "**Chain rule on $\\sin(kx)$.** $\\dfrac{d}{dx}\\sin(kx) = k\\cos(kx)$.",
+        "**With $k = 2$.** Derivative $= 2\\cos(2x)$.",
+        "**Compute the argument.** At $x = \\pi/4$: $2x = \\pi/2$.",
+        "**Evaluate.** $\\cos(\\pi/2) = 0$, so $2 \\cdot 0 = 0$.",
+        "**Why zero?** At $x = \\pi/4$, $\\sin(2x) = \\sin(\\pi/2) = 1$ — that's a peak. Peaks have horizontal tangents. Slope = 0. ✓"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q13",
+      "type": "numeric",
+      "promptTex": "\\dfrac{d}{dx}(\\cos(3x))\\text{ at }x = \\dfrac{\\pi}{6} = ?",
+      "answer": -3,
+      "tolerance": 0,
+      "hints": [
+        "Chain rule: $\\dfrac{d}{dx}\\cos(3x) = -3\\sin(3x)$.",
+        "At $x = \\pi/6$: $-3\\sin(\\pi/2) = -3 \\cdot 1 = -3$."
+      ],
+      "explanation": "$\\dfrac{d}{dx}\\cos(3x) = -3\\sin(3x)$. At $x = \\pi/6$: argument is $\\pi/2$, $\\sin(\\pi/2) = 1$, so derivative $= -3$.",
+      "steps": [
+        "**Chain rule on $\\cos(kx)$.** $\\dfrac{d}{dx}\\cos(kx) = -k\\sin(kx)$. (Note the MINUS from the cosine derivative.)",
+        "**With $k = 3$.** Derivative $= -3\\sin(3x)$.",
+        "**Compute argument.** At $x = \\pi/6$: $3x = \\pi/2$.",
+        "**Evaluate.** $\\sin(\\pi/2) = 1$. So derivative $= -3 \\cdot 1 = -3$.",
+        "**Two careful spots.** (1) the coefficient 3 comes out front from chain rule. (2) the minus sign comes from $\\cos' = -\\sin$. Track BOTH."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q14",
+      "type": "numeric",
+      "promptTex": "\\dfrac{d}{dx}(\\sin^2 x)\\text{ at }x = \\dfrac{\\pi}{4} = ?",
+      "answer": 1,
+      "tolerance": 0.001,
+      "hints": [
+        "Chain rule: $\\dfrac{d}{dx}(\\sin^2 x) = 2\\sin x \\cdot \\cos x = \\sin(2x)$.",
+        "At $x = \\pi/4$: $\\sin(\\pi/2) = 1$."
+      ],
+      "explanation": "Treat $\\sin^2 x = (\\sin x)^2$. Chain rule: derivative $= 2\\sin x \\cdot \\dfrac{d}{dx}(\\sin x) = 2 \\sin x \\cos x$. By the double-angle identity, this equals $\\sin(2x)$. At $x = \\pi/4$: $\\sin(\\pi/2) = 1$.",
+      "steps": [
+        "**Recognize the composition.** $\\sin^2 x = (\\sin x)^2$. Outer function: $u^2$. Inner: $u = \\sin x$.",
+        "**Chain rule.** $\\dfrac{d}{dx}(u^2) = 2u \\cdot u' = 2 \\sin x \\cdot \\cos x$.",
+        "**Simplify using double-angle identity.** $2 \\sin x \\cos x = \\sin(2x)$. (Worth knowing — turns a product into a single trig function.)",
+        "**Evaluate at $x = \\pi/4$.** Argument: $2x = \\pi/2$. $\\sin(\\pi/2) = 1$.",
+        "**Pattern lesson.** Whenever you see $(\\text{trig})^n$, treat it as a composition: chain rule with outer $u^n$ and inner the trig function. Avoids confusion with $\\sin(\\text{something}^n)$."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q15",
+      "type": "numeric",
+      "promptTex": "\\dfrac{d}{dx}(x \\sin x)\\text{ at }x = 0 = ?",
+      "answer": 0,
+      "tolerance": 0,
+      "hints": [
+        "Product rule: $\\dfrac{d}{dx}(x \\sin x) = \\sin x + x \\cos x$.",
+        "At $x = 0$: $\\sin 0 + 0 \\cdot \\cos 0 = 0 + 0 = 0$."
+      ],
+      "explanation": "Product rule: $(uv)' = u'v + uv'$ with $u = x$, $v = \\sin x$. $u' = 1$, $v' = \\cos x$. So derivative $= 1 \\cdot \\sin x + x \\cdot \\cos x = \\sin x + x\\cos x$. At $x = 0$: $0 + 0 = 0$.",
+      "steps": [
+        "**Recognize PRODUCT of two functions.** Two different functions of $x$ multiplied: $x$ and $\\sin x$. Use the product rule, NOT some shortcut.",
+        "**Product rule formula.** $(uv)' = u'v + uv'$.",
+        "**Identify $u$ and $v$.** $u = x$ (so $u' = 1$); $v = \\sin x$ (so $v' = \\cos x$).",
+        "**Apply.** $(x \\sin x)' = 1 \\cdot \\sin x + x \\cdot \\cos x = \\sin x + x\\cos x$.",
+        "**Evaluate at $x = 0$.** $\\sin(0) + 0 \\cdot \\cos(0) = 0 + 0 = 0$.",
+        "**Common mistake.** People sometimes write $(x \\sin x)' = 1 \\cdot \\cos x = \\cos x$, treating it like a chain rule. WRONG — that would be the derivative of $\\sin(x \\cdot x) = \\sin(x^2)$. Always check: is it a PRODUCT or a COMPOSITION?"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q16",
+      "type": "numeric",
+      "promptTex": "\\dfrac{d^2}{dx^2}(\\cos x)\\text{ at }x = \\pi = ?",
+      "answer": 1,
+      "tolerance": 0,
+      "hints": [
+        "$\\cos' = -\\sin$; $\\cos'' = -\\cos$.",
+        "At $x = \\pi$: $-\\cos(\\pi) = -(-1) = 1$."
+      ],
+      "explanation": "First derivative: $\\cos' = -\\sin$. Second derivative: $(-\\sin)' = -\\cos$. So $\\cos''(x) = -\\cos x$. At $x = \\pi$: $-\\cos\\pi = -(-1) = 1$. (Same property as sine: cosine satisfies $y'' = -y$.)",
+      "steps": [
+        "**Differentiate twice.**",
+        "**First derivative.** $\\dfrac{d}{dx}(\\cos x) = -\\sin x$.",
+        "**Second derivative.** $\\dfrac{d}{dx}(-\\sin x) = -\\cos x$. (Two sign flips.)",
+        "**So $\\cos''(x) = -\\cos x$ — the same 'second-derivative-is-minus-itself' property as sine.**",
+        "**Evaluate at $x = \\pi$.** $-\\cos(\\pi) = -(-1) = +1$.",
+        "**Both $\\sin$ and $\\cos$ satisfy $y'' = -y$.** This is exactly why they BOTH solve the SHM equation $y'' = -\\omega^2 y$ — any linear combination of $\\sin$ and $\\cos$ is also a solution."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q17",
+      "type": "numeric",
+      "promptTex": "\\dfrac{d}{dx}(\\tan x)\\text{ at }x = 0 = ?",
+      "answer": 1,
+      "tolerance": 0,
+      "hints": [
+        "$\\dfrac{d}{dx}(\\tan x) = \\sec^2 x$.",
+        "$\\sec(0) = 1/\\cos(0) = 1$. So $\\sec^2(0) = 1$."
+      ],
+      "explanation": "$\\dfrac{d}{dx}(\\tan x) = \\sec^2 x$. At $x = 0$: $\\sec^2(0) = 1$. (Same slope as sine at the origin — and not a coincidence: near zero, $\\tan x \\approx x$ just like $\\sin x \\approx x$.)",
+      "steps": [
+        "**Tangent derivative formula.** $\\dfrac{d}{dx}(\\tan x) = \\sec^2 x$. Worth memorizing.",
+        "**Derivation (optional but good to know).** $\\tan x = \\dfrac{\\sin x}{\\cos x}$. Quotient rule: $\\dfrac{\\cos x \\cdot \\cos x - \\sin x \\cdot (-\\sin x)}{\\cos^2 x} = \\dfrac{\\cos^2 x + \\sin^2 x}{\\cos^2 x} = \\dfrac{1}{\\cos^2 x} = \\sec^2 x$.",
+        "**Evaluate at $x = 0$.** $\\cos(0) = 1$, so $\\sec(0) = 1$, so $\\sec^2(0) = 1$.",
+        "**Interesting coincidence.** Both $\\sin$ AND $\\tan$ have slope 1 at $x = 0$. Reason: near zero, both functions are approximately equal to $x$ itself. The functions diverge at higher $x$, but all start with the same opening slope."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q18",
+      "type": "numeric",
+      "promptTex": "\\text{A vibrating mass moves as }y(t) = 2\\sin(3t)\\text{ meters.}\\\\\\text{What is its MAXIMUM speed (m/s)?}",
+      "answer": 6,
+      "tolerance": 0,
+      "hints": [
+        "Velocity: $y'(t) = 6\\cos(3t)$.",
+        "Maximum value of $\\cos$ is $1$, so max speed $= 6$ m/s."
+      ],
+      "explanation": "Velocity $v(t) = \\dfrac{dy}{dt} = 2 \\cdot 3 \\cos(3t) = 6\\cos(3t)$. The cosine ranges over $[-1, 1]$, so max speed is $6$ m/s. (General SHM rule: max speed $= A\\omega$, where $A$ is amplitude and $\\omega$ is angular frequency. Here $A = 2$, $\\omega = 3$, $A\\omega = 6$.)",
+      "steps": [
+        "**Recognize SHM, apply the universal rule.** For $y = A\\sin(\\omega t)$: max speed $= A\\omega$.",
+        "**Identify $A$ and $\\omega$.** $A = 2$ (amplitude), $\\omega = 3$ (angular frequency).",
+        "**Max speed $= A\\omega = 2 \\cdot 3 = 6$ m/s.**",
+        "**Derivation (in case you forgot the rule).** Differentiate: $v(t) = 2 \\cdot 3\\cos(3t) = 6\\cos(3t)$. Max $|\\cos|$ = 1, so max $|v|$ = 6 m/s.",
+        "**Where the max speed occurs.** When $\\cos(3t) = \\pm 1$, i.e., $3t = 0, \\pi, 2\\pi, \\ldots$. These are the moments when $\\sin(3t) = 0$ — that is, when the mass passes through ZERO displacement. The mass is fastest at the center of its oscillation, slowest at the ends."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q19",
+      "type": "numeric",
+      "promptTex": "y = \\sin(2\\pi f t)\\text{ with }f = 50\\text{ Hz.}\\\\\\text{What is the period }T\\text{ (in seconds)?}",
+      "answer": 0.02,
+      "tolerance": 0.001,
+      "hints": [
+        "Period = $1 / $ frequency.",
+        "$T = 1/50 = 0.02$ s."
+      ],
+      "explanation": "Period and frequency are reciprocals: $T = 1/f$. At $f = 50$ Hz, $T = 0.02$ s = 20 ms. (50 Hz is the European mains-electricity frequency. US uses 60 Hz, period $\\approx 16.7$ ms.)",
+      "steps": [
+        "**Period–frequency relationship.** $T \\cdot f = 1$, so $T = 1/f$. (Frequency $f$ measured in Hz = cycles per second.)",
+        "**Plug in.** $T = 1/50 = 0.02$ s.",
+        "**Real-world note.** 50 Hz is the European mains-electricity frequency; US uses 60 Hz."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q20",
+      "type": "numeric",
+      "promptTex": "y(t) = 0.05\\cos(10t)\\text{ describes a spring's motion.}\\\\\\text{What is its period (in seconds, 3 dp)?}",
+      "answer": 0.628,
+      "tolerance": 0.001,
+      "hints": [
+        "Angular frequency $\\omega = 10$ rad/s.",
+        "$T = 2\\pi/\\omega = 2\\pi/10 \\approx 0.6283$."
+      ],
+      "explanation": "For $y = A\\cos(\\omega t)$, the period is $T = 2\\pi/\\omega$. Here $\\omega = 10$ rad/s, so $T = 2\\pi/10 = \\pi/5 \\approx 0.628$ s.",
+      "steps": [
+        "**Watch out for the two kinds of 'frequency'.** $\\omega$ in $\\cos(\\omega t)$ is *angular frequency* (rad/s). Ordinary frequency $f$ (Hz) is $\\omega/(2\\pi)$. They are NOT the same — out by a factor of $2\\pi$.",
+        "**Period formula in terms of $\\omega$.** $T = \\dfrac{2\\pi}{\\omega}$. (The cosine completes one cycle when its argument increases by $2\\pi$.)",
+        "**Identify $\\omega$.** From $\\cos(10t)$: $\\omega = 10$ rad/s.",
+        "**Compute.** $T = 2\\pi/10 = \\pi/5 \\approx 0.6283$ s.",
+        "**Mental check.** Higher $\\omega$ means faster oscillation, so shorter period. Period is INVERSELY proportional to $\\omega$. ✓"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q21",
+      "type": "numeric",
+      "promptTex": "y(t) = 3\\sin(4t).\\ \\text{What is the MAXIMUM magnitude of acceleration (m/s}^2\\text{)?}",
+      "answer": 48,
+      "tolerance": 0,
+      "hints": [
+        "$y' = 12\\cos(4t)$. $y'' = -48\\sin(4t)$.",
+        "$|\\sin| \\le 1$, so max $|y''| = 48$."
+      ],
+      "explanation": "Differentiate twice: $y'(t) = 12\\cos(4t)$, $y''(t) = -48\\sin(4t)$. Max magnitude of $\\sin$ is 1, so max $|y''| = 48$ m/s². (General SHM rule: max acceleration $= A\\omega^2$. Here $A = 3$, $\\omega = 4$, so $A\\omega^2 = 48$.)",
+      "steps": [
+        "**Universal SHM rule for max acceleration.** $|a|_{\\max} = A \\omega^2$.",
+        "**Identify $A$ and $\\omega$.** $A = 3$, $\\omega = 4$.",
+        "**Apply.** $A \\omega^2 = 3 \\cdot 16 = 48$ m/s².",
+        "**Derivation (in case the formula slipped).** $y'(t) = 12\\cos(4t)$; $y''(t) = -48\\sin(4t)$. Max $|\\sin| = 1$, so max $|y''| = 48$.",
+        "**Where the max acceleration occurs.** When $\\sin(4t) = \\pm 1$, i.e., when $y = \\pm A$ — at the EXTREMES of motion. The mass is yanked back hardest when it's furthest from equilibrium. (Opposite of where max speed occurs.)"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q22",
+      "type": "numeric",
+      "promptTex": "\\text{Small-angle pendulum of length }L = 1\\text{ m, with }g = 9.8\\text{ m/s}^2.\\\\\\text{Its motion satisfies }y'' = -(g/L)\\,y.\\ \\text{What is the period (s, 3 dp)?}",
+      "answer": 2.007,
+      "tolerance": 0.02,
+      "hints": [
+        "Match to SHM: $\\omega^2 = g/L \\Rightarrow \\omega = \\sqrt{g/L}$.",
+        "$\\omega = \\sqrt{9.8} \\approx 3.130$ rad/s.",
+        "$T = 2\\pi/\\omega \\approx 2\\pi/3.130 \\approx 2.007$ s."
+      ],
+      "explanation": "Pendulum (small angle) is SHM with $\\omega^2 = g/L$, so $\\omega = \\sqrt{g/L} = \\sqrt{9.8} \\approx 3.13$ rad/s. Period: $T = 2\\pi/\\omega \\approx 2.007$ s. (Galileo discovered: a 1-m pendulum has a period close to 2 seconds — the basis for 'seconds pendulums' in 17th-century clocks.)",
+      "steps": [
+        "**Recognize the SHM equation.** $y'' = -(g/L) y$ matches the SHM template $y'' = -\\omega^2 y$ with $\\omega^2 = g/L$.",
+        "**Solve for $\\omega$.** $\\omega = \\sqrt{g/L} = \\sqrt{9.8/1} = \\sqrt{9.8}$ rad/s.",
+        "**Compute.** $\\omega \\approx 3.130$ rad/s.",
+        "**Apply period formula.** $T = 2\\pi/\\omega = 2\\pi/3.130 \\approx 2.007$ s.",
+        "**Historical insight.** Galileo (allegedly) noticed in church that a chandelier of length ~1 m swung with a period of about 2 seconds. The 'seconds pendulum' became a 17th-century standard for clocks. Now you know WHY — it falls right out of the simple harmonic motion equation."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q23",
+      "type": "numeric",
+      "promptTex": "\\dfrac{d}{dx}(e^x \\sin x)\\text{ at }x = 0 = ?",
+      "answer": 1,
+      "tolerance": 0,
+      "hints": [
+        "Product rule: $\\dfrac{d}{dx}(e^x \\sin x) = e^x \\sin x + e^x \\cos x = e^x(\\sin x + \\cos x)$.",
+        "At $x = 0$: $1 \\cdot (0 + 1) = 1$."
+      ],
+      "explanation": "Product rule: $(uv)' = u'v + uv'$ with $u = e^x$, $v = \\sin x$. $u' = e^x$, $v' = \\cos x$. Derivative $= e^x \\sin x + e^x \\cos x = e^x(\\sin x + \\cos x)$. At $x = 0$: $1 \\cdot (0 + 1) = 1$.",
+      "steps": [
+        "**Recognize PRODUCT of two non-polynomial functions.** $e^x$ and $\\sin x$ — both transcendental.",
+        "**Product rule.** $(uv)' = u'v + uv'$.",
+        "**Identify.** $u = e^x$ (so $u' = e^x$); $v = \\sin x$ (so $v' = \\cos x$).",
+        "**Apply.** $(e^x \\sin x)' = e^x \\sin x + e^x \\cos x = e^x(\\sin x + \\cos x)$.",
+        "**Evaluate at $x = 0$.** $e^0 = 1$, $\\sin(0) = 0$, $\\cos(0) = 1$. So $1 \\cdot (0 + 1) = 1$.",
+        "**Worth remembering.** Products $e^x \\sin x$, $e^x \\cos x$, $x e^x$, etc. all yield to the product rule. No shortcuts."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q24",
+      "type": "numeric",
+      "promptTex": "\\dfrac{d}{dx}(\\sin(x^2))\\text{ at }x = 1.\\ \\text{(4 dp)}",
+      "answer": 1.0806,
+      "tolerance": 0.005,
+      "hints": [
+        "Chain rule: $\\dfrac{d}{dx}\\sin(x^2) = \\cos(x^2) \\cdot 2x$.",
+        "At $x = 1$: $\\cos(1) \\cdot 2 = 2\\cos(1) \\approx 2 \\cdot 0.5403 \\approx 1.0806$."
+      ],
+      "explanation": "Chain rule: let $u = x^2$, so $\\dfrac{d}{dx}\\sin(u) = \\cos(u) \\cdot u' = \\cos(x^2) \\cdot 2x = 2x\\cos(x^2)$. At $x = 1$: $2\\cos(1) \\approx 2 \\cdot 0.5403 \\approx 1.0806$. (Note: $\\cos(1)$ means cosine of $1$ RADIAN, not $1^\\circ$.)",
+      "steps": [
+        "**Composition: trig of a polynomial.** $\\sin(x^2)$ = sine of $u$, where $u = x^2$. Chain rule.",
+        "**Outer derivative.** $\\dfrac{d}{du}\\sin(u) = \\cos(u)$.",
+        "**Inner derivative.** $\\dfrac{du}{dx} = 2x$.",
+        "**Chain rule combines them.** $\\dfrac{d}{dx}\\sin(x^2) = \\cos(x^2) \\cdot 2x = 2x\\cos(x^2)$.",
+        "**Evaluate at $x = 1$.** $2 \\cdot 1 \\cdot \\cos(1) = 2\\cos(1)$.",
+        "**$\\cos(1)$ means cosine of 1 RADIAN.** ≈ 0.5403. (NOT $\\cos(1^\\circ) \\approx 0.9998$ — that would be wrong.)",
+        "**Final.** $2 \\cdot 0.5403 \\approx 1.0806$."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q25",
+      "type": "multiple-choice",
+      "prompt": "Why does the wave equation $\\dfrac{\\partial^2 y}{\\partial t^2} = v^2 \\dfrac{\\partial^2 y}{\\partial x^2}$ admit traveling sine-wave solutions like $y(x,t) = \\sin(kx - \\omega t)$?",
+      "choices": [
+        "Because every wave is sinusoidal by definition.",
+        "Because differentiating sine twice (in either $t$ or $x$) gives back $-\\sin$ times a constant — so both sides of the equation produce $-\\sin(\\ldots)$ with matching coefficients when $\\omega = vk$.",
+        "Because the equation only has linear terms.",
+        "Because sine is the only function bounded between $-1$ and $1$."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Plug $y = \\sin(kx - \\omega t)$ into both sides and differentiate.",
+        "LHS: $\\partial^2 y / \\partial t^2 = -\\omega^2 \\sin(\\ldots)$.",
+        "RHS: $v^2 \\partial^2 y / \\partial x^2 = -v^2 k^2 \\sin(\\ldots)$.",
+        "Match: $\\omega^2 = v^2 k^2$, i.e., $\\omega = vk$."
+      ],
+      "explanation": "Substituting $y = \\sin(kx - \\omega t)$: $\\partial^2 y/\\partial t^2 = -\\omega^2 \\sin(\\ldots)$ and $\\partial^2 y/\\partial x^2 = -k^2 \\sin(\\ldots)$. The wave equation requires $-\\omega^2 = -v^2 k^2 \\Rightarrow \\omega = vk$ (the dispersion relation). The fact that sine's second derivative is $-\\sin \\cdot $(constant) — the property we proved in the lesson — is precisely what makes sines/cosines work as wave solutions.",
+      "difficulty": "medium"
+    }
+  ]
+}

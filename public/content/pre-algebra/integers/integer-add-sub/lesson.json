@@ -1,0 +1,58 @@
+{
+  "title": "Adding & Subtracting Integers",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "**Integers** are the whole numbers including their negatives: $\\ldots, -3, -2, -1, 0, 1, 2, 3, \\ldots$. Adding and subtracting them is the foundation of everything that comes next."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Picture it on a number line",
+        "Every integer has a spot on the number line. **Adding** moves you along it: a positive number moves you *right*, a negative moves you *left*. Try it below — change the start point and the amount you add, and watch the arrow."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "number-line",
+      "config": {
+        "mode": "integer-arithmetic",
+        "start": 3,
+        "add": 4
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Sign rules: addition",
+        "**Same signs** — add the magnitudes, keep the sign.",
+        "$3 + 5 = 8$ ($+$ and $+$ → $+$).",
+        "$-3 + (-5) = -8$ ($-$ and $-$ → $-$).",
+        "**Different signs** — subtract the smaller magnitude from the larger, keep the sign of the larger.",
+        "$7 + (-3) = 4$ (larger magnitude is positive, so result is positive).",
+        "$-7 + 3 = -4$ (larger magnitude is negative, so result is negative)."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Subtraction = adding the opposite",
+      "body": "$5 - 3 = 5 + (-3) = 2$. The minus sign just flips the sign of the next number, then you add. This means every subtraction is really an addition — and the rules above cover both."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked examples",
+        "$-8 + 3 = -5$. Different signs — subtract magnitudes ($|8| - |3| = 5$), keep the sign of the bigger magnitude (negative).",
+        "$-2 - 7 = -2 + (-7) = -9$. Same signs after rewriting subtraction — add magnitudes ($2 + 7 = 9$), keep the negative sign.",
+        "$5 - (-4) = 5 + 4 = 9$. Subtracting a negative is adding a positive."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "Addition is movement on the number line. **Same signs add; different signs subtract; subtraction is just adding the opposite.** Master these and you'll never have to think hard about them again."
+    }
+  ]
+}

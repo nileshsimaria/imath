@@ -1,0 +1,423 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{For independent events: } P(A \\text{ and } B) = ?",
+      "choices": [
+        "P(A) + P(B)",
+        "P(A) - P(B)",
+        "P(A) \\cdot P(B)",
+        "P(A) / P(B)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "Independent → multiply for AND.",
+        "$P(A) \\cdot P(B)$."
+      ],
+      "explanation": "Independent events: $P(A \\text{ and } B) = P(A) \\cdot P(B)$.",
+      "steps": [
+        "**Independent events** (one doesn't affect the other) → multiply for AND.",
+        "$P(A \\text{ and } B) = P(A) \\cdot P(B)$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{For mutually exclusive events: } P(A \\text{ or } B) = ?",
+      "choices": [
+        "P(A) + P(B)",
+        "P(A) - P(B)",
+        "P(A) \\cdot P(B)",
+        "P(A)/(1-P(B))"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Mutually exclusive → no overlap → just add for OR.",
+        "$P(A) + P(B)$."
+      ],
+      "explanation": "Mutually exclusive events have no overlap, so $P(A \\text{ or } B) = P(A) + P(B)$.",
+      "steps": [
+        "Mutually exclusive: cannot both happen, $P(A \\text{ and } B) = 0$.",
+        "OR rule: $P(A \\text{ or } B) = P(A) + P(B) - P(A \\text{ and } B) = P(A) + P(B) - 0 = P(A) + P(B)$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{Flip a coin and roll a die.} \\\\ P(\\text{H and 4}) = ? \\text{ (round to 3 decimals)}",
+      "answer": 0.083,
+      "tolerance": 0.005,
+      "hints": [
+        "Independent. $P(H) \\cdot P(4) = (1/2)(1/6)$.",
+        "$1/12 \\approx 0.083$."
+      ],
+      "explanation": "$P = (1/2)(1/6) = 1/12 \\approx 0.083$.",
+      "steps": [
+        "Coin and die are independent.",
+        "$P(\\text{H and 4}) = P(\\text{H}) \\cdot P(\\text{4}) = \\dfrac{1}{2} \\cdot \\dfrac{1}{6} = \\dfrac{1}{12}$.",
+        "Decimal: $\\approx 0.083$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Bag: 3 red, 5 blue marbles. Draw 2 } \\textbf{without replacement}. \\\\ P(\\text{both red}) = ?",
+      "choices": [
+        "3/28",
+        "9/64",
+        "6/8",
+        "3/8"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Without replacement: $P(\\text{1st R}) \\cdot P(\\text{2nd R} | \\text{1st R})$.",
+        "$(3/8)(2/7) = 6/56 = 3/28$."
+      ],
+      "explanation": "$P = \\dfrac{3}{8} \\cdot \\dfrac{2}{7} = \\dfrac{6}{56} = \\dfrac{3}{28}$.",
+      "steps": [
+        "Without replacement → second draw depends on first.",
+        "$P(\\text{first R}) = 3/8$.",
+        "After taking one R, only 2 R left out of 7 total: $P(\\text{second R} \\mid \\text{first R}) = 2/7$.",
+        "$P(\\text{both R}) = \\dfrac{3}{8} \\cdot \\dfrac{2}{7} = \\dfrac{6}{56} = \\dfrac{3}{28}$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Bag: 3 red, 5 blue. Draw 2 } \\textbf{with replacement}. \\\\ P(\\text{both red}) = ?",
+      "choices": [
+        "9/64",
+        "3/28",
+        "6/64",
+        "3/64"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "With replacement → independent. $P(R) \\cdot P(R) = (3/8)(3/8)$.",
+        "$9/64$."
+      ],
+      "explanation": "$P = (3/8)^2 = 9/64$.",
+      "steps": [
+        "With replacement → independent (probabilities reset).",
+        "$P(\\text{R}) = 3/8$ each draw.",
+        "$P(\\text{both R}) = \\dfrac{3}{8} \\cdot \\dfrac{3}{8} = \\dfrac{9}{64}$.",
+        "(Compare: with replacement gives a higher probability than without — the second draw isn't 'used up'.)"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{Roll a die. } P(\\text{2 or 5}) = ? \\text{ (decimal, round to 3 places)}",
+      "answer": 0.333,
+      "tolerance": 0.005,
+      "hints": [
+        "Mutually exclusive (can't roll both at once on one die).",
+        "$1/6 + 1/6 = 1/3 \\approx 0.333$."
+      ],
+      "explanation": "$P(\\text{2}) + P(\\text{5}) = 1/6 + 1/6 = 1/3 \\approx 0.333$.",
+      "steps": [
+        "Rolling a 2 and rolling a 5 on a single die are mutually exclusive.",
+        "$P(\\text{2 or 5}) = P(\\text{2}) + P(\\text{5}) = 1/6 + 1/6 = 2/6 = 1/3 \\approx 0.333$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{Card from a 52-deck.} \\\\ P(\\text{heart or face card}) = ? \\text{ (round to 3 decimals)}",
+      "answer": 0.423,
+      "tolerance": 0.01,
+      "hints": [
+        "NOT mutually exclusive! Use general OR: $P(H) + P(F) - P(H \\cap F)$.",
+        "$13/52 + 12/52 - 3/52 = 22/52$."
+      ],
+      "explanation": "$13/52 + 12/52 - 3/52 = 22/52 \\approx 0.423$ (subtract overlap of J, Q, K of hearts).",
+      "steps": [
+        "$P(\\text{heart}) = 13/52$. $P(\\text{face card}) = 12/52$ (J, Q, K of each of 4 suits).",
+        "Overlap: J, Q, K of hearts = 3 cards. $P(\\text{heart and face}) = 3/52$.",
+        "General OR: $P(H \\cup F) = P(H) + P(F) - P(H \\cap F) = 13/52 + 12/52 - 3/52 = 22/52$.",
+        "$\\approx 0.423$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{Flip a coin 4 times. } P(\\text{all heads}) = ? \\text{ (decimal)}",
+      "answer": 0.0625,
+      "tolerance": 0.001,
+      "hints": [
+        "Independent. $(1/2)^4 = 1/16$.",
+        "$0.0625$."
+      ],
+      "explanation": "$(1/2)^4 = 1/16 = 0.0625$.",
+      "steps": [
+        "All 4 flips independent: multiply.",
+        "$(1/2)^4 = 1/16 = 0.0625$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{Flip a coin 4 times. } P(\\text{at least one tail}) = ? \\text{ (decimal, 4 decimals)}",
+      "answer": 0.9375,
+      "tolerance": 0.001,
+      "hints": [
+        "Use complement: $1 - P(\\text{all H}) = 1 - 1/16$.",
+        "$0.9375$."
+      ],
+      "explanation": "$1 - (1/2)^4 = 1 - 1/16 = 15/16 = 0.9375$.",
+      "steps": [
+        "Complement: $P(\\text{at least one T}) = 1 - P(\\text{no T}) = 1 - P(\\text{all H})$.",
+        "$P(\\text{all H}) = (1/2)^4 = 1/16$.",
+        "$P(\\geq 1\\, T) = 1 - 1/16 = 15/16 = 0.9375$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q10",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Are 'rolling a 2' and 'rolling an even number' mutually exclusive?}",
+      "choices": [
+        "Yes",
+        "No"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Rolling a 2 IS rolling an even number.",
+        "Both can happen — same outcome!"
+      ],
+      "explanation": "Rolling a 2 satisfies BOTH events. Not mutually exclusive.",
+      "steps": [
+        "Mutually exclusive = cannot both happen.",
+        "If you roll a 2, then 'roll a 2' and 'roll an even number' both happen simultaneously.",
+        "**Not mutually exclusive.**"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{Bag: 4 red, 6 blue. Draw 3 with replacement.} \\\\ P(\\text{exactly 3 reds}) = ? \\text{ (decimal, 4 places)}",
+      "answer": 0.064,
+      "tolerance": 0.001,
+      "hints": [
+        "With replacement → independent. $(4/10)^3$.",
+        "$0.4^3 = 0.064$."
+      ],
+      "explanation": "$(4/10)^3 = 0.4^3 = 0.064$.",
+      "steps": [
+        "With replacement → each draw independent, $P(\\text{R}) = 4/10 = 0.4$.",
+        "All 3 red: $0.4 \\cdot 0.4 \\cdot 0.4 = 0.4^3 = 0.064$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\text{Card from a deck.} \\\\ P(\\text{red card or queen}) = ? \\text{ (round to 3 decimals)}",
+      "answer": 0.538,
+      "tolerance": 0.01,
+      "hints": [
+        "P(red) = 26/52, P(Q) = 4/52. Overlap (red queens): 2/52.",
+        "$26/52 + 4/52 - 2/52 = 28/52$."
+      ],
+      "explanation": "$P = 26/52 + 4/52 - 2/52 = 28/52 \\approx 0.538$.",
+      "steps": [
+        "$P(\\text{red}) = 26/52$ (hearts + diamonds).",
+        "$P(\\text{queen}) = 4/52$ (one in each suit).",
+        "Overlap (red queens): 2/52 (queen of hearts, queen of diamonds).",
+        "$P(\\text{red or queen}) = 26/52 + 4/52 - 2/52 = 28/52 = 7/13 \\approx 0.538$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q13",
+      "type": "multiple-choice",
+      "prompt": "For ANY two events A and B (independent or not), what is the correct formula for P(A and B)?",
+      "choices": [
+        "P(A) · P(B) — always",
+        "P(A) + P(B) − P(A or B)",
+        "P(A) · P(B | A) — the GENERAL multiplication rule",
+        "P(A) / P(B)"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "$P(A) \\cdot P(B)$ only works for INDEPENDENT events.",
+        "The general formula uses CONDITIONAL probability $P(B \\mid A)$.",
+        "$P(A \\cap B) = P(A) \\cdot P(B \\mid A)$."
+      ],
+      "explanation": "The general multiplication rule: $P(A \\cap B) = P(A) \\cdot P(B \\mid A)$. The $P(B \\mid A)$ ('probability of B given A') captures whether A's occurrence affects B. When events are *independent*, $P(B \\mid A) = P(B)$ and the formula reduces to the familiar $P(A) \\cdot P(B)$.",
+      "steps": [
+        "**Universal vs special case.** The general multiplication rule works for ANY two events: $P(A \\cap B) = P(A) \\cdot P(B \\mid A)$.",
+        "**What is $P(B \\mid A)$?** 'Probability of $B$ GIVEN that $A$ has occurred.' It re-scopes the sample space to outcomes where $A$ happened.",
+        "**Special case — independence.** Events are independent ⇔ $P(B \\mid A) = P(B)$ (knowing $A$ doesn't change $B$'s probability). Then $P(A \\cap B) = P(A) \\cdot P(B)$.",
+        "**Why this generalizes.** With replacement → independent → multiply. Without replacement → dependent → must use $P(B \\mid A)$. Same single formula handles both.",
+        "**Pattern lesson.** Whenever the second event's probability *depends* on the first, use $P(A) \\cdot P(B \\mid A)$. This is the bridge from compound events to *conditional probability* — the next topic."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q14",
+      "type": "numeric",
+      "promptTex": "\\text{Roll a fair die } 3 \\text{ times.} \\\\ P(\\text{all three rolls are different}) = ? \\\\ \\text{Round to 3 decimals.}",
+      "answer": 0.556,
+      "tolerance": 0.005,
+      "hints": [
+        "First roll: any value (prob 1).",
+        "Second roll must differ from first: $5/6$.",
+        "Third roll must differ from first two: $4/6$.",
+        "$1 \\cdot (5/6) \\cdot (4/6) = 20/36 = 5/9 \\approx 0.556$."
+      ],
+      "explanation": "Roll-by-roll: the first roll can be anything ($p = 1$). The second must differ from the first ($5$ of $6$ values work, $p = 5/6$). The third must differ from the first two ($4$ of $6$ values, $p = 4/6$). Multiply: $1 \\cdot (5/6) \\cdot (4/6) = 20/36 = 5/9 \\approx 0.556$.",
+      "steps": [
+        "**Recognize the type — sequential compound event.** Three rolls in order; condition successively on each previous roll.",
+        "**Roll 1: any value.** $p_1 = 1$ (no constraint yet).",
+        "**Roll 2: must differ from roll 1.** $5$ of $6$ values work. $p_2 = 5/6$.",
+        "**Roll 3: must differ from rolls 1 and 2.** $4$ of $6$ values work. $p_3 = 4/6$.",
+        "**Multiply (chain rule).** $P(\\text{all different}) = 1 \\cdot \\dfrac{5}{6} \\cdot \\dfrac{4}{6} = \\dfrac{20}{36} = \\dfrac{5}{9} \\approx 0.556$.",
+        "**Sanity check.** Roughly half — feels right for 3 rolls with 6 possible values. (Compare: 4 rolls all different $= 1 \\cdot 5/6 \\cdot 4/6 \\cdot 3/6 \\approx 0.278$; 5 rolls $\\approx 0.0926$; 7 rolls is impossible since only 6 distinct values exist.)"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q15",
+      "type": "numeric",
+      "promptTex": "\\text{Flip a fair coin } 5 \\text{ times.} \\\\ P(\\text{exactly 3 heads}) = ? \\\\ \\text{Round to 4 decimals.}",
+      "answer": 0.3125,
+      "tolerance": 0.001,
+      "hints": [
+        "Choose which 3 of 5 flips are heads: $\\binom{5}{3} = 10$ ways.",
+        "Each specific sequence has probability $(1/2)^5 = 1/32$.",
+        "$P = 10 \\cdot 1/32 = 10/32 = 5/16 = 0.3125$."
+      ],
+      "explanation": "Two ingredients: (1) count the number of arrangements with exactly 3 heads = $\\binom{5}{3} = 10$. (2) each such arrangement has probability $(1/2)^5 = 1/32$. Multiply: $10/32 = 5/16 = 0.3125$. This is the binomial formula in action.",
+      "steps": [
+        "**Recognize the type — binomial.** We want exactly $k$ successes (heads) in $n$ independent trials. Two ingredients: how many ways the successes can be arranged, and the probability of each arrangement.",
+        "**Count arrangements.** $\\binom{5}{3} = 10$ ways to choose which 3 of the 5 flips are heads: $\\{HHHTT, HHTHT, HHTTH, HTHHT, HTHTH, HTTHH, THHHT, THHTH, THTHH, TTHHH\\}$.",
+        "**Probability of each arrangement.** Each specific sequence of 3 H's and 2 T's has probability $(1/2)^3 \\cdot (1/2)^2 = (1/2)^5 = 1/32$.",
+        "**Multiply.** $P(\\text{exactly 3 H}) = \\binom{5}{3} \\cdot (1/2)^5 = 10/32 = 5/16 = 0.3125$.",
+        "**General binomial.** $P(\\text{exactly } k \\text{ heads in } n \\text{ flips}) = \\binom{n}{k} \\cdot p^k \\cdot (1-p)^{n-k}$ where $p$ is the per-flip head probability. This formula governs an enormous range of phenomena: defective items in batches, survey responses, particle decay."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q16",
+      "type": "numeric",
+      "promptTex": "\\text{Draw } 5 \\text{ cards from a deck, WITH replacement.} \\\\ P(\\text{at least one ace}) = ? \\\\ \\text{Round to 4 decimals.}",
+      "answer": 0.3283,
+      "tolerance": 0.005,
+      "hints": [
+        "Use complement: $1 - P(\\text{no aces in 5 draws})$.",
+        "Per draw: $P(\\text{not ace}) = 48/52 = 12/13$.",
+        "$P(\\text{no aces in 5}) = (12/13)^5 \\approx 0.6717$.",
+        "$P(\\geq 1\\, \\text{ace}) = 1 - 0.6717 = 0.3283$."
+      ],
+      "explanation": "Complement strategy. $P(\\text{not ace per draw}) = 48/52 = 12/13$. With replacement → independent. $P(\\text{no aces in 5}) = (12/13)^5 \\approx 0.6717$. So $P(\\geq 1\\, \\text{ace}) = 1 - 0.6717 \\approx 0.3283$.",
+      "steps": [
+        "**Recognize the type — 'at least one'.** Complement is much easier than directly enumerating 1 ace, 2 aces, 3 aces, 4 aces, 5 aces.",
+        "**Complement.** $P(\\geq 1\\,\\text{ace}) = 1 - P(\\text{no aces in any of 5 draws})$.",
+        "**Per-draw 'not ace'.** $48$ non-aces out of $52$ cards: $P(\\text{not ace}) = 48/52 = 12/13$.",
+        "**Five independent draws (with replacement).** $P(\\text{no aces in 5}) = (12/13)^5 \\approx 0.6717$.",
+        "**Take complement.** $P(\\geq 1\\,\\text{ace}) = 1 - 0.6717 \\approx 0.3283$.",
+        "**Pattern lesson — 'at least one' problems.** Almost always solve via complement: $P(\\geq 1) = 1 - P(0)$. Direct enumeration multiplies the work by many cases; complement collapses it to one."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q17",
+      "type": "numeric",
+      "promptTex": "\\text{Three INDEPENDENT events each have probability } 0.7. \\\\ P(\\text{all three happen}) = ?",
+      "answer": 0.343,
+      "tolerance": 0.001,
+      "hints": [
+        "Independent ⇒ multiply.",
+        "$0.7 \\cdot 0.7 \\cdot 0.7 = 0.343$."
+      ],
+      "explanation": "For independent events, $P(A \\cap B \\cap C) = P(A) \\cdot P(B) \\cdot P(C) = 0.7^3 = 0.343$.",
+      "steps": [
+        "**Independence ⇒ multiply.** For independent $A, B, C$: $P(A \\cap B \\cap C) = P(A) \\cdot P(B) \\cdot P(C)$.",
+        "**Plug in.** $P = 0.7 \\cdot 0.7 \\cdot 0.7 = 0.7^3 = 0.343$.",
+        "**Compare to a single event.** Each event alone has probability $0.7$ (likely). But all three happening drops to $0.343$ — less than half. Independent events compound multiplicatively, and probabilities below 1 shrink fast.",
+        "**Real-world intuition.** Reliability engineering: a system needs three independent components to succeed (each with $70\\%$ reliability), system reliability is $34.3\\%$. To get high system reliability, you need REDUNDANCY, not more independent steps."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q18",
+      "type": "numeric",
+      "promptTex": "\\text{A random 4-bit binary string (each bit independently 0 or 1 with probability 1/2) is chosen.} \\\\ P(\\text{at least 2 ones}) = ? \\\\ \\text{Give an exact decimal.}",
+      "answer": 0.6875,
+      "tolerance": 0.001,
+      "hints": [
+        "Complement: $1 - P(0 \\text{ ones}) - P(1 \\text{ one})$.",
+        "$P(0 \\text{ ones}) = (1/2)^4 = 1/16$.",
+        "$P(1 \\text{ one}) = \\binom{4}{1}(1/2)^4 = 4/16$.",
+        "$P(\\geq 2) = 1 - 1/16 - 4/16 = 11/16 = 0.6875$."
+      ],
+      "explanation": "Smaller count via complement: $P(\\geq 2) = 1 - P(0) - P(1)$. $P(0\\, \\text{ones}) = (1/2)^4 = 1/16$. $P(1\\, \\text{one}) = \\binom{4}{1}(1/2)^4 = 4/16$. So $P(\\geq 2) = 1 - 5/16 = 11/16 = 0.6875$.",
+      "steps": [
+        "**Recognize the type.** Counting strings with at least $k$ ones — easier to exclude the small cases ($0$ ones, $1$ one) and complement.",
+        "**Total possibilities.** $2^4 = 16$ equally likely 4-bit strings.",
+        "**Count exclusions.** $0$ ones: just $\\{0000\\}$, 1 outcome. $1$ one: pick which position is the $1$ — $\\binom{4}{1} = 4$ outcomes.",
+        "**Subtract from 1.** $P(\\geq 2\\, \\text{ones}) = 1 - \\dfrac{1 + 4}{16} = \\dfrac{11}{16} = 0.6875$.",
+        "**Direct verification.** $P(\\geq 2) = P(2) + P(3) + P(4) = \\binom{4}{2}/16 + \\binom{4}{3}/16 + \\binom{4}{4}/16 = 6/16 + 4/16 + 1/16 = 11/16$ ✓."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q19",
+      "type": "numeric",
+      "promptTex": "\\text{Bag: 3 red, 5 blue. Draw 2 WITHOUT replacement.} \\\\ P(\\text{at least one red}) = ? \\\\ \\text{Round to 3 decimals.}",
+      "answer": 0.643,
+      "tolerance": 0.005,
+      "hints": [
+        "Complement: $1 - P(\\text{both blue})$.",
+        "Without replacement: $P(\\text{both blue}) = (5/8) \\cdot (4/7) = 20/56 = 5/14$.",
+        "$P(\\geq 1\\, R) = 1 - 5/14 = 9/14 \\approx 0.643$."
+      ],
+      "explanation": "Complement: $1 - P(\\text{both blue})$. Without replacement, $P(\\text{both blue}) = \\dfrac{5}{8} \\cdot \\dfrac{4}{7} = \\dfrac{20}{56} = \\dfrac{5}{14}$. So $P(\\geq 1\\, R) = 1 - 5/14 = 9/14 \\approx 0.643$.",
+      "steps": [
+        "**Recognize 'at least one' → complement.** $P(\\geq 1\\, R) = 1 - P(\\text{no reds in 2 draws}) = 1 - P(\\text{both blue})$.",
+        { "svg": "<svg viewBox=\"0 0 280 220\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"30\" cy=\"110\" r=\"6\" fill=\"#1e293b\"/><text x=\"24\" y=\"104\" font-size=\"10\" fill=\"#0f172a\" font-weight=\"600\" text-anchor=\"end\">start</text><line x1=\"36\" y1=\"107\" x2=\"100\" y2=\"60\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><line x1=\"36\" y1=\"113\" x2=\"100\" y2=\"160\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><circle cx=\"108\" cy=\"55\" r=\"6\" fill=\"#dc2626\"/><circle cx=\"108\" cy=\"165\" r=\"6\" fill=\"#2563eb\"/><text x=\"60\" y=\"75\" font-size=\"11\" fill=\"#dc2626\" font-weight=\"700\">3/8 R</text><text x=\"60\" y=\"148\" font-size=\"11\" fill=\"#2563eb\" font-weight=\"700\">5/8 B</text><line x1=\"114\" y1=\"50\" x2=\"200\" y2=\"30\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><line x1=\"114\" y1=\"60\" x2=\"200\" y2=\"85\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><line x1=\"114\" y1=\"160\" x2=\"200\" y2=\"135\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><line x1=\"114\" y1=\"170\" x2=\"200\" y2=\"195\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"144\" y=\"32\" font-size=\"10\" fill=\"#dc2626\" font-weight=\"600\">2/7 R</text><text x=\"144\" y=\"83\" font-size=\"10\" fill=\"#2563eb\" font-weight=\"600\">5/7 B</text><text x=\"144\" y=\"135\" font-size=\"10\" fill=\"#dc2626\" font-weight=\"600\">3/7 R</text><text x=\"144\" y=\"199\" font-size=\"10\" fill=\"#2563eb\" font-weight=\"600\">4/7 B</text><text x=\"208\" y=\"34\" font-size=\"10\" fill=\"#0f172a\">RR: 6/56</text><text x=\"208\" y=\"87\" font-size=\"10\" fill=\"#0f172a\">RB: 15/56</text><text x=\"208\" y=\"137\" font-size=\"10\" fill=\"#0f172a\">BR: 15/56</text><text x=\"208\" y=\"201\" font-size=\"11\" fill=\"#0f172a\" font-weight=\"700\">BB: 20/56</text><text x=\"12\" y=\"215\" font-size=\"10\" fill=\"#475569\" font-style=\"italic\">conditional probabilities change after first draw (no replacement)</text></svg>" },
+        "**Compute $P(\\text{both blue})$ — the chain rule.** $P(\\text{1st B}) = 5/8$. After removing one blue, the bag has $3$ R and $4$ B (total $7$). $P(\\text{2nd B} \\mid \\text{1st B}) = 4/7$. Multiply: $P(\\text{both B}) = \\dfrac{5}{8} \\cdot \\dfrac{4}{7} = \\dfrac{20}{56} = \\dfrac{5}{14}$.",
+        "**Take complement.** $P(\\geq 1\\, R) = 1 - \\dfrac{5}{14} = \\dfrac{9}{14} \\approx 0.643$.",
+        "**Why complement is easier than direct.** Direct: $P(\\geq 1\\, R) = P(\\text{exactly 1 R}) + P(\\text{exactly 2 R}) = (RR) + (RB) + (BR) = 6/56 + 15/56 + 15/56 = 36/56 = 9/14$ ✓. Three cases vs. one — complement wins.",
+        "**Pattern lesson.** The 'both blue' chain rule is the same general multiplication rule from Q13: $P(B_1 \\cap B_2) = P(B_1) \\cdot P(B_2 \\mid B_1)$. Without replacement → dependent → must use the conditional form."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q20",
+      "type": "numeric",
+      "promptTex": "\\text{Two fair dice are rolled.} \\\\ P(\\text{sum is at least 9}) = ? \\\\ \\text{Round to 3 decimals.}",
+      "answer": 0.278,
+      "tolerance": 0.005,
+      "hints": [
+        "Count ordered pairs $(i, j)$ with $i + j \\geq 9$.",
+        "Sums of 9, 10, 11, 12: 4 + 3 + 2 + 1 = 10 pairs.",
+        "$P = 10/36 = 5/18 \\approx 0.278$."
+      ],
+      "explanation": "Count the cells in the 6×6 grid with $i + j \\geq 9$. Sum 9: $(3,6), (4,5), (5,4), (6,3) = 4$. Sum 10: $(4,6), (5,5), (6,4) = 3$. Sum 11: $(5,6), (6,5) = 2$. Sum 12: $(6,6) = 1$. Total $10$ pairs out of $36$. $P = 10/36 = 5/18 \\approx 0.278$.",
+      "steps": [
+        "**Use the 6×6 grid sample space.** All 36 ordered pairs equally likely.",
+        { "svg": "<svg viewBox=\"0 0 280 220\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"140\" y=\"18\" font-size=\"11\" fill=\"#475569\" font-style=\"italic\" text-anchor=\"middle\">die 2 →</text><text x=\"12\" y=\"110\" font-size=\"11\" fill=\"#475569\" font-style=\"italic\" text-anchor=\"middle\" transform=\"rotate(-90 12 110)\">die 1 →</text><text x=\"63\" y=\"36\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">1</text><text x=\"96\" y=\"36\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">2</text><text x=\"129\" y=\"36\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">3</text><text x=\"162\" y=\"36\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">4</text><text x=\"195\" y=\"36\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">5</text><text x=\"228\" y=\"36\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">6</text><text x=\"35\" y=\"60\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">1</text><text x=\"35\" y=\"83\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">2</text><text x=\"35\" y=\"106\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">3</text><text x=\"35\" y=\"129\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">4</text><text x=\"35\" y=\"152\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">5</text><text x=\"35\" y=\"175\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">6</text><rect x=\"48\" y=\"43\" width=\"196\" height=\"138\" fill=\"#fef3c7\" stroke=\"#94a3b8\" stroke-width=\"0.7\"/><rect x=\"180\" y=\"112\" width=\"33\" height=\"23\" fill=\"#86efac\" stroke=\"#16a34a\" stroke-width=\"1.2\"/><rect x=\"213\" y=\"89\" width=\"33\" height=\"23\" fill=\"#86efac\" stroke=\"#16a34a\" stroke-width=\"1.2\"/><rect x=\"147\" y=\"135\" width=\"33\" height=\"23\" fill=\"#86efac\" stroke=\"#16a34a\" stroke-width=\"1.2\"/><rect x=\"180\" y=\"135\" width=\"33\" height=\"23\" fill=\"#86efac\" stroke=\"#16a34a\" stroke-width=\"1.2\"/><rect x=\"213\" y=\"112\" width=\"33\" height=\"23\" fill=\"#86efac\" stroke=\"#16a34a\" stroke-width=\"1.2\"/><rect x=\"114\" y=\"158\" width=\"33\" height=\"23\" fill=\"#86efac\" stroke=\"#16a34a\" stroke-width=\"1.2\"/><rect x=\"147\" y=\"158\" width=\"33\" height=\"23\" fill=\"#86efac\" stroke=\"#16a34a\" stroke-width=\"1.2\"/><rect x=\"180\" y=\"158\" width=\"33\" height=\"23\" fill=\"#86efac\" stroke=\"#16a34a\" stroke-width=\"1.2\"/><rect x=\"213\" y=\"158\" width=\"33\" height=\"23\" fill=\"#86efac\" stroke=\"#16a34a\" stroke-width=\"1.2\"/><rect x=\"213\" y=\"135\" width=\"33\" height=\"23\" fill=\"#86efac\" stroke=\"#16a34a\" stroke-width=\"1.2\"/><line x1=\"48\" y1=\"66\" x2=\"244\" y2=\"66\" stroke=\"#94a3b8\" stroke-width=\"0.5\"/><line x1=\"48\" y1=\"89\" x2=\"244\" y2=\"89\" stroke=\"#94a3b8\" stroke-width=\"0.5\"/><line x1=\"48\" y1=\"112\" x2=\"244\" y2=\"112\" stroke=\"#94a3b8\" stroke-width=\"0.5\"/><line x1=\"48\" y1=\"135\" x2=\"244\" y2=\"135\" stroke=\"#94a3b8\" stroke-width=\"0.5\"/><line x1=\"48\" y1=\"158\" x2=\"244\" y2=\"158\" stroke=\"#94a3b8\" stroke-width=\"0.5\"/><line x1=\"81\" y1=\"43\" x2=\"81\" y2=\"181\" stroke=\"#94a3b8\" stroke-width=\"0.5\"/><line x1=\"114\" y1=\"43\" x2=\"114\" y2=\"181\" stroke=\"#94a3b8\" stroke-width=\"0.5\"/><line x1=\"147\" y1=\"43\" x2=\"147\" y2=\"181\" stroke=\"#94a3b8\" stroke-width=\"0.5\"/><line x1=\"180\" y1=\"43\" x2=\"180\" y2=\"181\" stroke=\"#94a3b8\" stroke-width=\"0.5\"/><line x1=\"213\" y1=\"43\" x2=\"213\" y2=\"181\" stroke=\"#94a3b8\" stroke-width=\"0.5\"/><text x=\"30\" y=\"203\" font-size=\"11\" fill=\"#16a34a\" font-style=\"italic\">10 of 36 cells have sum ≥ 9</text></svg>" },
+        "**Count by sum value.** Sum 9: $(3,6), (4,5), (5,4), (6,3) = 4$. Sum 10: $(4,6), (5,5), (6,4) = 3$. Sum 11: $(5,6), (6,5) = 2$. Sum 12: $(6,6) = 1$. Total $= 10$.",
+        "**Probability.** $P = 10/36 = 5/18 \\approx 0.278$.",
+        "**Symmetric check.** By symmetry, $P(\\text{sum} \\leq 5) = P(\\text{sum} \\geq 9) = 10/36$ (the distribution is symmetric around the median 7). And $P(\\text{sum} = 7) = 6/36$, plus $P(\\text{sum} = 6\\,\\text{or}\\, 8) = 10/36$. Verify: $10 + 10 + 6 + 10 = 36$ ✓."
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

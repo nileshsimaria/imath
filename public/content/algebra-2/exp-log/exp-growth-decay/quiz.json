@@ -1,0 +1,590 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "y = 5 \\cdot 3^x. \\\\ \\text{This function exhibits:}",
+      "choices": [
+        "Growth",
+        "Decay",
+        "No change",
+        "Cannot determine"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Look at the base.",
+        "$b = 3 > 1$ → growth."
+      ],
+      "explanation": "Base $b = 3 > 1$ → exponential **growth**. Each step multiplies $y$ by $3$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "y = 100 \\cdot (0.5)^x. \\\\ \\text{This function exhibits:}",
+      "choices": [
+        "Growth",
+        "Decay",
+        "No change",
+        "Linear behavior"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Base is $0.5$, between $0$ and $1$.",
+        "Multiplying by a fraction shrinks values."
+      ],
+      "explanation": "Base $b = 0.5$ is between $0$ and $1$ → exponential **decay**. Values halve each step.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "y = 4 \\cdot 2^x. \\\\ \\text{What is } y \\text{ when } x = 0?",
+      "answer": 4,
+      "tolerance": 0,
+      "hints": [
+        "$2^0 = 1$.",
+        "$y = 4 \\cdot 1 = 4$."
+      ],
+      "explanation": "$y(0) = 4 \\cdot 2^0 = 4 \\cdot 1 = 4$. The y-intercept is always $a$ — the starting value.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{A population doubles every year. If it starts at 50, what is it after 4 years?}",
+      "answer": 800,
+      "tolerance": 0,
+      "hints": [
+        "Model: $P = 50 \\cdot 2^t$.",
+        "$P(4) = 50 \\cdot 2^4 = 50 \\cdot 16$."
+      ],
+      "explanation": "$P(t) = 50 \\cdot 2^t$. $P(4) = 50 \\cdot 16 = 800$. Doubling four times: $50 \\to 100 \\to 200 \\to 400 \\to 800$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** Model: $P = 50 \\cdot 2^t$."
+        },
+        {
+          "text": "$P(4) = 50 \\cdot 2^4 = 50 \\cdot 16$."
+        },
+        {
+          "text": "**Solution.** $P(t) = 50 \\cdot 2^t$. $P(4) = 50 \\cdot 16 = 800$. Doubling four times: $50 \\to 100 \\to 200 \\to 400 \\to 800$."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The natural exponential base } e \\text{ is approximately:}",
+      "choices": [
+        "2.718",
+        "3.141",
+        "1.618",
+        "0.577"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "$e$ is famous in math.",
+        "Not π (3.14...) and not the golden ratio."
+      ],
+      "explanation": "$e \\approx 2.71828$. It's the limit of $(1 + \\frac{1}{n})^n$ as $n \\to \\infty$ and the natural base for continuously compounded growth.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Compound interest: \\$2000 invested at 5\\% annual rate, compounded yearly,} \\\\ \\text{for 10 years. Final balance (round to nearest dollar)?}",
+      "answer": 3258,
+      "tolerance": 5,
+      "hints": [
+        "$A = P(1 + r)^t = 2000(1.05)^{10}$.",
+        "$1.05^{10} \\approx 1.6289$. $2000 \\cdot 1.6289 \\approx 3258$."
+      ],
+      "explanation": "$A = 2000(1.05)^{10} \\approx 2000 \\cdot 1.6289 \\approx \\$3258$.",
+      "steps": [
+        "Compound interest formula: $A = P(1 + r)^t$.",
+        "Substitute: $A = 2000(1 + 0.05)^{10} = 2000(1.05)^{10}$.",
+        "Compute $(1.05)^{10} \\approx 1.6289$.",
+        "$A \\approx 2000 \\cdot 1.6289 \\approx \\$3258$."
+      ],
+      "id": "q6",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Half-life of a radioactive substance is } 5 \\text{ years.} \\\\ \\text{Starting with } 100 \\text{ g, how much remains after } 15 \\text{ years?}",
+      "answer": 12.5,
+      "tolerance": 0.1,
+      "hints": [
+        "$15$ years = $3$ half-lives.",
+        "Each half-life cuts in half: $100 \\to 50 \\to 25 \\to 12.5$."
+      ],
+      "explanation": "$15 / 5 = 3$ half-lives. $100 / 2^3 = 100/8 = 12.5$ g.",
+      "steps": [
+        "Number of half-lives in 15 years: $15 / 5 = 3$.",
+        "After each half-life, the amount halves.",
+        "After 3 half-lives: $100 \\cdot \\left(\\dfrac{1}{2}\\right)^3 = \\dfrac{100}{8} = 12.5$ g.",
+        "(Or use formula: $A = A_0 \\cdot (1/2)^{t/T} = 100 \\cdot (0.5)^3 = 12.5$.)"
+      ],
+      "id": "q7",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A bacterial culture doubles every 3 hours. Starting with } 200 \\text{ bacteria,} \\\\ \\text{how many after 12 hours?}",
+      "answer": 3200,
+      "tolerance": 0,
+      "hints": [
+        "12 hours = 4 doubling periods.",
+        "$200 \\cdot 2^4 = 200 \\cdot 16 = 3200$."
+      ],
+      "explanation": "$12 / 3 = 4$ doublings. $200 \\cdot 2^4 = 200 \\cdot 16 = 3200$.",
+      "steps": [
+        "Doubling periods: $12 / 3 = 4$.",
+        "Each doubling: × 2.",
+        "After 4: $200 \\cdot 2^4 = 200 \\cdot 16 = 3200$ bacteria."
+      ],
+      "id": "q8",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Continuous compounding: \\$1000 at 4\\% rate for 5 years.} \\\\ \\text{Use } A = Pe^{rt}, e \\approx 2.71828. \\text{ Find } A \\text{ (nearest dollar).}",
+      "answer": 1221,
+      "tolerance": 2,
+      "hints": [
+        "$A = 1000 \\cdot e^{0.04 \\cdot 5} = 1000 \\cdot e^{0.2}$.",
+        "$e^{0.2} \\approx 1.2214$. $A \\approx 1221$."
+      ],
+      "explanation": "$A = 1000 e^{0.2} \\approx 1000 \\cdot 1.2214 \\approx \\$1221$.",
+      "steps": [
+        "Continuous compounding: $A = Pe^{rt}$.",
+        "$A = 1000 \\cdot e^{0.04 \\cdot 5} = 1000 \\cdot e^{0.2}$.",
+        "Compute $e^{0.2} \\approx 1.2214$.",
+        "$A \\approx 1000 \\cdot 1.2214 \\approx \\$1221$."
+      ],
+      "id": "q9",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{A population decays at 10\\% per year. After 5 years, what fraction remains?}",
+      "choices": [
+        "(0.9)^5 \\approx 0.59",
+        "(0.1)^5 \\approx 0.00001",
+        "1 - 0.5 = 0.5",
+        "(0.95)^5 \\approx 0.77"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "10% decay → 90% remains each year. Decay factor 0.9.",
+        "$0.9^5 \\approx 0.59$ → about 59% remains."
+      ],
+      "explanation": "Decay factor $= 1 - 0.10 = 0.9$. After 5 years: $(0.9)^5 \\approx 0.5905$ ≈ 59% remains.",
+      "steps": [
+        "Decay rate $10\\%$ → keeps $90\\%$ each year. Decay factor $= 0.9$.",
+        "After 5 years: amount $= P \\cdot (0.9)^5$.",
+        "$(0.9)^5 \\approx 0.5905$.",
+        "About **59%** of the original remains."
+      ],
+      "id": "q10",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{An investment doubles every 7 years.} \\\\ \\text{Starting with \\$5000, what is the value after 21 years?}",
+      "answer": 40000,
+      "tolerance": 0,
+      "hints": [
+        "21 / 7 = 3 doublings.",
+        "$5000 \\cdot 2^3 = 5000 \\cdot 8 = 40000$."
+      ],
+      "explanation": "$5000 \\cdot 2^{21/7} = 5000 \\cdot 2^3 = 5000 \\cdot 8 = \\$40{,}000$.",
+      "steps": [
+        "Doublings in 21 years: $21 / 7 = 3$.",
+        "$\\$5000 \\cdot 2^3 = \\$5000 \\cdot 8 = \\$40{,}000$."
+      ],
+      "id": "q11",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which is a } \\textbf{decay} \\text{ function?}",
+      "choices": [
+        "y = 100 \\cdot (0.7)^x",
+        "y = 100 \\cdot (1.3)^x",
+        "y = 100 + 5x",
+        "y = 100 \\cdot 2^x"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Decay: base between 0 and 1.",
+        "$0.7$ is between 0 and 1 → decay."
+      ],
+      "explanation": "$y = 100(0.7)^x$ has base $0.7 < 1$ → exponential decay.",
+      "steps": [
+        "Exponential function form: $y = a \\cdot b^x$.",
+        "If $0 < b < 1$: **decay**.",
+        "If $b > 1$: growth.",
+        "Option 1: $b = 0.7$ → **decay** ✓.",
+        "Other options: $b = 1.3$ (growth), $b = 2$ (growth), or linear (not exponential)."
+      ],
+      "id": "q12",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Solve for all real } x: \\quad 4^x - 5 \\cdot 2^x + 4 = 0. \\\\ \\text{(Enter the SUM of the solutions.)}",
+      "answer": 2,
+      "tolerance": 0,
+      "hints": [
+        "Notice $4^x = (2^x)^2$. Substitute $u = 2^x$ to get a quadratic in $u$.",
+        "$u^2 - 5u + 4 = 0 \\Rightarrow u = 1$ or $u = 4$, then back-solve for $x$."
+      ],
+      "explanation": "Let $u = 2^x$. Then $4^x = u^2$, so $u^2 - 5u + 4 = 0 \\Rightarrow (u-1)(u-4) = 0 \\Rightarrow u = 1$ or $u = 4$. Back-substitute: $2^x = 1 \\Rightarrow x = 0$; $2^x = 4 \\Rightarrow x = 2$. Sum $= 0 + 2 = 2$.",
+      "steps": [
+        "Substitute $u = 2^x$. Then $4^x = u^2$.",
+        "Equation becomes $u^2 - 5u + 4 = 0 \\Rightarrow (u - 1)(u - 4) = 0$.",
+        "Back-substitute: $2^x = 1 \\Rightarrow x = 0$; $2^x = 4 \\Rightarrow x = 2$.",
+        "Sum of solutions: $0 + 2 = 2$."
+      ],
+      "id": "q13",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Solve for } x: \\quad 9^x + 3^{x+1} - 4 = 0.",
+      "answer": 0,
+      "tolerance": 0,
+      "hints": [
+        "Rewrite in base $3$: $9^x = (3^x)^2$ and $3^{x+1} = 3 \\cdot 3^x$.",
+        "Substitute $u = 3^x$: $u^2 + 3u - 4 = 0$. Reject the negative root (an exponential is always positive)."
+      ],
+      "explanation": "Rewrite: $9^x = (3^x)^2 = u^2$ and $3^{x+1} = 3 \\cdot 3^x = 3u$, where $u = 3^x$. So $u^2 + 3u - 4 = 0 \\Rightarrow (u+4)(u-1) = 0$. Reject $u = -4$ (since $3^x > 0$ for all real $x$). So $3^x = 1 \\Rightarrow x = 0$.",
+      "steps": [
+        "Rewrite in a common base: $9^x = (3^x)^2$, $3^{x+1} = 3 \\cdot 3^x$.",
+        "Substitute $u = 3^x$: $u^2 + 3u - 4 = 0$.",
+        "Factor: $(u + 4)(u - 1) = 0 \\Rightarrow u = -4$ or $u = 1$.",
+        "Domain: $3^x > 0$, so reject $u = -4$.",
+        "$3^x = 1 \\Rightarrow x = 0$."
+      ],
+      "id": "q14",
+      "difficulty": "hard"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Solve } e^{2x} - 7e^x + 12 = 0. \\\\ \\text{(Enter the SUM of the two solutions, in decimal form, accurate to 2 places.)}",
+      "answer": 2.485,
+      "tolerance": 0.01,
+      "hints": [
+        "Substitute $u = e^x$ to get a quadratic.",
+        "Roots are $u = 3, 4$, so $x = \\ln 3, \\ln 4$. Sum $= \\ln 3 + \\ln 4 = \\ln 12 \\approx 2.485$."
+      ],
+      "explanation": "Let $u = e^x$: $u^2 - 7u + 12 = 0 \\Rightarrow (u - 3)(u - 4) = 0 \\Rightarrow u = 3$ or $u = 4$. So $x = \\ln 3$ or $x = \\ln 4$. Sum $= \\ln 3 + \\ln 4 = \\ln(3 \\cdot 4) = \\ln 12 \\approx 2.485$. (The product rule of logs collapses the sum into a single $\\ln$.)",
+      "steps": [
+        "Substitute $u = e^x$: $u^2 - 7u + 12 = 0$.",
+        "Factor: $(u - 3)(u - 4) = 0$.",
+        "Back-substitute: $x = \\ln 3$ and $x = \\ln 4$.",
+        "Sum: $\\ln 3 + \\ln 4 = \\ln 12 \\approx 2.485$."
+      ],
+      "id": "q15",
+      "difficulty": "hard"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{An investment grows by } 5\\% \\text{ each year.} \\\\ \\text{What is the smallest whole number of years for which the value MORE THAN doubles?}",
+      "answer": 15,
+      "tolerance": 0,
+      "hints": [
+        "Solve $1.05^t > 2$. Take $\\log$ on both sides.",
+        "$t > \\log 2 / \\log 1.05 \\approx 14.21$. Round UP."
+      ],
+      "explanation": "Solve $1.05^t > 2$. Take $\\log_{10}$: $t \\log 1.05 > \\log 2 \\Rightarrow t > \\dfrac{\\log 2}{\\log 1.05} \\approx \\dfrac{0.30103}{0.02119} \\approx 14.21$. Smallest integer strictly above $14.21$ is $\\boxed{15}$. (Rule-of-72 estimate: $72/5 = 14.4$ — close.)",
+      "steps": [
+        "Setup: $1.05^t > 2$.",
+        "Apply $\\log$: $t \\log 1.05 > \\log 2$ (inequality preserved since $\\log 1.05 > 0$).",
+        "Solve: $t > \\dfrac{\\log 2}{\\log 1.05} \\approx 14.21$.",
+        "Round UP to the next integer: $t = 15$ years."
+      ],
+      "id": "q16",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Carbon-14 has a half-life of } 5730 \\text{ years.} \\\\ \\text{A fossil contains } 25\\% \\text{ of the original C-14. How old is it (in years)?}",
+      "answer": 11460,
+      "tolerance": 0,
+      "hints": [
+        "$25\\% = (1/2)^2$ — that's two halvings.",
+        "Each half-life is $5730$ years, so $2 \\cdot 5730 = ?$"
+      ],
+      "explanation": "$25\\% = 1/4 = (1/2)^2$ — exactly two half-lives have elapsed. Time $= 2 \\cdot 5730 = 11{,}460$ years. (Equivalently, solving $0.25 = (1/2)^{t/5730}$ gives $t/5730 = 2$, so $t = 11{,}460$.)",
+      "steps": [
+        "$25\\% = 1/4 = (1/2)^2$ — count the halvings.",
+        "Two half-lives have passed.",
+        "Total time: $2 \\cdot 5730 = 11{,}460$ years."
+      ],
+      "id": "q17",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Richter magnitude } M = \\log_{10}(I/I_0). \\\\ \\text{How many times stronger (in wave amplitude) is a magnitude } 7.0 \\text{ earthquake than a } 4.0?",
+      "answer": 1000,
+      "tolerance": 0,
+      "hints": [
+        "A 1-unit difference in magnitude is a factor of $10$ in amplitude.",
+        "Subtract magnitudes, then exponentiate: $10^{7 - 4}$."
+      ],
+      "explanation": "From the definition, $I_1/I_2 = 10^{M_1 - M_2}$. With $M_1 = 7$, $M_2 = 4$: ratio $= 10^{7 - 4} = 10^3 = 1000$. (Most students assume Richter is linear and answer 'about twice as strong' — the logarithmic scale is the whole point.)",
+      "steps": [
+        "Definition: $M = \\log_{10}(I/I_0)$, so $I = I_0 \\cdot 10^M$.",
+        "Ratio of two earthquakes: $I_1/I_2 = 10^{M_1 - M_2}$.",
+        "Plug in: $10^{7 - 4} = 10^3 = 1000$."
+      ],
+      "id": "q18",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Lemon juice has pH } 2 \\text{ and black coffee has pH } 5. \\\\ \\mathrm{pH} = -\\log_{10}[\\mathrm{H}^+]. \\\\ \\text{How many times more acidic (in } [\\mathrm{H}^+] \\text{) is the lemon juice?}",
+      "answer": 1000,
+      "tolerance": 0,
+      "hints": [
+        "Lower pH means more acidic. Ratio $= 10^{\\mathrm{pH}_{\\text{coffee}} - \\mathrm{pH}_{\\text{lemon}}}$.",
+        "$10^{5 - 2} = 10^3$."
+      ],
+      "explanation": "$[\\mathrm{H}^+] = 10^{-\\mathrm{pH}}$. Ratio $= 10^{-2} / 10^{-5} = 10^{5 - 2} = 10^3 = 1000$. So lemon juice has $1000$ times the $\\mathrm{H}^+$ concentration of coffee. Each 1-unit drop in pH is a $\\times 10$ in acidity.",
+      "steps": [
+        "From the definition: $[\\mathrm{H}^+] = 10^{-\\mathrm{pH}}$.",
+        "Lemon: $[\\mathrm{H}^+] = 10^{-2}$. Coffee: $10^{-5}$.",
+        "Ratio: $10^{-2} / 10^{-5} = 10^{3} = 1000$."
+      ],
+      "id": "q19",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Coffee at } 200°\\mathrm{F} \\text{ sits in a } 70°\\mathrm{F} \\text{ room and cools to } 150°\\mathrm{F} \\text{ after } 10 \\text{ minutes.} \\\\ \\text{Using } T(t) = 70 + 130 e^{-kt}, \\text{ how many minutes (from when poured) until it reaches } 100°\\mathrm{F}? \\\\ \\text{(Round to the nearest minute.)}",
+      "answer": 30,
+      "tolerance": 1,
+      "hints": [
+        "First find $k$ using the data point: $150 = 70 + 130 e^{-10k}$.",
+        "Then solve $100 = 70 + 130 e^{-kt}$ for $t$ using $\\ln$."
+      ],
+      "explanation": "Step 1: Find $k$. From $150 = 70 + 130 e^{-10k}$: $e^{-10k} = 80/130 \\Rightarrow k = -\\tfrac{1}{10} \\ln(80/130) = \\tfrac{1}{10}\\ln(130/80) \\approx 0.04855$. Step 2: Solve for $t$ when $T = 100$: $30 = 130 e^{-kt} \\Rightarrow t = \\tfrac{1}{k}\\ln(130/30) \\approx 1.4663 / 0.04855 \\approx 30.2$ min.",
+      "steps": [
+        "Use the 10-minute data point: $150 = 70 + 130 e^{-10k} \\Rightarrow e^{-10k} = 80/130$.",
+        "Solve for $k$: $k = \\tfrac{1}{10}\\ln(130/80) \\approx 0.04855$.",
+        "Solve $100 = 70 + 130 e^{-kt}$: $e^{-kt} = 30/130$.",
+        "$t = \\tfrac{1}{k}\\ln(130/30) \\approx 1.4663 / 0.04855 \\approx 30$ minutes."
+      ],
+      "id": "q20",
+      "difficulty": "hard"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Solve for } x: \\quad 2^{x+1} = 32.",
+      "answer": 4,
+      "tolerance": 0,
+      "hints": [
+        "Rewrite $32$ as a power of $2$: $32 = 2^5$.",
+        "If $2^{x+1} = 2^5$, then $x + 1 = 5$."
+      ],
+      "explanation": "$32 = 2^5$, so $2^{x+1} = 2^5$. Equate exponents: $x + 1 = 5 \\Rightarrow x = 4$. (Same-base trick — no logs needed.)",
+      "steps": [
+        "Rewrite both sides in base $2$: $32 = 2^5$.",
+        "$2^{x+1} = 2^5 \\Rightarrow x + 1 = 5$.",
+        "$x = 4$."
+      ],
+      "id": "q21",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Solve for } x: \\quad 5^{2x} = 125.",
+      "answer": 1.5,
+      "tolerance": 0,
+      "hints": [
+        "$125 = 5^3$, so $5^{2x} = 5^3$.",
+        "Equate exponents: $2x = 3$."
+      ],
+      "explanation": "$125 = 5^3$, so $5^{2x} = 5^3 \\Rightarrow 2x = 3 \\Rightarrow x = 3/2 = 1.5$.",
+      "steps": [
+        "Rewrite $125 = 5^3$.",
+        "$5^{2x} = 5^3 \\Rightarrow 2x = 3$.",
+        "$x = 1.5$."
+      ],
+      "id": "q22",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Solve for } x: \\quad e^{x} = 50. \\\\ \\text{(Round to 3 decimal places.)}",
+      "answer": 3.912,
+      "tolerance": 0.01,
+      "hints": [
+        "Take $\\ln$ of both sides: $x = \\ln 50$.",
+        "$\\ln 50 \\approx 3.912$."
+      ],
+      "explanation": "$e^x = 50 \\Rightarrow x = \\ln 50 \\approx 3.912$. ($\\ln$ undoes $e$ — use whenever the base is $e$.)",
+      "steps": [
+        "Take $\\ln$ of both sides: $\\ln(e^x) = \\ln 50$.",
+        "Left side simplifies: $x = \\ln 50$.",
+        "$\\ln 50 \\approx 3.912$."
+      ],
+      "id": "q23",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{An investment grows at } 4\\% \\text{ per year, compounded annually.} \\\\ \\text{After how many full years will the investment first be at least TRIPLE?}",
+      "answer": 29,
+      "tolerance": 0,
+      "hints": [
+        "Solve $1.04^t \\geq 3$ — take logs.",
+        "$t \\geq \\log 3 / \\log 1.04 \\approx 28.01$. Round UP."
+      ],
+      "explanation": "Solve $1.04^t \\geq 3$. Take $\\log$: $t \\log 1.04 \\geq \\log 3 \\Rightarrow t \\geq \\dfrac{\\log 3}{\\log 1.04} \\approx \\dfrac{0.4771}{0.01703} \\approx 28.01$. Smallest integer: $t = 29$. (Check: $1.04^{29} \\approx 3.12$ — first year past triple.)",
+      "steps": [
+        "Set up: $1.04^t \\geq 3$.",
+        "Take logs: $t \\log 1.04 \\geq \\log 3$.",
+        "$t \\geq \\dfrac{\\log 3}{\\log 1.04} \\approx 28.01$.",
+        "Round up: $t = 29$ years."
+      ],
+      "id": "q24",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A bacterial colony grows from } 200 \\text{ to } 1800 \\text{ in 5 hours.} \\\\ \\text{Assuming } P(t) = 200 \\cdot b^t, \\text{ find the growth factor } b. \\\\ \\text{(Round to 3 decimals.)}",
+      "answer": 1.552,
+      "tolerance": 0.01,
+      "hints": [
+        "At $t = 5$: $200 \\cdot b^5 = 1800 \\Rightarrow b^5 = 9$.",
+        "$b = 9^{1/5} = \\sqrt[5]{9}$."
+      ],
+      "explanation": "$200 \\cdot b^5 = 1800 \\Rightarrow b^5 = 9 \\Rightarrow b = 9^{1/5} \\approx 1.552$. (So the colony grows by about $55.2\\%$ each hour.)",
+      "steps": [
+        "Plug in $(t, P) = (5, 1800)$: $200 \\cdot b^5 = 1800$.",
+        "Divide: $b^5 = 9$.",
+        "Take 5th root: $b = 9^{1/5} \\approx 1.552$."
+      ],
+      "id": "q25",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A car worth } \\$30{,}000 \\text{ depreciates by } 15\\% \\text{ each year.} \\\\ \\text{What is its value after 5 years (to the nearest dollar)?}",
+      "answer": 13311,
+      "tolerance": 1,
+      "hints": [
+        "Each year, the car retains $85\\%$ of its prior value: $V = 30000 \\cdot (0.85)^t$.",
+        "$30000 \\cdot 0.85^5 \\approx 30000 \\cdot 0.4437$."
+      ],
+      "explanation": "Decay model: $V(t) = 30000 \\cdot (0.85)^t$. After 5 years: $V(5) = 30000 \\cdot 0.85^5 \\approx 30000 \\cdot 0.4437 \\approx \\$13{,}311$.",
+      "steps": [
+        "Decay factor per year: $1 - 0.15 = 0.85$.",
+        "Model: $V(t) = 30000 \\cdot 0.85^t$.",
+        "$V(5) = 30000 \\cdot 0.85^5 \\approx 30000 \\cdot 0.4437 \\approx 13{,}311$."
+      ],
+      "id": "q26",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A radioactive isotope has a half-life of } 8 \\text{ days.} \\\\ \\text{Starting with } 80 \\text{ mg, how much remains after } 20 \\text{ days? (Round to 1 decimal.)}",
+      "answer": 14.1,
+      "tolerance": 0.1,
+      "hints": [
+        "Number of half-lives: $20/8 = 2.5$.",
+        "Remaining: $80 \\cdot (1/2)^{2.5}$."
+      ],
+      "explanation": "Half-lives elapsed: $20/8 = 2.5$. Remaining: $80 \\cdot (1/2)^{2.5} = 80 / 2^{2.5} = 80 / (4\\sqrt{2}) \\approx 80 / 5.657 \\approx 14.1$ mg.",
+      "steps": [
+        "Half-lives elapsed: $20 / 8 = 2.5$.",
+        "Remaining: $80 \\cdot (1/2)^{2.5}$.",
+        "$2^{2.5} = 4\\sqrt{2} \\approx 5.657$.",
+        "$80 / 5.657 \\approx 14.1$ mg."
+      ],
+      "id": "q27",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q28",
+      "type": "numeric",
+      "promptTex": "\\text{Solve for } r \\text{ to the nearest ten-thousandth: } \\quad 7 e^{r+1} = 52.3.",
+      "answer": 1.0111,
+      "tolerance": 0.0005,
+      "hints": [
+        "First isolate $e^{r+1}$: divide both sides by $7$.",
+        "Then take $\\ln$: $r + 1 = \\ln(52.3/7)$. Solve for $r$."
+      ],
+      "explanation": "$7 e^{r+1} = 52.3 \\Rightarrow e^{r+1} = 52.3/7 \\approx 7.4714 \\Rightarrow r + 1 = \\ln(7.4714) \\approx 2.0111 \\Rightarrow r \\approx 1.0111$.",
+      "steps": [
+        "Divide by $7$: $e^{r+1} = 52.3 / 7 \\approx 7.4714$.",
+        "Apply $\\ln$ to both sides: $r + 1 = \\ln(7.4714) \\approx 2.0111$.",
+        "Solve: $r \\approx 1.0111$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q29",
+      "type": "numeric",
+      "promptTex": "\\text{Solve for } x \\text{ to the nearest ten-thousandth: } \\quad -2 e^{6x} = -69.8.",
+      "answer": 0.5921,
+      "tolerance": 0.0005,
+      "hints": [
+        "Divide both sides by $-2$ first: $e^{6x} = 34.9$.",
+        "Take $\\ln$: $6x = \\ln(34.9)$, then divide by $6$."
+      ],
+      "explanation": "$-2 e^{6x} = -69.8 \\Rightarrow e^{6x} = 34.9 \\Rightarrow 6x = \\ln(34.9) \\approx 3.5525 \\Rightarrow x \\approx 0.5921$.",
+      "steps": [
+        "Divide by $-2$: $e^{6x} = -69.8 / -2 = 34.9$.",
+        "Apply $\\ln$: $6x = \\ln(34.9) \\approx 3.5525$.",
+        "Divide by $6$: $x \\approx 0.5921$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q30",
+      "type": "numeric",
+      "promptTex": "\\text{An investment earns } 3.7\\% \\text{ interest compounded continuously.} \\\\ \\text{How many years until it doubles? (Use } A = P e^{rt}; \\text{ round to 4 decimals.)}",
+      "answer": 18.7337,
+      "tolerance": 0.001,
+      "hints": [
+        "Doubling means $A = 2P$, so $2P = P e^{0.037 t} \\Rightarrow 2 = e^{0.037t}$.",
+        "Take $\\ln$: $0.037 t = \\ln 2 \\Rightarrow t = \\ln 2 / 0.037$."
+      ],
+      "explanation": "$2P = P e^{0.037 t} \\Rightarrow 2 = e^{0.037 t} \\Rightarrow 0.037 t = \\ln 2 \\Rightarrow t = \\dfrac{\\ln 2}{0.037} \\approx \\dfrac{0.6931}{0.037} \\approx 18.7337$ years. (Sanity check via the rule of 72: $72 / 3.7 \\approx 19.5$ — close.)",
+      "steps": [
+        "$A = P e^{rt}$ with $A = 2P$, $r = 0.037$.",
+        "$2P = P e^{0.037 t} \\Rightarrow 2 = e^{0.037 t}$.",
+        "Take $\\ln$: $\\ln 2 = 0.037 t$.",
+        "$t = \\ln 2 / 0.037 \\approx 0.69315 / 0.037 \\approx 18.7337$ years."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q31",
+      "type": "numeric",
+      "promptTex": "\\text{An initial investment of } \\$10{,}000 \\text{ earns } 9.3\\% \\text{ interest compounded continuously.} \\\\ \\text{How much is in the account after } 12 \\text{ years? (Round to the nearest cent.)}",
+      "answer": 30526.19,
+      "tolerance": 1,
+      "hints": [
+        "$A = P e^{rt}$ with $P = 10{,}000$, $r = 0.093$, $t = 12$.",
+        "Compute $rt = 1.116$, then $A = 10{,}000 \\cdot e^{1.116}$."
+      ],
+      "explanation": "$A = P e^{rt} = 10{,}000 \\cdot e^{0.093 \\cdot 12} = 10{,}000 \\cdot e^{1.116} \\approx 10{,}000 \\cdot 3.05262 \\approx \\$30{,}526.19$. (After 12 years the account has roughly tripled.)",
+      "steps": [
+        "Identify $P = 10{,}000$, $r = 0.093$, $t = 12$.",
+        "Compute the exponent: $rt = 0.093 \\cdot 12 = 1.116$.",
+        "$e^{1.116} \\approx 3.05262$.",
+        "$A = 10{,}000 \\cdot 3.05262 \\approx \\$30{,}526.19$."
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

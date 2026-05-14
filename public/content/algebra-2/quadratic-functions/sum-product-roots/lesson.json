@@ -1,0 +1,144 @@
+{
+  "title": "Sum & Product of Roots (Vieta's Formulas)",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "## The shortcut you didn't know you wanted",
+        "Solving a quadratic gives you both roots. But what if you only need their **sum** or their **product**? Surprise: you can get both *without solving anything*. The relationship is buried right inside the coefficients $a$, $b$, $c$ — and Vieta noticed it first."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Vieta's two formulas",
+      "body": "For $ax^2 + bx + c = 0$ with roots $r_1$ and $r_2$:"
+    },
+    {
+      "type": "math",
+      "tex": "r_1 + r_2 = -\\dfrac{b}{a} \\qquad r_1 \\cdot r_2 = \\dfrac{c}{a}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "That's it. No quadratic formula, no factoring, no completing the square. Just read the coefficients."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Quick example",
+        "Take $2x^2 - 10x + 12 = 0$. Here $a = 2$, $b = -10$, $c = 12$.",
+        "Sum of roots: $-b/a = -(-10)/2 = 5$.",
+        "Product of roots: $c/a = 12/2 = 6$.",
+        "Check: solve it — you get $x = 2$ and $x = 3$. Sum is $5$ ✓, product is $6$ ✓. We just didn't have to do the work."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why does this work?",
+        "If $r_1$ and $r_2$ are the roots, the quadratic factors as $a(x - r_1)(x - r_2) = 0$. Expand it:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "a(x - r_1)(x - r_2) = a\\bigl[x^2 - (r_1 + r_2)x + r_1 r_2\\bigr] = 0"
+    },
+    {
+      "type": "math",
+      "tex": "ax^2 - a(r_1 + r_2)x + a\\, r_1 r_2 = 0"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Compare to $ax^2 + bx + c = 0$. Match coefficients:",
+        "**$x$ term:** $-a(r_1 + r_2) = b \\;\\Longrightarrow\\; r_1 + r_2 = -b/a$.",
+        "**Constant:** $a\\, r_1 r_2 = c \\;\\Longrightarrow\\; r_1 r_2 = c/a$.",
+        "That's the entire derivation. The formulas come from the algebra itself, not from any clever trick."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Try it — slide the coefficients",
+        "Drag $a$, $b$, $c$. The graph shows the roots (red dots), and the readout shows both **the formula** ($-b/a$, $c/a$) and **the actual sum/product of the roots**. Notice they always match — even when the roots are weird decimals."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "parabola",
+      "config": {
+        "mode": "standard",
+        "a": 1,
+        "b": -5,
+        "c": 6,
+        "aRange": [
+          -3,
+          3
+        ],
+        "aStep": 0.25,
+        "bRange": [
+          -8,
+          8
+        ],
+        "bStep": 0.5,
+        "cRange": [
+          -10,
+          10
+        ],
+        "cStep": 0.5,
+        "xRange": [
+          -8,
+          8
+        ],
+        "yRange": [
+          -10,
+          10
+        ],
+        "showVieta": true
+      }
+    },
+    {
+      "type": "callout",
+      "title": "What about complex roots?",
+      "body": "Vieta's formulas still hold even when $b^2 - 4ac < 0$ and the roots are complex conjugates. The sum and product are real numbers, just like always — try it: set $a = 1$, $b = 0$, $c = 4$ above. Roots are $\\pm 2i$. Sum $= 0 = -b/a$ ✓. Product $= 4 = c/a$ ✓."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## Working backward — building a quadratic",
+        "If you know the sum and product, you can build the quadratic. Set $a = 1$ for the cleanest form:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "x^2 - (\\text{sum})\\,x + (\\text{product}) = 0"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Sign matters: it's *minus* the sum (because $-b/a$ rearranges to $b = -\\text{sum}$ when $a=1$).",
+        "**Example:** sum $= 7$, product $= 12$. Quadratic: $x^2 - 7x + 12 = 0$. Factors as $(x - 3)(x - 4)$ — and indeed $3 + 4 = 7$, $3 \\cdot 4 = 12$ ✓."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Building from sum & product",
+      "body": "Given roots' sum $S$ and product $P$, a quadratic with those roots is $x^2 - Sx + P = 0$ (and any non-zero multiple of it)."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## When this saves real time",
+        "**'What's $b$ if the roots sum to 5?'** Vieta: sum $= -b/a = 5$, so $b = -5a$. Done — no need to find the actual roots.",
+        "**'One root is 4, sum is 9.'** Other root must be $9 - 4 = 5$. Then product is $20$, so the quadratic (with $a = 1$) is $x^2 - 9x + 20$.",
+        "**'Are 3 and -1 roots of $x^2 - 2x - 3$?'** Check Vieta: sum should be $-(-2)/1 = 2$. Actual sum: $3 + (-1) = 2$ ✓. Product should be $-3/1 = -3$. Actual: $3 \\cdot (-1) = -3$ ✓. They're the roots."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "When NOT to use Vieta",
+      "body": "If you actually need the **values** of the roots themselves, use factoring or the quadratic formula. Vieta only gives you their sum and product — useful when those are exactly what you want, or as a quick sanity check on roots you already found."
+    }
+  ]
+}

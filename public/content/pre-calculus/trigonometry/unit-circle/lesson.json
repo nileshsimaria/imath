@@ -1,0 +1,234 @@
+{
+  "title": "The Unit Circle",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Right-triangle trig only works for angles between $0°$ and $90°$ — that's all the right triangle has room for. But angles can be bigger than $90°$. They can be negative. They can keep going past $360°$. To handle every angle, we need a richer picture: the **unit circle**."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Angle in standard position",
+        "An angle is in **standard position** when:",
+        "**1. Its vertex is at the origin** $(0, 0)$.",
+        "**2. Its initial side lies along the positive x-axis.**",
+        "Then we rotate the **terminal side** away from the initial side. The amount we rotate is the angle.",
+        "**Positive angles** rotate counterclockwise (from +x toward +y). **Negative angles** rotate clockwise (from +x toward -y). So $60°$ goes up-right, $-60°$ goes down-right."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Naming the quadrant",
+      "body": "An angle's *quadrant* is wherever its terminal side ends up. $135°$ → terminal side in **Quadrant II**. $250°$ → **Quadrant III**. Angles whose terminal side falls *on* an axis (e.g., $0°, 90°, 180°, 270°$) are called **quadrantal** angles."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### What is the unit circle?",
+        "The circle of radius $1$ centered at the origin:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "x^2 + y^2 = 1"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Pick an angle $\\theta$ in standard position. The terminal side hits the unit circle at exactly one point. That point is $(\\cos\\theta, \\sin\\theta)$.",
+        "**That's the definition.** For *any* angle — small, big, negative, doesn't matter — $\\cos\\theta$ is the x-coordinate of that point and $\\sin\\theta$ is the y-coordinate."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "unit-circle",
+      "config": {
+        "initialAngle": 60
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "Drag the blue point around the circle (or use the slider). Watch the cos and sin readouts change as you cross quadrants."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why this matches right-triangle trig",
+        "For an angle between $0°$ and $90°$, the radius and its x/y projections form a right triangle inside the circle. The hypotenuse is $1$, so:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\cos\\theta = \\dfrac{\\text{adj}}{\\text{hyp}} = \\dfrac{x}{1} = x, \\qquad \\sin\\theta = \\dfrac{\\text{opp}}{\\text{hyp}} = \\dfrac{y}{1} = y"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Same definitions, expressed using coordinates. The unit circle just generalizes them to *any* angle."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Coterminal angles",
+        "Two angles are **coterminal** if they share the same terminal side — they end up at the same point on the unit circle (and so have the same sin, cos, tan).",
+        "Add or subtract a full revolution and you land back where you started:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\theta \\text{ and } \\theta + 360° \\text{ are coterminal} \\quad (\\text{or } \\theta + 2\\pi \\text{ in radians})"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Example.** $400°$ is coterminal with $400° - 360° = 40°$. They have the same sin/cos/tan.",
+        "**Example.** $-50°$ is coterminal with $-50° + 360° = 310°$.",
+        "**Tip.** To find the coterminal angle in $[0°, 360°)$, keep adding or subtracting $360°$ until you land in that range."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The four quadrants",
+        "As $\\theta$ rotates around the circle, $(x, y)$ visits each quadrant. The signs of cos and sin tell you where:",
+        "**Quadrant I** ($0°$–$90°$): $\\cos > 0$, $\\sin > 0$",
+        "**Quadrant II** ($90°$–$180°$): $\\cos < 0$, $\\sin > 0$",
+        "**Quadrant III** ($180°$–$270°$): $\\cos < 0$, $\\sin < 0$",
+        "**Quadrant IV** ($270°$–$360°$): $\\cos > 0$, $\\sin < 0$"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### ASTC — All Students Take Calculus",
+        "A mnemonic for which trig functions are *positive* in each quadrant:",
+        "**Q I** — **A**ll three (sin, cos, tan) are positive.",
+        "**Q II** — only **S**ine is positive.",
+        "**Q III** — only **T**angent is positive.",
+        "**Q IV** — only **C**osine is positive.",
+        "Read it counterclockwise: A → S → T → C, starting from Q I."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Why ASTC works",
+      "body": "$\\sin = y$, $\\cos = x$, $\\tan = y/x$. In Q II, $x < 0$ and $y > 0$ → cos negative, sin positive, tan negative. In Q III, both $x, y < 0$ → cos and sin negative, but tan = (-)/(-) = positive. Each quadrant follows from the signs of $x$ and $y$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Reference angles",
+        "A **reference angle** is the *acute* angle (always $0° \\le \\alpha \\le 90°$) that the terminal side makes with the **nearest x-axis**. Reference angles let you reduce *any* angle problem to a $0°$–$90°$ problem you already know how to solve.",
+        "**How to find it:** look at the quadrant of $\\theta$, then:",
+        "**Q I:** $\\alpha = \\theta$",
+        "**Q II:** $\\alpha = 180° - \\theta$",
+        "**Q III:** $\\alpha = \\theta - 180°$",
+        "**Q IV:** $\\alpha = 360° - \\theta$",
+        "(In radians, replace $180°$ with $\\pi$ and $360°$ with $2\\pi$.)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Example.** Reference angle of $210°$? Q III, so $\\alpha = 210° - 180° = 30°$.",
+        "**Example.** Reference angle of $\\dfrac{5\\pi}{6}$? Q II, so $\\alpha = \\pi - \\dfrac{5\\pi}{6} = \\dfrac{\\pi}{6}$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Special angles you should know",
+        "These show up everywhere. Each gives clean exact values:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\begin{array}{c|ccccc} \\theta & 0° & 30° & 45° & 60° & 90° \\\\ \\hline \\cos\\theta & 1 & \\tfrac{\\sqrt{3}}{2} & \\tfrac{\\sqrt{2}}{2} & \\tfrac{1}{2} & 0 \\\\[2pt] \\sin\\theta & 0 & \\tfrac{1}{2} & \\tfrac{\\sqrt{2}}{2} & \\tfrac{\\sqrt{3}}{2} & 1 \\end{array}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Finding the exact value of trig ratios at any angle",
+        "Combine **reference angle** + **ASTC** and you can evaluate sin, cos, or tan at *any* angle on the unit circle. Three steps:",
+        "**Step 1.** Identify the quadrant of $\\theta$.",
+        "**Step 2.** Find the reference angle $\\alpha$.",
+        "**Step 3.** Look up the value of the trig function at $\\alpha$ (using the special-angle table). Then attach the sign from ASTC.",
+        "**Example.** Find $\\cos 210°$.",
+        "→ Quadrant III. Reference angle: $210° - 180° = 30°$.",
+        "→ $\\cos 30° = \\tfrac{\\sqrt{3}}{2}$. In Q III, cosine is *negative* (only T is positive). So $\\cos 210° = -\\tfrac{\\sqrt{3}}{2}$.",
+        "**Example.** Find $\\sin 315°$.",
+        "→ Q IV. Reference angle: $360° - 315° = 45°$.",
+        "→ $\\sin 45° = \\tfrac{\\sqrt{2}}{2}$. In Q IV, sine is negative. So $\\sin 315° = -\\tfrac{\\sqrt{2}}{2}$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Trig ratios at angles in radians",
+        "Everything above works the same in radians — you just use $\\pi$ instead of $180°$. The unit-circle definitions don't depend on units.",
+        "**Common radian angles and their special values:**"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\sin\\dfrac{\\pi}{6} = \\tfrac{1}{2} \\quad \\sin\\dfrac{\\pi}{4} = \\tfrac{\\sqrt{2}}{2} \\quad \\sin\\dfrac{\\pi}{3} = \\tfrac{\\sqrt{3}}{2} \\quad \\sin\\dfrac{\\pi}{2} = 1"
+    },
+    {
+      "type": "math",
+      "tex": "\\cos\\dfrac{\\pi}{6} = \\tfrac{\\sqrt{3}}{2} \\quad \\cos\\dfrac{\\pi}{4} = \\tfrac{\\sqrt{2}}{2} \\quad \\cos\\dfrac{\\pi}{3} = \\tfrac{1}{2} \\quad \\cos\\dfrac{\\pi}{2} = 0"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Example in radians.** Find $\\sin\\dfrac{4\\pi}{3}$.",
+        "→ Quadrant III ($\\pi < \\tfrac{4\\pi}{3} < \\tfrac{3\\pi}{2}$). Reference angle: $\\tfrac{4\\pi}{3} - \\pi = \\tfrac{\\pi}{3}$.",
+        "→ $\\sin\\tfrac{\\pi}{3} = \\tfrac{\\sqrt{3}}{2}$. In Q III, sine is negative.",
+        "→ $\\sin\\dfrac{4\\pi}{3} = -\\dfrac{\\sqrt{3}}{2}$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Tangent on the unit circle",
+        "Tangent is the slope of the radius — the rise (sin) over the run (cos):"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\tan\\theta = \\dfrac{\\sin\\theta}{\\cos\\theta} = \\dfrac{y}{x}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "When $\\cos\\theta = 0$ (at $90°$ and $270°$), tan is **undefined** — the radius is vertical, slope is undefined. Try the widget at $\\theta = 90°$ and watch the tan readout."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The Pythagorean identity",
+        "Every point $(\\cos\\theta, \\sin\\theta)$ is on the unit circle, so it satisfies $x^2 + y^2 = 1$:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\cos^2\\theta + \\sin^2\\theta = 1"
+    },
+    {
+      "type": "text",
+      "md": [
+        "True for *every* angle. This is the most fundamental identity in all of trigonometry — the Pythagorean theorem in disguise."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "Standard position → angle's terminal side determines the quadrant. Coterminal angles share a terminal side ($\\theta \\pm 360°$). Reference angle is the acute angle to the nearest x-axis. To find any trig value: quadrant + reference angle + ASTC sign."
+    }
+  ]
+}

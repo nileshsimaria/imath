@@ -1,0 +1,65 @@
+{
+  "title": "Hyperbolas",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### Two curves from one slice",
+        "Slice a double cone with a plane *steeper than the slant side* and you get a **hyperbola** — a pair of curves opening away from each other, mirror images of one another across the center.",
+        "**Geometric definition.** A hyperbola is the set of points such that the **difference of distances** to two fixed points (foci) is constant. (Compare to the ellipse, which uses the *sum*.)"
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "conic-section",
+      "config": {
+        "mode": "hyperbola",
+        "a": 3,
+        "b": 2
+      }
+    },
+    {
+      "type": "callout",
+      "title": "Standard form (horizontal transverse axis, centered at origin)",
+      "body": "$$\\dfrac{x^2}{a^2} - \\dfrac{y^2}{b^2} = 1$$\n\n**Vertices** at $(\\pm a, 0)$ — where the curves meet the x-axis.\n**Foci** at $(\\pm c, 0)$, where $c^2 = a^2 + b^2$ (note the $+$ — different from ellipse).\n**Asymptotes** are the lines $y = \\pm (b/a) x$ — the curves hug these lines as $x \\to \\pm\\infty$ but never touch them.\n**Eccentricity** $e = c/a > 1$ for any hyperbola (always greater than 1, unlike ellipses where $e < 1$)."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Asymptotes — the secret structure",
+        "Rewrite $\\dfrac{x^2}{a^2} - \\dfrac{y^2}{b^2} = 1$ as $\\dfrac{x^2}{a^2} - \\dfrac{y^2}{b^2} - 1 = 0$. For very large $x$ and $y$, the constant 1 becomes negligible, so the curve approaches:",
+        "$\\dfrac{x^2}{a^2} = \\dfrac{y^2}{b^2} \\;\\Longrightarrow\\; \\dfrac{y}{b} = \\pm \\dfrac{x}{a} \\;\\Longrightarrow\\; y = \\pm \\dfrac{b}{a} x.$",
+        "Those are the two **asymptotes**, intersecting at the origin. The hyperbola is squeezed between them — closer and closer but never reaching."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Worked example",
+      "body": "Hyperbola: $\\dfrac{x^2}{9} - \\dfrac{y^2}{16} = 1$.\n\n**$a^2 = 9, b^2 = 16$:** $a = 3, b = 4$.\n\n**Vertices:** $(\\pm 3, 0)$.\n\n**Foci:** $c^2 = a^2 + b^2 = 9 + 16 = 25 \\Rightarrow c = 5$. Foci at $(\\pm 5, 0)$.\n\n**Asymptotes:** $y = \\pm (b/a) x = \\pm (4/3) x$.\n\n**Eccentricity:** $e = c/a = 5/3 \\approx 1.67$.\n\n(Hyperbolas $x^2/a^2 - y^2/b^2 = 1$ with $a < b$ are still 'horizontal' — the orientation is determined by *which variable is positive*, not which denominator is larger.)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Vertical orientation",
+        "Swap the signs to get a hyperbola opening up and down:",
+        "$\\dfrac{y^2}{a^2} - \\dfrac{x^2}{b^2} = 1$",
+        "Now vertices are on the y-axis at $(0, \\pm a)$, foci at $(0, \\pm c)$ with $c^2 = a^2 + b^2$, asymptotes $y = \\pm (a/b) x$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Where hyperbolas appear",
+        "**Some comet orbits.** Unbound comets that approach the Sun and escape forever follow hyperbolic trajectories (eccentricity > 1). Bound comets follow ellipses.",
+        "**LORAN navigation** (historical) used hyperbolas: by measuring the *difference* in time signals received from two transmitters, a ship's position lies on a hyperbola. Two pairs of stations give two hyperbolas; their intersection is the ship's location.",
+        "**Cooling towers.** Nuclear power plant cooling towers are hyperboloid-shaped — structurally efficient at supporting their own weight with minimal material.",
+        "**Sonic booms.** The intersection of the shockwave cone with the ground is a hyperbola — that's why a supersonic plane traces a hyperbolic 'boom carpet' on the earth."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Three conics, one family",
+      "body": "Notice the family resemblance:\n\n**Circle** ($e = 0$): equidistant from a center. $x^2 + y^2 = r^2$.\n**Ellipse** ($0 < e < 1$): sum of distances to two foci = constant. $x^2/a^2 + y^2/b^2 = 1$, $c^2 = a^2 - b^2$.\n**Parabola** ($e = 1$): equidistant from focus and directrix. $x^2 = 4py$.\n**Hyperbola** ($e > 1$): difference of distances to two foci = constant. $x^2/a^2 - y^2/b^2 = 1$, $c^2 = a^2 + b^2$.\n\nThey all come from slicing one cone at different angles. The eccentricity ramps continuously from 0 to ∞ as the cutting plane tilts from horizontal to vertical."
+    }
+  ]
+}

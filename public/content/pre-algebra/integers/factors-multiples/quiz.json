@@ -1,0 +1,936 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which of these is a prime number?}",
+      "choices": [
+        "$15$",
+        "$21$",
+        "$23$",
+        "$27$"
+      ],
+      "choicesTex": false,
+      "answerIndex": 2,
+      "hints": [
+        "A prime has only $1$ and itself as factors.",
+        "$15 = 3 \\cdot 5$, $21 = 3 \\cdot 7$, $27 = 3 \\cdot 9$. What about $23$?"
+      ],
+      "explanation": "$23$ is prime — its only factors are $1$ and $23$. The others all factor: $15 = 3 \\cdot 5$, $21 = 3 \\cdot 7$, $27 = 3^3$.",
+      "steps": [
+        "Test each: $15 = 3 \\cdot 5$ (not prime), $21 = 3 \\cdot 7$ (not prime), $27 = 3 \\cdot 9$ (not prime).",
+        "$23$: try dividing by $2, 3$. None work, and $\\sqrt{23} < 5$, so we're done.",
+        "$23$ is prime."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{How many factors does } 24 \\text{ have?}",
+      "answer": 8,
+      "tolerance": 0,
+      "hints": [
+        "Pair them: $1 \\cdot 24$, $2 \\cdot 12$, $3 \\cdot 8$, $4 \\cdot 6$.",
+        "Each pair gives 2 factors."
+      ],
+      "explanation": "Pair the factors: $1 \\cdot 24$, $2 \\cdot 12$, $3 \\cdot 8$, $4 \\cdot 6$ — four pairs, $8$ factors total: $\\{1, 2, 3, 4, 6, 8, 12, 24\\}$.",
+      "steps": [
+        "List factor pairs: $1 \\times 24$, $2 \\times 12$, $3 \\times 8$, $4 \\times 6$.",
+        "$5$ doesn't divide $24$ — and the next would be $6 \\times 4$, which we already have.",
+        "Total factors: $\\{1, 2, 3, 4, 6, 8, 12, 24\\} = 8$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which number is divisible by } 9?",
+      "choices": [
+        "$471$",
+        "$522$",
+        "$634$",
+        "$745$"
+      ],
+      "choicesTex": false,
+      "answerIndex": 1,
+      "hints": [
+        "Divisibility rule for $9$: digit sum must be divisible by $9$.",
+        "$5 + 2 + 2 = 9$ ✓"
+      ],
+      "explanation": "Digit sums: $471 \\to 12$, $522 \\to 9$, $634 \\to 13$, $745 \\to 16$. Only $9$ is divisible by $9$, so $522$ wins. ($522 / 9 = 58$ ✓.)",
+      "steps": [
+        "Apply the rule: a number is divisible by $9$ if and only if its digit sum is.",
+        "$4+7+1 = 12$ (no), $5+2+2 = 9$ (yes!), $6+3+4 = 13$ (no), $7+4+5 = 16$ (no).",
+        "Answer: $522$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\gcd(12, 18) = ?",
+      "answer": 6,
+      "tolerance": 0,
+      "hints": [
+        "List factors: $12 = \\{1, 2, 3, 4, 6, 12\\}$, $18 = \\{1, 2, 3, 6, 9, 18\\}$.",
+        "Largest common factor?"
+      ],
+      "explanation": "Common factors of $12$ and $18$: $\\{1, 2, 3, 6\\}$. Greatest is $6$. (Or: $12 = 2^2 \\cdot 3$, $18 = 2 \\cdot 3^2$ — take min of each exponent: $2^1 \\cdot 3^1 = 6$.)",
+      "steps": [
+        "Factors of $12$: $1, 2, 3, 4, 6, 12$.",
+        "Factors of $18$: $1, 2, 3, 6, 9, 18$.",
+        "Common: $1, 2, 3, 6$. Greatest = $6$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\mathrm{lcm}(4, 6) = ?",
+      "answer": 12,
+      "tolerance": 0,
+      "hints": [
+        "List multiples of $4$: $4, 8, 12, 16, \\ldots$ and of $6$: $6, 12, 18, \\ldots$",
+        "Smallest in both?"
+      ],
+      "explanation": "Multiples of $4$: $4, 8, 12, \\ldots$. Multiples of $6$: $6, 12, 18, \\ldots$. Smallest common: $12$. (Or: $4 = 2^2$, $6 = 2 \\cdot 3$ — take max of each exponent: $2^2 \\cdot 3 = 12$.)",
+      "steps": [
+        "Multiples of $4$: $4, 8, 12, 16, \\ldots$",
+        "Multiples of $6$: $6, 12, 18, \\ldots$",
+        "Smallest common: $12$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which is the prime factorization of } 60?",
+      "choices": [
+        "$2 \\cdot 30$",
+        "$2^2 \\cdot 15$",
+        "$2^2 \\cdot 3 \\cdot 5$",
+        "$4 \\cdot 15$"
+      ],
+      "choicesTex": false,
+      "answerIndex": 2,
+      "hints": [
+        "Prime factorization means EVERY factor must be prime.",
+        "$30, 15, 4$ are not prime — keep splitting until they are."
+      ],
+      "explanation": "$60 = 2 \\cdot 30 = 2 \\cdot 2 \\cdot 15 = 2 \\cdot 2 \\cdot 3 \\cdot 5 = 2^2 \\cdot 3 \\cdot 5$. Every factor in the answer must be prime, so 'all primes' is the requirement that rules out the other choices.",
+      "steps": [
+        "Start splitting: $60 = 6 \\cdot 10$.",
+        "Split each: $6 = 2 \\cdot 3$, $10 = 2 \\cdot 5$.",
+        "All primes now: $60 = 2 \\cdot 2 \\cdot 3 \\cdot 5 = 2^2 \\cdot 3 \\cdot 5$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\gcd(48, 36) = ?",
+      "answer": 12,
+      "tolerance": 0,
+      "hints": [
+        "$48 = 2^4 \\cdot 3$ and $36 = 2^2 \\cdot 3^2$.",
+        "Take min of each exponent: $2^? \\cdot 3^?$."
+      ],
+      "explanation": "$48 = 2^4 \\cdot 3$ and $36 = 2^2 \\cdot 3^2$. Min exponents: $2^2 \\cdot 3^1 = 4 \\cdot 3 = 12$.",
+      "steps": [
+        "Prime-factorize: $48 = 2^4 \\cdot 3$, $36 = 2^2 \\cdot 3^2$.",
+        "For each prime, take the SMALLER exponent: $\\min(4, 2) = 2$ for $2$, $\\min(1, 2) = 1$ for $3$.",
+        "$\\gcd = 2^2 \\cdot 3^1 = 12$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\mathrm{lcm}(8, 12) = ?",
+      "answer": 24,
+      "tolerance": 0,
+      "hints": [
+        "$8 = 2^3$, $12 = 2^2 \\cdot 3$.",
+        "Take MAX of each exponent."
+      ],
+      "explanation": "$8 = 2^3$, $12 = 2^2 \\cdot 3$. Max exponents: $2^3 \\cdot 3 = 8 \\cdot 3 = 24$. (Verify: $24 / 8 = 3$ ✓, $24 / 12 = 2$ ✓.)",
+      "steps": [
+        "Prime-factorize: $8 = 2^3$, $12 = 2^2 \\cdot 3^1$.",
+        "Take MAX exponent for each prime: $\\max(3, 2) = 3$ for $2$, $\\max(0, 1) = 1$ for $3$.",
+        "$\\mathrm{lcm} = 2^3 \\cdot 3 = 24$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{Two clocks chime every } 12 \\text{ and } 18 \\text{ minutes.} \\\\ \\text{They just chimed together. After how many minutes will they chime together again?}",
+      "answer": 36,
+      "tolerance": 0,
+      "hints": [
+        "Both chime together at every common multiple — find the smallest one.",
+        "$\\mathrm{lcm}(12, 18) = ?$"
+      ],
+      "explanation": "Both chime at every multiple of LCM. $12 = 2^2 \\cdot 3$, $18 = 2 \\cdot 3^2$, so $\\mathrm{lcm}(12, 18) = 2^2 \\cdot 3^2 = 36$. Next sync: $36$ minutes.",
+      "steps": [
+        "They sync at every common multiple — smallest is $\\mathrm{lcm}$.",
+        "$12 = 2^2 \\cdot 3$, $18 = 2 \\cdot 3^2$.",
+        "$\\mathrm{lcm} = 2^2 \\cdot 3^2 = 36$ minutes."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{What is the largest square tile (in inches) that fits exactly} \\\\ \\text{(no cutting) into a } 24 \\times 36 \\text{ inch floor?}",
+      "answer": 12,
+      "tolerance": 0,
+      "hints": [
+        "The tile side must divide BOTH dimensions evenly. Largest such number?",
+        "$\\gcd(24, 36)$."
+      ],
+      "explanation": "Tile side must divide both $24$ and $36$. The biggest such number is $\\gcd(24, 36) = 12$. So a $12 \\times 12$ tile works perfectly: $2$ tiles wide, $3$ tiles tall.",
+      "steps": [
+        "Tile side $s$ must satisfy $s \\mid 24$ AND $s \\mid 36$ (divides both).",
+        "Largest such $s$ is $\\gcd(24, 36)$.",
+        "$24 = 2^3 \\cdot 3$, $36 = 2^2 \\cdot 3^2 \\Rightarrow \\gcd = 2^2 \\cdot 3 = 12$.",
+        "$12$-inch tiles: floor is $2$ tiles wide, $3$ tiles tall — fits exactly."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{Use the identity } \\gcd(a, b) \\cdot \\mathrm{lcm}(a, b) = a \\cdot b. \\\\ \\text{If } \\gcd(15, 20) = 5, \\text{ what is } \\mathrm{lcm}(15, 20)?",
+      "answer": 60,
+      "tolerance": 0,
+      "hints": [
+        "$\\mathrm{lcm} = \\dfrac{a \\cdot b}{\\gcd}$.",
+        "$\\dfrac{15 \\cdot 20}{5}$."
+      ],
+      "explanation": "$\\mathrm{lcm}(15, 20) = \\dfrac{15 \\cdot 20}{\\gcd(15, 20)} = \\dfrac{300}{5} = 60$.",
+      "steps": [
+        "Rearrange the identity: $\\mathrm{lcm} = \\dfrac{a \\cdot b}{\\gcd}$.",
+        "Plug in: $\\dfrac{15 \\cdot 20}{5} = \\dfrac{300}{5} = 60$.",
+        "Sanity check: $60 / 15 = 4$ ✓ and $60 / 20 = 3$ ✓."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\text{Find the smallest number greater than } 1 \\text{ that is divisible by} \\\\ \\text{each of } 2, 3, 4, 5, 6.",
+      "answer": 60,
+      "tolerance": 0,
+      "hints": [
+        "It's $\\mathrm{lcm}(2, 3, 4, 5, 6)$.",
+        "Prime-factorize each, then take max exponent of each prime."
+      ],
+      "explanation": "Need $\\mathrm{lcm}(2, 3, 4, 5, 6)$. Primes: $2 = 2$, $3 = 3$, $4 = 2^2$, $5 = 5$, $6 = 2 \\cdot 3$. Max exponents: $2^2 \\cdot 3 \\cdot 5 = 60$. ($\\mathrm{lcm}$ for more than two numbers works the same way.)",
+      "steps": [
+        "Prime-factorize each: $2, 3, 2^2, 5, 2 \\cdot 3$.",
+        "For each prime, max exponent: $2^2$ (from $4$), $3$ (from $3$ or $6$), $5$ (from $5$).",
+        "$\\mathrm{lcm} = 4 \\cdot 3 \\cdot 5 = 60$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q13",
+      "type": "numeric",
+      "promptTex": "\\text{How many factors does } 36 \\text{ have?}",
+      "answer": 9,
+      "tolerance": 0,
+      "hints": [
+        "Pair factors. $36$ is special — one of the factors pairs with itself.",
+        "List: $1, 2, 3, 4, 6, 9, 12, 18, 36$."
+      ],
+      "explanation": "$36 = \\{1, 2, 3, 4, 6, 9, 12, 18, 36\\}$ — that's $9$ factors. Note: $6 \\cdot 6 = 36$, so $6$ pairs with itself — this is why all perfect squares have an ODD number of factors.",
+      "steps": [
+        "List factor pairs: $1 \\times 36$, $2 \\times 18$, $3 \\times 12$, $4 \\times 9$, $6 \\times 6$ (self-pair!).",
+        "Total: $4$ regular pairs ($8$ factors) + $1$ self-pair ($1$ factor) = $9$.",
+        "Perfect-squares always have odd factor counts because of the self-pair."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q14",
+      "type": "numeric",
+      "promptTex": "\\text{Find } \\gcd(84, 126).",
+      "answer": 42,
+      "tolerance": 0,
+      "hints": [
+        "$84 = 2^2 \\cdot 3 \\cdot 7$, $126 = 2 \\cdot 3^2 \\cdot 7$.",
+        "Min of each exponent: $2^? \\cdot 3^? \\cdot 7^?$."
+      ],
+      "explanation": "$84 = 2^2 \\cdot 3 \\cdot 7$ and $126 = 2 \\cdot 3^2 \\cdot 7$. Min exponents: $2^1 \\cdot 3^1 \\cdot 7^1 = 42$.",
+      "steps": [
+        "Factor $84$: $84 = 4 \\cdot 21 = 2^2 \\cdot 3 \\cdot 7$.",
+        "Factor $126$: $126 = 2 \\cdot 63 = 2 \\cdot 9 \\cdot 7 = 2 \\cdot 3^2 \\cdot 7$.",
+        "Min exponents: $\\min(2,1)=1$ for $2$; $\\min(1,2)=1$ for $3$; $\\min(1,1)=1$ for $7$.",
+        "$\\gcd = 2 \\cdot 3 \\cdot 7 = 42$."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q15",
+      "type": "numeric",
+      "promptTex": "\\text{Find } \\mathrm{lcm}(15, 20, 25).",
+      "answer": 300,
+      "tolerance": 0,
+      "hints": [
+        "Prime-factorize each: $15 = 3 \\cdot 5$, $20 = 2^2 \\cdot 5$, $25 = 5^2$.",
+        "For each prime, take MAX exponent."
+      ],
+      "explanation": "$15 = 3 \\cdot 5$, $20 = 2^2 \\cdot 5$, $25 = 5^2$. Max exponents: $2^2 \\cdot 3 \\cdot 5^2 = 4 \\cdot 3 \\cdot 25 = 300$.",
+      "steps": [
+        "Prime-factorize all three: $15 = 3 \\cdot 5$, $20 = 2^2 \\cdot 5$, $25 = 5^2$.",
+        "For each prime: $2$ appears as $2^2$ (max), $3$ as $3$ (max), $5$ as $5^2$ (max).",
+        "$\\mathrm{lcm} = 2^2 \\cdot 3 \\cdot 5^2 = 300$."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q16",
+      "type": "numeric",
+      "promptTex": "\\text{A teacher has } 24 \\text{ pencils and } 36 \\text{ erasers and wants to make identical} \\\\ \\text{goodie bags using ALL the items. What is the largest possible number of bags?}",
+      "answer": 12,
+      "tolerance": 0,
+      "hints": [
+        "The number of bags must divide both 24 AND 36.",
+        "Largest such number = $\\gcd(24, 36)$."
+      ],
+      "explanation": "Each bag must have the same number of pencils and erasers, so the number of bags must divide both $24$ and $36$. Largest such number is $\\gcd(24, 36) = 12$. (Each bag gets $24/12 = 2$ pencils and $36/12 = 3$ erasers.)",
+      "steps": [
+        "Number of bags $b$ must divide $24$ (pencils split equally) AND $36$ (erasers).",
+        "Largest such $b$ is $\\gcd(24, 36)$.",
+        "$24 = 2^3 \\cdot 3$, $36 = 2^2 \\cdot 3^2 \\Rightarrow \\gcd = 2^2 \\cdot 3 = 12$.",
+        "Each bag: $2$ pencils and $3$ erasers."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which of these is NOT a prime number?}",
+      "choices": [
+        "$17$",
+        "$19$",
+        "$21$",
+        "$23$"
+      ],
+      "choicesTex": false,
+      "answerIndex": 2,
+      "hints": [
+        "A prime has only 1 and itself as factors.",
+        "$21 = 3 \\cdot 7$."
+      ],
+      "explanation": "$21 = 3 \\cdot 7$, so it has factors other than $1$ and itself. The other three are prime.",
+      "steps": [
+        "Check each: $17, 19, 23$ — try dividing by $2, 3$. None work and the squares pass them, so they're prime.",
+        "$21 = 3 \\cdot 7$ — composite.",
+        "Answer: $21$."
+      ],
+      "id": "q17",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which number is divisible by } 3?",
+      "choices": [
+        "$142$",
+        "$256$",
+        "$318$",
+        "$412$"
+      ],
+      "choicesTex": false,
+      "answerIndex": 2,
+      "hints": [
+        "Divisibility rule for 3: digit sum must be divisible by 3.",
+        "$3+1+8 = 12$ ✓"
+      ],
+      "explanation": "Digit sums: $142 \\to 7$, $256 \\to 13$, $318 \\to 12$, $412 \\to 7$. Only $12$ is divisible by $3$. (Check: $318 / 3 = 106$ ✓.)",
+      "steps": [
+        "Add digits of each number.",
+        "$1+4+2 = 7$ (no), $2+5+6 = 13$ (no), $3+1+8 = 12$ (yes), $4+1+2 = 7$ (no).",
+        "Answer: $318$."
+      ],
+      "id": "q18",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which number is divisible by } 4?",
+      "choices": [
+        "$130$",
+        "$246$",
+        "$332$",
+        "$510$"
+      ],
+      "choicesTex": false,
+      "answerIndex": 2,
+      "hints": [
+        "Divisibility rule for 4: the last TWO digits must form a number divisible by 4.",
+        "$32 / 4 = 8$ ✓"
+      ],
+      "explanation": "Look at the last two digits: $30, 46, 32, 10$. Of these, only $32$ is divisible by $4$. So $332$ is divisible by $4$. (Check: $332 / 4 = 83$ ✓.)",
+      "steps": [
+        "Apply the rule: a number is divisible by $4$ iff its last two digits are.",
+        "Last-two-digit values: $30$ (no), $46$ (no), $32$ (yes), $10$ (no).",
+        "Answer: $332$."
+      ],
+      "id": "q19",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{How many factors does } 18 \\text{ have?}",
+      "answer": 6,
+      "tolerance": 0,
+      "hints": [
+        "List factor pairs: $1 \\times 18$, $2 \\times 9$, $3 \\times 6$.",
+        "Three pairs → $6$ factors."
+      ],
+      "explanation": "Factors: $\\{1, 2, 3, 6, 9, 18\\}$ — $6$ in total. (Pair them: $1 \\cdot 18$, $2 \\cdot 9$, $3 \\cdot 6$.)",
+      "steps": [
+        "List factor pairs of $18$.",
+        "$1 \\times 18$, $2 \\times 9$, $3 \\times 6$ — and we've met in the middle.",
+        "Total: $6$ factors."
+      ],
+      "id": "q20",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\gcd(8, 12) = ?",
+      "answer": 4,
+      "tolerance": 0,
+      "hints": [
+        "List factors: $8 = \\{1, 2, 4, 8\\}$, $12 = \\{1, 2, 3, 4, 6, 12\\}$.",
+        "Largest in both?"
+      ],
+      "explanation": "Common factors of $8$ and $12$: $\\{1, 2, 4\\}$. Greatest is $4$.",
+      "steps": [
+        "Factors of $8$: $1, 2, 4, 8$.",
+        "Factors of $12$: $1, 2, 3, 4, 6, 12$.",
+        "Common: $1, 2, 4$. Greatest: $4$."
+      ],
+      "id": "q21",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\mathrm{lcm}(3, 5) = ?",
+      "answer": 15,
+      "tolerance": 0,
+      "hints": [
+        "List multiples of each.",
+        "Smallest in both lists?"
+      ],
+      "explanation": "$3$ and $5$ are coprime (share no factors > 1), so $\\mathrm{lcm} = 3 \\cdot 5 = 15$.",
+      "steps": [
+        "Multiples of $3$: $3, 6, 9, 12, 15, \\ldots$",
+        "Multiples of $5$: $5, 10, 15, \\ldots$",
+        "Smallest common: $15$."
+      ],
+      "id": "q22",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which is the prime factorization of } 50?",
+      "choices": [
+        "$2 \\cdot 25$",
+        "$5 \\cdot 10$",
+        "$2 \\cdot 5^2$",
+        "$2^2 \\cdot 5$"
+      ],
+      "choicesTex": false,
+      "answerIndex": 2,
+      "hints": [
+        "Every factor must be PRIME. $25$ and $10$ aren't prime.",
+        "$50 = 2 \\cdot 25 = 2 \\cdot 5 \\cdot 5 = 2 \\cdot 5^2$."
+      ],
+      "explanation": "$50 = 2 \\cdot 25 = 2 \\cdot 5 \\cdot 5 = 2 \\cdot 5^2$. The other choices either include composites ($25$, $10$) or have wrong powers ($2^2 \\cdot 5 = 20$, not $50$).",
+      "steps": [
+        "Split: $50 = 2 \\cdot 25$.",
+        "$25$ is composite: $25 = 5 \\cdot 5 = 5^2$.",
+        "Combined: $50 = 2 \\cdot 5^2$."
+      ],
+      "id": "q23",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{How many factors does } 100 \\text{ have?}",
+      "answer": 9,
+      "tolerance": 0,
+      "hints": [
+        "$100 = 10 \\times 10$, so $10$ pairs with itself — perfect square trick.",
+        "Factors: $1, 2, 4, 5, 10, 20, 25, 50, 100$."
+      ],
+      "explanation": "Factors: $\\{1, 2, 4, 5, 10, 20, 25, 50, 100\\}$ — $9$ in total. Pairs: $1 \\times 100$, $2 \\times 50$, $4 \\times 25$, $5 \\times 20$, $10 \\times 10$ (self-pair → odd count).",
+      "steps": [
+        "List factor pairs of $100$.",
+        "$1 \\times 100$, $2 \\times 50$, $4 \\times 25$, $5 \\times 20$, $10 \\times 10$.",
+        "$10$ pairs with itself, so total = $4$ pairs $\\times 2$ + $1$ self = $9$."
+      ],
+      "id": "q24",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{What is the smallest prime number greater than } 30?",
+      "answer": 31,
+      "tolerance": 0,
+      "hints": [
+        "Test $31, 32, 33, \\ldots$ until you find a prime.",
+        "$31$: not divisible by $2, 3$ (digit sum $4$), $5$ — and $\\sqrt{31} < 6$, so we're done."
+      ],
+      "explanation": "$31$: not divisible by $2$ (odd), $3$ (digit sum $4$), or $5$ (doesn't end in $0$/$5$). $\\sqrt{31} \\approx 5.57$, so no need to test $7$ or higher. $31$ is prime.",
+      "steps": [
+        "Start at $31$ — is it prime?",
+        "Test small primes up to $\\sqrt{31} \\approx 5.57$: try $2, 3, 5$.",
+        "None divide $31$ → $31$ is prime."
+      ],
+      "id": "q25",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which is the prime factorization of } 72?",
+      "choices": [
+        "$2^2 \\cdot 3^3$",
+        "$2^3 \\cdot 3^2$",
+        "$2 \\cdot 3^5$",
+        "$8 \\cdot 9$"
+      ],
+      "choicesTex": false,
+      "answerIndex": 1,
+      "hints": [
+        "Factor: $72 = 8 \\times 9$. Now break each: $8 = 2^3$, $9 = 3^2$.",
+        "So $72 = 2^3 \\cdot 3^2$."
+      ],
+      "explanation": "$72 = 8 \\cdot 9 = 2^3 \\cdot 3^2$. ($8 \\cdot 9$ is correct numerically but isn't a PRIME factorization since neither is prime.) Check: $2^2 \\cdot 3^3 = 4 \\cdot 27 = 108$, not $72$.",
+      "steps": [
+        "Split: $72 = 8 \\cdot 9$.",
+        "Both composite: $8 = 2 \\cdot 2 \\cdot 2 = 2^3$, $9 = 3 \\cdot 3 = 3^2$.",
+        "Combined: $72 = 2^3 \\cdot 3^2$."
+      ],
+      "id": "q26",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\gcd(60, 90) = ?",
+      "answer": 30,
+      "tolerance": 0,
+      "hints": [
+        "$60 = 2^2 \\cdot 3 \\cdot 5$, $90 = 2 \\cdot 3^2 \\cdot 5$.",
+        "Min of each exponent: $2^? \\cdot 3^? \\cdot 5^?$."
+      ],
+      "explanation": "$60 = 2^2 \\cdot 3 \\cdot 5$, $90 = 2 \\cdot 3^2 \\cdot 5$. Min exponents: $2^1 \\cdot 3^1 \\cdot 5^1 = 30$.",
+      "steps": [
+        "Prime-factorize: $60 = 2^2 \\cdot 3 \\cdot 5$, $90 = 2 \\cdot 3^2 \\cdot 5$.",
+        "Take min exponent of each prime: $\\min(2,1)=1$, $\\min(1,2)=1$, $\\min(1,1)=1$.",
+        "$\\gcd = 2 \\cdot 3 \\cdot 5 = 30$."
+      ],
+      "id": "q27",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\mathrm{lcm}(20, 30) = ?",
+      "answer": 60,
+      "tolerance": 0,
+      "hints": [
+        "$20 = 2^2 \\cdot 5$, $30 = 2 \\cdot 3 \\cdot 5$.",
+        "Take MAX of each exponent."
+      ],
+      "explanation": "$20 = 2^2 \\cdot 5$, $30 = 2 \\cdot 3 \\cdot 5$. Max exponents: $2^2 \\cdot 3 \\cdot 5 = 60$.",
+      "steps": [
+        "Prime-factorize: $20 = 2^2 \\cdot 5$, $30 = 2 \\cdot 3 \\cdot 5$.",
+        "Max exponent of each prime: $2$ (from $20$), $1$ (from $30$), $1$ (from either).",
+        "$\\mathrm{lcm} = 2^2 \\cdot 3 \\cdot 5 = 60$."
+      ],
+      "id": "q28",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A teacher has } 30 \\text{ cookies and } 45 \\text{ apples to put into identical goodie bags,} \\\\ \\text{using ALL items. What's the largest number of bags she can make?}",
+      "answer": 15,
+      "tolerance": 0,
+      "hints": [
+        "Each bag must have the same count of cookies AND apples — so the number of bags must divide both $30$ and $45$.",
+        "Largest such number is $\\gcd(30, 45)$."
+      ],
+      "explanation": "Number of bags must divide both $30$ and $45$. Largest such number is $\\gcd(30, 45) = 15$. Each bag gets $30/15 = 2$ cookies and $45/15 = 3$ apples.",
+      "steps": [
+        "Constraint: bag count $b$ must divide both $30$ and $45$ exactly.",
+        "Largest such $b$ is $\\gcd(30, 45)$.",
+        "$30 = 2 \\cdot 3 \\cdot 5$, $45 = 3^2 \\cdot 5 \\Rightarrow \\gcd = 3 \\cdot 5 = 15$.",
+        "Each bag gets $2$ cookies, $3$ apples."
+      ],
+      "id": "q29",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Two traffic lights cycle every } 30 \\text{ seconds and } 45 \\text{ seconds.} \\\\ \\text{They just turned green together. After how many seconds do they next turn green together?}",
+      "answer": 90,
+      "tolerance": 0,
+      "hints": [
+        "They sync at every common multiple. Find the smallest one.",
+        "$\\mathrm{lcm}(30, 45)$."
+      ],
+      "explanation": "$30 = 2 \\cdot 3 \\cdot 5$, $45 = 3^2 \\cdot 5$. $\\mathrm{lcm} = 2 \\cdot 3^2 \\cdot 5 = 90$ seconds (1.5 minutes).",
+      "steps": [
+        "Lights sync at every common multiple of their cycles.",
+        "Smallest such time = $\\mathrm{lcm}(30, 45)$.",
+        "$30 = 2 \\cdot 3 \\cdot 5$, $45 = 3^2 \\cdot 5$.",
+        "$\\mathrm{lcm} = 2 \\cdot 3^2 \\cdot 5 = 90$ seconds."
+      ],
+      "id": "q30",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Two ropes have lengths } 36 \\text{ m and } 24 \\text{ m.} \\\\ \\text{You want to cut both into pieces of equal length, with no waste,} \\\\ \\text{using the LONGEST possible piece length. How long is each piece (in meters)?}",
+      "answer": 12,
+      "tolerance": 0,
+      "hints": [
+        "Piece length must divide BOTH $36$ and $24$ evenly.",
+        "Largest such length = $\\gcd(36, 24)$."
+      ],
+      "explanation": "$\\gcd(36, 24) = 12$. Each piece is $12$ m. (Check: $36 / 12 = 3$ pieces from one rope, $24 / 12 = 2$ from the other — no waste.)",
+      "steps": [
+        "Length $L$ must divide both $36$ and $24$.",
+        "Largest such $L$ is $\\gcd(36, 24)$.",
+        "$36 = 2^2 \\cdot 3^2$, $24 = 2^3 \\cdot 3$.",
+        "$\\gcd = 2^2 \\cdot 3 = 12$ m."
+      ],
+      "id": "q31",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Two runners go around a track. Runner A finishes a lap every } 4 \\text{ minutes,} \\\\ \\text{Runner B every } 6. \\text{ If they start together, how many minutes until they meet at the start again?}",
+      "answer": 12,
+      "tolerance": 0,
+      "hints": [
+        "They meet at the start every common multiple. Find the smallest.",
+        "$\\mathrm{lcm}(4, 6)$."
+      ],
+      "explanation": "$\\mathrm{lcm}(4, 6) = 12$. After $12$ minutes: Runner A has done $3$ laps, B has done $2$ — both back at the start.",
+      "steps": [
+        "They both arrive at the start at every common multiple of $4$ and $6$ minutes.",
+        "Smallest common multiple: $\\mathrm{lcm}(4, 6) = 12$.",
+        "Verification: A does $12/4 = 3$ laps, B does $12/6 = 2$ — both finish at the start."
+      ],
+      "id": "q32",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{What is the LCD (least common denominator) for } \\dfrac{1}{4} + \\dfrac{1}{6} + \\dfrac{1}{8}?",
+      "answer": 24,
+      "tolerance": 0,
+      "hints": [
+        "LCD = LCM of all the denominators.",
+        "$\\mathrm{lcm}(4, 6, 8)$. Use prime factorization: $4 = 2^2$, $6 = 2 \\cdot 3$, $8 = 2^3$."
+      ],
+      "explanation": "$\\mathrm{lcm}(4, 6, 8)$: max exponents → $2^3 \\cdot 3 = 24$. So the LCD is $24$. (Then $\\dfrac{1}{4} + \\dfrac{1}{6} + \\dfrac{1}{8} = \\dfrac{6 + 4 + 3}{24} = \\dfrac{13}{24}$.)",
+      "steps": [
+        "LCD = $\\mathrm{lcm}$ of denominators.",
+        "$4 = 2^2$, $6 = 2 \\cdot 3$, $8 = 2^3$.",
+        "Max exponents: $2^3 \\cdot 3 = 24$.",
+        "LCD = $24$."
+      ],
+      "id": "q33",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{How many factors does } 72 \\text{ have?}",
+      "answer": 12,
+      "tolerance": 0,
+      "hints": [
+        "Use the prime factorization shortcut: if $n = p^a \\cdot q^b$, then number of factors is $(a+1)(b+1)$.",
+        "$72 = 2^3 \\cdot 3^2 \\Rightarrow (3+1)(2+1)$."
+      ],
+      "explanation": "$72 = 2^3 \\cdot 3^2$. Number of factors $= (3+1)(2+1) = 12$. (List: $1, 2, 3, 4, 6, 8, 9, 12, 18, 24, 36, 72$ — that's $12$.)",
+      "steps": [
+        "Prime-factorize: $72 = 2^3 \\cdot 3^2$.",
+        "Apply the formula: number of factors = $(3+1)(2+1) = 4 \\cdot 3 = 12$.",
+        "Verify by listing: $\\{1, 2, 3, 4, 6, 8, 9, 12, 18, 24, 36, 72\\}$ ✓."
+      ],
+      "id": "q34",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Two printers take } 6 \\text{ and } 8 \\text{ minutes to print a poster.} \\\\ \\text{They both start at minute } 0. \\text{ When do they finish posters at the same minute next?}",
+      "answer": 24,
+      "tolerance": 0,
+      "hints": [
+        "Both finish a poster at every common multiple of their cycle times.",
+        "$\\mathrm{lcm}(6, 8)$."
+      ],
+      "explanation": "$6 = 2 \\cdot 3$, $8 = 2^3$. $\\mathrm{lcm} = 2^3 \\cdot 3 = 24$ minutes. (At minute $24$: printer 1 has done $4$ posters, printer 2 has done $3$.)",
+      "steps": [
+        "Each printer finishes at every multiple of its time.",
+        "Both finish together at every common multiple — smallest is $\\mathrm{lcm}$.",
+        "$\\mathrm{lcm}(6, 8) = 24$ minutes."
+      ],
+      "id": "q35",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A rectangle has area } 36 \\text{ square units (whole-number sides).} \\\\ \\text{How many DIFFERENT dimensions } (l \\times w) \\text{ are possible, treating } l \\times w \\text{ and } w \\times l \\text{ as the same?}",
+      "answer": 5,
+      "tolerance": 0,
+      "hints": [
+        "Each dimension pair is $l \\times w$ where $l \\cdot w = 36$ — i.e., a factor pair of $36$.",
+        "Factor pairs (unordered): $1 \\times 36$, $2 \\times 18$, $3 \\times 12$, $4 \\times 9$, $6 \\times 6$."
+      ],
+      "explanation": "Factor pairs of $36$ (unordered): $1 \\times 36$, $2 \\times 18$, $3 \\times 12$, $4 \\times 9$, $6 \\times 6$. That's $5$ different rectangles. (The $6 \\times 6$ is a square.)",
+      "steps": [
+        "Need pairs $(l, w)$ with $l \\cdot w = 36$ and $l \\leq w$.",
+        "List: $(1, 36), (2, 18), (3, 12), (4, 9), (6, 6)$.",
+        "Total: $5$ unordered pairs."
+      ],
+      "id": "q36",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Class A has } 18 \\text{ students; Class B has } 24. \\text{ They form groups for a project,} \\\\ \\text{each group with the same number of A students AND the same number of B students.} \\\\ \\text{What is the LARGEST number of groups possible?}",
+      "answer": 6,
+      "tolerance": 0,
+      "hints": [
+        "Group count must divide $18$ AND $24$.",
+        "Largest such count = $\\gcd(18, 24)$."
+      ],
+      "explanation": "$\\gcd(18, 24) = 6$ groups. Each group has $18/6 = 3$ A-students and $24/6 = 4$ B-students.",
+      "steps": [
+        "Number of groups $g$ must divide both $18$ and $24$.",
+        "Largest such $g$ = $\\gcd(18, 24) = 6$.",
+        "Each group: $3$ from A, $4$ from B."
+      ],
+      "id": "q37",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A garden has } 24 \\text{ plants. A gardener wants to plant them in equal-length rows.} \\\\ \\text{How many DIFFERENT row-lengths are possible (counting } 1 \\text{ row of } 24 \\text{ and } 24 \\text{ rows of } 1)?",
+      "answer": 8,
+      "tolerance": 0,
+      "hints": [
+        "Each valid row-length is a factor of $24$.",
+        "Factors of $24$: $1, 2, 3, 4, 6, 8, 12, 24$."
+      ],
+      "explanation": "Row-length must divide $24$. Factors: $\\{1, 2, 3, 4, 6, 8, 12, 24\\}$ — $8$ choices.",
+      "steps": [
+        "Row-length $r$ must satisfy $r \\mid 24$.",
+        "List factors: $1, 2, 3, 4, 6, 8, 12, 24$.",
+        "Total: $8$ different row arrangements."
+      ],
+      "id": "q38",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Hot dogs come in packs of } 10, \\text{ buns in packs of } 8. \\\\ \\text{What is the SMALLEST number of each you must buy to have} \\\\ \\text{equal numbers of dogs and buns?}",
+      "answer": 40,
+      "tolerance": 0,
+      "hints": [
+        "You need a number that's both a multiple of $10$ AND of $8$.",
+        "Smallest such = $\\mathrm{lcm}(10, 8)$."
+      ],
+      "explanation": "$\\mathrm{lcm}(10, 8)$: $10 = 2 \\cdot 5$, $8 = 2^3$, max exponents: $2^3 \\cdot 5 = 40$. Buy $40$ of each: $4$ packs of dogs, $5$ packs of buns.",
+      "steps": [
+        "Need $N$ such that $10 \\mid N$ and $8 \\mid N$.",
+        "Smallest = $\\mathrm{lcm}(10, 8)$.",
+        "$10 = 2 \\cdot 5$, $8 = 2^3$, $\\mathrm{lcm} = 2^3 \\cdot 5 = 40$.",
+        "$4$ packs of dogs ($4 \\cdot 10 = 40$), $5$ packs of buns ($5 \\cdot 8 = 40$)."
+      ],
+      "id": "q39",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{One clock chimes every } 60 \\text{ minutes; another every } 90 \\text{ minutes.} \\\\ \\text{Both just chimed. How many MINUTES until they chime together again?}",
+      "answer": 180,
+      "tolerance": 0,
+      "hints": [
+        "Both chime at every common multiple of $60$ and $90$.",
+        "Smallest = $\\mathrm{lcm}(60, 90)$."
+      ],
+      "explanation": "$60 = 2^2 \\cdot 3 \\cdot 5$, $90 = 2 \\cdot 3^2 \\cdot 5$. $\\mathrm{lcm} = 2^2 \\cdot 3^2 \\cdot 5 = 180$ minutes (3 hours).",
+      "steps": [
+        "Sync at every common multiple of $60$ and $90$.",
+        "Smallest = $\\mathrm{lcm}$.",
+        "$60 = 2^2 \\cdot 3 \\cdot 5$, $90 = 2 \\cdot 3^2 \\cdot 5$.",
+        "$\\mathrm{lcm} = 2^2 \\cdot 3^2 \\cdot 5 = 180$ min."
+      ],
+      "id": "q40",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A baker has icing tubes of length } 60, 84, \\text{ and } 96 \\text{ cm.} \\\\ \\text{She wants to cut all of them into pieces of the same length, with no waste,} \\\\ \\text{using the LONGEST possible piece. What length (cm)?}",
+      "answer": 12,
+      "tolerance": 0,
+      "hints": [
+        "The piece length must divide ALL three lengths.",
+        "Largest such = $\\gcd(60, 84, 96)$."
+      ],
+      "explanation": "$60 = 2^2 \\cdot 3 \\cdot 5$, $84 = 2^2 \\cdot 3 \\cdot 7$, $96 = 2^5 \\cdot 3$. Min exponents: $2^2 \\cdot 3 = 12$ cm. (Pieces: $5 + 7 + 8 = 20$ pieces total.)",
+      "steps": [
+        "Length $L$ must divide $60$, $84$, AND $96$.",
+        "Largest such $L$ = $\\gcd(60, 84, 96)$.",
+        "Prime-factorize: $60 = 2^2 \\cdot 3 \\cdot 5$, $84 = 2^2 \\cdot 3 \\cdot 7$, $96 = 2^5 \\cdot 3$.",
+        "Min exponents (only $2$ and $3$ appear in all): $2^2 \\cdot 3 = 12$ cm."
+      ],
+      "id": "q41",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Two numbers have } \\gcd = 4 \\text{ and } \\mathrm{lcm} = 24. \\\\ \\text{What is their PRODUCT?}",
+      "answer": 96,
+      "tolerance": 0,
+      "hints": [
+        "Use the identity $\\gcd(a, b) \\cdot \\mathrm{lcm}(a, b) = a \\cdot b$.",
+        "Just multiply: $4 \\cdot 24$."
+      ],
+      "explanation": "By the identity, $a \\cdot b = \\gcd \\cdot \\mathrm{lcm} = 4 \\cdot 24 = 96$. (No need to find $a$ and $b$ themselves.)",
+      "steps": [
+        "Apply $\\gcd(a, b) \\cdot \\mathrm{lcm}(a, b) = a \\cdot b$.",
+        "$a \\cdot b = 4 \\cdot 24 = 96$."
+      ],
+      "id": "q42",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\gcd(36, 60, 84) = ?",
+      "answer": 12,
+      "tolerance": 0,
+      "hints": [
+        "For three numbers: prime-factorize each, then take the MIN exponent of each prime.",
+        "$36 = 2^2 \\cdot 3^2$, $60 = 2^2 \\cdot 3 \\cdot 5$, $84 = 2^2 \\cdot 3 \\cdot 7$."
+      ],
+      "explanation": "$36 = 2^2 \\cdot 3^2$, $60 = 2^2 \\cdot 3 \\cdot 5$, $84 = 2^2 \\cdot 3 \\cdot 7$. Min exponents: $2^2 \\cdot 3 = 12$. (Primes $5$ and $7$ aren't in all three, so they're excluded from GCD.)",
+      "steps": [
+        "Prime-factorize all three.",
+        "$36 = 2^2 \\cdot 3^2$, $60 = 2^2 \\cdot 3 \\cdot 5$, $84 = 2^2 \\cdot 3 \\cdot 7$.",
+        "GCD uses only primes in ALL three (here: $2$ and $3$).",
+        "Min exponents: $\\min(2,2,2) = 2$ for $2$, $\\min(2,1,1) = 1$ for $3$.",
+        "$\\gcd = 2^2 \\cdot 3 = 12$."
+      ],
+      "id": "q43",
+      "difficulty": "hard"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\mathrm{lcm}(6, 8, 10) = ?",
+      "answer": 120,
+      "tolerance": 0,
+      "hints": [
+        "Prime-factorize each, take MAX exponent of each prime.",
+        "$6 = 2 \\cdot 3$, $8 = 2^3$, $10 = 2 \\cdot 5$."
+      ],
+      "explanation": "$6 = 2 \\cdot 3$, $8 = 2^3$, $10 = 2 \\cdot 5$. Max exponents: $2^3 \\cdot 3 \\cdot 5 = 120$.",
+      "steps": [
+        "Prime-factorize: $6 = 2 \\cdot 3$, $8 = 2^3$, $10 = 2 \\cdot 5$.",
+        "Take max exponent of each prime: $2^3$ (from $8$), $3^1$ (from $6$), $5^1$ (from $10$).",
+        "$\\mathrm{lcm} = 2^3 \\cdot 3 \\cdot 5 = 120$."
+      ],
+      "id": "q44",
+      "difficulty": "hard"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Three lights flash every } 12, 18, \\text{ and } 30 \\text{ seconds.} \\\\ \\text{They just all flashed together. How many SECONDS until all three flash together again?}",
+      "answer": 180,
+      "tolerance": 0,
+      "hints": [
+        "All flash together at every common multiple of $12, 18, 30$ — smallest is the LCM.",
+        "$12 = 2^2 \\cdot 3$, $18 = 2 \\cdot 3^2$, $30 = 2 \\cdot 3 \\cdot 5$."
+      ],
+      "explanation": "$12 = 2^2 \\cdot 3$, $18 = 2 \\cdot 3^2$, $30 = 2 \\cdot 3 \\cdot 5$. Max exponents: $2^2 \\cdot 3^2 \\cdot 5 = 180$ seconds = $3$ minutes.",
+      "steps": [
+        "All sync at every common multiple — smallest is $\\mathrm{lcm}$.",
+        "$12 = 2^2 \\cdot 3$, $18 = 2 \\cdot 3^2$, $30 = 2 \\cdot 3 \\cdot 5$.",
+        "Max exponents: $2^2$ (from $12$), $3^2$ (from $18$), $5$ (from $30$).",
+        "$\\mathrm{lcm} = 4 \\cdot 9 \\cdot 5 = 180$ seconds."
+      ],
+      "id": "q45",
+      "difficulty": "hard"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Train A leaves every } 36 \\text{ minutes; Train B every } 60. \\\\ \\text{Both leave at } 8\\text{:}00 \\text{ AM. When do they next leave together?}",
+      "choices": [
+        "$10\\!:\\!00$ AM",
+        "$11\\!:\\!00$ AM",
+        "$11\\!:\\!36$ AM",
+        "$12\\!:\\!00$ noon"
+      ],
+      "choicesTex": false,
+      "answerIndex": 1,
+      "hints": [
+        "Both leave together at every common multiple of $36$ and $60$ minutes — smallest is the LCM.",
+        "$\\mathrm{lcm}(36, 60) = 180$ minutes = $3$ hours."
+      ],
+      "explanation": "$36 = 2^2 \\cdot 3^2$, $60 = 2^2 \\cdot 3 \\cdot 5$. $\\mathrm{lcm} = 2^2 \\cdot 3^2 \\cdot 5 = 180$ min = $3$ hours. $8\\text{:}00$ AM + $3$ hours = $11\\text{:}00$ AM.",
+      "steps": [
+        "Both leave together at every $\\mathrm{lcm}(36, 60)$ minutes.",
+        "$36 = 2^2 \\cdot 3^2$, $60 = 2^2 \\cdot 3 \\cdot 5$.",
+        "$\\mathrm{lcm} = 2^2 \\cdot 3^2 \\cdot 5 = 180$ min = $3$ hours.",
+        "$8\\text{:}00 + 3\\text{:}00 = 11\\text{:}00$ AM."
+      ],
+      "id": "q46",
+      "difficulty": "hard"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Three drummers strike on different beats: } A \\text{ every } 4, B \\text{ every } 6, C \\text{ every } 9. \\\\ \\text{They all strike on beat } 0. \\text{ How many BEATS until all three strike together again?}",
+      "answer": 36,
+      "tolerance": 0,
+      "hints": [
+        "All strike together at every common multiple of $4, 6, 9$.",
+        "$4 = 2^2$, $6 = 2 \\cdot 3$, $9 = 3^2$."
+      ],
+      "explanation": "$4 = 2^2$, $6 = 2 \\cdot 3$, $9 = 3^2$. $\\mathrm{lcm} = 2^2 \\cdot 3^2 = 36$ beats.",
+      "steps": [
+        "Sync at every common multiple — smallest is LCM.",
+        "$4 = 2^2$, $6 = 2 \\cdot 3$, $9 = 3^2$.",
+        "Max exponents: $2^2 \\cdot 3^2 = 36$.",
+        "All three drum together every $36$ beats."
+      ],
+      "id": "q47",
+      "difficulty": "hard"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{How many factors does } 360 \\text{ have?}",
+      "answer": 24,
+      "tolerance": 0,
+      "hints": [
+        "Prime-factorize: $360 = 2^3 \\cdot 3^2 \\cdot 5$.",
+        "Number of factors $= (a+1)(b+1)(c+1)$ from the exponents."
+      ],
+      "explanation": "$360 = 2^3 \\cdot 3^2 \\cdot 5$. Number of factors $= (3+1)(2+1)(1+1) = 4 \\cdot 3 \\cdot 2 = 24$.",
+      "steps": [
+        "Prime-factorize: $360 = 2^3 \\cdot 3^2 \\cdot 5^1$.",
+        "Apply the formula: $(3+1)(2+1)(1+1) = 4 \\cdot 3 \\cdot 2 = 24$.",
+        "(So $360$ — used as the number of degrees in a circle precisely because of its many factors!)"
+      ],
+      "id": "q48",
+      "difficulty": "hard"
+    }
+  ]
+}

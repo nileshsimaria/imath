@@ -1,0 +1,89 @@
+{
+  "title": "A Parametric Trig Challenge",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Time to put it together. Here is a single equation that uses *everything* you've learned in this course — functions, algebra, and trigonometry — and it has a beautiful graphical answer."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\sqrt{1 + \\sin x} \\; + \\; \\sqrt{1 - \\sin x} \\; = \\; \\sqrt{b}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "For which values of $b$ does this equation have solutions in $x$? Don't try to solve algebraically yet — first, *see* it. Drag the slider for $b$ below."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "parametric-equation",
+      "config": {
+        "preset": "sqrt-sin",
+        "b": 3
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### What's going on graphically",
+        "The red curve is the **LHS** as a function of $x$. The green dashed line is the **RHS**: a horizontal line at height $\\sqrt{b}$. The equation has a solution at each $x$ where the two cross.",
+        "Slide $b$ from 0 to 8. Notice:",
+        "When $b$ is very small (say $b = 0.5$), $\\sqrt{b}$ is too low — the line sits below the LHS curve. **No solutions.**",
+        "When $b = 4$, the line sits at $y = 2$, which is the *maximum* of the LHS (touching at $x = 0, \\pi, 2\\pi, \\ldots$). **Solutions exist** at those tangent points.",
+        "When $b$ is in between, you get intervals of solutions where the curves overlap. **Try $b = 2, 3, 3.9, 4.1$.**"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The bounds on LHS",
+      "body": "**Lower bound.** When $\\sin x = \\pm 1$ (peaks of sine), one term under the radical is $1 + 1 = 2$ and the other is $1 - 1 = 0$. So LHS $= \\sqrt{2} + 0 = \\sqrt{2} \\approx 1.414$.\n**Upper bound.** When $\\sin x = 0$, both terms become $\\sqrt{1} = 1$, so LHS $= 1 + 1 = 2$.\nThe LHS oscillates *between* $\\sqrt{2}$ and $2$, never escaping that band."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Solving algebraically",
+        "Now that we see the answer in the picture, let's nail it down. Both sides are non-negative, so we can safely square:",
+        "$\\big(\\sqrt{1+\\sin x} + \\sqrt{1-\\sin x}\\big)^2 = b$",
+        "Expand: $(1 + \\sin x) + 2\\sqrt{(1+\\sin x)(1-\\sin x)} + (1 - \\sin x) = b$",
+        "Simplify: $2 + 2\\sqrt{1 - \\sin^2 x} = b$, i.e. $2 + 2|\\cos x| = b$.",
+        "So $|\\cos x| = \\dfrac{b - 2}{2}$. For real solutions, we need $0 \\leq \\dfrac{b-2}{2} \\leq 1$, which gives $\\boxed{2 \\leq b \\leq 4}$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The connection to everything else",
+        "Watch what this one problem touched:",
+        "**Functions:** LHS and RHS are each functions of $x$ (or of $b$). 'Solutions' = intersection points.",
+        "**Algebra:** Squaring carefully (both sides non-negative), expanding, simplifying.",
+        "**Trig identity:** $1 - \\sin^2 x = \\cos^2 x$ and $\\sqrt{\\cos^2 x} = |\\cos x|$.",
+        "**Inequalities:** $|\\cos x|$ ranges over $[0, 1]$, which gates the values of $b$.",
+        "That is the **language of calculus** in action — long before any derivative or integral shows up. Master this style of thinking and the calculus on top becomes ordinary work."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Bonus: the same trick on a polynomial",
+        "The graphical method works for *any* equation $f(x) = c$. Slide $c$ below and watch the parabola $-x^2 + 3x + 2$ intersect the horizontal line."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "parametric-equation",
+      "config": {
+        "preset": "horizontal-c",
+        "b": 4
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "Three regimes: two intersections (two real roots), one (a double root at the vertex), or zero (no real roots — the line is above the maximum). This is exactly the discriminant story you saw with quadratics — but now you can *see* why it has three regimes."
+      ]
+    }
+  ]
+}

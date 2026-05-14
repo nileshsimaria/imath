@@ -1,0 +1,156 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{Cyclic quadrilateral } ABCD. \\, \\angle A = 95°. \\, \\text{Find } \\angle C.",
+      "answer": 85,
+      "tolerance": 0.001,
+      "hints": [
+        "Opposite angles in a cyclic quadrilateral sum to $180°$.",
+        "$\\angle C = 180 - \\angle A$."
+      ],
+      "explanation": "$\\angle C = 180 - 95 = 85°$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{Cyclic quadrilateral } ABCD. \\, \\angle A = 70°, \\angle B = 100°, \\angle C = ?",
+      "answer": 110,
+      "tolerance": 0.001,
+      "hints": [
+        "Opposite to $A$ is $C$.",
+        "$\\angle A + \\angle C = 180°$."
+      ],
+      "explanation": "$\\angle C = 180 - 70 = 110°$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "Which quadrilateral is ALWAYS cyclic?",
+      "choices": [
+        "Any parallelogram",
+        "Any rhombus",
+        "Any rectangle",
+        "Any trapezoid"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "A cyclic quadrilateral has opposite angles summing to 180°.",
+        "Rectangles have all angles 90°."
+      ],
+      "explanation": "Every rectangle has all four angles equal to 90°, so opposite angles trivially sum to 180°. Hence every rectangle is cyclic. Other parallelograms generally aren't.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{In cyclic quad } ABCD, \\, \\angle A = 2x, \\angle C = x + 30. \\\\ \\text{Find } x.",
+      "answer": 50,
+      "tolerance": 0.001,
+      "hints": [
+        "$\\angle A + \\angle C = 180°$.",
+        "$2x + (x + 30) = 180$."
+      ],
+      "explanation": "$3x + 30 = 180 \\Rightarrow 3x = 150 \\Rightarrow x = 50$.",
+      "steps": [
+        {
+          "text": "**Opposite angles sum to 180°:**"
+        },
+        {
+          "math": "2x + (x + 30) = 180"
+        },
+        {
+          "math": "3x + 30 = 180 \\;\\Longrightarrow\\; 3x = 150 \\;\\Longrightarrow\\; x = 50"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "prompt": "To prove four points are concyclic (lie on one circle), it suffices to show:",
+      "choices": [
+        "They form a parallelogram.",
+        "They form a quadrilateral with one pair of opposite angles supplementary.",
+        "They are vertices of an equilateral figure.",
+        "They have the same distance from a center."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Converse of the cyclic quadrilateral theorem.",
+        "Or option D in a sense — 'same distance from center' IS the definition of being on a circle, but you'd have to find that center."
+      ],
+      "explanation": "By the converse of the cyclic quadrilateral theorem, a quadrilateral with one pair of opposite supplementary angles is cyclic. (Option D is also technically correct but requires finding the center first; option B is the standard angle-chasing tool.)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{Cyclic quadrilateral } ABCD. \\, \\angle B = 4 \\angle D. \\, \\text{Find } \\angle B.",
+      "answer": 144,
+      "tolerance": 0.001,
+      "hints": [
+        "$\\angle B + \\angle D = 180°$ and $\\angle B = 4 \\angle D$.",
+        "Let $\\angle D = x$. Then $4x + x = 180$, so $x = 36$, $\\angle B = 144$."
+      ],
+      "explanation": "$5 \\angle D = 180 \\Rightarrow \\angle D = 36°$. $\\angle B = 4 \\cdot 36 = 144°$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** $\\angle B + \\angle D = 180°$ and $\\angle B = 4 \\angle D$."
+        },
+        {
+          "text": "Let $\\angle D = x$. Then $4x + x = 180$, so $x = 36$, $\\angle B = 144$."
+        },
+        {
+          "text": "**Solution.** $5 \\angle D = 180 \\Rightarrow \\angle D = 36°$. $\\angle B = 4 \\cdot 36 = 144°$."
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "prompt": "Is an isosceles trapezoid always cyclic?",
+      "choices": [
+        "Yes",
+        "No",
+        "Only if the parallel sides are equal",
+        "Only if it's a square"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Base angles of an isosceles trapezoid are equal.",
+        "The two non-parallel sides being equal forces opposite angle pairs to be supplementary."
+      ],
+      "explanation": "Yes — every isosceles trapezoid is cyclic. The two base angles at each base are equal, and the four angles sum to 360°, which makes opposite angles supplementary.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{Cyclic quad } ABCD. \\, \\angle A = 70°, \\angle B = 80°. \\\\ \\text{Find } \\angle C + \\angle D.",
+      "answer": 210,
+      "tolerance": 0.001,
+      "hints": [
+        "Total quadrilateral angle sum = 360°.",
+        "$\\angle C + \\angle D = 360 - 70 - 80$."
+      ],
+      "explanation": "Quadrilateral angles sum to 360°: $\\angle C + \\angle D = 360 - 70 - 80 = 210°$. (You can also verify: $\\angle C = 180 - 70 = 110$, $\\angle D = 180 - 80 = 100$, sum $= 210$. ✓)",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** Total quadrilateral angle sum = 360°."
+        },
+        {
+          "text": "$\\angle C + \\angle D = 360 - 70 - 80$."
+        },
+        {
+          "text": "**Solution.** Quadrilateral angles sum to 360°: $\\angle C + \\angle D = 360 - 70 - 80 = 210°$. (You can also verify: $\\angle C = 180 - 70 = 110$, $\\angle D = 180 - 80 = 100$, sum $= 210$. ✓)"
+        }
+      ]
+    }
+  ]
+}

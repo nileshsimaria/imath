@@ -1,0 +1,88 @@
+{
+  "title": "Linear Equation Word Problems",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### From English to algebra",
+        "Word problems are where algebra meets real life. The translation is the hardest part — once you have an equation, solving it is mechanical.",
+        "**The five-step procedure** (drill this until automatic):",
+        "**1.** Read the problem twice. Identify the **unknown**. Give it a letter.",
+        "**2.** Express every other quantity **in terms of that letter**.",
+        "**3.** Find the **equation** — usually from a sentence with 'is', 'equals', 'sum is', 'twice as much', etc.",
+        "**4.** Solve.",
+        "**5.** Check the answer back **in the original problem** (not the equation — the equation might be wrong)."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Translation phrasebook",
+      "body": "**'x more than y'** → $y + x$\n**'x less than y'** → $y - x$  (note: subtraction direction!)\n**'x times y'** → $xy$\n**'product of x and y'** → $xy$\n**'sum of x and y'** → $x + y$\n**'quotient of x by y'** → $x / y$\n**'three consecutive integers'** → $n, n+1, n+2$\n**'three consecutive even integers'** → $n, n+2, n+4$\n**'reverse of a two-digit number ab'** → $10b + a$ (original is $10a + b$)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Age problems — classic Indian style",
+        "**Example.** The present age of a father is 4 times that of his son. After 5 years, the father will be 3 times the son's age. Find their present ages.",
+        "**Setup.** Let son's present age be $x$. Then father's present age $= 4x$.",
+        "After 5 years: son is $x + 5$, father is $4x + 5$.",
+        "Equation: $4x + 5 = 3(x + 5)$.",
+        "Solve: $4x + 5 = 3x + 15 \\Rightarrow x = 10$.",
+        "**Son is 10; father is 40 today.**"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Two-digit number puzzles",
+        "**Example.** The sum of digits of a two-digit number is 9. If the digits are reversed, the new number exceeds the original by 27. Find the original number.",
+        "**Setup.** Let the tens digit be $a$, units digit be $b$. Original = $10a + b$. Reverse = $10b + a$.",
+        "Two equations:",
+        "$a + b = 9$",
+        "$(10b + a) - (10a + b) = 27 \\Rightarrow 9b - 9a = 27 \\Rightarrow b - a = 3$.",
+        "Solve: $a + b = 9$, $b - a = 3$. Add: $2b = 12 \\Rightarrow b = 6$, then $a = 3$.",
+        "**Original number is 36.** Check: reverse is 63, difference $63 - 36 = 27$ ✓."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Fraction word problems",
+        "**Example.** If the numerator of a fraction is increased by 1 and the denominator decreased by 1, the result is 1. If the numerator is increased by 1 and the denominator increased by 1, the result is $\\dfrac{2}{3}$. Find the original fraction.",
+        "**Setup.** Let fraction be $\\dfrac{x}{y}$.",
+        "$\\dfrac{x + 1}{y - 1} = 1 \\Rightarrow x + 1 = y - 1 \\Rightarrow y = x + 2$.",
+        "$\\dfrac{x + 1}{y + 1} = \\dfrac{2}{3} \\Rightarrow 3(x + 1) = 2(y + 1)$.",
+        "Substitute $y = x + 2$: $3x + 3 = 2(x + 3) = 2x + 6 \\Rightarrow x = 3$. Then $y = 5$.",
+        "**Fraction is $\\dfrac{3}{5}$.** Check both conditions: $\\dfrac{4}{4} = 1$ ✓; $\\dfrac{4}{6} = \\dfrac{2}{3}$ ✓."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Money / coin problems",
+        "**Example.** A piggy bank contains \\$5 and \\$2 coins totaling 20 coins worth \\$64 in total. How many of each?",
+        "**Setup.** Let number of \\$5 coins be $x$. Then \\$2 coins = $20 - x$.",
+        "Value equation: $5x + 2(20 - x) = 64$.",
+        "$5x + 40 - 2x = 64 \\Rightarrow 3x = 24 \\Rightarrow x = 8$.",
+        "**8 coins of \\$5 and 12 coins of \\$2.**"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Ratio word problems",
+        "**Example.** The ages of two friends are in the ratio $4 : 5$. Four years from now, the ratio will be $5 : 6$. Find their present ages.",
+        "**Setup.** Let ages be $4k$ and $5k$ for some positive $k$.",
+        "After 4 years: $\\dfrac{4k + 4}{5k + 4} = \\dfrac{5}{6}$.",
+        "Cross-multiply: $6(4k + 4) = 5(5k + 4)$.",
+        "$24k + 24 = 25k + 20 \\Rightarrow k = 4$.",
+        "**Present ages: 16 and 20.**"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Pro tips",
+      "body": "**Tip 1.** When you have two unknowns and one equation, look for a second condition you missed. Almost every Indian-textbook word problem gives you exactly enough.\n\n**Tip 2.** Define variables for the simplest things (smallest age, lower digit, etc.), not the complicated derived quantities.\n\n**Tip 3.** **Always check** your answer in the original problem's English statement. If 'father is 4 times the son's age' came out as 40 and 10, ✓. If you got fractional or negative ages, recheck your equation."
+    }
+  ]
+}

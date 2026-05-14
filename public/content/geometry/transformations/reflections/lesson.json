@@ -1,0 +1,66 @@
+{
+  "title": "Reflections",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### Mirror-image transformations",
+        "A **reflection** flips a shape across a line — the **line of reflection** (or **mirror line**). Every point of the pre-image has an image directly opposite it on the other side of the mirror, at the same perpendicular distance.",
+        "Fold the paper along the mirror line and the pre-image lands exactly on its image."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "transformation",
+      "config": {
+        "mode": "reflect",
+        "axis": "y-axis"
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "The red dashed line is the mirror. Switch the axis in the dropdown and watch the image jump to its new position. Notice the arrow flips direction — that's the **orientation reversal** that distinguishes reflections from translations and rotations."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The four basic reflection rules",
+      "body": "Memorize these — they cover most problems:\n\n**Over the y-axis:** $(x, y) \\to (-x, y)$\n**Over the x-axis:** $(x, y) \\to (x, -y)$\n**Over the line $y = x$:** $(x, y) \\to (y, x)$\n**Over the line $y = -x$:** $(x, y) \\to (-y, -x)$"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why these formulas work",
+        "**Over the y-axis.** Every point $(x, y)$ has its mirror image at the same height $y$, with the x-coordinate flipped in sign. So $(x, y) \\to (-x, y)$.",
+        "**Over the x-axis.** Same idea: keep $x$, flip $y$. So $(x, y) \\to (x, -y)$.",
+        "**Over $y = x$.** This line treats $x$ and $y$ symmetrically. Swapping them puts you on the mirror image. So $(x, y) \\to (y, x)$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### What's preserved (and what isn't)",
+        "**Preserved:** distances, angles, side lengths, area, shape.",
+        "**Flipped:** orientation. A clockwise polygon becomes counterclockwise (and vice versa). This is why reflections are sometimes called **opposite isometries** — they're rigid motions, but they reverse handedness.",
+        "Try this in the widget: pick a non-symmetric shape (like the arrow, default). Reflect it. The arrow points the other way."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Double reflection = translation or rotation",
+      "body": "Reflect twice over the same line: you get the identity (back to where you started).\n\nReflect over two **parallel** lines: the result is a **translation** by twice the distance between the lines.\n\nReflect over two **intersecting** lines: the result is a **rotation** about their intersection point by twice the angle between them.\n\nThese are deep facts — every rigid motion in the plane is at most three reflections."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example",
+        "Reflect $A(3, -2)$ over the line $y = x$.",
+        "Rule: $(x, y) \\to (y, x)$.",
+        "$A' = (-2, 3)$.",
+        "Sanity check: midpoint of $AA'$ should lie on the mirror $y = x$. Midpoint $= ((3 + -2)/2,\\; (-2 + 3)/2) = (0.5, 0.5)$. Yes — on $y = x$. ✓",
+        "Also, the segment $AA'$ should be perpendicular to $y = x$ (slope = 1), so $AA'$ should have slope $-1$. Slope of $AA' = (3 - (-2))/((-2) - 3) = 5/(-5) = -1$. ✓"
+      ]
+    }
+  ]
+}

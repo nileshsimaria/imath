@@ -1,0 +1,93 @@
+{
+  "title": "Square Roots, Cube Roots & Surds",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### What is a square root?",
+        "The **square root** of a number $a$ is the number which, when squared, gives $a$. We write $\\sqrt{a}$.",
+        "$\\sqrt{25} = 5$ because $5^2 = 25$.",
+        "$\\sqrt{144} = 12$ because $12^2 = 144$.",
+        "$\\sqrt{0} = 0$, and $\\sqrt{1} = 1$.",
+        "Note: $(-5)^2 = 25$ too. By convention, $\\sqrt{a}$ refers to the **non-negative** root. So $\\sqrt{25} = +5$ (and we say $\\pm 5$ when we want both)."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Perfect squares — memorize 1 through 25",
+      "body": "$1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225,$\n$256, 289, 324, 361, 400, 441, 484, 529, 576, 625$\n\nRecognizing a perfect square saves enormous time. If you see $\\sqrt{289}$, you should *instantly* think 17."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Finding $\\sqrt{n}$ via prime factorization",
+        "**Steps:**",
+        "1. Find the prime factorization of $n$.",
+        "2. Pair up identical primes.",
+        "3. Take one from each pair; multiply them together.",
+        "4. If anything is left unpaired, the number isn't a perfect square (the leftover stays under the root sign).",
+        "**Example:** $\\sqrt{1764} = ?$",
+        "$1764 = 2 \\times 882 = 2 \\times 2 \\times 441 = 2^2 \\times 441 = 2^2 \\times 3^2 \\times 49 = 2^2 \\times 3^2 \\times 7^2$.",
+        "All pairs! $\\sqrt{1764} = 2 \\times 3 \\times 7 = 42$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The long-division method for square roots",
+        "When prime factorization is hard (think $\\sqrt{8281}$), there's a methodical pencil-and-paper algorithm — **the long-division method** — that's a staple of middle-school arithmetic.",
+        "**Steps to compute $\\sqrt{8281}$:**",
+        "1. Pair the digits from the right: $\\overline{82}\\,\\overline{81}$.",
+        "2. Largest integer whose square $\\leq 82$ is $9$ ($9^2 = 81$). Write 9 above; subtract $81$ from $82$ to get remainder $1$.",
+        "3. Bring down next pair: $181$. Double the current quotient (9 → 18). We need a digit $d$ such that $(180 + d) \\cdot d \\leq 181$. Try $d = 1$: $181 \\cdot 1 = 181$. ✓",
+        "4. Quotient is now $91$. Remainder $0$. So $\\sqrt{8281} = 91$.",
+        "Practice this until it's second nature — it works for *any* integer."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Cube roots",
+        "$\\sqrt[3]{a}$ is the number whose cube is $a$. Cube roots can be negative: $\\sqrt[3]{-27} = -3$.",
+        "**Memorize cubes 1–10:** $1, 8, 27, 64, 125, 216, 343, 512, 729, 1000$.",
+        "**Via prime factorization:** group primes in *triples* (cubes), not pairs.",
+        "**Example:** $\\sqrt[3]{2744} = ?$",
+        "$2744 = 2^3 \\times 7^3$. So $\\sqrt[3]{2744} = 2 \\times 7 = 14$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Unit-digit pattern for cube roots",
+      "body": "**Cubes of digits 0–9** end in:\n$0^3 = 0, \\;1^3 = 1, \\;2^3 = 8, \\;3^3 = 27, \\;4^3 = 64,$\n$5^3 = 125, \\;6^3 = 216, \\;7^3 = 343, \\;8^3 = 512, \\;9^3 = 729.$\n\nUnit digits: $0, 1, 8, 7, 4, 5, 6, 3, 2, 9$.\n\n**Important:** every digit appears exactly once. So a perfect cube uniquely determines its last digit. Useful trick: to find $\\sqrt[3]{74088}$, the last digit of the cube root is the digit whose cube ends in 8 — that's $2$. Then strip the last three digits (088) and find the cube root of the remaining (74): $4^3 = 64 \\leq 74 < 125 = 5^3$, so it's between 4 and 5 → cube root starts with 4. Answer: $42$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Surds — irrational roots",
+        "If $n$ is not a perfect square, $\\sqrt{n}$ is an **irrational number** — its decimal goes on forever without repeating. We call such roots **surds**.",
+        "$\\sqrt{2} \\approx 1.41421\\ldots$ (forever, never repeating)",
+        "$\\sqrt{3} \\approx 1.73205\\ldots$",
+        "$\\sqrt{5} \\approx 2.23607\\ldots$",
+        "Surds are often left in 'surd form' rather than approximated — it's exact."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Surd simplification rules",
+      "body": "**Product:** $\\sqrt{a} \\cdot \\sqrt{b} = \\sqrt{ab}$.\n\n**Quotient:** $\\dfrac{\\sqrt{a}}{\\sqrt{b}} = \\sqrt{\\dfrac{a}{b}}$.\n\n**Extract perfect squares:** $\\sqrt{72} = \\sqrt{36 \\cdot 2} = 6\\sqrt{2}$.\n\n**Add only like surds:** $3\\sqrt{5} + 2\\sqrt{5} = 5\\sqrt{5}$. But $3\\sqrt{2} + 2\\sqrt{3}$ cannot be combined — different surds.\n\n**Rationalize denominators:** multiply by the conjugate.\n$\\dfrac{1}{\\sqrt{2}} = \\dfrac{\\sqrt{2}}{2}$ (multiply top and bottom by $\\sqrt{2}$).\n$\\dfrac{1}{2 + \\sqrt{3}} = \\dfrac{2 - \\sqrt{3}}{(2 + \\sqrt{3})(2 - \\sqrt{3})} = \\dfrac{2 - \\sqrt{3}}{4 - 3} = 2 - \\sqrt{3}$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked examples",
+        "**Simplify $\\sqrt{500}$.**",
+        "$500 = 100 \\times 5$, and $\\sqrt{100} = 10$. So $\\sqrt{500} = 10\\sqrt{5}$.",
+        "**Simplify $\\sqrt{27} + \\sqrt{75}$.**",
+        "$\\sqrt{27} = \\sqrt{9 \\cdot 3} = 3\\sqrt{3}$. $\\sqrt{75} = \\sqrt{25 \\cdot 3} = 5\\sqrt{3}$. Sum: $8\\sqrt{3}$.",
+        "**Rationalize $\\dfrac{3}{\\sqrt{5} - 1}$.**",
+        "Multiply top and bottom by the conjugate $\\sqrt{5} + 1$:",
+        "$\\dfrac{3(\\sqrt{5} + 1)}{(\\sqrt{5})^2 - 1^2} = \\dfrac{3(\\sqrt{5} + 1)}{4}$."
+      ]
+    }
+  ]
+}

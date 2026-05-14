@@ -1,0 +1,440 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{A shopkeeper bought a chair for } \\$500 \\text{ (its Cost Price)} \\\\ \\text{and sold it for } \\$650 \\text{ (the Selling Price).} \\\\ \\text{What is the profit percentage?}",
+      "answer": 30,
+      "tolerance": 0.001,
+      "hints": [
+        "**Cost Price (CP)** is what the shopkeeper paid. **Selling Price (SP)** is what the customer paid.",
+        "**Profit = SP − CP** (the rupee/dollar amount of profit).",
+        "**Profit % = (Profit / CP) × 100** — always compute the percentage **on the CP**, not the SP.",
+        "$Profit = 650 - 500 = \\$150$. Profit % = $(150/500) \\times 100 = 30\\%$."
+      ],
+      "explanation": "Profit = $650 - 500 = \\$150$. Profit % = $\\dfrac{150}{500} \\times 100 = 30\\%$.",
+      "steps": [
+        {
+          "text": "**Identify the values.** Cost Price (what the shopkeeper paid) = \\$500. Selling Price (what the customer paid) = \\$650."
+        },
+        {
+          "text": "**Compute the profit** in dollars:"
+        },
+        {
+          "math": "\\text{Profit} = SP - CP = 650 - 500 = \\$150"
+        },
+        {
+          "text": "**Convert to a percentage.** Profit % is always measured *as a fraction of the Cost Price*:"
+        },
+        {
+          "math": "\\text{Profit \\%} = \\dfrac{\\text{Profit}}{CP} \\times 100 = \\dfrac{150}{500} \\times 100 = 30\\%"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{A trader buys an item at Cost Price (CP) } \\$800. \\\\ \\text{She wants a } 15\\% \\text{ profit.} \\\\ \\text{At what Selling Price (SP) should she sell it (in dollars)?}",
+      "answer": 920,
+      "tolerance": 0.001,
+      "hints": [
+        "**Selling Price (SP)** = Cost Price + Profit, where profit is 15% of CP.",
+        "Formula: $SP = CP \\times \\left(1 + \\dfrac{\\text{Profit \\%}}{100}\\right)$.",
+        "$800 \\times 1.15 = \\$920$."
+      ],
+      "explanation": "$SP = 800 \\times 1.15 = \\$920$.",
+      "steps": [
+        {
+          "text": "**Use the SP formula:**"
+        },
+        {
+          "math": "SP = CP \\times \\left(1 + \\dfrac{P\\%}{100}\\right)"
+        },
+        {
+          "math": "= 800 \\times \\left(1 + \\dfrac{15}{100}\\right) = 800 \\times 1.15 = 920"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{An item is sold at Selling Price (SP) } \\$576 \\text{, making a } 20\\% \\text{ profit.} \\\\ \\text{What was its Cost Price (CP) in dollars?}",
+      "answer": 480,
+      "tolerance": 0.001,
+      "hints": [
+        "**Common mistake:** to find CP, students often subtract 20% from SP. That's WRONG — the 20% is computed *on the CP*, not on the SP.",
+        "Use the formula in reverse: $CP = \\dfrac{SP}{1 + P\\%/100} = \\dfrac{576}{1.20}$.",
+        "$576 / 1.20 = \\$480$."
+      ],
+      "explanation": "CP = $576 / 1.2 = \\$480$. (Check: $480 \\times 1.20 = 576$ ✓)",
+      "steps": [
+        {
+          "text": "**Start from the SP formula** and solve for CP:"
+        },
+        {
+          "math": "SP = CP(1 + P\\%/100) \\;\\Longrightarrow\\; CP = \\dfrac{SP}{1 + P\\%/100}"
+        },
+        {
+          "math": "CP = \\dfrac{576}{1.20} = 480"
+        },
+        {
+          "text": "**Verify:** $480 \\times 1.20 = 576$ ✓."
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{An item has Marked Price (MP) } \\$1500 \\text{ on its tag.} \\\\ \\text{The store offers a } 20\\% \\text{ discount.} \\\\ \\text{What is the Selling Price (SP) in dollars?}",
+      "answer": 1200,
+      "tolerance": 0.001,
+      "hints": [
+        "**Marked Price (MP)** is the price on the tag *before* any discount.",
+        "**Discount %** is computed on the MP (NOT the SP).",
+        "Formula: $SP = MP \\times \\left(1 - \\dfrac{D\\%}{100}\\right)$.",
+        "$1500 \\times 0.80 = \\$1200$."
+      ],
+      "explanation": "$SP = 1500 \\times 0.80 = \\$1200$.",
+      "steps": [
+        {
+          "text": "**Apply the discount formula:**"
+        },
+        {
+          "math": "SP = MP \\times (1 - D\\%/100) = 1500 \\times 0.80 = 1200"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{A store gives two successive discounts: first } 10\\%, \\text{ then } 20\\%. \\\\ \\text{What single discount percentage gives the same final price?}",
+      "answer": 28,
+      "tolerance": 0.001,
+      "hints": [
+        "**Watch out:** $10\\% + 20\\% \\neq 30\\%$. Successive discounts are multiplied, not added.",
+        "If MP is \\$100: after 10% off → \\$90; after another 20% off \\$90 → \\$72. Total saved \\$28 → 28% discount overall.",
+        "**Shortcut formula** for two successive discounts $a\\%$ and $b\\%$: equivalent single = $a + b - \\dfrac{ab}{100}$."
+      ],
+      "explanation": "Equivalent single discount = $10 + 20 - (10 \\cdot 20)/100 = 30 - 2 = 28\\%$.",
+      "steps": [
+        {
+          "text": "**Use the successive-discount shortcut formula:**"
+        },
+        {
+          "math": "D_{\\text{eq}} = a + b - \\dfrac{ab}{100}"
+        },
+        {
+          "text": "**Plug in $a = 10, b = 20$:**"
+        },
+        {
+          "math": "D_{\\text{eq}} = 10 + 20 - \\dfrac{10 \\cdot 20}{100} = 30 - 2 = 28\\%"
+        },
+        {
+          "text": "**Verify with concrete numbers.** Take MP = \\$100. After 10% off: \\$90. After 20% off \\$90: $90 \\times 0.80 = \\$72$. Discount of \\$28 on \\$100 = 28%. ✓"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{A shopkeeper marks an item at } 40\\% \\text{ above its Cost Price (CP),} \\\\ \\text{and then offers a } 25\\% \\text{ discount on this Marked Price.} \\\\ \\text{What is the shopkeeper's actual profit percentage?}",
+      "answer": 5,
+      "tolerance": 0.001,
+      "hints": [
+        "Pick a friendly CP — say \\$100 — since we're after a percentage.",
+        "**Step 1:** Markup 40% means MP = $100 \\times 1.40 = \\$140$.",
+        "**Step 2:** Discount 25% on MP means SP = $140 \\times 0.75 = \\$105$.",
+        "**Step 3:** Profit = $105 - 100 = \\$5$, so profit % = 5%."
+      ],
+      "explanation": "Take $CP = \\$100$. After 40% markup, $MP = \\$140$. After 25% discount, $SP = 140 \\times 0.75 = \\$105$. Profit = \\$5, so profit % = 5%.",
+      "steps": [
+        {
+          "text": "**Pick CP = \\$100** (since the answer is a percentage, the actual CP value doesn't matter)."
+        },
+        {
+          "text": "**Apply the 40% markup** to get the Marked Price:"
+        },
+        {
+          "math": "MP = 100 \\times 1.40 = \\$140"
+        },
+        {
+          "text": "**Apply the 25% discount** to get the Selling Price:"
+        },
+        {
+          "math": "SP = 140 \\times 0.75 = \\$105"
+        },
+        {
+          "text": "**Compute profit % on CP:**"
+        },
+        {
+          "math": "\\dfrac{SP - CP}{CP} \\times 100 = \\dfrac{105 - 100}{100} \\times 100 = 5\\%"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{A trader buys an item at Cost Price (CP) } \\$240. \\\\ \\text{He plans to offer a } 20\\% \\text{ discount but still wants } 25\\% \\text{ profit.} \\\\ \\text{What Marked Price (MP) should he set, in dollars?}",
+      "answer": 375,
+      "tolerance": 0.5,
+      "hints": [
+        "**Work backwards.** First find the target Selling Price (SP) that yields 25% profit: $SP = 240 \\times 1.25 = \\$300$.",
+        "**Then back-compute MP** from the discount: $MP \\times 0.80 = 300$, so $MP = 300 / 0.80 = \\$375$."
+      ],
+      "explanation": "Target SP = $240 \\times 1.25 = \\$300$. To get this after 20% discount: $MP \\times 0.80 = 300 \\Rightarrow MP = \\$375$.",
+      "steps": [
+        {
+          "text": "**Step 1 — Find target SP** (for 25% profit on CP = \\$240):"
+        },
+        {
+          "math": "SP = CP \\times 1.25 = 240 \\times 1.25 = 300"
+        },
+        {
+          "text": "**Step 2 — MP must give this SP after a 20% discount.** So $SP = MP \\times 0.80$:"
+        },
+        {
+          "math": "MP \\times 0.80 = 300 \\;\\Longrightarrow\\; MP = \\dfrac{300}{0.80} = 375"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{A trader sells two articles at } \\$1200 \\text{ each (the same Selling Price for both).} \\\\ \\text{On one she makes } 20\\% \\text{ gain, on the other } 20\\% \\text{ loss.} \\\\ \\text{Find her net loss in dollars (absolute value).}",
+      "answer": 100,
+      "tolerance": 0.5,
+      "hints": [
+        "**Don't fall for the symmetry illusion.** Equal-and-opposite percentages do NOT cancel because they're applied to *different* Cost Prices.",
+        "**Item 1 (20% gain):** Selling Price $\\$1200 = CP_1 \\times 1.20$. So $CP_1 = 1200/1.20 = \\$1000$.",
+        "**Item 2 (20% loss):** Selling Price $\\$1200 = CP_2 \\times 0.80$. So $CP_2 = 1200/0.80 = \\$1500$.",
+        "**Compare totals.** Total spent: $\\$1000 + \\$1500 = \\$2500$. Total received: $\\$1200 + \\$1200 = \\$2400$. Loss = \\$100."
+      ],
+      "explanation": "$CP_1 = 1200/1.20 = \\$1000$ and $CP_2 = 1200/0.80 = \\$1500$. Total CP \\$2500; total SP \\$2400. Net loss = \\$100.",
+      "steps": [
+        {
+          "text": "**First article (20% gain):** find $CP_1$ from $SP = CP_1 \\times 1.20$:"
+        },
+        {
+          "math": "CP_1 = \\dfrac{1200}{1.20} = 1000"
+        },
+        {
+          "text": "**Second article (20% loss):** find $CP_2$ from $SP = CP_2 \\times 0.80$:"
+        },
+        {
+          "math": "CP_2 = \\dfrac{1200}{0.80} = 1500"
+        },
+        {
+          "text": "**Compare totals:**"
+        },
+        {
+          "math": "\\text{Total CP} = 1000 + 1500 = 2500, \\quad \\text{Total SP} = 2 \\times 1200 = 2400"
+        },
+        {
+          "math": "\\text{Net loss} = 2500 - 2400 = \\$100"
+        },
+        {
+          "text": "**Why the loss?** Equal percentages on different bases don't cancel — the 20% loss is on a larger CP than the 20% gain."
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{A shirt's Marked Price (MP) is } \\$800. \\\\ \\text{It is sold for } \\$680. \\\\ \\text{What is the discount percentage?}",
+      "answer": 15,
+      "tolerance": 0.001,
+      "hints": [
+        "**Discount** = MP − SP (in dollars). **Discount %** = (Discount / MP) × 100.",
+        "Discount = $800 - 680 = \\$120$. Discount % = $120/800 \\times 100 = 15\\%$."
+      ],
+      "explanation": "Discount = $\\$120$. % = $120/800 \\times 100 = 15\\%$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{A car costs (CP) } \\$400{,}000 \\text{ and is sold at a } 15\\% \\text{ loss.} \\\\ \\text{Find the Selling Price (SP) in dollars.}",
+      "answer": 340000,
+      "tolerance": 1,
+      "hints": [
+        "**Loss** means SP is below CP. Formula: $SP = CP \\times \\left(1 - \\dfrac{\\text{Loss \\%}}{100}\\right)$.",
+        "$400{,}000 \\times (1 - 0.15) = 400{,}000 \\times 0.85$.",
+        "$\\$340{,}000$."
+      ],
+      "explanation": "$SP = 400{,}000 \\times 0.85 = \\$340{,}000$.",
+      "steps": [
+        {
+          "text": "**For a loss**, multiply CP by $(1 - L\\%/100)$:"
+        },
+        {
+          "math": "SP = CP \\times \\left(1 - \\dfrac{15}{100}\\right) = 400{,}000 \\times 0.85"
+        },
+        {
+          "math": "= \\$340{,}000"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{An item sold at a particular Selling Price gives a profit of } \\$300. \\\\ \\text{If the SP is doubled, the profit becomes } \\$900. \\\\ \\text{Find the Cost Price (CP) in dollars.}",
+      "answer": 300,
+      "tolerance": 0.5,
+      "hints": [
+        "**Let CP = $x$.** Original SP = $x + 300$. Doubled SP = $2(x + 300) = 2x + 600$.",
+        "**Doubled SP gives profit \\$900** means $(2x + 600) - x = 900$.",
+        "$x + 600 = 900 \\Rightarrow x = \\$300$."
+      ],
+      "explanation": "Let CP = $x$. Original SP = $x + 300$. Doubled SP = $2x + 600$ and profit = $(2x + 600) - x = x + 600 = 900$. So $x = \\$300$.",
+      "steps": [
+        {
+          "text": "**Variables.** Let CP = $x$. Then original SP = $x + 300$ (profit \\$300)."
+        },
+        {
+          "text": "**Doubled SP** = $2(x + 300) = 2x + 600$."
+        },
+        {
+          "text": "**Profit at doubled SP** = $(2x + 600) - x = x + 600$."
+        },
+        {
+          "text": "**Set equal to \\$900:**"
+        },
+        {
+          "math": "x + 600 = 900 \\;\\Longrightarrow\\; x = 300"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\text{Three successive discounts of } 20\\%, 10\\%, \\text{ and } 5\\% \\text{ are applied to an item.} \\\\ \\text{What single discount percentage is equivalent? (Round to 1 decimal.)}",
+      "answer": 31.6,
+      "tolerance": 0.1,
+      "hints": [
+        "**Successive discounts multiply (don't add).** Each discount applies to the price *after* the previous one.",
+        "If MP = \\$1, the remaining fraction after all three is $0.80 \\times 0.90 \\times 0.95 = 0.684$.",
+        "**Equivalent single discount** = $1 - 0.684 = 0.316 = 31.6\\%$."
+      ],
+      "explanation": "$0.80 \\times 0.90 \\times 0.95 = 0.684 \\Rightarrow$ single equivalent = $1 - 0.684 = 31.6\\%$.",
+      "steps": [
+        {
+          "text": "**For successive discounts**, multiply the surviving fractions (1 minus each discount):"
+        },
+        {
+          "math": "(1 - 0.20)(1 - 0.10)(1 - 0.05) = 0.80 \\cdot 0.90 \\cdot 0.95"
+        },
+        {
+          "math": "= 0.684"
+        },
+        {
+          "text": "**Equivalent single discount** = $1 - 0.684$:"
+        },
+        {
+          "math": "= 0.316 = 31.6\\%"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q13",
+      "type": "numeric",
+      "promptTex": "\\text{If a profit of } 20\\% \\text{ is measured \\emph{on the Selling Price}}, \\\\ \\text{what is the profit percentage on the Cost Price (the standard convention)?}",
+      "answer": 25,
+      "tolerance": 0.001,
+      "hints": [
+        "**Standard convention:** profit % is always taken on CP, not SP. This problem is asking us to convert.",
+        "**Pick SP = \\$100.** Then profit = 20% of SP = \\$20. So CP = $100 - 20 = \\$80$.",
+        "**Profit % on CP** = $\\dfrac{20}{80} \\times 100 = 25\\%$."
+      ],
+      "explanation": "Take SP = \\$100. Profit on SP = \\$20, so CP = \\$80. Profit % on CP = $20/80 \\times 100 = 25\\%$.",
+      "steps": [
+        {
+          "text": "**Pick a convenient SP** = \\$100 (since we're after a percentage)."
+        },
+        {
+          "text": "**Profit on SP basis is 20% of \\$100 = \\$20.**"
+        },
+        {
+          "text": "**Back out CP:** $CP = SP - \\text{Profit} = 100 - 20 = \\$80$."
+        },
+        {
+          "text": "**Convert to standard convention** (profit % on CP):"
+        },
+        {
+          "math": "\\dfrac{20}{80} \\times 100 = 25\\%"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q14",
+      "type": "numeric",
+      "promptTex": "\\text{An item is first marked up by } 25\\% \\text{ above CP, then a } 20\\% \\text{ discount is applied.} \\\\ \\text{What is the net change percentage relative to the original CP?}",
+      "answer": 0,
+      "tolerance": 0.001,
+      "hints": [
+        "**Set CP = \\$100** (since we want a percentage).",
+        "**After 25% markup:** $100 \\times 1.25 = \\$125$.",
+        "**After 20% discount on \\$125:** $125 \\times 0.80 = \\$100$. **Same as CP!**",
+        "**Net change = 0%.** (Because $1.25 \\times 0.80 = 1.00$ exactly.)"
+      ],
+      "explanation": "$100 \\xrightarrow{+25\\%} 125 \\xrightarrow{-20\\%} 100$. Net change: 0%.",
+      "steps": [
+        {
+          "text": "**Take CP = \\$100.** After 25% markup:"
+        },
+        {
+          "math": "100 \\times 1.25 = 125"
+        },
+        {
+          "text": "**After 20% discount on the new price:**"
+        },
+        {
+          "math": "125 \\times 0.80 = 100"
+        },
+        {
+          "text": "**Back to where we started — net change = 0%.** The two factors $1.25$ and $0.80$ multiply to exactly $1$."
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q15",
+      "type": "numeric",
+      "promptTex": "\\text{A dishonest grocer claims to sell rice 'at Cost Price' but uses a } 900 \\text{ g weight when} \\\\ \\text{customers ask for 1 kg. What is his actual profit percentage?} \\\\ \\text{(Round to 2 decimals.)}",
+      "answer": 11.11,
+      "tolerance": 0.05,
+      "hints": [
+        "**The trick:** he charges the customer for 1000 g, but only delivers 900 g. His real CP is the cost of 900 g.",
+        "Suppose rice costs \\$1 per gram. He pays \\$900 (his real CP) and collects \\$1000 (his SP).",
+        "**Profit % on his real CP** = $\\dfrac{1000 - 900}{900} \\times 100 = \\dfrac{100}{9}\\% \\approx 11.11\\%$."
+      ],
+      "explanation": "He pays for 900 g (real CP) but charges for 1000 g (SP). Profit = 100/900 × 100% ≈ 11.11%.",
+      "steps": [
+        {
+          "text": "**Spot the cheat.** The grocer's true Cost Price is the cost of the 900 g he actually hands over. The Selling Price is what he charges (price of 1000 g)."
+        },
+        {
+          "text": "**Assume unit cost** \\$1 per gram. Then his CP = \\$900 and SP = \\$1000."
+        },
+        {
+          "text": "**Profit % on his real CP:**"
+        },
+        {
+          "math": "\\dfrac{SP - CP}{CP} \\times 100 = \\dfrac{1000 - 900}{900} \\times 100 = \\dfrac{100}{9}\\% \\approx 11.11\\%"
+        }
+      ],
+      "difficulty": "hard"
+    }
+  ]
+}

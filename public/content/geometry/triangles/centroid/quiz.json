@@ -1,0 +1,403 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "prompt": "The centroid of a triangle is the intersection of:",
+      "choices": [
+        "Three altitudes",
+        "Three medians",
+        "Three perpendicular bisectors",
+        "Three angle bisectors"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Median = vertex to midpoint of opposite side.",
+        "Centroid is at the medians' meet."
+      ],
+      "explanation": "The centroid is the point where the three medians concur.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Triangle vertices } A(2,1), B(6,3), C(4,8). \\text{ Find centroid.}",
+      "choices": [
+        "(4, 4)",
+        "(6, 4)",
+        "(4, 6)",
+        "(4, 12)"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Average the coordinates.",
+        "$((2+6+4)/3, (1+3+8)/3)$"
+      ],
+      "explanation": "$G = ((2+6+4)/3, (1+3+8)/3) = (12/3, 12/3) = (4, 4)$.",
+      "steps": [
+        {
+          "text": "**Centroid is the average of vertex coordinates:**"
+        },
+        {
+          "math": "G = \\left(\\dfrac{x_A + x_B + x_C}{3},\\; \\dfrac{y_A + y_B + y_C}{3}\\right)"
+        },
+        {
+          "math": "G = \\left(\\dfrac{2 + 6 + 4}{3},\\; \\dfrac{1 + 3 + 8}{3}\\right) = (4, 4)"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Median from vertex } A \\text{ has length 9. How far is } G \\text{ from } A?",
+      "choices": [
+        "3",
+        "4.5",
+        "6",
+        "9"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Centroid is at 2/3 of median from the vertex.",
+        "$AG = (2/3)(9) = 6$."
+      ],
+      "explanation": "$AG = (2/3) \\cdot 9 = 6$. The centroid sits 2/3 of the way from the vertex to the opposite midpoint.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Median from } A \\text{ has length 12. Find } GM_a \\text{ (G to opposite midpoint).}",
+      "answer": 4,
+      "tolerance": 0.001,
+      "hints": [
+        "1:2 ratio from midpoint side.",
+        "$GM_a = (1/3)(12) = 4$."
+      ],
+      "explanation": "$GM_a = (1/3) \\cdot 12 = 4$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "prompt": "Is the centroid always INSIDE the triangle?",
+      "choices": [
+        "Yes — for every triangle.",
+        "Only for acute triangles.",
+        "Only for equilateral triangles.",
+        "No — sometimes it's outside."
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Each median goes from a vertex to a midpoint on the opposite side — fully inside the triangle.",
+        "Their intersection has to be inside."
+      ],
+      "explanation": "Yes. Every median lies entirely inside the triangle, so their intersection (the centroid) is also inside. Unlike circumcenter and orthocenter, which can escape outside for obtuse triangles.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{Triangle has vertices at } (0,0), (12, 0), (0, 9). \\\\ \\text{Find the y-coordinate of the centroid.}",
+      "answer": 3,
+      "tolerance": 0.001,
+      "hints": [
+        "Average y-coordinates.",
+        "$(0 + 0 + 9)/3$."
+      ],
+      "explanation": "$y_G = (0 + 0 + 9)/3 = 3$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{If the centroid is at } G(3, 4) \\text{ and two vertices are } A(0, 2), B(4, 1), \\\\ \\text{find the x-coordinate of the third vertex } C.",
+      "answer": 5,
+      "tolerance": 0.001,
+      "hints": [
+        "$(x_A + x_B + x_C)/3 = x_G$.",
+        "$0 + 4 + x_C = 3 \\cdot 3 = 9$, so $x_C = 5$."
+      ],
+      "explanation": "$x_C = 3 \\cdot 3 - 0 - 4 = 5$.",
+      "steps": [
+        {
+          "text": "**Use the centroid formula:**"
+        },
+        {
+          "math": "\\dfrac{x_A + x_B + x_C}{3} = x_G \\;\\Longrightarrow\\; 0 + 4 + x_C = 3 \\cdot 3 = 9"
+        },
+        {
+          "math": "x_C = 5"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "prompt": "The three medians divide a triangle into six smaller triangles. How are their AREAS related?",
+      "choices": [
+        "All six have equal area",
+        "They are in ratio 1:2:1:2:1:2",
+        "Three pairs of two — each pair equal, but pairs differ",
+        "The areas depend on the triangle"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "A beautiful theorem about medians.",
+        "Each small triangle has area = 1/6 of total."
+      ],
+      "explanation": "All six small triangles formed by the three medians have EQUAL area, each = 1/6 of the original. This is a clean consequence of the 2:1 ratio and the fact that each median bisects the triangle's area.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{Triangle vertices } A(0,0), B(6,0), C(2,4). \\\\ \\text{Find the length of the median from } C \\text{ (round to 3 dp).}",
+      "answer": 4.123,
+      "tolerance": 0.01,
+      "hints": [
+        "The median from $C$ goes to the midpoint of the opposite side $AB$.",
+        "Midpoint of $AB$: $(3, 0)$.",
+        "Distance from $C(2,4)$ to $(3,0)$ by the distance formula."
+      ],
+      "explanation": "The median from $C$ runs to the midpoint of $AB$, which is $(3, 0)$. Its length is $\\sqrt{(3-2)^2 + (0-4)^2} = \\sqrt{1 + 16} = \\sqrt{17} \\approx 4.123$.",
+      "steps": [
+        "**Recognize the recipe.** A median goes from a vertex to the *midpoint of the opposite side*. To find its length: locate that midpoint, then apply the distance formula.",
+        {
+          "svg": "<svg viewBox=\"0 0 280 200\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"30,160 240,160 100,40\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><line x1=\"100\" y1=\"40\" x2=\"135\" y2=\"160\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"5 3\"/><circle cx=\"30\" cy=\"160\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"240\" cy=\"160\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"100\" cy=\"40\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"135\" cy=\"160\" r=\"3.5\" fill=\"#dc2626\"/><text x=\"22\" y=\"178\" font-size=\"12\" font-weight=\"600\" fill=\"#0f172a\">A(0,0)</text><text x=\"218\" y=\"178\" font-size=\"12\" font-weight=\"600\" fill=\"#0f172a\">B(6,0)</text><text x=\"75\" y=\"32\" font-size=\"12\" font-weight=\"600\" fill=\"#0f172a\">C(2,4)</text><text x=\"110\" y=\"178\" font-size=\"11\" fill=\"#dc2626\">M(3,0)</text><text x=\"154\" y=\"105\" font-size=\"11\" fill=\"#dc2626\" font-style=\"italic\">median</text></svg>"
+        },
+        "**Find the midpoint of the opposite side.** The side opposite $C$ is $AB$. Midpoint: $\\left(\\dfrac{0+6}{2}, \\dfrac{0+0}{2}\\right) = (3, 0)$.",
+        "**Distance from $C(2,4)$ to the midpoint $(3,0)$.** $\\sqrt{(3-2)^2 + (0-4)^2} = \\sqrt{1 + 16} = \\sqrt{17}$.",
+        "**Decimal.** $\\sqrt{17} \\approx 4.123$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{Triangle has sides } BC = 7, CA = 8, AB = 9. \\\\ \\text{Find the length of the median from } A \\text{ (round to 3 dp).}",
+      "answer": 7.762,
+      "tolerance": 0.01,
+      "hints": [
+        "Use Apollonius's theorem: $m_a^2 = \\dfrac{2 b^2 + 2 c^2 - a^2}{4}$, where $a$ is the side opposite vertex $A$.",
+        "Here $a = BC = 7$, $b = CA = 8$, $c = AB = 9$.",
+        "$m_a^2 = (2 \\cdot 64 + 2 \\cdot 81 - 49)/4 = 241/4 = 60.25$, so $m_a = \\sqrt{60.25}$."
+      ],
+      "explanation": "Apollonius's theorem gives the median length from the side lengths alone: $m_a^2 = (2b^2 + 2c^2 - a^2)/4$ for the median to side $a$ (i.e., from vertex $A$). With $a=7, b=8, c=9$: $m_a^2 = (128 + 162 - 49)/4 = 60.25$, so $m_a = \\sqrt{60.25} \\approx 7.762$.",
+      "steps": [
+        "**Recognize the type.** We need a median length from the three side lengths alone — no coordinates given. This is exactly what *Apollonius's theorem* is for.",
+        {
+          "svg": "<svg viewBox=\"0 0 280 210\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"140,30 40,160 220,160\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><line x1=\"140\" y1=\"30\" x2=\"130\" y2=\"160\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"5 3\"/><circle cx=\"140\" cy=\"30\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"40\" cy=\"160\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"220\" cy=\"160\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"130\" cy=\"160\" r=\"3.5\" fill=\"#dc2626\"/><text x=\"135\" y=\"22\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">A</text><text x=\"26\" y=\"175\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">B</text><text x=\"226\" y=\"175\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">C</text><text x=\"70\" y=\"105\" font-size=\"12\" fill=\"#0f172a\" font-style=\"italic\">c = AB = 9</text><text x=\"185\" y=\"105\" font-size=\"12\" fill=\"#0f172a\" font-style=\"italic\">b = CA = 8</text><text x=\"108\" y=\"195\" font-size=\"12\" fill=\"#0f172a\" font-style=\"italic\">a = BC = 7</text><text x=\"148\" y=\"100\" font-size=\"11\" fill=\"#dc2626\" font-style=\"italic\">m_a = ?</text></svg>"
+        },
+        "**State Apollonius.** $m_a^2 = \\dfrac{2 b^2 + 2 c^2 - a^2}{4}$, where $a$ is the side OPPOSITE vertex $A$ (the side the median targets), and $b, c$ are the two sides meeting at $A$.",
+        "**Identify sides by convention.** Median is from $A$, so $a = BC = 7$, $b = CA = 8$, $c = AB = 9$.",
+        "**Plug in.** $m_a^2 = \\dfrac{2 \\cdot 64 + 2 \\cdot 81 - 49}{4} = \\dfrac{128 + 162 - 49}{4} = \\dfrac{241}{4} = 60.25$.",
+        "**Take the square root.** $m_a = \\sqrt{60.25} \\approx 7.762$.",
+        "**Sanity check.** The median from $A$ is a 'shortcut' from $A$ toward the middle of $BC$; it should be no longer than the longer of $AB, AC$. $7.762 < 9 = AB$ ✓."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{A triangle has sides } 6, 8, 10. \\\\ \\text{Find } m_a^2 + m_b^2 + m_c^2 \\text{ (sum of squares of all three medians).}",
+      "answer": 150,
+      "tolerance": 0.01,
+      "hints": [
+        "Sum Apollonius's formula across all three medians.",
+        "After cancellation: $m_a^2 + m_b^2 + m_c^2 = \\dfrac{3}{4}(a^2 + b^2 + c^2)$.",
+        "$a^2 + b^2 + c^2 = 36 + 64 + 100 = 200$. Then $\\dfrac{3}{4} \\cdot 200 = 150$."
+      ],
+      "explanation": "Adding Apollonius's three formulas (one per median), the cross terms collapse and you get the clean identity $m_a^2 + m_b^2 + m_c^2 = (3/4)(a^2 + b^2 + c^2)$. For sides $6, 8, 10$: $a^2 + b^2 + c^2 = 200$, so the sum of squared medians is $150$.",
+      "steps": [
+        "**Recognize a beautiful identity.** Summing Apollonius's three formulas, the cross terms cancel and we get $m_a^2 + m_b^2 + m_c^2 = \\dfrac{3}{4}(a^2 + b^2 + c^2)$ — sum of squared medians is exactly three-quarters of the sum of squared sides.",
+        {
+          "svg": "<svg viewBox=\"0 0 280 210\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"140,30 40,160 220,160\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><line x1=\"140\" y1=\"30\" x2=\"130\" y2=\"160\" stroke=\"#dc2626\" stroke-width=\"1.8\" stroke-dasharray=\"5 3\"/><line x1=\"40\" y1=\"160\" x2=\"180\" y2=\"95\" stroke=\"#dc2626\" stroke-width=\"1.8\" stroke-dasharray=\"5 3\"/><line x1=\"220\" y1=\"160\" x2=\"90\" y2=\"95\" stroke=\"#dc2626\" stroke-width=\"1.8\" stroke-dasharray=\"5 3\"/><circle cx=\"130\" cy=\"160\" r=\"3\" fill=\"#dc2626\"/><circle cx=\"180\" cy=\"95\" r=\"3\" fill=\"#dc2626\"/><circle cx=\"90\" cy=\"95\" r=\"3\" fill=\"#dc2626\"/><circle cx=\"133\" cy=\"118\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"140\" cy=\"30\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"40\" cy=\"160\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"220\" cy=\"160\" r=\"3.5\" fill=\"#1e293b\"/><text x=\"135\" y=\"22\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">A</text><text x=\"26\" y=\"175\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">B</text><text x=\"226\" y=\"175\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">C</text><text x=\"142\" y=\"123\" font-size=\"11\" font-weight=\"600\" fill=\"#2563eb\">G</text><text x=\"60\" y=\"200\" font-size=\"11\" fill=\"#475569\" font-style=\"italic\">three medians m_a, m_b, m_c — all meet at G</text></svg>"
+        },
+        "**Compute sum of squared sides.** $6^2 + 8^2 + 10^2 = 36 + 64 + 100 = 200$.",
+        "**Apply.** $m_a^2 + m_b^2 + m_c^2 = (3/4) \\cdot 200 = 150$.",
+        "**Why the 3/4?** Each side appears with coefficient $+2$ in two of Apollonius's formulas and with coefficient $-1$ in the third. Net: $2 + 2 - 1 = 3$. Divide by the common denominator $4$ → $3/4$. Pattern lesson: classical identities like this drop out of summing the same formula across cyclic variables and watching cross-terms cancel."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "prompt": "For any triangle ABC, which point P in the plane minimizes the sum |PA|² + |PB|² + |PC|²?",
+      "choices": [
+        "The orthocenter (intersection of altitudes)",
+        "The circumcenter (equidistant from the three vertices)",
+        "The centroid (intersection of medians)",
+        "The incenter (center of the inscribed circle)"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Beautiful but non-obvious result. Hint: write $\\vec{PA} = \\vec{PG} + \\vec{GA}$ where $G$ is the centroid.",
+        "Use $\\vec{GA} + \\vec{GB} + \\vec{GC} = \\vec{0}$ — a defining property of the centroid.",
+        "After expanding $|PA|^2 + |PB|^2 + |PC|^2$, you'll find $3|PG|^2 + \\text{const}$. Minimum at $P = G$."
+      ],
+      "explanation": "The centroid minimizes the sum of squared distances to the vertices. Identity: $|PA|^2 + |PB|^2 + |PC|^2 = 3|PG|^2 + (|GA|^2 + |GB|^2 + |GC|^2)$. The second term is constant (depends only on the triangle); the first is zero when $P = G$. So the minimum is at the centroid — and equals $|GA|^2 + |GB|^2 + |GC|^2$.",
+      "steps": [
+        "**Pattern recognition.** \"Minimize sum of squared distances\" is a classic optimization. For points with equal weight, the optimum is the *centroid* (mean position) of those points.",
+        {
+          "svg": "<svg viewBox=\"0 0 280 210\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"140,30 40,160 220,160\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><line x1=\"170\" y1=\"125\" x2=\"140\" y2=\"30\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"170\" y1=\"125\" x2=\"40\" y2=\"160\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"170\" y1=\"125\" x2=\"220\" y2=\"160\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"170\" cy=\"125\" r=\"3.5\" fill=\"#475569\"/><circle cx=\"133\" cy=\"118\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"140\" cy=\"30\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"40\" cy=\"160\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"220\" cy=\"160\" r=\"3.5\" fill=\"#1e293b\"/><text x=\"135\" y=\"22\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">A</text><text x=\"26\" y=\"175\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">B</text><text x=\"226\" y=\"175\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">C</text><text x=\"117\" y=\"120\" font-size=\"11\" font-weight=\"600\" fill=\"#2563eb\">G</text><text x=\"177\" y=\"122\" font-size=\"11\" fill=\"#475569\" font-style=\"italic\">P</text><text x=\"30\" y=\"200\" font-size=\"11\" fill=\"#475569\" font-style=\"italic\">P moves freely — only P = G minimizes |PA|² + |PB|² + |PC|²</text></svg>"
+        },
+        "**Why not the circumcenter?** The circumcenter is equidistant from the three vertices — it minimizes the MAXIMUM distance, not the sum of squared distances. Different objective, different point.",
+        "**Sketch of proof.** Write $\\vec{PA} = \\vec{PG} + \\vec{GA}$ for the centroid $G$. Then $|PA|^2 = |PG|^2 + 2\\,\\vec{PG} \\cdot \\vec{GA} + |GA|^2$. Sum over $A, B, C$: $$\\sum |PA|^2 = 3 |PG|^2 + 2\\,\\vec{PG} \\cdot (\\vec{GA} + \\vec{GB} + \\vec{GC}) + \\sum |GA|^2.$$",
+        "**Centroid magic.** $\\vec{GA} + \\vec{GB} + \\vec{GC} = \\vec{0}$ — exactly the property that makes $G$ the centroid. The middle term vanishes.",
+        "**Minimize.** $\\sum |PA|^2 = 3 |PG|^2 + \\text{const}$. The constant doesn't depend on $P$. Min over $P$ → $3 |PG|^2 = 0$ → $P = G$.",
+        "**Pattern lesson.** The 'sum of squared deviations' from a point is minimized at the *mean*. True for any set of points, in any dimension. In statistics this same identity gives 'variance is minimized about the mean'."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q13",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Let } \\vec{A}, \\vec{B}, \\vec{C} \\text{ be the position vectors of the triangle's vertices.} \\\\ \\text{The position vector of the centroid } G \\text{ is:}",
+      "choices": [
+        "\\dfrac{\\vec{A} + \\vec{B} + \\vec{C}}{2}",
+        "\\dfrac{\\vec{A} + \\vec{B} + \\vec{C}}{3}",
+        "\\vec{A} + \\vec{B} + \\vec{C}",
+        "\\dfrac{\\vec{A} \\cdot \\vec{B} \\cdot \\vec{C}}{3}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "The centroid is the *average* of the vertex positions.",
+        "Average = sum divided by count. There are three vertices."
+      ],
+      "explanation": "$\\vec{G} = \\dfrac{\\vec{A} + \\vec{B} + \\vec{C}}{3}$. Coordinate-by-coordinate this reads $(x_A + x_B + x_C)/3$ and $(y_A + y_B + y_C)/3$ — the coordinate centroid formula in vector dress.",
+      "steps": [
+        "**Pattern.** The centroid is the *center of mass* of three equal point masses, which is the unweighted average of their positions.",
+        "**Average of vectors.** $\\vec{G} = \\dfrac{\\vec{A} + \\vec{B} + \\vec{C}}{3}$.",
+        "**Consistency check.** Project onto a coordinate axis: $x$-component reads $\\dfrac{x_A + x_B + x_C}{3}$ — exactly the coordinate centroid formula. ✓",
+        "**Defining identity.** Equivalently: $\\vec{GA} + \\vec{GB} + \\vec{GC} = \\vec{0}$ (the three vectors from $G$ to the vertices sum to zero). Using either form, the centroid is uniquely determined."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q14",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A triangle has centroid at } G(2, 3). \\text{ The triangle is translated by the vector } (5, -2). \\\\ \\text{Where is the new centroid?}",
+      "choices": [
+        "(7, 1)",
+        "(5, -2)",
+        "(2, 3)",
+        "(10, -6)"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Translation shifts every vertex by the same vector.",
+        "The centroid is the average of the vertices — so it shifts by the same vector too.",
+        "$(2 + 5, 3 + (-2)) = (7, 1)$."
+      ],
+      "explanation": "Translation adds the same vector $\\vec{t} = (5, -2)$ to every vertex. The centroid — being the average — shifts by exactly $\\vec{t}$ too. New centroid: $(2 + 5,\\, 3 - 2) = (7, 1)$.",
+      "steps": [
+        "**Recognize the symmetry.** Translation is the simplest rigid motion: every point moves by the same vector. The centroid, defined as an average, transforms the same way.",
+        "**Apply.** $G' = G + \\vec{t} = (2, 3) + (5, -2) = (7, 1)$.",
+        "**Pattern lesson.** Any averaging construction (mean, center of mass, centroid of a region) *commutes* with translation: average-then-shift equals shift-then-average. Same idea recurs across linear algebra, statistics, and physics."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q15",
+      "type": "multiple-choice",
+      "prompt": "Let M_a, M_b, M_c be the midpoints of the three sides of triangle ABC. The centroid of triangle M_a M_b M_c (the 'medial triangle') is:",
+      "choices": [
+        "The same as the centroid G of triangle ABC",
+        "Different from G — it sits closer to the longest side of ABC",
+        "The circumcenter of ABC",
+        "Outside the medial triangle"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Write $\\vec{M_a}, \\vec{M_b}, \\vec{M_c}$ as midpoints — each is half-sum of two vertex vectors.",
+        "Centroid of $M_a M_b M_c$ = $(\\vec{M_a} + \\vec{M_b} + \\vec{M_c})/3$.",
+        "Add the midpoints and simplify — each of $A, B, C$ appears with total coefficient 1."
+      ],
+      "explanation": "The medial triangle and the original triangle share the SAME centroid. Proof in vectors: $M_a = (B+C)/2$, $M_b = (A+C)/2$, $M_c = (A+B)/2$. Sum: $M_a + M_b + M_c = A + B + C$. Average: $(M_a + M_b + M_c)/3 = (A + B + C)/3 = G$.",
+      "steps": [
+        "**Set up.** Use position vectors. Midpoints: $\\vec{M_a} = \\dfrac{\\vec{B} + \\vec{C}}{2}$, $\\vec{M_b} = \\dfrac{\\vec{A} + \\vec{C}}{2}$, $\\vec{M_c} = \\dfrac{\\vec{A} + \\vec{B}}{2}$.",
+        {
+          "svg": "<svg viewBox=\"0 0 280 210\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"140,30 40,160 220,160\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><polygon points=\"130,160 180,95 90,95\" fill=\"#bfdbfe\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><circle cx=\"133\" cy=\"118\" r=\"4\" fill=\"#dc2626\"/><circle cx=\"140\" cy=\"30\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"40\" cy=\"160\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"220\" cy=\"160\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"130\" cy=\"160\" r=\"3\" fill=\"#2563eb\"/><circle cx=\"180\" cy=\"95\" r=\"3\" fill=\"#2563eb\"/><circle cx=\"90\" cy=\"95\" r=\"3\" fill=\"#2563eb\"/><text x=\"135\" y=\"22\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">A</text><text x=\"26\" y=\"175\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">B</text><text x=\"226\" y=\"175\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">C</text><text x=\"108\" y=\"178\" font-size=\"10\" fill=\"#2563eb\">M_a</text><text x=\"185\" y=\"90\" font-size=\"10\" fill=\"#2563eb\">M_b</text><text x=\"66\" y=\"90\" font-size=\"10\" fill=\"#2563eb\">M_c</text><text x=\"142\" y=\"123\" font-size=\"11\" font-weight=\"600\" fill=\"#dc2626\">G</text><text x=\"50\" y=\"200\" font-size=\"11\" fill=\"#475569\" font-style=\"italic\">medial triangle (blue) inverted, same centroid G</text></svg>"
+        },
+        "**Sum the midpoints.** $\\vec{M_a} + \\vec{M_b} + \\vec{M_c} = \\dfrac{(B+C) + (A+C) + (A+B)}{2} = \\dfrac{2A + 2B + 2C}{2} = \\vec{A} + \\vec{B} + \\vec{C}$.",
+        "**Average for the centroid.** Centroid of $M_a M_b M_c = \\dfrac{\\vec{A} + \\vec{B} + \\vec{C}}{3} = \\vec{G}$ — the original centroid.",
+        "**Geometric intuition.** The medial triangle is the original *scaled by $-1/2$ about $G$* (a half-size, point-reflected copy through $G$). Such a scaling leaves $G$ fixed, so both triangles share the centroid."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q16",
+      "type": "numeric",
+      "promptTex": "\\text{A triangle has area } 60. \\\\ \\text{What is the area of each of the six small triangles formed by drawing all three medians?}",
+      "answer": 10,
+      "tolerance": 0.001,
+      "hints": [
+        "Theorem: the three medians cut the triangle into 6 regions of *equal* area.",
+        "Each region has area $= 60 / 6 = 10$."
+      ],
+      "explanation": "A classical fact: drawing all three medians dissects the triangle into 6 smaller triangles of equal area. Each piece has area $= (\\text{total})/6 = 60/6 = 10$.",
+      "steps": [
+        "**Recall the theorem.** The three medians of any triangle dissect it into 6 smaller triangles of EQUAL area.",
+        {
+          "svg": "<svg viewBox=\"0 0 280 210\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"140,30 90,95 133,118\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"0.8\"/><polygon points=\"90,95 40,160 133,118\" fill=\"#dbeafe\" stroke=\"#1e293b\" stroke-width=\"0.8\"/><polygon points=\"40,160 130,160 133,118\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"0.8\"/><polygon points=\"130,160 220,160 133,118\" fill=\"#dbeafe\" stroke=\"#1e293b\" stroke-width=\"0.8\"/><polygon points=\"220,160 180,95 133,118\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"0.8\"/><polygon points=\"180,95 140,30 133,118\" fill=\"#dbeafe\" stroke=\"#1e293b\" stroke-width=\"0.8\"/><polygon points=\"140,30 40,160 220,160\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><circle cx=\"133\" cy=\"118\" r=\"3.5\" fill=\"#dc2626\"/><circle cx=\"140\" cy=\"30\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"40\" cy=\"160\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"220\" cy=\"160\" r=\"3.5\" fill=\"#1e293b\"/><text x=\"135\" y=\"22\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">A</text><text x=\"26\" y=\"175\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">B</text><text x=\"226\" y=\"175\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">C</text><text x=\"142\" y=\"123\" font-size=\"11\" font-weight=\"600\" fill=\"#dc2626\">G</text><text x=\"56\" y=\"200\" font-size=\"11\" fill=\"#475569\" font-style=\"italic\">six regions — each = (total area) / 6</text></svg>"
+        },
+        "**Divide.** $60 / 6 = 10$. Each small triangle has area $10$.",
+        "**Why six equal pieces?** Each median, on its own, halves the triangle's area (same base midpoint, same apex). The centroid's $2:1$ ratio then forces the six sub-pieces to come out pairwise congruent — and ultimately all equal. A small miracle of geometry."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q17",
+      "type": "numeric",
+      "promptTex": "\\text{In triangle } ABC, \\text{ the median from } A \\text{ has length } 5. \\\\ \\text{Sides } AB = 6 \\text{ and } AC = 7. \\text{ Find the length of side } BC \\text{ (round to 3 dp).}",
+      "answer": 8.367,
+      "tolerance": 0.01,
+      "hints": [
+        "Apollonius's theorem: $m_a^2 = (2 b^2 + 2 c^2 - a^2)/4$, where $a = BC$, $b = CA$, $c = AB$.",
+        "Plug $m_a = 5, b = 7, c = 6$ and solve for $a$.",
+        "$25 = (98 + 72 - a^2)/4$, so $a^2 = 170 - 100 = 70$, hence $a = \\sqrt{70} \\approx 8.367$."
+      ],
+      "explanation": "Apollonius reversed: solve for the unknown side. With $m_a = 5$, $b = CA = 7$, $c = AB = 6$: $25 = (2 \\cdot 49 + 2 \\cdot 36 - a^2)/4$, so $100 = 98 + 72 - a^2 = 170 - a^2$. Thus $a^2 = 70$ and $a = \\sqrt{70} \\approx 8.367$.",
+      "steps": [
+        "**Recognize the setup.** Given two sides at a vertex AND the median from that vertex; find the third side. Apollonius's theorem links all four quantities — perfect.",
+        {
+          "svg": "<svg viewBox=\"0 0 280 210\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"140,30 40,160 220,160\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><line x1=\"140\" y1=\"30\" x2=\"130\" y2=\"160\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"5 3\"/><circle cx=\"140\" cy=\"30\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"40\" cy=\"160\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"220\" cy=\"160\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"130\" cy=\"160\" r=\"3.5\" fill=\"#dc2626\"/><text x=\"135\" y=\"22\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">A</text><text x=\"26\" y=\"175\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">B</text><text x=\"226\" y=\"175\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">C</text><text x=\"68\" y=\"105\" font-size=\"12\" fill=\"#0f172a\" font-style=\"italic\">AB = 6</text><text x=\"190\" y=\"105\" font-size=\"12\" fill=\"#0f172a\" font-style=\"italic\">AC = 7</text><text x=\"108\" y=\"195\" font-size=\"12\" fill=\"#dc2626\" font-style=\"italic\">BC = ?</text><text x=\"148\" y=\"100\" font-size=\"11\" fill=\"#dc2626\" font-style=\"italic\">m = 5</text></svg>"
+        },
+        "**Recall the formula.** $m_a^2 = \\dfrac{2 b^2 + 2 c^2 - a^2}{4}$, where $a$ is the side OPPOSITE vertex $A$ (the median's target), and $b, c$ are the two sides meeting at $A$.",
+        "**Identify by convention.** Median is from $A$: $a = BC$ (unknown), $b = CA = 7$, $c = AB = 6$, $m_a = 5$.",
+        "**Plug in and solve.** $5^2 = \\dfrac{2 \\cdot 49 + 2 \\cdot 36 - a^2}{4}$. Multiply both sides by $4$: $100 = 98 + 72 - a^2 = 170 - a^2$.",
+        "**Isolate $a$.** $a^2 = 170 - 100 = 70$. So $a = \\sqrt{70} \\approx 8.367$.",
+        "**Sanity-check with the triangle inequality.** Sides become $6, 7, 8.367$. The longest is the new side and $6 + 7 = 13 > 8.367$ ✓ — valid triangle."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q18",
+      "type": "multiple-choice",
+      "prompt": "In an equilateral triangle, which classical centers coincide with the centroid?",
+      "choices": [
+        "Only the circumcenter",
+        "Only the incenter",
+        "The circumcenter, the incenter, AND the orthocenter — all four classical centers are the same point",
+        "None — every center is in a different place"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "An equilateral triangle is the *most* symmetric triangle — every classical 'center' line of construction collapses to the same line.",
+        "Median = altitude = perpendicular bisector = angle bisector, all sharing the same vertex line."
+      ],
+      "explanation": "In an equilateral triangle, each median, altitude, perpendicular bisector, and angle bisector from a vertex are the *same line*. So the four 'intersection of three of those' centers — centroid, orthocenter, circumcenter, incenter — collapse to a single point. This perfect coincidence is unique to equilateral triangles.",
+      "steps": [
+        "**The four classical centers.** Centroid (median ∩), circumcenter (perpendicular-bisector ∩), orthocenter (altitude ∩), incenter (angle-bisector ∩).",
+        "**Equilateral symmetry.** From a single vertex, the median (to the opposite midpoint) also drops perpendicular to that side (because the triangle is symmetric), so it IS the altitude, AND it bisects the side perpendicularly, AND it bisects the vertex angle. *One line plays all four roles.*",
+        "**Same at every vertex.** All four intersection constructions therefore land on the same single point — they fully coincide.",
+        "**Pattern lesson.** Symmetry collapses constructions. As the triangle loses symmetry (becomes scalene), the four centers spread out along a single line — the *Euler line* (a topic of its own)."
+      ],
+      "difficulty": "easy"
+    }
+  ]
+}

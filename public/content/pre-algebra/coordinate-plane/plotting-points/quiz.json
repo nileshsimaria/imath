@@ -1,0 +1,252 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{To plot the point } (4, -2):",
+      "choices": [
+        "Go 4 right, 2 up",
+        "Go 4 right, 2 down",
+        "Go 2 right, 4 down",
+        "Go 4 left, 2 down"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "First number is $x$ (right/left). Second number is $y$ (up/down).",
+        "$x = 4$ (positive: right). $y = -2$ (negative: down)."
+      ],
+      "explanation": "$(4, -2)$ means $x = 4$ (4 right) and $y = -2$ (2 down). The order is always x first, y second.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which point is on the x-axis?}",
+      "choices": [
+        "(0, 5)",
+        "(5, 0)",
+        "(5, 5)",
+        "(-5, -5)"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Points on the x-axis have $y = 0$.",
+        "$y$ is the second coordinate."
+      ],
+      "explanation": "On the x-axis, $y = 0$. Only $(5, 0)$ has $y = 0$. $(0, 5)$ is on the y-axis instead.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which is the origin?}",
+      "choices": [
+        "(1, 1)",
+        "(0, 0)",
+        "(0, 1)",
+        "(1, 0)"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "The origin is where the axes cross.",
+        "Both coordinates equal zero there."
+      ],
+      "explanation": "The origin is $(0, 0)$ — where $x = 0$ and $y = 0$ simultaneously.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The point } (-3, 2) \\text{ is found by:}",
+      "choices": [
+        "Going 3 right, 2 up",
+        "Going 3 left, 2 up",
+        "Going 3 down, 2 right",
+        "Going 2 left, 3 up"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$x$ is negative → left. $y$ is positive → up.",
+        "$x = -3$, $y = 2$."
+      ],
+      "explanation": "$x = -3$: go 3 left. $y = 2$: go 2 up. Always x (horizontal) first, then y (vertical).",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "(2, 5) \\text{ and } (5, 2) \\text{ are:}",
+      "choices": [
+        "the same point",
+        "different points",
+        "both on the y-axis",
+        "both on the origin"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Order matters: $x$ is always first.",
+        "$(2, 5)$ is 2 right, 5 up. $(5, 2)$ is 5 right, 2 up."
+      ],
+      "explanation": "Order matters! $(2, 5)$ goes 2 right and 5 up; $(5, 2)$ goes 5 right and 2 up. Different points entirely.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which point is in Quadrant III?}",
+      "choices": [
+        "(3, -2)",
+        "(-3, 2)",
+        "(-3, -2)",
+        "(3, 2)"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Q III has BOTH coordinates negative.",
+        "Look for $(-, -)$."
+      ],
+      "explanation": "Q III has $x < 0$ and $y < 0$, so $(-3, -2)$.",
+      "steps": [
+        "**Memorize the quadrant sign pattern.** Count counterclockwise starting from top-right.",
+        "  Q I: $(+, +)$ — upper right.",
+        "  Q II: $(-, +)$ — upper left.",
+        "  Q III: $(-, -)$ — lower left.",
+        "  Q IV: $(+, -)$ — lower right.",
+        "**Apply.** Q III needs BOTH coordinates negative. Scan the options: $(-3, -2)$ ✓.",
+        "**Visual mnemonic.** Start from upper-right (where both axes are positive) and go counterclockwise. Each quadrant flips one sign as you cross an axis."
+      ],
+      "id": "q6",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{What is the distance between } (1, 2) \\text{ and } (4, 6)?",
+      "answer": 5,
+      "tolerance": 0,
+      "hints": [
+        "Use the distance formula: $\\sqrt{(\\Delta x)^2 + (\\Delta y)^2}$.",
+        "$\\Delta x = 3$, $\\Delta y = 4$. $\\sqrt{9 + 16} = \\sqrt{25}$."
+      ],
+      "explanation": "$d = \\sqrt{(4-1)^2 + (6-2)^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$.",
+      "steps": [
+        "**The distance formula = Pythagorean theorem in disguise.** The horizontal and vertical distances are the LEGS; the actual distance is the HYPOTENUSE.",
+        "**Formula.** $d = \\sqrt{(\\Delta x)^2 + (\\Delta y)^2} = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$.",
+        "**Compute differences.** $\\Delta x = 4 - 1 = 3$. $\\Delta y = 6 - 2 = 4$.",
+        "**Apply Pythagoras.** $d = \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$.",
+        "**Recognize 3-4-5.** The 3-4-5 right triangle is the most famous Pythagorean triple. Recognizing it saves arithmetic."
+      ],
+      "id": "q7",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the midpoint of the segment from } (-2, 5) \\text{ to } (6, -1)?",
+      "choices": [
+        "(2, 2)",
+        "(4, 4)",
+        "(2, 3)",
+        "(8, 4)"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Midpoint = average of x's, average of y's.",
+        "$\\left(\\dfrac{-2 + 6}{2}, \\dfrac{5 + (-1)}{2}\\right) = \\left(\\dfrac{4}{2}, \\dfrac{4}{2}\\right)$."
+      ],
+      "explanation": "Midpoint = $\\left(\\dfrac{-2 + 6}{2}, \\dfrac{5 - 1}{2}\\right) = (2, 2)$.",
+      "steps": [
+        "**The midpoint is the AVERAGE of the two endpoints.** Average x's separately from y's.",
+        "**Formula.** $M = \\left(\\dfrac{x_1 + x_2}{2}, \\dfrac{y_1 + y_2}{2}\\right)$.",
+        "**Apply.** $M = \\left(\\dfrac{-2 + 6}{2}, \\dfrac{5 + (-1)}{2}\\right) = \\left(\\dfrac{4}{2}, \\dfrac{4}{2}\\right) = (2, 2)$.",
+        "**Geometric intuition.** Midpoint is HALFWAY along the segment in BOTH $x$ and $y$ directions — averaging gives the halfway point on each axis independently."
+      ],
+      "id": "q8",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Reflect the point } (3, -4) \\text{ over the } y\\text{-axis.}",
+      "choices": [
+        "(3, 4)",
+        "(-3, -4)",
+        "(-3, 4)",
+        "(4, -3)"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Reflecting over the y-axis flips the SIGN of x; y stays the same.",
+        "$(3, -4) \\to (-3, -4)$."
+      ],
+      "explanation": "Reflection over y-axis: $(x, y) \\to (-x, y)$. So $(3, -4) \\to (-3, -4)$.",
+      "steps": [
+        "**Memorize the reflection rules:**",
+        "  Over y-axis: $(x, y) \\to (-x, y)$ — flip the $x$ sign.",
+        "  Over x-axis: $(x, y) \\to (x, -y)$ — flip the $y$ sign.",
+        "  Through origin: $(x, y) \\to (-x, -y)$ — flip both.",
+        "**Mnemonic: 'flip OVER the axis' means the OTHER coordinate flips.** Over y-axis → x flips. Over x-axis → y flips. (Because reflecting across the y-axis preserves vertical position but mirrors horizontally.)",
+        "**Apply.** Y-axis reflection: $(3, -4) \\to (-3, -4)$."
+      ],
+      "id": "q9",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Reflect the point } (3, -4) \\text{ over the } x\\text{-axis.}",
+      "choices": [
+        "(3, 4)",
+        "(-3, -4)",
+        "(-3, 4)",
+        "(4, -3)"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Reflecting over the x-axis flips the SIGN of y; x stays the same.",
+        "$(3, -4) \\to (3, 4)$."
+      ],
+      "explanation": "Reflection over x-axis: $(x, y) \\to (x, -y)$. So $(3, -4) \\to (3, 4)$.",
+      "steps": [
+        "**x-axis reflection: $(x, y) \\to (x, -y)$.** Flip the $y$ sign; keep $x$.",
+        "**Apply.** $(3, -4) \\to (3, +4)$."
+      ],
+      "id": "q10",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{The point } (a, 5) \\text{ lies on the line } y = 3x - 4. \\\\ \\text{Find } a.",
+      "answer": 3,
+      "tolerance": 0,
+      "hints": [
+        "On the line means substituting works: $5 = 3a - 4$.",
+        "Solve for $a$."
+      ],
+      "explanation": "$5 = 3a - 4 \\Rightarrow 3a = 9 \\Rightarrow a = 3$.",
+      "steps": [
+        "**'Point $(a, b)$ lies on the line $y = f(x)$' means: substituting $x = a$ gives $y = b$.** A point is ON a curve iff its coordinates SATISFY the equation.",
+        "**Substitute the point's $y = 5$ and $x = a$.** $5 = 3a - 4$.",
+        "**Solve.** Add 4: $9 = 3a$. Divide by 3: $a = 3$.",
+        "**Verify.** At $x = 3$: $y = 3(3) - 4 = 5$ ✓."
+      ],
+      "id": "q11",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{The points } (1, 2), (5, 2), (5, 7), (1, 7) \\text{ are the corners} \\\\ \\text{of a rectangle. What is its area?}",
+      "answer": 20,
+      "tolerance": 0,
+      "hints": [
+        "Width = horizontal distance = $5 - 1 = 4$. Height = $7 - 2 = 5$.",
+        "Area = $4 \\cdot 5 = 20$."
+      ],
+      "explanation": "Width = 4, height = 5. Area = $4 \\cdot 5 = 20$.",
+      "steps": [
+        "**Recognize the axis-aligned rectangle.** All 4 points share either an x-value or a y-value with another → sides are parallel to the axes.",
+        "**Width (horizontal side).** $5 - 1 = 4$ (difference of x-values).",
+        "**Height (vertical side).** $7 - 2 = 5$ (difference of y-values).",
+        "**Area.** $4 \\cdot 5 = 20$ square units.",
+        "**Pattern.** For axis-aligned rectangles, width/height come directly from coordinate differences — no distance formula needed."
+      ],
+      "id": "q12",
+      "difficulty": "medium"
+    }
+  ]
+}

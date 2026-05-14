@@ -1,0 +1,72 @@
+{
+  "title": "Domain & Range",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "A **function** is a rule that takes an input and returns *exactly one* output. Every function has a **domain** (the set of valid inputs) and a **range** (the set of all outputs the function actually produces). Understanding both is the price of admission to most of pre-calculus and calculus."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Plain English",
+      "body": "**Domain**: 'What values of $x$ am I *allowed* to plug in?'\n**Range**: 'What values of $y$ can ever come out?'"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### How to find the domain",
+        "Most functions are 'all real numbers' for the domain — *except* when the formula breaks. Three things break:",
+        "**Division by zero.** Any value that makes the denominator zero is excluded.",
+        "**Square roots of negatives.** $\\sqrt{x}$ requires $x \\geq 0$.",
+        "**Logs of non-positive numbers.** $\\log(x)$ requires $x > 0$.",
+        "Find every value that triggers one of these — those are excluded. Everything else is in the domain."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### How to find the range",
+        "Range is usually trickier than domain. Think about *what y-values* the graph hits. A picture often makes this obvious:"
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "parabola",
+      "config": {
+        "a": 1,
+        "b": 0,
+        "c": 0,
+        "yRange": [
+          -2,
+          8
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "The widget shows $y = x^2$. **Domain**: all real numbers (you can square any number). **Range**: $[0, \\infty)$ — the parabola never goes below zero. Drag the sliders to see how range changes — flip $a$ negative and the range becomes $(-\\infty, 0]$ instead."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked examples",
+        "**$f(x) = \\dfrac{1}{x - 3}$.** Denominator is zero when $x = 3$. So **domain** is $\\{x : x \\neq 3\\}$. **Range**: every real except $0$ (the function never outputs zero). Domain $= \\mathbb{R} \\setminus \\{3\\}$, range $= \\mathbb{R} \\setminus \\{0\\}$.",
+        "**$g(x) = \\sqrt{x - 4}$.** Need $x - 4 \\geq 0$, so $x \\geq 4$. Domain: $[4, \\infty)$. Square roots are non-negative, so range: $[0, \\infty)$.",
+        "**$h(x) = \\sin x$.** No restrictions, domain is $\\mathbb{R}$. Output is always between $-1$ and $1$, so range is $[-1, 1]$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Interval notation",
+      "body": "$[a, b]$ — both endpoints included. $(a, b)$ — neither included. Mixed: $[a, b)$ or $(a, b]$. $\\infty$ always gets a parenthesis since you can't 'reach' infinity. Use $\\cup$ for unions: e.g., $\\mathbb{R} \\setminus \\{3\\}$ can be written $(-\\infty, 3) \\cup (3, \\infty)$."
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "**Domain** = allowed inputs, **range** = possible outputs. Find domain by ruling out divide-by-zero, square root of negative, and log of non-positive. Range usually requires reasoning about the function's graph or behavior."
+    }
+  ]
+}

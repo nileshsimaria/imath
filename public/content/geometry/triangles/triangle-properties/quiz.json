@@ -1,0 +1,245 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{Two angles of a triangle are } 50° \\text{ and } 65°. \\text{ Find the third.}",
+      "answer": 65,
+      "tolerance": 0,
+      "hints": [
+        "Sum of angles = 180°.",
+        "$180 - 50 - 65$."
+      ],
+      "explanation": "$180 - 50 - 65 = 65°$. (And since two angles are 65°, this is also isosceles.)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A triangle with sides } 5, 5, 5 \\text{ is:}",
+      "choices": [
+        "scalene",
+        "isosceles",
+        "equilateral",
+        "right"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "All three sides equal.",
+        "All sides same → equilateral."
+      ],
+      "explanation": "All three sides are equal → **equilateral**. (And all three angles equal 60°.)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Can a triangle have angles } 100°, 50°, \\text{ and } 30°?",
+      "choices": [
+        "Yes",
+        "No — they don't sum to 180°",
+        "Only if it's a right triangle",
+        "Only if it's equilateral"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Check the sum against the triangle angle-sum theorem (180°).",
+        "$100 + 50 + 30 = 180$ ✓."
+      ],
+      "explanation": "The three angles sum to $100 + 50 + 30 = 180°$, exactly what the triangle angle-sum theorem requires. So a triangle with these angles **does** exist — it's an obtuse triangle (one angle > 90°).",
+      "steps": [
+        "**Recognize the rule.** The triangle angle-sum theorem: every triangle's three interior angles add to exactly $180°$.",
+        "**Check the sum.** $100 + 50 + 30 = 180$ ✓.",
+        "**Classify.** One angle ($100°$) exceeds $90°$, so the triangle is *obtuse* — but valid."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A triangle has sides } 3, 4, 8. \\text{ Is this a valid triangle?}",
+      "choices": [
+        "Yes",
+        "No — it violates the triangle inequality",
+        "Only if it's a right triangle",
+        "Need more info"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Check $a + b > c$ for the largest side.",
+        "$3 + 4 = 7$, but the largest side is $8$."
+      ],
+      "explanation": "$3 + 4 = 7 < 8$. The two shorter sides aren't long enough to reach across the gap, so they can't form a triangle. **Triangle inequality violated.**",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{In a right triangle, the two non-right angles must sum to:}",
+      "choices": [
+        "90°",
+        "180°",
+        "60°",
+        "any value"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Total angle sum is 180°.",
+        "Subtract the 90° right angle."
+      ],
+      "explanation": "Total = 180°. Minus the right angle's 90° leaves 90° for the other two angles to share. They're complementary.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Two angles of a triangle are } 47° \\text{ and } 68°. \\\\ \\text{Find the third angle.}",
+      "answer": 65,
+      "tolerance": 0,
+      "hints": [
+        "Triangle angle sum: $180°$.",
+        "Third $= 180 - 47 - 68$."
+      ],
+      "explanation": "$180 - 47 - 68 = 65°$.",
+      "steps": [
+        "Triangle angle sum is $180°$.",
+        "Third $= 180° - 47° - 68° = 65°$."
+      ],
+      "id": "q6",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{In an isosceles triangle, the apex angle is } 50°. \\\\ \\text{What is the measure of each base angle?}",
+      "answer": 65,
+      "tolerance": 0,
+      "hints": [
+        "Base angles of an isosceles triangle are equal.",
+        "Sum: $180° - 50° = 130°$. Each = $130°/2$."
+      ],
+      "explanation": "Two base angles are equal. They sum to $180° - 50° = 130°$. Each $= 65°$.",
+      "steps": [
+        "In an isosceles triangle, the base angles (the two equal sides) are equal.",
+        "Total of all three angles: $180°$. The apex takes $50°$, leaving $130°$ for the two base angles.",
+        "Each base angle: $\\dfrac{130°}{2} = 65°$."
+      ],
+      "id": "q7",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{An equilateral triangle has perimeter } 30 \\text{ cm.} \\\\ \\text{What is the length of each side?}",
+      "answer": 10,
+      "tolerance": 0,
+      "hints": [
+        "All three sides of an equilateral triangle are equal.",
+        "$30 / 3 = ?$"
+      ],
+      "explanation": "$30 / 3 = 10$ cm per side.",
+      "steps": [
+        "Equilateral = all three sides equal.",
+        "Each side = perimeter / 3 = $30 / 3 = 10$ cm."
+      ],
+      "id": "q8",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Two angles of a triangle are equal, and the third is twice each of them.} \\\\ \\text{Find the third angle.}",
+      "answer": 90,
+      "tolerance": 0,
+      "hints": [
+        "Let each of the equal angles be $x$. The third is $2x$.",
+        "$x + x + 2x = 180 \\Rightarrow 4x = 180$."
+      ],
+      "explanation": "$4x = 180 \\Rightarrow x = 45°$. Third angle $= 2(45) = 90°$.",
+      "steps": [
+        "Let each equal angle be $x$. The third is $2x$.",
+        "Sum to 180°: $$x + x + 2x = 180$$",
+        "$$4x = 180 \\Rightarrow x = 45°$$",
+        "Third angle: $2(45) = 90°$."
+      ],
+      "id": "q9",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Can a triangle have side lengths } 4, 5, \\text{ and } 10?",
+      "choices": [
+        "Yes",
+        "No"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Triangle inequality: sum of any two sides > third side.",
+        "$4 + 5 = 9 < 10$. Fails!"
+      ],
+      "explanation": "$4 + 5 = 9 < 10$, so the triangle inequality fails. No triangle exists.",
+      "steps": [
+        "Triangle inequality: each pair of sides must sum to more than the third.",
+        "Check: $4 + 5 = 9$, which is **less than** $10$.",
+        "Triangle inequality fails → **no triangle** with these sides."
+      ],
+      "id": "q10",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{In triangle } ABC, \\text{ } \\angle A = 35° \\text{ and } \\angle B = 80°. \\\\ \\text{Find the } \\textbf{exterior angle} \\text{ at vertex } C.",
+      "answer": 115,
+      "tolerance": 0,
+      "hints": [
+        "Exterior angle = sum of remote interior angles.",
+        "$35 + 80 = 115$."
+      ],
+      "explanation": "Exterior angle theorem: exterior angle at $C$ = $\\angle A + \\angle B = 35 + 80 = 115°$.",
+      "steps": [
+        "Exterior angle theorem: an exterior angle of a triangle equals the sum of the two **remote** interior angles (the two not adjacent to it).",
+        "Exterior at $C$ = $\\angle A + \\angle B = 35° + 80° = 115°$.",
+        "(Check: interior at $C$ = $180° - 35° - 80° = 65°$, and exterior $= 180° - 65° = 115°$ ✓.)"
+      ],
+      "id": "q11",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{A triangle has sides } 3, 7, x. \\\\ \\text{Which range of values for } x \\text{ makes a valid triangle?}",
+      "choices": [
+        "x < 10",
+        "x > 4",
+        "4 < x < 10",
+        "10 < x"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Triangle inequality: $|a-b| < c < a+b$.",
+        "$|3-7| = 4 < x < 3+7 = 10$."
+      ],
+      "explanation": "Triangle inequality: $4 < x < 10$. (The third side must be more than the difference and less than the sum of the other two.)",
+      "steps": [
+        "Triangle inequality (full form): the third side must be **greater than** the difference and **less than** the sum of the other two.",
+        "Sum: $3 + 7 = 10$. Difference: $|7 - 3| = 4$.",
+        "So $x$ must satisfy: $$4 < x < 10$$"
+      ],
+      "id": "q12",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{An isosceles triangle has a base angle of } 75°. \\\\ \\text{What is the apex angle (in degrees)?}",
+      "answer": 30,
+      "tolerance": 0,
+      "hints": [
+        "Two base angles are equal. Apex = $180° - 2 \\cdot 75°$.",
+        "$180 - 150 = 30$."
+      ],
+      "explanation": "Apex $= 180° - 2(75°) = 180° - 150° = 30°$.",
+      "steps": [
+        "Both base angles in an isosceles triangle are equal.",
+        "Two base angles together: $2 \\cdot 75° = 150°$.",
+        "Apex: $180° - 150° = 30°$."
+      ],
+      "id": "q13",
+      "difficulty": "easy"
+    }
+  ]
+}

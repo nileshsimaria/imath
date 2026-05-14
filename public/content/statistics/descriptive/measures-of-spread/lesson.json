@@ -1,0 +1,121 @@
+{
+  "title": "Measures of Spread",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Two datasets can have the same mean and look completely different. Compare $48, 50, 52$ to $0, 50, 100$ — same mean (50), but the second varies wildly. **Measures of spread** capture how stretched out a dataset is. We'll cover four: **range**, **IQR**, **variance**, and **standard deviation**."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. Range — Quickest, Crudest"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Range = max − min.** Easy to compute, but uses only two numbers. One outlier and the range can balloon.",
+        "Example: $5, 7, 9, 12, 100$. Range = $100 - 5 = 95$ — driven entirely by the outlier."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. Five-Number Summary & IQR"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Sort the data. The **five-number summary** is: **min, Q1, median, Q3, max**.",
+        "**Q1 (first quartile):** median of the lower half (25th percentile).",
+        "**Q3 (third quartile):** median of the upper half (75th percentile).",
+        "**Interquartile range (IQR):** $\\text{IQR} = Q_3 - Q_1$. Captures the spread of the middle 50% of the data.",
+        "**Big advantage:** IQR ignores the outermost 25% on each side, so it's robust to outliers."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Example.** Data: $4, 6, 7, 8, 10, 12, 15, 18, 22$ (already sorted, 9 values).",
+        "Median = $10$ (5th value).",
+        "Lower half: $4, 6, 7, 8$. Median of lower half = $(6+7)/2 = 6.5$ → **Q1 = 6.5**.",
+        "Upper half: $12, 15, 18, 22$. Median of upper half = $(15+18)/2 = 16.5$ → **Q3 = 16.5**.",
+        "**IQR** = $16.5 - 6.5 = 10$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. Variance & Standard Deviation"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "These capture **typical distance from the mean**. Standard deviation is the gold standard for spread when data is approximately symmetric.",
+        "**Step 1.** Find the mean $\\bar{x}$.",
+        "**Step 2.** For each value, compute $(x_i - \\bar{x})^2$ — the squared deviation.",
+        "**Step 3.** Average the squared deviations → **variance** $\\sigma^2$.",
+        "**Step 4.** Take the square root → **standard deviation** $\\sigma$."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\sigma^2 = \\dfrac{1}{n}\\sum_{i=1}^{n} (x_i - \\bar{x})^2 \\qquad \\sigma = \\sqrt{\\sigma^2}"
+    },
+    {
+      "type": "callout",
+      "title": "Population vs sample",
+      "body": "When working with a **sample** (a subset of the population), we usually divide by $n - 1$ instead of $n$ for variance ('Bessel's correction'). For high-school intro stats with the full data, $n$ is fine. The two only matter when you're inferring about a larger population."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — std dev of a small dataset",
+        "Data: $2, 4, 4, 4, 5, 5, 7, 9$. Mean $\\bar{x} = 5$.",
+        "**Squared deviations:** $(2-5)^2, (4-5)^2, (4-5)^2, (4-5)^2, (5-5)^2, (5-5)^2, (7-5)^2, (9-5)^2$",
+        "$= 9, 1, 1, 1, 0, 0, 4, 16$. Sum = $32$.",
+        "**Variance:** $\\sigma^2 = 32/8 = 4$.",
+        "**Std dev:** $\\sigma = \\sqrt{4} = 2$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Why squared?",
+      "body": "If we just averaged $x_i - \\bar{x}$, the positives and negatives would cancel — average is always exactly 0. Squaring makes everything positive (and weights big deviations more heavily). Taking the square root at the end gives a result in the original units."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. Comparing Spread Measures"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "When to use which",
+      "body": "**Range:** quick eyeball check. Sensitive to outliers. **IQR:** robust spread for skewed data; pairs naturally with the median. **Standard deviation:** the workhorse for symmetric, well-behaved data; pairs with the mean. Together with the mean (or median), spread completes the picture: 'where is the data, and how spread out is it?'"
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 5. See the spread measures in action"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "The widget below shows a dataset as a dot plot and computes every measure of center AND spread (range, Q1, Q3, IQR, SD, MAD). Switch to the **'With one outlier'** preset and compare how the SD changes vs. the IQR — that's the robustness contrast in numbers."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "dataset-summary",
+      "config": {
+        "preset": "outlier"
+      }
+    }
+  ]
+}

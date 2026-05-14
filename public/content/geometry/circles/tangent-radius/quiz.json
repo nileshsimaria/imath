@@ -1,0 +1,159 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{A radius and its tangent line meet at the point of tangency. What angle do they form?}",
+      "answer": 90,
+      "tolerance": 0.001,
+      "hints": [
+        "The tangent-radius theorem.",
+        "Always 90°."
+      ],
+      "explanation": "The tangent at a point is perpendicular to the radius drawn to that point: $90°$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{Circle of radius 6. External point } E \\text{ at distance 10 from center.} \\\\ \\text{Find the tangent length from } E \\text{ to the circle.}",
+      "answer": 8,
+      "tolerance": 0.001,
+      "hints": [
+        "Right triangle: radius (leg), tangent (leg), $OE$ (hypotenuse).",
+        "$\\text{tangent}^2 + 6^2 = 10^2$. (6-8-10 triple.)"
+      ],
+      "explanation": "Right triangle with hypotenuse $OE = 10$, leg $r = 6$. Tangent leg = $\\sqrt{100 - 36} = 8$.",
+      "steps": [
+        {
+          "text": "**Setup.** The triangle formed by center $O$, external point $E$, and point of tangency $T$ has a right angle at $T$."
+        },
+        {
+          "text": "**Pythagoras:**"
+        },
+        {
+          "math": "TE^2 + OT^2 = OE^2"
+        },
+        {
+          "math": "TE^2 + 36 = 100 \\;\\Longrightarrow\\; TE^2 = 64 \\;\\Longrightarrow\\; TE = 8"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "Two tangent segments are drawn from an external point E to a circle. What can you say about their lengths?",
+      "choices": [
+        "They are always equal.",
+        "Their sum equals the diameter.",
+        "They differ by the radius.",
+        "Their ratio equals the radius."
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Tangent-from-external-point property.",
+        "Same in the incircle lesson too — tangent lengths from a vertex were equal."
+      ],
+      "explanation": "The two tangent segments from an external point to a circle have equal length. This follows from the two right triangles being congruent (HL: common hypotenuse OE, equal legs OT₁ = OT₂ = r).",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Two tangents from external point } E \\text{ touch a circle at } T_1, T_2. \\\\ \\angle T_1 E T_2 = 50°. \\text{ Find central angle } \\angle T_1 O T_2.",
+      "answer": 130,
+      "tolerance": 0.01,
+      "hints": [
+        "Quadrilateral $ET_1OT_2$ has two right angles (at the tangent points).",
+        "Angles in a quadrilateral sum to $360°$. So $\\angle E + \\angle O + 90° + 90° = 360°$."
+      ],
+      "explanation": "In quadrilateral $ET_1OT_2$ the angles at $T_1, T_2$ are both $90°$, so $\\angle E + \\angle O = 360 - 180 = 180°$. Thus $\\angle O = 180 - 50 = 130°$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** Quadrilateral $ET_1OT_2$ has two right angles (at the tangent points)."
+        },
+        {
+          "text": "Angles in a quadrilateral sum to $360°$. So $\\angle E + \\angle O + 90° + 90° = 360°$."
+        },
+        {
+          "text": "**Solution.** In quadrilateral $ET_1OT_2$ the angles at $T_1, T_2$ are both $90°$, so $\\angle E + \\angle O = 360 - 180 = 180°$. Thus $\\angle O = 180 - 50 = 130°$."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{Circle has radius } r. \\, OE = 2r. \\, \\text{Find the tangent length from } E.",
+      "answer": 1.732,
+      "tolerance": 0.01,
+      "hints": [
+        "Tangent length $= \\sqrt{OE^2 - r^2}$.",
+        "$\\sqrt{(2r)^2 - r^2} = \\sqrt{3r^2} = r\\sqrt{3}$. For $r = 1$, that's $\\sqrt{3} \\approx 1.732$."
+      ],
+      "explanation": "$TE = \\sqrt{(2r)^2 - r^2} = \\sqrt{3r^2} = r\\sqrt{3}$. For $r = 1$: $\\sqrt{3} \\approx 1.732$.",
+      "difficulty": "hard",
+      "steps": [
+        {
+          "text": "**Approach.** Tangent length $= \\sqrt{OE^2 - r^2}$."
+        },
+        {
+          "text": "$\\sqrt{(2r)^2 - r^2} = \\sqrt{3r^2} = r\\sqrt{3}$. For $r = 1$, that's $\\sqrt{3} \\approx 1.732$."
+        },
+        {
+          "text": "**Solution.** $TE = \\sqrt{(2r)^2 - r^2} = \\sqrt{3r^2} = r\\sqrt{3}$. For $r = 1$: $\\sqrt{3} \\approx 1.732$."
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "prompt": "A line passes through the center of a circle. Where (if anywhere) can it be tangent to the circle?",
+      "choices": [
+        "At any point",
+        "At one point on the circle",
+        "Nowhere — it must be a secant (chord) through the center",
+        "At the antipodal points"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "A line through the center intersects the circle at TWO points.",
+        "Tangent means touches at one point only."
+      ],
+      "explanation": "A line through the center intersects the circle at two diametrically opposite points — it's a *diameter*, not a tangent.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{Two circles externally tangent to each other have radii } 3 \\text{ and } 5. \\\\ \\text{Find the distance between their centers.}",
+      "answer": 8,
+      "tolerance": 0.001,
+      "hints": [
+        "Externally tangent circles touch at one point on the line connecting their centers.",
+        "Distance between centers = sum of radii."
+      ],
+      "explanation": "When two circles are externally tangent, the distance between centers equals the sum of radii: $3 + 5 = 8$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "prompt": "Why is tangency special among 'line meets circle' situations?",
+      "choices": [
+        "It's the case of exactly one intersection point (the line neither cuts through nor misses).",
+        "It's when the line passes through the center.",
+        "It's when the line is shorter than the diameter.",
+        "It's when the radius equals the tangent length."
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "A line and a circle can meet 0, 1, or 2 times.",
+        "Tangent is the borderline case."
+      ],
+      "explanation": "A generic line either misses a circle (0 intersections) or cuts through it as a secant (2 intersections). Tangent is the borderline: exactly 1 intersection. This makes tangents the 'limiting' case of secants — a useful idea in calculus too (tangent line = limit of secant lines).",
+      "difficulty": "medium"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "prompt": "On the Ferris wheel, the highlighted rider's HEIGHT (above the wheel's center) over time traces out what shape?",
+      "choices": [
+        "A straight line",
+        "A sine wave",
+        "A parabola",
+        "A circle"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "The rider goes around a circle, but you're tracking only one coordinate of their position.",
+        "Height rises and falls, smoothly and repeatedly, between extremes."
+      ],
+      "explanation": "The vertical position of a point rotating uniformly around a circle is, by definition, a sine wave (in units of the radius). That's what sine literally IS.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "prompt": "Why does the identity $\\sin^2\\theta + \\cos^2\\theta = 1$ hold?",
+      "choices": [
+        "It's an arbitrary trig rule you memorize.",
+        "Because $\\sin$ and $\\cos$ are the two coordinates of a point on a unit circle, so they satisfy the Pythagorean theorem.",
+        "Because $\\sin$ and $\\cos$ are inverses of each other.",
+        "Because both functions are bounded by 1."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "What two things does the Ferris wheel rider have at any instant?",
+        "The rider's $(x, y)$ position sits on a circle of radius 1 — Pythagorean theorem applies."
+      ],
+      "explanation": "$\\cos\\theta$ is the rider's x-coordinate; $\\sin\\theta$ is their y-coordinate. The rider is on a circle of radius 1, so $x^2 + y^2 = 1^2 = 1$. Substituting gives the identity.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "On the Ferris wheel, the rider's HORIZONTAL position over time traces out:",
+      "choices": [
+        "The same sine wave as before",
+        "A cosine wave (sine shifted by 90°)",
+        "A flat line",
+        "A square wave"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Switch the widget to 'x-pos (cos)' or 'both' and watch.",
+        "The horizontal coordinate starts at the maximum when the rider is at 'three o'clock' — that's where cosine begins."
+      ],
+      "explanation": "The horizontal coordinate of a rotating point is the cosine. It has the same wave shape as sine but starts at 1 instead of 0 — they're 90° apart in phase.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "prompt": "If you double the Ferris wheel's rotational speed, what happens to the sine wave on the right?",
+      "choices": [
+        "Amplitude doubles.",
+        "It gets compressed horizontally — twice as many cycles per second (higher frequency).",
+        "It vanishes.",
+        "Amplitude halves."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Speed = how fast we sweep through angles.",
+        "Same wave shape, just faster."
+      ],
+      "explanation": "Faster rotation means the rider completes a full cycle in less time, so the wave fits more cycles per second — that's a higher frequency. Amplitude (height of the wave) is set by the wheel's radius, not its speed.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{At angle } \\theta = \\pi/2 \\text{ (a quarter turn from start), what is } \\sin\\theta?",
+      "answer": 1,
+      "tolerance": 0.001,
+      "hints": [
+        "After a quarter turn counterclockwise from the 3 o'clock position, where is the rider?",
+        "Top of the wheel — maximum height."
+      ],
+      "explanation": "At $\\theta = \\pi/2$ the rider is at the top of the unit circle, so y-coordinate = 1. Hence $\\sin(\\pi/2) = 1$.",
+      "difficulty": "medium"
+    }
+  ]
+}

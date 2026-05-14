@@ -1,0 +1,381 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\sqrt{289} = ?",
+      "answer": 17,
+      "tolerance": 0.001,
+      "hints": [
+        "Perfect squares table: $17^2 = 289$.",
+        "Just 17."
+      ],
+      "explanation": "$17^2 = 289$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\sqrt{1225} = ?",
+      "answer": 35,
+      "tolerance": 0.001,
+      "hints": [
+        "$35^2 = 1225$.",
+        "$30^2 = 900$, $40^2 = 1600$, so answer is in between. Try $35$."
+      ],
+      "explanation": "$35^2 = 1225$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{Simplify } \\sqrt{72}: \\text{ if the answer is } k\\sqrt{2}, \\text{ what is } k?",
+      "answer": 6,
+      "tolerance": 0.001,
+      "hints": [
+        "$72 = 36 \\times 2$.",
+        "$\\sqrt{36 \\cdot 2} = 6\\sqrt{2}$."
+      ],
+      "explanation": "$\\sqrt{72} = \\sqrt{36 \\cdot 2} = 6\\sqrt{2}$. So $k = 6$.",
+      "steps": [
+        {
+          "text": "**Universal recipe to simplify a square root.** Find the LARGEST perfect-square factor of the number; pull it out as a clean root."
+        },
+        {
+          "text": "**Find largest perfect-square factor of 72.** Try 36 (since $36 \\cdot 2 = 72$). ✓"
+        },
+        {
+          "math": "\\sqrt{72} = \\sqrt{36 \\cdot 2} = \\sqrt{36} \\cdot \\sqrt{2} = 6\\sqrt{2}"
+        },
+        {
+          "text": "**Key identity used:** $\\sqrt{ab} = \\sqrt{a} \\cdot \\sqrt{b}$ (for non-negative numbers). Lets us split off the perfect-square part."
+        },
+        {
+          "text": "So $k = 6$."
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Find } \\sqrt{1764} \\text{ using prime factorization.}",
+      "answer": 42,
+      "tolerance": 0.001,
+      "hints": [
+        "Factor: $1764 = 2^2 \\times 3^2 \\times 7^2$.",
+        "Take one of each: $2 \\times 3 \\times 7 = 42$."
+      ],
+      "explanation": "$1764 = 4 \\cdot 441 = 4 \\cdot 9 \\cdot 49 = 2^2 \\cdot 3^2 \\cdot 7^2$. $\\sqrt{1764} = 2 \\cdot 3 \\cdot 7 = 42$.",
+      "steps": [
+        {
+          "text": "**Prime factorization method for square roots.** Express the number as a product of primes; pair them up; take ONE prime from each pair for the square root."
+        },
+        {
+          "math": "1764 = 2^2 \\cdot 3^2 \\cdot 7^2"
+        },
+        {
+          "text": "**Each prime appears to an even power → number IS a perfect square.** This is the test for perfect squares: every prime exponent must be even."
+        },
+        {
+          "math": "\\sqrt{1764} = 2^1 \\cdot 3^1 \\cdot 7^1 = 42"
+        },
+        {
+          "text": "**Rule.** $\\sqrt{p^{2k}} = p^k$ — halve each exponent."
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\sqrt[3]{2744} = ?",
+      "answer": 14,
+      "tolerance": 0.001,
+      "hints": [
+        "$2744 = 8 \\cdot 343 = 2^3 \\cdot 7^3$.",
+        "$\\sqrt[3]{2744} = 2 \\cdot 7 = 14$."
+      ],
+      "explanation": "$2744 = 2^3 \\cdot 7^3$, so $\\sqrt[3]{2744} = 2 \\cdot 7 = 14$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Cube roots: prime factorize and group into TRIPLES** (instead of pairs for square roots). Take one prime per triple."
+        },
+        {
+          "text": "**Factorize.** $2744 = 8 \\cdot 343 = 2^3 \\cdot 7^3$."
+        },
+        {
+          "text": "**Each prime appears 3 times (one triple each).** Take one of each: $\\sqrt[3]{2744} = 2 \\cdot 7 = 14$."
+        },
+        {
+          "text": "**General rule.** $\\sqrt[n]{p^{nk}} = p^k$ — divide each exponent by the root index $n$."
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\sqrt[3]{-216} = ?",
+      "answer": -6,
+      "tolerance": 0.001,
+      "hints": [
+        "$6^3 = 216$. Cube root preserves sign.",
+        "$-6$."
+      ],
+      "explanation": "$(-6)^3 = -216$, so $\\sqrt[3]{-216} = -6$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Simplify } \\sqrt{50} + \\sqrt{18}.",
+      "choices": [
+        "$\\sqrt{68}$",
+        "$8\\sqrt{2}$",
+        "$5\\sqrt{2} + 3\\sqrt{2}$ → both correct",
+        "$\\sqrt{50} + \\sqrt{18}$"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$\\sqrt{50} = 5\\sqrt{2}$, $\\sqrt{18} = 3\\sqrt{2}$.",
+        "$5\\sqrt{2} + 3\\sqrt{2} = 8\\sqrt{2}$."
+      ],
+      "explanation": "$\\sqrt{50} = 5\\sqrt{2}$, $\\sqrt{18} = 3\\sqrt{2}$. Sum: $8\\sqrt{2}$.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Rationalize: } \\dfrac{1}{\\sqrt{3}}.",
+      "choices": [
+        "$\\dfrac{\\sqrt{3}}{3}$",
+        "$\\dfrac{1}{3}$",
+        "$\\sqrt{3}$",
+        "$\\dfrac{\\sqrt{3}}{2}$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Multiply top and bottom by $\\sqrt{3}$.",
+        "$\\dfrac{1 \\cdot \\sqrt{3}}{\\sqrt{3} \\cdot \\sqrt{3}} = \\dfrac{\\sqrt{3}}{3}$."
+      ],
+      "explanation": "Multiply top and bottom by $\\sqrt{3}$: $\\dfrac{\\sqrt{3}}{3}$.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Rationalize: } \\dfrac{1}{2 - \\sqrt{3}}.",
+      "choices": [
+        "$2 + \\sqrt{3}$",
+        "$2 - \\sqrt{3}$",
+        "$\\dfrac{2 + \\sqrt{3}}{7}$",
+        "$\\sqrt{3} - 2$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Multiply top and bottom by the conjugate $2 + \\sqrt{3}$.",
+        "$(2 - \\sqrt{3})(2 + \\sqrt{3}) = 4 - 3 = 1$. So result is $2 + \\sqrt{3}$."
+      ],
+      "explanation": "$\\dfrac{1}{2 - \\sqrt{3}} \\cdot \\dfrac{2 + \\sqrt{3}}{2 + \\sqrt{3}} = \\dfrac{2 + \\sqrt{3}}{4 - 3} = 2 + \\sqrt{3}$.",
+      "steps": [
+        {
+          "text": "**The CONJUGATE trick.** For $a - \\sqrt{b}$, the conjugate is $a + \\sqrt{b}$. Multiplying together kills the square root via the difference-of-squares: $(a - \\sqrt{b})(a + \\sqrt{b}) = a^2 - b$."
+        },
+        {
+          "text": "**Multiply numerator and denominator by the conjugate** $2 + \\sqrt{3}$:"
+        },
+        {
+          "math": "\\dfrac{1}{2 - \\sqrt{3}} \\cdot \\dfrac{2 + \\sqrt{3}}{2 + \\sqrt{3}}"
+        },
+        {
+          "text": "**Denominator simplifies.** $(2 - \\sqrt{3})(2 + \\sqrt{3}) = 4 - 3 = 1$ — no radical left."
+        },
+        {
+          "math": "= \\dfrac{2 + \\sqrt{3}}{1} = 2 + \\sqrt{3}"
+        },
+        {
+          "text": "**Lucky bonus.** Denominator turned out to be 1 — clean integer answer."
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\sqrt{2} \\approx 1.414. \\text{ What is } \\sqrt{8} \\text{ (round to 3 decimals)?}",
+      "answer": 2.828,
+      "tolerance": 0.01,
+      "hints": [
+        "$\\sqrt{8} = \\sqrt{4 \\cdot 2} = 2\\sqrt{2}$.",
+        "$2 \\cdot 1.414 = 2.828$."
+      ],
+      "explanation": "$\\sqrt{8} = 2\\sqrt{2} \\approx 2.828$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{If } x = 2 + \\sqrt{3}, \\text{ find } x + \\dfrac{1}{x}.",
+      "answer": 4,
+      "tolerance": 0.001,
+      "hints": [
+        "$\\dfrac{1}{2 + \\sqrt{3}} = 2 - \\sqrt{3}$ (rationalize).",
+        "Sum: $(2 + \\sqrt{3}) + (2 - \\sqrt{3}) = 4$."
+      ],
+      "explanation": "$\\dfrac{1}{x} = 2 - \\sqrt{3}$. Sum: $4$.",
+      "steps": [
+        {
+          "text": "**Find $1/x$ via conjugate.** Multiply top and bottom by the conjugate $2 - \\sqrt{3}$:"
+        },
+        {
+          "math": "\\dfrac{1}{2 + \\sqrt{3}} \\cdot \\dfrac{2 - \\sqrt{3}}{2 - \\sqrt{3}} = \\dfrac{2 - \\sqrt{3}}{4 - 3} = 2 - \\sqrt{3}"
+        },
+        {
+          "text": "**Add $x$ and $1/x$.** The radicals are OPPOSITE and CANCEL:"
+        },
+        {
+          "math": "x + \\dfrac{1}{x} = (2 + \\sqrt{3}) + (2 - \\sqrt{3}) = 4"
+        },
+        {
+          "text": "**Pattern.** A number and its reciprocal often have surprising sum/product structure when written with surds. This kind of cancellation appears in algebra-2 (quadratic-roots), trig identities, and complex numbers."
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which is the largest? } \\sqrt{2}, \\sqrt[3]{3}, \\sqrt[4]{4}",
+      "choices": [
+        "$\\sqrt{2}$",
+        "$\\sqrt[3]{3}$",
+        "$\\sqrt[4]{4}$",
+        "All equal"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Raise all to the LCM of exponents (12) to compare.",
+        "$(\\sqrt{2})^{12} = 2^6 = 64$. $(\\sqrt[3]{3})^{12} = 3^4 = 81$. $(\\sqrt[4]{4})^{12} = 4^3 = 64$. So $\\sqrt[3]{3}$ is largest."
+      ],
+      "explanation": "Raise to 12th power: $64$ vs $81$ vs $64$. $\\sqrt[3]{3}$ is biggest.",
+      "difficulty": "hard",
+      "steps": [
+        {
+          "text": "**Trick: raise all roots to a COMMON power** that's the LCM of the root indices. Removes all roots and gives integer values to compare."
+        },
+        {
+          "text": "**Root indices: 2, 3, 4. LCM = 12.** Raise each to the 12th power."
+        },
+        {
+          "text": "**$(\\sqrt{2})^{12}$.** = $2^{12/2} = 2^6 = 64$."
+        },
+        {
+          "text": "**$(\\sqrt[3]{3})^{12}$.** = $3^{12/3} = 3^4 = 81$."
+        },
+        {
+          "text": "**$(\\sqrt[4]{4})^{12}$.** = $4^{12/4} = 4^3 = 64$."
+        },
+        {
+          "text": "**Compare 64, 81, 64.** $81$ is biggest → $\\sqrt[3]{3}$ is largest."
+        },
+        {
+          "text": "**Interesting tie.** $\\sqrt{2}$ and $\\sqrt[4]{4}$ are actually EQUAL: $\\sqrt[4]{4} = \\sqrt[4]{2^2} = 2^{2/4} = 2^{1/2} = \\sqrt{2}$."
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "type": "numeric",
+      "promptTex": "\\sqrt{0.0064} = ?",
+      "answer": 0.08,
+      "tolerance": 0.001,
+      "hints": [
+        "$0.08^2 = 0.0064$.",
+        "Or: $\\sqrt{0.0064} = \\sqrt{64/10000} = 8/100 = 0.08$."
+      ],
+      "explanation": "$0.08^2 = 0.0064$. So $\\sqrt{0.0064} = 0.08$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Trick for square root of a decimal: convert to a fraction with a perfect-square denominator.**"
+        },
+        {
+          "text": "**Convert.** $0.0064 = \\dfrac{64}{10000}$."
+        },
+        {
+          "text": "**Both top and bottom are perfect squares.** $64 = 8^2$ and $10000 = 100^2$."
+        },
+        {
+          "math": "\\sqrt{0.0064} = \\sqrt{\\dfrac{64}{10000}} = \\dfrac{\\sqrt{64}}{\\sqrt{10000}} = \\dfrac{8}{100} = 0.08"
+        },
+        {
+          "text": "**Sanity check.** $0.08 \\cdot 0.08 = 0.0064$ ✓."
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "type": "numeric",
+      "promptTex": "\\text{Smallest number to multiply } 1008 \\text{ by, so the product is a perfect square?}",
+      "answer": 7,
+      "tolerance": 0.001,
+      "hints": [
+        "$1008 = 2^4 \\times 3^2 \\times 7$.",
+        "Unpaired: just $7$. Multiply by $7$."
+      ],
+      "explanation": "$1008 = 2^4 \\cdot 3^2 \\cdot 7$. The unpaired prime is 7. So multiply by 7 to make $7056 = 84^2$.",
+      "steps": [
+        {
+          "text": "**Definition reminder.** A perfect square has all PRIME EXPONENTS EVEN. The fix: find the primes with ODD exponents and multiply by them to bump up."
+        },
+        {
+          "math": "1008 = 2^4 \\cdot 3^2 \\cdot 7^1"
+        },
+        {
+          "text": "**Identify odd exponents.** $2^4$ (even ✓), $3^2$ (even ✓), $7^1$ (ODD — needs another 7)."
+        },
+        {
+          "text": "**Multiply by 7** to make $7^2$ — now all exponents even."
+        },
+        {
+          "text": "**Verify.** $1008 \\cdot 7 = 7056 = 2^4 \\cdot 3^2 \\cdot 7^2 = (4 \\cdot 3 \\cdot 7)^2 = 84^2$ ✓."
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q15",
+      "type": "numeric",
+      "promptTex": "\\sqrt[3]{74088} = ?",
+      "answer": 42,
+      "tolerance": 0.001,
+      "hints": [
+        "Strip last 3 digits: 088. Last digit of cube root: cube ending in 8 → 2.",
+        "Remaining 74: between $4^3 = 64$ and $5^3 = 125$, so starts with 4. Cube root = $42$. (Verify: $42^3 = 74088$.)"
+      ],
+      "explanation": "Unit-digit trick: cube ends in 8 → cube root ends in 2. Strip last 3 digits → 74, between $4^3$ and $5^3$ → first digit 4. Cube root $= 42$.",
+      "difficulty": "hard",
+      "steps": [
+        {
+          "text": "**Two-step trick for taking cube roots of 4-6 digit numbers.** (Used in mental-math competitions.)"
+        },
+        {
+          "text": "**Step 1: Find the LAST digit of the cube root.** Last digit of $n^3$ uniquely determines last digit of $n$. Memorize this table: $0\\to 0$, $1\\to 1$, $2\\to 8$, $3\\to 7$, $4\\to 4$, $5\\to 5$, $6\\to 6$, $7\\to 3$, $8\\to 2$, $9\\to 9$."
+        },
+        {
+          "text": "**Here.** Last digit of 74088 is 8 → last digit of cube root is **2**."
+        },
+        {
+          "text": "**Step 2: Find the FIRST digit by stripping the last 3 digits.** Remaining number is 74. Find the largest integer $n$ with $n^3 \\leq 74$. $4^3 = 64$, $5^3 = 125$. So first digit is **4**."
+        },
+        {
+          "text": "**Combine.** Cube root = $42$."
+        },
+        {
+          "text": "**Verify.** $42^3 = 42 \\cdot 42 \\cdot 42 = 1764 \\cdot 42 = 74{,}088$ ✓."
+        }
+      ]
+    }
+  ]
+}

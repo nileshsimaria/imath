@@ -1,0 +1,462 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{Empirical rule: about what \\% of data falls within } 2\\sigma \\text{ of the mean? (no \\% sign)}",
+      "answer": 95,
+      "tolerance": 0.5,
+      "hints": [
+        "68-95-99.7 rule.",
+        "$2\\sigma$: about 95%."
+      ],
+      "explanation": "Empirical rule: about 95% within $\\pm 2\\sigma$.",
+      "steps": [
+        "68-95-99.7 rule:",
+        "Within $\\pm 1\\sigma$: 68%.",
+        "Within $\\pm 2\\sigma$: **95%**.",
+        "Within $\\pm 3\\sigma$: 99.7%."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{SAT scores: } \\mu = 1000, \\sigma = 200. \\text{ Your score: } 1400. \\text{ z-score?}",
+      "answer": 2,
+      "tolerance": 0,
+      "hints": [
+        "$z = (x - \\mu)/\\sigma$.",
+        "$(1400 - 1000)/200 = 2$."
+      ],
+      "explanation": "$z = (1400 - 1000)/200 = 400/200 = 2$.",
+      "steps": [
+        "$z = (x - \\mu)/\\sigma = (1400 - 1000)/200 = 2$.",
+        "You scored 2 standard deviations above the mean."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Adult male heights are approximately } N(70, 3) \\text{ inches.} \\\\ \\text{About what \\% are between 67 and 73 inches?}",
+      "choices": [
+        "50%",
+        "68%",
+        "95%",
+        "99.7%"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "67 to 73 is $\\mu \\pm 1\\sigma$ since $\\sigma = 3$.",
+        "Within 1$\\sigma$: 68%."
+      ],
+      "explanation": "$67 = 70 - 3 = \\mu - \\sigma$, $73 = 70 + 3 = \\mu + \\sigma$. Within $\\pm 1\\sigma$ → 68%.",
+      "steps": [
+        "$\\mu - \\sigma = 70 - 3 = 67$ and $\\mu + \\sigma = 70 + 3 = 73$.",
+        "So this range is $\\mu \\pm 1\\sigma$.",
+        "Empirical rule: **68%** of data within $\\pm 1\\sigma$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Same heights } N(70, 3). \\text{ About what \\% are above 76 inches?}",
+      "choices": [
+        "50%",
+        "16%",
+        "2.5%",
+        "0.15%"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "76 = $\\mu + 2\\sigma$. About 95% within $\\pm 2\\sigma$, so 5% outside.",
+        "Symmetry: half on each side → 2.5% above 76."
+      ],
+      "explanation": "$76 = \\mu + 2\\sigma$. 5% outside $\\pm 2\\sigma$; by symmetry, 2.5% above.",
+      "steps": [
+        "$76 - 70 = 6 = 2\\sigma$. So 76 is $\\mu + 2\\sigma$.",
+        "Empirical rule: 95% within $\\pm 2\\sigma$, so 5% outside.",
+        "By symmetry, half are above $\\mu + 2\\sigma$ and half below $\\mu - 2\\sigma$.",
+        "**About 2.5% above 76**."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the standard normal distribution?}",
+      "choices": [
+        "N(0, 1)",
+        "N(1, 0)",
+        "N(0, 0)",
+        "N(1, 1)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Standard normal has mean 0, sd 1.",
+        "$N(0, 1)$."
+      ],
+      "explanation": "Standard normal: $\\mu = 0, \\sigma = 1$, written $N(0, 1)$.",
+      "steps": [
+        "Standard normal: the 'reference' normal distribution.",
+        "Mean $\\mu = 0$. Standard deviation $\\sigma = 1$.",
+        "Written: $Z \\sim N(0, 1)$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{For } X \\sim N(50, 10), \\text{ find the z-score of } x = 65.",
+      "answer": 1.5,
+      "tolerance": 0.01,
+      "hints": [
+        "$z = (65 - 50)/10$.",
+        "$1.5$."
+      ],
+      "explanation": "$z = (65 - 50)/10 = 15/10 = 1.5$.",
+      "steps": [
+        "$z = (x - \\mu)/\\sigma = (65 - 50)/10 = 1.5$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Test 1: } \\mu = 75, \\sigma = 10, \\text{ score 88. Test 2: } \\mu = 60, \\sigma = 5, \\text{ score 70.} \\\\ \\text{Which is the better performance (relative to peers)?}",
+      "choices": [
+        "Test 1",
+        "Test 2",
+        "Same",
+        "Cannot tell"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Compare z-scores. Test 1: $z = 1.3$. Test 2: $z = 2.0$.",
+        "Higher z = farther above mean = better."
+      ],
+      "explanation": "Test 1 z = 1.3, Test 2 z = 2.0. Test 2 is the better performance (2 σ above mean).",
+      "steps": [
+        "Test 1 z: $(88 - 75)/10 = 1.3$.",
+        "Test 2 z: $(70 - 60)/5 = 2.0$.",
+        "Test 2 is **2 standard deviations** above its mean — better than Test 1's **1.3**."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If you increase } \\sigma \\text{ in a normal distribution, the curve becomes:}",
+      "choices": [
+        "taller and narrower",
+        "shorter and wider",
+        "shifted right",
+        "shifted left"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Larger σ = more spread out.",
+        "Wider curve, but lower peak (total area still 1)."
+      ],
+      "explanation": "Larger σ spreads the data more → wider, shorter curve. (Total area must remain 1, so wider means lower peak.)",
+      "steps": [
+        "Standard deviation σ controls **spread**.",
+        "Larger σ → data is more spread out → curve is **wider**.",
+        "Total area under curve = 1 (probability), so wider means **lower peak** to compensate."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{For standard normal: } P(Z < 0) = ? \\text{ (decimal)}",
+      "answer": 0.5,
+      "tolerance": 0.005,
+      "hints": [
+        "Symmetry: half the curve is below 0.",
+        "0.5."
+      ],
+      "explanation": "By symmetry of the bell curve around 0: half the area is below 0. $P(Z < 0) = 0.5$.",
+      "steps": [
+        "Standard normal is symmetric around its mean (0).",
+        "Half the area is to the left of 0, half to the right.",
+        "$P(Z < 0) = 0.5$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "multiple-choice",
+      "promptTex": "\\text{For } N(\\mu, \\sigma): \\text{ about what fraction is between } \\mu - 3\\sigma \\text{ and } \\mu + 3\\sigma?",
+      "choices": [
+        "68%",
+        "95%",
+        "99.7%",
+        "100%"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "68-95-99.7 rule.",
+        "$3\\sigma$ → 99.7%."
+      ],
+      "explanation": "$\\pm 3\\sigma$ contains about 99.7% of data.",
+      "steps": [
+        "Empirical rule: $\\pm 1\\sigma$ → 68%, $\\pm 2\\sigma$ → 95%, $\\pm 3\\sigma$ → **99.7%**."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{IQ scores: } N(100, 15). \\text{ A score of } 130 \\text{ has } z = ?",
+      "answer": 2,
+      "tolerance": 0,
+      "hints": [
+        "$z = (130 - 100)/15 = 30/15 = 2$.",
+        "$2$."
+      ],
+      "explanation": "$z = (130 - 100)/15 = 2$. Two SDs above the mean (top ~2.5%).",
+      "steps": [
+        "$z = (130 - 100)/15 = 2$.",
+        "(IQ of 130 corresponds to about the 97.5th percentile.)"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Why is the area under a normal curve always 1?}",
+      "choices": [
+        "By definition (it's a probability distribution)",
+        "Coincidence",
+        "Only for the standard normal",
+        "Because σ = 1"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "All probabilities sum to 1 — that's a fundamental property.",
+        "By definition for any continuous distribution."
+      ],
+      "explanation": "The total area under any probability density curve = 1, by definition. (P(any outcome) = 1.)",
+      "steps": [
+        "Probability that 'something happens' is 1 (certain).",
+        "For continuous distributions, probability is the area under the curve.",
+        "So total area = 1 for any probability distribution.",
+        "(This is true for normal AND every other distribution.)"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q13",
+      "type": "numeric",
+      "promptTex": "\\text{For the standard normal, find } P(Z < 1). \\\\ \\text{Use the table value } \\Phi(1) = 0.8413.",
+      "answer": 0.8413,
+      "tolerance": 0.001,
+      "hints": [
+        "Direct table lookup.",
+        "$P(Z < 1) = \\Phi(1) = 0.8413$."
+      ],
+      "explanation": "$\\Phi(z) = P(Z \\leq z)$ is the cumulative distribution function (CDF) of the standard normal. From the table: $\\Phi(1) = 0.8413$ — i.e., about $84\\%$ of standard-normal values are at most 1 SD above the mean.",
+      "steps": [
+        "**Recognize the notation.** $\\Phi(z) = P(Z \\leq z)$ is the standard-normal CDF — the area under the bell curve to the LEFT of $z$.",
+        "**Look up the value.** $\\Phi(1) = 0.8413$.",
+        "**Empirical-rule sanity check.** $68\\%$ within $\\pm 1\\sigma$ → $34\\%$ between $0$ and $+1$. Plus the $50\\%$ below $0$ gives $84\\%$ below $+1$. ✓"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q14",
+      "type": "numeric",
+      "promptTex": "\\text{For the standard normal, find } P(Z > 1.5). \\\\ \\text{Use } \\Phi(1.5) = 0.9332. \\text{ Round to 4 decimals.}",
+      "answer": 0.0668,
+      "tolerance": 0.002,
+      "hints": [
+        "Complement: $P(Z > 1.5) = 1 - P(Z \\leq 1.5) = 1 - \\Phi(1.5)$.",
+        "$P(Z > 1.5) = 1 - 0.9332 = 0.0668$."
+      ],
+      "explanation": "Tails: $P(Z > z) = 1 - \\Phi(z)$. So $P(Z > 1.5) = 1 - 0.9332 = 0.0668$ — about $6.7\\%$ of standard-normal values exceed $1.5$.",
+      "steps": [
+        "**Z-table gives left-tail probabilities.** $\\Phi(z) = P(Z \\leq z)$ is the LEFT area. We want the RIGHT area beyond $z = 1.5$.",
+        "**Use the complement.** $P(Z > 1.5) = 1 - P(Z \\leq 1.5) = 1 - 0.9332 = 0.0668$.",
+        "**Mental check.** $\\Phi(1.5)$ is $93\\%$ish, so $7\\%$ish is in the right tail. Matches.",
+        "**Pattern lesson — three operations.** Combining $\\Phi$ values: (a) left tail = $\\Phi(z)$, (b) right tail = $1 - \\Phi(z)$, (c) between $a$ and $b$ = $\\Phi(b) - \\Phi(a)$. Every z-table problem reduces to one of these."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q15",
+      "type": "numeric",
+      "promptTex": "\\text{Standard normal: find } P(-1 < Z < 1). \\\\ \\text{Use } \\Phi(1) = 0.8413. \\text{ Round to 4 decimals.}",
+      "answer": 0.6826,
+      "tolerance": 0.002,
+      "hints": [
+        "$P(-1 < Z < 1) = \\Phi(1) - \\Phi(-1)$.",
+        "By symmetry: $\\Phi(-1) = 1 - \\Phi(1) = 1 - 0.8413 = 0.1587$.",
+        "$P = 0.8413 - 0.1587 = 0.6826$. (Empirical rule's $68\\%$ precisely.)"
+      ],
+      "explanation": "$P(-1 < Z < 1) = \\Phi(1) - \\Phi(-1)$. By symmetry $\\Phi(-1) = 1 - \\Phi(1) = 0.1587$. So $P = 0.8413 - 0.1587 = 0.6826$. This is the $68\\%$ of the empirical rule computed precisely.",
+      "steps": [
+        "**Between-formula.** $P(a < Z < b) = \\Phi(b) - \\Phi(a)$.",
+        "**Use symmetry for $\\Phi(-1)$.** By the symmetry of the bell curve about 0: $\\Phi(-z) = 1 - \\Phi(z)$. So $\\Phi(-1) = 1 - 0.8413 = 0.1587$.",
+        "**Subtract.** $P(-1 < Z < 1) = 0.8413 - 0.1587 = 0.6826$.",
+        "**Empirical-rule connection.** This is the famous $68\\%$ — within $\\pm 1\\sigma$ of the mean. The empirical rule's '$68\\%$' is the rounded $0.6826$. Two ways of getting the same fact: rule-of-thumb vs precise z-table."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q16",
+      "type": "numeric",
+      "promptTex": "\\text{For } X \\sim N(70, 5), \\text{ find } P(X < 80). \\\\ \\text{Use } \\Phi(2) = 0.9772.",
+      "answer": 0.9772,
+      "tolerance": 0.002,
+      "hints": [
+        "Standardize: $z = (80 - 70)/5 = 2$.",
+        "$P(X < 80) = P(Z < 2) = \\Phi(2) = 0.9772$."
+      ],
+      "explanation": "Standardize first: $z = (80 - 70)/5 = 2$. Then look up: $P(X < 80) = \\Phi(2) = 0.9772$. About $97.7\\%$ of values fall below $80$ for this normal distribution.",
+      "steps": [
+        "**Standardize.** $z = (x - \\mu)/\\sigma = (80 - 70)/5 = 2$.",
+        "**Translate the probability.** $P(X < 80) = P(Z < 2) = \\Phi(2) = 0.9772$.",
+        "**Pattern lesson — the universal recipe.** For ANY normal probability: (1) standardize to a $z$-score, (2) look up $\\Phi(z)$, (3) combine with $1$, complement, or other $\\Phi$ values as needed. Same three steps for every problem."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q17",
+      "type": "numeric",
+      "promptTex": "\\text{For } X \\sim N(70, 5), \\text{ find } P(60 < X < 80). \\\\ \\text{Use } \\Phi(2) = 0.9772. \\text{ Round to 4 decimals.}",
+      "answer": 0.9544,
+      "tolerance": 0.005,
+      "hints": [
+        "Both bounds: standardize. $z_{60} = (60-70)/5 = -2$. $z_{80} = (80-70)/5 = 2$.",
+        "$P(-2 < Z < 2) = \\Phi(2) - \\Phi(-2) = 0.9772 - (1 - 0.9772) = 0.9544$.",
+        "(This is the empirical rule's '$95\\%$' computed precisely.)"
+      ],
+      "explanation": "Standardize both bounds: $z = -2$ to $z = 2$. By symmetry $\\Phi(-2) = 1 - \\Phi(2) = 0.0228$. $P(-2 < Z < 2) = 0.9772 - 0.0228 = 0.9544$. The empirical rule's '$95\\%$' is really $95.44\\%$.",
+      "steps": [
+        "**Standardize both endpoints.** $z_{60} = (60 - 70)/5 = -2$, $z_{80} = (80 - 70)/5 = 2$.",
+        "**Translate the probability.** $P(60 < X < 80) = P(-2 < Z < 2)$.",
+        "**Apply the between-formula.** $P(-2 < Z < 2) = \\Phi(2) - \\Phi(-2)$.",
+        "**Use symmetry for $\\Phi(-2)$.** $\\Phi(-2) = 1 - \\Phi(2) = 1 - 0.9772 = 0.0228$.",
+        "**Subtract.** $P = 0.9772 - 0.0228 = 0.9544$.",
+        "**Empirical-rule precision.** This is the $95\\%$ of the empirical rule. The rule-of-thumb says $\\pm 2\\sigma$ ≈ $95\\%$. Actual is $95.44\\%$ — close enough for quick estimates, but use the table when precision matters."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q18",
+      "type": "numeric",
+      "promptTex": "\\text{For SAT scores } X \\sim N(1000, 200), \\\\ \\text{find the 90th percentile (the score with } 90\\% \\text{ of scores below it). Use } \\Phi(1.28) = 0.90.",
+      "answer": 1256,
+      "tolerance": 5,
+      "hints": [
+        "Find $z$ such that $\\Phi(z) = 0.90$: from the table, $z \\approx 1.28$.",
+        "Convert back: $x = \\mu + z \\sigma = 1000 + 1.28 \\cdot 200$.",
+        "$x = 1000 + 256 = 1256$."
+      ],
+      "explanation": "Reverse direction: from probability to $z$, then to $x$. $\\Phi^{-1}(0.90) \\approx 1.28$. So the 90th percentile is $z = 1.28$ SDs above the mean: $x = 1000 + 1.28 \\cdot 200 = 1256$.",
+      "steps": [
+        "**Recognize the reverse direction.** Given a percentile (probability), find the corresponding $x$-value. Two steps: percentile → $z$ → $x$.",
+        "**Find $z$ from the table.** $\\Phi(z) = 0.90$ means $z = \\Phi^{-1}(0.90)$. The table gives $z \\approx 1.28$.",
+        "**Convert $z$ to $x$.** $x = \\mu + z \\sigma = 1000 + 1.28 \\cdot 200 = 1000 + 256 = 1256$.",
+        "**Sanity check direction.** The 90th percentile is ABOVE the mean (above 50th percentile), so $z > 0$ ✓.",
+        "**Pattern lesson — percentile inversion.** Every 'find the cutoff' problem uses the same recipe: read the table backwards to find $z$, then un-standardize back to the original scale."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q19",
+      "type": "multiple-choice",
+      "prompt": "Which z-value is used as the critical value for a 95% two-sided confidence interval?",
+      "choices": [
+        "z = 1.28",
+        "z = 1.645",
+        "z = 1.96",
+        "z = 2.576"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Two-sided 95%: 2.5% in each tail.",
+        "$\\Phi(1.96) = 0.975$, leaving 2.5% in the upper tail.",
+        "$z = 1.96$ is the famous 95% critical value."
+      ],
+      "explanation": "For a two-sided $95\\%$ interval, $2.5\\%$ goes in each tail. $\\Phi(1.96) = 0.975$, so $z = 1.96$ is the upper critical value (and $-1.96$ the lower). This is the most-cited number in introductory statistics — the basis of countless 95% confidence intervals.",
+      "steps": [
+        "**Two-sided interval setup.** A $95\\%$ interval covers the middle $95\\%$ of the distribution, leaving $5\\%$ in the tails, split evenly: $2.5\\%$ each tail.",
+        "**Find the upper critical $z$.** We want $z$ such that $P(Z > z) = 0.025$, i.e. $\\Phi(z) = 0.975$. From the table: $z = 1.96$.",
+        "**Lower critical $z$.** By symmetry: $-1.96$.",
+        "**Other common critical values.** 1.645 (one-sided 95%), 1.28 (one-sided 90%), 2.576 (two-sided 99%). These appear constantly in hypothesis testing — worth memorizing."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q20",
+      "type": "numeric",
+      "promptTex": "\\text{IQ scores: } X \\sim N(100, 15). \\\\ P(X > 130) = ? \\text{ Use } \\Phi(2) = 0.9772. \\text{ Round to 4 decimals.}",
+      "answer": 0.0228,
+      "tolerance": 0.002,
+      "hints": [
+        "Standardize: $z = (130 - 100)/15 = 2$.",
+        "$P(X > 130) = P(Z > 2) = 1 - \\Phi(2) = 1 - 0.9772 = 0.0228$."
+      ],
+      "explanation": "Standardize: $z = (130 - 100)/15 = 2$. $P(X > 130) = P(Z > 2) = 1 - \\Phi(2) = 1 - 0.9772 = 0.0228$ — about $2.3\\%$ of people have IQ above 130.",
+      "steps": [
+        "**Standardize.** $z = (130 - 100)/15 = 30/15 = 2$.",
+        "**Right-tail probability.** $P(X > 130) = P(Z > 2) = 1 - \\Phi(2) = 1 - 0.9772 = 0.0228$.",
+        "**Interpret.** About $2.3\\%$ of the population has IQ above $130$. Roughly 1 in 44 people. This is the basis of many 'gifted' cutoffs (IQ > 130).",
+        "**Reverse direction reminder.** If you wanted the IQ above which $1\\%$ of people score: $\\Phi^{-1}(0.99) \\approx 2.33$, so IQ $\\approx 100 + 2.33 \\cdot 15 \\approx 135$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q21",
+      "type": "multiple-choice",
+      "prompt": "Why are so many real-world quantities (heights, test scores, measurement errors) approximately normally distributed?",
+      "choices": [
+        "Coincidence — there's no general reason",
+        "Because the normal distribution is the simplest distribution mathematically",
+        "By the Central Limit Theorem: quantities that are SUMS of many small independent contributions tend toward normal, regardless of the contributions' shape",
+        "Because the experimenter chose the units to make it normal"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Heights = many small genetic + environmental factors summed.",
+        "Test scores = sum of points across many questions.",
+        "Whenever you have 'sum of many small independent contributions' the CLT predicts a bell curve."
+      ],
+      "explanation": "The Central Limit Theorem: when a quantity is the sum (or average) of many independent contributions, its distribution approaches a normal distribution, regardless of the individual contributions' shapes. Heights, test scores, blood pressures, and measurement errors are all such sums — so they're approximately normal. This explains why the bell curve appears so often in nature and society.",
+      "steps": [
+        "**The CLT in one sentence.** Sum of many independent small contributions → normal distribution.",
+        "**Why heights are normal.** Height = sum of many genetic alleles + environmental factors (nutrition, hormones, sleep, ...). Each contribution is independent and bounded — CLT kicks in.",
+        "**Why test scores are normal.** Total score = sum of points across many questions. Each question outcome is independent — CLT.",
+        "**The Galton-board connection.** A marble's final bin = sum of $n$ Bernoulli(1/2) choices. The Galton board is a *physical demonstration* of the CLT.",
+        "**Limitations.** The CLT requires (a) finite variance per contribution, (b) independence (or weak dependence). When these fail, the result isn't normal — e.g., income (highly skewed, fat tail) violates the conditions and follows a different shape."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q22",
+      "type": "numeric",
+      "promptTex": "\\text{For } X \\sim N(50, 10), \\text{ find the value } x \\text{ such that } P(X > x) = 0.025. \\\\ \\text{Use } \\Phi(1.96) = 0.975.",
+      "answer": 69.6,
+      "tolerance": 0.5,
+      "hints": [
+        "$P(X > x) = 0.025$ means $P(X \\leq x) = 0.975$.",
+        "Find $z$ such that $\\Phi(z) = 0.975$: $z = 1.96$.",
+        "$x = \\mu + z \\sigma = 50 + 1.96 \\cdot 10 = 69.6$."
+      ],
+      "explanation": "Find the cutoff above which only $2.5\\%$ lies. $\\Phi(z) = 0.975 \\Rightarrow z = 1.96$. Convert back: $x = 50 + 1.96 \\cdot 10 = 69.6$.",
+      "steps": [
+        "**Recognize the type.** Reverse direction: given tail probability, find cutoff. Two steps: probability → $z$ → $x$.",
+        "**Translate the tail.** $P(X > x) = 0.025$ ⇒ $P(X \\leq x) = 0.975$. Find $z$ with $\\Phi(z) = 0.975$.",
+        "**From the table.** $\\Phi(1.96) = 0.975$. So $z = 1.96$.",
+        "**Un-standardize.** $x = \\mu + z \\sigma = 50 + 1.96 \\cdot 10 = 50 + 19.6 = 69.6$.",
+        "**Pattern lesson.** This is exactly how 95%-confidence-interval cutoffs are computed: $\\mu \\pm 1.96\\sigma$ contains the middle $95\\%$. The $1.96$ shows up everywhere in statistics — same number, same reason."
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

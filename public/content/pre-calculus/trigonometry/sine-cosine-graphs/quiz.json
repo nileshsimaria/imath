@@ -1,0 +1,566 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the period of } y = \\sin x?",
+      "choices": [
+        "\\dfrac{\\pi}{2}",
+        "\\pi",
+        "2\\pi",
+        "4\\pi"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "Period = how long until the pattern repeats.",
+        "Going around the unit circle once = $2\\pi$ radians."
+      ],
+      "explanation": "Sine completes one full cycle every $2\\pi$. After that, it repeats: $\\sin(x + 2\\pi) = \\sin x$.",
+      "steps": [
+        "The period is the smallest horizontal length over which the function repeats.",
+        "$y = \\sin x$ uses the unit circle: one full revolution = $2\\pi$ radians.",
+        "After $2\\pi$, you're back at the same point on the circle, so $\\sin(x + 2\\pi) = \\sin x$.",
+        "**Period $= 2\\pi$.**"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{At what value of } x \\text{ does } \\sin x \\text{ reach its maximum} \\\\ \\text{(in } [0, 2\\pi) \\text{)?}",
+      "choices": [
+        "0",
+        "\\dfrac{\\pi}{2}",
+        "\\pi",
+        "\\dfrac{3\\pi}{2}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "$\\sin x$ is the y-coordinate on the unit circle.",
+        "The highest point on the unit circle is $(0, 1)$. What angle is that?"
+      ],
+      "explanation": "$\\sin x = 1$ at $x = \\pi/2$ — the point $(0, 1)$ at the top of the unit circle.",
+      "steps": [
+        "$\\sin x$ corresponds to the y-coordinate on the unit circle.",
+        "The y-coordinate is largest ($= 1$) at the top of the circle.",
+        "The top is reached at $x = \\dfrac{\\pi}{2}$ (i.e., $90°$).",
+        "So $\\sin\\dfrac{\\pi}{2} = 1$ is the max, reached at $x = \\dfrac{\\pi}{2}$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\sin\\dfrac{3\\pi}{2} = ?",
+      "answer": -1,
+      "tolerance": 0.001,
+      "hints": [
+        "$3\\pi/2$ points straight down on the unit circle.",
+        "The point on the circle is $(0, -1)$."
+      ],
+      "explanation": "At $3\\pi/2$, the unit-circle point is $(0, -1)$. So $\\sin(3\\pi/2) = -1$ — the wave's minimum.",
+      "steps": [
+        "$\\dfrac{3\\pi}{2} = 270°$, three-quarters of the way around the unit circle.",
+        "The terminal side points straight down (negative y-axis).",
+        "It hits the unit circle at $(0, -1)$.",
+        "$\\sin = $ y-coordinate $= -1$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the amplitude of } y = \\sin x?",
+      "choices": [
+        "0.5",
+        "1",
+        "2",
+        "2\\pi"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Amplitude = peak height above the middle.",
+        "$\\sin x$ ranges from $-1$ to $1$ around $0$."
+      ],
+      "explanation": "Sine ranges from $-1$ to $1$. Amplitude is the half-distance from min to max: $(1 - (-1))/2 = 1$.",
+      "steps": [
+        "$\\sin x$ has max $= 1$ and min $= -1$.",
+        "Amplitude $= \\dfrac{\\max - \\min}{2} = \\dfrac{1 - (-1)}{2} = \\dfrac{2}{2}$.",
+        "**Amplitude $= 1$.**"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The graph of } \\cos x \\text{ is the graph of } \\sin x:",
+      "choices": [
+        "shifted right by $\\pi/2$",
+        "shifted left by $\\pi/2$",
+        "flipped upside down",
+        "stretched vertically by 2"
+      ],
+      "choicesTex": false,
+      "answerIndex": 1,
+      "hints": [
+        "$\\cos x = \\sin(x + \\pi/2)$.",
+        "Adding $\\pi/2$ inside the function shifts the graph horizontally."
+      ],
+      "explanation": "$\\cos x = \\sin(x + \\pi/2)$ — adding $\\pi/2$ to the input shifts the graph **left** by $\\pi/2$. Same shape, different starting point.",
+      "steps": [
+        "We have the identity $\\cos x = \\sin(x + \\pi/2)$.",
+        "In general, $f(x + k)$ shifts the graph of $f$ to the **left** by $k$ (when $k > 0$).",
+        "Here $k = \\pi/2$, so cosine is sine **shifted left by $\\pi/2$**."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the period of } y = \\tan x?",
+      "choices": [
+        "\\dfrac{\\pi}{2}",
+        "\\pi",
+        "2\\pi",
+        "\\text{undefined}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Tan is special — its period is **half** that of sine and cosine.",
+        "Asymptotes of $\\tan x$ occur at $\\pm\\pi/2, \\pm 3\\pi/2, \\ldots$ — spaced $\\pi$ apart."
+      ],
+      "explanation": "$\\tan x$ has period $\\pi$ — it repeats every $\\pi$ units, not every $2\\pi$.",
+      "steps": [
+        "Although tan involves sin and cos (each period $2\\pi$), the *ratio* repeats faster.",
+        "Identity: $\\tan(x + \\pi) = \\dfrac{\\sin(x + \\pi)}{\\cos(x + \\pi)} = \\dfrac{-\\sin x}{-\\cos x} = \\tan x$.",
+        "So the period is **$\\pi$**, not $2\\pi$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which of the following has } \\textbf{no} \\text{ amplitude (because the function} \\\\ \\text{is unbounded)?}",
+      "choices": [
+        "\\sin x",
+        "\\cos x",
+        "\\tan x",
+        "all three"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "Sin and cos are bounded between $-1$ and $1$.",
+        "Tan goes to $\\pm\\infty$ near its asymptotes."
+      ],
+      "explanation": "$\\tan x$ has no max or min — it diverges to $\\pm\\infty$. Sin and cos are bounded by $-1$ and $1$, so they have amplitude $1$.",
+      "steps": [
+        "$\\sin x$ and $\\cos x$ both have range $[-1, 1]$ — bounded, so amplitude $= 1$.",
+        "$\\tan x$ approaches $+\\infty$ on one side of each asymptote and $-\\infty$ on the other.",
+        "Unbounded → no amplitude. Only $\\tan x$ from this list."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Where are the vertical asymptotes of } y = \\sec x?",
+      "choices": [
+        "x = 0, \\pm\\pi, \\pm 2\\pi, \\ldots",
+        "x = \\pm\\pi/2, \\pm 3\\pi/2, \\ldots",
+        "x = \\pm\\pi/4, \\pm 3\\pi/4, \\ldots",
+        "secant has no asymptotes"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "$\\sec x = 1/\\cos x$. Asymptotes happen where the denominator is zero.",
+        "Where is $\\cos x = 0$?"
+      ],
+      "explanation": "$\\sec x = 1/\\cos x$, so asymptotes occur wherever $\\cos x = 0$ — at $x = \\pm\\pi/2, \\pm 3\\pi/2, \\ldots$",
+      "steps": [
+        "By definition, $\\sec x = \\dfrac{1}{\\cos x}$.",
+        "$\\sec x$ blows up where the denominator $\\cos x = 0$.",
+        "$\\cos x = 0$ at $x = \\dfrac{\\pi}{2} + k\\pi$ for any integer $k$.",
+        "So vertical asymptotes are at $x = \\pm\\pi/2, \\pm 3\\pi/2, \\ldots$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\text{For } y = a\\sin(bx) \\text{ what does increasing } b \\text{ do to the graph?}",
+      "choices": [
+        "Stretches it vertically",
+        "Compresses it horizontally (shorter period)",
+        "Stretches it horizontally (longer period)",
+        "Flips it upside down"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Period $= 2\\pi / b$.",
+        "Bigger $b$ → smaller period."
+      ],
+      "explanation": "Period $= 2\\pi/b$. Bigger $b$ → smaller period → the wave is **squeezed horizontally**.",
+      "steps": [
+        "The period of $y = a\\sin(bx)$ is $\\dfrac{2\\pi}{b}$.",
+        "If $b$ goes up, the period goes down (denominator larger → result smaller).",
+        "Smaller period means the graph completes a cycle in less horizontal space → **horizontal compression**."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{What is the amplitude of } y = -4\\cos(3x) + 2?",
+      "answer": 4,
+      "tolerance": 0,
+      "hints": [
+        "Amplitude is $|a|$, regardless of sign.",
+        "$a = -4$ here, so $|a| = ?$"
+      ],
+      "explanation": "Amplitude = $|a| = |-4| = 4$. The negative sign just flips the curve; it doesn't affect amplitude.",
+      "steps": [
+        "In $y = a\\cos(bx) + d$, amplitude is $|a|$.",
+        "Here $a = -4$, so $|a| = 4$.",
+        "(The negative sign reflects the curve over its midline, but the amplitude — peak distance from midline — is still $4$.)"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{What is the period of } y = \\sin(2x)? \\\\ \\text{(Give the answer as a decimal multiple of } \\pi \\text{ — e.g., 1 means } \\pi.)",
+      "answer": 1,
+      "tolerance": 0.01,
+      "hints": [
+        "Period $= 2\\pi / b$.",
+        "Here $b = 2$, so period = $2\\pi / 2 = \\pi$. Express as a multiple of $\\pi$: it's $1\\pi$."
+      ],
+      "explanation": "Period $= 2\\pi / b = 2\\pi / 2 = \\pi$. As a multiple of $\\pi$: $1$.",
+      "steps": [
+        "Period of $y = \\sin(bx)$ is $\\dfrac{2\\pi}{b}$.",
+        "Substitute $b = 2$: $$\\text{period} = \\dfrac{2\\pi}{2} = \\pi$$",
+        "Expressed as a multiple of $\\pi$, the period is $1\\pi$ — answer is **$1$**."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The graph of } y = \\sin x \\text{ is shifted to obtain } y = \\sin(x - \\pi/3). \\\\ \\text{Which way is the shift?}",
+      "choices": [
+        "Right by $\\pi/3$",
+        "Left by $\\pi/3$",
+        "Up by $\\pi/3$",
+        "Down by $\\pi/3$"
+      ],
+      "choicesTex": false,
+      "answerIndex": 0,
+      "hints": [
+        "Compare to the standard form $\\sin(x - c)$.",
+        "Subtracting $c$ inside shifts the graph by $+c$ (i.e., to the right) when $c > 0$."
+      ],
+      "explanation": "$\\sin(x - \\pi/3)$ has $c = \\pi/3$ → graph shifts **right** by $\\pi/3$.",
+      "steps": [
+        "Compare to the general form $y = \\sin(x - c)$.",
+        "Identify $c$: here $c = \\pi/3$ (the value being subtracted).",
+        "Positive $c$ in $\\sin(x - c)$ shifts the graph to the **right** by $c$.",
+        "**Shift: right by $\\pi/3$.**"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q13",
+      "type": "multiple-choice",
+      "promptTex": "\\text{What are the max and min values of } y = 2\\sin x + 5?",
+      "choices": [
+        "max 7, min 3",
+        "max 5, min 3",
+        "max 2, min -2",
+        "max 7, min -7"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "$\\sin x$ ranges from $-1$ to $1$.",
+        "$2\\sin x$ ranges from $-2$ to $2$. Then add $5$."
+      ],
+      "explanation": "$\\sin x \\in [-1, 1]$, so $2\\sin x \\in [-2, 2]$, so $2\\sin x + 5 \\in [3, 7]$.",
+      "steps": [
+        "Start with $\\sin x \\in [-1, 1]$.",
+        "Multiply by $2$: $2\\sin x \\in [-2, 2]$.",
+        "Add $5$: $2\\sin x + 5 \\in [3, 7]$.",
+        "**Max $= 7$, min $= 3$.**"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q14",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A sinusoidal graph has max } 4, \\text{ min } -2. \\text{ What is the midline?}",
+      "choices": [
+        "y = 0",
+        "y = 1",
+        "y = 2",
+        "y = 3"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Midline = average of max and min.",
+        "$(4 + (-2))/2 = ?$"
+      ],
+      "explanation": "Midline = $(4 + (-2))/2 = 1$. So $y = 1$ — that's the value of the vertical shift $d$.",
+      "steps": [
+        "Midline $= \\dfrac{\\max + \\min}{2}$.",
+        "$$= \\dfrac{4 + (-2)}{2} = \\dfrac{2}{2} = 1$$",
+        "So the midline is **$y = 1$** (and $d = 1$ in the equation $y = a\\sin(\\ldots) + d$)."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q15",
+      "type": "numeric",
+      "promptTex": "\\text{A sinusoidal graph has max } 4, \\text{ min } -2. \\text{ What is the amplitude?}",
+      "answer": 3,
+      "tolerance": 0,
+      "hints": [
+        "Amplitude = (max − min) / 2.",
+        "$(4 - (-2))/2 = 6/2$."
+      ],
+      "explanation": "Amplitude $= (4 - (-2))/2 = 6/2 = 3$.",
+      "steps": [
+        "Amplitude is the distance from the midline to the peak.",
+        "Equivalent formula: $\\dfrac{\\max - \\min}{2}$.",
+        "$$= \\dfrac{4 - (-2)}{2} = \\dfrac{6}{2} = 3$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q16",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A cosine curve has period } \\pi. \\text{ What is its frequency } b \\\\ \\text{in } y = \\cos(bx)?",
+      "choices": [
+        "1",
+        "2",
+        "\\pi",
+        "\\dfrac{1}{2}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Period of $\\cos(bx)$ is $2\\pi/b$.",
+        "Solve $2\\pi / b = \\pi$ for $b$."
+      ],
+      "explanation": "From period $= 2\\pi/b = \\pi$, solving gives $b = 2$.",
+      "steps": [
+        "Use the period formula: $$\\text{period} = \\dfrac{2\\pi}{b}$$",
+        "Set this equal to $\\pi$: $$\\dfrac{2\\pi}{b} = \\pi$$",
+        "Multiply both sides by $b$, then divide by $\\pi$: $$2\\pi = \\pi b \\Rightarrow b = 2$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{A Ferris wheel has radius } 15 \\text{ m and its center is } 18 \\text{ m above} \\\\ \\text{the ground. Riders board at the bottom. Which is the } \\textbf{vertical shift } d \\\\ \\text{in the height model } h(t)?",
+      "choices": [
+        "3",
+        "15",
+        "18",
+        "33"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Vertical shift = midline = average of max and min height.",
+        "Center of the wheel = midline of the height function. Center is 18 m up."
+      ],
+      "explanation": "Vertical shift = height of the wheel's center = 18 m.",
+      "steps": [
+        "The Ferris wheel rises and falls **around its center**. The midline of the sinusoidal height function is exactly the center's height.",
+        "Center is 18 m above ground → midline at $y = 18$.",
+        "So $d = 18$.",
+        "(Check: max height = $18 + 15 = 33$ m, min = $18 - 15 = 3$ m. Average = $(33 + 3)/2 = 18$. ✓)"
+      ],
+      "id": "q17",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{A Ferris wheel has radius } 15 \\text{ m, center } 18 \\text{ m up,} \\\\ \\text{period } 30 \\text{ s, riders board at the bottom.} \\\\ \\text{Which model gives the height } h(t)?",
+      "choices": [
+        "h(t) = 15\\sin\\!\\left(\\dfrac{\\pi}{15} t\\right) + 18",
+        "h(t) = 15\\cos\\!\\left(\\dfrac{\\pi}{15} t\\right) + 18",
+        "h(t) = -15\\cos\\!\\left(\\dfrac{\\pi}{15} t\\right) + 18",
+        "h(t) = 15\\cos\\!\\left(\\dfrac{2\\pi}{15} t\\right) + 18"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "$a = 15$, $d = 18$. $b = 2\\pi / T = 2\\pi/30 = \\pi/15$.",
+        "At $t = 0$, height is at the **minimum** ($d - 15$). $-\\cos(0) = -1$, so $-15\\cos(0) + 18 = 3$ m. ✓"
+      ],
+      "explanation": "Amplitude 15, vertical shift 18, $b = \\pi/15$, and starting at the bottom matches $-\\cos$. So $h(t) = -15\\cos(\\pi t/15) + 18$.",
+      "steps": [
+        "Identify $a = 15$ (radius) and $d = 18$ (center height).",
+        "Period $T = 30$, so $b = \\dfrac{2\\pi}{T} = \\dfrac{2\\pi}{30} = \\dfrac{\\pi}{15}$.",
+        "At $t = 0$, height is the **minimum** = 3 m. We need a function that equals its minimum at $t = 0$.",
+        "$-\\cos(0) = -1$, the minimum, so $-15\\cos(0) + 18 = -15 + 18 = 3$ ✓.",
+        "**Model:** $h(t) = -15\\cos\\!\\left(\\dfrac{\\pi}{15} t\\right) + 18$."
+      ],
+      "id": "q18",
+      "difficulty": "hard"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A Ferris wheel: radius } 12 \\text{ m, center } 14 \\text{ m up, period } 24 \\text{ s.} \\\\ \\text{Riders board at the bottom. What is the height (in m)} \\\\ \\text{at } t = 6 \\text{ seconds (a quarter of the way through one revolution)?}",
+      "answer": 14,
+      "tolerance": 0.05,
+      "hints": [
+        "After a quarter period, the rider is halfway up — at the midline.",
+        "Midline = center height = 14 m."
+      ],
+      "explanation": "A quarter period takes the rider from min to midline. Midline = 14 m.",
+      "steps": [
+        "The model is $h(t) = -12\\cos\\!\\left(\\dfrac{\\pi}{12} t\\right) + 14$.",
+        "Plug in $t = 6$: $$h(6) = -12\\cos\\!\\left(\\dfrac{\\pi}{12} \\cdot 6\\right) + 14 = -12\\cos\\!\\left(\\dfrac{\\pi}{2}\\right) + 14$$",
+        "$\\cos(\\pi/2) = 0$, so $$h(6) = -12 \\cdot 0 + 14 = 14 \\text{ m}$$",
+        "**Geometric intuition:** at $t = 6$ (quarter of a $24$-second period), the rider has moved a quarter of the way around the wheel — from the bottom to the side, at the height of the center."
+      ],
+      "id": "q19",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{A tide model: high tide is } 10 \\text{ m, low tide is } 4 \\text{ m. The cycle} \\\\ \\text{from high to low takes } 6 \\text{ hours. What is the } \\textbf{period } T?",
+      "choices": [
+        "3 hours",
+        "6 hours",
+        "12 hours",
+        "24 hours"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "High → low is half a cycle.",
+        "If half a cycle takes 6 hours, the full cycle takes..."
+      ],
+      "explanation": "High → low is half a period. Half a period = 6 h, so the full period $T$ = 12 h.",
+      "steps": [
+        "One full sinusoidal cycle goes: high → low → high (back to start).",
+        "High → low is **half** of one cycle.",
+        "If the half-cycle is 6 h, the full period is $T = 2 \\cdot 6 = 12$ h.",
+        "(This matches the typical semi-diurnal tide period of about 12 hours.)"
+      ],
+      "id": "q20",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Tides: high tide } 9 \\text{ m at } 4{:}00, \\text{ low tide } 3 \\text{ m at } 10{:}00. \\\\ \\text{What is the } \\textbf{amplitude} \\text{ of the tide model (in m)?}",
+      "answer": 3,
+      "tolerance": 0,
+      "hints": [
+        "Amplitude = (max − min) / 2.",
+        "$(9 - 3)/2 = ?$"
+      ],
+      "explanation": "Amplitude $= (\\max - \\min) / 2 = (9 - 3)/2 = 3$ m.",
+      "steps": [
+        "The amplitude of a sinusoidal model is half the swing from min to max.",
+        "$$a = \\dfrac{\\max - \\min}{2}$$",
+        "Substitute: $$a = \\dfrac{9 - 3}{2} = \\dfrac{6}{2} = 3 \\text{ m}$$"
+      ],
+      "id": "q21",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Tides: high tide } 9 \\text{ m at } 4{:}00, \\text{ low tide } 3 \\text{ m at } 10{:}00. \\\\ \\text{What is the } \\textbf{mean depth } d \\text{ (in m)?}",
+      "answer": 6,
+      "tolerance": 0,
+      "hints": [
+        "Mean depth = midline = average of max and min.",
+        "$(9 + 3)/2 = ?$"
+      ],
+      "explanation": "Mean depth $= (9 + 3)/2 = 6$ m. (That's the value of $d$ in $D(t) = a\\cos(\\ldots) + d$.)",
+      "steps": [
+        "The mean (average) depth corresponds to the midline of the sinusoidal model.",
+        "$$d = \\dfrac{\\max + \\min}{2}$$",
+        "$$= \\dfrac{9 + 3}{2} = 6 \\text{ m}$$"
+      ],
+      "id": "q22",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{A spring oscillates with amplitude } 4 \\text{ cm and period } 1 \\text{ second.} \\\\ \\text{It is released from } 4 \\text{ cm above equilibrium. } \\\\ \\text{Which model gives position } x(t) \\text{ above equilibrium?}",
+      "choices": [
+        "x(t) = 4\\sin(2\\pi t)",
+        "x(t) = 4\\cos(2\\pi t)",
+        "x(t) = -4\\cos(2\\pi t)",
+        "x(t) = 4\\cos(\\pi t)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "$|a| = 4$, $d = 0$, period 1 → $b = 2\\pi$.",
+        "At $t = 0$, $x = +4$ (max). $\\cos(0) = 1$ matches the max."
+      ],
+      "explanation": "Period 1 → $b = 2\\pi$. Released from max → use $+\\cos$ (since $\\cos 0 = 1$). $x(t) = 4\\cos(2\\pi t)$.",
+      "steps": [
+        "Identify amplitude: $|a| = 4$ cm.",
+        "Period $= 1$ s, so $b = \\dfrac{2\\pi}{T} = 2\\pi$.",
+        "At $t = 0$, position is the **maximum** ($+4$ cm). Use $\\cos$ (which equals $1$ at $0$): $4\\cos(0) = 4$ ✓.",
+        "**Model:** $x(t) = 4\\cos(2\\pi t)$.",
+        "(If it had been released from $-4$ cm below equilibrium, we'd use $-4\\cos(2\\pi t)$ instead.)"
+      ],
+      "id": "q23",
+      "difficulty": "hard"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A spring oscillates between } -6 \\text{ cm and } +6 \\text{ cm.} \\\\ \\text{Period is } 4 \\text{ s. After } 2 \\text{ s, where is the mass} \\\\ \\text{(starting from the maximum at } t = 0 \\text{)?}",
+      "answer": -6,
+      "tolerance": 0.05,
+      "hints": [
+        "After half a period, the mass is at the opposite extreme.",
+        "Half period = 2 s. Started at +6, so it's at −6."
+      ],
+      "explanation": "$x(t) = 6\\cos(\\pi t / 2)$. $x(2) = 6\\cos(\\pi) = -6$ cm.",
+      "steps": [
+        "Build the model: amplitude $6$, $d = 0$, period $4$, so $b = 2\\pi/4 = \\pi/2$.",
+        "Starting from the max → use $+\\cos$: $$x(t) = 6\\cos\\!\\left(\\dfrac{\\pi}{2} t\\right)$$",
+        "Plug in $t = 2$: $$x(2) = 6\\cos\\!\\left(\\dfrac{\\pi}{2} \\cdot 2\\right) = 6\\cos(\\pi) = 6 \\cdot (-1) = -6$$",
+        "**Position: $-6$ cm.** (Half a period takes you to the opposite extreme.)"
+      ],
+      "id": "q24",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which scenario does NOT have a natural sinusoidal model?}",
+      "choices": [
+        "A pendulum swinging back and forth",
+        "Daily ocean tides at a harbor",
+        "A car accelerating from a stop in a straight line",
+        "A point on a turning wheel"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Sinusoids model **periodic** (repeating) motion.",
+        "Which option is a one-time event, not periodic?"
+      ],
+      "explanation": "Sinusoids model periodic motion. A car accelerating in a line is one-shot, not repeating — no sinusoidal model fits.",
+      "steps": [
+        "Sinusoidal models capture **regularly repeating** behavior — anything with a period.",
+        "Pendulum: oscillates back and forth — periodic ✓",
+        "Tides: rise and fall on a 12-h cycle — periodic ✓",
+        "Point on a wheel: traces a circle, height repeats with each revolution — periodic ✓",
+        "Car accelerating: speed changes monotonically (not repeating) — **not** sinusoidal."
+      ],
+      "id": "q25",
+      "difficulty": "easy"
+    }
+  ]
+}

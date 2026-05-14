@@ -1,0 +1,71 @@
+{
+  "title": "Cyclic Quadrilaterals",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### Four points on a circle",
+        "A **cyclic quadrilateral** is a quadrilateral whose four vertices all lie on a single circle. Not every quadrilateral is cyclic — most quadrilaterals you draw at random *can't* be inscribed in a circle.",
+        "But when a quadrilateral *is* cyclic, a beautiful property holds:",
+        "**Opposite angles of a cyclic quadrilateral are supplementary (sum to 180°).**"
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "circle-theorems",
+      "config": {
+        "mode": "cyclic-quad"
+      }
+    },
+    {
+      "type": "math",
+      "tex": "\\boxed{\\;\\angle A + \\angle C = 180° \\quad\\text{and}\\quad \\angle B + \\angle D = 180°\\;}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Drag the four red points around the circle. The opposite angle sums (shown in the readout) stay locked at $180°$ — that's the cyclic quadrilateral theorem in action."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Why it works",
+      "body": "Take cyclic quadrilateral $ABCD$. Angle $\\angle A$ is an inscribed angle subtending arc $BCD$ (the arc from $B$ to $D$ that does NOT contain $A$). Angle $\\angle C$ is an inscribed angle subtending arc $DAB$ — the *other* arc from $B$ to $D$.\n\nThe two arcs together make the entire circle: $360°$. By the Inscribed Angle Theorem, $\\angle A = \\tfrac{1}{2}\\,(\\text{arc } BCD)$ and $\\angle C = \\tfrac{1}{2}\\,(\\text{arc } DAB)$. Summing:\n\n$\\angle A + \\angle C = \\tfrac{1}{2}\\,(\\text{arc } BCD + \\text{arc } DAB) = \\tfrac{1}{2}\\,(360°) = 180°.\\;\\blacksquare$"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The converse — a tool for spotting cyclic quadrilaterals",
+        "**If opposite angles of a quadrilateral sum to 180°, the quadrilateral is cyclic.**",
+        "This converse is enormously useful in olympiad geometry. To prove four points lie on a circle, show that one pair of opposite angles in the quadrilateral they form is supplementary."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example",
+        "Quadrilateral $ABCD$ is cyclic. $\\angle A = 80°$ and $\\angle B = 95°$. Find $\\angle C$ and $\\angle D$.",
+        "**Opposite angles supplementary:** $\\angle A + \\angle C = 180°$ $\\Rightarrow$ $\\angle C = 100°$.",
+        "$\\angle B + \\angle D = 180°$ $\\Rightarrow$ $\\angle D = 85°$.",
+        "**Check:** $80 + 95 + 100 + 85 = 360°$ ✓ (any quadrilateral has angle sum $360°$)."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Ptolemy's Theorem (bonus)",
+      "body": "For a cyclic quadrilateral $ABCD$, the product of the diagonals equals the sum of products of opposite sides:\n\n$$AC \\cdot BD = AB \\cdot CD + AD \\cdot BC.$$\n\nThis is a deeper cyclic-quadrilateral result, used to derive trigonometric identities like the sine/cosine sum formulas. Worth knowing exists, even if you don't use it in school geometry."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Which quadrilaterals are always cyclic?",
+        "**Squares** — yes. All angles are $90°$, so opposite pairs sum to $180°$.",
+        "**Rectangles** — yes. All angles are $90°$.",
+        "**Isosceles trapezoids** — yes. Base angles are equal; opposite angles are supplementary.",
+        "**Parallelograms** (non-rectangle) — generally no. Adjacent angles are supplementary, but opposite angles are equal, so for opposite angles to sum to $180°$ they'd each have to be $90°$ — i.e., the parallelogram is a rectangle.",
+        "**Rhombi** (non-square) — no, same reason.",
+        "**General quadrilaterals** — almost never. You have to be lucky."
+      ]
+    }
+  ]
+}

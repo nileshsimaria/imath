@@ -1,0 +1,100 @@
+{
+  "title": "Limits at Infinity & Asymptotes",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "We've evaluated limits as $x$ approaches a *number*. Now we ask: what happens as $x$ gets arbitrarily *large* (or large negative)? These limits describe a function's **end behavior** and translate directly into **horizontal asymptotes**."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. Limits at Infinity"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "$\\displaystyle\\lim_{x \\to \\infty} f(x) = L$ means: 'as $x$ grows without bound, $f(x)$ gets arbitrarily close to $L$.'",
+        "Same for $\\lim_{x \\to -\\infty}$.",
+        "**Quick truths:**",
+        "$\\displaystyle\\lim_{x \\to \\infty} \\dfrac{1}{x} = 0$. (Reciprocals of large numbers are tiny.)",
+        "$\\displaystyle\\lim_{x \\to \\infty} \\dfrac{1}{x^n} = 0$ for any $n > 0$.",
+        "$\\displaystyle\\lim_{x \\to \\infty} x^n = \\infty$ for any $n > 0$ (and $-\\infty$ for $x \\to -\\infty$ with $n$ odd)."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. Rational Functions — The Three Cases"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "For $\\displaystyle\\lim_{x \\to \\pm\\infty} \\dfrac{p(x)}{q(x)}$ where $p, q$ are polynomials, compare degrees:",
+        "**Numerator degree LESS than denominator:** limit is $0$.",
+        "**Equal degrees:** limit is the ratio of leading coefficients.",
+        "**Numerator degree GREATER:** limit is $\\pm\\infty$ (sign depends on leading coefficients and $x \\to +\\infty$ vs $-\\infty$)."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Why? Divide by the highest power.",
+      "body": "**Example.** $\\displaystyle\\lim_{x \\to \\infty} \\dfrac{3x^2 + 5}{x^2 - 4}$. Divide top and bottom by $x^2$: $\\dfrac{3 + 5/x^2}{1 - 4/x^2}$. As $x \\to \\infty$, the small-$x^{-2}$ terms vanish: $\\dfrac{3}{1} = 3$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked examples",
+        "**$\\displaystyle\\lim_{x \\to \\infty} \\dfrac{2x + 1}{x^2 + 5}$:** denominator higher degree → **0**.",
+        "**$\\displaystyle\\lim_{x \\to \\infty} \\dfrac{4x^3 - x}{2x^3 + 5}$:** equal degrees → ratio of leading $= 4/2 = 2$.",
+        "**$\\displaystyle\\lim_{x \\to \\infty} \\dfrac{x^4 + 1}{x + 2}$:** numerator higher → **$+\\infty$**."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. Horizontal Asymptotes"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "If $\\displaystyle\\lim_{x \\to \\infty} f(x) = L$ (finite), then the line $y = L$ is a **horizontal asymptote** of $f$ as $x \\to \\infty$. Same for $x \\to -\\infty$ (could be a different value).",
+        "**Example.** $f(x) = \\dfrac{3x^2 + 1}{x^2 - 4}$. Both $x \\to \\pm\\infty$ give 3 → horizontal asymptote $y = 3$ on both sides.",
+        "**Example.** $f(x) = \\dfrac{e^x}{e^x + 1}$. As $x \\to \\infty$, denominator dominates by 1, ratio $\\to 1$ — asymptote $y = 1$. As $x \\to -\\infty$, $e^x \\to 0$, ratio $\\to 0/1 = 0$ — asymptote $y = 0$. **Two different asymptotes** on the two sides."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. Vertical Asymptotes"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "If $\\displaystyle\\lim_{x \\to a^+} f(x) = \\pm\\infty$ or $\\lim_{x \\to a^-} f(x) = \\pm\\infty$, then $x = a$ is a **vertical asymptote**.",
+        "Most common cause: a denominator that hits zero (without being canceled by a zero in the numerator).",
+        "**Example.** $f(x) = \\dfrac{1}{x - 3}$. At $x = 3$: denominator $\\to 0$, function blows up. Vertical asymptote $x = 3$.",
+        "**Example.** $f(x) = \\dfrac{x^2 - 4}{x - 2}$. At $x = 2$: denominator zero — but the numerator is also zero, and they cancel: $f$ simplifies to $x + 2$ for $x \\neq 2$. **No vertical asymptote** — just a removable hole."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Asymptote checklist for rational functions",
+      "body": "**Vertical:** denominator $= 0$ AND not canceled by numerator. **Horizontal:** $x \\to \\pm\\infty$ gives a finite limit. (If the numerator's degree is higher, you get a slant or curved asymptote instead.)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — full asymptote analysis",
+        "$f(x) = \\dfrac{2x^2 + 3}{x^2 - 4}$.",
+        "**Vertical:** denominator $x^2 - 4 = 0 \\Rightarrow x = \\pm 2$. Numerator at these is $11$ and $11$, both nonzero → both are vertical asymptotes.",
+        "**Horizontal:** equal degrees → $y = 2$ on both sides."
+      ]
+    }
+  ]
+}

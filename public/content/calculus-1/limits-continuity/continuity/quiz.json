@@ -1,0 +1,302 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{For } f \\text{ to be continuous at } a, \\text{ we need:}",
+      "choices": [
+        "$f(a)$ defined, $\\lim_{x \\to a} f(x)$ exists, AND they're equal",
+        "Only $f(a)$ defined",
+        "Only the limit exists",
+        "$f(a) > 0$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Three conditions, all required.",
+        "Defined, limit exists, they match."
+      ],
+      "explanation": "Continuity at $a$: $f(a)$ defined, limit exists, and they're equal. All three.",
+      "steps": [
+        "**Definition checklist for continuity at $a$ — THREE conditions, ALL required:**",
+        "**(1) $f(a)$ is defined** (you can plug in $a$ and get a real number).",
+        "**(2) $\\lim_{x \\to a} f(x)$ exists** (left and right limits agree and are finite).",
+        "**(3) The limit equals the value:** $\\lim_{x \\to a} f(x) = f(a)$.",
+        "**Why three?** Each rules out a distinct flaw. (1) eliminates holes. (2) eliminates jumps and infinite blow-ups. (3) eliminates 'value defined but wrong' cases (a single bad point in an otherwise smooth function).",
+        "**Quick check.** When debugging a possibly-discontinuous function, walk through all three in order — that's how you classify the *kind* of discontinuity (see Q3, Q4, Q8, Q12)."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A 'jump discontinuity' is when:}",
+      "choices": [
+        "Left and right limits exist but differ",
+        "The limit equals the function value",
+        "The function diverges to infinity",
+        "The function is undefined everywhere"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Jump = left lim ≠ right lim.",
+        "Both finite, but different."
+      ],
+      "explanation": "Jump discontinuity: left and right limits both exist, but they're different — function 'jumps' between them.",
+      "steps": [
+        "**The 4 kinds of discontinuity at $a$:**",
+        "  **Removable** — limit exists but doesn't match $f(a)$ (or $f(a)$ undefined). Could be 'fixed' by redefining $f(a)$.",
+        "  **Jump** — left limit and right limit each exist (finite) but DISAGREE. Function leaps between two values.",
+        "  **Infinite** — limit is $\\pm \\infty$ (vertical asymptote).",
+        "  **Oscillating** — limit doesn't exist because the function wiggles (e.g., $\\sin(1/x)$ near 0). Rare in elementary calculus.",
+        "**This question targets 'jump' specifically.** Definition: $\\lim_{x \\to a^-} f(x) \\neq \\lim_{x \\to a^+} f(x)$, both finite. The function 'jumps' from one value to another, like a step in a staircase."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{f(x) = (x² - 4) / (x - 2) has what kind of discontinuity at x = 2?}",
+      "choices": [
+        "removable",
+        "jump",
+        "infinite (asymptote)",
+        "no discontinuity"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Limit exists (= 4) but $f(2)$ is undefined (0/0).",
+        "Removable — could fix by defining $f(2) = 4$."
+      ],
+      "explanation": "Limit at 2 is 4 (factor and cancel), but $f(2)$ undefined. **Removable** — fixable by setting $f(2) = 4$.",
+      "steps": [
+        "**Apply the 3-condition checklist.**",
+        "**Condition (1): $f(2)$ defined?** Plug in: $\\dfrac{0}{0}$ — undefined. **FAIL.**",
+        "**Condition (2): does limit exist?** Factor: $\\dfrac{(x-2)(x+2)}{x-2} = x + 2$ for $x \\neq 2$. Limit: $4$. **PASS.**",
+        "**Diagnosis.** Limit exists but $f$ isn't defined there. This is a *fixable* problem — we could repair the function by defining $f(2) = 4$. That makes it a **REMOVABLE** discontinuity.",
+        "**Pattern.** A removable discontinuity is one where the factor causing the $0/0$ CANCELS — leaving a clean limit. Picture: a smooth curve with a tiny circle 'punched out' at one point."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{f(x) = 1/x has what kind of discontinuity at x = 0?}",
+      "choices": [
+        "removable",
+        "jump",
+        "infinite (asymptote)",
+        "no discontinuity"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "$f(x) \\to \\pm\\infty$ as $x \\to 0$.",
+        "Vertical asymptote = infinite discontinuity."
+      ],
+      "explanation": "$1/x \\to +\\infty$ as $x \\to 0^+$, $-\\infty$ as $x \\to 0^-$. **Infinite discontinuity** (vertical asymptote).",
+      "steps": [
+        "**Run the checklist.**",
+        "**(1) $f(0)$:** $1/0$ undefined. Fail.",
+        "**(2) Limit:** From the right ($x \\to 0^+$), $1/x \\to +\\infty$. From the left, $-\\infty$. Limit does NOT exist (not even as $\\pm \\infty$, since the two sides disagree).",
+        "**Diagnosis.** The function diverges to infinity near $x = 0$ — that's an **INFINITE** discontinuity (a.k.a. vertical asymptote).",
+        "**Distinguish from removable.** A removable discontinuity has a FINITE limit. An infinite discontinuity has limit $\\pm \\infty$ or DNE. Very different — removable is fixable; infinite is not."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which is continuous everywhere?}",
+      "choices": [
+        "f(x) = x^3 + 2x - 1",
+        "f(x) = 1/x",
+        "f(x) = \\tan(x)",
+        "f(x) = \\sqrt{x}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Polynomials are continuous everywhere.",
+        "1/x has asymptote, tan has asymptotes, sqrt only defined for x ≥ 0."
+      ],
+      "explanation": "Polynomials are continuous on all of $\\mathbb{R}$. The others have domain restrictions or asymptotes.",
+      "steps": [
+        "**Continuity catalog — memorize these facts:**",
+        "  **Polynomials** continuous everywhere (on all of $\\mathbb{R}$).",
+        "  **Rational functions** continuous everywhere EXCEPT where denominator = 0.",
+        "  **$\\sin, \\cos, e^x$** continuous everywhere.",
+        "  **$\\tan, \\sec$** discontinuous at odd multiples of $\\pi/2$.",
+        "  **$\\sqrt{x}, \\ln x$** continuous only on their domain ($x \\geq 0$ and $x > 0$).",
+        "**Apply.** (a) $x^3 + 2x - 1$ is a polynomial — continuous everywhere ✓. (b) discontinuous at $x = 0$. (c) discontinuous at $\\pi/2, 3\\pi/2, \\ldots$. (d) not defined for $x < 0$ — so not continuous on all of $\\mathbb{R}$.",
+        "**Answer: (a).**"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{For } f(x) = \\begin{cases} x^2 & x < 2 \\\\ 4x - 4 & x \\geq 2 \\end{cases}, \\\\ \\text{find } \\lim_{x \\to 2^-} f(x).",
+      "answer": 4,
+      "tolerance": 0,
+      "hints": [
+        "Approach from the left: use $x^2$.",
+        "$2^2 = 4$."
+      ],
+      "explanation": "From left, use $x^2$: $\\lim_{x \\to 2^-} x^2 = 4$.",
+      "steps": [
+        "**Piecewise function — pick the right piece.** A piecewise function gives different rules for different $x$ ranges. Always use the rule that matches the side you're approaching from.",
+        "**Direction.** $x \\to 2^-$ means 'approach 2 from values LESS than 2'. That's the $x < 2$ piece, where $f(x) = x^2$.",
+        "**Compute on that piece.** $\\lim_{x \\to 2^-} x^2 = 2^2 = 4$ (just substitute — $x^2$ is continuous).",
+        "**Subtle but important: which piece governs the BOUNDARY value?** The 'left limit' doesn't actually reach $x = 2$ — it only uses values $x < 2$. So the $x < 2$ rule applies, regardless of whether the *value* at $x = 2$ uses the other piece."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{Same } f \\text{ as above. Find } \\lim_{x \\to 2^+} f(x).",
+      "answer": 4,
+      "tolerance": 0,
+      "hints": [
+        "Approach from right: use $4x - 4$.",
+        "$4(2) - 4 = 4$."
+      ],
+      "explanation": "From right: $\\lim_{x \\to 2^+} (4x - 4) = 4$.",
+      "steps": [
+        "**Other side, other piece.** $x \\to 2^+$ uses the $x \\geq 2$ piece: $f(x) = 4x - 4$.",
+        "**Compute.** $\\lim_{x \\to 2^+}(4x - 4) = 4(2) - 4 = 4$.",
+        "**Compare with Q6.** Both one-sided limits are 4 — they match. That's a setup for Q8, where we ask whether the function is continuous."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Same } f. \\text{ Is } f \\text{ continuous at } x = 2?",
+      "choices": [
+        "Yes",
+        "No — jump discontinuity",
+        "No — removable hole",
+        "No — infinite discontinuity"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "From q6 and q7, both one-sided limits = 4. And $f(2) = 4(2) - 4 = 4$. All three conditions met.",
+        "Continuous!"
+      ],
+      "explanation": "Left limit = right limit = $f(2) = 4$. All three conditions satisfied → continuous at $x = 2$.",
+      "steps": [
+        "**Run the 3-condition checklist at $x = 2$.**",
+        "**(1) $f(2)$ defined?** $x = 2$ uses the $x \\geq 2$ piece: $f(2) = 4 \\cdot 2 - 4 = 4$. ✓",
+        "**(2) Limit exists?** From Q6: left limit = 4. From Q7: right limit = 4. They agree, so $\\lim_{x \\to 2} f(x) = 4$. ✓",
+        "**(3) Limit = $f(2)$?** $4 = 4$. ✓",
+        "**All three pass → continuous at $x = 2$.** The piecewise function happens to be carefully designed so the two pieces meet exactly at $(2, 4)$ — no jump, no hole. The graph is a smooth curve through that point."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The Intermediate Value Theorem requires } f \\text{ to be:}",
+      "choices": [
+        "differentiable",
+        "continuous on a closed interval",
+        "polynomial",
+        "increasing"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "IVT: continuous on $[a, b]$ → takes every value between $f(a)$ and $f(b)$.",
+        "Continuity is the key."
+      ],
+      "explanation": "IVT requires $f$ to be continuous on a closed interval $[a, b]$. (Differentiability is a stronger condition.)",
+      "steps": [
+        "**The Intermediate Value Theorem (IVT).**",
+        "**Hypothesis:** $f$ is continuous on a closed interval $[a, b]$.",
+        "**Conclusion:** For any value $L$ between $f(a)$ and $f(b)$, there exists $c \\in (a, b)$ with $f(c) = L$.",
+        "**Intuition.** A continuous function can't 'skip' values. If it starts at $f(a) = -3$ and ends at $f(b) = 7$, the graph is an unbroken curve from height $-3$ to height $7$ — it MUST pass through every height between, including 0.",
+        "**Why continuity is needed.** A jump function (say, $f = -3$ for $x < 0$ and $f = 7$ for $x \\geq 0$) skips every value between $-3$ and $7$. The 'no skipping' guarantee fails without continuity.",
+        "**Note.** Differentiability would be stronger than needed — IVT works for any continuous function, even one with corners."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Show that } f(x) = x^3 - 4x + 1 \\text{ has a root in } [1, 2]. \\\\ \\text{Compute } f(1) \\text{ and } f(2).",
+      "choices": [
+        "f(1) = -2 and f(2) = 1; opposite signs → root by IVT",
+        "f(1) = 2 and f(2) = 9; both positive → no root",
+        "f(1) = 0 and f(2) = 0; both roots",
+        "Cannot apply IVT to polynomials"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "$f(1) = 1 - 4 + 1 = -2$. $f(2) = 8 - 8 + 1 = 1$.",
+        "Opposite signs + continuous → root in between by IVT."
+      ],
+      "explanation": "$f(1) = -2 < 0$, $f(2) = 1 > 0$. Polynomial → continuous. By IVT, $f$ has a root in $(1, 2)$.",
+      "steps": [
+        "**Recognize 'show a root exists' as an IVT problem.** Standard recipe: evaluate $f$ at two endpoints, show opposite signs, invoke continuity.",
+        "**Compute endpoint values.** $f(1) = 1 - 4 + 1 = -2$. $f(2) = 8 - 8 + 1 = 1$.",
+        "**Check the IVT hypothesis.** $f$ is a polynomial → continuous everywhere → continuous on $[1, 2]$ ✓.",
+        "**Apply IVT with $L = 0$.** $0$ is between $-2$ and $1$. By IVT, there exists $c \\in (1, 2)$ with $f(c) = 0$ — a root.",
+        "**Important caveat.** IVT proves EXISTENCE of a root but tells you NOTHING about WHERE (only that it's somewhere in $(1, 2)$). To find it, use bisection or Newton's method or a calculator."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q11",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If } f \\text{ is continuous and } f(0) = -3, f(5) = 7, \\\\ \\text{which value does } f \\text{ definitely attain on } (0, 5)?",
+      "choices": [
+        "0",
+        "10",
+        "100",
+        "-10"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "IVT: any value between $f(0) = -3$ and $f(5) = 7$.",
+        "0 is between $-3$ and $7$ → must be attained."
+      ],
+      "explanation": "By IVT, $f$ attains every value between $-3$ and $7$. $0$ is in $[-3, 7]$ → must be attained somewhere in $(0, 5)$.",
+      "steps": [
+        "**Frame the question via IVT.** $f$ continuous on $[0, 5]$ with $f(0) = -3$ and $f(5) = 7$. IVT guarantees $f$ takes every value in $[-3, 7]$ at some point in $(0, 5)$.",
+        "**Check each option against the interval $[-3, 7]$.**",
+        "  **0** — between $-3$ and $7$. ✓ Guaranteed.",
+        "  **10** — above 7. ✗ Not guaranteed (function might max out at 7).",
+        "  **100** — way above. ✗ Not guaranteed.",
+        "  **$-10$** — below $-3$. ✗ Not guaranteed.",
+        "**Answer: 0.**",
+        "**Lesson.** IVT is tight — it ONLY guarantees values between the two endpoint values. Outside that range, the function might or might not get there."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The function } f(x) = \\dfrac{|x|}{x} \\text{ at } x = 0 \\text{ has what kind of discontinuity?}",
+      "choices": [
+        "removable",
+        "jump",
+        "infinite",
+        "no discontinuity"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$|x|/x = 1$ for $x > 0$, $-1$ for $x < 0$.",
+        "Limit from left = -1, from right = +1 — jump."
+      ],
+      "explanation": "$|x|/x$ is +1 for positive x and -1 for negative x. Left limit -1, right limit +1 → **jump discontinuity**.",
+      "steps": [
+        "**Simplify the function by cases.** Recall $|x| = x$ if $x \\geq 0$, $|x| = -x$ if $x < 0$.",
+        "**For $x > 0$:** $\\dfrac{|x|}{x} = \\dfrac{x}{x} = 1$.",
+        "**For $x < 0$:** $\\dfrac{|x|}{x} = \\dfrac{-x}{x} = -1$.",
+        "**So this is actually the SIGN function** — one of the most famous jump discontinuities in mathematics.",
+        "**Compute one-sided limits at $x = 0$.** $\\lim_{x \\to 0^-} = -1$, $\\lim_{x \\to 0^+} = +1$. Both finite, but unequal.",
+        "**Diagnosis: JUMP discontinuity.** The function leaps from $-1$ to $+1$ as $x$ crosses 0. (Compare: removable would have left = right; infinite would have $\\pm \\infty$.)"
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "title": "Days of the Week & Calendar Tricks",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### Days run on mod 7",
+        "There are 7 days in a week, so day-of-week arithmetic lives on a 7-clock. If today is Wednesday and you ask 'what day is it 100 days from now?' — that's pure modular arithmetic.",
+        "Label the days 0 through 6: Sunday = 0, Monday = 1, ..., Saturday = 6. (Some conventions start at Monday — pick one and stick with it.)",
+        "**Then:** if today is day $d$, then $n$ days from now is day $(d + n) \\bmod 7$."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "modular-clock",
+      "config": {
+        "mode": "step",
+        "N": 7,
+        "start": 3,
+        "add": 100
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example",
+        "Today is Wednesday. What day is it 100 days from now?",
+        "**Wednesday = 3.** $3 + 100 = 103$. Reduce: $103 \\bmod 7 = ?$",
+        "$103 = 14 \\cdot 7 + 5$, so $103 \\equiv 5 \\pmod 7$. Day 5 = **Friday**.",
+        "Slide the widget above to confirm: the pointer lands on 5."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The bigger reduction trick",
+      "body": "Instead of computing $100 \\bmod 7$ all at once, peel off chunks:\n\n$100 = 7 \\cdot 14 + 2$\n\nSo $100 \\bmod 7 = 2$, and $3 + 2 = 5$ → Friday.\n\nIn general, **only the remainder mod 7 matters** for day arithmetic. You can throw away whole weeks freely."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### How many days are in a month? (in mod 7)",
+        "Modular arithmetic is great for figuring out 'what day of the week is the 1st of next month' given today's date:",
+        "**January** has 31 days. $31 \\bmod 7 = 3$. So Feb 1 is 3 days later in the week than Jan 1.",
+        "**February** (non-leap year) has 28 days. $28 \\bmod 7 = 0$. March 1 is the *same day* as Feb 1.",
+        "**February (leap year)** has 29 days, so March 1 advances by 1 day.",
+        "**April / June / September / November** have 30 days → shift by $30 \\bmod 7 = 2$.",
+        "**Months with 31 days** → shift by 3.",
+        "**Months with 28 days** → shift by 0.",
+        "**Months with 29 days** → shift by 1."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example",
+        "If January 1, 2024 was a Monday, what day was March 1, 2024?",
+        "**Step 1.** Days from Jan 1 to March 1 = 31 (Jan) + 29 (Feb, leap year) = 60.",
+        "**Step 2.** $60 \\bmod 7$: $60 = 8 \\cdot 7 + 4$, so $60 \\equiv 4 \\pmod 7$.",
+        "**Step 3.** Monday + 4 = Friday.",
+        "March 1, 2024 was a Friday. ✓"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Year-over-year shifts",
+      "body": "A non-leap year has 365 days = $52 \\cdot 7 + 1$. So days of the week shift by **1** every year. Leap years shift by **2**.\n\nIf July 4, 2023 (non-leap) was a Tuesday, then July 4, 2024 was a Thursday (shifted by 2 because 2024 is a leap year), and July 4, 2025 will be a Friday (shifted by 1).\n\nThis is enough to mentally compute most weekday questions — at least within a decade or two."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Zeller's congruence (bonus)",
+        "There's a closed-form formula that takes any date (day, month, year) and tells you the day of the week, all using $\\bmod 7$. It's called **Zeller's congruence**. The formula handles leap years, century rules, etc., and outputs a number 0–6 representing the day. Not memorizable, but exists — and is built entirely on modular arithmetic."
+      ]
+    }
+  ]
+}

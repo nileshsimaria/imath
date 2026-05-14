@@ -1,0 +1,226 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{Volume of a cube with side 4.}",
+      "answer": 64,
+      "tolerance": 0,
+      "hints": [
+        "$V = s^3$.",
+        "$4^3$."
+      ],
+      "explanation": "$V = 4^3 = 64$ cubic units.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{Volume of a rectangular prism } 3 \\times 5 \\times 7.",
+      "answer": 105,
+      "tolerance": 0,
+      "hints": [
+        "$V = lwh$.",
+        "$3 \\cdot 5 \\cdot 7$."
+      ],
+      "explanation": "$V = 3 \\cdot 5 \\cdot 7 = 105$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Volume of a cylinder with } r = 5, h = 10.",
+      "choices": [
+        "50π",
+        "100π",
+        "250π",
+        "500π"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "$V = \\pi r^2 h$.",
+        "$\\pi \\cdot 25 \\cdot 10$."
+      ],
+      "explanation": "$V = \\pi(5)^2(10) = 250\\pi$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The volume of a cone is what fraction of a cylinder with the same base and height?}",
+      "choices": [
+        "1/2",
+        "1/3",
+        "1/4",
+        "Same"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Cones are 'pointy cylinders'.",
+        "There's a magic factor of $\\frac{1}{3}$."
+      ],
+      "explanation": "$V_{\\text{cone}} = \\frac{1}{3} \\pi r^2 h$, exactly **one-third** of the cylinder $\\pi r^2 h$ with the same base and height.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Volume of a sphere with } r = 3.",
+      "choices": [
+        "12π",
+        "27π",
+        "36π",
+        "108π"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "$V = \\frac{4}{3}\\pi r^3$.",
+        "$\\frac{4}{3}\\pi(27) = \\frac{108\\pi}{3}$."
+      ],
+      "explanation": "$V = \\frac{4}{3}\\pi(3)^3 = \\frac{4}{3}\\pi(27) = 36\\pi$.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Find the volume of a rectangular box with dimensions } 4, 5, 6.",
+      "answer": 120,
+      "tolerance": 0,
+      "hints": [
+        "$V = LWH$.",
+        "$4 \\cdot 5 \\cdot 6 = 120$."
+      ],
+      "explanation": "$V = 4 \\cdot 5 \\cdot 6 = 120$.",
+      "steps": [
+        "Rectangular box volume: $V = LWH$.",
+        "$V = 4 \\cdot 5 \\cdot 6 = 120$ cubic units."
+      ],
+      "id": "q6",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Find the volume of a cylinder with radius } 3 \\text{ and height } 10 \\\\ \\text{(round to 2 decimals).}",
+      "answer": 282.74,
+      "tolerance": 0.1,
+      "hints": [
+        "$V = \\pi r^2 h$.",
+        "$\\pi (9)(10) = 90\\pi \\approx 282.74$."
+      ],
+      "explanation": "$V = \\pi(3)^2(10) = 90\\pi \\approx 282.74$.",
+      "steps": [
+        "Cylinder volume: $V = \\pi r^2 h$ (base area × height).",
+        "$V = \\pi \\cdot 9 \\cdot 10 = 90\\pi \\approx 282.74$ cubic units."
+      ],
+      "id": "q7",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Find the volume of a cone with radius } 4 \\text{ and height } 9 \\\\ \\text{(round to 2 decimals).}",
+      "answer": 150.8,
+      "tolerance": 0.5,
+      "hints": [
+        "$V = \\dfrac{1}{3}\\pi r^2 h$.",
+        "$\\dfrac{1}{3}\\pi(16)(9) = 48\\pi$."
+      ],
+      "explanation": "$V = \\dfrac{1}{3}\\pi(16)(9) = 48\\pi \\approx 150.80$.",
+      "steps": [
+        "Cone volume: $V = \\dfrac{1}{3}\\pi r^2 h$ (one-third of the cylinder with same base and height).",
+        "$V = \\dfrac{1}{3}\\pi (16)(9) = 48\\pi \\approx 150.80$."
+      ],
+      "id": "q8",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Find the volume of a sphere with radius } 6 \\\\ \\text{(round to 2 decimals).}",
+      "answer": 904.78,
+      "tolerance": 0.5,
+      "hints": [
+        "$V = \\dfrac{4}{3}\\pi r^3$.",
+        "$\\dfrac{4}{3}\\pi(216) = 288\\pi \\approx 904.78$."
+      ],
+      "explanation": "$V = \\dfrac{4}{3}\\pi(216) = 288\\pi \\approx 904.78$.",
+      "steps": [
+        "Sphere volume: $V = \\dfrac{4}{3}\\pi r^3$.",
+        "$r^3 = 6^3 = 216$.",
+        "$V = \\dfrac{4}{3}\\pi(216) = 288\\pi \\approx 904.78$."
+      ],
+      "id": "q9",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A cube has volume } 125 \\text{ cm}^3. \\text{ Find its surface area.}",
+      "answer": 150,
+      "tolerance": 0,
+      "hints": [
+        "Side = $\\sqrt[3]{125} = 5$. Surface area = $6 \\cdot s^2$.",
+        "$6 \\cdot 25 = 150$."
+      ],
+      "explanation": "Side $= 5$. Surface area $= 6(5)^2 = 150$ cm².",
+      "steps": [
+        "Cube volume: $V = s^3$. So $s = \\sqrt[3]{125} = 5$ cm.",
+        "Cube surface area (6 square faces): $SA = 6s^2 = 6 \\cdot 25 = 150$ cm²."
+      ],
+      "id": "q10",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Find the volume of a pyramid with square base } 6 × 6 \\text{ and height } 10.",
+      "answer": 120,
+      "tolerance": 0,
+      "hints": [
+        "$V = \\dfrac{1}{3} \\cdot B \\cdot h$ where $B$ is base area.",
+        "$\\dfrac{1}{3}(36)(10) = 120$."
+      ],
+      "explanation": "Base area $= 36$. $V = \\dfrac{1}{3}(36)(10) = 120$.",
+      "steps": [
+        "Pyramid volume: $V = \\dfrac{1}{3} \\cdot \\text{(base area)} \\cdot \\text{height}$.",
+        "Base area: $6 \\cdot 6 = 36$.",
+        "$V = \\dfrac{1}{3} \\cdot 36 \\cdot 10 = 120$ cubic units."
+      ],
+      "id": "q11",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A composite solid: a cylinder of radius } 3 \\text{ and height } 8 \\\\ \\text{with a hemisphere of the same radius on top.} \\\\ \\text{Find total volume (round to 2 decimals).}",
+      "answer": 282.74,
+      "tolerance": 1,
+      "hints": [
+        "Cylinder + half-sphere.",
+        "$\\pi(9)(8) + \\dfrac{1}{2} \\cdot \\dfrac{4}{3}\\pi(27) = 72\\pi + 18\\pi = 90\\pi$."
+      ],
+      "explanation": "Cylinder $= 72\\pi$. Hemisphere $= \\dfrac{2}{3}\\pi(27) = 18\\pi$. Total $= 90\\pi \\approx 282.74$.",
+      "steps": [
+        "Sum of cylinder + hemisphere volumes.",
+        "Cylinder: $\\pi r^2 h = \\pi(9)(8) = 72\\pi$.",
+        "Hemisphere: half of a sphere = $\\dfrac{1}{2} \\cdot \\dfrac{4}{3}\\pi r^3 = \\dfrac{2}{3}\\pi(27) = 18\\pi$.",
+        "Total: $72\\pi + 18\\pi = 90\\pi \\approx 282.74$."
+      ],
+      "id": "q12",
+      "difficulty": "hard"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A water tank is a cylinder with radius } 2 \\text{ ft and height } 5 \\text{ ft.} \\\\ \\text{If } 1 \\text{ cubic ft} \\approx 7.48 \\text{ gallons,} \\\\ \\text{how many gallons does the tank hold (round to nearest)?}",
+      "answer": 470,
+      "tolerance": 5,
+      "hints": [
+        "Volume in ft³ = $\\pi(4)(5) = 20\\pi \\approx 62.83$.",
+        "Multiply by 7.48 gal/ft³."
+      ],
+      "explanation": "$V = 20\\pi \\approx 62.83$ ft³. Gallons $= 62.83 \\cdot 7.48 \\approx 470$.",
+      "steps": [
+        "Volume of cylinder: $V = \\pi r^2 h = \\pi(4)(5) = 20\\pi \\approx 62.83$ ft³.",
+        "Convert: $62.83 \\text{ ft}^3 \\cdot 7.48 \\text{ gal/ft}^3 \\approx 470$ gallons."
+      ],
+      "id": "q13",
+      "difficulty": "medium"
+    }
+  ]
+}

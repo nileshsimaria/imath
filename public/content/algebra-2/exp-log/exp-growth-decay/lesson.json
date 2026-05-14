@@ -1,0 +1,79 @@
+{
+  "title": "Exponential Growth & Decay",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Linear functions add a constant amount each step ($y = mx + b$). **Exponential functions** *multiply* by a constant amount each step. That tiny shift in rule produces wildly different behavior — exponentials describe everything from population growth to compound interest to radioactive decay."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "y = a \\cdot b^x"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Here $a$ is the **starting value** (when $x = 0$, $y = a \\cdot b^0 = a$) and $b$ is the **base** — the multiplier per step. The behavior depends entirely on whether $b > 1$ or $b < 1$:"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Growth vs decay",
+      "body": "**$b > 1$**: each step multiplies by something bigger than 1 → values grow. **Exponential growth.**\n**$0 < b < 1$**: each step multiplies by a fraction → values shrink toward zero. **Exponential decay.**\n**$b = 1$**: no change. The graph is a horizontal line at $y = a$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "Try the widget below. Set $b = 2$ for doubling growth, $b = 0.5$ for halving decay, $b = 1$ for no change. Watch how the curve hugs the x-axis on one end and shoots off on the other."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "exp-graph",
+      "config": {
+        "a": 1,
+        "b": 2
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Some real-world models",
+        "**Compound interest.** Money in an account that earns rate $r$ per period: $A = P(1 + r)^t$. Here $b = 1 + r > 1$ — growth.",
+        "**Population.** A population that grows by 3% per year: $P = P_0(1.03)^t$. Growth ($b = 1.03$).",
+        "**Half-life.** A radioactive sample halves every $T$ time units: $A = A_0(0.5)^{t/T}$. Decay ($b = 0.5$).",
+        "**Cooling.** A hot object cooling toward room temperature also follows an exponential decay law (Newton's law of cooling)."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The natural exponential — meet $e$",
+        "When the multiplier is *continuously compounding*, you get a special base: $e \\approx 2.71828$. The function $y = e^x$ is **the** exponential function for calculus — its rate of change at every point equals its current value, which makes it pop up everywhere."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "y = e^x"
+    },
+    {
+      "type": "callout",
+      "title": "What makes exponential growth feel impossible",
+      "body": "Linear growth is steady: $1, 2, 3, 4, 5, \\ldots$. Exponential growth (doubling) starts slow and explodes: $1, 2, 4, 8, 16, 32, 64, \\ldots$. After $30$ doublings: over a billion. After $40$: over a trillion. This is why a virus, a viral video, or compound interest can blow past human intuition — the *long tail* of exponential growth is bigger than the entire history before it."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example",
+        "A bacterial population of 100 doubles every hour. How many bacteria after 5 hours?",
+        "Model: $P(t) = 100 \\cdot 2^t$. After $5$ hours: $P(5) = 100 \\cdot 2^5 = 100 \\cdot 32 = 3200$. After $10$ hours: $100 \\cdot 1024 \\approx 100{,}000$. After $20$ hours: over $100$ million."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "$y = a \\cdot b^x$. **$b > 1$**: growth. **$0 < b < 1$**: decay. **$a$**: starting value at $x = 0$. The base $e \\approx 2.718$ is the natural exponential, the foundation of continuous compounding and most of calculus."
+    }
+  ]
+}

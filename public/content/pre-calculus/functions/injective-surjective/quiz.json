@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "prompt": "Which property says 'no two inputs share an output'?",
+      "choices": [
+        "Surjective",
+        "Injective",
+        "Bijective",
+        "Continuous"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Injective = one-to-one.",
+        "Different inputs ⇒ different outputs."
+      ],
+      "explanation": "Injective (one-to-one): if $x_1 \\neq x_2$ then $f(x_1) \\neq f(x_2)$. Equivalently, two arrows never land on the same output.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "prompt": "Which property says 'every output is reached by at least one input'?",
+      "choices": [
+        "Injective",
+        "Surjective",
+        "Bijective",
+        "Constant"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Surjective = onto.",
+        "Look at the OUTPUT side: every element has at least one incoming arrow."
+      ],
+      "explanation": "Surjective (onto): for every $y$ in the codomain, there exists at least one $x$ with $f(x) = y$. No element in the output set is 'left out'.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Is } f: \\mathbb{R} \\to \\mathbb{R}, \\ f(x) = x^3 \\text{ bijective?}",
+      "choices": [
+        "No — it is not injective because $f(2) = f(-2)$.",
+        "No — it is not surjective because $x^3$ skips negative values.",
+        "Yes — it is both injective and surjective.",
+        "Bijective only on $[0, \\infty)$."
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Try plotting $y = x^3$. Does any horizontal line cross it more than once?",
+        "Does any horizontal line miss it entirely?"
+      ],
+      "explanation": "Cubing is strictly increasing on $\\mathbb{R}$, so it's injective. And it covers all of $\\mathbb{R}$ (cube roots exist for negatives), so it's surjective. Hence bijective — with inverse $f^{-1}(y) = \\sqrt[3]{y}$.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "f: \\mathbb{R} \\to \\mathbb{R}, \\ f(x) = e^x. \\text{ Which is correct?}",
+      "choices": [
+        "Injective and surjective.",
+        "Injective but not surjective.",
+        "Surjective but not injective.",
+        "Neither injective nor surjective."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$e^x$ is strictly increasing — does any horizontal line cross it twice?",
+        "What values does $e^x$ output? Can it ever equal 0 or be negative?"
+      ],
+      "explanation": "$e^x$ is strictly increasing, so injective. But it always outputs a positive number, so it never reaches $\\leq 0$ — not surjective onto $\\mathbb{R}$. To make it bijective, restrict the codomain to $(0, \\infty)$; then the inverse is $\\ln$.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "prompt": "A function has an inverse if and only if it is:",
+      "choices": [
+        "Injective",
+        "Surjective",
+        "Bijective",
+        "Linear"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "To run the function backwards, each output must have one and only one input.",
+        "'Exactly one input per output' = injective AND surjective."
+      ],
+      "explanation": "Bijectivity is exactly the condition under which the reverse mapping is well-defined and total: each output has exactly one input. Without injectivity, the inverse is ambiguous; without surjectivity (onto the chosen codomain), the inverse is undefined on some outputs.",
+      "difficulty": "medium"
+    }
+  ]
+}

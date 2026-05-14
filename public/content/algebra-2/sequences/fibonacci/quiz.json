@@ -1,0 +1,156 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{Compute } F_8 \\text{ (using } F_1 = F_2 = 1).",
+      "answer": 21,
+      "tolerance": 0.001,
+      "hints": [
+        "1, 1, 2, 3, 5, 8, 13, ?",
+        "13 + 8 = 21."
+      ],
+      "explanation": "$F_8 = F_7 + F_6 = 13 + 8 = 21$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{If } F_{10} = 55 \\text{ and } F_{11} = 89, \\text{ what is } F_{12}?",
+      "answer": 144,
+      "tolerance": 0.001,
+      "hints": [
+        "Each term = sum of previous two.",
+        "$55 + 89 = 144$."
+      ],
+      "explanation": "$F_{12} = F_{11} + F_{10} = 89 + 55 = 144$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "The Fibonacci sequence is defined by which recurrence?",
+      "choices": [
+        "$F_n = F_{n-1} + F_{n-2}$",
+        "$F_n = F_{n-1} \\cdot F_{n-2}$",
+        "$F_n = n \\cdot F_{n-1}$",
+        "$F_n = F_{n-1} - F_{n-2}$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Add the previous two terms.",
+        "Sum, not product or difference."
+      ],
+      "explanation": "Each Fibonacci number is the sum of the two before it: $F_n = F_{n-1} + F_{n-2}$.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Sum the first 7 Fibonacci numbers: } 1 + 1 + 2 + 3 + 5 + 8 + 13.",
+      "answer": 33,
+      "tolerance": 0.001,
+      "hints": [
+        "Just add.",
+        "Or use $F_1 + \\cdots + F_n = F_{n+2} - 1$. Here $n = 7$, so sum $= F_9 - 1 = 34 - 1 = 33$."
+      ],
+      "explanation": "Direct: $1+1+2+3+5+8+13 = 33$. Or by identity: $F_9 - 1 = 34 - 1 = 33$. ✓",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** Just add."
+        },
+        {
+          "text": "Or use $F_1 + \\cdots + F_n = F_{n+2} - 1$. Here $n = 7$, so sum $= F_9 - 1 = 34 - 1 = 33$."
+        },
+        {
+          "text": "**Solution.** Direct: $1+1+2+3+5+8+13 = 33$. Or by identity: $F_9 - 1 = 34 - 1 = 33$. ✓"
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "prompt": "Which is NOT a Fibonacci number?",
+      "choices": [
+        "13",
+        "21",
+        "31",
+        "34"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Recall: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...",
+        "31 isn't in that list."
+      ],
+      "explanation": "Sequence goes 13, 21, 34, 55. 31 isn't on the list.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{If a flower has Fibonacci petal counts, which is most likely?} \\\\ \\text{Answer the count: 6, 8, or 9?}",
+      "answer": 8,
+      "tolerance": 0.001,
+      "hints": [
+        "Fibonacci numbers near 6-9 are 5, 8, 13.",
+        "8 is on the list."
+      ],
+      "explanation": "Fibonacci-petalled flowers come in counts 3, 5, 8, 13, 21, 34, 55, 89. Of the options given, 8 is the Fibonacci number.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "promptTex": "\\text{For large } n, \\, F_n \\text{ is approximately:}",
+      "choices": [
+        "$2^n / n$",
+        "$\\phi^n / \\sqrt{5}$ where $\\phi = (1+\\sqrt{5})/2$",
+        "$n!$",
+        "$n^2$"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Binet's formula gives $F_n = (\\phi^n - \\psi^n)/\\sqrt{5}$.",
+        "For large $n$, the $\\psi^n$ term shrinks (since $|\\psi| < 1$)."
+      ],
+      "explanation": "$F_n \\approx \\phi^n / \\sqrt{5}$ for large $n$. The Fibonacci numbers grow exponentially with base $\\phi \\approx 1.618$.",
+      "difficulty": "hard",
+      "steps": [
+        {
+          "text": "**Approach.** Binet's formula gives $F_n = (\\phi^n - \\psi^n)/\\sqrt{5}$."
+        },
+        {
+          "text": "For large $n$, the $\\psi^n$ term shrinks (since $|\\psi| < 1$)."
+        },
+        {
+          "text": "**Solution.** $F_n \\approx \\phi^n / \\sqrt{5}$ for large $n$. The Fibonacci numbers grow exponentially with base $\\phi \\approx 1.618$."
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{Verify the identity } F_1^2 + F_2^2 + \\cdots + F_n^2 = F_n F_{n+1} \\\\ \\text{ by computing the sum for } n = 5.",
+      "answer": 40,
+      "tolerance": 0.001,
+      "hints": [
+        "$F_1^2 + F_2^2 + F_3^2 + F_4^2 + F_5^2 = 1 + 1 + 4 + 9 + 25 = 40$.",
+        "Check: $F_5 \\cdot F_6 = 5 \\cdot 8 = 40$. ✓"
+      ],
+      "explanation": "$1 + 1 + 4 + 9 + 25 = 40 = 5 \\cdot 8 = F_5 \\cdot F_6$. Identity holds!",
+      "difficulty": "hard",
+      "steps": [
+        {
+          "text": "**Approach.** $F_1^2 + F_2^2 + F_3^2 + F_4^2 + F_5^2 = 1 + 1 + 4 + 9 + 25 = 40$."
+        },
+        {
+          "text": "Check: $F_5 \\cdot F_6 = 5 \\cdot 8 = 40$. ✓"
+        },
+        {
+          "text": "**Solution.** $1 + 1 + 4 + 9 + 25 = 40 = 5 \\cdot 8 = F_5 \\cdot F_6$. Identity holds!"
+        }
+      ]
+    }
+  ]
+}

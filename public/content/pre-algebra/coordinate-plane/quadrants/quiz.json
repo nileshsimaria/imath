@@ -1,0 +1,264 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{In which quadrant is } (4, 7)?",
+      "choices": [
+        "I",
+        "II",
+        "III",
+        "IV"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Both coordinates positive.",
+        "Top right region."
+      ],
+      "explanation": "Both coordinates are positive ($x = 4 > 0$, $y = 7 > 0$) → Quadrant **I** (top right).",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{In which quadrant is } (-3, -5)?",
+      "choices": [
+        "I",
+        "II",
+        "III",
+        "IV"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Both coordinates negative.",
+        "Bottom left region."
+      ],
+      "explanation": "Both coordinates are negative ($x < 0$, $y < 0$) → Quadrant **III** (bottom left).",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{In which quadrant is } (-2, 6)?",
+      "choices": [
+        "I",
+        "II",
+        "III",
+        "IV"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$x$ negative, $y$ positive.",
+        "Top left region."
+      ],
+      "explanation": "$x = -2 < 0$ and $y = 6 > 0$ → Quadrant **II** (top left).",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The point } (5, 0) \\text{ is:}",
+      "choices": [
+        "In Quadrant I",
+        "In Quadrant IV",
+        "On the x-axis",
+        "At the origin"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Look at the y-coordinate.",
+        "When $y = 0$, the point lies on the x-axis."
+      ],
+      "explanation": "$y = 0$ means the point is on the x-axis — not in any quadrant. Quadrants only contain points with both coordinates nonzero.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which point is in Quadrant IV?}",
+      "choices": [
+        "(2, 3)",
+        "(-2, -3)",
+        "(2, -3)",
+        "(-2, 3)"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Quadrant IV has $x$ positive, $y$ negative.",
+        "Look at the signs."
+      ],
+      "explanation": "Quadrant IV: $(+, -)$. So $(2, -3)$ — $x$ positive, $y$ negative — is in Quadrant **IV**.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{In which quadrant is } (-7, 4)?",
+      "choices": [
+        "I",
+        "II",
+        "III",
+        "IV"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$x < 0$, $y > 0$ — left half, upper half.",
+        "Left + upper = Q II."
+      ],
+      "explanation": "$x = -7 < 0$ (left); $y = 4 > 0$ (upper). Q II.",
+      "steps": [
+        "**Universal recipe: check sign of each coordinate, map to quadrant.**",
+        "  Q I: $(+, +)$, Q II: $(-, +)$, Q III: $(-, -)$, Q IV: $(+, -)$.",
+        "**Sign of $x$.** $-7 < 0$ → LEFT half (Q II or Q III).",
+        "**Sign of $y$.** $4 > 0$ → UPPER half (Q I or Q II).",
+        "**Intersection.** Left and Upper → **Q II**."
+      ],
+      "id": "q6",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{If both } x \\text{ and } y \\text{ are positive, the point is in:}",
+      "choices": [
+        "Q I",
+        "Q II",
+        "Q III",
+        "Q IV"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "$+$ and $+$ → upper right.",
+        "Q I."
+      ],
+      "explanation": "Both positive → Q I.",
+      "steps": [
+        "**Both positive → upper right → Q I.** This is the 'default' positive-coordinate quadrant.",
+        "**Memorize.** $(+, +) =$ Q I (the quadrant pattern starts here and counts counterclockwise)."
+      ],
+      "id": "q7",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{If a point lies on the } x\\text{-axis with } x > 0, \\\\ \\text{which quadrant is it in?}",
+      "choices": [
+        "Q I",
+        "Q IV",
+        "On Q I/Q IV boundary",
+        "On no quadrant — it's on an axis"
+      ],
+      "answerIndex": 3,
+      "hints": [
+        "Points on an axis are NOT in any quadrant.",
+        "Quadrants exclude the axes."
+      ],
+      "explanation": "Quadrants are *open* regions excluding the axes. A point on the x-axis is on the axis, not in a quadrant.",
+      "steps": [
+        "**Quadrants are OPEN regions — they EXCLUDE the axes themselves.** Only points with BOTH coordinates nonzero belong to a quadrant.",
+        "**A point with $y = 0$ is ON the x-axis** (not in any quadrant), regardless of $x$'s sign.",
+        "**Conventional language.** People sometimes informally say 'between Q I and Q IV' for a point like $(3, 0)$ — but technically it's on the BOUNDARY (the x-axis), in no quadrant.",
+        "**Practical advice on tests.** When a coordinate is 0, the answer is usually 'on an axis', not a quadrant."
+      ],
+      "id": "q8",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{In which quadrant(s) is } x \\cdot y < 0?",
+      "choices": [
+        "Q I and Q III",
+        "Q II and Q IV",
+        "Q I and Q IV",
+        "Q II and Q III"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$xy < 0$ means $x$ and $y$ have OPPOSITE signs.",
+        "Opposite signs happen in Q II ($-, +$) and Q IV ($+, -$)."
+      ],
+      "explanation": "$xy < 0$ requires opposite signs → Q II ($-, +$) or Q IV ($+, -$).",
+      "steps": [
+        "**Translate the inequality.** $xy < 0$ means the product is negative, so $x$ and $y$ have OPPOSITE signs.",
+        "**Check each quadrant.**",
+        "  Q I ($+, +$): product positive. ✗",
+        "  Q II ($-, +$): product NEGATIVE. ✓",
+        "  Q III ($-, -$): product positive (negative × negative). ✗",
+        "  Q IV ($+, -$): product NEGATIVE. ✓",
+        "**Answer: Q II and Q IV — the 'opposite-sign' quadrants.**"
+      ],
+      "id": "q9",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{The point } (-5, 0) \\text{ is on:}",
+      "choices": [
+        "the x-axis",
+        "the y-axis",
+        "the origin",
+        "Q II"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "$y = 0$ means the point is on the x-axis.",
+        "Specifically, on the negative x-axis."
+      ],
+      "explanation": "$y = 0 \\Rightarrow$ on the x-axis. ($x = -5 \\Rightarrow$ negative x-axis specifically.)",
+      "steps": [
+        "**Axis definitions.** x-axis = points with $y = 0$. y-axis = points with $x = 0$.",
+        "**Apply.** $(-5, 0)$ has $y = 0$ → **x-axis** (specifically the negative x-axis, since $x < 0$).",
+        "**Origin special case.** $(0, 0)$ is on BOTH axes — it's their intersection."
+      ],
+      "id": "q10",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{If a point } (x, y) \\text{ is in Q II and you reflect it} \\\\ \\text{over the y-axis, the image is in:}",
+      "choices": [
+        "Q I",
+        "Q II",
+        "Q III",
+        "Q IV"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Q II is $(-, +)$. Reflecting over y-axis flips x-sign → $(+, +)$.",
+        "$(+, +)$ is Q I."
+      ],
+      "explanation": "Q II point $(-, +)$ reflected over y-axis becomes $(+, +)$ → Q I.",
+      "steps": [
+        "**Track signs through the transformation.**",
+        "**Starting quadrant.** Q II = $(-, +)$.",
+        "**Reflection rule.** Over y-axis: $(x, y) \\to (-x, y)$. Only $x$ flips.",
+        "**Apply.** $(-, +) \\to (+, +)$.",
+        "**Identify destination quadrant.** $(+, +)$ = **Q I**.",
+        "**Intuition.** Reflecting Q II (upper-left) across the y-axis bounces it to the upper-right = Q I. Y-coordinate unchanged (still upper); x-coordinate flips (now right)."
+      ],
+      "id": "q11",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{In which quadrant(s) is } y > 0?",
+      "choices": [
+        "Q I only",
+        "Q I and Q II",
+        "Q I and Q IV",
+        "all four"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$y > 0$ means above the x-axis.",
+        "Upper half = Q I and Q II."
+      ],
+      "explanation": "$y > 0$ means upper half of the plane → Q I and Q II.",
+      "steps": [
+        "**Translate the inequality geometrically.** $y > 0$ means the point is ABOVE the x-axis.",
+        "**Identify the half-plane.** Upper half = Q I (right of y-axis) + Q II (left of y-axis).",
+        "**Answer: Q I and Q II.**"
+      ],
+      "id": "q12",
+      "difficulty": "easy"
+    }
+  ]
+}

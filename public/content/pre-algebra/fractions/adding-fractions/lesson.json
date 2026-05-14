@@ -1,0 +1,117 @@
+{
+  "title": "Adding Fractions",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "A **fraction** like $\\tfrac{3}{4}$ is just *how much* of a whole — three out of four equal pieces. Adding two fractions sounds simple until the bottoms don't match. Let's see why."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The easy case: same denominator",
+        "When both fractions have the same denominator, the pieces are the *same size*. You can just add the numerators."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\frac{2}{5} + \\frac{1}{5} = \\frac{3}{5}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Try it yourself with the visualization. Set both denominators to the same number, then change the numerators. The sum is just $(n_1 + n_2)$ over the same denominator."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "fraction-bars",
+      "config": {
+        "n1": 2,
+        "d1": 5,
+        "n2": 1,
+        "d2": 5,
+        "maxDen": 10
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The tricky case: different denominators",
+        "If the denominators differ, the *pieces are different sizes*, and you can't just add the numerators. $\\dfrac{1}{2} + \\dfrac{1}{3}$ is **not** $\\dfrac{2}{5}$ — the halves and the thirds don't match up."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "What we need",
+      "body": "Convert both fractions so they have the **same denominator**. Then it's the easy case again."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Finding a common denominator",
+        "The smallest denominator that works for both is the **least common denominator** (LCD) — the least common multiple of $d_1$ and $d_2$.",
+        "**Example.** For $\\dfrac{1}{2} + \\dfrac{1}{3}$, we need a number that both $2$ and $3$ divide evenly into. The smallest such number is $6$.",
+        "Now rewrite each fraction with denominator $6$:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\frac{1}{2} = \\frac{3}{6}, \\qquad \\frac{1}{3} = \\frac{2}{6}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Each conversion just multiplies numerator and denominator by the same number — that doesn't change the value of the fraction. Now add:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\frac{1}{2} + \\frac{1}{3} = \\frac{3}{6} + \\frac{2}{6} = \\frac{5}{6}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Try it visually. Change the denominators to $2$ and $3$ and leave both numerators at $1$. The sum bar is divided into $6$ equal pieces — five of them filled."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "fraction-bars",
+      "config": {
+        "n1": 1,
+        "d1": 2,
+        "n2": 1,
+        "d2": 3,
+        "maxDen": 12
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The recipe",
+        "**1.** Find the LCD of the two denominators.",
+        "**2.** Rewrite each fraction with the LCD as the denominator.",
+        "**3.** Add the new numerators. Keep the same denominator.",
+        "**4.** Simplify if possible."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Simplifying",
+      "body": "If the result can be reduced — e.g. $\\dfrac{4}{8}$ becomes $\\dfrac{1}{2}$ — divide numerator and denominator by their greatest common divisor. The widget above always shows the simplified form at the end."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example",
+        "Add $\\dfrac{3}{4} + \\dfrac{1}{6}$.",
+        "**Step 1.** $\\text{LCD}(4, 6) = 12$.",
+        "**Step 2.** Rewrite: $\\dfrac{3}{4} = \\dfrac{9}{12}$ and $\\dfrac{1}{6} = \\dfrac{2}{12}$.",
+        "**Step 3.** Add: $\\dfrac{9}{12} + \\dfrac{2}{12} = \\dfrac{11}{12}$.",
+        "**Step 4.** $\\gcd(11, 12) = 1$, so $\\dfrac{11}{12}$ is already simplified."
+      ]
+    }
+  ]
+}

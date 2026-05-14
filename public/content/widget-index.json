@@ -1,0 +1,964 @@
+{
+  "number-line": [
+    {
+      "courseId": "pre-algebra",
+      "courseTitle": "Pre-Algebra",
+      "topicId": "integers",
+      "topicTitle": "Integers & Operations",
+      "subtopicId": "integer-add-sub",
+      "subtopicTitle": "Adding & Subtracting Integers"
+    },
+    {
+      "courseId": "pre-algebra",
+      "courseTitle": "Pre-Algebra",
+      "topicId": "decimals-percents",
+      "topicTitle": "Decimals & Percents",
+      "subtopicId": "decimal-fraction",
+      "subtopicTitle": "Decimal–Fraction Conversions"
+    },
+    {
+      "courseId": "algebra-1",
+      "courseTitle": "Algebra I",
+      "topicId": "inequalities",
+      "topicTitle": "Inequalities",
+      "subtopicId": "solving-inequalities",
+      "subtopicTitle": "Solving Linear Inequalities"
+    }
+  ],
+  "factor-tree": [
+    {
+      "courseId": "pre-algebra",
+      "courseTitle": "Pre-Algebra",
+      "topicId": "integers",
+      "topicTitle": "Integers & Operations",
+      "subtopicId": "factors-multiples",
+      "subtopicTitle": "Factors, Multiples, GCD & LCM"
+    }
+  ],
+  "modular-clock": [
+    {
+      "courseId": "pre-algebra",
+      "courseTitle": "Pre-Algebra",
+      "topicId": "integers",
+      "topicTitle": "Integers & Operations",
+      "subtopicId": "modular-intro",
+      "subtopicTitle": "Clock Arithmetic (Modular Numbers)"
+    },
+    {
+      "courseId": "pre-algebra",
+      "courseTitle": "Pre-Algebra",
+      "topicId": "integers",
+      "topicTitle": "Integers & Operations",
+      "subtopicId": "modular-day-of-week",
+      "subtopicTitle": "Days of the Week & Calendar Tricks"
+    },
+    {
+      "courseId": "pre-algebra",
+      "courseTitle": "Pre-Algebra",
+      "topicId": "integers",
+      "topicTitle": "Integers & Operations",
+      "subtopicId": "caesar-cipher",
+      "subtopicTitle": "Caesar Cipher: Modular Arithmetic Encrypts"
+    }
+  ],
+  "fraction-bars": [
+    {
+      "courseId": "pre-algebra",
+      "courseTitle": "Pre-Algebra",
+      "topicId": "fractions",
+      "topicTitle": "Fractions",
+      "subtopicId": "adding-fractions",
+      "subtopicTitle": "Adding Fractions"
+    },
+    {
+      "courseId": "pre-algebra",
+      "courseTitle": "Pre-Algebra",
+      "topicId": "ratios-proportions",
+      "topicTitle": "Ratios & Proportions",
+      "subtopicId": "ratio-basics",
+      "subtopicTitle": "Ratio Basics"
+    }
+  ],
+  "fraction-area": [
+    {
+      "courseId": "pre-algebra",
+      "courseTitle": "Pre-Algebra",
+      "topicId": "fractions",
+      "topicTitle": "Fractions",
+      "subtopicId": "multiplying-fractions",
+      "subtopicTitle": "Multiplying Fractions"
+    }
+  ],
+  "percent-grid": [
+    {
+      "courseId": "pre-algebra",
+      "courseTitle": "Pre-Algebra",
+      "topicId": "decimals-percents",
+      "topicTitle": "Decimals & Percents",
+      "subtopicId": "percent-basics",
+      "subtopicTitle": "Percent Basics"
+    }
+  ],
+  "coordinate-plane": [
+    {
+      "courseId": "pre-algebra",
+      "courseTitle": "Pre-Algebra",
+      "topicId": "coordinate-plane",
+      "topicTitle": "Coordinate Plane",
+      "subtopicId": "plotting-points",
+      "subtopicTitle": "Plotting Points"
+    },
+    {
+      "courseId": "pre-algebra",
+      "courseTitle": "Pre-Algebra",
+      "topicId": "coordinate-plane",
+      "topicTitle": "Coordinate Plane",
+      "subtopicId": "quadrants",
+      "subtopicTitle": "Quadrants"
+    },
+    {
+      "courseId": "algebra-1",
+      "courseTitle": "Algebra I",
+      "topicId": "linear-equations",
+      "topicTitle": "Linear Equations",
+      "subtopicId": "slope",
+      "subtopicTitle": "Slope"
+    },
+    {
+      "courseId": "algebra-1",
+      "courseTitle": "Algebra I",
+      "topicId": "linear-equations",
+      "topicTitle": "Linear Equations",
+      "subtopicId": "slope-intercept-form",
+      "subtopicTitle": "Slope-Intercept Form"
+    },
+    {
+      "courseId": "algebra-1",
+      "courseTitle": "Algebra I",
+      "topicId": "linear-equations",
+      "topicTitle": "Linear Equations",
+      "subtopicId": "point-slope-form",
+      "subtopicTitle": "Point-Slope Form"
+    },
+    {
+      "courseId": "algebra-1",
+      "courseTitle": "Algebra I",
+      "topicId": "linear-equations",
+      "topicTitle": "Linear Equations",
+      "subtopicId": "standard-form",
+      "subtopicTitle": "Standard Form"
+    },
+    {
+      "courseId": "algebra-1",
+      "courseTitle": "Algebra I",
+      "topicId": "linear-equations",
+      "topicTitle": "Linear Equations",
+      "subtopicId": "parallel-perpendicular",
+      "subtopicTitle": "Parallel & Perpendicular Lines"
+    },
+    {
+      "courseId": "algebra-1",
+      "courseTitle": "Algebra I",
+      "topicId": "inequalities",
+      "topicTitle": "Inequalities",
+      "subtopicId": "graphing-inequalities",
+      "subtopicTitle": "Graphing Inequalities"
+    },
+    {
+      "courseId": "algebra-1",
+      "courseTitle": "Algebra I",
+      "topicId": "systems",
+      "topicTitle": "Systems of Equations",
+      "subtopicId": "graphing-systems",
+      "subtopicTitle": "Solving by Graphing"
+    },
+    {
+      "courseId": "algebra-1",
+      "courseTitle": "Algebra I",
+      "topicId": "systems",
+      "topicTitle": "Systems of Equations",
+      "subtopicId": "substitution",
+      "subtopicTitle": "Solving by Substitution"
+    },
+    {
+      "courseId": "algebra-1",
+      "courseTitle": "Algebra I",
+      "topicId": "systems",
+      "topicTitle": "Systems of Equations",
+      "subtopicId": "elimination",
+      "subtopicTitle": "Solving by Elimination"
+    }
+  ],
+  "balance-scale": [
+    {
+      "courseId": "algebra-1",
+      "courseTitle": "Algebra I",
+      "topicId": "linear-equations",
+      "topicTitle": "Linear Equations",
+      "subtopicId": "balance-method",
+      "subtopicTitle": "Solving Equations: The Balance Method"
+    }
+  ],
+  "polynomial-area": [
+    {
+      "courseId": "algebra-1",
+      "courseTitle": "Algebra I",
+      "topicId": "polynomials",
+      "topicTitle": "Polynomials",
+      "subtopicId": "poly-add-multiply",
+      "subtopicTitle": "Adding & Multiplying Polynomials"
+    },
+    {
+      "courseId": "algebra-1",
+      "courseTitle": "Algebra I",
+      "topicId": "identities-factoring",
+      "topicTitle": "Identities, Factoring & Word Problems",
+      "subtopicId": "algebraic-identities",
+      "subtopicTitle": "Algebraic Identities — The Big Eight"
+    }
+  ],
+  "parabola": [
+    {
+      "courseId": "algebra-1",
+      "courseTitle": "Algebra I",
+      "topicId": "polynomials",
+      "topicTitle": "Polynomials",
+      "subtopicId": "factoring",
+      "subtopicTitle": "Factoring"
+    },
+    {
+      "courseId": "algebra-1",
+      "courseTitle": "Algebra I",
+      "topicId": "quadratics",
+      "topicTitle": "Quadratics",
+      "subtopicId": "solve-by-factoring",
+      "subtopicTitle": "Solving by Factoring"
+    },
+    {
+      "courseId": "algebra-1",
+      "courseTitle": "Algebra I",
+      "topicId": "quadratics",
+      "topicTitle": "Quadratics",
+      "subtopicId": "quadratic-formula",
+      "subtopicTitle": "The Quadratic Formula"
+    },
+    {
+      "courseId": "algebra-2",
+      "courseTitle": "Algebra II",
+      "topicId": "quadratic-functions",
+      "topicTitle": "Quadratic Functions",
+      "subtopicId": "vertex-form",
+      "subtopicTitle": "Vertex Form & Graphs"
+    },
+    {
+      "courseId": "algebra-2",
+      "courseTitle": "Algebra II",
+      "topicId": "quadratic-functions",
+      "topicTitle": "Quadratic Functions",
+      "subtopicId": "discriminant",
+      "subtopicTitle": "The Discriminant"
+    },
+    {
+      "courseId": "algebra-2",
+      "courseTitle": "Algebra II",
+      "topicId": "quadratic-functions",
+      "topicTitle": "Quadratic Functions",
+      "subtopicId": "sum-product-roots",
+      "subtopicTitle": "Sum & Product of Roots (Vieta's)"
+    },
+    {
+      "courseId": "pre-calculus",
+      "courseTitle": "Pre-Calculus",
+      "topicId": "functions",
+      "topicTitle": "Functions",
+      "subtopicId": "domain-range",
+      "subtopicTitle": "Domain & Range"
+    }
+  ],
+  "polynomial-graph": [
+    {
+      "courseId": "algebra-2",
+      "courseTitle": "Algebra II",
+      "topicId": "polynomials-deep",
+      "topicTitle": "Polynomial Functions",
+      "subtopicId": "higher-degree",
+      "subtopicTitle": "Higher-Degree Polynomials"
+    },
+    {
+      "courseId": "algebra-2",
+      "courseTitle": "Algebra II",
+      "topicId": "polynomials-deep",
+      "topicTitle": "Polynomial Functions",
+      "subtopicId": "roots-factoring",
+      "subtopicTitle": "Roots & Factoring"
+    }
+  ],
+  "exp-graph": [
+    {
+      "courseId": "algebra-2",
+      "courseTitle": "Algebra II",
+      "topicId": "exp-log",
+      "topicTitle": "Exponential & Logarithmic",
+      "subtopicId": "exp-growth-decay",
+      "subtopicTitle": "Exponential Growth & Decay"
+    }
+  ],
+  "sequence": [
+    {
+      "courseId": "algebra-2",
+      "courseTitle": "Algebra II",
+      "topicId": "sequences",
+      "topicTitle": "Sequences & Series",
+      "subtopicId": "arithmetic-sequences",
+      "subtopicTitle": "Arithmetic Sequences & Series"
+    },
+    {
+      "courseId": "algebra-2",
+      "courseTitle": "Algebra II",
+      "topicId": "sequences",
+      "topicTitle": "Sequences & Series",
+      "subtopicId": "geometric-sequences",
+      "subtopicTitle": "Geometric Sequences & Series"
+    },
+    {
+      "courseId": "algebra-2",
+      "courseTitle": "Algebra II",
+      "topicId": "sequences",
+      "topicTitle": "Sequences & Series",
+      "subtopicId": "recursive-and-patterns",
+      "subtopicTitle": "Recursive Sequences & Sequence Patterns"
+    }
+  ],
+  "pascals-triangle": [
+    {
+      "courseId": "algebra-2",
+      "courseTitle": "Algebra II",
+      "topicId": "sequences",
+      "topicTitle": "Sequences & Series",
+      "subtopicId": "binomial-and-e",
+      "subtopicTitle": "Pascal's Triangle, Binomial Theorem & e"
+    },
+    {
+      "courseId": "algebra-2",
+      "courseTitle": "Algebra II",
+      "topicId": "sequences",
+      "topicTitle": "Sequences & Series",
+      "subtopicId": "pascal-hidden-patterns",
+      "subtopicTitle": "Hidden Patterns in Pascal's Triangle"
+    },
+    {
+      "courseId": "algebra-2",
+      "courseTitle": "Algebra II",
+      "topicId": "sequences",
+      "topicTitle": "Sequences & Series",
+      "subtopicId": "pascal-mod-2",
+      "subtopicTitle": "Pascal Mod 2: Sierpinski Hidden Inside"
+    },
+    {
+      "courseId": "algebra-2",
+      "courseTitle": "Algebra II",
+      "topicId": "sequences",
+      "topicTitle": "Sequences & Series",
+      "subtopicId": "pascal-counting",
+      "subtopicTitle": "Pascal & Counting: Paths and Choices"
+    },
+    {
+      "courseId": "statistics",
+      "courseTitle": "Statistics & Probability",
+      "topicId": "counting",
+      "topicTitle": "Counting Methods",
+      "subtopicId": "permutations-combinations",
+      "subtopicTitle": "Permutations & Combinations"
+    }
+  ],
+  "fibonacci-spiral": [
+    {
+      "courseId": "algebra-2",
+      "courseTitle": "Algebra II",
+      "topicId": "sequences",
+      "topicTitle": "Sequences & Series",
+      "subtopicId": "fibonacci",
+      "subtopicTitle": "The Fibonacci Sequence"
+    },
+    {
+      "courseId": "algebra-2",
+      "courseTitle": "Algebra II",
+      "topicId": "sequences",
+      "topicTitle": "Sequences & Series",
+      "subtopicId": "golden-ratio",
+      "subtopicTitle": "The Golden Ratio φ"
+    },
+    {
+      "courseId": "algebra-2",
+      "courseTitle": "Algebra II",
+      "topicId": "sequences",
+      "topicTitle": "Sequences & Series",
+      "subtopicId": "spirals-nature",
+      "subtopicTitle": "Spirals & Nature"
+    }
+  ],
+  "conic-section": [
+    {
+      "courseId": "algebra-2",
+      "courseTitle": "Algebra II",
+      "topicId": "conics",
+      "topicTitle": "Conic Sections",
+      "subtopicId": "circle",
+      "subtopicTitle": "Circles (Conic Section)"
+    },
+    {
+      "courseId": "algebra-2",
+      "courseTitle": "Algebra II",
+      "topicId": "conics",
+      "topicTitle": "Conic Sections",
+      "subtopicId": "parabola",
+      "subtopicTitle": "Parabolas (Conic Section)"
+    },
+    {
+      "courseId": "algebra-2",
+      "courseTitle": "Algebra II",
+      "topicId": "conics",
+      "topicTitle": "Conic Sections",
+      "subtopicId": "ellipse",
+      "subtopicTitle": "Ellipses"
+    },
+    {
+      "courseId": "algebra-2",
+      "courseTitle": "Algebra II",
+      "topicId": "conics",
+      "topicTitle": "Conic Sections",
+      "subtopicId": "hyperbola",
+      "subtopicTitle": "Hyperbolas"
+    }
+  ],
+  "angle": [
+    {
+      "courseId": "geometry",
+      "courseTitle": "Geometry",
+      "topicId": "lines-angles",
+      "topicTitle": "Lines & Angles",
+      "subtopicId": "angle-types",
+      "subtopicTitle": "Types of Angles"
+    }
+  ],
+  "triangle-explorer": [
+    {
+      "courseId": "geometry",
+      "courseTitle": "Geometry",
+      "topicId": "triangles",
+      "topicTitle": "Triangles",
+      "subtopicId": "triangle-properties",
+      "subtopicTitle": "Triangle Properties"
+    }
+  ],
+  "iso-triangle": [
+    {
+      "courseId": "geometry",
+      "courseTitle": "Geometry",
+      "topicId": "triangles",
+      "topicTitle": "Triangles",
+      "subtopicId": "isosceles",
+      "subtopicTitle": "Isosceles Triangles"
+    },
+    {
+      "courseId": "geometry",
+      "courseTitle": "Geometry",
+      "topicId": "triangles",
+      "topicTitle": "Triangles",
+      "subtopicId": "equilateral",
+      "subtopicTitle": "Equilateral Triangles"
+    }
+  ],
+  "pythagorean": [
+    {
+      "courseId": "geometry",
+      "courseTitle": "Geometry",
+      "topicId": "triangles",
+      "topicTitle": "Triangles",
+      "subtopicId": "pythagorean",
+      "subtopicTitle": "The Pythagorean Theorem"
+    }
+  ],
+  "triangle-centers": [
+    {
+      "courseId": "geometry",
+      "courseTitle": "Geometry",
+      "topicId": "triangles",
+      "topicTitle": "Triangles",
+      "subtopicId": "circumcenter",
+      "subtopicTitle": "Circumcenter & Circumcircle"
+    },
+    {
+      "courseId": "geometry",
+      "courseTitle": "Geometry",
+      "topicId": "triangles",
+      "topicTitle": "Triangles",
+      "subtopicId": "centroid",
+      "subtopicTitle": "Centroid & Medians"
+    },
+    {
+      "courseId": "geometry",
+      "courseTitle": "Geometry",
+      "topicId": "triangles",
+      "topicTitle": "Triangles",
+      "subtopicId": "orthocenter",
+      "subtopicTitle": "Orthocenter & Altitudes"
+    },
+    {
+      "courseId": "geometry",
+      "courseTitle": "Geometry",
+      "topicId": "triangles",
+      "topicTitle": "Triangles",
+      "subtopicId": "euler-line",
+      "subtopicTitle": "The Euler Line"
+    }
+  ],
+  "triangle-incircle": [
+    {
+      "courseId": "geometry",
+      "courseTitle": "Geometry",
+      "topicId": "triangles",
+      "topicTitle": "Triangles",
+      "subtopicId": "incircle-incenter",
+      "subtopicTitle": "Incenter, Incircle & Inradius"
+    }
+  ],
+  "polygon": [
+    {
+      "courseId": "geometry",
+      "courseTitle": "Geometry",
+      "topicId": "quadrilaterals",
+      "topicTitle": "Quadrilaterals & Polygons",
+      "subtopicId": "polygon-angles",
+      "subtopicTitle": "Polygon Angle Sums"
+    }
+  ],
+  "circle": [
+    {
+      "courseId": "geometry",
+      "courseTitle": "Geometry",
+      "topicId": "circles",
+      "topicTitle": "Circles",
+      "subtopicId": "circle-vocabulary",
+      "subtopicTitle": "Circle Vocabulary"
+    },
+    {
+      "courseId": "geometry",
+      "courseTitle": "Geometry",
+      "topicId": "circles",
+      "topicTitle": "Circles",
+      "subtopicId": "arc-sector",
+      "subtopicTitle": "Arcs & Sectors"
+    }
+  ],
+  "circle-theorems": [
+    {
+      "courseId": "geometry",
+      "courseTitle": "Geometry",
+      "topicId": "circles",
+      "topicTitle": "Circles",
+      "subtopicId": "inscribed-angle",
+      "subtopicTitle": "The Inscribed Angle Theorem"
+    },
+    {
+      "courseId": "geometry",
+      "courseTitle": "Geometry",
+      "topicId": "circles",
+      "topicTitle": "Circles",
+      "subtopicId": "thales",
+      "subtopicTitle": "Thales' Theorem"
+    },
+    {
+      "courseId": "geometry",
+      "courseTitle": "Geometry",
+      "topicId": "circles",
+      "topicTitle": "Circles",
+      "subtopicId": "tangent-radius",
+      "subtopicTitle": "Tangent ⊥ Radius"
+    },
+    {
+      "courseId": "geometry",
+      "courseTitle": "Geometry",
+      "topicId": "circles",
+      "topicTitle": "Circles",
+      "subtopicId": "cyclic-quadrilateral",
+      "subtopicTitle": "Cyclic Quadrilaterals"
+    }
+  ],
+  "transformation": [
+    {
+      "courseId": "geometry",
+      "courseTitle": "Geometry",
+      "topicId": "transformations",
+      "topicTitle": "Transformations",
+      "subtopicId": "translations",
+      "subtopicTitle": "Translations"
+    },
+    {
+      "courseId": "geometry",
+      "courseTitle": "Geometry",
+      "topicId": "transformations",
+      "topicTitle": "Transformations",
+      "subtopicId": "reflections",
+      "subtopicTitle": "Reflections"
+    },
+    {
+      "courseId": "geometry",
+      "courseTitle": "Geometry",
+      "topicId": "transformations",
+      "topicTitle": "Transformations",
+      "subtopicId": "rotations",
+      "subtopicTitle": "Rotations"
+    },
+    {
+      "courseId": "geometry",
+      "courseTitle": "Geometry",
+      "topicId": "transformations",
+      "topicTitle": "Transformations",
+      "subtopicId": "dilations",
+      "subtopicTitle": "Dilations"
+    },
+    {
+      "courseId": "geometry",
+      "courseTitle": "Geometry",
+      "topicId": "transformations",
+      "topicTitle": "Transformations",
+      "subtopicId": "composition-symmetry",
+      "subtopicTitle": "Composition & Symmetry"
+    }
+  ],
+  "fractal-explorer": [
+    {
+      "courseId": "geometry",
+      "courseTitle": "Geometry",
+      "topicId": "fractals",
+      "topicTitle": "Fractals",
+      "subtopicId": "sierpinski",
+      "subtopicTitle": "The Sierpinski Triangle"
+    },
+    {
+      "courseId": "geometry",
+      "courseTitle": "Geometry",
+      "topicId": "fractals",
+      "topicTitle": "Fractals",
+      "subtopicId": "koch-snowflake",
+      "subtopicTitle": "The Koch Snowflake"
+    },
+    {
+      "courseId": "geometry",
+      "courseTitle": "Geometry",
+      "topicId": "fractals",
+      "topicTitle": "Fractals",
+      "subtopicId": "self-similarity",
+      "subtopicTitle": "Self-Similarity & Fractal Dimension"
+    }
+  ],
+  "trail-function": [
+    {
+      "courseId": "pre-calculus",
+      "courseTitle": "Pre-Calculus",
+      "topicId": "functions",
+      "topicTitle": "Functions",
+      "subtopicId": "big-picture",
+      "subtopicTitle": "Functions: The Big Picture"
+    }
+  ],
+  "function-mapping": [
+    {
+      "courseId": "pre-calculus",
+      "courseTitle": "Pre-Calculus",
+      "topicId": "functions",
+      "topicTitle": "Functions",
+      "subtopicId": "injective-surjective",
+      "subtopicTitle": "Injective, Surjective, Bijective"
+    }
+  ],
+  "right-triangle": [
+    {
+      "courseId": "pre-calculus",
+      "courseTitle": "Pre-Calculus",
+      "topicId": "trigonometry",
+      "topicTitle": "Trigonometry",
+      "subtopicId": "right-triangle-ratios",
+      "subtopicTitle": "Right-Triangle Ratios (SOHCAHTOA)"
+    },
+    {
+      "courseId": "pre-calculus",
+      "courseTitle": "Pre-Calculus",
+      "topicId": "trigonometry",
+      "topicTitle": "Trigonometry",
+      "subtopicId": "heights-and-distances",
+      "subtopicTitle": "Heights & Distances"
+    }
+  ],
+  "unit-circle": [
+    {
+      "courseId": "pre-calculus",
+      "courseTitle": "Pre-Calculus",
+      "topicId": "trigonometry",
+      "topicTitle": "Trigonometry",
+      "subtopicId": "unit-circle",
+      "subtopicTitle": "The Unit Circle"
+    },
+    {
+      "courseId": "pre-calculus",
+      "courseTitle": "Pre-Calculus",
+      "topicId": "trigonometry",
+      "topicTitle": "Trigonometry",
+      "subtopicId": "sine-cosine-graphs",
+      "subtopicTitle": "Trigonometric Function Graphs"
+    },
+    {
+      "courseId": "pre-calculus",
+      "courseTitle": "Pre-Calculus",
+      "topicId": "trigonometry",
+      "topicTitle": "Trigonometry",
+      "subtopicId": "radians-degrees",
+      "subtopicTitle": "Radians and Degrees"
+    },
+    {
+      "courseId": "pre-calculus",
+      "courseTitle": "Pre-Calculus",
+      "topicId": "trigonometry",
+      "topicTitle": "Trigonometry",
+      "subtopicId": "trig-identities",
+      "subtopicTitle": "Trig Identities"
+    }
+  ],
+  "trig-graph": [
+    {
+      "courseId": "pre-calculus",
+      "courseTitle": "Pre-Calculus",
+      "topicId": "trigonometry",
+      "topicTitle": "Trigonometry",
+      "subtopicId": "sine-cosine-graphs",
+      "subtopicTitle": "Trigonometric Function Graphs"
+    }
+  ],
+  "trig-equation": [
+    {
+      "courseId": "pre-calculus",
+      "courseTitle": "Pre-Calculus",
+      "topicId": "trigonometry",
+      "topicTitle": "Trigonometry",
+      "subtopicId": "solving-trig-equations",
+      "subtopicTitle": "Solving Trig Equations & Inverse Functions"
+    }
+  ],
+  "ferris-wheel": [
+    {
+      "courseId": "pre-calculus",
+      "courseTitle": "Pre-Calculus",
+      "topicId": "trigonometry",
+      "topicTitle": "Trigonometry",
+      "subtopicId": "sine-from-rotation",
+      "subtopicTitle": "Where Sine Comes From"
+    }
+  ],
+  "parametric-equation": [
+    {
+      "courseId": "pre-calculus",
+      "courseTitle": "Pre-Calculus",
+      "topicId": "trigonometry",
+      "topicTitle": "Trigonometry",
+      "subtopicId": "parametric-challenge",
+      "subtopicTitle": "A Parametric Trig Challenge"
+    }
+  ],
+  "vector-add": [
+    {
+      "courseId": "pre-calculus",
+      "courseTitle": "Pre-Calculus",
+      "topicId": "vectors-polar",
+      "topicTitle": "Vectors & Polar",
+      "subtopicId": "vector-basics",
+      "subtopicTitle": "Vector Basics"
+    }
+  ],
+  "polar-point": [
+    {
+      "courseId": "pre-calculus",
+      "courseTitle": "Pre-Calculus",
+      "topicId": "vectors-polar",
+      "topicTitle": "Vectors & Polar",
+      "subtopicId": "polar-coords",
+      "subtopicTitle": "Polar Coordinates"
+    }
+  ],
+  "speedo-odo": [
+    {
+      "courseId": "calculus-1",
+      "courseTitle": "Calculus I",
+      "topicId": "derivatives-concept",
+      "topicTitle": "The Derivative",
+      "subtopicId": "speed-distance-ftc",
+      "subtopicTitle": "Speed, Distance, and the FTC"
+    }
+  ],
+  "time-derivatives": [
+    {
+      "courseId": "calculus-1",
+      "courseTitle": "Calculus I",
+      "topicId": "derivatives-concept",
+      "topicTitle": "The Derivative",
+      "subtopicId": "velocity-acceleration",
+      "subtopicTitle": "When Time Varies — Velocity & Acceleration"
+    }
+  ],
+  "growing-square": [
+    {
+      "courseId": "calculus-1",
+      "courseTitle": "Calculus I",
+      "topicId": "derivatives-concept",
+      "topicTitle": "The Derivative",
+      "subtopicId": "growing-square",
+      "subtopicTitle": "The Growing Square — Where 2x Comes From"
+    }
+  ],
+  "derivative-explorer": [
+    {
+      "courseId": "calculus-1",
+      "courseTitle": "Calculus I",
+      "topicId": "derivatives-concept",
+      "topicTitle": "The Derivative",
+      "subtopicId": "definition-and-tangent",
+      "subtopicTitle": "Definition & Tangent Lines"
+    },
+    {
+      "courseId": "calculus-1",
+      "courseTitle": "Calculus I",
+      "topicId": "derivatives-concept",
+      "topicTitle": "The Derivative",
+      "subtopicId": "differentiability",
+      "subtopicTitle": "Differentiability"
+    },
+    {
+      "courseId": "calculus-1",
+      "courseTitle": "Calculus I",
+      "topicId": "differentiation-rules",
+      "topicTitle": "Differentiation Rules",
+      "subtopicId": "power-sum-rules",
+      "subtopicTitle": "Power, Sum & Constant Rules"
+    },
+    {
+      "courseId": "calculus-1",
+      "courseTitle": "Calculus I",
+      "topicId": "differentiation-rules",
+      "topicTitle": "Differentiation Rules",
+      "subtopicId": "trig-exp-log-derivatives",
+      "subtopicTitle": "Derivatives of Trig, Exp & Log"
+    }
+  ],
+  "shm": [
+    {
+      "courseId": "calculus-1",
+      "courseTitle": "Calculus I",
+      "topicId": "differentiation-rules",
+      "topicTitle": "Differentiation Rules",
+      "subtopicId": "sine-derivative-and-waves",
+      "subtopicTitle": "Sine's Derivative — and the Equation That Makes Waves"
+    }
+  ],
+  "osculating-circle": [
+    {
+      "courseId": "calculus-1",
+      "courseTitle": "Calculus I",
+      "topicId": "applications-derivatives",
+      "topicTitle": "Applications of Derivatives",
+      "subtopicId": "curvature",
+      "subtopicTitle": "Curvature — How Bent is a Curve?"
+    }
+  ],
+  "riemann-sum": [
+    {
+      "courseId": "calculus-1",
+      "courseTitle": "Calculus I",
+      "topicId": "integration",
+      "topicTitle": "Integration",
+      "subtopicId": "riemann-sums",
+      "subtopicTitle": "Riemann Sums & Definite Integrals"
+    }
+  ],
+  "dataset-summary": [
+    {
+      "courseId": "statistics",
+      "courseTitle": "Statistics & Probability",
+      "topicId": "descriptive",
+      "topicTitle": "Descriptive Statistics",
+      "subtopicId": "measures-of-center",
+      "subtopicTitle": "Measures of Center"
+    },
+    {
+      "courseId": "statistics",
+      "courseTitle": "Statistics & Probability",
+      "topicId": "descriptive",
+      "topicTitle": "Descriptive Statistics",
+      "subtopicId": "measures-of-spread",
+      "subtopicTitle": "Measures of Spread"
+    }
+  ],
+  "histogram": [
+    {
+      "courseId": "statistics",
+      "courseTitle": "Statistics & Probability",
+      "topicId": "descriptive",
+      "topicTitle": "Descriptive Statistics",
+      "subtopicId": "data-displays",
+      "subtopicTitle": "Data Displays"
+    },
+    {
+      "courseId": "statistics",
+      "courseTitle": "Statistics & Probability",
+      "topicId": "descriptive",
+      "topicTitle": "Descriptive Statistics",
+      "subtopicId": "grouped-data",
+      "subtopicTitle": "Statistics for Grouped Data"
+    }
+  ],
+  "probability-sim": [
+    {
+      "courseId": "statistics",
+      "courseTitle": "Statistics & Probability",
+      "topicId": "probability",
+      "topicTitle": "Probability",
+      "subtopicId": "basic-probability",
+      "subtopicTitle": "Basic Probability"
+    },
+    {
+      "courseId": "statistics",
+      "courseTitle": "Statistics & Probability",
+      "topicId": "distributions",
+      "topicTitle": "Distributions",
+      "subtopicId": "discrete-random-variables",
+      "subtopicTitle": "Discrete Random Variables"
+    }
+  ],
+  "galton-board": [
+    {
+      "courseId": "statistics",
+      "courseTitle": "Statistics & Probability",
+      "topicId": "probability",
+      "topicTitle": "Probability",
+      "subtopicId": "galton-board-clt",
+      "subtopicTitle": "The Galton Board: Where Bell Curves Come From"
+    }
+  ],
+  "normal-distribution": [
+    {
+      "courseId": "statistics",
+      "courseTitle": "Statistics & Probability",
+      "topicId": "distributions",
+      "topicTitle": "Distributions",
+      "subtopicId": "normal-distribution",
+      "subtopicTitle": "The Normal Distribution"
+    },
+    {
+      "courseId": "statistics",
+      "courseTitle": "Statistics & Probability",
+      "topicId": "sampling",
+      "topicTitle": "Sampling & Inference",
+      "subtopicId": "sampling-distributions",
+      "subtopicTitle": "Sampling Distributions"
+    }
+  ]
+}

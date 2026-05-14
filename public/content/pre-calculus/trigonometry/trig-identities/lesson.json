@@ -1,0 +1,265 @@
+{
+  "title": "Trig Identities",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "**Trig identities** are equations involving trig functions that are true for *every* angle. They're tools — knowing them lets you simplify ugly expressions, solve equations more cleverly, prove other identities, and integrate functions in calculus. Memorize a small core set; the rest follow."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. The Foundational Identities"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The Pythagorean identity",
+      "body": "$$\\sin^2\\theta + \\cos^2\\theta = 1$$ True for every $\\theta$. Comes directly from the unit circle: every point $(\\cos\\theta, \\sin\\theta)$ satisfies $x^2 + y^2 = 1$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "Two cousin identities follow from dividing the Pythagorean identity by $\\cos^2\\theta$ and by $\\sin^2\\theta$:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "1 + \\tan^2\\theta = \\sec^2\\theta"
+    },
+    {
+      "type": "math",
+      "tex": "1 + \\cot^2\\theta = \\csc^2\\theta"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Reciprocal identities (definitions)",
+        "These are just renaming the inverses of the basic three:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\csc\\theta = \\dfrac{1}{\\sin\\theta}, \\quad \\sec\\theta = \\dfrac{1}{\\cos\\theta}, \\quad \\cot\\theta = \\dfrac{1}{\\tan\\theta}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Quotient identities"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\tan\\theta = \\dfrac{\\sin\\theta}{\\cos\\theta}, \\quad \\cot\\theta = \\dfrac{\\cos\\theta}{\\sin\\theta}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Even/odd identities",
+        "Cosine is **even** — symmetric across the y-axis. Sine and tangent are **odd** — they flip sign with the input:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\cos(-\\theta) = \\cos\\theta, \\quad \\sin(-\\theta) = -\\sin\\theta, \\quad \\tan(-\\theta) = -\\tan\\theta"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Use the unit-circle widget to confirm: at $\\theta = 60°$ vs $\\theta = -60°$ (or $300°$), the cosine values are equal but the sines are opposites."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "unit-circle",
+      "config": {
+        "initialAngle": 60
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. Angle Sum & Difference Identities",
+        "These let you find $\\sin(A + B)$ and $\\cos(A + B)$ when you know $\\sin A, \\cos A, \\sin B, \\cos B$ — and they're the foundation for most other identities."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\sin(A + B) = \\sin A \\cos B + \\cos A \\sin B"
+    },
+    {
+      "type": "math",
+      "tex": "\\sin(A - B) = \\sin A \\cos B - \\cos A \\sin B"
+    },
+    {
+      "type": "math",
+      "tex": "\\cos(A + B) = \\cos A \\cos B - \\sin A \\sin B"
+    },
+    {
+      "type": "math",
+      "tex": "\\cos(A - B) = \\cos A \\cos B + \\sin A \\sin B"
+    },
+    {
+      "type": "callout",
+      "title": "Memory tip",
+      "body": "Sine sum/difference: '**sin cos plus/minus cos sin**' — same operations, same letters. Cosine sum/difference: '**cos cos minus/plus sin sin**' — note the **opposite** sign! (Plus inside → minus outside; minus inside → plus outside.)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — exact value of $\\sin 75°$",
+        "$75° = 45° + 30°$, both special angles.",
+        "$$\\sin 75° = \\sin(45° + 30°) = \\sin 45° \\cos 30° + \\cos 45° \\sin 30°$$",
+        "$$= \\dfrac{\\sqrt{2}}{2} \\cdot \\dfrac{\\sqrt{3}}{2} + \\dfrac{\\sqrt{2}}{2} \\cdot \\dfrac{1}{2}$$",
+        "$$= \\dfrac{\\sqrt{6}}{4} + \\dfrac{\\sqrt{2}}{4} = \\dfrac{\\sqrt{6} + \\sqrt{2}}{4}$$",
+        "Now you can write $\\sin 75°$ in **exact form** without a calculator!"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Tangent sum/difference (derived)",
+        "From $\\tan = \\sin/\\cos$ applied to the sum/difference identities:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\tan(A + B) = \\dfrac{\\tan A + \\tan B}{1 - \\tan A \\tan B} \\qquad \\tan(A - B) = \\dfrac{\\tan A - \\tan B}{1 + \\tan A \\tan B}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. Double-Angle Identities",
+        "Special cases of the sum identities with $A = B$:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta"
+    },
+    {
+      "type": "math",
+      "tex": "\\cos(2\\theta) = \\cos^2\\theta - \\sin^2\\theta = 1 - 2\\sin^2\\theta = 2\\cos^2\\theta - 1"
+    },
+    {
+      "type": "math",
+      "tex": "\\tan(2\\theta) = \\dfrac{2 \\tan\\theta}{1 - \\tan^2\\theta}"
+    },
+    {
+      "type": "callout",
+      "title": "Three forms of cos(2θ)",
+      "body": "$\\cos(2\\theta)$ has three equivalent forms — pick the one that matches what you have. **$\\cos^2 - \\sin^2$**: useful when both are present. **$1 - 2\\sin^2\\theta$**: useful if you want everything in terms of sine. **$2\\cos^2\\theta - 1$**: useful if you want everything in terms of cosine. The last two are also the building blocks for the half-angle identities below."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. Half-Angle Identities",
+        "Solve $\\cos(2\\theta) = 1 - 2\\sin^2\\theta$ for $\\sin^2\\theta$, then substitute $\\theta \\to \\theta/2$:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\sin^2\\!\\left(\\dfrac{\\theta}{2}\\right) = \\dfrac{1 - \\cos\\theta}{2} \\qquad \\cos^2\\!\\left(\\dfrac{\\theta}{2}\\right) = \\dfrac{1 + \\cos\\theta}{2}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Take square roots (the sign depends on which quadrant $\\theta/2$ is in):"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\sin\\!\\left(\\dfrac{\\theta}{2}\\right) = \\pm\\sqrt{\\dfrac{1 - \\cos\\theta}{2}} \\qquad \\cos\\!\\left(\\dfrac{\\theta}{2}\\right) = \\pm\\sqrt{\\dfrac{1 + \\cos\\theta}{2}}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — find $\\cos(15°)$ exactly",
+        "$15° = 30°/2$. Use the half-angle identity for cosine:",
+        "$$\\cos 15° = +\\sqrt{\\dfrac{1 + \\cos 30°}{2}} = \\sqrt{\\dfrac{1 + \\tfrac{\\sqrt{3}}{2}}{2}} = \\sqrt{\\dfrac{2 + \\sqrt{3}}{4}} = \\dfrac{\\sqrt{2 + \\sqrt{3}}}{2}$$",
+        "(Sign is positive because $15°$ is in Q I, where cosine is positive.)",
+        "Decimal: $\\cos 15° \\approx 0.9659$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 5. Proving Trig Identities",
+        "**'Prove the identity'** problems give you an equation to verify. The standard methodology is a craft. Some moves to try:"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Strategy for proving identities",
+      "body": "**Pick one side** and transform it step by step until you arrive at the other side. (Don't manipulate both sides as if they were equal — that assumes what you're trying to prove.) **Pick the more complicated side** to start with — you have more to break down. **Substitute identities aggressively**: replace $\\tan, \\cot, \\sec, \\csc$ with their $\\sin/\\cos$ definitions. **Combine fractions, find common denominators, factor.** **When stuck, try the Pythagorean identity** in some form."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 1 — prove $\\dfrac{\\sin\\theta}{1 - \\cos\\theta} = \\dfrac{1 + \\cos\\theta}{\\sin\\theta}$",
+        "Start with the LHS. Multiply numerator and denominator by the *conjugate* of the denominator, $1 + \\cos\\theta$:",
+        "$$\\dfrac{\\sin\\theta}{1 - \\cos\\theta} \\cdot \\dfrac{1 + \\cos\\theta}{1 + \\cos\\theta} = \\dfrac{\\sin\\theta(1 + \\cos\\theta)}{1 - \\cos^2\\theta}$$",
+        "By Pythagorean: $1 - \\cos^2\\theta = \\sin^2\\theta$.",
+        "$$= \\dfrac{\\sin\\theta(1 + \\cos\\theta)}{\\sin^2\\theta} = \\dfrac{1 + \\cos\\theta}{\\sin\\theta}$$",
+        "= RHS. ✓"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 2 — prove $\\sec^2\\theta - \\tan^2\\theta = 1$",
+        "Start with LHS. Convert to $\\sin/\\cos$:",
+        "$$\\sec^2\\theta - \\tan^2\\theta = \\dfrac{1}{\\cos^2\\theta} - \\dfrac{\\sin^2\\theta}{\\cos^2\\theta} = \\dfrac{1 - \\sin^2\\theta}{\\cos^2\\theta}$$",
+        "By Pythagorean: $1 - \\sin^2\\theta = \\cos^2\\theta$.",
+        "$$= \\dfrac{\\cos^2\\theta}{\\cos^2\\theta} = 1$$",
+        "= RHS. ✓",
+        "(Faster route: divide $\\sin^2 + \\cos^2 = 1$ by $\\cos^2$ to get $\\tan^2 + 1 = \\sec^2$, i.e. $\\sec^2 - \\tan^2 = 1$. Both methods work — but writing it from $\\sin/\\cos$ first is the safer default.)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 3 — prove $\\sin(2\\theta) = \\dfrac{2\\tan\\theta}{1 + \\tan^2\\theta}$",
+        "Start with the *more complex* RHS. Substitute $\\tan = \\sin/\\cos$ and $1 + \\tan^2 = \\sec^2 = 1/\\cos^2$:",
+        "$$\\dfrac{2\\tan\\theta}{1 + \\tan^2\\theta} = \\dfrac{2 \\cdot \\tfrac{\\sin\\theta}{\\cos\\theta}}{1/\\cos^2\\theta} = \\dfrac{2\\sin\\theta}{\\cos\\theta} \\cdot \\cos^2\\theta = 2\\sin\\theta\\cos\\theta = \\sin(2\\theta)$$",
+        "= LHS. ✓"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "When in doubt — go to sin and cos",
+      "body": "If a proof feels stuck, rewrite everything in terms of $\\sin$ and $\\cos$ using the reciprocal and quotient identities. From there, find common denominators and apply the Pythagorean identity. This 'fundamental form' approach succeeds 90% of the time."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 6. Product-to-Sum & Sum-to-Product (briefly)",
+        "Less commonly memorized but useful for integration and Fourier work:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\sin A \\cos B = \\tfrac{1}{2}\\bigl[\\sin(A + B) + \\sin(A - B)\\bigr]"
+    },
+    {
+      "type": "math",
+      "tex": "\\cos A \\cos B = \\tfrac{1}{2}\\bigl[\\cos(A + B) + \\cos(A - B)\\bigr]"
+    },
+    {
+      "type": "math",
+      "tex": "\\sin A \\sin B = \\tfrac{1}{2}\\bigl[\\cos(A - B) - \\cos(A + B)\\bigr]"
+    },
+    {
+      "type": "text",
+      "md": [
+        "These are derived directly from the sum/difference identities by adding or subtracting pairs."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "Memorize the **Pythagorean** ($\\sin^2 + \\cos^2 = 1$), **quotient** ($\\tan = \\sin/\\cos$), and **angle-sum** formulas. From sum-with-$A = B$ comes **double-angle**; from solving cos double-angle for sin² or cos² comes **half-angle**. To **prove** an identity, pick one side (preferably the messier one) and rewrite step by step using definitions, common denominators, and Pythagorean. Identities are *tools* — you build fluency by using them, not by listing them."
+    }
+  ]
+}

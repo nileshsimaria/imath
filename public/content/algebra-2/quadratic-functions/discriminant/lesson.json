@@ -1,0 +1,82 @@
+{
+  "title": "The Discriminant",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "The expression under the square root in the quadratic formula has a name and a job all its own. It's called the **discriminant**:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\Delta = b^2 - 4ac"
+    },
+    {
+      "type": "text",
+      "md": [
+        "It tells you, *without solving anything*, how many real roots a quadratic $ax^2 + bx + c = 0$ has — and equivalently, how many times the parabola $y = ax^2 + bx + c$ crosses the x-axis."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The three cases",
+      "body": "**$\\Delta > 0$** → two distinct real roots. The parabola crosses the x-axis at two different points.\n**$\\Delta = 0$** → one repeated real root. The parabola just *touches* the x-axis at its vertex.\n**$\\Delta < 0$** → no real roots. The parabola is entirely above (if $a > 0$) or below (if $a < 0$) the x-axis."
+    },
+    {
+      "type": "text",
+      "md": [
+        "Try the slider widget — change $a$, $b$, $c$ and watch the discriminant change sign. See how the red roots appear, merge, then disappear:"
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "parabola",
+      "config": {
+        "a": 1,
+        "b": -2,
+        "c": -3,
+        "yRange": [
+          -6,
+          6
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why $b^2 - 4ac$ matters",
+        "Look at the quadratic formula: $x = \\dfrac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$. The roots split into two values *because of the $\\pm$*. But that only happens when $\\sqrt{b^2 - 4ac}$ is a real, non-zero number.",
+        "If $b^2 - 4ac > 0$, the square root is positive, and $\\pm$ gives two different answers.",
+        "If $b^2 - 4ac = 0$, the square root is zero — both signs give the same answer.",
+        "If $b^2 - 4ac < 0$, the square root of a negative number isn't real — no real solutions."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked examples",
+        "**$2x^2 + 3x - 5 = 0$.** $\\Delta = 9 - 4(2)(-5) = 9 + 40 = 49 > 0$ → two real roots.",
+        "**$x^2 - 4x + 4 = 0$.** $\\Delta = 16 - 16 = 0$ → one repeated root (the parabola touches the x-axis at its vertex).",
+        "**$x^2 + 1 = 0$.** $\\Delta = 0 - 4 = -4 < 0$ → no real roots (parabola sits entirely above the x-axis)."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Use it to save time",
+      "body": "Before plowing through the quadratic formula, check the discriminant. If $\\Delta < 0$ you can stop right there — the answer is 'no real solutions'. No need to compute $\\dfrac{-b \\pm \\sqrt{\\text{negative}}}{2a}$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Perfect-square discriminants and rational roots",
+        "When $\\Delta$ is a *perfect square* (like $1, 4, 9, 16, 25, \\ldots$), the roots come out **rational** — $\\sqrt{\\Delta}$ is a whole number, so the formula gives clean fractions. That's a hint the trinomial probably **factors over the integers**, and you could have used factoring instead. (Example above: $\\Delta = 49 = 7^2$ — and indeed $2x^2 + 3x - 5 = (2x + 5)(x - 1)$.)",
+        "If $\\Delta$ is positive but not a perfect square, the roots are *irrational* — factoring won't give integer-coefficient factors. Use the quadratic formula."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "$\\Delta = b^2 - 4ac$. Three cases: $\\Delta > 0$ → 2 real roots; $\\Delta = 0$ → 1 repeated; $\\Delta < 0$ → no real roots. Compute it first and save yourself work — and look for perfect squares to know when factoring will succeed."
+    }
+  ]
+}

@@ -1,0 +1,300 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{When differentiating } y^2 \\text{ with respect to } x, \\text{ you get:}",
+      "choices": [
+        "2y",
+        "2y \\cdot dy/dx",
+        "2x",
+        "y^2"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Chain rule: $y^2 \\to 2y \\cdot y'$.",
+        "$2y \\cdot dy/dx$. Don't forget the $dy/dx$!"
+      ],
+      "explanation": "Chain rule on $y^2$ where $y$ depends on $x$: $\\frac{d}{dx}(y^2) = 2y \\cdot \\frac{dy}{dx}$.",
+      "steps": [
+        "**The key insight: $y$ is a function of $x$**, even though we don't have an explicit formula for it. Whenever you see $y$ in an equation defining a curve, mentally substitute 'some function $y(x)$' — the chain rule will then activate for any composition involving it.",
+        "**Identify the composition.** $y^2 = (y(x))^2$. Outer: $u^2$. Inner: $y(x)$.",
+        "**Apply chain rule.** $\\dfrac{d}{dx}((y(x))^2) = 2 y(x) \\cdot \\dfrac{dy}{dx}$.",
+        "**This trailing $\\dfrac{dy}{dx}$ is the WHOLE point of implicit differentiation.** Forgetting it is the #1 mistake students make.",
+        "**Pattern.** Whenever you differentiate ANY $y$-expression with respect to $x$, the chain rule gives an extra $\\dfrac{dy}{dx}$ factor at the end."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{For } x^2 + y^2 = 25, \\text{ find } dy/dx.",
+      "choices": [
+        "-x/y",
+        "x/y",
+        "-y/x",
+        "y/x"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Differentiate both sides: $2x + 2y \\cdot dy/dx = 0$.",
+        "Solve: $dy/dx = -x/y$."
+      ],
+      "explanation": "$2x + 2y \\cdot dy/dx = 0 \\Rightarrow dy/dx = -x/y$.",
+      "steps": [
+        "**Recognize this is a circle** $x^2 + y^2 = R^2$ with $R = 5$. We can't write $y$ as a single function of $x$ (need $\\pm$), so implicit differentiation is the right tool.",
+        "**Differentiate BOTH sides with respect to $x$.** Treat $y$ as a function of $x$.",
+        "**Left side.** $\\dfrac{d}{dx}(x^2) + \\dfrac{d}{dx}(y^2) = 2x + 2y \\cdot \\dfrac{dy}{dx}$. (The $y^2$ term gets the chain-rule $\\dfrac{dy}{dx}$.)",
+        "**Right side.** $\\dfrac{d}{dx}(25) = 0$.",
+        "**So.** $2x + 2y \\, \\dfrac{dy}{dx} = 0$. Now treat as an algebra problem in $\\dfrac{dy}{dx}$.",
+        "**Solve.** $2y \\, \\dfrac{dy}{dx} = -2x \\Rightarrow \\dfrac{dy}{dx} = -\\dfrac{x}{y}$.",
+        "**Geometric beauty.** For a circle, the radius vector $(x, y)$ has slope $y/x$ from the origin. The tangent is PERPENDICULAR to the radius, so its slope is the negative reciprocal: $-x/y$. ✓ The implicit-differentiation answer matches geometric intuition exactly."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{For } x^2 + y^2 = 25, \\text{ find the slope of the tangent line at } (3, 4).",
+      "answer": -0.75,
+      "tolerance": 0.005,
+      "hints": [
+        "From above, $dy/dx = -x/y$. At $(3, 4)$: $-3/4 = -0.75$.",
+        "$-0.75$."
+      ],
+      "explanation": "$dy/dx = -x/y = -3/4 = -0.75$.",
+      "steps": [
+        "**Use the implicit derivative we already found.** $\\dfrac{dy}{dx} = -\\dfrac{x}{y}$ (from Q2).",
+        "**Verify the point is ON the circle.** $3^2 + 4^2 = 25$ ✓ (otherwise $-x/y$ wouldn't be defined for that point).",
+        "**Plug in.** $-\\dfrac{3}{4} = -0.75$.",
+        "**Lesson on implicit-derivative answers.** Unlike explicit derivatives, the answer here depends on BOTH $x$ and $y$ — both coordinates of the point matter. Same $x = 3$ at the other point $(3, -4)$ gives a different slope ($+0.75$)."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{For } xy = 4, \\text{ find } dy/dx.",
+      "choices": [
+        "-y/x",
+        "y/x",
+        "-x/y",
+        "x/y"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Differentiate $xy$ via product rule: $y + x \\cdot dy/dx = 0$.",
+        "Solve: $dy/dx = -y/x$."
+      ],
+      "explanation": "$y + x \\cdot dy/dx = 0 \\Rightarrow dy/dx = -y/x$.",
+      "steps": [
+        "**The $xy$ term is a PRODUCT of $x$ and $y$ — product rule needed.**",
+        "**Differentiate both sides.** $\\dfrac{d}{dx}(xy) = \\dfrac{d}{dx}(4)$.",
+        "**Apply product rule on $xy$.** $\\dfrac{d}{dx}(x \\cdot y) = 1 \\cdot y + x \\cdot \\dfrac{dy}{dx} = y + x \\, \\dfrac{dy}{dx}$. (Two terms: $\\dfrac{d}{dx}(x) \\cdot y$, plus $x \\cdot \\dfrac{d}{dx}(y)$. The second gets a chain-rule $\\dfrac{dy}{dx}$.)",
+        "**Right side.** $\\dfrac{d}{dx}(4) = 0$.",
+        "**Equation.** $y + x \\, \\dfrac{dy}{dx} = 0$. Solve for $\\dfrac{dy}{dx}$: $\\dfrac{dy}{dx} = -\\dfrac{y}{x}$.",
+        "**Verification via explicit form.** $xy = 4 \\Rightarrow y = 4/x = 4 x^{-1}$. $\\dfrac{dy}{dx} = -4 x^{-2} = -\\dfrac{4}{x^2}$. Sanity check: $-\\dfrac{y}{x} = -\\dfrac{4/x}{x} = -\\dfrac{4}{x^2}$. ✓ Same answer."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{For } x^2 + xy = 4, \\text{ find } dy/dx.",
+      "choices": [
+        "\\dfrac{-2x - y}{x}",
+        "\\dfrac{-y}{x}",
+        "\\dfrac{-2x}{y}",
+        "\\dfrac{2x + y}{x}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Differentiate: $2x + (y + x \\cdot dy/dx) = 0$.",
+        "Solve: $x \\cdot dy/dx = -2x - y$, so $dy/dx = (-2x - y)/x$."
+      ],
+      "explanation": "$2x + y + x \\cdot dy/dx = 0 \\Rightarrow dy/dx = (-2x - y)/x$.",
+      "steps": [
+        "**Differentiate both sides term by term.**",
+        "**Term $x^2$.** Derivative: $2x$ (pure $x$, no chain rule needed).",
+        "**Term $xy$.** Product rule (with $y$ depending on $x$): $1 \\cdot y + x \\cdot \\dfrac{dy}{dx} = y + x \\, \\dfrac{dy}{dx}$.",
+        "**Right side.** $\\dfrac{d}{dx}(4) = 0$.",
+        "**Combined equation.** $2x + y + x \\, \\dfrac{dy}{dx} = 0$.",
+        "**Isolate $\\dfrac{dy}{dx}$.** $x \\, \\dfrac{dy}{dx} = -2x - y \\Rightarrow \\dfrac{dy}{dx} = \\dfrac{-2x - y}{x}$.",
+        "**General implicit-diff algorithm.** (1) Differentiate both sides; (2) Collect $\\dfrac{dy}{dx}$ terms on one side, everything else on the other; (3) Factor out $\\dfrac{dy}{dx}$; (4) Divide."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\text{For implicit differentiation, } y \\text{ is treated as:}",
+      "choices": [
+        "a constant",
+        "a function of x (so chain rule applies)",
+        "the variable being differentiated",
+        "always equal to x"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Implicit: y depends on x even though we don't have a formula.",
+        "Apply chain rule whenever differentiating a y term."
+      ],
+      "explanation": "$y$ is treated as a function of $x$ (even though we don't have an explicit formula), so chain rule applies whenever we differentiate a $y$ term.",
+      "steps": [
+        "**The KEY mental model:** $y = y(x)$ — $y$ is some function of $x$ even when we can't write it out.",
+        "**Consequence: chain rule activates on every $y$-expression.** $\\dfrac{d}{dx}(y) = \\dfrac{dy}{dx}$. $\\dfrac{d}{dx}(y^n) = n y^{n-1} \\cdot \\dfrac{dy}{dx}$. $\\dfrac{d}{dx}(\\sin y) = \\cos y \\cdot \\dfrac{dy}{dx}$. Etc.",
+        "**Why this works.** Equations like $x^2 + y^2 = 25$ define $y$ implicitly as a function of $x$ (or maybe several functions, in this case the upper and lower halves of the circle). The chain rule lets us compute the derivative without ever solving for $y$ explicitly."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{d}{dx}(\\sin y) = ?",
+      "choices": [
+        "\\cos y \\cdot dy/dx",
+        "\\cos y",
+        "-\\sin y",
+        "\\sin y \\cdot dy/dx"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Outer $\\sin u \\to \\cos u$. Inner $y \\to dy/dx$.",
+        "$\\cos y \\cdot dy/dx$."
+      ],
+      "explanation": "$\\sin y$ where $y = y(x)$: chain rule gives $\\cos y \\cdot dy/dx$.",
+      "steps": [
+        "**Recognize: $\\sin y$ is $\\sin(y(x))$ — a composition.** Outer: $\\sin$. Inner: $y(x)$.",
+        "**Apply chain rule.** $\\dfrac{d}{dx}(\\sin y) = \\cos y \\cdot \\dfrac{dy}{dx}$.",
+        "**The trailing $\\dfrac{dy}{dx}$ is essential.** Without it, you'd be computing $\\dfrac{d}{dy}(\\sin y) = \\cos y$ — the derivative with respect to $y$, not $x$. Wrong variable.",
+        "**Pattern.** Any function of $y$, differentiated w.r.t. $x$, gets multiplied by $\\dfrac{dy}{dx}$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "promptTex": "\\text{For } y^3 + x = 5, \\text{ find } dy/dx.",
+      "choices": [
+        "\\dfrac{-1}{3y^2}",
+        "\\dfrac{1}{3y^2}",
+        "\\dfrac{-y^2}{3}",
+        "\\dfrac{1}{y}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Differentiate: $3y^2 \\cdot dy/dx + 1 = 0$.",
+        "Solve: $dy/dx = -1/(3y^2)$."
+      ],
+      "explanation": "$3y^2 \\cdot dy/dx + 1 = 0 \\Rightarrow dy/dx = -\\dfrac{1}{3y^2}$.",
+      "steps": [
+        "**Differentiate both sides w.r.t. $x$.**",
+        "**Term $y^3$.** Chain rule: $3y^2 \\cdot \\dfrac{dy}{dx}$.",
+        "**Term $x$.** Derivative: $1$.",
+        "**Right side.** $\\dfrac{d}{dx}(5) = 0$.",
+        "**Equation.** $3y^2 \\, \\dfrac{dy}{dx} + 1 = 0$.",
+        "**Solve.** $\\dfrac{dy}{dx} = -\\dfrac{1}{3y^2}$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\text{For } x = \\cos y, \\text{ find } dy/dx.",
+      "choices": [
+        "-\\dfrac{1}{\\sin y}",
+        "-\\sin y",
+        "\\dfrac{1}{\\sin y}",
+        "\\sin y"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Differentiate: $1 = -\\sin y \\cdot dy/dx$. Solve: $dy/dx = -1/\\sin y$.",
+        "$-1/\\sin y$."
+      ],
+      "explanation": "$1 = -\\sin y \\cdot dy/dx \\Rightarrow dy/dx = -1/\\sin y$.",
+      "steps": [
+        "**Notice: this equation defines $y$ implicitly as a function of $x$ — actually $y = \\arccos x$.**",
+        "**Differentiate both sides w.r.t. $x$.** Left side: $\\dfrac{d}{dx}(x) = 1$. Right side: $\\dfrac{d}{dx}(\\cos y) = -\\sin y \\cdot \\dfrac{dy}{dx}$ (chain rule on $y$).",
+        "**Equation.** $1 = -\\sin y \\cdot \\dfrac{dy}{dx}$.",
+        "**Solve.** $\\dfrac{dy}{dx} = -\\dfrac{1}{\\sin y}$.",
+        "**Convert back to $x$ for the standard inverse-trig formula.** Using $\\sin y = \\sqrt{1 - \\cos^2 y} = \\sqrt{1 - x^2}$: $\\dfrac{dy}{dx} = -\\dfrac{1}{\\sqrt{1 - x^2}}$. That's the well-known derivative of $\\arccos x$. Implicit differentiation derived it for us almost effortlessly."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q10",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The most common error in implicit differentiation is:}",
+      "choices": [
+        "Not solving for $dy/dx$",
+        "Forgetting to apply the chain rule when differentiating $y$ terms",
+        "Dividing by zero",
+        "Using wrong functions"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "The chain rule on y terms is the whole point — easy to forget.",
+        "Don't forget the $dy/dx$!"
+      ],
+      "explanation": "Forgetting the $dy/dx$ factor when differentiating $y$ terms — that chain rule moment is the #1 mistake.",
+      "steps": [
+        "**The #1 mistake: forgetting the chain-rule factor.**",
+        "**Wrong:** $\\dfrac{d}{dx}(y^3) = 3y^2$.",
+        "**Right:** $\\dfrac{d}{dx}(y^3) = 3y^2 \\cdot \\dfrac{dy}{dx}$.",
+        "**Why this matters.** Without the $\\dfrac{dy}{dx}$, you can't isolate it — and the whole point of implicit differentiation is to SOLVE for it. Skipping the chain rule short-circuits the method."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{For } x^2 + y^2 = 25 \\text{ at } (4, -3), \\text{ find slope of tangent (decimal).}",
+      "answer": 1.333,
+      "tolerance": 0.005,
+      "hints": [
+        "$dy/dx = -x/y = -4/(-3) = 4/3 \\approx 1.333$.",
+        "$\\approx 1.333$."
+      ],
+      "explanation": "$dy/dx = -x/y = -4/(-3) = 4/3 \\approx 1.333$.",
+      "steps": [
+        "**Reuse the formula from Q2.** $\\dfrac{dy}{dx} = -\\dfrac{x}{y}$.",
+        "**Verify the point is on the circle.** $4^2 + (-3)^2 = 16 + 9 = 25$ ✓.",
+        "**Plug in.** $-\\dfrac{4}{-3} = \\dfrac{4}{3} \\approx 1.333$.",
+        "**Sign sanity-check.** At $(4, -3)$, the point is in the LOWER-RIGHT quadrant of the circle. The tangent line there should slope UP and to the right (positive slope). ✓ Matches our $4/3$ answer.",
+        "**Symmetry observation.** Compare to $(3, 4)$ from Q3 (slope $-0.75$): the slopes at $(3, 4)$ and $(4, -3)$ have a specific relationship — they're NEGATIVE RECIPROCALS! That's because the radii to these points are PERPENDICULAR, and a 90° rotation swaps a slope $m$ to $-1/m$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "promptTex": "\\text{When } y \\text{ cannot be solved explicitly from the equation, you should use:}",
+      "choices": [
+        "the quotient rule",
+        "implicit differentiation",
+        "L'Hôpital's rule",
+        "give up"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Implicit differentiation is exactly for this case.",
+        "It works without solving for y."
+      ],
+      "explanation": "Implicit differentiation is designed exactly for cases where solving for $y$ explicitly is hard or impossible.",
+      "steps": [
+        "**When implicit differentiation is the ONLY choice.** Some equations defining curves can't be solved for $y$ in closed form. Example: $x^3 + y^3 = 3xy$ (the folium of Descartes) has no clean $y = f(x)$.",
+        "**When it's CONVENIENT even though solving is possible.** $x^2 + y^2 = 25$ can be solved ($y = \\pm\\sqrt{25 - x^2}$), but the $\\pm$ branches make explicit differentiation awkward. Implicit gives one clean formula $-x/y$ that works for ALL points on the curve.",
+        "**Takeaway.** Implicit differentiation is the right tool whenever the curve is defined by an EQUATION (not a function $y = f(x)$). It handles both 'impossible' and 'awkward' cases gracefully."
+      ],
+      "difficulty": "easy"
+    }
+  ]
+}

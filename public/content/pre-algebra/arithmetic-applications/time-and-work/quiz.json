@@ -1,0 +1,371 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{A finishes in } 10 \\text{ days, B in } 15 \\text{ days. Together time (days)?}",
+      "answer": 6,
+      "tolerance": 0.05,
+      "hints": [
+        "Combined rate: $1/10 + 1/15 = 1/6$. Time: 6 days.",
+        "Or LCM(10, 15) = 30; A = 3, B = 2; together = 5; time = 30/5 = 6."
+      ],
+      "explanation": "Combined rate $= 1/10 + 1/15 = (3+2)/30 = 1/6$. Time = 6 days.",
+      "steps": [
+        {
+          "text": "**LCM trick:** LCM(10, 15) = 30. Set total work = 30 units."
+        },
+        {
+          "text": "**Rates:** A = $30/10 = 3$ units/day, B = $30/15 = 2$ units/day. Together: $5$ units/day."
+        },
+        {
+          "math": "\\text{Time} = \\dfrac{30}{5} = 6 \\text{ days}"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{A in } 8 \\text{ days, B in } 12 \\text{ days. Together time (days)?}",
+      "answer": 4.8,
+      "tolerance": 0.05,
+      "hints": [
+        "LCM(8, 12) = 24. A = 3, B = 2. Combined = 5.",
+        "Time = $24/5 = 4.8$."
+      ],
+      "explanation": "$24/5 = 4.8$ days.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{A, B together do work in } 12 \\text{ days. A alone in } 18 \\text{ days. B alone (days)?}",
+      "answer": 36,
+      "tolerance": 0.1,
+      "hints": [
+        "B's rate = combined − A's = $1/12 - 1/18 = (3 - 2)/36 = 1/36$.",
+        "Time = 36 days."
+      ],
+      "explanation": "B's rate = $1/12 - 1/18 = 1/36$. So B alone takes 36 days.",
+      "steps": [
+        {
+          "text": "**Together's rate** − **A's rate** = **B's rate**:"
+        },
+        {
+          "math": "\\dfrac{1}{12} - \\dfrac{1}{18} = \\dfrac{3 - 2}{36} = \\dfrac{1}{36}"
+        },
+        {
+          "text": "**Time for B alone** = $1 / (1/36) = 36$ days."
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Pipe A fills a tank in } 5 \\text{ h. Pipe B empties it in } 10 \\text{ h. Both open: time to fill (h)?}",
+      "answer": 10,
+      "tolerance": 0.05,
+      "hints": [
+        "LCM(5, 10) = 10. A = +2 units/h, B = −1 unit/h. Net = +1 unit/h.",
+        "Time = 10 h."
+      ],
+      "explanation": "Net rate = $1/5 - 1/10 = 1/10$. So 10 hours.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{A is twice as efficient as B. B alone takes } 30 \\text{ days. Time together (days)?}",
+      "answer": 10,
+      "tolerance": 0.05,
+      "hints": [
+        "A alone: 15 days (twice as efficient).",
+        "Together: LCM(30, 15) = 30; A = 2, B = 1, together = 3. Time = 10 days."
+      ],
+      "explanation": "A alone: 15 days. Together: $1/15 + 1/30 = 3/30 = 1/10$. Time: 10 days.",
+      "steps": [
+        {
+          "text": "**'Twice as efficient'** means A does the same work in half the time as B. B alone in 30 days, so A alone in 15 days."
+        },
+        {
+          "text": "**LCM trick:** LCM(15, 30) = 30 units of total work."
+        },
+        {
+          "text": "A's rate: $30/15 = 2$ units/day. B's rate: $30/30 = 1$ unit/day. Together: $3$ units/day."
+        },
+        {
+          "math": "T = \\dfrac{30}{3} = 10 \\text{ days}"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{A, B, C finish in } 6, 8, 12 \\text{ days. Together (days)?}",
+      "answer": 2.67,
+      "tolerance": 0.05,
+      "hints": [
+        "LCM(6, 8, 12) = 24. A = 4, B = 3, C = 2; sum = 9.",
+        "Time = $24/9 = 8/3 ≈ 2.67$ days."
+      ],
+      "explanation": "$24/9 = 8/3 \\approx 2.67$ days.",
+      "steps": [
+        {
+          "text": "**LCM(6, 8, 12) = 24.** Set total work = 24 units."
+        },
+        {
+          "text": "**Individual rates** (units/day):"
+        },
+        {
+          "math": "A: 24/6 = 4, \\quad B: 24/8 = 3, \\quad C: 24/12 = 2"
+        },
+        {
+          "text": "**Combined rate:** $4 + 3 + 2 = 9$ units/day."
+        },
+        {
+          "math": "T = \\dfrac{24}{9} = \\dfrac{8}{3} \\approx 2.67 \\text{ days}"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{10 men finish a job in } 18 \\text{ days. How many days will } 15 \\text{ men take?}",
+      "answer": 12,
+      "tolerance": 0.1,
+      "hints": [
+        "Person-days = $10 \\times 18 = 180$.",
+        "$180/15 = 12$ days."
+      ],
+      "explanation": "Total work: 180 person-days. With 15 men: $180/15 = 12$ days.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{A finishes in 12 days, B in 16. They work together for } 4 \\text{ days, then A leaves.}\\\\\\text{Total elapsed days from start until B finishes (round to 2 decimals)?}",
+      "answer": 10.67,
+      "tolerance": 0.05,
+      "hints": [
+        "LCM(12, 16) = 48 work-units. A's rate = 4, B's rate = 3, together = 7.",
+        "In 4 days together: 28 units done. Remaining: 20 units. B alone: 20/3 ≈ 6.67 more days.",
+        "Total elapsed: 4 + 20/3 ≈ 10.67."
+      ],
+      "explanation": "Use LCM as total work: 48 units. Together they do 7 units/day, so 4 days together = 28 units. Remaining 20 units take B (rate 3/day) another $20/3 \\approx 6.67$ days. Total elapsed time: $4 + 20/3 = 32/3 \\approx 10.67$ days.",
+      "steps": [
+        {
+          "text": "**LCM trick.** LCM(12, 16) = 48 work-units. A's rate = $48/12 = 4$ units/day, B's = $48/16 = 3$ units/day. Together = 7 units/day."
+        },
+        {
+          "text": "**In 4 days together.** $7 \\times 4 = 28$ units done. Remaining: $48 - 28 = 20$ units."
+        },
+        {
+          "text": "**B alone finishes the remaining 20 units at rate 3:**"
+        },
+        {
+          "math": "\\dfrac{20}{3} \\approx 6.67 \\text{ days}"
+        },
+        {
+          "text": "**Total elapsed (4 days together + B's solo time).** $4 + 20/3 = 12/3 + 20/3 = 32/3 \\approx 10.67$ days."
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{Two pipes fill in } 4 \\text{ and } 6 \\text{ h. A leak empties full tank in } 24 \\text{ h.} \\\\ \\text{Time to fill with all three open (h)?}",
+      "answer": 2.67,
+      "tolerance": 0.1,
+      "hints": [
+        "LCM trick. Set tank capacity = LCM(4, 6, 24) = 24 units.",
+        "Per-hour rates: pipe 1 = $24/4 = 6$ (fills), pipe 2 = $24/6 = 4$ (fills), leak = $24/24 = 1$ (drains). Net = $6 + 4 - 1 = 9$ units/h.",
+        "Time = capacity / net rate = $24/9 \\approx 2.67$ h."
+      ],
+      "explanation": "Set tank capacity = LCM(4, 6, 24) = 24 units. Filling rates: $+6$ and $+4$. Leak rate: $-1$. Net: $+9$ units/h. Time to fill 24 units: $24/9 \\approx 2.67$ h.",
+      "steps": [
+        {
+          "text": "**LCM(4, 6, 24) = 24.** Set tank capacity = 24 units."
+        },
+        {
+          "text": "**Inlet rates** (+): Pipe 1: $24/4 = 6$, Pipe 2: $24/6 = 4$. **Outlet rate** (−): leak: $24/24 = 1$."
+        },
+        {
+          "math": "\\text{Net rate} = 6 + 4 - 1 = 9 \\text{ units/h}"
+        },
+        {
+          "math": "T = \\dfrac{24}{9} = \\dfrac{8}{3} \\approx 2.67 \\text{ h}"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{4 men or 6 women finish a job in } 12 \\text{ days. How long for } 2 \\text{ men and } 3 \\text{ women?}",
+      "answer": 12,
+      "tolerance": 0.1,
+      "hints": [
+        "4 men's rate = 6 women's rate (same job in 12 days). So 1 man = 1.5 women, or 2 men = 3 women.",
+        "2 men + 3 women = 6 women's equivalent = same as 4 men's rate. Same 12 days."
+      ],
+      "explanation": "2 men + 3 women = 3 women + 3 women = 6 women equivalent (since 2 men = 3 women). Equivalent to original crew → 12 days.",
+      "steps": [
+        {
+          "text": "**Convert men to women-equivalents.** 4 men and 6 women do the same job in 12 days, so $4M = 6W$, i.e. $1M = 1.5W$ (or $2M = 3W$)."
+        },
+        {
+          "text": "**Convert the new crew:** 2 men + 3 women = $(2 \\cdot 1.5)W + 3W = 3W + 3W = 6W$."
+        },
+        {
+          "text": "**This equals the original 6 women's effort** → same 12 days."
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{Combined } A \\text{ and } B \\text{ in } 4 \\text{ days. } A \\text{ alone in } 6 \\text{ days.} \\\\ \\text{B alone (days)?}",
+      "answer": 12,
+      "tolerance": 0.1,
+      "hints": [
+        "B's rate = $1/4 - 1/6 = 1/12$.",
+        "B alone: 12 days."
+      ],
+      "explanation": "B's rate = $1/4 - 1/6 = 3/12 - 2/12 = 1/12$. B alone: 12 days.",
+      "steps": [
+        {
+          "text": "**Rates** (fraction of work per day):"
+        },
+        {
+          "math": "\\text{Together's rate} = \\dfrac{1}{4}, \\quad A\\text{'s rate} = \\dfrac{1}{6}"
+        },
+        {
+          "text": "**B's rate = Together − A:**"
+        },
+        {
+          "math": "\\dfrac{1}{4} - \\dfrac{1}{6} = \\dfrac{3 - 2}{12} = \\dfrac{1}{12}"
+        },
+        {
+          "text": "**B alone:** $1 / (1/12) = 12$ days."
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\text{A finishes in } 20 \\text{ days. A works } 4 \\text{ days, then B joins. Together they finish remaining in } 8 \\text{ days. B alone (days)?}",
+      "answer": 20,
+      "tolerance": 0.5,
+      "hints": [
+        "A's rate = $1/20$ per day. After 4 days A has done $4/20 = 1/5$, leaving $4/5$.",
+        "A+B finish $4/5$ in 8 days → A+B rate $= (4/5)/8 = 1/10$ per day.",
+        "B's rate = $1/10 - 1/20 = 1/20$. So B alone = 20 days."
+      ],
+      "explanation": "A's rate = 1/20. After 4 days, 1/5 done; 4/5 remains. A+B finish 4/5 in 8 days, so A+B rate = 1/10 per day. B's rate = 1/10 - 1/20 = 1/20. B alone = 20 days.",
+      "steps": [
+        {
+          "text": "**A's rate:** $1/20$ jobs/day."
+        },
+        {
+          "text": "**Work done by A alone in 4 days:** $4 \\times 1/20 = 1/5$. Remaining: $1 - 1/5 = 4/5$."
+        },
+        {
+          "text": "**A+B together finish $4/5$ in 8 days:**"
+        },
+        {
+          "math": "\\text{rate}_{A+B} = \\dfrac{4/5}{8} = \\dfrac{1}{10}"
+        },
+        {
+          "text": "**B's rate** = (A+B rate) − A's rate:"
+        },
+        {
+          "math": "\\dfrac{1}{10} - \\dfrac{1}{20} = \\dfrac{2 - 1}{20} = \\dfrac{1}{20}"
+        },
+        {
+          "text": "**B alone:** $20$ days."
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q13",
+      "type": "numeric",
+      "promptTex": "\\text{Pipe fills a tank in } 6 \\text{ h. Outlet empties full tank in } 8 \\text{ h. Both open: time to fill (h)?}",
+      "answer": 24,
+      "tolerance": 0.1,
+      "hints": [
+        "LCM(6, 8) = 24. In rate +4, out rate −3, net +1.",
+        "Time: 24/1 = 24 h."
+      ],
+      "explanation": "Inlet 1/6, outlet 1/8 → net 1/24. Time: 24 h.",
+      "steps": [
+        {
+          "text": "**LCM(6, 8) = 24.** Set tank capacity = 24 units."
+        },
+        {
+          "text": "Inlet rate (+): $24/6 = 4$ units/h. Outlet rate (−): $24/8 = 3$ units/h."
+        },
+        {
+          "math": "\\text{Net rate} = 4 - 3 = 1 \\text{ unit/h}"
+        },
+        {
+          "math": "T = \\dfrac{24}{1} = 24 \\text{ h}"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q14",
+      "type": "numeric",
+      "promptTex": "\\text{If } 8 \\text{ workers can do a job in } 10 \\text{ days, how many workers needed to finish in } 4 \\text{ days?}",
+      "answer": 20,
+      "tolerance": 0.5,
+      "hints": [
+        "Person-days = 80.",
+        "$80/4 = 20$ workers."
+      ],
+      "explanation": "Total: 80 person-days. To finish in 4 days: $80/4 = 20$ workers.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q15",
+      "type": "numeric",
+      "promptTex": "\\text{Wages for a job: } A \\text{ alone gets } \\$6000. \\, A \\text{ does it in } 10 \\text{ days, } B \\text{ in } 15 \\text{ days.} \\\\ \\text{They work together; what's B's share of wages (\\$)?}",
+      "answer": 2400,
+      "tolerance": 10,
+      "hints": [
+        "Wages should be in ratio of rates: A : B = 1/10 : 1/15 = 3 : 2.",
+        "B's share = 2/5 of total. Total wage (if A alone gets \\$6000 for the whole job) is \\$6000. B's share = \\$2400."
+      ],
+      "explanation": "Ratio of work done: A:B = 1/10 : 1/15 = 3:2. B's share = 2/5 of \\$6000 = \\$2400.",
+      "steps": [
+        {
+          "text": "**Wages divide in the ratio of the work each does** (= ratio of their rates)."
+        },
+        {
+          "math": "A : B = \\dfrac{1}{10} : \\dfrac{1}{15}"
+        },
+        {
+          "text": "**Multiply both by LCM(10, 15) = 30** to clear fractions:"
+        },
+        {
+          "math": "A : B = 3 : 2"
+        },
+        {
+          "text": "**B's share** = $2/(3+2) = 2/5$ of total \\$6000:"
+        },
+        {
+          "math": "\\dfrac{2}{5} \\times 6000 = 2400"
+        }
+      ],
+      "difficulty": "hard"
+    }
+  ]
+}

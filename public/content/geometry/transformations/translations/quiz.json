@@ -1,0 +1,165 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Translate } A(2, 5) \\text{ by the vector } (3, -1). \\text{ Find } A'.",
+      "choices": [
+        "(5, 4)",
+        "(5, 6)",
+        "(-1, 6)",
+        "(6, -5)"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Add $d_x$ to the x-coordinate, $d_y$ to the y-coordinate.",
+        "$(2+3, 5+(-1))$."
+      ],
+      "explanation": "$A' = (2 + 3,\\; 5 + (-1)) = (5, 4)$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "prompt": "Which property is NOT preserved by a translation?",
+      "choices": [
+        "Side lengths",
+        "Angles",
+        "Position",
+        "Orientation (left/right handedness)"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Translations slide the shape; what changes?",
+        "Everything stays the same except where the shape sits."
+      ],
+      "explanation": "A translation changes only position. Side lengths, angles, and orientation are all preserved (translations are rigid motions).",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "What is the inverse of the translation by (-4, 6)?",
+      "choices": [
+        "Translation by (4, -6)",
+        "Translation by (-4, -6)",
+        "Translation by (6, -4)",
+        "Reflection over y-axis"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Inverse means 'what undoes it'.",
+        "If you go left 4 and up 6, what brings you back?"
+      ],
+      "explanation": "The inverse of $(d_x, d_y)$ is $(-d_x, -d_y)$. So $(-4, 6)$ undone is $(4, -6)$.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Translation maps } (-3, 7) \\to (2, 4). \\text{ What is } d_x?",
+      "answer": 5,
+      "tolerance": 0.001,
+      "hints": [
+        "Use the rule $x' = x + d_x$.",
+        "$2 = -3 + d_x$, so $d_x = ?$"
+      ],
+      "explanation": "$d_x = x' - x = 2 - (-3) = 5$.",
+      "steps": [
+        {
+          "text": "**From the x-coordinates** of pre-image and image:"
+        },
+        {
+          "math": "x' = x + d_x \\;\\Longrightarrow\\; d_x = x' - x = 2 - (-3) = 5"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Triangle } \\triangle ABC \\text{ has vertices } A(1,2),\\, B(4,2),\\, C(3,5). \\\\ \\text{After translating by } (-2, 3), \\text{ what are the new coordinates of } C?",
+      "choices": [
+        "(1, 8)",
+        "(5, 8)",
+        "(1, 2)",
+        "(-1, 5)"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Apply the rule $(x, y) \\to (x - 2, y + 3)$ to $C$.",
+        "$(3 - 2, 5 + 3)$"
+      ],
+      "explanation": "$C' = (3 - 2,\\; 5 + 3) = (1, 8)$.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{If a translation sends } (0, 0) \\to (4, -3), \\\\ \\text{what is the magnitude (length) of the translation vector?}",
+      "answer": 5,
+      "tolerance": 0.001,
+      "hints": [
+        "Translation vector is $(4, -3)$.",
+        "Magnitude $= \\sqrt{d_x^2 + d_y^2}$."
+      ],
+      "explanation": "$\\|\\vec{v}\\| = \\sqrt{4^2 + (-3)^2} = \\sqrt{25} = 5$. (Yet another 3-4-5 triangle.)",
+      "steps": [
+        {
+          "text": "**Identify the vector:** from $(0,0)$ to $(4, -3)$ is $(4, -3)$."
+        },
+        {
+          "text": "**Magnitude:**"
+        },
+        {
+          "math": "\\|\\vec{v}\\| = \\sqrt{4^2 + (-3)^2} = \\sqrt{16 + 9} = \\sqrt{25} = 5"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A translation sends } P(5, -2) \\to P'(0, 4). \\text{ The vector is:}",
+      "choices": [
+        "(5, -6)",
+        "(-5, 6)",
+        "(-5, -6)",
+        "(5, 6)"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$(d_x, d_y) = (x' - x,\\; y' - y)$.",
+        "$0 - 5 = -5$, $4 - (-2) = 6$."
+      ],
+      "explanation": "$d_x = 0 - 5 = -5$, $d_y = 4 - (-2) = 6$. Vector $= (-5, 6)$.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "prompt": "Translation A: vector (3, 1). Translation B: vector (-2, 4). Apply A then B. What is the combined translation vector?",
+      "choices": [
+        "(1, 5)",
+        "(5, -3)",
+        "(-6, 4)",
+        "(3, -3)"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Translations compose by adding their vectors.",
+        "$(3 + (-2),\\; 1 + 4)$."
+      ],
+      "explanation": "Composing two translations gives a single translation by the sum: $(3 + (-2),\\; 1 + 4) = (1, 5)$.",
+      "steps": [
+        {
+          "text": "**Composing translations.** Doing translation A then translation B is the same as doing one translation by the sum of the two vectors."
+        },
+        {
+          "math": "(3, 1) + (-2, 4) = (3 + (-2),\\; 1 + 4) = (1, 5)"
+        }
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

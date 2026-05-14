@@ -1,0 +1,296 @@
+{
+  "title": "Incenter, Incircle & Inradius",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### A natural question",
+        "Draw any triangle. **What is the largest circle that fits entirely inside it?**",
+        "There's exactly one such circle, and it touches all three sides at the same time. It's called the **incircle** of the triangle. Its center is the **incenter** $I$, and its radius is the **inradius** $r$.",
+        "Press **Grow the incircle** below to watch the answer expand from a single point until it kisses all three sides simultaneously."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "triangle-incircle",
+      "config": {
+        "vertexA": [
+          -3,
+          -1.5
+        ],
+        "vertexB": [
+          3.2,
+          -1
+        ],
+        "vertexC": [
+          -0.5,
+          2.6
+        ],
+        "showBisectors": false,
+        "showIncircle": true,
+        "showInradius": false,
+        "showTangentPoints": true
+      }
+    },
+    {
+      "type": "callout",
+      "title": "Three things to remember",
+      "body": "**Incircle** — the unique circle inscribed in a triangle, tangent to all three sides.\n**Incenter** ($I$) — the *center* of that circle.\n**Inradius** ($r$) — the *radius* of that circle, also the perpendicular distance from $I$ to each side."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Where the incenter comes from: angle bisectors",
+        "Recall that the **angle bisector** of an angle is the ray that splits it into two equal halves.",
+        "Key fact: **every point on an angle bisector is equidistant from the two sides forming that angle.** This is the defining property — it's why bisectors are useful.",
+        "Now apply this to each of the three angles of a triangle. Each angle bisector is a *locus* of points equidistant from a pair of sides. Where the three loci all coincide, you get a single point equidistant from **all three** sides — and *that* point must be the center of the inscribed circle."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "triangle-incircle",
+      "config": {
+        "vertexA": [
+          -3,
+          -1.5
+        ],
+        "vertexB": [
+          3.2,
+          -1
+        ],
+        "vertexC": [
+          -0.5,
+          2.6
+        ],
+        "showBisectors": true,
+        "showIncircle": false,
+        "showInradius": false,
+        "showTangentPoints": false
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "The three dashed purple lines are the angle bisectors. They **concur** — meet at a single point. That meeting point is the incenter $I$.",
+        "Try dragging the vertices. The bisectors move, but they always converge at exactly one point. That point is *always inside* the triangle (unlike, say, the orthocenter, which can wander outside)."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Why three angle bisectors must concur",
+      "body": "Take the bisector from $A$ and the bisector from $B$. They meet at some point $P$.\n\n- Because $P$ is on the bisector from $A$, $P$ is equidistant from sides $AB$ and $AC$.\n- Because $P$ is on the bisector from $B$, $P$ is equidistant from sides $AB$ and $BC$.\n\nTherefore $P$ is equidistant from all three sides. In particular, the distance from $P$ to $AC$ equals the distance from $P$ to $BC$ — so $P$ also lies on the bisector from $C$.\n\nThe third bisector is forced to pass through $P$. ∎"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The inradius is the distance from $I$ to any side",
+        "Drop a perpendicular from the incenter to each of the three sides. By the argument above, all three perpendicular distances are **equal**. That common distance is the **inradius** $r$.",
+        "Below, the three red segments show those perpendicular drops. They have the same length — that length is $r$."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "triangle-incircle",
+      "config": {
+        "vertexA": [
+          -3,
+          -1.5
+        ],
+        "vertexB": [
+          3.2,
+          -1
+        ],
+        "vertexC": [
+          -0.5,
+          2.6
+        ],
+        "showBisectors": false,
+        "showIncircle": true,
+        "showInradius": true,
+        "showTangentPoints": true
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "The incircle is centered at $I$ with radius $r$. Because each perpendicular drop hits its side at the foot, the circle is **tangent** to each side at that foot. Those three tangent points (the red dots) are where the circle just touches the triangle's edges."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The formula $r = A / s$",
+        "This is the **single most important formula** about the inradius. Given a triangle with area $A$ and semiperimeter $s = (a + b + c)/2$:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\boxed{\\,r = \\dfrac{A}{s}\\,}"
+    },
+    {
+      "type": "callout",
+      "title": "Why $r = A/s$",
+      "body": "Connect the incenter $I$ to each vertex. This carves the triangle into three smaller triangles: $\\triangle IAB$, $\\triangle IBC$, $\\triangle ICA$.\n\nEach small triangle has one of the original sides as its base. Its apex is $I$, sitting at a perpendicular distance $r$ from that base. So:\n\n- Area of $\\triangle IAB = \\frac{1}{2} \\cdot c \\cdot r$\n- Area of $\\triangle IBC = \\frac{1}{2} \\cdot a \\cdot r$\n- Area of $\\triangle ICA = \\frac{1}{2} \\cdot b \\cdot r$\n\nThey sum to the area of the whole triangle:\n\n$$A = \\tfrac{1}{2}(a + b + c)\\,r = s\\,r \\;\\Rightarrow\\; r = \\tfrac{A}{s}. \\quad\\blacksquare$$"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example: the 3-4-5 right triangle",
+        "Sides $a = 3$, $b = 4$, $c = 5$.",
+        "**Area:** $A = \\tfrac{1}{2} \\cdot 3 \\cdot 4 = 6$.",
+        "**Semiperimeter:** $s = (3 + 4 + 5)/2 = 6$.",
+        "**Inradius:** $r = A/s = 6/6 = 1$. Clean!",
+        "The widget below is set up for this triangle. The incircle has radius exactly $1$."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "triangle-incircle",
+      "config": {
+        "vertexA": [
+          -2,
+          -1
+        ],
+        "vertexB": [
+          2,
+          -1
+        ],
+        "vertexC": [
+          -2,
+          2
+        ],
+        "showBisectors": false,
+        "showIncircle": true,
+        "showInradius": true,
+        "showTangentPoints": true,
+        "draggable": false
+      }
+    },
+    {
+      "type": "callout",
+      "title": "Shortcut for right triangles",
+      "body": "If the triangle is a right triangle with legs $a$, $b$ and hypotenuse $c$, then $$r = \\frac{a + b - c}{2}.$$\n\nFor 3-4-5: $r = (3 + 4 - 5)/2 = 1$. ✓\nFor 5-12-13: $r = (5 + 12 - 13)/2 = 2$.\nFor 8-15-17: $r = (8 + 15 - 17)/2 = 3$.\n\n*Proof:* For a right triangle, $A = \\tfrac{1}{2}ab$ and $s = (a+b+c)/2$. So $r = A/s = ab/(a+b+c)$. Multiply top and bottom by $(a+b-c)$ and use $a^2+b^2 = c^2$ to get $r = (a+b-c)/2$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example: equilateral triangle",
+        "Let the side length be $a$.",
+        "**Area:** $A = \\dfrac{\\sqrt{3}}{4} a^2$.",
+        "**Semiperimeter:** $s = \\dfrac{3a}{2}$.",
+        "**Inradius:** $r = \\dfrac{A}{s} = \\dfrac{\\sqrt{3} a^2 / 4}{3a/2} = \\dfrac{a\\sqrt{3}}{6}$.",
+        "For $a = 6$: $r = 6\\sqrt{3}/6 = \\sqrt{3} \\approx 1.73$."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "triangle-incircle",
+      "config": {
+        "vertexA": [
+          -3,
+          -1.73
+        ],
+        "vertexB": [
+          3,
+          -1.73
+        ],
+        "vertexC": [
+          0,
+          3.46
+        ],
+        "showBisectors": true,
+        "showIncircle": true,
+        "showInradius": true,
+        "showTangentPoints": true,
+        "draggable": false
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "For the equilateral triangle, the three bisectors are also the three medians, altitudes, and perpendicular bisectors — they all coincide. So **incenter = centroid = circumcenter = orthocenter** for equilateral triangles. (Try to convince yourself this is unique to equilaterals.)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Coordinates of the incenter",
+        "If the triangle has vertices $A$, $B$, $C$ at coordinates $(x_A, y_A)$, $(x_B, y_B)$, $(x_C, y_C)$ with opposite side lengths $a$, $b$, $c$, the incenter is the **weighted average** of the vertices weighted by opposite side lengths:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "I = \\dfrac{a\\,A + b\\,B + c\\,C}{a + b + c}"
+    },
+    {
+      "type": "callout",
+      "title": "Why opposite-side weighting?",
+      "body": "Larger sides 'pull' the incenter toward the *opposite* vertex (because the incenter has to stay equidistant from all three sides, and the bigger a side is, the further the incenter must sit from it on average). The proof uses the angle bisector theorem; you can also verify it directly by checking that the weighted formula produces a point at distance $r$ from each side."
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Example.** $A = (0, 0)$, $B = (8, 0)$, $C = (0, 6)$.",
+        "Sides: $a = |BC| = \\sqrt{64 + 36} = 10$, $b = |AC| = 6$, $c = |AB| = 8$.",
+        "Incenter: $I = \\dfrac{10(0,0) + 6(8,0) + 8(0,6)}{10 + 6 + 8} = \\dfrac{(48, 48)}{24} = (2, 2)$.",
+        "Sanity check: this is a 6-8-10 right triangle (a scaled 3-4-5), so $r = (6+8-10)/2 = 2$. The incenter is at distance 2 from both the x-axis and the y-axis, which matches $r = 2$. ✓"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Tangent-length identities",
+        "Here's a beautiful result that pops up often in competition geometry. Let the incircle touch sides $BC$, $CA$, $AB$ at points $X$, $Y$, $Z$ respectively. Then the **tangent lengths** from each vertex are equal:",
+        "$AY = AZ$, $\\;BZ = BX$, $\\;CX = CY$.",
+        "Call these $x = AY = AZ$, $y = BZ = BX$, $z = CX = CY$. Then:",
+        "$y + z = a$ (side $BC$), $\\;z + x = b$, $\\;x + y = c$.",
+        "Solving this 3×3 system:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "x = s - a, \\quad y = s - b, \\quad z = s - c"
+    },
+    {
+      "type": "callout",
+      "title": "Why $AY = AZ$",
+      "body": "Both $AY$ and $AZ$ are tangent segments from the same external point $A$ to the same circle. **Two tangents drawn from one external point to a circle are always equal in length.** That's a clean circle theorem you'll meet again with circumscribed quadrilaterals, escribed circles, and many olympiad problems."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Free play",
+        "Drag any vertex below. Toggle the overlays. Watch how everything stays consistent. Observation worth millions of practice problems:",
+        "**The bigger the triangle, the bigger $r$.** Doubling all sides doubles $r$ exactly (because $A$ scales by $4$ and $s$ by $2$, so $r = A/s$ scales by $2$).",
+        "**Thin/flat triangles have tiny incircles.** A nearly degenerate triangle has $A \\to 0$ but $s$ stays finite, so $r \\to 0$ — the incircle shrinks to a point. Conversely, equilateral triangles maximize $r$ for a given perimeter."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "triangle-incircle",
+      "config": {
+        "vertexA": [
+          -3.5,
+          -1.5
+        ],
+        "vertexB": [
+          3.5,
+          -1.5
+        ],
+        "vertexC": [
+          0.5,
+          2.5
+        ],
+        "showBisectors": true,
+        "showIncircle": true,
+        "showInradius": true,
+        "showTangentPoints": true
+      }
+    },
+    {
+      "type": "callout",
+      "title": "Quick reference",
+      "body": "**Incircle definition:** the unique circle inscribed in a triangle, tangent to all three sides.\n**Incenter** ($I$) = intersection of the three angle bisectors.\n**Inradius** ($r$) = distance from $I$ to any side.\n**Key formula:** $r = A / s$, where $A$ is the area and $s = (a+b+c)/2$.\n**Right-triangle shortcut:** $r = (a+b-c)/2$ where $c$ is the hypotenuse.\n**Equilateral:** $r = a\\sqrt{3}/6$.\n**Tangent lengths** from $A$, $B$, $C$ are $s-a$, $s-b$, $s-c$.\n**Coordinates:** $I = (aA + bB + cC)/(a+b+c)$, weighted by *opposite* side lengths."
+    }
+  ]
+}

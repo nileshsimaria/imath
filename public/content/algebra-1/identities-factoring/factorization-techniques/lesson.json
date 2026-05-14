@@ -1,0 +1,96 @@
+{
+  "title": "Factorization — Five Indispensable Techniques",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### Why factor?",
+        "Factoring rewrites a polynomial as a product. Once factored, you can:",
+        "- **Solve equations** by setting each factor to zero (Zero Product Property).",
+        "- **Simplify fractions** by cancelling common factors.",
+        "- **Find roots / x-intercepts** instantly.",
+        "- **Evaluate cleverly** — e.g., $99 \\cdot 101$ using difference of squares.",
+        "The Indian school curriculum drills five core factorization techniques. Master all five and very few polynomials will stump you."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The five techniques",
+      "body": "**1. Common factor extraction.** Pull out the GCF.\n\n**2. Grouping.** Group terms so each group shares a factor; pull, then pull again.\n\n**3. Splitting the middle term** (the king of quadratics).\n\n**4. Identity-based factoring.** Recognize $a^2 - b^2$, $a^2 \\pm 2ab + b^2$, $a^3 \\pm b^3$, etc.\n\n**5. Trial / Factor Theorem.** For cubics and higher, guess a root, then divide."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 1. Common factor",
+        "Pull out the greatest factor common to *every* term.",
+        "**$6x^3 + 9x^2 - 12x = 3x(2x^2 + 3x - 4)$**. The 3, then $x$, are common.",
+        "**$15a^2 b + 20 a b^2 - 35 a^2 b^2 = 5ab(3a + 4b - 7ab)$**.",
+        "Always do this FIRST. Many problems become easy after one common-factor pull."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 2. Grouping",
+        "When 4 (or more) terms don't have a common factor among all of them, **try grouping** in pairs.",
+        "**Example.** $ax + ay + bx + by$. No common factor across all four. Group:",
+        "$(ax + ay) + (bx + by) = a(x + y) + b(x + y) = (x + y)(a + b)$.",
+        "**Example.** $x^3 - 3x^2 - 4x + 12$. Group as $(x^3 - 3x^2) + (-4x + 12) = x^2(x - 3) - 4(x - 3) = (x - 3)(x^2 - 4) = (x - 3)(x - 2)(x + 2)$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 3. Splitting the middle term (the workhorse for factoring quadratics)",
+        "Quadratic $ax^2 + bx + c$: find two numbers whose **product** is $a \\cdot c$ and whose **sum** is $b$. Split the middle term using these, then group.",
+        "**Example.** $x^2 + 7x + 12$. Need product $1 \\cdot 12 = 12$, sum $7$. Pair: $3, 4$. Split:",
+        "$x^2 + 3x + 4x + 12 = x(x + 3) + 4(x + 3) = (x + 3)(x + 4)$.",
+        "**Example.** $2x^2 + 7x + 6$. Need product $2 \\cdot 6 = 12$, sum $7$. Pair: $3, 4$. Split:",
+        "$2x^2 + 3x + 4x + 6 = x(2x + 3) + 2(2x + 3) = (2x + 3)(x + 2)$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Splitting tip — when signs get tricky",
+      "body": "**$3x^2 - 7x - 6$.** Product $3 \\cdot (-6) = -18$. Sum $-7$. Find two numbers with product $-18$ and sum $-7$: pair must have opposite signs. Try $-9, 2$: product $-18$, sum $-7$. ✓\n\n$3x^2 - 9x + 2x - 6 = 3x(x - 3) + 2(x - 3) = (x - 3)(3x + 2)$.\n\n**Drill:** with negative product, the two numbers have opposite signs; with positive product, same sign (both + if sum > 0, both − if sum < 0)."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 4. Identity-based factoring",
+        "Recognize patterns from the Big Eight (previous lesson):",
+        "**$x^2 - 81 = (x - 9)(x + 9)$** — difference of squares.",
+        "**$x^2 + 14x + 49 = (x + 7)^2$** — perfect square trinomial ($14 = 2 \\cdot 7$, $49 = 7^2$).",
+        "**$8x^3 - 27 = (2x)^3 - 3^3 = (2x - 3)(4x^2 + 6x + 9)$** — difference of cubes.",
+        "**$x^4 - 16 = (x^2)^2 - 4^2 = (x^2 - 4)(x^2 + 4) = (x - 2)(x + 2)(x^2 + 4)$** — apply identity 3 twice.",
+        "**Spot the pattern, save 90% of the work.**"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 5. Factor Theorem for cubics",
+        "If $f(a) = 0$, then $(x - a)$ is a factor of $f(x)$. Use it to factor cubics:",
+        "**Example.** Factor $x^3 - 7x + 6$.",
+        "Try small roots: $f(1) = 1 - 7 + 6 = 0$ ✓. So $(x - 1)$ is a factor.",
+        "Divide $x^3 + 0 x^2 - 7x + 6$ by $(x - 1)$ → quotient $x^2 + x - 6$.",
+        "Factor the quadratic: $x^2 + x - 6 = (x + 3)(x - 2)$.",
+        "**Full factorization:** $x^3 - 7x + 6 = (x - 1)(x - 2)(x + 3)$.",
+        "**Rational Root candidates** for a cubic with integer coefficients: divisors of the constant term divided by divisors of the leading coefficient. Try $\\pm 1, \\pm 2, \\pm 3, \\pm 6, \\pm 1/a, \\ldots$"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Decision tree (the order to attempt)",
+        "1. **Common factor** — always check first.",
+        "2. **Count the terms:**",
+        " - 2 terms → try difference of squares, sum/difference of cubes.",
+        " - 3 terms → try splitting the middle term or perfect-square pattern.",
+        " - 4 terms → try grouping in pairs.",
+        "3. **Cubic with no obvious structure** → factor theorem (try rational roots).",
+        "Following this order solves almost every polynomial you'll meet in algebra."
+      ]
+    }
+  ]
+}

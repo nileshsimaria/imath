@@ -1,0 +1,178 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Find the center of } (x - 3)^2 + (y + 5)^2 = 49.",
+      "choices": [
+        "(3, -5)",
+        "(-3, 5)",
+        "(3, 5)",
+        "(-3, -5)"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Standard form: $(x - h)^2 + (y - k)^2 = r^2$.",
+        "Match: $h = 3$, $k = -5$ (note sign flip)."
+      ],
+      "explanation": "Center is $(h, k) = (3, -5)$. The $+5$ inside means $k = -5$ because $(y + 5) = (y - (-5))$.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{Find the radius of } (x - 1)^2 + (y - 2)^2 = 36.",
+      "answer": 6,
+      "tolerance": 0.001,
+      "hints": [
+        "$r^2 = 36$, so $r = ?$",
+        "$\\sqrt{36} = 6$."
+      ],
+      "explanation": "$r = \\sqrt{36} = 6$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Equation of a circle with center } (0, 0) \\text{ and radius } 7?",
+      "choices": [
+        "$x^2 + y^2 = 7$",
+        "$x^2 + y^2 = 49$",
+        "$x + y = 7$",
+        "$(x + 7)^2 + (y + 7)^2 = 0$"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Use $(x - h)^2 + (y - k)^2 = r^2$ with $h = k = 0$.",
+        "$r^2 = 7^2 = 49$."
+      ],
+      "explanation": "$x^2 + y^2 = 49$. (Don't forget to square the radius.)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{A circle has center } (2, -3) \\text{ and passes through } (5, 1). \\\\ \\text{Find its radius.}",
+      "answer": 5,
+      "tolerance": 0.001,
+      "hints": [
+        "Radius = distance from center to any point on the circle.",
+        "Distance from $(2, -3)$ to $(5, 1)$: $\\sqrt{(5-2)^2 + (1-(-3))^2} = \\sqrt{9 + 16}$."
+      ],
+      "explanation": "$r = \\sqrt{3^2 + 4^2} = \\sqrt{25} = 5$. (3-4-5 triple.)",
+      "steps": [
+        {
+          "text": "**Radius = distance from center to point on circle:**"
+        },
+        {
+          "math": "r = \\sqrt{(5 - 2)^2 + (1 - (-3))^2}"
+        },
+        {
+          "math": "r = \\sqrt{9 + 16} = \\sqrt{25} = 5"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Rewrite } x^2 + y^2 - 6x + 4y - 12 = 0 \\text{ in standard form.}",
+      "choices": [
+        "$(x - 3)^2 + (y + 2)^2 = 25$",
+        "$(x - 3)^2 + (y - 2)^2 = 12$",
+        "$(x + 3)^2 + (y - 2)^2 = 25$",
+        "$(x - 6)^2 + (y + 4)^2 = 12$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Complete the square on $x$: $(x^2 - 6x + 9) - 9$. On $y$: $(y^2 + 4y + 4) - 4$.",
+        "$(x-3)^2 + (y+2)^2 = 12 + 9 + 4 = 25$."
+      ],
+      "explanation": "Complete the square: $(x - 3)^2 - 9 + (y + 2)^2 - 4 - 12 = 0 \\Rightarrow (x-3)^2 + (y+2)^2 = 25$.",
+      "steps": [
+        {
+          "text": "**Group and prepare to complete the square:**"
+        },
+        {
+          "math": "(x^2 - 6x) + (y^2 + 4y) = 12"
+        },
+        {
+          "text": "**Add $9$ to $x$-group and $4$ to $y$-group (and to the right side):**"
+        },
+        {
+          "math": "(x^2 - 6x + 9) + (y^2 + 4y + 4) = 12 + 9 + 4 = 25"
+        },
+        {
+          "math": "(x - 3)^2 + (y + 2)^2 = 25"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{Area of a circle with diameter 10.}",
+      "answer": 78.54,
+      "tolerance": 0.1,
+      "hints": [
+        "Diameter 10 → radius 5.",
+        "$A = \\pi r^2 = 25\\pi \\approx 78.54$."
+      ],
+      "explanation": "$r = 5$, $A = \\pi \\cdot 25 \\approx 78.54$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Does point } (1, 3) \\text{ lie INSIDE, ON, or OUTSIDE the circle } x^2 + y^2 = 25?",
+      "choices": [
+        "Inside",
+        "On the circle",
+        "Outside",
+        "Cannot be determined"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Compute $x^2 + y^2$ at the point.",
+        "$1 + 9 = 10$. Compare to $25$."
+      ],
+      "explanation": "$1^2 + 3^2 = 10 < 25$, so the point is closer to the center than the radius — inside.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** Compute $x^2 + y^2$ at the point."
+        },
+        {
+          "text": "$1 + 9 = 10$. Compare to $25$."
+        },
+        {
+          "text": "**Solution.** $1^2 + 3^2 = 10 < 25$, so the point is closer to the center than the radius — inside."
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{Circle has diameter endpoints } (1, 2) \\text{ and } (5, 8). \\\\ \\text{Find the radius (round to 2 decimals if needed).}",
+      "answer": 3.61,
+      "tolerance": 0.02,
+      "hints": [
+        "Diameter length = distance between endpoints: $\\sqrt{(5-1)^2 + (8-2)^2} = \\sqrt{16 + 36} = \\sqrt{52}$.",
+        "Radius = diameter / 2 = $\\sqrt{52}/2 = \\sqrt{13} \\approx 3.61$."
+      ],
+      "explanation": "Diameter = $\\sqrt{52} = 2\\sqrt{13}$. Radius = $\\sqrt{13} \\approx 3.61$.",
+      "difficulty": "hard",
+      "steps": [
+        {
+          "text": "**Approach.** Diameter length = distance between endpoints: $\\sqrt{(5-1)^2 + (8-2)^2} = \\sqrt{16 + 36} = \\sqrt{52}$."
+        },
+        {
+          "text": "Radius = diameter / 2 = $\\sqrt{52}/2 = \\sqrt{13} \\approx 3.61$."
+        },
+        {
+          "text": "**Solution.** Diameter = $\\sqrt{52} = 2\\sqrt{13}$. Radius = $\\sqrt{13} \\approx 3.61$."
+        }
+      ]
+    }
+  ]
+}

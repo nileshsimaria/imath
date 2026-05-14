@@ -1,0 +1,142 @@
+{
+  "title": "Radians and Degrees",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "There are two ways to measure angles. You already know one: **degrees**, where a full circle is $360°$. Here's the other one — **radians** — and why mathematicians prefer it."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Where do degrees come from?",
+        "The choice of $360$ is *historical*, not mathematical. The Babylonians used base 60, and $360$ has a lot of nice divisors (you can split a circle into halves, thirds, fourths, fifths, sixths, ... cleanly). Convenient — but arbitrary."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### What's a radian?",
+        "Take a circle of radius $r$. Cut out an arc of length $r$ along the edge. The angle that arc subtends — measured at the center — is **$1$ radian**.",
+        "On a unit circle (radius $= 1$), the arc length and the angle in radians are the *same number*. The angle equals the arc length. That's the whole idea."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "unit-circle",
+      "config": {
+        "initialAngle": 60,
+        "showArcLength": true
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "Drag the slider in the widget. The red arc highlights the angle. Its length (shown in the readout below) is exactly the angle in radians. At $\\theta = 60°$, the arc is about $1.047$ — that's $\\frac{\\pi}{3}$ radians."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The conversion",
+        "A full circle has circumference $2\\pi r$. On a unit circle, that's $2\\pi$ — so a full revolution is $2\\pi$ radians. The same revolution is also $360°$. So:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "2\\pi \\text{ radians} = 360°"
+    },
+    {
+      "type": "math",
+      "tex": "\\pi \\text{ radians} = 180°"
+    },
+    {
+      "type": "text",
+      "md": [
+        "From these, you can convert anything:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\text{degrees} \\times \\dfrac{\\pi}{180} = \\text{radians} \\qquad \\text{radians} \\times \\dfrac{180}{\\pi} = \\text{degrees}"
+    },
+    {
+      "type": "callout",
+      "title": "Common values worth memorizing",
+      "body": "$30° = \\tfrac{\\pi}{6}$ — $45° = \\tfrac{\\pi}{4}$ — $60° = \\tfrac{\\pi}{3}$ — $90° = \\tfrac{\\pi}{2}$ — $180° = \\pi$ — $270° = \\tfrac{3\\pi}{2}$ — $360° = 2\\pi$. They come up so often you'll save real time by memorizing."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked conversions",
+        "**Convert $75°$ to radians.**",
+        "$$75 \\cdot \\dfrac{\\pi}{180} = \\dfrac{75\\pi}{180} = \\dfrac{5\\pi}{12}$$",
+        "**Convert $\\dfrac{2\\pi}{5}$ radians to degrees.**",
+        "$$\\dfrac{2\\pi}{5} \\cdot \\dfrac{180}{\\pi} = \\dfrac{2 \\cdot 180}{5} = 72°$$",
+        "**Convert $-150°$ to radians.**",
+        "$$-150 \\cdot \\dfrac{\\pi}{180} = -\\dfrac{150\\pi}{180} = -\\dfrac{5\\pi}{6}$$"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why use radians?",
+        "Two reasons.",
+        "**1. Arc length is just $r\\theta$.** On a circle of radius $r$, the arc from angle $0$ to angle $\\theta$ (in radians) has length exactly $r\\theta$. Try doing that with degrees — you have to multiply by $\\frac{\\pi}{180}$. Messy.",
+        "**2. Calculus loves radians.** The derivative of $\\sin\\theta$ is $\\cos\\theta$ — but **only if $\\theta$ is in radians**. In degrees, you'd carry around $\\frac{\\pi}{180}$ factors forever. So once you reach calculus, radians become the default."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Arc length: $s = r\\theta$",
+        "On a circle of radius $r$, the length $s$ of an arc subtended by a central angle $\\theta$ (**in radians**) is:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "s = r\\theta"
+    },
+    {
+      "type": "callout",
+      "title": "Critical: the angle MUST be in radians",
+      "body": "$s = r\\theta$ only works when $\\theta$ is in radians. If your angle is in degrees, convert first ($\\theta_{\\text{rad}} = \\theta_{\\text{deg}} \\cdot \\tfrac{\\pi}{180}$), then plug into the formula."
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Example 1.** Find the arc length on a circle of radius $5$ subtended by an angle of $\\dfrac{\\pi}{4}$.",
+        "$$s = 5 \\cdot \\dfrac{\\pi}{4} = \\dfrac{5\\pi}{4} \\approx 3.93$$",
+        "**Example 2.** Find the arc length on a circle of radius $10$ subtended by $60°$.",
+        "First convert: $60° = \\dfrac{\\pi}{3}$ rad. Then:",
+        "$$s = 10 \\cdot \\dfrac{\\pi}{3} = \\dfrac{10\\pi}{3} \\approx 10.47$$",
+        "**Example 3.** A bike wheel of radius $30$ cm rolls without slipping. After it turns through $4$ radians, how far has the bike moved forward?",
+        "The distance traveled equals the arc length on the wheel:",
+        "$$s = 30 \\cdot 4 = 120 \\text{ cm}$$"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### A useful identity hidden in $s = r\\theta$",
+        "Solve for $\\theta$:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\theta = \\dfrac{s}{r}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "This says: a radian is just *arc length per radius*. The radians and the radius cancel — the result is dimensionless. (That's another reason radians are the 'natural' angle unit.)"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "**Radians** measure angles by the arc length they cut off on the unit circle. Full circle $= 2\\pi$ rad $= 360°$. Convert with $\\tfrac{\\pi}{180}$ (deg → rad) or $\\tfrac{180}{\\pi}$ (rad → deg). **Arc length on a circle of radius $r$:** $s = r\\theta$ (with $\\theta$ in radians)."
+    }
+  ]
+}

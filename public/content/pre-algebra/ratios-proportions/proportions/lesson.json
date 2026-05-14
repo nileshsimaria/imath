@@ -1,0 +1,84 @@
+{
+  "title": "Proportions",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "A **proportion** is just an equation that says *two ratios are equal*. They show up everywhere — recipes, maps, shadows, scaled drawings — anywhere quantities scale together."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{a}{b} = \\dfrac{c}{d}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "When two ratios are equal, they describe the same relationship. $\\dfrac{2}{3} = \\dfrac{8}{12}$ — both express 'two parts to three parts'."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Cross-multiplication",
+        "If a proportion is true, the **cross-products** are equal:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{a}{b} = \\dfrac{c}{d} \\;\\Longleftrightarrow\\; ad = bc"
+    },
+    {
+      "type": "text",
+      "md": [
+        "This is the workhorse trick for solving proportions when one of the four numbers is unknown. Multiply 'across the diagonals' and you get a regular equation you can solve."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example: solving for an unknown",
+        "Solve $\\dfrac{x}{12} = \\dfrac{3}{4}$.",
+        "Cross-multiply: $4x = 12 \\cdot 3 = 36$.",
+        "Divide: $x = 9$.",
+        "Check: $\\dfrac{9}{12} = \\dfrac{3}{4}$? Yes ($\\dfrac{9}{12}$ simplifies to $\\dfrac{3}{4}$). ✓"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Why does cross-multiplication work?",
+      "body": "Multiply both sides of $\\dfrac{a}{b} = \\dfrac{c}{d}$ by $bd$. The left becomes $ad$; the right becomes $bc$. So $ad = bc$. Same equation, different form."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Word problem",
+        "**Five pencils cost \\$3. How much do 12 pencils cost?**",
+        "Set up the proportion. The ratio of pencils to dollars stays the same:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{5 \\text{ pencils}}{\\$3} = \\dfrac{12 \\text{ pencils}}{x}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Cross-multiply: $5x = 3 \\cdot 12 = 36$. So $x = \\dfrac{36}{5} = \\$7.20$.",
+        "**12 pencils cost \\$7.20.**"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Watch out for the setup",
+        "When writing a proportion, **be consistent on both sides**. If pencils are on top of the left fraction, they must also be on top of the right fraction. Mixing them up gives the wrong answer."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "A proportion sets two ratios equal. Solve for an unknown by cross-multiplying ($ad = bc$), then dividing. Set up word problems by keeping like quantities on the same side, top or bottom — never mix them up."
+    }
+  ]
+}

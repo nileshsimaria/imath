@@ -1,0 +1,233 @@
+{
+  "title": "Right-Triangle Word Problems",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "## Ladder Problems"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Ladder problems are everywhere in trigonometry — they are the cleanest real-world example of a right triangle. The ladder is the **hypotenuse**, the wall is one leg, and the ground is the other leg."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The mental picture",
+      "body": "Wall is **vertical**, ground is **horizontal**, ladder leans across them. The right angle is between the wall and the ground."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Standard labels",
+        "**Hypotenuse** — the **ladder** itself.",
+        "**Vertical leg** — the **height up the wall** that the ladder reaches.",
+        "**Horizontal leg** — the **distance along the ground** from the wall to the ladder's base.",
+        "**Angle of inclination** — the angle the ladder makes with the **ground**."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Which ratio do you use?",
+        "It depends on which two of the three quantities (ladder length, wall height, ground distance) appear in the problem.",
+        "**ladder + wall height** → uses **opposite & hypotenuse** → **sine**.",
+        "**ladder + ground distance** → uses **adjacent & hypotenuse** → **cosine**.",
+        "**wall height + ground distance** → uses **opposite & adjacent** → **tangent**."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example",
+        "*A 10-foot ladder leans against a wall. The angle the ladder makes with the ground is $65°$. How high up the wall does it reach?*",
+        "**Picture it.** Ladder $= 10$ (hyp). Wall height $= h$ (opp). Angle $= 65°$.",
+        "**Pick the ratio.** opp + hyp + angle → sine.",
+        "$$\\sin 65° = \\dfrac{h}{10} \\Rightarrow h = 10 \\sin 65° \\approx 10 \\cdot 0.906 \\approx 9.06 \\text{ ft}$$"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Safety check",
+      "body": "Real-world ladders should make about a $75°$ angle with the ground. Trig problems don't always respect this — but if you get a wall height greater than the ladder length, you've made an error somewhere."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## Guy Wire Problems"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "A **guy wire** is a tensioned cable that supports a tall, thin structure — a radio antenna, a utility pole, a tent, a mast on a sailboat. One end is attached to the structure (high up); the other end is anchored to the ground a distance away.",
+        "Geometrically, a guy wire creates a right triangle: the **wire is the hypotenuse**, the **structure is one leg**, the **ground is the other leg**."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Same shape as a ladder",
+      "body": "A guy wire is just a ladder problem in disguise. The wire replaces the ladder; the pole replaces the wall. Same right triangle, same trig."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Standard labels",
+        "**Hypotenuse** — the **wire** (or cable) itself.",
+        "**Vertical leg** — the **height of the attachment point** on the structure.",
+        "**Horizontal leg** — the **distance from the base of the structure** to the anchor point on the ground.",
+        "**Angle** — usually the angle the wire makes with the ground (the **angle of elevation** along the wire)."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example",
+        "*A guy wire is attached to the top of a $30$-foot pole and anchored to the ground $40$ feet from the base of the pole. How long is the wire?*",
+        "**Picture it.** Pole height $= 30$, ground distance $= 40$. We want the wire (hypotenuse).",
+        "**Pick the tool.** Two legs known → **Pythagorean theorem** (no trig needed).",
+        "$$L = \\sqrt{30^2 + 40^2} = \\sqrt{900 + 1600} = \\sqrt{2500} = 50 \\text{ ft}$$",
+        "(That's the famous $30$-$40$-$50$ — a $3$-$4$-$5$ scaled by 10.)"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Multiple wires?",
+      "body": "Real-world structures often have several wires anchored at different distances. Each wire forms its own right triangle — solve them independently."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## Angles of Elevation & Depression"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Many real-world right-triangle problems involve looking *up* at something tall or *down* at something below you. Two terms describe these viewing angles."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Two angles to know",
+      "body": "**Angle of elevation:** the angle from the horizontal (your eye level) *up* to an object. **Angle of depression:** the angle from the horizontal *down* to an object."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### A useful symmetry",
+        "If observer A looks *up* at observer B with elevation $\\theta$, then B looks *down* at A with depression also $\\theta$. They're alternate interior angles formed by the horizontal lines (which are parallel) and the line of sight (the transversal).",
+        "*Translation:* whenever you read 'angle of depression of $\\theta$', you can equivalently use $\\theta$ as the angle of elevation from the object below."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The standard setup",
+        "**You** stand on the ground (or in a building, plane, lighthouse).",
+        "**Object** is at some height (or depth) some horizontal distance away.",
+        "Draw a horizontal line at your eye level. The line from you to the object makes the elevation/depression angle with that horizontal.",
+        "The right triangle has: horizontal distance (adjacent), height difference (opposite), and line of sight (hypotenuse)."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — elevation",
+        "*From a point on the ground, the angle of elevation to the top of a tree is $40°$. You are $25$ meters away from the tree. How tall is the tree?*",
+        "Adjacent (ground distance) $= 25$. Opposite (tree height) $= h$. Two legs → tangent.",
+        "$$\\tan 40° = \\dfrac{h}{25} \\Rightarrow h = 25 \\tan 40° \\approx 25 \\cdot 0.839 \\approx 20.98 \\text{ m}$$"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — depression",
+        "*A lighthouse keeper at a height of $60$ meters spots a boat with an angle of depression of $20°$. How far away (horizontally) is the boat?*",
+        "The angle of depression $20°$ equals the angle of elevation from the boat looking up.",
+        "Opposite (height) $= 60$. Adjacent (distance) $= d$. Two legs → tangent.",
+        "$$\\tan 20° = \\dfrac{60}{d} \\Rightarrow d = \\dfrac{60}{\\tan 20°} \\approx \\dfrac{60}{0.364} \\approx 164.85 \\text{ m}$$"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Drawing tip",
+      "body": "Always sketch the picture before picking a ratio. Mark the horizontal as a dashed line, then the line of sight as a solid line, and label the angle between them. The triangle becomes obvious."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## Bearings (Compass Directions)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "A **bearing** is a direction expressed as an angle from a reference. They show up in navigation, surveying, hiking — anywhere you need to describe \"which way\" something is.",
+        "There are two common notations."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Three-figure bearings (the standard)",
+        "A **three-figure bearing** is an angle measured **clockwise from North**, written as three digits ($000°$ to $360°$).",
+        "**Examples:** $000°$ → due North. $090°$ → due East. $180°$ → due South. $270°$ → due West. $045°$ → North-East. $135°$ → South-East.",
+        "Always pad to 3 digits ($045°$, not $45°$). This is what ships, planes, and the military use."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Always clockwise, always from North",
+      "body": "Bearings rotate **clockwise** (the opposite of standard math angles, which are counterclockwise). And the reference is **North**, not East. So the same physical direction has different numbers in bearings vs standard-position angles."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Compass bearings (N-E-S-W form)",
+        "Older form, still common in textbooks. Written as **N $\\theta°$ E**, **N $\\theta°$ W**, **S $\\theta°$ E**, or **S $\\theta°$ W** — where $\\theta$ is the *acute* angle between the direction and the nearest North/South line.",
+        "**Examples:** $\\text{N } 30° \\text{ E}$ means 30° east of due north. $\\text{S } 60° \\text{ W}$ means 60° west of due south.",
+        "Convert between the two notations:",
+        "$\\text{N } 30° \\text{ E}$ → $030°$ (30° clockwise from North)",
+        "$\\text{S } 60° \\text{ W}$ → $180° + 60° = 240°$ (south is 180°, then 60° more clockwise)",
+        "$\\text{N } 45° \\text{ W}$ → $360° - 45° = 315°$ (45° counterclockwise from North = 315° clockwise)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## Bearings & Direction Word Problems",
+        "Most intro bearings problems become **right-triangle problems** once you sketch the picture. The bearing tells you an angle; the distance tells you a side. SOHCAHTOA does the rest."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 1 — straightforward right triangle",
+        "*A hiker walks $5$ km on a bearing of $060°$ from camp. How far **east** of camp is she?*",
+        "**Set up.** Bearing $060°$ means $60°$ clockwise from North. So her direction is $60°$ east of North — which means $90° - 60° = 30°$ from East.",
+        "Sketch a right triangle: hypotenuse = $5$ km (the path), one leg = east displacement ($x$), the other leg = north displacement.",
+        "The angle between her path and the North axis is $60°$, so the **east** displacement is the side **opposite** that $60°$ angle:",
+        "$$\\sin 60° = \\dfrac{x}{5} \\Rightarrow x = 5\\sin 60° \\approx 5 \\cdot 0.866 \\approx 4.33 \\text{ km east}$$",
+        "And her north displacement: $5\\cos 60° = 2.5$ km north."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 2 — multi-leg journey",
+        "*A boat sails $8$ km on a bearing of $090°$, then $6$ km on a bearing of $180°$. How far is it from the starting point, and on what bearing?*",
+        "**Picture.** Leg 1 is due East ($090°$) for $8$ km. Leg 2 is due South ($180°$) for $6$ km. The two legs are perpendicular — a clean right triangle!",
+        "**Distance:** $\\sqrt{8^2 + 6^2} = \\sqrt{64 + 36} = \\sqrt{100} = 10$ km.",
+        "**Bearing back to start (from the boat's current position):** the boat is $8$ km east and $6$ km south of start. Looking back from the boat: start is $8$ km west and $6$ km north — i.e., a bearing in the NW direction. The angle from North to the homeward direction is $\\tan^{-1}(8/6) \\approx 53.13°$ counterclockwise from North → bearing $\\approx 360° - 53.13° = 306.87°$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Strategy",
+      "body": "Always **draw the picture** with North up. Convert bearings into angles within a right triangle. If the legs aren't perpendicular, you may need the law of sines/cosines (separate subtopic). For most intro problems, a bit of geometry exposes a right triangle."
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "title": "The Koch Snowflake",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### Infinite perimeter, finite area",
+        "Start with an equilateral triangle. On each of its three sides, find the middle third. Replace that middle third with two segments forming a small equilateral bump (peak outward). Each side now has *four* segments instead of one.",
+        "Repeat with every segment of the new shape. Then again. Then again.",
+        "The limit is the **Koch snowflake**, discovered by Helge von Koch in 1904. It looks delicate, has a finite area, but an *infinite* perimeter."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "fractal-explorer",
+      "config": {
+        "mode": "koch-snowflake",
+        "iterations": 3
+      }
+    },
+    {
+      "type": "callout",
+      "title": "What happens at each iteration",
+      "body": "Start with the equilateral triangle of perimeter $P_0 = 3$ and area $A_0 = \\frac{\\sqrt{3}}{4}$ (unit side).\n\nEach side gets replaced by 4 segments, each $1/3$ as long. So the number of segments multiplies by 4, and each is $1/3$ the previous length:\n\n$P_n = (4/3)^n \\cdot P_0 \\to \\infty$ as $n \\to \\infty$.\n\nMeanwhile, each iteration adds a small triangle on every existing segment. The total added area is a geometric series that converges:\n\n$A_\\infty = A_0 \\cdot \\dfrac{8}{5}$\n\nThe snowflake fits inside a circle the size of a soccer ball, but its perimeter could wrap around the universe."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### A monster, made tame by precise definition",
+        "When Koch published the snowflake, it scandalized mathematicians. Cantor had recently produced strange sets; Peano had built space-filling curves. Koch's snowflake added another 'pathological' example to the pile — a curve with no tangent line anywhere (infinite zigzag at every scale).",
+        "These 'monsters' eventually became their own field of mathematics: **fractal geometry**, formalized by Benoit Mandelbrot in the 1970s. The snowflake stopped being a monster and became a celebrity."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Fractal dimension",
+      "body": "Like the Sierpinski triangle, the Koch curve has a non-integer dimension. Each segment is replaced by 4 copies at 1/3 scale, so:\n\n$d = \\dfrac{\\log 4}{\\log 3} \\approx 1.262$\n\nIt's 'more than a line' (1D) but 'less than a plane' (2D). The bigger the dimension above 1, the more wiggly the curve."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The coastline paradox",
+        "How long is the coast of Britain? The answer depends on the ruler you use:",
+        "**1-km ruler.** Ignores small inlets and details → coastline length ≈ 2400 km.",
+        "**100-m ruler.** Captures more details → coastline length ≈ 3500 km.",
+        "**1-m ruler.** Captures even more → coastline length grows further.",
+        "**As ruler shrinks → length appears to grow without bound.**",
+        "Coastlines are *approximately fractal* over a range of scales: roughly self-similar zigzags. The Koch snowflake captures this in cartoon form."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Other Koch-style constructions",
+        "**Koch curve** — same construction but on a single line segment (no closed shape). It's a fractal 'line' with infinite length.",
+        "**Anti-snowflake** — bumps point *inward* instead of outward. The shape eats itself.",
+        "**Star fractal variants** — replace the middle bump with a more complex shape (a star, a circle outline, etc.) and you get exotic fractal coastlines."
+      ]
+    }
+  ]
+}

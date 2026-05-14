@@ -1,0 +1,119 @@
+{
+  "title": "The Quadratic Formula",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Factoring is great when it works. But not every quadratic factors nicely — many have *irrational* roots like $\\sqrt{2}$ or $1 + \\sqrt{5}$ that you'd never guess by looking. Some have *no real roots* at all.",
+        "The **quadratic formula** is the universal solver. It takes any quadratic equation $ax^2 + bx + c = 0$ and hands you the roots — no clever guessing required."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "x = \\dfrac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "The $\\pm$ symbol means *plus or minus* — there are usually two roots, one for each sign. Memorize this formula. Sing it. Tattoo it on your soul. You'll use it constantly."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### How to use it",
+        "**1.** Get the equation into the form $ax^2 + bx + c = 0$.",
+        "**2.** Identify $a$, $b$, $c$ (be careful with signs!).",
+        "**3.** Plug into the formula.",
+        "**4.** Compute carefully — first the discriminant $b^2 - 4ac$, then $\\sqrt{\\;}$, then the rest.",
+        "**5.** You'll get two answers (or one repeated, or none — see below)."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 1",
+        "Solve $x^2 + 5x + 6 = 0$. Here $a = 1$, $b = 5$, $c = 6$."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "x = \\dfrac{-5 \\pm \\sqrt{25 - 24}}{2} = \\dfrac{-5 \\pm 1}{2}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "$x = \\dfrac{-5 + 1}{2} = -2$ or $x = \\dfrac{-5 - 1}{2} = -3$.",
+        "Same answers as factoring (which gave $(x + 2)(x + 3) = 0$). Different method, same result — and the formula works even when factoring is hard."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 2 — irrational roots",
+        "Solve $x^2 - 4x + 1 = 0$. Here $a = 1$, $b = -4$, $c = 1$."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "x = \\dfrac{-(-4) \\pm \\sqrt{16 - 4}}{2} = \\dfrac{4 \\pm \\sqrt{12}}{2} = 2 \\pm \\sqrt{3}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Roots: $x = 2 + \\sqrt{3} \\approx 3.73$ and $x = 2 - \\sqrt{3} \\approx 0.27$. These are *irrational* — you'd never spot them by looking. Factoring fails here; the formula succeeds."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The discriminant: $b^2 - 4ac$",
+        "The expression *under the square root* is called the **discriminant**. It tells you the *number* of real roots without solving the whole formula:"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "What the discriminant tells you",
+      "body": "**$b^2 - 4ac > 0$** → two distinct real roots. The parabola crosses the x-axis twice.\n**$b^2 - 4ac = 0$** → one repeated real root. The parabola touches the x-axis at exactly one point (the vertex).\n**$b^2 - 4ac < 0$** → no real roots. The parabola doesn't cross the x-axis at all (the roots are *complex*)."
+    },
+    {
+      "type": "text",
+      "md": [
+        "Try the widget below. Move the sliders for $a$, $b$, $c$ and watch:",
+        "- The parabola change shape.",
+        "- The discriminant in the readout change sign.",
+        "- The red roots appear, merge, or disappear."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "parabola",
+      "config": {
+        "a": 1,
+        "b": -4,
+        "c": 1,
+        "xRange": [
+          -2,
+          6
+        ],
+        "yRange": [
+          -4,
+          6
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### When to factor vs. use the formula",
+        "**Try factoring first** — it's fast when it works. If the trinomial factors over the integers, you'll spot it quickly.",
+        "**Reach for the formula** when factoring isn't obvious, when coefficients are big, or when the roots aren't going to be integers. The formula always works."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "**Quadratic formula:** $x = \\dfrac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$. Always works for any $ax^2 + bx + c = 0$. Discriminant $b^2 - 4ac$: positive → 2 real roots; zero → 1 repeated; negative → no real roots. Memorize the formula and the discriminant rule — they unlock every quadratic."
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Two triangles are } \\textit{congruent} \\text{ if:}",
+      "choices": [
+        "Same shape only",
+        "Same size only",
+        "Same shape AND same size",
+        "Their corresponding angles sum to 180°"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Congruent = identical.",
+        "Both shape and size must match."
+      ],
+      "explanation": "**Congruent** = same shape AND same size. Every corresponding side and angle matches exactly.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which is NOT a valid congruence shortcut?}",
+      "choices": [
+        "SSS",
+        "SAS",
+        "ASA",
+        "SSA"
+      ],
+      "answerIndex": 3,
+      "hints": [
+        "Three of these are standard congruence rules.",
+        "SSA is the 'ambiguous case' — it can produce two different triangles."
+      ],
+      "explanation": "SSS, SAS, ASA, and AAS are all valid. **SSA is NOT** — it can correspond to two different triangles, so it doesn't guarantee congruence.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Two triangles are similar with scale factor 4. The smaller has sides 3, 4, 5. The larger has sides:}",
+      "choices": [
+        "3, 4, 5",
+        "12, 16, 20",
+        "7, 8, 9",
+        "12, 16, 18"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Multiply each side by the scale factor.",
+        "$3 \\times 4, 4 \\times 4, 5 \\times 4$."
+      ],
+      "explanation": "Scale factor 4 means each side is 4× the corresponding original. $3 \\to 12$, $4 \\to 16$, $5 \\to 20$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Two similar triangles have scale factor 3. The ratio of their areas is:}",
+      "choices": [
+        "3 : 1",
+        "9 : 1",
+        "1 : 3",
+        "6 : 1"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Areas scale by $k^2$.",
+        "$3^2 = 9$."
+      ],
+      "explanation": "Areas of similar figures scale by $k^2$ where $k$ is the linear scale factor. $k = 3 \\Rightarrow k^2 = 9$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{To prove two triangles similar, the simplest test requires only:}",
+      "choices": [
+        "All three sides proportional",
+        "Two pairs of equal angles",
+        "Two sides and an included angle",
+        "All three angles equal"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "If two angles match, what about the third?",
+        "Angle sum forces it."
+      ],
+      "explanation": "**AA** (Angle-Angle) is the simplest: two equal pairs of angles automatically force the third pair to be equal too (since they all sum to 180°). So two pairs is enough for similarity.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which postulate proves two triangles congruent if all 3 corresponding} \\\\ \\text{sides are equal?}",
+      "choices": [
+        "SSS",
+        "SAS",
+        "ASA",
+        "AA"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "S = side, A = angle. All sides means SSS.",
+        "AA proves similarity (not congruence)."
+      ],
+      "explanation": "SSS: Side-Side-Side. Three equal sides → triangles are congruent.",
+      "steps": [
+        "SSS = Side-Side-Side: all three pairs of corresponding sides equal.",
+        "Other postulates: SAS (two sides + included angle), ASA (two angles + included side), AAS (two angles + non-included side).",
+        "AA proves **similarity**, not congruence (similar triangles can be different sizes)."
+      ],
+      "id": "q6",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Two similar triangles have a scale factor of } 3:5. \\\\ \\text{If the smaller triangle has perimeter } 21, \\text{ find the larger's perimeter.}",
+      "answer": 35,
+      "tolerance": 0,
+      "hints": [
+        "Perimeter scales with the linear scale factor.",
+        "$21 \\cdot 5/3 = ?$"
+      ],
+      "explanation": "Perimeter ratio = scale factor: $\\dfrac{P_{\\text{large}}}{21} = \\dfrac{5}{3} \\Rightarrow P_{\\text{large}} = 35$.",
+      "steps": [
+        "Linear measurements (sides, perimeters) scale by the **scale factor** between similar shapes.",
+        "Set up the proportion: $$\\dfrac{P_{\\text{large}}}{21} = \\dfrac{5}{3}$$",
+        "Cross-multiply: $3 P_{\\text{large}} = 105 \\Rightarrow P_{\\text{large}} = 35$."
+      ],
+      "id": "q7",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Two similar triangles have a scale factor of } 2:5. \\\\ \\text{If the smaller has area } 8 \\text{ cm}^2, \\text{ find the larger's area.}",
+      "answer": 50,
+      "tolerance": 0,
+      "hints": [
+        "Area scales with the SQUARE of the linear scale factor.",
+        "$8 \\cdot (5/2)^2 = 8 \\cdot 25/4 = 50$."
+      ],
+      "explanation": "Area ratio = (scale factor)² = $(5/2)^2 = 25/4$. So $A_{\\text{large}} = 8 \\cdot 25/4 = 50$ cm².",
+      "steps": [
+        "Areas of similar shapes scale by the **square** of the linear scale factor.",
+        "Linear ratio $= 5/2$, so area ratio $= (5/2)^2 = 25/4$.",
+        "$$A_{\\text{large}} = 8 \\cdot \\dfrac{25}{4} = 2 \\cdot 25 = 50 \\text{ cm}^2$$"
+      ],
+      "id": "q8",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A } 5\\text{-ft person casts a } 4\\text{-ft shadow. At the same time,} \\\\ \\text{a tree casts a } 36\\text{-ft shadow. How tall is the tree?}",
+      "answer": 45,
+      "tolerance": 0,
+      "hints": [
+        "Similar triangles: $\\dfrac{\\text{height}}{\\text{shadow}}$ is the same for both.",
+        "$\\dfrac{5}{4} = \\dfrac{h}{36}$."
+      ],
+      "explanation": "$\\dfrac{5}{4} = \\dfrac{h}{36} \\Rightarrow h = \\dfrac{5 \\cdot 36}{4} = 45$ ft.",
+      "steps": [
+        "Sun rays hit the person and the tree at the same angle, creating similar triangles.",
+        "Set up the proportion: $$\\dfrac{\\text{height}}{\\text{shadow}} = \\dfrac{\\text{height}}{\\text{shadow}}$$",
+        "$$\\dfrac{5}{4} = \\dfrac{h}{36}$$",
+        "Cross-multiply: $h = \\dfrac{5 \\cdot 36}{4} = \\dfrac{180}{4} = 45$ ft."
+      ],
+      "id": "q9",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Two triangles share an angle. The other two angles of one are } 50° \\text{ and } 60°. \\\\ \\text{The other two of the second are } 60° \\text{ and } 70°. \\text{ Are they similar?}",
+      "choices": [
+        "Yes — by AA",
+        "No — angles don't match",
+        "Yes — by SSS",
+        "Need more info"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Use the angle-sum theorem (180°) to find the third angle of each triangle.",
+        "Both triangles end up with the same three angles."
+      ],
+      "explanation": "Triangle 1's third angle: $180 - 50 - 60 = 70°$, so its angles are $\\{50°, 60°, 70°\\}$. Triangle 2's third angle: $180 - 60 - 70 = 50°$, so its angles are also $\\{50°, 60°, 70°\\}$. Same three angles → similar by AA (in fact AAA).",
+      "steps": [
+        "**Recognize the test.** Two triangles are similar if they share two pairs of equal angles (AA). The angle-sum theorem fills in the third angle automatically.",
+        "**Find the third angle of triangle 1.** $180 - 50 - 60 = 70°$. Angles: $\\{50°, 60°, 70°\\}$.",
+        "**Find the third angle of triangle 2.** $180 - 60 - 70 = 50°$. Angles: $\\{50°, 60°, 70°\\}$.",
+        "**Compare.** Same set of angles → similar by AA."
+      ],
+      "id": "q10",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Triangle ABC has sides } 4, 6, 8. \\\\ \\text{A similar triangle has its shortest side } 6. \\\\ \\text{What is the longest side of the similar triangle?}",
+      "answer": 12,
+      "tolerance": 0,
+      "hints": [
+        "Scale factor = $6/4 = 3/2$. Apply to longest side.",
+        "$8 \\cdot 3/2 = 12$."
+      ],
+      "explanation": "Scale factor $= 6/4 = 3/2$. Longest side: $8 \\cdot 3/2 = 12$.",
+      "steps": [
+        "The shortest side of the original is $4$; the shortest of the similar is $6$.",
+        "Scale factor: $6 / 4 = 3/2$.",
+        "Apply to longest side ($8$): $8 \\cdot 3/2 = 12$."
+      ],
+      "id": "q11",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which of the following is NOT enough to prove two triangles congruent?}",
+      "choices": [
+        "SSS",
+        "SAS",
+        "AAA (all three angles equal)",
+        "ASA"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "AAA proves similarity, but the triangles could be different sizes.",
+        "Need at least one side to fix the size."
+      ],
+      "explanation": "AAA proves the triangles are similar (same shape) but says nothing about size. SSS, SAS, ASA all fix both shape and size.",
+      "steps": [
+        "**SSS:** all three sides equal → identical triangles ✓ (congruence)",
+        "**SAS:** two sides + included angle ✓",
+        "**ASA:** two angles + included side ✓",
+        "**AAA:** all three angles equal — but a tiny triangle and a giant triangle can have the same angles. Only proves **similarity**, not congruence.",
+        "Need at least one side somewhere to fix the size."
+      ],
+      "id": "q12",
+      "difficulty": "easy"
+    }
+  ]
+}

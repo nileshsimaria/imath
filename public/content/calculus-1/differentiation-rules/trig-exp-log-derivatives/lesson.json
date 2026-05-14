@@ -1,0 +1,141 @@
+{
+  "title": "Derivatives of Trig, Exp & Log",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "The power rule handles polynomials. To differentiate everything else — sines, exponentials, logarithms — you need a few more named derivatives. They follow from the limit definition (and key limits like $\\lim_{x \\to 0} \\sin(x)/x = 1$), but you should memorize them outright."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. Trig Function Derivatives"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{d}{dx}\\sin x = \\cos x \\qquad \\dfrac{d}{dx}\\cos x = -\\sin x"
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{d}{dx}\\tan x = \\sec^2 x \\qquad \\dfrac{d}{dx}\\cot x = -\\csc^2 x"
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{d}{dx}\\sec x = \\sec x \\tan x \\qquad \\dfrac{d}{dx}\\csc x = -\\csc x \\cot x"
+    },
+    {
+      "type": "callout",
+      "title": "Memory pattern",
+      "body": "**The 'co' versions get a minus sign.** Cosine, cotangent, cosecant — all have derivatives starting with a negative. Sine, tangent, secant — positive."
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Important:** these formulas assume **$x$ is in radians**. If you're using degrees, every formula needs an extra $\\pi/180$ factor — which is why calculus uses radians by default."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. Exponential Derivatives"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{d}{dx}\\,e^x = e^x"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**The exponential is its own derivative.** That's what makes $e$ the 'natural' base — it's the unique base where this happens."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{d}{dx}\\,a^x = a^x \\ln(a) \\quad (a > 0, a \\neq 1)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "For other bases, you pick up a $\\ln(a)$ factor.",
+        "**Example.** $\\dfrac{d}{dx}\\,2^x = 2^x \\ln 2$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. Logarithm Derivatives"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{d}{dx}\\ln x = \\dfrac{1}{x} \\quad (x > 0)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Beautifully simple. Maybe the most-used logarithm derivative."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{d}{dx}\\log_a x = \\dfrac{1}{x \\ln a}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Other-base log: same formula, divide by $\\ln a$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. Combined With the Chain Rule"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "These derivatives are most useful in combination with the chain rule.",
+        "**Example.** $\\dfrac{d}{dx}\\sin(2x) = \\cos(2x) \\cdot 2 = 2\\cos(2x)$.",
+        "**Example.** $\\dfrac{d}{dx}\\,e^{3x + 1} = e^{3x + 1} \\cdot 3 = 3e^{3x + 1}$.",
+        "**Example.** $\\dfrac{d}{dx}\\ln(x^2 + 5) = \\dfrac{1}{x^2 + 5} \\cdot 2x = \\dfrac{2x}{x^2 + 5}$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — combining several rules",
+        "$\\dfrac{d}{dx}\\bigl(x^2 \\ln x\\bigr)$.",
+        "**Product rule** with $f = x^2$, $g = \\ln x$. $f' = 2x$. $g' = 1/x$.",
+        "$= 2x \\ln x + x^2 \\cdot \\dfrac{1}{x} = 2x \\ln x + x = x(2 \\ln x + 1)$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — chain rule + log",
+        "$\\dfrac{d}{dx}\\bigl(\\ln(\\cos x)\\bigr)$.",
+        "Outer $\\ln u$, inner $\\cos x$. $\\dfrac{1}{\\cos x} \\cdot (-\\sin x) = -\\dfrac{\\sin x}{\\cos x} = -\\tan x$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Try it — see derivatives of trig and exp",
+        "Switch the widget to sin or e^x. Notice: the sine curve's derivative IS the cosine curve. The exponential's derivative IS itself. Toggle 'show f'(x)' to overlay them and see this directly."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "derivative-explorer",
+      "config": {
+        "func": "sin",
+        "x0": 0.5,
+        "showDerivative": true
+      }
+    }
+  ]
+}

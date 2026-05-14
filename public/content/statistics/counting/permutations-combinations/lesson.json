@@ -1,0 +1,134 @@
+{
+  "title": "Permutations & Combinations",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "**Permutations** count *ordered* arrangements. **Combinations** count *unordered* selections. The single most important question in a counting problem: **does order matter?**"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. Permutations — Order Matters"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "A **permutation** is an arrangement of objects where the order matters. The number of ways to choose $r$ items from $n$ distinct items, in order:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "P(n, r) = {}_nP_r = \\dfrac{n!}{(n - r)!}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Why? First slot: $n$ choices. Second: $n - 1$. Third: $n - 2$. … $r$th: $n - r + 1$. Multiply them.",
+        "**Example.** From a class of 20 students, how many ways to elect a president, vice president, and treasurer (3 distinct positions)?",
+        "$P(20, 3) = \\dfrac{20!}{17!} = 20 \\cdot 19 \\cdot 18 = 6840$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Special case: arrange ALL of them ($r = n$)",
+        "$P(n, n) = n! / 0! = n!$.",
+        "**Example.** How many ways to line up 6 people for a photo? $6! = 720$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. Combinations — Order Doesn't Matter"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "A **combination** is a selection where the order doesn't matter. Choosing 'apple, orange' is the same as choosing 'orange, apple.'"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "C(n, r) = \\binom{n}{r} = \\dfrac{n!}{r!\\,(n - r)!}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Why divide by $r!$? Each combination of $r$ items can be arranged in $r!$ different orders, all of which are 'the same' combination. So we take the permutation count and divide.",
+        "**Example.** From a class of 20, how many ways to pick a 3-person committee (no titles)?",
+        "$C(20, 3) = \\dfrac{20!}{3! \\cdot 17!} = \\dfrac{20 \\cdot 19 \\cdot 18}{3 \\cdot 2 \\cdot 1} = \\dfrac{6840}{6} = 1140$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Permutation vs combination — the test",
+      "body": "**Order matters** (assignments, rankings, sequences, lineups) → **permutation**. **Order doesn't matter** (committee, lottery numbers, hand of cards, group selection) → **combination**. If swapping two of the chosen items gives the 'same' answer, you want a combination."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. The Relationship"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "P(n, r) = C(n, r) \\cdot r!"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Same intuition: $r!$ orderings per combination. Multiply combinations by $r!$ to get permutations."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. Reading Pascal's Triangle as Combinations"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "The entries of Pascal's Triangle ARE the binomial coefficients $\\binom{n}{k}$. Row $n$, position $k$, equals $C(n, k)$.",
+        "Try the widget below: click on a cell to see $\\binom{n}{k}$ — that's the number of combinations of $k$ items chosen from $n$."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "pascals-triangle",
+      "config": {
+        "rows": 8,
+        "highlight": {
+          "n": 5,
+          "k": 2
+        }
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — poker",
+        "How many 5-card poker hands are there from a 52-card deck?",
+        "Order doesn't matter (a hand is a hand). $C(52, 5) = \\dfrac{52!}{5! \\cdot 47!} = \\dfrac{52 \\cdot 51 \\cdot 50 \\cdot 49 \\cdot 48}{120} = 2{,}598{,}960$.",
+        "About 2.6 million hands."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — race",
+        "12 runners. Top 3 get gold, silver, bronze.",
+        "Order matters (gold ≠ silver). $P(12, 3) = 12 \\cdot 11 \\cdot 10 = 1320$ ways."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "**Permutation** $P(n, r) = \\dfrac{n!}{(n-r)!}$ — order matters (positions, rankings). **Combination** $C(n, r) = \\binom{n}{r} = \\dfrac{n!}{r!(n-r)!}$ — order doesn't matter (groups, hands, committees). **First question to ask:** does order matter?"
+    }
+  ]
+}

@@ -1,0 +1,387 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "prompt": "Which three triangle centers lie on the Euler line?",
+      "choices": [
+        "Incenter, centroid, circumcenter",
+        "Centroid, circumcenter, orthocenter",
+        "Incenter, centroid, orthocenter",
+        "Centroid, incenter, orthocenter"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Centroid, circumcenter, orthocenter — NOT the incenter (in general).",
+        "Euler discovered this in 1765."
+      ],
+      "explanation": "The Euler line contains centroid $G$, circumcenter $O$, and orthocenter $H$ — but NOT the incenter (in general).",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "prompt": "On the Euler line, what is the ratio OG : GH?",
+      "choices": [
+        "1 : 1",
+        "1 : 2",
+        "2 : 1",
+        "1 : 3"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "G is one-third of the way from O to H.",
+        "So OG is 1, GH is 2."
+      ],
+      "explanation": "$OG : GH = 1 : 2$. The centroid divides $OH$ in ratio $1:2$, closer to the circumcenter.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "In which case does the Euler line degenerate (collapse to a point)?",
+      "choices": [
+        "Right triangles",
+        "Isosceles triangles",
+        "Equilateral triangles",
+        "Scalene triangles"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "All centers coincide in this special case.",
+        "Maximum symmetry."
+      ],
+      "explanation": "Equilateral triangle: all four classical centers coincide, so the Euler 'line' is degenerate (a single point).",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If } O = (1, 2) \\text{ and } H = (7, 14), \\text{ find } G \\text{ (on the Euler line).}",
+      "choices": [
+        "(3, 6)",
+        "(4, 8)",
+        "(5, 10)",
+        "(2, 4)"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "$G = O + (1/3)(H - O)$.",
+        "$G = (1, 2) + (1/3)(6, 12) = (1, 2) + (2, 4) = (3, 6)$."
+      ],
+      "explanation": "$G$ is 1/3 of the way from $O$ to $H$: $G = O + (1/3)(H - O) = (1, 2) + (2, 4) = (3, 6)$.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{In an isosceles triangle, the incenter } I \\text{ relative to the Euler line:}",
+      "choices": [
+        "Lies on the Euler line",
+        "Always lies off the Euler line",
+        "Coincides with the centroid",
+        "Cannot be determined"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Isosceles triangles have an axis of symmetry.",
+        "All four centers lie on that axis."
+      ],
+      "explanation": "In an isosceles triangle, all four classical centers ($I, G, O, H$) lie on the axis of symmetry — which IS the Euler line. In a scalene triangle, the incenter generally is NOT on the Euler line.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If } G = (4, 5) \\text{ and } H = (10, 11), \\text{ find } O.",
+      "choices": [
+        "(1, 2)",
+        "(2, 3)",
+        "(7, 8)",
+        "(13, 14)"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "$G = O + (1/3)(H - O) \\;\\Longrightarrow\\; O = G - (1/2)(H - G)$.",
+        "Or: $O$ is on Euler line such that $OG = (1/2) GH$, opposite direction from $H$."
+      ],
+      "explanation": "$G - O = (1/3)(H - O)$ gives $3G - 3O = H - O$, so $O = (3G - H)/2 = ((12-10)/2, (15-11)/2) = (1, 2)$.",
+      "difficulty": "hard",
+      "steps": [
+        {
+          "text": "**Approach.** $G = O + (1/3)(H - O) \\;\\Longrightarrow\\; O = G - (1/2)(H - G)$."
+        },
+        {
+          "text": "Or: $O$ is on Euler line such that $OG = (1/2) GH$, opposite direction from $H$."
+        },
+        {
+          "text": "**Solution.** $G - O = (1/3)(H - O)$ gives $3G - 3O = H - O$, so $O = (3G - H)/2 = ((12-10)/2, (15-11)/2) = (1, 2)$."
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "prompt": "Where does the nine-point center N sit on the Euler line?",
+      "choices": [
+        "At the midpoint of OH",
+        "Between G and H (1/3 of the way from G)",
+        "At the orthocenter",
+        "Not on the Euler line"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "N is the center of the nine-point circle.",
+        "It's the midpoint of segment OH on the Euler line."
+      ],
+      "explanation": "The nine-point center N is at the midpoint of $OH$. So on the Euler line in order: $O, N, G, H$ with ratios $0 : 3 : 2 : 6$ (when measured from $O$).",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{If } |OH| = 18, \\text{ find } |OG|.",
+      "answer": 6,
+      "tolerance": 0.001,
+      "hints": [
+        "G divides OH in ratio 1:2 from O.",
+        "$|OG| = (1/3) |OH|$."
+      ],
+      "explanation": "$|OG| = (1/3) \\cdot 18 = 6$. (And $|GH| = 12$.)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The Euler relation in vector form is:}",
+      "choices": [
+        "$\\vec{H} = \\vec{O} + \\vec{G}$",
+        "$\\vec{H} = 3\\vec{G} - 2\\vec{O}$",
+        "$\\vec{H} = 2\\vec{O} - \\vec{G}$",
+        "$\\vec{H} = \\vec{O} + 2\\vec{G}$"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "From $OG : GH = 1 : 2$ we get $G = O + (1/3)(H - O)$. Rearrange for $H$.",
+        "$3G = 3O + H - O = 2O + H$, so $H = 3G - 2O$."
+      ],
+      "explanation": "$\\vec{H} = 3\\vec{G} - 2\\vec{O}$. Derivation: $G$ is one-third of the way from $O$ to $H$, so $G = O + (1/3)(H - O)$. Multiply by 3: $3G = 3O + H - O = 2O + H$. Rearrange: $H = 3G - 2O$. This is Euler's vector identity — among the most elegant in classical geometry.",
+      "steps": [
+        "**Start from the ratio.** $G$ divides $OH$ in ratio $1:2$, so $\\vec{OG} = \\dfrac{1}{3} \\vec{OH}$, i.e. $\\vec{G} - \\vec{O} = \\dfrac{1}{3}(\\vec{H} - \\vec{O})$.",
+        "**Solve for $\\vec{H}$.** Multiply both sides by 3: $3\\vec{G} - 3\\vec{O} = \\vec{H} - \\vec{O}$. Move $\\vec{O}$ over: $\\vec{H} = 3\\vec{G} - 2\\vec{O}$.",
+        "**Equivalent forms.** $\\vec{O} = (3\\vec{G} - \\vec{H})/2$, or $\\vec{G} = (2\\vec{O} + \\vec{H})/3$. The same identity rewritten to solve for each center.",
+        "**Why this matters.** With $\\vec{G} = (\\vec{A} + \\vec{B} + \\vec{C})/3$, the identity also gives $\\vec{H} = \\vec{A} + \\vec{B} + \\vec{C} - 2\\vec{O}$ — a clean expression of the orthocenter in terms of the vertices and circumcenter."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "multiple-choice",
+      "prompt": "Why are O, G, and H always collinear in any (non-equilateral) triangle?",
+      "choices": [
+        "Coincidence — works only for special triangles",
+        "A direct vector computation: $H = A + B + C - 2O$, so $H - 3G = A + B + C - 2O - (A + B + C) = -2O$, giving $H + 2O = 3G$. That linear relation FORCES O, G, H onto a line",
+        "Because the centroid is the midpoint of OH",
+        "Because all triangles are similar"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Three points are collinear ⇔ one is a linear combination of the other two.",
+        "$H + 2O = 3G$ is exactly such a relation — it says $G$ is an affine combination of $O$ and $H$."
+      ],
+      "explanation": "The vector identity $H + 2O = 3G$ (equivalently $G = \\dfrac{2O + H}{3}$) means $G$ is a fixed affine combination of $O$ and $H$. Any point that's a convex combination of two others lies on the segment between them — so $G$ lies on segment $OH$. Collinearity is forced by the linear relation; not coincidence.",
+      "steps": [
+        "**Set up.** Let $\\vec{A}, \\vec{B}, \\vec{C}$ be the vertex position vectors, $\\vec{O}$ the circumcenter.",
+        "**Key identity.** $\\vec{H} = \\vec{A} + \\vec{B} + \\vec{C} - 2\\vec{O}$. (Can be derived from the orthocenter's defining property using $\\vec{OA} \\cdot \\vec{BC} = 0$ for each pair, expanded coordinate-by-coordinate.)",
+        "**Compute $\\vec{H} - 3\\vec{G}$.** Substituting $\\vec{G} = (\\vec{A} + \\vec{B} + \\vec{C})/3$, so $3\\vec{G} = \\vec{A} + \\vec{B} + \\vec{C}$. Then $\\vec{H} - 3\\vec{G} = -2\\vec{O}$, i.e. $\\vec{H} + 2\\vec{O} = 3\\vec{G}$.",
+        "**Rearrange.** $\\vec{G} = \\dfrac{2\\vec{O} + \\vec{H}}{3}$. $G$ is an affine combination of $O$ and $H$ → all three are collinear, with $G$ on segment $OH$.",
+        "**Read off the ratio.** $G$ is at weight $\\dfrac{2}{3}$ from $O$? No — the formula says $G$ is at parameter $1/3$ along $OH$ (since the coefficient of $H$ is $1/3$). So $OG : OH = 1 : 3$, i.e. $OG : GH = 1 : 2$. Matches Euler's ratio.",
+        "**Pattern lesson.** Collinearity proofs in geometry often reduce to finding an affine relation $\\alpha \\vec{P_1} + \\beta \\vec{P_2} + \\gamma \\vec{P_3} = \\vec{0}$ with $\\alpha + \\beta + \\gamma = 0$. Here the relation is $\\vec{H} - 3\\vec{G} + 2\\vec{O} = \\vec{0}$ with $1 - 3 + 2 = 0$ ✓."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{Triangle with vertices } A(0,0), B(4,0), C(1,3). \\\\ \\text{All three of } O, G, H \\text{ have the SAME y-coordinate (the Euler line is horizontal). What is it?}",
+      "answer": 1,
+      "tolerance": 0.001,
+      "hints": [
+        "Find $G$ first (easy): $G = ((0+4+1)/3, (0+0+3)/3) = (5/3, 1)$.",
+        "Find $O$: perpendicular bisector of $AB$ is $x = 2$; perpendicular bisector of $AC$ gives $y = 1$ at that $x$. So $O = (2, 1)$.",
+        "Find $H$ using $H = 3G - 2O = (5,3) - (4,2) = (1, 1)$. All three at $y = 1$."
+      ],
+      "explanation": "Compute each center: $G = (5/3, 1)$ (average of vertices), $O = (2, 1)$ (intersection of perpendicular bisectors), $H = 3G - 2O = (1, 1)$ (via the Euler relation). All have $y = 1$ — the Euler line is the horizontal $y = 1$.",
+      "steps": [
+        "**Centroid first.** $G = \\left(\\dfrac{0+4+1}{3}, \\dfrac{0+0+3}{3}\\right) = (5/3, 1)$.",
+        {
+          "svg": "<svg viewBox=\"0 0 280 200\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"40,170 200,170 80,50\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><line x1=\"15\" y1=\"130\" x2=\"235\" y2=\"130\" stroke=\"#475569\" stroke-width=\"1.2\" stroke-dasharray=\"6 4\"/><circle cx=\"120\" cy=\"130\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"107\" cy=\"130\" r=\"4\" fill=\"#16a34a\"/><circle cx=\"80\" cy=\"130\" r=\"4\" fill=\"#dc2626\"/><circle cx=\"40\" cy=\"170\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"200\" cy=\"170\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"80\" cy=\"50\" r=\"3.5\" fill=\"#1e293b\"/><text x=\"24\" y=\"186\" font-size=\"12\" font-weight=\"600\" fill=\"#0f172a\">A(0,0)</text><text x=\"180\" y=\"186\" font-size=\"12\" font-weight=\"600\" fill=\"#0f172a\">B(4,0)</text><text x=\"68\" y=\"42\" font-size=\"12\" font-weight=\"600\" fill=\"#0f172a\">C(1,3)</text><text x=\"125\" y=\"125\" font-size=\"11\" font-weight=\"600\" fill=\"#2563eb\">O</text><text x=\"100\" y=\"122\" font-size=\"11\" font-weight=\"600\" fill=\"#16a34a\">G</text><text x=\"73\" y=\"122\" font-size=\"11\" font-weight=\"600\" fill=\"#dc2626\">H</text><text x=\"30\" y=\"196\" font-size=\"11\" fill=\"#475569\" font-style=\"italic\">Euler line is the horizontal line y = 1</text></svg>"
+        },
+        "**Circumcenter.** $AB$ is on the x-axis from $(0,0)$ to $(4,0)$, perpendicular bisector: $x = 2$. Bisector of $AC$ from midpoint $(0.5, 1.5)$: $AC$ slope $= 3$, perpendicular slope $= -1/3$. Line: $y - 1.5 = -\\dfrac{1}{3}(x - 0.5)$. At $x = 2$: $y = 1.5 - \\dfrac{1}{3}(1.5) = 1$. So $O = (2, 1)$.",
+        "**Orthocenter via Euler identity.** $\\vec{H} = 3\\vec{G} - 2\\vec{O} = 3(5/3, 1) - 2(2, 1) = (5, 3) - (4, 2) = (1, 1)$.",
+        "**Verify ratio.** $|OG| = |2 - 5/3| = 1/3$. $|GH| = |5/3 - 1| = 2/3$. Ratio $1/3 : 2/3 = 1 : 2$ ✓.",
+        "**Conclusion.** All three centers have $y = 1$. The Euler line is $y = 1$."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\text{On the Euler line, } |OH| = 12. \\text{ Find } |GH|.",
+      "answer": 8,
+      "tolerance": 0.001,
+      "hints": [
+        "$G$ divides $OH$ in ratio $1:2$, so $|GH| = (2/3) |OH|$.",
+        "$|GH| = (2/3) \\cdot 12 = 8$."
+      ],
+      "explanation": "$|GH| = (2/3) |OH| = (2/3)(12) = 8$. (And $|OG| = 4$, so $|OG| + |GH| = 12$ ✓.)",
+      "steps": [
+        "**Use the ratio.** $OG : GH = 1 : 2$, so $OG = \\dfrac{1}{3} OH$ and $GH = \\dfrac{2}{3} OH$.",
+        "**Plug in.** $GH = (2/3)(12) = 8$.",
+        "**Verify by summing.** $OG + GH = 4 + 8 = 12 = OH$ ✓."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q13",
+      "type": "multiple-choice",
+      "prompt": "Order the four points O (circumcenter), G (centroid), N (nine-point center), H (orthocenter) along the Euler line, starting from O.",
+      "choices": [
+        "O, H, G, N",
+        "O, G, N, H",
+        "O, N, G, H",
+        "O, N, H, G"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$G$ is at fraction $1/3$ along $OH$; $N$ is at fraction $1/2$ along $OH$.",
+        "$1/3 < 1/2 < 1$, so the order from O is G, then N, then H."
+      ],
+      "explanation": "Parametrize along $OH$ with $O$ at $0$ and $H$ at $1$. Then $G$ is at $1/3$ (Euler ratio) and $N$ is at $1/2$ (midpoint of $OH$). Since $0 < 1/3 < 1/2 < 1$, the order is $O, G, N, H$ — with segment ratios $OG : GN : NH = 2 : 1 : 3$.",
+      "steps": [
+        "**Locate each point as a fraction of $OH$.** $O$ at $0$. $H$ at $1$. $G$ at $1/3$ (by the Euler ratio $OG:GH = 1:2$). $N$ is the midpoint of $OH$, so at $1/2$.",
+        "**Sort.** $0 < 1/3 < 1/2 < 1$, so the order from $O$ is $O, G, N, H$.",
+        "**Compute segment ratios.** $OG = 1/3$, $GN = 1/2 - 1/3 = 1/6$, $NH = 1 - 1/2 = 1/2$. Multiply by 6 to clear fractions: $OG : GN : NH = 2 : 1 : 3$.",
+        "**Pattern lesson.** $G$ is closer to $O$ than to $H$. $N$ sits exactly between them. The Euler line carries a lot of structure — there's also the de Longchamps point, the exeter point, and many other 'special points' all on the same line."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q14",
+      "type": "numeric",
+      "promptTex": "\\text{Given } O = (1, 2) \\text{ and } H = (7, 14), \\\\ \\text{find the x-coordinate of the nine-point center } N.",
+      "answer": 4,
+      "tolerance": 0.001,
+      "hints": [
+        "$N$ is the midpoint of $OH$.",
+        "$N = ((1+7)/2, (2+14)/2) = (4, 8)$."
+      ],
+      "explanation": "The nine-point center is the midpoint of $OH$: $N = \\left(\\dfrac{1+7}{2}, \\dfrac{2+14}{2}\\right) = (4, 8)$. So $x_N = 4$.",
+      "steps": [
+        "**Recall the definition.** The nine-point center $N$ is the midpoint of segment $OH$ on the Euler line.",
+        {
+          "svg": "<svg viewBox=\"0 0 280 200\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"100\" x2=\"260\" y2=\"100\" stroke=\"#475569\" stroke-width=\"1.4\" stroke-dasharray=\"6 4\"/><circle cx=\"40\" cy=\"100\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"120\" cy=\"100\" r=\"5\" fill=\"#16a34a\"/><circle cx=\"160\" cy=\"100\" r=\"5\" fill=\"#b45309\"/><circle cx=\"240\" cy=\"100\" r=\"5\" fill=\"#dc2626\"/><text x=\"34\" y=\"86\" font-size=\"13\" font-weight=\"700\" fill=\"#2563eb\">O</text><text x=\"114\" y=\"86\" font-size=\"13\" font-weight=\"700\" fill=\"#16a34a\">G</text><text x=\"154\" y=\"86\" font-size=\"13\" font-weight=\"700\" fill=\"#b45309\">N</text><text x=\"234\" y=\"86\" font-size=\"13\" font-weight=\"700\" fill=\"#dc2626\">H</text><text x=\"70\" y=\"125\" font-size=\"11\" fill=\"#475569\" font-style=\"italic\">1/3</text><text x=\"135\" y=\"125\" font-size=\"11\" fill=\"#475569\" font-style=\"italic\">1/6</text><text x=\"195\" y=\"125\" font-size=\"11\" fill=\"#475569\" font-style=\"italic\">1/2</text><text x=\"60\" y=\"160\" font-size=\"12\" fill=\"#0f172a\" font-style=\"italic\">order along the Euler line: O, G, N, H</text></svg>"
+        },
+        "**Compute the midpoint of $OH$.** $N = \\left(\\dfrac{1+7}{2}, \\dfrac{2+14}{2}\\right) = (4, 8)$.",
+        "**Report $x_N$.** $x_N = 4$.",
+        "**Cross-check with $G$.** $G = O + (1/3)(H - O) = (1, 2) + (2, 4) = (3, 6)$. As expected, $G$ comes before $N$ (since $1/3 < 1/2$) on the line from $O$ to $H$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q15",
+      "type": "multiple-choice",
+      "prompt": "The nine-point circle of a triangle has radius equal to:",
+      "choices": [
+        "The inradius r",
+        "Half the circumradius, R/2",
+        "The circumradius R",
+        "Twice the circumradius, 2R"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "The nine-point circle passes through nine special points — including the three midpoints of the sides.",
+        "It's a scaled-down version of the circumcircle, by a factor of 1/2."
+      ],
+      "explanation": "The nine-point circle has radius $R/2$ — half the circumradius. Geometrically it's the scaled-down image of the circumcircle, under a *homothety* centered at $H$ with factor $1/2$. It passes through nine special points: the three side midpoints, the three altitude feet, and the three midpoints of segments from each vertex to $H$.",
+      "steps": [
+        "**Statement.** Nine-point circle radius $= R/2$.",
+        {
+          "svg": "<svg viewBox=\"0 0 280 210\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"140\" cy=\"112\" r=\"80\" fill=\"none\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><circle cx=\"140\" cy=\"122\" r=\"40\" fill=\"rgba(180,83,9,0.10)\" stroke=\"#b45309\" stroke-width=\"1.4\"/><polygon points=\"140,32 76,150 204,150\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.5\" opacity=\"0.85\"/><circle cx=\"140\" cy=\"150\" r=\"3\" fill=\"#16a34a\"/><circle cx=\"172\" cy=\"91\" r=\"3\" fill=\"#16a34a\"/><circle cx=\"108\" cy=\"91\" r=\"3\" fill=\"#16a34a\"/><circle cx=\"140\" cy=\"112\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"140\" cy=\"122\" r=\"4\" fill=\"#b45309\"/><circle cx=\"140\" cy=\"32\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"76\" cy=\"150\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"204\" cy=\"150\" r=\"3.5\" fill=\"#1e293b\"/><text x=\"135\" y=\"24\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">A</text><text x=\"62\" y=\"162\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">B</text><text x=\"210\" y=\"162\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">C</text><text x=\"148\" y=\"114\" font-size=\"11\" font-weight=\"600\" fill=\"#2563eb\">O</text><text x=\"148\" y=\"127\" font-size=\"11\" font-weight=\"600\" fill=\"#b45309\">N</text><text x=\"30\" y=\"196\" font-size=\"11\" fill=\"#475569\" font-style=\"italic\">circumcircle (gray, radius R) + nine-point circle (orange, radius R/2)</text></svg>"
+        },
+        "**The nine points.** (1) midpoints of the three sides, (2) feet of the three altitudes, (3) midpoints of $HA, HB, HC$. All nine lie on the same circle.",
+        "**Where it sits.** Center $N$ is the midpoint of $OH$ (the nine-point center). Radius is $R/2$.",
+        "**Why $R/2$?** Apply a homothety centered at $H$ with ratio $1/2$. It maps each vertex $A$ to the midpoint of $HA$ — a nine-point. It maps the circumcircle (passing through $A, B, C$) to a circle of half radius, passing through the three midpoints of $HA, HB, HC$. Some careful case-checking shows the same image circle also passes through the side midpoints and altitude feet — giving all nine points on a circle of radius $R/2$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q16",
+      "type": "multiple-choice",
+      "prompt": "Which collection of nine points does the 'nine-point circle' pass through?",
+      "choices": [
+        "Three vertices, three side midpoints, three altitude feet",
+        "Three side midpoints, three altitude feet, and the three midpoints of HA, HB, HC (where H is the orthocenter)",
+        "Three vertices, three side midpoints, three angle-bisector feet",
+        "Three vertices and six random points"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "The vertices themselves are NOT among the nine — they sit on the circumcircle (which is twice as large).",
+        "The nine points come in three groups of three: side midpoints, altitude feet, midpoints from H to each vertex."
+      ],
+      "explanation": "The nine points are: (1) the three midpoints of the sides; (2) the three feet of the altitudes; (3) the three midpoints of the segments from each vertex to the orthocenter $H$. Discovered piece-by-piece by Euler, Brianchon, and Poncelet in the 1820s.",
+      "steps": [
+        "**Three groups of three points.** Group A: midpoints of sides $BC, CA, AB$. Group B: feet of altitudes from $A, B, C$. Group C: midpoints of $HA, HB, HC$ (segments from each vertex to the orthocenter).",
+        "**All nine on one circle.** Centered at $N$ = midpoint of $OH$, radius $R/2$.",
+        "**Why is it remarkable?** Three a-priori unrelated 'systems of three' all sit on the same circle. It's one of the most surprising results of classical Euclidean geometry."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q17",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Given } O = (0, 0) \\text{ and } G = (2, 3), \\text{ find } H.",
+      "choices": [
+        "(6, 9)",
+        "(4, 6)",
+        "(3, 4.5)",
+        "(2, 3)"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Use $H = 3G - 2O$.",
+        "$H = 3(2, 3) - 2(0, 0) = (6, 9)$."
+      ],
+      "explanation": "By the Euler vector identity: $\\vec{H} = 3\\vec{G} - 2\\vec{O} = 3(2, 3) - 2(0, 0) = (6, 9)$. Sanity check: $|OG| = \\sqrt{13}$, $|GH| = \\sqrt{(6-2)^2 + (9-3)^2} = \\sqrt{52} = 2\\sqrt{13}$. Ratio $1:2$ ✓.",
+      "steps": [
+        "**Use the Euler identity.** $\\vec{H} = 3\\vec{G} - 2\\vec{O}$.",
+        "**Plug in.** $\\vec{H} = 3(2, 3) - 2(0, 0) = (6, 9) - (0, 0) = (6, 9)$.",
+        "**Verify the ratio.** $|OG| = \\sqrt{4 + 9} = \\sqrt{13}$. $|GH| = \\sqrt{16 + 36} = \\sqrt{52} = 2\\sqrt{13}$. Ratio $OG : GH = 1 : 2$ ✓ — and $O, G, H$ are collinear on $y = 1.5\\,x$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q18",
+      "type": "numeric",
+      "promptTex": "\\text{For any triangle, } |AH| = 2 \\cdot OM_a, \\\\ \\text{where } M_a \\text{ is the midpoint of side } BC \\text{ (opposite } A\\text{)}. \\\\ \\text{If } OM_a = 7, \\text{ find } |AH|.",
+      "answer": 14,
+      "tolerance": 0.001,
+      "hints": [
+        "Just apply the identity: $|AH| = 2 \\cdot OM_a$.",
+        "$|AH| = 2 \\cdot 7 = 14$."
+      ],
+      "explanation": "Classical identity: $|AH| = 2 \\cdot OM_a$, where $OM_a$ is the perpendicular distance from the circumcenter to side $a$. (Both $OM_a$ and $AH$ point in the same direction, since both are perpendicular to $BC$.) So $|AH| = 2 \\cdot 7 = 14$.",
+      "steps": [
+        "**Statement.** $|AH| = 2 \\cdot OM_a$ — distance from vertex to orthocenter equals twice the distance from circumcenter to opposite side. Mirror identities at $B, C$.",
+        {
+          "svg": "<svg viewBox=\"0 0 280 210\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"140,30 40,170 230,170\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><line x1=\"140\" y1=\"30\" x2=\"140\" y2=\"105\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><line x1=\"135\" y1=\"170\" x2=\"135\" y2=\"135\" stroke=\"#2563eb\" stroke-width=\"1.8\"/><circle cx=\"140\" cy=\"105\" r=\"4\" fill=\"#16a34a\"/><circle cx=\"135\" cy=\"135\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"135\" cy=\"170\" r=\"3\" fill=\"#475569\"/><circle cx=\"140\" cy=\"30\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"40\" cy=\"170\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"230\" cy=\"170\" r=\"3.5\" fill=\"#1e293b\"/><text x=\"135\" y=\"22\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">A</text><text x=\"26\" y=\"185\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">B</text><text x=\"236\" y=\"185\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">C</text><text x=\"148\" y=\"108\" font-size=\"11\" font-weight=\"600\" fill=\"#16a34a\">H</text><text x=\"118\" y=\"132\" font-size=\"11\" font-weight=\"600\" fill=\"#2563eb\">O</text><text x=\"122\" y=\"185\" font-size=\"11\" fill=\"#475569\" font-style=\"italic\">M_a</text><text x=\"148\" y=\"70\" font-size=\"11\" fill=\"#dc2626\" font-style=\"italic\">AH</text><text x=\"116\" y=\"160\" font-size=\"11\" fill=\"#2563eb\" font-style=\"italic\">OM_a</text></svg>"
+        },
+        "**Plug in.** $|AH| = 2 \\cdot 7 = 14$.",
+        "**Why is the identity true?** Vector form: $\\vec{AH} = 2 \\vec{OM_a}$. Both vectors are perpendicular to $BC$ and point in the same direction. From the Euler relation $\\vec{OH} = \\vec{OA} + \\vec{OB} + \\vec{OC}$ (an equivalent form), subtracting $\\vec{OA}$ gives $\\vec{OH} - \\vec{OA} = \\vec{OB} + \\vec{OC} = 2\\vec{OM_a}$ (since $M_a$ is the midpoint of $BC$). And $\\vec{OH} - \\vec{OA} = \\vec{AH}$. So $\\vec{AH} = 2\\vec{OM_a}$.",
+        "**Pattern lesson.** Vertex-to-orthocenter distances and circumcenter-to-side distances are tied in a perfect 2:1 ratio. Many olympiad problems exploit this."
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

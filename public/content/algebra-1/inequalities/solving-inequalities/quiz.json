@@ -1,0 +1,260 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve: } x + 5 < 12",
+      "choices": [
+        "x < 17",
+        "x > 7",
+        "x < 7",
+        "x \\leq 7"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "Subtract $5$ from both sides.",
+        "The inequality direction is preserved (we're subtracting, not multiplying by a negative)."
+      ],
+      "explanation": "Subtract $5$: $x < 12 - 5 = 7$. Direction preserved.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve: } -2x \\geq 8",
+      "choices": [
+        "x \\geq -4",
+        "x \\leq -4",
+        "x \\geq 4",
+        "x \\leq 4"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Divide both sides by $-2$.",
+        "Dividing by a *negative* — flip the inequality."
+      ],
+      "explanation": "Dividing by $-2$ (negative) flips the sign: $x \\leq \\dfrac{8}{-2} = -4$, i.e. $x \\leq -4$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{When graphing the solution to } x \\leq 5, \\text{ the circle at } 5 \\text{ should be:}",
+      "choices": [
+        "open",
+        "filled",
+        "either",
+        "no circle"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$\\leq$ includes the boundary.",
+        "Filled means the boundary is part of the solution."
+      ],
+      "explanation": "$\\leq$ is non-strict — $5$ itself satisfies $x \\leq 5$. So the circle is **filled**.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve: } 3x - 4 > 5",
+      "choices": [
+        "x > 3",
+        "x < 3",
+        "x > \\dfrac{1}{3}",
+        "x > 9"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Add $4$, then divide by $3$.",
+        "Both operations preserve the inequality (no negative)."
+      ],
+      "explanation": "$3x - 4 > 5 \\Rightarrow 3x > 9 \\Rightarrow x > 3$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{True or false: multiplying both sides of } 4 > 1 \\text{ by } -3 \\text{ keeps the inequality the same.}",
+      "choices": [
+        "True — direction never changes",
+        "False — multiplying by a negative flips it"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Test it: $-3 \\times 4 = -12$. $-3 \\times 1 = -3$.",
+        "Compare $-12$ and $-3$. Which is larger?"
+      ],
+      "explanation": "$-3 \\times 4 = -12$ and $-3 \\times 1 = -3$. Now $-12 < -3$ — the inequality has flipped from $>$ to $<$. Multiplying by a negative **always** flips the direction.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve: } 3x + 5 > 14.",
+      "choices": [
+        "x > 3",
+        "x > 9",
+        "x < 3",
+        "x < 9"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Subtract 5: $3x > 9$.",
+        "Divide by 3: $x > 3$."
+      ],
+      "explanation": "$3x > 9 \\Rightarrow x > 3$.",
+      "steps": [
+        "Subtract 5: $3x > 9$.",
+        "Divide by 3 (positive — no flip): $x > 3$."
+      ],
+      "id": "q6",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve: } -2x + 7 \\leq 1.",
+      "choices": [
+        "x \\leq 3",
+        "x \\geq 3",
+        "x \\leq -3",
+        "x \\geq -3"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Subtract 7: $-2x \\leq -6$.",
+        "**Divide by $-2$ — flip the inequality!** $x \\geq 3$."
+      ],
+      "explanation": "$-2x \\leq -6 \\Rightarrow x \\geq 3$ (flip when dividing by negative).",
+      "steps": [
+        "Subtract 7: $-2x \\leq -6$.",
+        "Divide by $-2$. **Flip the inequality** (because dividing by a negative reverses the direction).",
+        "$x \\geq 3$."
+      ],
+      "id": "q7",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve: } 4x - 3 \\geq 2x + 9.",
+      "choices": [
+        "x \\geq 6",
+        "x \\geq 3",
+        "x \\leq 6",
+        "x \\leq 3"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Subtract $2x$: $2x - 3 \\geq 9$. Add 3: $2x \\geq 12$.",
+        "Divide by 2: $x \\geq 6$."
+      ],
+      "explanation": "$2x \\geq 12 \\Rightarrow x \\geq 6$.",
+      "steps": [
+        "Subtract $2x$ from both sides: $2x - 3 \\geq 9$.",
+        "Add 3: $2x \\geq 12$.",
+        "Divide by 2 (positive): $x \\geq 6$."
+      ],
+      "id": "q8",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve: } 5 - 3(x + 1) > 8.",
+      "choices": [
+        "x > -2",
+        "x < -2",
+        "x > 2",
+        "x < 2"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Distribute: $5 - 3x - 3 > 8 \\Rightarrow 2 - 3x > 8$.",
+        "Subtract 2: $-3x > 6$. Divide by $-3$ and flip: $x < -2$."
+      ],
+      "explanation": "$2 - 3x > 8 \\Rightarrow -3x > 6 \\Rightarrow x < -2$ (flip when dividing by $-3$).",
+      "steps": [
+        "Distribute: $5 - 3x - 3 > 8 \\Rightarrow 2 - 3x > 8$.",
+        "Subtract 2: $-3x > 6$.",
+        "Divide by $-3$ — **flip**: $x < -2$."
+      ],
+      "id": "q9",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve the compound inequality: } -3 < 2x - 1 \\leq 5.",
+      "choices": [
+        "-1 < x \\leq 3",
+        "-2 < x \\leq 2",
+        "-1 < x \\leq 2",
+        "-2 < x \\leq 3"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Treat the middle as one variable: add 1 to all three parts.",
+        "$-2 < 2x \\leq 6$. Divide by 2: $-1 < x \\leq 3$."
+      ],
+      "explanation": "Add 1 to all three parts: $-2 < 2x \\leq 6$. Divide by 2: $-1 < x \\leq 3$.",
+      "steps": [
+        "Compound inequality: do the same operation to **all three** parts.",
+        "Add 1 to all three: $$-3 + 1 < 2x - 1 + 1 \\leq 5 + 1 \\Rightarrow -2 < 2x \\leq 6$$",
+        "Divide by 2: $$-1 < x \\leq 3$$"
+      ],
+      "id": "q10",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{A taxi charges } \\$3 \\text{ + } \\$2 \\text{ per mile. You have } \\$25. \\\\ \\text{How many miles can you afford?}",
+      "choices": [
+        "x \\leq 11",
+        "x \\leq 10",
+        "x \\leq 12",
+        "x < 14"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Cost = $3 + 2x$. Need cost $\\leq 25$.",
+        "$3 + 2x \\leq 25 \\Rightarrow 2x \\leq 22 \\Rightarrow x \\leq 11$."
+      ],
+      "explanation": "$3 + 2x \\leq 25 \\Rightarrow x \\leq 11$ miles.",
+      "steps": [
+        "Cost: $3 + 2x$ for $x$ miles.",
+        "Constraint: cost $\\leq 25$: $$3 + 2x \\leq 25$$",
+        "Subtract 3: $2x \\leq 22$.",
+        "Divide by 2: $x \\leq 11$. **At most 11 miles.**"
+      ],
+      "id": "q11",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve: } \\dfrac{x - 4}{3} \\geq -2.",
+      "choices": [
+        "x \\geq -2",
+        "x \\geq 2",
+        "x \\geq -10",
+        "x \\geq 10"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Multiply both sides by 3 (positive — no flip): $x - 4 \\geq -6$.",
+        "Add 4: $x \\geq -2$."
+      ],
+      "explanation": "Multiply by 3: $x - 4 \\geq -6$. Add 4: $x \\geq -2$.",
+      "steps": [
+        "Multiply both sides by 3 (positive — no flip): $x - 4 \\geq -6$.",
+        "Add 4: $x \\geq -2$."
+      ],
+      "id": "q12",
+      "difficulty": "easy"
+    }
+  ]
+}

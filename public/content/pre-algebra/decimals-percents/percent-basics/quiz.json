@@ -1,0 +1,231 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "20\\% \\text{ of } 50 = ?",
+      "answer": 10,
+      "tolerance": 0,
+      "hints": [
+        "Convert $20\\%$ to a decimal: $0.20$.",
+        "Or: $20\\% = \\tfrac{1}{5}$, so a fifth of $50$."
+      ],
+      "explanation": "$20\\% = 0.20$. $0.20 \\times 50 = 10$. (Or: $\\tfrac{1}{5}$ of $50$ is $10$.)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{Convert } 0.6 \\text{ to a percent. (Enter the number, e.g. } 25 \\text{ for } 25\\%\\text{.)}",
+      "answer": 60,
+      "tolerance": 0,
+      "hints": [
+        "Decimal → percent: multiply by $100$.",
+        "Move the decimal point two places to the right."
+      ],
+      "explanation": "$0.6 = 60\\%$. Decimal × $100$ gives the percent.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "75\\% = ?",
+      "choices": [
+        "\\dfrac{3}{4}",
+        "\\dfrac{7}{5}",
+        "\\dfrac{75}{10}",
+        "\\dfrac{1}{75}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "$75\\% = \\dfrac{75}{100}$.",
+        "Simplify by dividing top and bottom by $25$."
+      ],
+      "explanation": "$75\\% = \\dfrac{75}{100} = \\dfrac{3}{4}$ (dividing top and bottom by $25$).",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{What percent is } 12 \\text{ of } 50?",
+      "answer": 24,
+      "tolerance": 0,
+      "hints": [
+        "Divide: $12 \\div 50$.",
+        "Then multiply by $100$ to convert to a percent."
+      ],
+      "explanation": "$12 \\div 50 = 0.24 = 24\\%$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "150\\% \\text{ of } 40 = ?",
+      "answer": 60,
+      "tolerance": 0,
+      "hints": [
+        "$150\\% = 1.5$.",
+        "$1.5 \\times 40$."
+      ],
+      "explanation": "$150\\% = 1.5$. $1.5 \\times 40 = 60$. Yes — percents above $100\\%$ are perfectly fine; they mean *more than* the whole.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{What is } 35\\% \\text{ of } 80?",
+      "answer": 28,
+      "tolerance": 0,
+      "hints": [
+        "$35\\% = 0.35$. Multiply: $0.35 \\cdot 80$.",
+        "Or: $\\dfrac{35}{100} \\cdot 80 = \\dfrac{2800}{100}$."
+      ],
+      "explanation": "$0.35 \\cdot 80 = 28$.",
+      "steps": [
+        "**The 'percent OF a number' template.** Convert percent to decimal, then multiply.",
+        "**Convert.** $35\\% = 0.35$ (divide by 100, or move decimal 2 places left).",
+        "**'Of' = multiply.** $0.35 \\cdot 80 = 28$.",
+        "**Mental-math shortcut.** Use 10% blocks: 10% of 80 is 8; so 30% is 24, 5% is 4, 35% is 28. No calculator needed."
+      ],
+      "id": "q6",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{12 is what percent of 80?}",
+      "answer": 15,
+      "tolerance": 0,
+      "hints": [
+        "Set up: $\\dfrac{12}{80} = \\dfrac{p}{100}$.",
+        "Solve: $p = \\dfrac{12 \\cdot 100}{80} = \\dfrac{1200}{80}$."
+      ],
+      "explanation": "$\\dfrac{12}{80} = 0.15 = 15\\%$.",
+      "steps": [
+        "**'What percent' question template.** Part / Whole × 100% = percent.",
+        "**Identify.** Part = 12. Whole = 80.",
+        "**Compute.** $\\dfrac{12}{80} = 0.15$. Convert to percent: $0.15 \\times 100\\% = 15\\%$.",
+        "**Result.** 12 is 15% of 80."
+      ],
+      "id": "q7",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{30 is 60\\% of what number?}",
+      "answer": 50,
+      "tolerance": 0,
+      "hints": [
+        "Reverse percent. $30 = 0.60 \\cdot x$. Solve for $x$.",
+        "$x = 30 / 0.60$."
+      ],
+      "explanation": "$x = 30 / 0.60 = 50$.",
+      "steps": [
+        "**Reverse-percent template.** Given part and percent, find the whole.",
+        "**Set up the equation.** $30 = 60\\% \\cdot x = 0.60 \\cdot x$.",
+        "**Solve.** Divide both sides by 0.60: $x = \\dfrac{30}{0.60} = 50$.",
+        "**Verify.** 60% of 50 = $0.6 \\cdot 50 = 30$ ✓.",
+        "**The 3 percent question types.** (1) Find the PART (Q6): percent × whole. (2) Find the PERCENT (Q7): part / whole. (3) Find the WHOLE (here): part / percent. Memorize the trio — every percent problem fits one of these patterns."
+      ],
+      "id": "q8",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A } \\$80 \\text{ shirt is on sale for } 25\\% \\text{ off.} \\\\ \\text{What is the sale price?}",
+      "answer": 60,
+      "tolerance": 0,
+      "hints": [
+        "Discount: $25\\% \\cdot 80 = 20$.",
+        "Sale price = $80 - 20 = 60$. Or shortcut: $75\\%$ of $80$."
+      ],
+      "explanation": "Discount $= 0.25 \\cdot 80 = 20$. Sale price $= 80 - 20 = \\$60$. (Or directly: $0.75 \\cdot 80 = 60$.)",
+      "steps": [
+        "**'Percent off' template.** Two approaches — same answer.",
+        "**Method 1 (two steps).** Discount = $25\\% \\cdot 80 = 0.25 \\cdot 80 = \\$20$. Sale price = $80 - 20 = \\$60$.",
+        "**Method 2 (one step — RECOMMENDED).** If 25% off, you pay 75%. Sale price = $0.75 \\cdot 80 = \\$60$.",
+        "**Why Method 2 is better.** One multiplication instead of two operations. Less risk of error. Generalizes: $X\\%$ off means you pay $(100-X)\\%$ of the original."
+      ],
+      "id": "q9",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A bill is } \\$45.20 \\text{ before tip. You leave a } 20\\% \\text{ tip.} \\\\ \\text{What is the total amount you pay (round to 2 decimals)?}",
+      "answer": 54.24,
+      "tolerance": 0.05,
+      "hints": [
+        "Total = bill + tip = bill × 1.20.",
+        "$45.20 \\cdot 1.20 = ?$"
+      ],
+      "explanation": "Total = $45.20 \\cdot 1.20 = 54.24$.",
+      "steps": [
+        "**'Percent ADDED' template (tip, tax, markup).** Total = original × $(1 + \\text{percent})$.",
+        "**Why.** Adding 20% means paying 100% (original) + 20% (tip) = 120% = 1.20 × original.",
+        "**Apply.** $45.20 \\cdot 1.20 = 54.24$.",
+        "**Cross-check via two-step.** Tip alone: $0.20 \\cdot 45.20 = 9.04$. Total: $45.20 + 9.04 = 54.24$ ✓."
+      ],
+      "id": "q10",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Sales tax is } 8\\%. \\text{ A } \\$50 \\text{ item with tax costs} \\\\ \\text{how much (round to 2 decimals)?}",
+      "answer": 54,
+      "tolerance": 0.01,
+      "hints": [
+        "Tax: $0.08 \\cdot 50 = 4$. Total: $50 + 4 = 54$.",
+        "Or shortcut: $50 \\cdot 1.08 = 54$."
+      ],
+      "explanation": "$50 \\cdot 1.08 = 54$.",
+      "steps": [
+        "**Same 'percent ADDED' template as Q10.** Total = original × $(1 + \\text{tax rate})$.",
+        "**Multiplier.** 1 + 0.08 = 1.08.",
+        "**Apply.** $50 \\cdot 1.08 = \\$54$.",
+        "**General rule.** Markup or addition by $X\\%$ → multiply by $1 + X/100$. Tax 8% → ×1.08. Tip 20% → ×1.20. Markup 50% → ×1.50. Universal."
+      ],
+      "id": "q11",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A population grew from } 250 \\text{ to } 320. \\\\ \\text{What is the percent increase (round to 1 decimal)?}",
+      "answer": 28,
+      "tolerance": 0.5,
+      "hints": [
+        "Percent change = $\\dfrac{\\text{new} - \\text{old}}{\\text{old}} \\cdot 100\\%$.",
+        "$\\dfrac{320 - 250}{250} \\cdot 100\\% = \\dfrac{70}{250} \\cdot 100\\%$."
+      ],
+      "explanation": "$\\dfrac{70}{250} = 0.28 = 28\\%$.",
+      "steps": [
+        "**Percent-change formula.** $\\dfrac{\\text{NEW} - \\text{OLD}}{\\text{OLD}} \\cdot 100\\%$.",
+        "**Important: divide by OLD, not new.** The 'percent change' is measured relative to the STARTING value.",
+        "**Compute the change.** $320 - 250 = 70$.",
+        "**Divide by old.** $\\dfrac{70}{250} = 0.28$.",
+        "**Convert.** $0.28 = 28\\%$. Population grew by 28%."
+      ],
+      "id": "q12",
+      "difficulty": "hard"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A } \\$120 \\text{ jacket is on sale for } 30\\% \\text{ off, then you have} \\\\ \\text{a coupon for an additional } 10\\% \\text{ off the sale price.} \\\\ \\text{What is the final price?}",
+      "answer": 75.6,
+      "tolerance": 0.1,
+      "hints": [
+        "First discount: $0.70 \\cdot 120 = 84$ (after 30% off).",
+        "Then coupon: $0.90 \\cdot 84 = 75.60$. Note: this is NOT 40% off the original."
+      ],
+      "explanation": "$120 \\cdot 0.70 \\cdot 0.90 = 84 \\cdot 0.90 = \\$75.60$.",
+      "steps": [
+        "**Sequential discounts MULTIPLY — they don't add.** Each discount applies to the result of the previous one.",
+        "**Apply in order.** After 30% off: $120 \\cdot 0.70 = \\$84$.",
+        "**Apply the coupon to the SALE price (not original).** $84 \\cdot 0.90 = \\$75.60$.",
+        "**Or combine multipliers.** $120 \\cdot 0.70 \\cdot 0.90 = 120 \\cdot 0.63 = 75.60$. Same answer.",
+        "**Common trap.** Thinking '30% + 10% = 40% off' → $120 \\cdot 0.60 = \\$72$. WRONG — that's a single 40% discount, not two sequential ones. The actual effective discount is $1 - 0.63 = 0.37 = 37\\%$, not 40%.",
+        "**Real-world lesson.** 'Take an additional 10% off' is NOT the same as adding 10 percentage points. Sequential discounts always net LESS than the sum of their percentages."
+      ],
+      "id": "q13",
+      "difficulty": "hard"
+    }
+  ]
+}

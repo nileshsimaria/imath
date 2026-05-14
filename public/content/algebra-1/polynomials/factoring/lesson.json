@@ -1,0 +1,110 @@
+{
+  "title": "Factoring",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "**Factoring** is the reverse of multiplying. Given a polynomial like $x^2 + 5x + 6$, factoring asks: *what two simpler expressions multiply to give us this?* Answer: $(x + 2)(x + 3)$.",
+        "Why bother? Because **factored form reveals the roots** — the values of $x$ that make the polynomial zero. That's the key to solving quadratic equations, sketching parabolas, and a lot of higher math."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Step 1 — always look for a common factor first",
+        "If every term shares a factor, pull it out front.",
+        "**Example.** $6x^2 + 9x = 3x(2x + 3)$. Both terms had a $3x$ in common.",
+        "**Example.** $4x^3 - 8x^2 + 12x = 4x(x^2 - 2x + 3)$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Greatest Common Factor (GCF)",
+      "body": "Pull out the *largest* common factor — it makes whatever's left as simple as possible. Always do this before trying any other factoring technique."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Factoring trinomials of the form $x^2 + bx + c$",
+        "Looking at $(x + p)(x + q) = x^2 + (p + q)x + pq$, you can see what to do in reverse:",
+        "**Find two numbers $p$ and $q$ such that $p + q = b$ and $pq = c$.** Then $x^2 + bx + c = (x + p)(x + q)$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 1",
+        "Factor $x^2 + 7x + 10$.",
+        "Need $p + q = 7$ and $pq = 10$. Try pairs that multiply to $10$: $1 \\cdot 10$, $2 \\cdot 5$. The pair $2$ and $5$ adds to $7$ ✓.",
+        "**Factored: $(x + 2)(x + 5)$.** Check by FOIL: $x^2 + 5x + 2x + 10 = x^2 + 7x + 10$ ✓."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 2 — negative numbers",
+        "Factor $x^2 - 5x + 6$.",
+        "Need $p + q = -5$ and $pq = 6$. Both positive product, negative sum → both numbers are negative. $-2$ and $-3$ work: sum $-5$, product $6$.",
+        "**Factored: $(x - 2)(x - 3)$.**"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 3 — mixed signs",
+        "Factor $x^2 + x - 12$.",
+        "Need $p + q = 1$ and $pq = -12$. One number positive, one negative. Pairs: $(-1, 12)$, $(1, -12)$, $(-2, 6)$, $(2, -6)$, $(-3, 4)$, $(3, -4)$. The pair $-3$ and $4$ gives sum $1$ ✓.",
+        "**Factored: $(x - 3)(x + 4)$.**"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### A special pattern — the difference of squares",
+        "Whenever you see $a^2 - b^2$ (a perfect square minus a perfect square):"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "a^2 - b^2 = (a + b)(a - b)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Example.** $x^2 - 49 = x^2 - 7^2 = (x + 7)(x - 7)$.",
+        "**Example.** $9x^2 - 25 = (3x)^2 - 5^2 = (3x + 5)(3x - 5)$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why factoring matters — see the roots",
+        "When a polynomial is factored as $(x - r_1)(x - r_2)$, the values $x = r_1$ and $x = r_2$ make it zero — those are its **roots**. On a graph, roots are where the parabola crosses the x-axis."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "parabola",
+      "config": {
+        "a": 1,
+        "b": 1,
+        "c": -12,
+        "yRange": [
+          -15,
+          8
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "The graph above is $y = x^2 + x - 12 = (x - 3)(x + 4)$. The red dots on the x-axis are at $x = 3$ and $x = -4$ — exactly the values that come from the factored form. Adjust the sliders for $a$, $b$, $c$ and watch how the roots move (or disappear when the parabola doesn't cross)."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "**Factor out the GCF first.** For trinomials $x^2 + bx + c$, find two numbers with sum $b$ and product $c$. Recognize the difference of squares ($a^2 - b^2$) on sight. The roots of a factored polynomial are visible immediately — that's why factoring is so powerful for solving."
+    }
+  ]
+}

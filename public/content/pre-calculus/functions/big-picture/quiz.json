@@ -1,0 +1,99 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "prompt": "Which statement correctly captures the defining property of a function?",
+      "choices": [
+        "Each output is produced by exactly one input.",
+        "Each input is paired with exactly one output.",
+        "Each input must be paired with at least one different output.",
+        "The number of inputs must equal the number of outputs."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Think about the hiker on the trail: each km-marker pins down one elevation.",
+        "The rule constrains how arrows LEAVE each input, not how they arrive at outputs."
+      ],
+      "explanation": "A function takes each input and assigns it exactly one output. Multiple inputs CAN share an output (think $f(x)=x^2$ where $f(2)=f(-2)=4$). What's banned is one input producing two different outputs.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "prompt": "On a hiking trail, position along the trail (km) is the INPUT and elevation (m) is the OUTPUT. Why is the OPPOSITE direction (elevation → position) typically NOT a function?",
+      "choices": [
+        "Because position is harder to measure than elevation.",
+        "Because the same elevation usually corresponds to multiple positions on the trail (e.g., on the way up and on the way down).",
+        "Because elevation can be negative but position can't.",
+        "Because functions can only go from km to meters, not the other way."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Picture a trail that rises to a peak and comes back down.",
+        "Pick an elevation halfway up. How many positions on the trail have that elevation?"
+      ],
+      "explanation": "On any non-monotonic trail (one with peaks and valleys), a single elevation corresponds to *two or more* positions — one on each side of a peak. So 'elevation → position' assigns multiple outputs to one input and isn't a function.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "Which of the following is NOT a function from people to numbers?",
+      "choices": [
+        "person → their height in cm right now",
+        "person → their date of birth (as days since 1900)",
+        "person → a phone number they have used",
+        "person → the number of letters in their full legal name"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "For each rule, ask: can the same person give two different answers?",
+        "A person can have multiple phone numbers over their life — or even right now."
+      ],
+      "explanation": "Many people have used more than one phone number, so the rule 'person → a phone number they have used' can give multiple outputs for the same input. The others give exactly one answer per person.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "prompt": "Look at the trail widget in 'all' mode. Two different km-markers can connect to the same elevation by two different arcs. Does that break the function rule?",
+      "choices": [
+        "Yes — two arrows can never share a destination.",
+        "No — the rule only forbids one input from having two outputs, not two inputs sharing one output.",
+        "Yes, but only if the trail has a peak.",
+        "It depends on the color of the arc."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Re-read the rule: 'each input has exactly one output'.",
+        "Nothing in that rule talks about how many inputs reach a given output."
+      ],
+      "explanation": "Two inputs sharing an output is perfectly fine. The rule only constrains the *outgoing* direction: each input must commit to one output. Inputs sharing outputs is what 'not injective' means — we'll meet that distinction next.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If } f(x) = x^2 - 4, \\text{ what is } f(3)?",
+      "choices": [
+        "1",
+        "5",
+        "-1",
+        "9"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "The rule says: take the input, square it, subtract 4.",
+        "$3^2 = 9$. Then subtract 4."
+      ],
+      "explanation": "$f(3) = 3^2 - 4 = 9 - 4 = 5$. The formula is just shorthand for a rule — apply it to the input you're given.",
+      "steps": [
+        "Identify the rule the function describes: square the input, then subtract 4.",
+        "Substitute the input: $f(3) = 3^2 - 4$.",
+        "Compute: $3^2 = 9$, so $f(3) = 9 - 4 = 5$."
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

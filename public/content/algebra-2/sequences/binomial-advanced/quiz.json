@@ -1,0 +1,338 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{General term of } (x + 2)^7. \\\\ \\text{What is the coefficient of } x^4?",
+      "answer": 280,
+      "tolerance": 0.5,
+      "hints": [
+        "$T_{k+1} = \\binom{7}{k} x^{7-k} \\cdot 2^k$. For $x^4$: $7-k=4 \\Rightarrow k=3$.",
+        "$\\binom{7}{3} \\cdot 2^3 = 35 \\cdot 8 = 280$."
+      ],
+      "explanation": "$\\binom{7}{3} \\cdot 2^3 = 35 \\cdot 8 = 280$.",
+      "steps": [
+        {
+          "text": "**General term:**"
+        },
+        {
+          "math": "T_{k+1} = \\binom{7}{k} x^{7-k} \\cdot 2^k"
+        },
+        {
+          "text": "**Set exponent equal to 4:** $7 - k = 4 \\Rightarrow k = 3$."
+        },
+        {
+          "math": "T_4 = \\binom{7}{3} \\cdot 2^3 \\cdot x^4 = 35 \\cdot 8 \\cdot x^4 = 280 x^4"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{Sum of all binomial coefficients in expansion of } (1 + x)^{10}?",
+      "answer": 1024,
+      "tolerance": 0.5,
+      "hints": [
+        "Set $x = 1$.",
+        "$2^{10} = 1024$."
+      ],
+      "explanation": "Set $x = 1$: sum = $2^{10} = 1024$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{Find the middle term of } (2x + 3)^6. \\text{ (Give the constant coefficient times any powers explicitly.)}",
+      "answer": 4320,
+      "tolerance": 1,
+      "hints": [
+        "$n = 6$ even, middle term is $T_4$ (k = 3).",
+        "$T_4 = \\binom{6}{3} (2x)^3 (3)^3 = 20 \\cdot 8 \\cdot 27 \\cdot x^3 = 4320 x^3$. Answer: coefficient is 4320."
+      ],
+      "explanation": "Middle term: $\\binom{6}{3}(2x)^3 (3)^3 = 20 \\cdot 8 \\cdot 27 \\cdot x^3 = 4320 x^3$. Coefficient: 4320.",
+      "steps": [
+        {
+          "text": "**$n = 6$ is even**, so there is one middle term: $T_{n/2 + 1} = T_4$, corresponding to $k = 3$."
+        },
+        {
+          "math": "T_4 = \\binom{6}{3} (2x)^{6-3} (3)^3"
+        },
+        {
+          "math": "= 20 \\cdot (2x)^3 \\cdot 27 = 20 \\cdot 8 x^3 \\cdot 27 = 4320 x^3"
+        },
+        {
+          "text": "**Coefficient:** $4320$."
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Term independent of } x \\text{ in } (x^2 + 1/x)^9?",
+      "answer": 84,
+      "tolerance": 0.5,
+      "hints": [
+        "$T_{k+1} = \\binom{9}{k} (x^2)^{9-k} (1/x)^k = \\binom{9}{k} x^{18 - 2k - k} = \\binom{9}{k} x^{18 - 3k}$.",
+        "$18 - 3k = 0 \\Rightarrow k = 6$. $\\binom{9}{6} = 84$."
+      ],
+      "explanation": "Need $x^{18 - 3k} = x^0 \\Rightarrow k = 6$. Term independent of $x$ = $\\binom{9}{6} = 84$.",
+      "steps": [
+        {
+          "text": "**General term:**"
+        },
+        {
+          "math": "T_{k+1} = \\binom{9}{k} (x^2)^{9-k} (1/x)^k = \\binom{9}{k} x^{18 - 3k}"
+        },
+        {
+          "text": "**Set exponent to 0:** $18 - 3k = 0 \\Rightarrow k = 6$."
+        },
+        {
+          "math": "T_7 = \\binom{9}{6} = 84"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\binom{n}{0} + \\binom{n}{1} + \\ldots + \\binom{n}{n} \\text{ for } n = 8?",
+      "answer": 256,
+      "tolerance": 0.5,
+      "hints": [
+        "Sum = $2^n$.",
+        "$2^8 = 256$."
+      ],
+      "explanation": "Sum of row $n$ = $2^n$. Here $2^8 = 256$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{Sum of even-indexed coefficients of } (1 + x)^{10}?",
+      "answer": 512,
+      "tolerance": 0.5,
+      "hints": [
+        "Sum of all = $2^{10}$. Sum of even-indexed = sum of odd-indexed = half of total.",
+        "$2^{10}/2 = 512$."
+      ],
+      "explanation": "$2^{10}/2 = 512$.",
+      "steps": [
+        {
+          "text": "**Sum of all binomial coefficients** in $(1 + x)^n$ (set $x = 1$): $2^n$."
+        },
+        {
+          "text": "**Sum of even-indexed coefficients = Sum of odd-indexed** (from $(1 - 1)^n = 0$)."
+        },
+        {
+          "text": "**So each is half of $2^n$:**"
+        },
+        {
+          "math": "\\text{Sum even-indexed} = \\dfrac{2^{10}}{2} = 2^9 = 512"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{Coefficient of } x^{10} \\text{ in } (2x^2 - 1)^{10}?",
+      "answer": -8064,
+      "tolerance": 5,
+      "hints": [
+        "$T_{k+1} = \\binom{10}{k} (2x^2)^{10-k} (-1)^k = \\binom{10}{k} 2^{10-k} (-1)^k x^{20-2k}$.",
+        "$20 - 2k = 10 \\Rightarrow k = 5$. Coefficient = $\\binom{10}{5} 2^5 (-1)^5 = 252 \\cdot 32 \\cdot (-1) = -8064$."
+      ],
+      "explanation": "$\\binom{10}{5} \\cdot 2^5 \\cdot (-1)^5 = 252 \\cdot 32 \\cdot (-1) = -8064$.",
+      "steps": [
+        {
+          "text": "**General term:**"
+        },
+        {
+          "math": "T_{k+1} = \\binom{10}{k} (2x^2)^{10-k} (-1)^k"
+        },
+        {
+          "math": "= \\binom{10}{k} \\cdot 2^{10-k} \\cdot (-1)^k \\cdot x^{2(10-k)}"
+        },
+        {
+          "text": "**Set exponent equal to 10:** $2(10-k) = 10 \\Rightarrow k = 5$."
+        },
+        {
+          "math": "T_6 = \\binom{10}{5} \\cdot 2^5 \\cdot (-1)^5 \\cdot x^{10} = 252 \\cdot 32 \\cdot (-1) \\cdot x^{10}"
+        },
+        {
+          "math": "\\text{Coefficient} = -8064"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\sum_{k=0}^{8} k \\binom{8}{k} = ?",
+      "answer": 1024,
+      "tolerance": 0.5,
+      "hints": [
+        "Identity: $\\sum k \\binom{n}{k} = n \\cdot 2^{n-1}$.",
+        "$8 \\cdot 2^7 = 8 \\cdot 128 = 1024$."
+      ],
+      "explanation": "$\\sum k \\binom{n}{k} = n \\cdot 2^{n-1} = 8 \\cdot 128 = 1024$.",
+      "steps": [
+        {
+          "text": "**Derivation.** Differentiate $(1 + x)^n = \\sum_k \\binom{n}{k} x^k$ with respect to $x$:"
+        },
+        {
+          "math": "n(1+x)^{n-1} = \\sum_k k \\binom{n}{k} x^{k-1}"
+        },
+        {
+          "text": "**Set $x = 1$:**"
+        },
+        {
+          "math": "n \\cdot 2^{n-1} = \\sum_k k \\binom{n}{k}"
+        },
+        {
+          "text": "**Plug in $n = 8$:**"
+        },
+        {
+          "math": "8 \\cdot 2^7 = 8 \\cdot 128 = 1024"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{Number of terms in } (x + y)^{15}?",
+      "answer": 16,
+      "tolerance": 0.001,
+      "hints": [
+        "$(x+y)^n$ has $n + 1$ terms.",
+        "$15 + 1 = 16$."
+      ],
+      "explanation": "$(x + y)^n$ has $n + 1$ terms. Here: 16.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{Coefficient of } x^5 \\text{ in } (1 + x)^{10}?",
+      "answer": 252,
+      "tolerance": 0.5,
+      "hints": [
+        "$\\binom{10}{5} = 252$.",
+        "Just compute directly."
+      ],
+      "explanation": "Coefficient of $x^k$ in $(1+x)^n$ is $\\binom{n}{k}$. Here $\\binom{10}{5} = 252$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{Sum of odd-indexed coefficients of } (1 + x)^{12}?",
+      "answer": 2048,
+      "tolerance": 0.5,
+      "hints": [
+        "Sum of all $= 2^{12} = 4096$. Odd-indexed sum = half.",
+        "$4096/2 = 2048$."
+      ],
+      "explanation": "Odd-indexed sum = $2^{12-1} = 2048$.",
+      "steps": [
+        {
+          "text": "**Sum of all $= 2^{12} = 4096$.** Even-indexed = Odd-indexed (each is half)."
+        },
+        {
+          "math": "\\text{Odd-indexed sum} = \\dfrac{2^{12}}{2} = 2^{11} = 2048"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\text{Coefficient of } x^6 \\text{ in } (1 + 2x)^8?",
+      "answer": 1792,
+      "tolerance": 1,
+      "hints": [
+        "$T_{k+1} = \\binom{8}{k} (2x)^k = \\binom{8}{k} 2^k x^k$. For $x^6$: $k = 6$.",
+        "$\\binom{8}{6} \\cdot 2^6 = 28 \\cdot 64 = 1792$."
+      ],
+      "explanation": "$\\binom{8}{6} \\cdot 64 = 28 \\cdot 64 = 1792$.",
+      "steps": [
+        {
+          "text": "**General term:**"
+        },
+        {
+          "math": "T_{k+1} = \\binom{8}{k} \\cdot 1^{8-k} \\cdot (2x)^k = \\binom{8}{k} \\cdot 2^k \\cdot x^k"
+        },
+        {
+          "text": "**For coefficient of $x^6$:** $k = 6$."
+        },
+        {
+          "math": "\\binom{8}{6} \\cdot 2^6 = 28 \\cdot 64 = 1792"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q13",
+      "type": "numeric",
+      "promptTex": "\\binom{2 \\cdot 5}{5} = ?",
+      "answer": 252,
+      "tolerance": 0.5,
+      "hints": [
+        "$\\binom{10}{5}$.",
+        "Calculate: $252$. (Also = $\\sum \\binom{5}{k}^2$.)"
+      ],
+      "explanation": "$\\binom{10}{5} = 252$. By Vandermonde, also $= \\sum_k \\binom{5}{k}^2$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q14",
+      "type": "numeric",
+      "promptTex": "\\text{Term independent of } x \\text{ in } (3x^2 - 2/x)^{15}? \\\\ \\text{Hint: find appropriate } k, \\text{ then compute.}",
+      "answer": 747242496,
+      "tolerance": 1000,
+      "hints": [
+        "$T_{k+1} = \\binom{15}{k} (3x^2)^{15-k} (-2/x)^k = \\binom{15}{k} 3^{15-k} (-2)^k x^{30 - 3k}$.",
+        "$30 - 3k = 0 \\Rightarrow k = 10$.",
+        "Coefficient $= \\binom{15}{10} \\cdot 3^5 \\cdot (-2)^{10} = 3003 \\cdot 243 \\cdot 1024 = 747{,}242{,}496$."
+      ],
+      "explanation": "$k = 10$ ⇒ term $= \\binom{15}{10} \\cdot 3^5 \\cdot (-2)^{10} = 3003 \\cdot 243 \\cdot 1024 = 747{,}242{,}496$. (Even power of $-2$ → positive.)",
+      "steps": [
+        {
+          "text": "**General term:**"
+        },
+        {
+          "math": "T_{k+1} = \\binom{15}{k} (3x^2)^{15-k} (-2/x)^k = \\binom{15}{k} \\, 3^{15-k} (-2)^k \\, x^{30 - 3k}"
+        },
+        {
+          "text": "**Set exponent to 0:** $30 - 3k = 0 \\Rightarrow k = 10$."
+        },
+        {
+          "math": "T_{11} = \\binom{15}{10} \\cdot 3^5 \\cdot (-2)^{10}"
+        },
+        {
+          "text": "**Compute the pieces:** $\\binom{15}{10} = 3003$, $3^5 = 243$, $(-2)^{10} = 1024$."
+        },
+        {
+          "math": "3003 \\cdot 243 \\cdot 1024 = 747{,}242{,}496"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q15",
+      "type": "numeric",
+      "promptTex": "\\text{What is } \\binom{n}{r} \\text{ when } n = 12, r = 5?",
+      "answer": 792,
+      "tolerance": 0.5,
+      "hints": [
+        "$\\binom{12}{5} = 12!/(5! 7!) = 792$.",
+        "Standard binomial coefficient."
+      ],
+      "explanation": "$\\binom{12}{5} = 792$.",
+      "difficulty": "easy"
+    }
+  ]
+}

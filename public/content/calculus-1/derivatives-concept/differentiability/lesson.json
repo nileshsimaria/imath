@@ -1,0 +1,105 @@
+{
+  "title": "Differentiability",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Not every function has a derivative everywhere. A function is **differentiable** at a point if the derivative exists there. The relationship between continuity and differentiability is one direction only — and the failures (corners, cusps, vertical tangents) are interesting in their own right."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. The Theorem"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Differentiability implies continuity",
+      "body": "If $f$ is **differentiable** at $a$, then $f$ is **continuous** at $a$. The converse is NOT true."
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Plain English:** smooth functions are continuous (no breaks). But continuous functions can have 'sharp' points where they're not differentiable.",
+        "**Useful contrapositive:** if $f$ is *discontinuous* at $a$, then $f$ is *not differentiable* at $a$. (Discontinuity rules out a derivative.)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. How Differentiability Fails"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Three classic situations:",
+        "**Corner / kink:** sharp point where the slope from the left differs from the slope from the right.",
+        "Example: $f(x) = |x|$ at $x = 0$. Slope from left: $-1$. Slope from right: $+1$. The 'left derivative' and 'right derivative' don't agree → no single derivative.",
+        "**Cusp:** like a corner, but the slopes go to $\\pm\\infty$ on each side.",
+        "Example: $f(x) = x^{2/3}$ at $x = 0$.",
+        "**Vertical tangent:** the curve is continuous and smooth, but the tangent is vertical — slope infinite.",
+        "Example: $f(x) = x^{1/3}$ at $x = 0$. The function passes smoothly through the origin, but the tangent points straight up.",
+        "**Discontinuity:** any kind. Differentiability requires continuity, so a jump or asymptote rules out differentiability immediately."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Quick test: differentiable?",
+      "body": "**Step 1:** Is $f$ continuous at $a$? If no, NOT differentiable. **Step 2:** If yes, is the slope the same from both sides? If no (corner), NOT differentiable. **Step 3:** Is the slope finite? If no (vertical tangent), NOT differentiable. Pass all three → differentiable."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. Differentiability ⇒ Continuity (Why?)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Suppose $f$ is differentiable at $a$. Then $f'(a) = \\lim_{h \\to 0} (f(a+h) - f(a))/h$ exists (a finite number).",
+        "If $f$ were *not* continuous at $a$, then $f(a+h)$ and $f(a)$ wouldn't agree as $h \\to 0$ — the numerator wouldn't go to zero, but the denominator does, giving an infinite ratio.",
+        "So differentiability forces continuity."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. Visualizing Differentiability"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Differentiable:** zoom in enough at the point and the graph looks like a straight line. The local picture is essentially the tangent line.",
+        "**Not differentiable (corner):** zoom in and you'll always see two slopes meeting at an angle.",
+        "**Not differentiable (vertical tangent):** zoom in and the graph looks vertical — no finite slope.",
+        "Try the widget: pick $f(x) = 1/x$ and slide the point near $x = 0$. The function isn't even defined there, so it can't be differentiable."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "derivative-explorer",
+      "config": {
+        "func": "recip",
+        "x0": 1
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — $f(x) = |x - 2|$",
+        "Where is $f$ differentiable?",
+        "**Everywhere except $x = 2$.**",
+        "**Why?** For $x > 2$, $f(x) = x - 2$ (slope +1). For $x < 2$, $f(x) = -(x - 2) = 2 - x$ (slope -1). At $x = 2$ itself, the slope from the left is $-1$ and from the right is $+1$ — they don't match. **Corner at $x = 2$.**",
+        "$f$ is continuous at $x = 2$ (no jump), but not differentiable there."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "**Differentiable ⇒ continuous.** (One-way!) Differentiability fails at: corners, cusps, vertical tangents, and any discontinuity. Geometrically: zoom in and a differentiable function locally looks like a straight line."
+    }
+  ]
+}

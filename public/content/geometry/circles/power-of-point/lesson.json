@@ -1,0 +1,61 @@
+{
+  "title": "Power of a Point",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### One number per point",
+        "Pick any point $P$ in the plane, and a circle of radius $r$ centered at $O$. The **power of point $P$** with respect to the circle is:",
+        "$\\text{pow}(P) = |OP|^2 - r^2$",
+        "It's negative if $P$ is *inside* the circle, zero if $P$ is *on* the circle, and positive if $P$ is *outside*. By itself that formula isn't surprising — but it lets you compute three different things about chords and secants through $P$, and they all give the same answer."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Three identities for power of a point",
+      "body": "Let $P$ be a point and let any line through $P$ meet the circle at two points $X$ and $Y$. Define the *signed* product $PX \\cdot PY$ where $PX$ and $PY$ are signed lengths in the same direction (or, equivalently, the *unsigned* product if you respect inside/outside).\n\n**Two chords through interior point $P$:** chord $AB$ and chord $CD$ both pass through $P$. Then\n$$PA \\cdot PB = PC \\cdot PD.$$\n\n**Two secants from external point $P$:** secants $PAB$ and $PCD$ (each crossing the circle in two points). Then\n$$PA \\cdot PB = PC \\cdot PD.$$\n\n**Tangent + secant from external point $P$:** tangent length $PT$ and secant $PAB$. Then\n$$PT^2 = PA \\cdot PB.$$\n\nAll three are the same fact in different costumes — and in all three, the common value is the absolute power of $P$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why the products are equal — a 30-second proof",
+        "For two chords through interior point $P$: draw triangles $\\triangle PAC$ and $\\triangle PDB$. They share the vertical angle at $P$, and $\\angle PAC = \\angle PDB$ (both are inscribed angles subtending the same arc $BC$). So the triangles are similar (AA), giving",
+        "$\\dfrac{PA}{PD} = \\dfrac{PC}{PB} \\;\\Longrightarrow\\; PA \\cdot PB = PC \\cdot PD.$",
+        "The other two cases (secant-secant and tangent-secant) have similar inscribed-angle proofs."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 1 (two chords)",
+        "Two chords $AB$ and $CD$ intersect at $P$ inside a circle. $PA = 4$, $PB = 6$, $PC = 3$. Find $PD$.",
+        "**Two-chord rule:** $PA \\cdot PB = PC \\cdot PD$.",
+        "$4 \\cdot 6 = 3 \\cdot PD \\Rightarrow PD = 24/3 = 8$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 2 (tangent and secant)",
+        "From external point $P$, a tangent touches the circle at $T$ with $PT = 6$. A secant from $P$ through the circle hits it at $A$ (nearest) and $B$ (farther) with $PA = 4$. Find $PB$.",
+        "**Tangent-secant rule:** $PT^2 = PA \\cdot PB$.",
+        "$36 = 4 \\cdot PB \\Rightarrow PB = 9$.",
+        "Total secant length: $PB = 9$, $AB = PB - PA = 5$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 3 (two secants from external point)",
+        "From external point $P$, secant 1 hits the circle at $A$ then $B$ with $PA = 3, PB = 12$. Secant 2 hits at $C$ then $D$ with $PC = 4$. Find $PD$.",
+        "**Two-secant rule:** $PA \\cdot PB = PC \\cdot PD$.",
+        "$3 \\cdot 12 = 4 \\cdot PD \\Rightarrow PD = 9$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The unifying principle",
+      "body": "For ANY line through $P$ meeting the circle at two points (or one repeated point, for a tangent), the product of the signed distances from $P$ to those points is a constant — the *power* of $P$.\n\nThe number $|OP|^2 - r^2$ is that constant, computable directly from $P$ and the circle without picking a specific line. Once you have it, every chord/secant/tangent through $P$ has to obey it. That's the whole story.\n\nThis fact is the foundation of **radical axes**, **inversive geometry**, and many olympiad tricks."
+    }
+  ]
+}

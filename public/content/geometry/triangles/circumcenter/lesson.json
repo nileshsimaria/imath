@@ -1,0 +1,69 @@
+{
+  "title": "Circumcenter & Circumcircle",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### The circle through all three vertices",
+        "Given any triangle, there is **exactly one** circle that passes through all three vertices. It's called the **circumscribed circle** or **circumcircle**, and its center is the **circumcenter** $O$ of the triangle. The radius is called the **circumradius** $R$.",
+        "Toggle on 'Circumcenter (perp bisectors + circle)' below. Drag a vertex and watch the circle adjust to always pass through all three corners."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "triangle-centers",
+      "config": {
+        "showCentroid": false,
+        "showCircumcenter": true,
+        "showOrthocenter": false,
+        "showEulerLine": false
+      }
+    },
+    {
+      "type": "callout",
+      "title": "Where does the circumcenter come from?",
+      "body": "**The circumcenter is the intersection of the three perpendicular bisectors of the sides.**\n\nEach side's perpendicular bisector is the set of points equidistant from the two endpoints of that side. The point equidistant from ALL three vertices must lie on all three bisectors — and that's exactly the circumcenter $O$. Its common distance to $A$, $B$, $C$ is the circumradius $R$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why three perpendicular bisectors meet at a point",
+        "Two of them (say the bisectors of sides $AB$ and $BC$) meet at some point $P$.",
+        "- Because $P$ is on the bisector of $AB$, we have $PA = PB$.",
+        "- Because $P$ is on the bisector of $BC$, we have $PB = PC$.",
+        "Therefore $PA = PB = PC$ — $P$ is equidistant from all three vertices, so it lies on the third bisector too (which is the locus of points equidistant from $A$ and $C$). ∎"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Where the circumcenter sits",
+      "body": "**Acute triangle:** $O$ is *inside* the triangle.\n**Right triangle:** $O$ sits exactly at the **midpoint of the hypotenuse** (by Thales).\n**Obtuse triangle:** $O$ is *outside* the triangle.\n\nTry dragging vertices to make each shape and watch $O$ move accordingly."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The Extended Law of Sines",
+        "Connects circumradius $R$ to side lengths and angles in a beautiful way:",
+        "$\\dfrac{a}{\\sin A} = \\dfrac{b}{\\sin B} = \\dfrac{c}{\\sin C} = 2R$",
+        "All three ratios are equal — and they all equal $2R$, twice the circumradius. Knowing any side and its opposite angle gives you $R$ instantly."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example",
+        "Triangle with vertices $A(0, 0)$, $B(6, 0)$, $C(0, 8)$.",
+        "**Recognize it's a right triangle** (right angle at $A$ since legs are along the axes).",
+        "**Hypotenuse $BC = \\sqrt{36 + 64} = 10$.** By Thales, $BC$ is the diameter of the circumcircle.",
+        "**Circumradius $R = 10/2 = 5$.**",
+        "**Circumcenter** is the midpoint of $BC$: $O = (3, 4)$.",
+        "**Check:** $|OA| = \\sqrt{9 + 16} = 5 = R$. ✓"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Equilateral triangle special case",
+      "body": "For an equilateral triangle of side $s$:\n\n$R = \\dfrac{s\\sqrt{3}}{3} = \\dfrac{s}{\\sqrt{3}}.$\n\nAnd of course $R = 2r$ where $r = s\\sqrt{3}/6$ is the inradius. The factor-of-2 relationship between $R$ and $r$ is unique to equilateral triangles."
+    }
+  ]
+}

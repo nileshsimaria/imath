@@ -1,0 +1,58 @@
+{
+  "title": "Multiplying & Dividing Integers",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Multiplying and dividing positive whole numbers is familiar territory. Negatives change one thing — the **sign** of the result. The numbers themselves still work the same way."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The sign rules",
+        "Two simple rules cover everything:",
+        "**Same signs → positive.** Multiplying or dividing two numbers with the same sign always gives a positive result.",
+        "**Different signs → negative.** Multiplying or dividing numbers with different signs always gives a negative result."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\begin{array}{c|cc} \\times & + & - \\\\ \\hline + & + & - \\\\ - & - & + \\end{array}"
+    },
+    {
+      "type": "callout",
+      "title": "Why two negatives make a positive",
+      "body": "Multiplication is repeated addition. $3 \\times 4 = 4 + 4 + 4 = 12$. So $-3 \\times 4 = -(3 \\times 4) = -12$ (taking three fours, then negating). And $-3 \\times -4 = -(3 \\times -4) = -(-12) = 12$. Negation flips signs; flip twice and you're back to where you started."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Examples",
+        "**Multiplication:**",
+        "$5 \\times 7 = 35$ (same signs → positive).",
+        "$-5 \\times 7 = -35$ (different signs → negative).",
+        "$5 \\times -7 = -35$ (different signs → negative).",
+        "$-5 \\times -7 = 35$ (same signs → positive).",
+        "**Division:**",
+        "Same rules — division and multiplication share the sign rules. $\\dfrac{12}{-4} = -3$. $\\dfrac{-20}{-5} = 4$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Counting the negatives",
+        "When you multiply more than two numbers, just count the negatives.",
+        "**Even count of negatives → positive.**",
+        "**Odd count of negatives → negative.**",
+        "**Example.** $-2 \\times 3 \\times -4 = 24$. Two negatives — even — so positive.",
+        "**Example.** $-2 \\times -3 \\times -4 = -24$. Three negatives — odd — so negative."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "**Same signs → positive. Different signs → negative.** That's the whole rule, for multiplication and division both. For longer products, count negatives — even → positive, odd → negative."
+    }
+  ]
+}

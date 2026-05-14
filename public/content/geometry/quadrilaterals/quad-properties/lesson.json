@@ -1,0 +1,73 @@
+{
+  "title": "Properties of Quadrilaterals",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "A **quadrilateral** is any four-sided polygon. The angles of any quadrilateral sum to **360°** (you'll see why in the next subtopic on polygon angle sums). But there are five named special quadrilaterals, each with its own properties — and they form a hierarchy where some are special cases of others."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The five families",
+        "**Trapezoid**: at least one pair of parallel sides.",
+        "**Parallelogram**: two pairs of parallel sides.",
+        "**Rectangle**: a parallelogram with four right angles.",
+        "**Rhombus**: a parallelogram with all four sides equal.",
+        "**Square**: a parallelogram that is *both* a rectangle AND a rhombus — four equal sides AND four right angles."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The hierarchy",
+      "body": "Every **square** is also a rhombus, a rectangle, AND a parallelogram. Every **rectangle** and **rhombus** is also a parallelogram. Every **parallelogram** is also a trapezoid (under the inclusive definition that 'at least one pair of parallel sides' is enough). The shapes nest — narrower categories inherit all properties of broader ones."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Properties of parallelograms",
+        "If you have a parallelogram, all of these hold automatically:",
+        "**Opposite sides equal** (and parallel).",
+        "**Opposite angles equal**.",
+        "**Consecutive angles supplementary** (each pair on the same side of one diagonal sums to 180°).",
+        "**Diagonals bisect each other** (each diagonal cuts the other in half)."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Adding constraints",
+        "**Rectangle**: parallelogram + four right angles. Extra property: **diagonals are equal in length**.",
+        "**Rhombus**: parallelogram + all sides equal. Extra properties: **diagonals are perpendicular** and **bisect the angles** at each vertex.",
+        "**Square**: rectangle + rhombus. Has **all** the properties of both."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Trapezoid specifics",
+        "The two parallel sides are called **bases**; the non-parallel sides are **legs**. An **isosceles trapezoid** is a trapezoid where the two legs are equal in length — its diagonals are also equal, and the base angles (the angles next to each base) are equal."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Diagnose a quadrilateral",
+      "body": "Given a quadrilateral with unknown properties: (1) Are any sides parallel? Zero pairs → general quadrilateral. One pair → trapezoid. Two pairs → parallelogram. (2) If parallelogram: are the angles right? → rectangle. Are the sides all equal? → rhombus. Both? → square."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example",
+        "A parallelogram has one angle measuring 70°. Find the other three angles.",
+        "Opposite angles are equal — so the angle opposite the 70° one is also **70°**. Consecutive angles are supplementary — the two angles next to the 70° one each measure $180 - 70 = $ **110°**.",
+        "All four angles: 70°, 110°, 70°, 110°. Sum: $70 + 110 + 70 + 110 = 360$ ✓."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "Five families: **trapezoid** (1 pair parallel) ⊃ **parallelogram** (2 pairs parallel) ⊃ **rectangle** (right angles) and **rhombus** (equal sides). **Square** is both a rectangle and a rhombus. Diagonals tell you a lot: equal → rectangle; perpendicular → rhombus; both → square."
+    }
+  ]
+}

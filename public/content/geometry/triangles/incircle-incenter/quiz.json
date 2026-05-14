@@ -1,0 +1,582 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{A triangle has area } A = 24 \\text{ and semiperimeter } s = 8. \\\\ \\text{Find its inradius } r.",
+      "answer": 3,
+      "tolerance": 0.001,
+      "hints": [
+        "The single most important formula about the incircle: $r = A / s$.",
+        "Just plug in the numbers."
+      ],
+      "explanation": "$r = A/s = 24/8 = 3$.",
+      "steps": [
+        {
+          "text": "**Apply the inradius formula** — area divided by semiperimeter:"
+        },
+        {
+          "math": "r = \\dfrac{A}{s} = \\dfrac{24}{8} = 3"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "prompt": "The incenter of a triangle is the point of concurrency of which three lines?",
+      "choices": [
+        "The three medians",
+        "The three altitudes",
+        "The three angle bisectors",
+        "The three perpendicular bisectors of the sides"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "What property must the center of the inscribed circle have? It must be equidistant from all three sides.",
+        "Which line has the property of being equidistant from two sides of an angle?"
+      ],
+      "explanation": "Each angle bisector is the set of points equidistant from the two sides forming that angle. The three bisectors meet at one point equidistant from **all three** sides — that's the incenter. (For reference: medians → centroid, altitudes → orthocenter, perpendicular bisectors → circumcenter.)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{Find the inradius of an equilateral triangle with side length } 6. \\\\ \\text{Give a decimal rounded to 2 places.}",
+      "answer": 1.73,
+      "tolerance": 0.02,
+      "hints": [
+        "For an equilateral triangle with side $a$: $r = \\dfrac{a\\sqrt{3}}{6}$.",
+        "Or compute $A$ and $s$ separately: $A = (\\sqrt{3}/4)a^2$, $s = 3a/2$, then $r = A/s$."
+      ],
+      "explanation": "$r = 6\\sqrt{3}/6 = \\sqrt{3} \\approx 1.73$.",
+      "steps": [
+        {
+          "text": "**Compute area** of an equilateral triangle with side $a = 6$:"
+        },
+        {
+          "math": "A = \\dfrac{\\sqrt{3}}{4} \\cdot 6^2 = 9\\sqrt{3}"
+        },
+        {
+          "text": "**Compute semiperimeter:**"
+        },
+        {
+          "math": "s = \\dfrac{3 \\cdot 6}{2} = 9"
+        },
+        {
+          "text": "**Apply $r = A/s$:**"
+        },
+        {
+          "math": "r = \\dfrac{9\\sqrt{3}}{9} = \\sqrt{3} \\approx 1.73"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Find the inradius of the 6-8-10 right triangle.}",
+      "answer": 2,
+      "tolerance": 0.001,
+      "hints": [
+        "10 is the hypotenuse (longest side, opposite the right angle).",
+        "Right-triangle shortcut: $r = (a + b - c)/2$, where $c$ is the hypotenuse."
+      ],
+      "explanation": "$r = (6 + 8 - 10)/2 = 4/2 = 2$. Verify: $A = 24$, $s = 12$, $r = 24/12 = 2$ ✓.",
+      "steps": [
+        {
+          "text": "**Spot the right angle.** Sides 6, 8, 10 satisfy $6^2 + 8^2 = 100 = 10^2$, so this is a right triangle with legs 6 and 8 and hypotenuse 10."
+        },
+        {
+          "svg": "<svg viewBox='0 0 240 200' xmlns='http://www.w3.org/2000/svg'><polygon points='40,160 200,160 40,40' fill='#fef3c7' stroke='#1e293b' stroke-width='2'/><rect x='40' y='150' width='10' height='10' fill='none' stroke='#1e293b' stroke-width='1.5'/><circle cx='80' cy='120' r='40' fill='rgba(34,197,94,0.18)' stroke='#16a34a' stroke-width='1.5'/><circle cx='80' cy='120' r='3' fill='#15803d'/><text x='86' y='118' font-size='11' fill='#15803d' font-weight='700'>I</text><text x='120' y='178' font-size='13' text-anchor='middle' font-weight='600'>8</text><text x='22' y='102' font-size='13' text-anchor='middle' font-weight='600'>6</text><text x='130' y='90' font-size='13' fill='#1e3a8a' font-weight='700' transform='rotate(-37 130 90)'>10</text></svg>"
+        },
+        {
+          "text": "**Use the right-triangle shortcut.** For legs $a$, $b$ and hypotenuse $c$:"
+        },
+        {
+          "math": "r = \\dfrac{a + b - c}{2} = \\dfrac{6 + 8 - 10}{2} = 2"
+        },
+        {
+          "text": "**Sanity check with the general formula.** Area $= \\tfrac{1}{2} \\cdot 6 \\cdot 8 = 24$. Semiperimeter $= (6+8+10)/2 = 12$. So $r = 24/12 = 2$. ✓"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{Find the inradius of the 5-12-13 right triangle.}",
+      "answer": 2,
+      "tolerance": 0.001,
+      "hints": [
+        "Recognize the 5-12-13 Pythagorean triple — it's a right triangle.",
+        "Use the shortcut $r = (a + b - c)/2$ with $c = 13$."
+      ],
+      "explanation": "$r = (5 + 12 - 13)/2 = 4/2 = 2$. Verify: $A = 30$, $s = 15$, $r = 30/15 = 2$ ✓.",
+      "steps": [
+        {
+          "text": "**5-12-13 is a Pythagorean triple.** $5^2 + 12^2 = 25 + 144 = 169 = 13^2$, so it's a right triangle with legs $5, 12$ and hypotenuse $13$."
+        },
+        {
+          "text": "**Apply the right-triangle shortcut:**"
+        },
+        {
+          "math": "r = \\dfrac{a + b - c}{2} = \\dfrac{5 + 12 - 13}{2} = \\dfrac{4}{2} = 2"
+        },
+        {
+          "text": "**Verify with $r = A/s$.** Area $= \\tfrac{1}{2}(5)(12) = 30$. Semiperimeter $= (5+12+13)/2 = 15$. So $r = 30/15 = 2$. ✓"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{Find the inradius of the isosceles triangle with sides } 13, 13, 10. \\\\ \\text{Give an exact decimal (rounded to 2 places).}",
+      "answer": 3.33,
+      "tolerance": 0.02,
+      "hints": [
+        "Drop an altitude from the apex (between the two equal sides) to the base of length 10. It bisects the base.",
+        "The altitude has length $\\sqrt{13^2 - 5^2} = 12$ (a 5-12-13 right triangle pops out!). Then area = (1/2)(10)(12) = 60."
+      ],
+      "explanation": "$A = 60$, $s = 18$, so $r = 60/18 = 10/3 \\approx 3.33$.",
+      "steps": [
+        {
+          "text": "**Find the altitude.** Drop a perpendicular from the apex to the base of length 10. It bisects the base into two segments of length 5 each. This creates a right triangle with hypotenuse $13$ and one leg $5$."
+        },
+        {
+          "svg": "<svg viewBox='0 0 260 200' xmlns='http://www.w3.org/2000/svg'><polygon points='40,160 200,160 120,40' fill='#fef3c7' stroke='#1e293b' stroke-width='2'/><line x1='120' y1='40' x2='120' y2='160' stroke='#dc2626' stroke-width='1.8' stroke-dasharray='5 3'/><rect x='112' y='150' width='10' height='10' fill='none' stroke='#1e293b' stroke-width='1.2'/><text x='80' y='178' font-size='12' text-anchor='middle'>5</text><text x='160' y='178' font-size='12' text-anchor='middle'>5</text><text x='62' y='104' font-size='13' text-anchor='middle' font-weight='600' transform='rotate(-56 62 104)'>13</text><text x='178' y='104' font-size='13' text-anchor='middle' font-weight='600' transform='rotate(56 178 104)'>13</text><text x='128' y='102' font-size='13' fill='#dc2626' font-weight='700'>h = ?</text></svg>"
+        },
+        {
+          "text": "**Solve the right sub-triangle:**"
+        },
+        {
+          "math": "h = \\sqrt{13^2 - 5^2} = \\sqrt{169 - 25} = \\sqrt{144} = 12"
+        },
+        {
+          "text": "(Notice — that sub-triangle is a 5-12-13 right triangle.) **Compute area:**"
+        },
+        {
+          "math": "A = \\tfrac{1}{2}(10)(12) = 60"
+        },
+        {
+          "text": "**Compute semiperimeter:**"
+        },
+        {
+          "math": "s = \\dfrac{13 + 13 + 10}{2} = 18"
+        },
+        {
+          "text": "**Inradius:**"
+        },
+        {
+          "math": "r = \\dfrac{A}{s} = \\dfrac{60}{18} = \\dfrac{10}{3} \\approx 3.33"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{Find the inradius of an equilateral triangle with side length } 12. \\\\ \\text{Give a decimal rounded to 2 places.}",
+      "answer": 3.46,
+      "tolerance": 0.02,
+      "hints": [
+        "Equilateral inradius formula: $r = a\\sqrt{3}/6$.",
+        "$12\\sqrt{3}/6 = 2\\sqrt{3}$. Approximate $\\sqrt{3} \\approx 1.732$."
+      ],
+      "explanation": "$r = 12\\sqrt{3}/6 = 2\\sqrt{3} \\approx 3.46$.",
+      "steps": [
+        {
+          "text": "**Use the equilateral formula directly:**"
+        },
+        {
+          "math": "r = \\dfrac{a\\sqrt{3}}{6} = \\dfrac{12\\sqrt{3}}{6} = 2\\sqrt{3}"
+        },
+        {
+          "text": "**Approximate:**"
+        },
+        {
+          "math": "2\\sqrt{3} \\approx 2 \\cdot 1.732 \\approx 3.46"
+        },
+        {
+          "text": "**Derivation reminder.** Area $= (\\sqrt{3}/4) \\cdot 12^2 = 36\\sqrt{3}$, semiperimeter $= 18$, so $r = 36\\sqrt{3}/18 = 2\\sqrt{3}$. ✓"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Triangle has vertices } A(0,0),\\; B(8,0),\\; C(0,6). \\\\ \\text{Find the coordinates of the incenter.}",
+      "choices": [
+        "(2, 2)",
+        "(\\tfrac{8}{3}, 2)",
+        "(3, 3)",
+        "(\\tfrac{14}{3}, \\tfrac{14}{3})"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Compute side lengths first. $a = |BC|$ (opposite $A$), $b = |AC|$ (opposite $B$), $c = |AB|$ (opposite $C$).",
+        "Then use the weighted-average formula $I = (a\\,A + b\\,B + c\\,C) / (a+b+c)$."
+      ],
+      "explanation": "Sides: $a = 10$, $b = 6$, $c = 8$. $I = (10(0,0) + 6(8,0) + 8(0,6))/24 = (48, 48)/24 = (2,2)$.",
+      "steps": [
+        {
+          "text": "**Find the three side lengths.** Use the distance formula."
+        },
+        {
+          "svg": "<svg viewBox='0 0 240 200' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='30' x2='30' y2='180' stroke='#94a3b8' stroke-width='1'/><line x1='30' y1='180' x2='220' y2='180' stroke='#94a3b8' stroke-width='1'/><polygon points='30,180 190,180 30,60' fill='#fef3c7' stroke='#1e293b' stroke-width='2'/><circle cx='30' cy='180' r='4' fill='#1e293b'/><text x='28' y='195' font-size='11' text-anchor='end'>A(0,0)</text><circle cx='190' cy='180' r='4' fill='#1e293b'/><text x='195' y='184' font-size='11'>B(8,0)</text><circle cx='30' cy='60' r='4' fill='#1e293b'/><text x='28' y='56' font-size='11' text-anchor='end'>C(0,6)</text><circle cx='70' cy='140' r='14' fill='rgba(34,197,94,0.18)' stroke='#16a34a' stroke-width='1.5'/><circle cx='70' cy='140' r='3' fill='#15803d'/><text x='76' y='138' font-size='11' fill='#15803d' font-weight='700'>I</text></svg>"
+        },
+        {
+          "math": "a = |BC| = \\sqrt{8^2 + 6^2} = 10, \\quad b = |AC| = 6, \\quad c = |AB| = 8"
+        },
+        {
+          "text": "**Apply the incenter coordinate formula** (weighted by opposite side lengths):"
+        },
+        {
+          "math": "I = \\dfrac{a\\,A + b\\,B + c\\,C}{a + b + c} = \\dfrac{10(0,0) + 6(8,0) + 8(0,6)}{10 + 6 + 8}"
+        },
+        {
+          "math": "I = \\dfrac{(0,0) + (48,0) + (0,48)}{24} = \\dfrac{(48, 48)}{24} = (2, 2)"
+        },
+        {
+          "text": "**Sanity check.** This is a 6-8-10 right triangle, so $r = (6+8-10)/2 = 2$. The incenter at $(2,2)$ is at perpendicular distance $2$ from both the x-axis and y-axis — consistent with $r = 2$. ✓"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{Find the inradius of the triangle with sides } 7, 8, 9. \\\\ \\text{Give a decimal rounded to 2 places.}",
+      "answer": 2.24,
+      "tolerance": 0.02,
+      "hints": [
+        "Not a right triangle, so use Heron's formula for the area.",
+        "$s = 12$, area $= \\sqrt{s(s-a)(s-b)(s-c)} = \\sqrt{12 \\cdot 5 \\cdot 4 \\cdot 3}$."
+      ],
+      "explanation": "$s = 12$. Area $= \\sqrt{12 \\cdot 5 \\cdot 4 \\cdot 3} = \\sqrt{720} = 12\\sqrt{5}$. $r = 12\\sqrt{5}/12 = \\sqrt{5} \\approx 2.24$.",
+      "steps": [
+        {
+          "text": "**Semiperimeter:**"
+        },
+        {
+          "math": "s = \\dfrac{7 + 8 + 9}{2} = 12"
+        },
+        {
+          "text": "**Heron's formula for the area:**"
+        },
+        {
+          "math": "A = \\sqrt{s(s-a)(s-b)(s-c)} = \\sqrt{12 \\cdot (12-7)(12-8)(12-9)}"
+        },
+        {
+          "math": "A = \\sqrt{12 \\cdot 5 \\cdot 4 \\cdot 3} = \\sqrt{720} = 12\\sqrt{5}"
+        },
+        {
+          "text": "**Inradius:**"
+        },
+        {
+          "math": "r = \\dfrac{A}{s} = \\dfrac{12\\sqrt{5}}{12} = \\sqrt{5} \\approx 2.24"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{The incircle of } \\triangle ABC \\text{ touches side } BC \\text{ at point } X. \\\\ \\text{Given } BX = 4,\\; XC = 5,\\; \\text{ and } AB = 7,\\; \\text{ find } AC.",
+      "answer": 8,
+      "tolerance": 0.001,
+      "hints": [
+        "Tangent segments from a single external point to a circle are equal. So $BX = BZ$ (where $Z$ is the tangent point on $AB$), and similarly $CX = CY$ on $AC$, and $AY = AZ$ on the two sides through $A$.",
+        "From $AB = 7$ and $BZ = 4$: $AZ = 3$. So $AY = 3$. Then $AC = AY + YC = 3 + 5$."
+      ],
+      "explanation": "Tangent lengths from each vertex are equal. From $B$: $BX = BZ = 4$. So $AZ = AB - BZ = 7 - 4 = 3$. From $A$: $AY = AZ = 3$. From $C$: $CY = CX = 5$. Therefore $AC = AY + YC = 3 + 5 = 8$.",
+      "steps": [
+        {
+          "text": "**Set up the tangent points.** Let the incircle touch $BC$ at $X$, $CA$ at $Y$, and $AB$ at $Z$."
+        },
+        {
+          "svg": "<svg viewBox='0 0 280 200' xmlns='http://www.w3.org/2000/svg'><polygon points='50,170 250,170 70,30' fill='#fef3c7' stroke='#1e293b' stroke-width='2'/><circle cx='110' cy='130' r='28' fill='rgba(34,197,94,0.18)' stroke='#16a34a' stroke-width='1.5'/><circle cx='110' cy='130' r='3' fill='#15803d'/><text x='116' y='128' font-size='11' fill='#15803d' font-weight='700'>I</text><circle cx='130' cy='170' r='4' fill='#dc2626'/><text x='130' y='188' font-size='12' fill='#dc2626' font-weight='700' text-anchor='middle'>X</text><circle cx='86' cy='102' r='4' fill='#dc2626'/><text x='70' y='106' font-size='12' fill='#dc2626' font-weight='700'>Z</text><circle cx='140' cy='92' r='4' fill='#dc2626'/><text x='148' y='90' font-size='12' fill='#dc2626' font-weight='700'>Y</text><text x='44' y='180' font-size='13' font-weight='700'>B</text><text x='254' y='180' font-size='13' font-weight='700'>C</text><text x='62' y='28' font-size='13' font-weight='700'>A</text><text x='90' y='184' font-size='11'>4</text><text x='190' y='184' font-size='11'>5</text></svg>"
+        },
+        {
+          "text": "**Use the tangent-equality fact.** Two tangent segments from a single external point to a circle have equal length. So tangents from $B$ satisfy $BX = BZ$. From $C$: $CX = CY$. From $A$: $AY = AZ$."
+        },
+        {
+          "text": "**Tangents from $B$:** $BX = BZ = 4$."
+        },
+        {
+          "text": "**Find $AZ$ on side $AB$.** Side $AB$ is split into $AZ + ZB = AB$:"
+        },
+        {
+          "math": "AZ = AB - ZB = 7 - 4 = 3"
+        },
+        {
+          "text": "**Tangents from $A$:** $AY = AZ = 3$. **Tangents from $C$:** $CY = CX = 5$."
+        },
+        {
+          "text": "**Side $AC$ is $AY + YC$:**"
+        },
+        {
+          "math": "AC = 3 + 5 = 8"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{A triangle has inradius } r = 3 \\text{ and perimeter } 20. \\\\ \\text{Find its area.}",
+      "answer": 30,
+      "tolerance": 0.001,
+      "hints": [
+        "Rearrange $r = A/s$ for $A$.",
+        "Perimeter is $2s$, so $s = 10$."
+      ],
+      "explanation": "$s = 20/2 = 10$. $A = rs = 3 \\cdot 10 = 30$.",
+      "steps": [
+        {
+          "text": "**The inradius formula** rearranges to $A = r \\cdot s$ — area equals inradius times semiperimeter."
+        },
+        {
+          "math": "r = \\dfrac{A}{s} \\;\\Longrightarrow\\; A = r \\cdot s"
+        },
+        {
+          "text": "**Semiperimeter** is half the perimeter:"
+        },
+        {
+          "math": "s = \\dfrac{20}{2} = 10"
+        },
+        {
+          "text": "**Plug in:**"
+        },
+        {
+          "math": "A = 3 \\cdot 10 = 30"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\text{An equilateral triangle has area } 9\\sqrt{3}. \\\\ \\text{Find the area of its inscribed circle. (Express as } k\\pi \\text{ and give } k.)",
+      "answer": 3,
+      "tolerance": 0.001,
+      "hints": [
+        "First find the side length $a$ from the area formula $A = (\\sqrt{3}/4)a^2$.",
+        "Then $r = a\\sqrt{3}/6$, and the circle's area is $\\pi r^2$."
+      ],
+      "explanation": "$a = 6$ (from $9\\sqrt{3} = (\\sqrt{3}/4)a^2$). $r = 6\\sqrt{3}/6 = \\sqrt{3}$. Incircle area $= \\pi (\\sqrt{3})^2 = 3\\pi$. So $k = 3$.",
+      "steps": [
+        {
+          "text": "**Find the side length $a$.** The equilateral area formula:"
+        },
+        {
+          "math": "\\dfrac{\\sqrt{3}}{4} a^2 = 9\\sqrt{3} \\;\\Longrightarrow\\; a^2 = 36 \\;\\Longrightarrow\\; a = 6"
+        },
+        {
+          "text": "**Inradius of an equilateral triangle:**"
+        },
+        {
+          "math": "r = \\dfrac{a\\sqrt{3}}{6} = \\dfrac{6\\sqrt{3}}{6} = \\sqrt{3}"
+        },
+        {
+          "svg": "<svg viewBox='0 0 240 200' xmlns='http://www.w3.org/2000/svg'><polygon points='30,170 210,170 120,15' fill='#fef3c7' stroke='#1e293b' stroke-width='2'/><circle cx='120' cy='117' r='35' fill='rgba(34,197,94,0.22)' stroke='#16a34a' stroke-width='2'/><circle cx='120' cy='117' r='3' fill='#15803d'/><line x1='120' y1='117' x2='120' y2='170' stroke='#dc2626' stroke-width='1.8'/><text x='126' y='148' font-size='13' fill='#dc2626' font-weight='700'>r</text><text x='120' y='192' font-size='13' text-anchor='middle' font-weight='600'>side = 6</text></svg>"
+        },
+        {
+          "text": "**Area of the incircle:**"
+        },
+        {
+          "math": "\\text{area} = \\pi r^2 = \\pi (\\sqrt{3})^2 = 3\\pi"
+        },
+        {
+          "text": "So $k = 3$."
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q13",
+      "type": "multiple-choice",
+      "prompt": "Why do the three angle bisectors of any triangle CONCUR (meet at a single point)?",
+      "choices": [
+        "Coincidence — only works for special triangles",
+        "Each angle bisector is the LOCUS of points equidistant from the two sides forming that angle; intersect two of them and the resulting point is equidistant from all three sides — so it lies on the third bisector too",
+        "Because the angles of a triangle sum to 180°",
+        "It's only true for acute triangles"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Think about what the bisector of ∠A IS, geometrically — what is the defining property of its points?",
+        "Distance from a point to a line is well-defined. Equidistance from two lines = on the angle bisector between them."
+      ],
+      "explanation": "The bisector of $\\angle A$ is the locus of points P with $\\text{dist}(P, AB) = \\text{dist}(P, AC)$. Intersect the bisector of $\\angle A$ with the bisector of $\\angle B$: the meeting point has dist from $AB$ = dist from $AC$ AND dist from $AB$ = dist from $BC$. So all three distances are equal — that point lies on the bisector of $\\angle C$ too.",
+      "steps": [
+        "**Angle bisector's defining property.** $P$ lies on the bisector of $\\angle A$ ⇔ $P$ is equidistant from the two sides $AB$ and $AC$.",
+        "**Intersect two bisectors.** Let $I$ = intersection of the bisectors of $\\angle A$ and $\\angle B$. Then $\\text{dist}(I, AB) = \\text{dist}(I, AC)$ (bisector of $A$) AND $\\text{dist}(I, AB) = \\text{dist}(I, BC)$ (bisector of $B$). Combining: $I$ is equidistant from all three sides.",
+        "**Third bisector forced.** Since $\\text{dist}(I, AC) = \\text{dist}(I, BC)$, $I$ also lies on the bisector of $\\angle C$. Three bisectors concurrent ⇒ incenter exists and is unique.",
+        "**Pattern lesson.** Same reasoning shape as the circumcenter proof: each construction has a defining 'equidistance' property; intersecting two of them inherits the property, forcing the third. Geometry's concurrence theorems often reduce to this trick."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q14",
+      "type": "multiple-choice",
+      "prompt": "For which triangle shapes does the INCENTER lie inside the triangle?",
+      "choices": [
+        "Only acute triangles",
+        "Acute and right triangles only — not obtuse",
+        "ALL triangles — the incenter is always inside",
+        "Only equilateral triangles"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "The incircle is inscribed inside the triangle, tangent to all three sides. Its center is at the center of the inscribed circle.",
+        "If the circle is inside, where must its center be?"
+      ],
+      "explanation": "The incircle, by definition, is the circle INSIDE the triangle tangent to all three sides. Its center — the incenter — is therefore always inside the triangle. Unlike the circumcenter and orthocenter (which can escape outside for obtuse triangles), the incenter never leaves the interior.",
+      "steps": [
+        "**Definition of the incircle.** The unique circle inside the triangle tangent to all three sides. Its center is the incenter.",
+        "**Inside-ness of the center.** A circle's center is always inside the circle, and the incircle is inside the triangle. By transitivity, the incenter is inside the triangle. No exceptions.",
+        "**Summary table of triangle centers.**\n\n| Center | Always inside? |\n|---|---|\n| Centroid $G$ | ✓ always (average of vertices) |\n| Incenter $I$ | ✓ always (center of inscribed circle) |\n| Circumcenter $O$ | only for acute |\n| Orthocenter $H$ | only for acute |",
+        "**Pattern lesson.** Centers built from internal constructions (averages, inscribed objects) stay inside. Centers built from perpendicular constructions (perpendicular bisectors, altitudes) can escape outside."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q15",
+      "type": "numeric",
+      "promptTex": "\\text{Triangle with semiperimeter } s = 15 \\text{ and side } a = 8 \\text{ opposite } \\angle A = 60°. \\\\ \\text{Find the inradius using the formula } r = (s - a) \\tan(A/2). \\\\ \\text{Round to 2 decimal places.}",
+      "answer": 4.04,
+      "tolerance": 0.02,
+      "hints": [
+        "$\\tan(30°) = 1/\\sqrt{3} \\approx 0.5774$.",
+        "$r = (15 - 8) \\cdot \\tan(30°) = 7 / \\sqrt{3} = 7\\sqrt{3}/3 \\approx 4.04$."
+      ],
+      "explanation": "An alternative inradius formula: $r = (s - a) \\tan(A/2)$. With $s = 15$, $a = 8$, $A = 60°$: $r = 7 \\cdot \\tan(30°) = 7/\\sqrt{3} = 7\\sqrt{3}/3 \\approx 4.04$.",
+      "steps": [
+        "**Recognize the formula.** $r = (s - a)\\tan(A/2)$ relates the inradius to the side $a$, the semiperimeter $s$, and the half-angle at $A$.",
+        {
+          "svg": "<svg viewBox=\"0 0 280 210\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"140,30 40,170 240,170\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><circle cx=\"140\" cy=\"130\" r=\"32\" fill=\"rgba(34,197,94,0.18)\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><circle cx=\"140\" cy=\"130\" r=\"3\" fill=\"#15803d\"/><line x1=\"140\" y1=\"130\" x2=\"140\" y2=\"170\" stroke=\"#dc2626\" stroke-width=\"1.4\" stroke-dasharray=\"3 3\"/><rect x=\"134\" y=\"160\" width=\"6\" height=\"6\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.1\"/><path d=\"M 130 50 A 25 25 0 0 1 150 50\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.4\"/><circle cx=\"140\" cy=\"30\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"40\" cy=\"170\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"240\" cy=\"170\" r=\"3.5\" fill=\"#1e293b\"/><text x=\"135\" y=\"22\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">A</text><text x=\"26\" y=\"185\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">B</text><text x=\"246\" y=\"185\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">C</text><text x=\"125\" y=\"75\" font-size=\"11\" fill=\"#2563eb\" font-style=\"italic\">A/2</text><text x=\"146\" y=\"134\" font-size=\"11\" font-weight=\"600\" fill=\"#15803d\">I</text><text x=\"148\" y=\"152\" font-size=\"11\" fill=\"#dc2626\" font-style=\"italic\">r</text><text x=\"126\" y=\"185\" font-size=\"11\" fill=\"#0f172a\" font-style=\"italic\">a (opposite A)</text></svg>"
+        },
+        "**Compute $A/2$.** $A = 60°$, so $A/2 = 30°$. $\\tan(30°) = 1/\\sqrt{3} \\approx 0.5774$.",
+        "**Plug in.** $r = (15 - 8) \\cdot \\tan(30°) = 7 \\cdot \\dfrac{1}{\\sqrt{3}} = \\dfrac{7\\sqrt{3}}{3} \\approx 4.04$.",
+        "**Where this formula comes from.** Drop a perpendicular from $I$ to side $b$ (or $c$). It forms a right triangle with leg $r$ (the inradius), leg $s - a$ (a well-known 'tangent-length' identity), and angle $A/2$ at vertex $A$. So $\\tan(A/2) = r / (s - a)$ — rearranging gives the formula. Pattern lesson: classical inradius formulas drop out of small right triangles formed by the incircle and a vertex angle bisector."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q16",
+      "type": "numeric",
+      "promptTex": "\\text{In } \\triangle ABC, \\angle A = 50°. \\\\ \\text{Find } \\angle BIC \\text{ (the angle at the incenter looking at side } BC).",
+      "answer": 115,
+      "tolerance": 0.1,
+      "hints": [
+        "Classical formula: $\\angle BIC = 90° + A/2$.",
+        "$\\angle BIC = 90° + 50°/2 = 90° + 25° = 115°$."
+      ],
+      "explanation": "A beautiful classical identity: $\\angle BIC = 90° + \\dfrac{A}{2}$. With $A = 50°$: $\\angle BIC = 90° + 25° = 115°$. Always between $90°$ and $135°$ for non-degenerate triangles.",
+      "steps": [
+        "**State the identity.** $\\angle BIC = 90° + \\dfrac{A}{2}$. The angle at the incenter opposite vertex $A$ is always obtuse.",
+        {
+          "svg": "<svg viewBox=\"0 0 280 210\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"140,30 40,170 240,170\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><circle cx=\"140\" cy=\"130\" r=\"32\" fill=\"rgba(34,197,94,0.18)\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><line x1=\"140\" y1=\"130\" x2=\"40\" y2=\"170\" stroke=\"#2563eb\" stroke-width=\"1.4\"/><line x1=\"140\" y1=\"130\" x2=\"240\" y2=\"170\" stroke=\"#2563eb\" stroke-width=\"1.4\"/><circle cx=\"140\" cy=\"130\" r=\"4\" fill=\"#15803d\"/><circle cx=\"140\" cy=\"30\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"40\" cy=\"170\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"240\" cy=\"170\" r=\"3.5\" fill=\"#1e293b\"/><text x=\"135\" y=\"22\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">A</text><text x=\"26\" y=\"185\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">B</text><text x=\"246\" y=\"185\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">C</text><text x=\"148\" y=\"134\" font-size=\"11\" font-weight=\"600\" fill=\"#15803d\">I</text><text x=\"108\" y=\"152\" font-size=\"11\" fill=\"#2563eb\" font-style=\"italic\">∠BIC</text></svg>"
+        },
+        "**Plug in.** $\\angle BIC = 90° + \\dfrac{50°}{2} = 90° + 25° = 115°$.",
+        "**Why is it true?** In $\\triangle BIC$, the angles are $\\angle IBC = B/2$, $\\angle ICB = C/2$, and $\\angle BIC$. They sum to $180°$: $\\angle BIC = 180° - B/2 - C/2 = 180° - (B+C)/2$. But $B + C = 180° - A$, so $\\angle BIC = 180° - (180° - A)/2 = 90° + A/2$.",
+        "**Sanity check.** As $A \\to 0°$: $\\angle BIC \\to 90°$ (right angle limit, degenerate triangle). As $A \\to 180°$: $\\angle BIC \\to 180°$ (incenter slides to vertex $A$, degenerate)."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q17",
+      "type": "multiple-choice",
+      "prompt": "Euler's inequality: for any triangle, the inradius r and circumradius R satisfy:",
+      "choices": [
+        "$r = R$ — they're always equal",
+        "$r \\geq R$ — inradius is at least the circumradius",
+        "$r \\leq R/2$, with equality only for equilateral triangles",
+        "There's no general relation"
+      ],
+      "choicesTex": false,
+      "answerIndex": 2,
+      "hints": [
+        "An equilateral triangle has $r/R = 1/2$ exactly — that's the EXTREME case.",
+        "All other triangles have $r/R < 1/2$. Equivalently $2r \\leq R$."
+      ],
+      "explanation": "$r \\leq R/2$ for every triangle, with equality iff the triangle is equilateral (Euler, 1765). Often written as $R \\geq 2r$. The further a triangle is from equilateral, the more $r$ shrinks compared to $R$.",
+      "steps": [
+        "**Statement.** Euler's classical inequality: $r \\leq \\dfrac{R}{2}$.",
+        "**Equality case.** Holds with equality iff the triangle is equilateral. Any other triangle has a strictly smaller $r/R$ ratio.",
+        "**Beautiful proof sketch.** Use the identity $OI^2 = R^2 - 2Rr$ (Euler's formula, where $O$ is the circumcenter and $I$ is the incenter). Since $OI^2 \\geq 0$, we get $R^2 \\geq 2Rr$, i.e. $r \\leq R/2$. Equality ⇔ $O = I$ ⇔ equilateral.",
+        "**Pattern lesson.** Many classical inequalities have one extremal triangle (often equilateral). Recognizing this lets you guess the equality case before proving it — a useful problem-solving heuristic."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q18",
+      "type": "numeric",
+      "promptTex": "\\text{Triangle with incenter } I, \\text{ inradius } r = 3, \\text{ and angle } \\angle A = 60°. \\\\ \\text{Find } |AI|.",
+      "answer": 6,
+      "tolerance": 0.001,
+      "hints": [
+        "Drop a perpendicular from $I$ to side $AB$ (or $AC$); it has length $r$. This creates a right triangle with hypotenuse $AI$ and angle $A/2$ at $A$.",
+        "$\\sin(A/2) = r / |AI|$, so $|AI| = r / \\sin(A/2)$.",
+        "$|AI| = 3 / \\sin(30°) = 3 / (1/2) = 6$."
+      ],
+      "explanation": "The incenter lies on the bisector of $\\angle A$, so the line $AI$ makes angle $A/2$ with each side at $A$. Dropping a perpendicular from $I$ to side $AB$ (length $r$) gives a right triangle with hypotenuse $|AI|$ and opposite leg $r$: $\\sin(A/2) = r/|AI| \\Rightarrow |AI| = r/\\sin(A/2) = 3/\\sin(30°) = 6$.",
+      "steps": [
+        "**Set up the right triangle.** Drop a perpendicular from $I$ to side $AB$ (or $AC$). It has length $r$ (the inradius). $AI$ is the hypotenuse, and the angle at $A$ inside this little triangle is $A/2$ (because $AI$ bisects $\\angle A$).",
+        {
+          "svg": "<svg viewBox=\"0 0 280 210\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"40,30 40,180 230,180\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><circle cx=\"95\" cy=\"148\" r=\"32\" fill=\"rgba(34,197,94,0.18)\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"30\" x2=\"95\" y2=\"148\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><line x1=\"40\" y1=\"148\" x2=\"95\" y2=\"148\" stroke=\"#2563eb\" stroke-width=\"1.4\" stroke-dasharray=\"3 3\"/><rect x=\"40\" y=\"142\" width=\"6\" height=\"6\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.1\"/><path d=\"M 40 60 A 30 30 0 0 1 56 79\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.3\"/><circle cx=\"95\" cy=\"148\" r=\"4\" fill=\"#15803d\"/><circle cx=\"40\" cy=\"30\" r=\"3.5\" fill=\"#1e293b\"/><text x=\"22\" y=\"30\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">A</text><text x=\"102\" y=\"152\" font-size=\"11\" font-weight=\"600\" fill=\"#15803d\">I</text><text x=\"58\" y=\"72\" font-size=\"11\" fill=\"#dc2626\" font-style=\"italic\">A/2</text><text x=\"58\" y=\"100\" font-size=\"11\" fill=\"#dc2626\" font-style=\"italic\">AI</text><text x=\"56\" y=\"140\" font-size=\"11\" fill=\"#2563eb\" font-style=\"italic\">r</text></svg>"
+        },
+        "**Apply $\\sin$.** $\\sin(A/2) = \\dfrac{r}{|AI|} \\;\\Longrightarrow\\; |AI| = \\dfrac{r}{\\sin(A/2)}$.",
+        "**Plug in.** $|AI| = \\dfrac{3}{\\sin 30°} = \\dfrac{3}{1/2} = 6$.",
+        "**Mirror identities at $B, C$.** $|BI| = r/\\sin(B/2)$, $|CI| = r/\\sin(C/2)$. Together with $|AI|$ these tie the incenter to each vertex via the half-angles."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q19",
+      "type": "multiple-choice",
+      "prompt": "Is the incenter I generally on the Euler line of the triangle (the line through O, G, H)?",
+      "choices": [
+        "Yes — I is always on the Euler line",
+        "No — in general, I lies OFF the Euler line. (For equilateral triangles all four centers coincide, but that's a degenerate special case where the Euler line is undefined.)",
+        "Yes, for right triangles",
+        "Yes, for acute triangles"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "The Euler line connects O, G, H — but I is a different kind of center, built from angle bisectors, not perpendicular constructions.",
+        "Generically there are FOUR distinct classical centers; only three are collinear."
+      ],
+      "explanation": "For a typical (non-equilateral) triangle, the incenter lies OFF the Euler line. The Euler line is special to the trio $\\{O, G, H\\}$. The incenter $I$, built from angle bisectors, doesn't share their alignment. For an equilateral triangle, all four centers collapse to one point and the Euler line is undefined.",
+      "steps": [
+        "**Why $O, G, H$ are collinear.** Direct vector identity: $\\vec{OH} = 3 \\vec{OG}$. This identity falls out of the centroid being the centroid of $\\{A, B, C\\}$ AND being the centroid of $\\{A, B, C, H\\}$ on the right scaling. It's specific to these three centers.",
+        "**Why $I$ is generally separate.** The incenter is the weighted average $I = (aA + bB + cC)/(a+b+c)$. The weights are side lengths, not equal weights. There's no general identity placing $I$ on the line through $O, G, H$.",
+        "**Pattern lesson.** Triangle geometry has many 'centers' (over 50,000 catalogued in the Encyclopedia of Triangle Centers). Most pairs of centers don't have a simple linear relationship. The Euler-line trio is exceptional."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q20",
+      "type": "numeric",
+      "promptTex": "\\text{In an equilateral triangle, find the ratio } r / R \\\\ \\text{(inradius to circumradius).}",
+      "answer": 0.5,
+      "tolerance": 0.001,
+      "hints": [
+        "For an equilateral with side $a$: $r = a\\sqrt{3}/6$ and $R = a\\sqrt{3}/3$.",
+        "$r/R = (a\\sqrt{3}/6) / (a\\sqrt{3}/3) = 3/6 = 1/2$."
+      ],
+      "explanation": "For an equilateral triangle with side $a$, the inradius is $r = a\\sqrt{3}/6$ and the circumradius is $R = a\\sqrt{3}/3 = 2r$. So $r/R = 1/2$ exactly. This is the EQUALITY case of Euler's inequality $r \\leq R/2$ — equilateral triangles achieve the bound.",
+      "steps": [
+        "**Recall the equilateral formulas.** For side $a$: $r = \\dfrac{a\\sqrt{3}}{6}$, $R = \\dfrac{a\\sqrt{3}}{3}$.",
+        "**Take the ratio.** $\\dfrac{r}{R} = \\dfrac{a\\sqrt{3}/6}{a\\sqrt{3}/3} = \\dfrac{3}{6} = \\dfrac{1}{2}$.",
+        "**Connection to Euler's inequality.** $r \\leq R/2$ for every triangle, with equality ⇔ equilateral. The equilateral triangle is the *maximally efficient* shape — it gets the largest possible inscribed circle relative to its circumscribed circle.",
+        "**Pattern lesson.** Equilateral triangles are local extremals for many geometric quantities: $r/R$, area-to-perimeter² ratio, etc. When a question asks 'over all triangles, when is X extremal?', equilateral is the first guess."
+      ],
+      "difficulty": "easy"
+    }
+  ]
+}

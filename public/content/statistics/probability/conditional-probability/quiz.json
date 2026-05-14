@@ -1,0 +1,433 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The notation } P(A | B) \\text{ means:}",
+      "choices": [
+        "Probability of A AND B",
+        "Probability of A OR B",
+        "Probability of A given that B has happened",
+        "Probability of A divided by probability of B"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "The vertical bar means 'given'.",
+        "P(A | B) = probability of A given B occurred."
+      ],
+      "explanation": "$P(A | B)$ = 'probability of A given B' — the conditional probability of A under the assumption that B has occurred.",
+      "steps": [
+        "Vertical bar | reads 'given'.",
+        "$P(A | B)$: how likely is $A$, *given* that $B$ already happened?",
+        "Restricts the sample space to outcomes where $B$ is true."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "P(A | B) = \\dfrac{?}{P(B)}",
+      "choices": [
+        "P(A)",
+        "P(A \\text{ and } B)",
+        "P(A \\text{ or } B)",
+        "P(A) \\cdot P(B)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "The numerator is the joint probability.",
+        "$P(A \\cap B)$."
+      ],
+      "explanation": "$P(A | B) = \\dfrac{P(A \\cap B)}{P(B)}$. The numerator is the joint probability.",
+      "steps": [
+        "Conditional probability formula: $P(A | B) = \\dfrac{P(A \\text{ and } B)}{P(B)}$.",
+        "(Of the times $B$ happens (denominator), what fraction also have $A$ (numerator)?)"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Roll a die. Given the result is even,} \\\\ P(\\text{4} | \\text{even}) = ?",
+      "choices": [
+        "1/6",
+        "1/3",
+        "1/2",
+        "2/3"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Restrict to evens: {2, 4, 6}. P(4 in this set) = 1/3.",
+        "$1/3$."
+      ],
+      "explanation": "Restricted sample space (evens): $\\{2, 4, 6\\}$. Of these, 1 is a 4: $P = 1/3$.",
+      "steps": [
+        "Given 'even' restricts to $\\{2, 4, 6\\}$ — 3 outcomes.",
+        "Favorable (rolling a 4): 1 outcome.",
+        "$P(4 | \\text{even}) = 1/3$.",
+        "Or via formula: $P(4 \\text{ and even})/P(\\text{even}) = (1/6)/(3/6) = 1/3$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{From the school survey table (60 boys/100 like math, 40 don't; 70 girls like, 30 don't), find} \\\\ P(\\text{boy} | \\text{likes math}).",
+      "choices": [
+        "60/100",
+        "60/130",
+        "60/200",
+        "130/200"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Restrict to math-likers (130 total). Of those, 60 are boys.",
+        "60/130."
+      ],
+      "explanation": "Restrict to 130 math-likers. 60 are boys: $P = 60/130 \\approx 0.462$.",
+      "steps": [
+        "'Given likes math' → restrict to the 130 students who like math.",
+        "Of these, 60 are boys.",
+        "$P(\\text{boy} | \\text{likes math}) = 60/130 \\approx 0.462$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{Same table: } P(\\text{likes math} | \\text{boy}) = ? \\text{ (decimal)}",
+      "answer": 0.6,
+      "tolerance": 0.005,
+      "hints": [
+        "Restrict to boys (100). Of those, 60 like math.",
+        "60/100 = 0.6."
+      ],
+      "explanation": "Restrict to 100 boys. 60 like math: $P = 60/100 = 0.6$.",
+      "steps": [
+        "'Given boy' → restrict to 100 boys.",
+        "60 of them like math.",
+        "$P = 60/100 = 0.6$.",
+        "(Compare to $P(\\text{boy} | \\text{likes math}) = 60/130 \\approx 0.462$ — different! Direction matters.)"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Two events } A \\text{ and } B \\text{ are independent if and only if:}",
+      "choices": [
+        "P(A | B) = P(A)",
+        "P(A | B) = P(B)",
+        "P(A) = P(B)",
+        "P(A) + P(B) = 1"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Independence: knowing B doesn't change P(A).",
+        "$P(A | B) = P(A)$."
+      ],
+      "explanation": "If $A$ is independent of $B$, knowing $B$ provides no info about $A$: $P(A | B) = P(A)$.",
+      "steps": [
+        "Independent = $B$ tells you nothing about $A$.",
+        "Mathematically: $P(A | B) = P(A)$.",
+        "(Equivalent form: $P(A \\text{ and } B) = P(A) \\cdot P(B)$.)"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Two events both have } P = 0.5. \\text{ } P(A \\text{ and } B) = 0.3. \\\\ \\text{Are they independent?}",
+      "choices": [
+        "Yes",
+        "No"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Test: independent iff $P(A \\text{ and } B) = P(A) \\cdot P(B) = 0.5 \\cdot 0.5 = 0.25$.",
+        "$0.3 \\neq 0.25$ → not independent."
+      ],
+      "explanation": "If independent, $P(A \\text{ and } B)$ would be $0.5 \\cdot 0.5 = 0.25$. But it's $0.3$. **Not independent.**",
+      "steps": [
+        "Independence test: is $P(A \\text{ and } B) = P(A) \\cdot P(B)$?",
+        "Expected: $0.5 \\cdot 0.5 = 0.25$.",
+        "Actual: $0.3$.",
+        "$0.3 \\neq 0.25$ → **not independent**."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{Bag: 4 red, 6 blue. Draw 2 without replacement.} \\\\ P(\\text{2nd is red} | \\text{1st was red}) = ? \\text{ (decimal, round to 3)}",
+      "answer": 0.333,
+      "tolerance": 0.005,
+      "hints": [
+        "After taking one red, only 3 reds left out of 9 marbles.",
+        "3/9 = 1/3 ≈ 0.333."
+      ],
+      "explanation": "After 1st red removed: 3 R, 6 B (9 total). $P = 3/9 = 1/3 \\approx 0.333$.",
+      "steps": [
+        "Originally: 4 R, 6 B (10 marbles).",
+        "After taking 1 red: 3 R left, 6 B (9 marbles total).",
+        "$P(\\text{R on 2nd draw} | \\text{1st was R}) = 3/9 = 1/3 \\approx 0.333$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{Disease prevalence 2\\%. Test: 90\\% sensitive, 90\\% specific.} \\\\ \\text{Imagine 10{,}000 people. How many test } \\textbf{positive} \\text{ in total?}",
+      "answer": 1160,
+      "tolerance": 50,
+      "hints": [
+        "Diseased (200): 0.90 × 200 = 180 true positives. Healthy (9800): 0.10 × 9800 = 980 false positives.",
+        "Total: 180 + 980 = 1160."
+      ],
+      "explanation": "True pos: $0.9 \\cdot 200 = 180$. False pos: $0.1 \\cdot 9800 = 980$. Total: $1160$.",
+      "steps": [
+        "Population: 10,000. Diseased: $0.02 \\cdot 10{,}000 = 200$. Healthy: 9800.",
+        "True positives (diseased AND positive test): $0.90 \\cdot 200 = 180$.",
+        "False positives (healthy BUT positive test): $0.10 \\cdot 9800 = 980$.",
+        "Total positives: $180 + 980 = 1160$."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{Continuing the prior question: of those 1160 positives,} \\\\ P(\\text{actually has disease} | \\text{positive}) = ? \\text{ (round to 3 dec)}",
+      "answer": 0.155,
+      "tolerance": 0.01,
+      "hints": [
+        "180 true positives out of 1160 total positives.",
+        "180/1160 ≈ 0.155."
+      ],
+      "explanation": "$P(\\text{disease} | +) = 180/1160 \\approx 0.155$. Even with a 'positive' test, only ~16% chance of disease!",
+      "steps": [
+        "Of 1160 positives, 180 are true positives (actually diseased).",
+        "$P(\\text{disease} | \\text{positive}) = 180/1160 \\approx 0.155$.",
+        "Counterintuitive: a 'positive' on a 90%-accurate test only means **15.5%** probability of disease — because the disease is rare to begin with."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q11",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If } P(A) = P(A | B), \\text{ events } A \\text{ and } B \\text{ are:}",
+      "choices": [
+        "independent",
+        "mutually exclusive",
+        "complementary",
+        "disjoint"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "This is exactly the definition of independence.",
+        "Knowing B doesn't change P(A)."
+      ],
+      "explanation": "$P(A) = P(A | B)$ means knowing $B$ doesn't change $A$'s probability — that's independence.",
+      "steps": [
+        "Definition of independence: $P(A | B) = P(A)$.",
+        "(Equivalently $P(A \\text{ and } B) = P(A)P(B)$.)",
+        "**Independent.**"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\text{Given } P(A) = 0.4, P(B) = 0.5, P(A \\text{ and } B) = 0.2. \\\\ \\text{Find } P(A | B). \\text{ (decimal)}",
+      "answer": 0.4,
+      "tolerance": 0.005,
+      "hints": [
+        "Apply formula: $P(A|B) = P(A \\cap B) / P(B) = 0.2/0.5$.",
+        "$0.4$."
+      ],
+      "explanation": "$P(A|B) = 0.2/0.5 = 0.4$. Note: equals $P(A)$, so $A, B$ are independent.",
+      "steps": [
+        "$P(A|B) = P(A \\cap B)/P(B) = 0.2/0.5 = 0.4$.",
+        "Notice: $P(A|B) = P(A) = 0.4$ — so $A$ and $B$ are **independent**."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q13",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Bayes' theorem states:}",
+      "choices": [
+        "$P(A|B) = \\dfrac{P(A) \\cdot P(B|A)}{P(B)}$",
+        "$P(A|B) = \\dfrac{P(A) + P(B|A)}{P(B)}$",
+        "$P(A|B) = P(A) \\cdot P(B|A)$",
+        "$P(A|B) = P(A) - P(B|A)$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Bayes' theorem lets you 'flip' conditional probabilities: turn $P(B|A)$ into $P(A|B)$.",
+        "$P(A|B) = \\dfrac{P(A) \\cdot P(B|A)}{P(B)}$."
+      ],
+      "explanation": "Bayes' theorem: $P(A|B) = \\dfrac{P(A) \\cdot P(B|A)}{P(B)}$. Derivation: from the symmetry $P(A \\cap B) = P(A|B) \\cdot P(B) = P(B|A) \\cdot P(A)$, divide both sides by $P(B)$. The formula 'flips' the conditioning direction — go from forward $P(B|A)$ (often easier to know) to inverse $P(A|B)$ (what you actually want).",
+      "steps": [
+        "**Statement.** $P(A|B) = \\dfrac{P(A) \\cdot P(B|A)}{P(B)}$.",
+        "**Derivation in two lines.** $P(A \\cap B) = P(A|B) \\cdot P(B)$ (definition of $P(A|B)$). Also $P(A \\cap B) = P(B|A) \\cdot P(A)$ (definition with the other conditioning direction). Equate: $P(A|B) \\cdot P(B) = P(B|A) \\cdot P(A)$. Divide by $P(B)$: done.",
+        "**Why it's powerful.** Often the 'forward' conditional $P(B|A)$ is known (e.g., test accuracy: $P(\\text{positive} | \\text{disease})$). What you want is the *reverse*: $P(\\text{disease} | \\text{positive})$. Bayes lets you flip.",
+        "**Watch the denominator.** $P(B)$ usually requires the *law of total probability*: $P(B) = P(B|A)P(A) + P(B|\\overline{A})P(\\overline{A})$. The two-term denominator is where many Bayes problems get tedious."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q14",
+      "type": "numeric",
+      "promptTex": "\\text{A factory has two production lines.} \\\\ \\text{Line 1 makes } 60\\% \\text{ of the products with a } 5\\% \\text{ defect rate.} \\\\ \\text{Line 2 makes } 40\\% \\text{ with a } 2\\% \\text{ defect rate.} \\\\ \\text{Pick a random product. } P(\\text{defective}) = ? \\text{ (round to 3 decimals)}",
+      "answer": 0.038,
+      "tolerance": 0.005,
+      "hints": [
+        "Law of total probability: $P(\\text{defect}) = P(\\text{defect} | L_1) P(L_1) + P(\\text{defect} | L_2) P(L_2)$.",
+        "$P(\\text{defect}) = 0.05 \\cdot 0.6 + 0.02 \\cdot 0.4 = 0.030 + 0.008 = 0.038$."
+      ],
+      "explanation": "Total-probability formula: condition on which line made the product. $P(\\text{defect}) = P(\\text{defect}|L_1)P(L_1) + P(\\text{defect}|L_2)P(L_2) = 0.05 \\cdot 0.6 + 0.02 \\cdot 0.4 = 0.03 + 0.008 = 0.038$ — i.e., $3.8\\%$ defective overall.",
+      "steps": [
+        "**Recognize the type — law of total probability.** Total probability splits an event across mutually exclusive 'paths' (which line produced the unit).",
+        { "svg": "<svg viewBox=\"0 0 280 220\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"30\" cy=\"110\" r=\"6\" fill=\"#1e293b\"/><line x1=\"36\" y1=\"107\" x2=\"95\" y2=\"55\" stroke=\"#475569\" stroke-width=\"1.5\"/><line x1=\"36\" y1=\"113\" x2=\"95\" y2=\"165\" stroke=\"#475569\" stroke-width=\"1.5\"/><circle cx=\"105\" cy=\"50\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"105\" cy=\"170\" r=\"5\" fill=\"#16a34a\"/><text x=\"60\" y=\"68\" font-size=\"11\" fill=\"#475569\" font-weight=\"600\">0.6</text><text x=\"60\" y=\"152\" font-size=\"11\" fill=\"#475569\" font-weight=\"600\">0.4</text><text x=\"112\" y=\"45\" font-size=\"11\" font-weight=\"700\" fill=\"#2563eb\">Line 1</text><text x=\"112\" y=\"175\" font-size=\"11\" font-weight=\"700\" fill=\"#16a34a\">Line 2</text><line x1=\"111\" y1=\"45\" x2=\"195\" y2=\"30\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><line x1=\"111\" y1=\"55\" x2=\"195\" y2=\"75\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"111\" y1=\"165\" x2=\"195\" y2=\"145\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><line x1=\"111\" y1=\"175\" x2=\"195\" y2=\"195\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"150\" y=\"33\" font-size=\"9\" fill=\"#dc2626\" font-weight=\"600\">0.05 D</text><text x=\"150\" y=\"77\" font-size=\"9\" fill=\"#0f172a\">0.95 OK</text><text x=\"150\" y=\"147\" font-size=\"9\" fill=\"#dc2626\" font-weight=\"600\">0.02 D</text><text x=\"150\" y=\"199\" font-size=\"9\" fill=\"#0f172a\">0.98 OK</text><text x=\"202\" y=\"33\" font-size=\"10\" font-weight=\"700\" fill=\"#dc2626\">L1∩D: 0.030</text><text x=\"202\" y=\"77\" font-size=\"10\" fill=\"#0f172a\">L1∩OK: 0.570</text><text x=\"202\" y=\"147\" font-size=\"10\" font-weight=\"700\" fill=\"#dc2626\">L2∩D: 0.008</text><text x=\"202\" y=\"199\" font-size=\"10\" fill=\"#0f172a\">L2∩OK: 0.392</text><text x=\"30\" y=\"212\" font-size=\"10\" fill=\"#475569\" font-style=\"italic\">total P(defective) = 0.030 + 0.008 = 0.038</text></svg>" },
+        "**Two paths to 'defective'.** Path 1: came from Line 1 (prob $0.6$) AND was defective (conditional prob $0.05$). Joint: $0.6 \\cdot 0.05 = 0.030$. Path 2: came from Line 2 ($0.4$) AND defective ($0.02$). Joint: $0.4 \\cdot 0.02 = 0.008$.",
+        "**Add the path probabilities.** $P(\\text{defect}) = 0.030 + 0.008 = 0.038$.",
+        "**General form.** $P(B) = P(B|A_1)P(A_1) + P(B|A_2)P(A_2) + \\cdots$ — sum over a *partition* of mutually exclusive paths. This is the 'law of total probability'."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q15",
+      "type": "numeric",
+      "promptTex": "\\text{Events: } P(A) = 0.4. \\quad P(B|A) = 0.7. \\quad P(B | \\overline{A}) = 0.3. \\\\ \\text{Find } P(B) \\text{ using the law of total probability. (decimal)}",
+      "answer": 0.46,
+      "tolerance": 0.005,
+      "hints": [
+        "$P(B) = P(B|A)P(A) + P(B|\\overline{A})P(\\overline{A})$.",
+        "$P(\\overline{A}) = 1 - P(A) = 0.6$.",
+        "$P(B) = 0.7 \\cdot 0.4 + 0.3 \\cdot 0.6 = 0.28 + 0.18 = 0.46$."
+      ],
+      "explanation": "Law of total probability: split $B$ across the partition $\\{A, \\overline{A}\\}$. $P(B) = P(B|A)P(A) + P(B|\\overline{A})P(\\overline{A}) = 0.7 \\cdot 0.4 + 0.3 \\cdot 0.6 = 0.28 + 0.18 = 0.46$.",
+      "steps": [
+        "**Setup.** $A$ and $\\overline{A}$ form a complete partition of the sample space. Any event $B$ splits into 'happens with $A$' and 'happens without $A$'.",
+        "**Formula.** $P(B) = P(B|A) \\cdot P(A) + P(B|\\overline{A}) \\cdot P(\\overline{A})$.",
+        "**Compute.** $P(\\overline{A}) = 1 - 0.4 = 0.6$. Plug in: $P(B) = 0.7 \\cdot 0.4 + 0.3 \\cdot 0.6 = 0.28 + 0.18 = 0.46$.",
+        "**Sanity check the bounds.** $P(B)$ is a weighted average of $P(B|A) = 0.7$ and $P(B|\\overline{A}) = 0.3$, so must be between them. $0.3 \\leq 0.46 \\leq 0.7$ ✓.",
+        "**Why it matters.** The total-probability formula is the *denominator* in every Bayes' theorem application. Master this before chasing Bayes."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q16",
+      "type": "multiple-choice",
+      "prompt": "For events with P(A) = 0.3, P(B) = 0.5, P(A ∩ B) = 0.1, which is true?",
+      "choices": [
+        "P(A | B) = P(B | A) — conditioning is symmetric",
+        "P(A | B) > P(B | A) — conditioning on a larger event gives a smaller result",
+        "P(B | A) > P(A | B) — here P(B|A) = 1/3 and P(A|B) = 1/5",
+        "Cannot determine without more information"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "$P(A|B) = 0.1/0.5 = 0.2$. $P(B|A) = 0.1/0.3 \\approx 0.333$.",
+        "Conditioning is NOT symmetric — direction matters."
+      ],
+      "explanation": "$P(A|B) = 0.1/0.5 = 0.2$. $P(B|A) = 0.1/0.3 \\approx 0.333$. Same joint probability $0.1$, but divided by different denominators. Conditioning on the SMALLER event ($A$, prob 0.3) gives a LARGER ratio. The asymmetry $P(A|B) \\neq P(B|A)$ is exactly what Bayes' theorem corrects for.",
+      "steps": [
+        "**Compute both directions.** $P(A|B) = P(A \\cap B) / P(B) = 0.1/0.5 = 0.2$. $P(B|A) = P(A \\cap B) / P(A) = 0.1/0.3 \\approx 0.333$.",
+        "**Same numerator, different denominators.** The joint $P(A \\cap B) = 0.1$ is symmetric, but the denominators differ. Larger denominator → smaller ratio.",
+        "**Famous example of the asymmetry.** $P(\\text{has-disease} | \\text{positive-test})$ vs $P(\\text{positive-test} | \\text{has-disease})$ — wildly different even when the test is 'accurate'. (Recall Q10: a positive test on a 90%-accurate scan of a 2%-prevalent disease yields only $15.5\\%$ chance of disease.)",
+        "**Pattern lesson.** Always ask: 'conditioning on WHAT?' The most common probability mistake is conflating $P(A|B)$ with $P(B|A)$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q17",
+      "type": "numeric",
+      "promptTex": "\\text{Survey: 100 students. 60 play sports. 40 own a pet. 25 do BOTH.} \\\\ \\text{Among the pet owners, what fraction play sports? } P(\\text{sports} | \\text{pet}) = ?",
+      "answer": 0.625,
+      "tolerance": 0.005,
+      "hints": [
+        "Restrict to the 40 pet-owners. Of those, 25 play sports.",
+        "$P(\\text{sports} | \\text{pet}) = 25/40 = 0.625$."
+      ],
+      "explanation": "Restrict to the 40 pet-owners. Of those, 25 play sports. $P(\\text{sports} | \\text{pet}) = 25/40 = 0.625$. Equivalently via formula: $P(\\text{sports} \\cap \\text{pet}) / P(\\text{pet}) = (25/100) / (40/100) = 0.625$.",
+      "steps": [
+        "**Build the 2×2 contingency table.** From the data: $25$ play sports and own pets. Total sports = $60$, so sports-but-no-pet = $35$. Total pet = $40$, so pet-but-no-sports = $15$. Neither = $100 - 60 - 40 + 25 = 25$.",
+        { "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"60\" y=\"40\" width=\"240\" height=\"120\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.4\"/><line x1=\"60\" y1=\"70\" x2=\"300\" y2=\"70\" stroke=\"#1e293b\" stroke-width=\"1.2\"/><line x1=\"60\" y1=\"100\" x2=\"300\" y2=\"100\" stroke=\"#1e293b\" stroke-width=\"1.2\"/><line x1=\"60\" y1=\"130\" x2=\"300\" y2=\"130\" stroke=\"#1e293b\" stroke-width=\"1.2\"/><line x1=\"160\" y1=\"40\" x2=\"160\" y2=\"160\" stroke=\"#1e293b\" stroke-width=\"1.2\"/><line x1=\"230\" y1=\"40\" x2=\"230\" y2=\"160\" stroke=\"#1e293b\" stroke-width=\"1.2\"/><text x=\"110\" y=\"60\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\"></text><text x=\"195\" y=\"60\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">pet</text><text x=\"265\" y=\"60\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">no pet</text><text x=\"110\" y=\"90\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">sports</text><text x=\"195\" y=\"90\" font-size=\"12\" font-weight=\"700\" fill=\"#16a34a\" text-anchor=\"middle\">25</text><text x=\"265\" y=\"90\" font-size=\"12\" fill=\"#0f172a\" text-anchor=\"middle\">35</text><text x=\"110\" y=\"120\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">no sports</text><text x=\"195\" y=\"120\" font-size=\"12\" fill=\"#0f172a\" text-anchor=\"middle\">15</text><text x=\"265\" y=\"120\" font-size=\"12\" fill=\"#0f172a\" text-anchor=\"middle\">25</text><text x=\"110\" y=\"150\" font-size=\"11\" font-weight=\"600\" fill=\"#475569\" text-anchor=\"middle\">total</text><text x=\"195\" y=\"150\" font-size=\"12\" font-weight=\"700\" fill=\"#dc2626\" text-anchor=\"middle\">40</text><text x=\"265\" y=\"150\" font-size=\"12\" fill=\"#475569\" text-anchor=\"middle\">60</text><text x=\"30\" y=\"185\" font-size=\"10\" fill=\"#475569\" font-style=\"italic\">restrict to pet column (40 students); 25 of them play sports</text></svg>" },
+        "**Apply conditional probability.** 'Given pet' restricts to the pet column: 40 students total. Of those, 25 also play sports.",
+        "**Compute.** $P(\\text{sports} | \\text{pet}) = \\dfrac{25}{40} = 0.625$.",
+        "**Compare with $P(\\text{sports})$ in the full population.** $P(\\text{sports}) = 60/100 = 0.6$. Knowing the student owns a pet RAISES the sports probability from $0.6$ to $0.625$ — slight positive correlation. (Compare with the formula: $P(\\text{sports}|\\text{pet}) > P(\\text{sports})$ ⇔ owning a pet is *positively* associated with playing sports.)"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q18",
+      "type": "numeric",
+      "promptTex": "\\text{Drug test: }99\\% \\text{ sensitive (catches } 99\\% \\text{ of users) and } 99\\% \\text{ specific (correctly clears } 99\\% \\text{ of non-users).} \\\\ 1\\% \\text{ of the population uses drugs. A person tests positive.} \\\\ P(\\text{actually a user} | \\text{positive}) = ? \\text{ (round to 2 dp)}",
+      "answer": 0.5,
+      "tolerance": 0.02,
+      "hints": [
+        "Population 10,000. Users: 100. Non-users: 9,900.",
+        "True positives: $0.99 \\cdot 100 = 99$. False positives: $0.01 \\cdot 9{,}900 = 99$.",
+        "$P(\\text{user} | +) = 99 / (99 + 99) = 99/198 = 0.50$."
+      ],
+      "explanation": "Even with a 99%-accurate test, when the base rate is just 1%, the *false positives among the 99% non-users* number the same as the true positives among the 1% users — exactly $99$ each. So $P(\\text{user} | +) = 99/198 = 0.50$. The base rate matters!",
+      "steps": [
+        "**Use natural-frequency counts (clearer than fractions).** Take a population of $10{,}000$. Users: $0.01 \\cdot 10{,}000 = 100$. Non-users: $9{,}900$.",
+        "**True positives.** Users who test positive: $0.99 \\cdot 100 = 99$.",
+        "**False positives.** Non-users who test positive: $0.01 \\cdot 9{,}900 = 99$.",
+        "**Apply Bayes (as a fraction).** Among the $99 + 99 = 198$ positive results, $99$ are true positives. $P(\\text{user} | +) = 99/198 = 0.50$.",
+        "**Pattern lesson — base-rate fallacy.** Even a 99%-accurate test gives a coin-flip when the underlying condition is rare. The intuition 'positive on a 99% test means 99% chance of being a user' is *wildly* wrong. The 1% false-positive rate, applied to the 99% of non-users, dominates."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q19",
+      "type": "numeric",
+      "promptTex": "\\text{Draw 3 cards from a 52-card deck, WITHOUT replacement.} \\\\ P(\\text{all three are aces}) = ? \\\\ \\text{Express as 1/N and give N as an integer.}",
+      "answer": 5525,
+      "tolerance": 0,
+      "hints": [
+        "Chain rule: $P(A_1) \\cdot P(A_2 | A_1) \\cdot P(A_3 | A_1, A_2)$.",
+        "$(4/52) \\cdot (3/51) \\cdot (2/50) = 24/132600 = 1/5525$."
+      ],
+      "explanation": "Chain rule: $P(\\text{3 aces}) = P(A_1) \\cdot P(A_2 | A_1) \\cdot P(A_3 | A_1, A_2) = \\dfrac{4}{52} \\cdot \\dfrac{3}{51} \\cdot \\dfrac{2}{50} = \\dfrac{24}{132600} = \\dfrac{1}{5525}$.",
+      "steps": [
+        "**Chain rule for three dependent events.** $P(A_1 \\cap A_2 \\cap A_3) = P(A_1) \\cdot P(A_2 | A_1) \\cdot P(A_3 | A_1, A_2)$.",
+        "**First ace.** $P(A_1) = 4/52$ (4 aces in 52 cards).",
+        "**Second ace given first.** After removing one ace, 3 aces in 51 cards: $P(A_2 | A_1) = 3/51$.",
+        "**Third ace given the first two.** After two aces removed: 2 aces in 50 cards: $P(A_3 | A_1, A_2) = 2/50$.",
+        "**Multiply.** $\\dfrac{4}{52} \\cdot \\dfrac{3}{51} \\cdot \\dfrac{2}{50} = \\dfrac{24}{132600} = \\dfrac{1}{5525} \\approx 0.000181$.",
+        "**Alternate route — combinations.** $\\dfrac{\\binom{4}{3}}{\\binom{52}{3}} = \\dfrac{4}{22{,}100} = \\dfrac{1}{5525}$ ✓. Same answer two ways — useful cross-check."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q20",
+      "type": "numeric",
+      "promptTex": "\\text{Same factory: Line 1 makes } 60\\%, \\text{ defect rate } 5\\%. \\text{ Line 2 makes } 40\\%, \\text{ defect rate } 2\\%. \\\\ \\text{Given a unit is defective, } P(\\text{came from Line 1}) = ? \\text{ (round to 3 dp)}",
+      "answer": 0.789,
+      "tolerance": 0.01,
+      "hints": [
+        "Bayes: $P(L_1 | D) = P(D | L_1) P(L_1) / P(D)$.",
+        "From Q14: $P(D) = 0.038$. $P(D | L_1) \\cdot P(L_1) = 0.05 \\cdot 0.6 = 0.030$.",
+        "$P(L_1 | D) = 0.030 / 0.038 \\approx 0.789$."
+      ],
+      "explanation": "Bayes' theorem: $P(L_1 | D) = \\dfrac{P(D | L_1) \\cdot P(L_1)}{P(D)} = \\dfrac{0.05 \\cdot 0.6}{0.038} = \\dfrac{0.030}{0.038} \\approx 0.789$. About 79% of defects come from Line 1 — disproportionate compared to Line 1's 60% market share, because Line 1's defect rate is higher.",
+      "steps": [
+        "**Pattern recognition.** We're given $P(D | L_1)$ (forward) and asked for $P(L_1 | D)$ (reverse). Bayes' theorem.",
+        "**State Bayes.** $P(L_1 | D) = \\dfrac{P(D | L_1) \\cdot P(L_1)}{P(D)}$.",
+        "**Compute the denominator (law of total probability).** $P(D) = P(D|L_1)P(L_1) + P(D|L_2)P(L_2) = 0.05 \\cdot 0.6 + 0.02 \\cdot 0.4 = 0.030 + 0.008 = 0.038$. (Same as Q14.)",
+        "**Compute the numerator.** $P(D | L_1) \\cdot P(L_1) = 0.05 \\cdot 0.6 = 0.030$.",
+        "**Divide.** $P(L_1 | D) = 0.030 / 0.038 \\approx 0.789$.",
+        "**Sanity check.** Line 1 has 60% market share but its products defect 2.5× more often than Line 2's ($5\\%$ vs $2\\%$). So among defective units, Line 1 is over-represented. $79\\% > 60\\%$ ✓.",
+        "**Pattern lesson — Bayes as a 'rescaling'.** Prior $P(L_1) = 0.6$ → posterior $P(L_1|D) = 0.789$. The evidence 'defective' shifted our belief in favor of Line 1. Every Bayes problem can be read as 'evidence pulls the prior toward the explanation that makes the evidence more likely'."
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

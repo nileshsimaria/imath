@@ -1,0 +1,343 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "f(x) = 3x \\text{ and } g(x) = x + 2. \\text{ Find } (f \\circ g)(4).",
+      "answer": 18,
+      "tolerance": 0,
+      "hints": [
+        "Apply $g$ first: $g(4) = 6$.",
+        "Then $f(6) = 3 \\cdot 6 = 18$."
+      ],
+      "explanation": "$g(4) = 4 + 2 = 6$. Then $f(g(4)) = f(6) = 3(6) = 18$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "f(x) = x^2 \\text{ and } g(x) = x - 1. \\text{ What is } (f \\circ g)(x)?",
+      "choices": [
+        "x^2 - 1",
+        "(x - 1)^2",
+        "x^2 + 1",
+        "x - 1"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "$(f \\circ g)(x) = f(g(x))$.",
+        "Substitute $g(x) = x - 1$ into $f$: $f(x - 1) = (x - 1)^2$."
+      ],
+      "explanation": "$(f \\circ g)(x) = f(g(x)) = f(x - 1) = (x - 1)^2$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Find the inverse of } f(x) = x + 7.",
+      "choices": [
+        "f^{-1}(x) = -x - 7",
+        "f^{-1}(x) = x - 7",
+        "f^{-1}(x) = \\dfrac{1}{x + 7}",
+        "f^{-1}(x) = 7 - x"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Swap $x$ and $y$: $x = y + 7$.",
+        "Solve for $y$: $y = x - 7$."
+      ],
+      "explanation": "Set $y = x + 7$, swap: $x = y + 7$, solve: $y = x - 7$. So $f^{-1}(x) = x - 7$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which is true for any function and its inverse?}",
+      "choices": [
+        "f(x) = f^{-1}(x)",
+        "f(f^{-1}(x)) = x",
+        "f^{-1}(x) = -f(x)",
+        "f \\circ g = g \\circ f"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Inverse 'undoes' the function.",
+        "Apply $f^{-1}$ then $f$ — what happens?"
+      ],
+      "explanation": "By definition of inverse, $f(f^{-1}(x)) = x$ (and $f^{-1}(f(x)) = x$). They cancel each other out.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The graph of } f^{-1} \\text{ is the graph of } f \\text{ reflected across:}",
+      "choices": [
+        "the x-axis",
+        "the y-axis",
+        "the line $y = x$",
+        "the origin"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Inverses swap inputs and outputs — i.e., swap x and y.",
+        "Swapping x and y is the same as reflecting across the diagonal $y = x$."
+      ],
+      "explanation": "Swapping $(a, b) \\to (b, a)$ is exactly reflection across the line $y = x$. So the graph of $f^{-1}$ is the mirror image of $f$ across $y = x$.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{If } f(x) = 2x + 3 \\text{ and } g(x) = x^2, \\text{ find } f(g(2)).",
+      "answer": 11,
+      "tolerance": 0,
+      "hints": [
+        "First $g(2) = 4$. Then $f(4) = 11$.",
+        "Inside out."
+      ],
+      "explanation": "$g(2) = 4$. $f(4) = 2 \\cdot 4 + 3 = 11$.",
+      "steps": [
+        "Compute the inner function first: $g(2) = 2^2 = 4$.",
+        "Then apply $f$: $f(4) = 2(4) + 3 = 11$."
+      ],
+      "id": "q6",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{If } f(x) = 2x + 3 \\text{ and } g(x) = x^2, \\text{ find } g(f(2)).",
+      "answer": 49,
+      "tolerance": 0,
+      "hints": [
+        "First $f(2) = 7$. Then $g(7) = 49$.",
+        "Note: composition is generally NOT commutative — $f \\circ g \\neq g \\circ f$."
+      ],
+      "explanation": "$f(2) = 7$. $g(7) = 49$.",
+      "steps": [
+        "$f(2) = 2(2) + 3 = 7$.",
+        "$g(7) = 7^2 = 49$.",
+        "**Note:** $g(f(2)) = 49$ but $f(g(2)) = 11$. Composition is not commutative."
+      ],
+      "id": "q7",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Find the inverse of } f(x) = 3x - 6.",
+      "choices": [
+        "f^{-1}(x) = \\dfrac{x + 6}{3}",
+        "f^{-1}(x) = \\dfrac{x - 6}{3}",
+        "f^{-1}(x) = 3x + 6",
+        "f^{-1}(x) = \\dfrac{1}{3x - 6}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Replace $f(x)$ with $y$: $y = 3x - 6$. Solve for $x$: $x = (y + 6)/3$. Swap.",
+        "$f^{-1}(x) = (x + 6)/3$."
+      ],
+      "explanation": "Solve for $x$: $y = 3x - 6 \\Rightarrow x = (y + 6)/3$. Swap: $f^{-1}(x) = (x + 6)/3$.",
+      "steps": [
+        "Write $y = 3x - 6$.",
+        "Solve for $x$ in terms of $y$: $x = \\dfrac{y + 6}{3}$.",
+        "Swap $x$ and $y$: $f^{-1}(x) = \\dfrac{x + 6}{3}$."
+      ],
+      "id": "q8",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Verify: which equation must hold for } f^{-1} \\text{ to be the inverse of } f?",
+      "choices": [
+        "f(f^{-1}(x)) = x \\text{ AND } f^{-1}(f(x)) = x",
+        "f(f^{-1}(x)) = 1",
+        "f(x) + f^{-1}(x) = 0",
+        "f(x) \\cdot f^{-1}(x) = 1"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Inverse: composing in either direction returns $x$.",
+        "$f \\circ f^{-1} = \\text{id}$ AND $f^{-1} \\circ f = \\text{id}$."
+      ],
+      "explanation": "Inverse functions satisfy $f(f^{-1}(x)) = x$ and $f^{-1}(f(x)) = x$.",
+      "steps": [
+        "An inverse function 'undoes' the original: applying $f$ then $f^{-1}$ (or vice versa) returns the input.",
+        "Both compositions must yield the identity:",
+        "$f(f^{-1}(x)) = x$ and $f^{-1}(f(x)) = x$."
+      ],
+      "id": "q9",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Find the inverse of } f(x) = \\sqrt{x + 1} \\text{ for } x \\geq -1.",
+      "choices": [
+        "f^{-1}(x) = x^2 - 1, x \\geq 0",
+        "f^{-1}(x) = x^2 + 1",
+        "f^{-1}(x) = (x - 1)^2",
+        "f^{-1}(x) = \\dfrac{1}{\\sqrt{x + 1}}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Set $y = \\sqrt{x + 1}$. Square: $y^2 = x + 1$. Solve: $x = y^2 - 1$.",
+        "Swap: $f^{-1}(x) = x^2 - 1$, with $x \\geq 0$ (since the original $f$ outputs $\\geq 0$)."
+      ],
+      "explanation": "$y = \\sqrt{x + 1} \\Rightarrow y^2 = x + 1 \\Rightarrow x = y^2 - 1$. Swap: $f^{-1}(x) = x^2 - 1$, $x \\geq 0$.",
+      "steps": [
+        "Write $y = \\sqrt{x + 1}$.",
+        "Square both sides: $y^2 = x + 1$.",
+        "Solve for $x$: $x = y^2 - 1$.",
+        "Swap: $f^{-1}(x) = x^2 - 1$.",
+        "**Domain restriction:** the range of $f$ is $y \\geq 0$, so the domain of $f^{-1}$ is $x \\geq 0$."
+      ],
+      "id": "q10",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{A function is one-to-one if:}",
+      "choices": [
+        "Every horizontal line crosses its graph at most once",
+        "Every vertical line crosses its graph at most once",
+        "Both axes intercept it",
+        "It passes through the origin"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Vertical line test = function. Horizontal line test = one-to-one.",
+        "Horizontal line test."
+      ],
+      "explanation": "Horizontal line test: a function is one-to-one iff every horizontal line intersects its graph at most once. (Required for invertibility.)",
+      "steps": [
+        "**Vertical line test:** checks if a relation is a function (each input has one output).",
+        "**Horizontal line test:** checks if a function is one-to-one (each output comes from one input).",
+        "A function has an inverse iff it's one-to-one — passes the horizontal line test."
+      ],
+      "id": "q11",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Domain of } f(g(x)) \\text{ where } f(x) = \\sqrt{x} \\text{ and } g(x) = x - 4?",
+      "choices": [
+        "x \\geq 4",
+        "x > 4",
+        "x \\geq 0",
+        "all reals"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "$f(g(x)) = \\sqrt{x - 4}$. Need $x - 4 \\geq 0$.",
+        "$x \\geq 4$."
+      ],
+      "explanation": "$f(g(x)) = \\sqrt{x - 4}$. Domain: $x - 4 \\geq 0 \\Rightarrow x \\geq 4$.",
+      "steps": [
+        "Compose: $f(g(x)) = f(x - 4) = \\sqrt{x - 4}$.",
+        "Square root requires non-negative input: $x - 4 \\geq 0$.",
+        "$x \\geq 4$."
+      ],
+      "id": "q12",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{If } f(x) + 2 f\\!\\left(\\dfrac{1}{x}\\right) = x \\text{ for all nonzero } x, \\\\ \\text{find } f(2).",
+      "answer": -0.3333333333333333,
+      "tolerance": 0.001,
+      "hints": [
+        "One equation in two unknowns ($f(2)$ and $f(1/2)$) is under-determined. Substitute $x \\to 1/x$ in the given to create a second equation.",
+        "Eq1 (sub $x=2$): $f(2) + 2 f(1/2) = 2$. Eq2 (sub $x=1/2$): $f(1/2) + 2 f(2) = 1/2$.",
+        "Two linear equations in $f(2), f(1/2)$. Solve: $f(2) = -1/3 \\approx -0.333$."
+      ],
+      "explanation": "Substitute $x = 2$: $f(2) + 2f(1/2) = 2$. Substitute $x = 1/2$: $f(1/2) + 2f(2) = 1/2$. Solving: multiply eq2 by 2 and subtract from eq1: $-3 f(2) = 2 - 1 = 1$, so $f(2) = -1/3 \\approx \\mathbf{-0.333}$.",
+      "steps": [
+        "**Stuck for a reason — only one equation, two unknowns.** Substituting $x = 2$ into the given relation involves both $f(2)$ AND $f(1/2)$, so we can't solve for $f(2)$ alone. We need a *second* equation.",
+        "**The classic trick — substitute $x \\to 1/x$.** The relation must hold for *every* nonzero $x$, so plugging in $1/x$ instead of $x$ creates a fresh equation: $f(1/x) + 2 f(x) = 1/x$. (Note $1/(1/x) = x$, so the two arguments swap roles.)",
+        "**Specialize both equations to $x = 2$.** Eq1 (original at $x = 2$): $f(2) + 2 f(1/2) = 2$. Eq2 (the original at $x = 1/2$): $f(1/2) + 2 f(2) = 1/2$. Two equations, two unknowns ($f(2)$ and $f(1/2)$).",
+        "**Solve the linear system.** Multiply Eq2 by 2: $2 f(1/2) + 4 f(2) = 1$. Subtract from Eq1: $(f(2) + 2 f(1/2)) - (4 f(2) + 2 f(1/2)) = 2 - 1$, i.e., $-3 f(2) = 1$, so $f(2) = -\\dfrac{1}{3}$.",
+        "**Sanity check via $f(1/2)$.** From Eq1: $2 f(1/2) = 2 - f(2) = 2 + 1/3 = 7/3$, so $f(1/2) = 7/6$. Check Eq2: $f(1/2) + 2 f(2) = 7/6 - 2/3 = 7/6 - 4/6 = 3/6 = 1/2$ ✓.",
+        "**Why this trick worked — using ALL of the functional equation.** A functional equation is one equation that must hold for *every* input. By substituting different values, we generate as many ordinary equations as we need. Substituting $x \\to 1/x$ specifically pairs each value with its reciprocal, turning a self-referential relation into a solvable linear system.",
+        "**Pattern lesson — symmetry-breaking substitutions.** Other classics: $x \\to -x$ (sign symmetry), $x \\to 1 - x$ (the $x + (1-x) = 1$ family — see next problem), $x \\to a/x$ (reciprocal at scale $a$). Pick a substitution whose orbit *closes* in finitely many steps. For $x \\to 1/x$: closes in 1 step ($1/(1/x) = x$). For the famous Möbius substitution $x \\to 1/(1-x)$: closes in 3 steps — generating a system of 3 equations."
+      ],
+      "id": "q13",
+      "difficulty": "hard"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Suppose } f(x) + f(1 - x) = 1 \\text{ for all } x. \\\\ \\text{Compute } f(0) + f\\!\\left(\\dfrac{1}{3}\\right) + f\\!\\left(\\dfrac{1}{2}\\right) + f\\!\\left(\\dfrac{2}{3}\\right) + f(1).",
+      "answer": 2.5,
+      "tolerance": 0.001,
+      "hints": [
+        "Pair up the inputs by the $x \\leftrightarrow 1-x$ symmetry. $0$ pairs with $1$, $1/3$ pairs with $2/3$, and $1/2$ pairs with itself.",
+        "Each true pair sums to 1. The self-pair $f(1/2) + f(1/2) = 1$ gives $f(1/2) = 1/2$.",
+        "Total: $1 + 1 + 1/2 = 5/2 = 2.5$."
+      ],
+      "explanation": "Pair inputs: $0 \\leftrightarrow 1$, $1/3 \\leftrightarrow 2/3$, and $1/2$ with itself. The pairs sum to 1 directly; the self-pair forces $f(1/2) = 1/2$. Total: $1 + 1 + 1/2 = \\mathbf{2.5}$.",
+      "steps": [
+        "**Look for the symmetry the functional equation gives you.** $f(x) + f(1-x) = 1$ says that $x$ and $1 - x$ are *linked* — knowing $f$ at one gives $f$ at the other. The right strategy: pair up the five inputs by the symmetry $x \\leftrightarrow 1 - x$.",
+        "**Pair up.** $0 \\leftrightarrow 1$ (since $1 - 0 = 1$). $1/3 \\leftrightarrow 2/3$ (since $1 - 1/3 = 2/3$). And $1/2 \\leftrightarrow 1/2$ — a *fixed point* of the symmetry, since $1 - 1/2 = 1/2$.",
+        "**Apply the equation to each true pair.** $f(0) + f(1) = 1$ and $f(1/3) + f(2/3) = 1$ — each follows directly from the given.",
+        "**The fixed point — apply the equation at $x = 1/2$.** $f(1/2) + f(1 - 1/2) = f(1/2) + f(1/2) = 2 f(1/2) = 1$, so $f(1/2) = 1/2$.",
+        "**Add it all up.** Total $= \\underbrace{[f(0) + f(1)]}_{= 1} + \\underbrace{[f(1/3) + f(2/3)]}_{= 1} + \\underbrace{f(1/2)}_{= 1/2} = 1 + 1 + 0.5 = 2.5$.",
+        "**Why we didn't need to know $f$ at all.** Infinitely many functions satisfy $f(x) + f(1-x) = 1$ (e.g., $f(x) = x$, $f(x) = 1/2$, $f(x) = \\sin^2(\\pi x/2) + (x - 1/2)$, …). But every sum where inputs pair up perfectly under the symmetry is determined by the equation alone, *regardless* of which $f$ we're talking about.",
+        "**Pattern lesson — pair-and-collapse.** Whenever a functional equation has the form $f(x) + f(\\sigma(x)) = c$ for an *involutive* symmetry $\\sigma$ (one with $\\sigma \\circ \\sigma = \\text{id}$, like $x \\to 1-x$), sums over $\\sigma$-paired inputs collapse to multiples of $c$. Fixed points $x_0 = \\sigma(x_0)$ force $f(x_0) = c/2$. Standard tool for olympiad problems and for tricky symmetric integrals (e.g., $\\int_0^1 f(x)/[f(x) + f(1-x)] dx = 1/2$ regardless of $f$, by the same pairing)."
+      ],
+      "id": "q14",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{If } f(x + y) = f(x) \\cdot f(y) \\text{ for all real } x, y \\\\ \\text{and } f(1) = 2, \\text{ find } f(5).",
+      "answer": 32,
+      "tolerance": 0,
+      "hints": [
+        "Build up by induction. $f(2) = f(1+1) = f(1) \\cdot f(1) = 4$.",
+        "Continue: $f(3) = f(2) \\cdot f(1) = 8$, $f(4) = 16$, $f(5) = 32$.",
+        "Pattern: $f(n) = 2^n$ for integer $n$, so $f(5) = 32$."
+      ],
+      "explanation": "Apply the functional equation repeatedly: $f(2) = f(1)^2 = 4$, $f(3) = f(2)f(1) = 8$, $f(4) = 16$, $f(5) = 32$. (Compactly: $f(n) = 2^n$ for positive integer $n$ by induction.) Answer: $\\mathbf{32}$.",
+      "steps": [
+        "**Recognize the equation.** $f(x + y) = f(x) f(y)$ is the *multiplicative Cauchy equation*. Adding inputs corresponds to multiplying outputs — the defining property of *exponential* functions.",
+        "**Strategy — build up by induction from $f(1)$.** Apply the equation at each step with $y = 1$, so each new value uses the previous one and the known $f(1) = 2$.",
+        "**Step 1 — $f(2)$.** Set $x = y = 1$: $f(2) = f(1 + 1) = f(1) \\cdot f(1) = 2 \\cdot 2 = 4$.",
+        "**Step 2 — $f(3)$.** Set $x = 2, y = 1$: $f(3) = f(2) \\cdot f(1) = 4 \\cdot 2 = 8$.",
+        "**Steps 3 & 4 — $f(4), f(5)$.** $f(4) = f(3) \\cdot f(1) = 16$. $f(5) = f(4) \\cdot f(1) = 32$.",
+        "**Spot the pattern.** $f(n) = 2^n$ for positive integers $n$. Provable by induction: base $f(1) = 2^1$ ✓; step $f(n+1) = f(n) f(1) = 2^n \\cdot 2 = 2^{n+1}$ ✓.",
+        "**Extension to non-integers (bonus).** Setting $y = 0$ gives $f(x) = f(x) f(0)$, forcing $f(0) = 1$ (unless $f \\equiv 0$, ruled out by $f(1) = 2$). Setting $y = -x$ gives $1 = f(x) f(-x)$, so $f(-x) = 1/f(x)$. Halving: $f(1/2)^2 = f(1) = 2$, so $f(1/2) = \\sqrt 2$. In general, $f(x) = 2^x$ for any rational $x$. With continuity, $f(x) = 2^x$ for all real $x$.",
+        "**Why exponentials are the ONLY solutions.** Take logarithm: $\\log f(x + y) = \\log f(x) + \\log f(y)$. So $g = \\log f$ satisfies the *additive* Cauchy equation $g(x+y) = g(x) + g(y)$. With mild regularity (continuity, monotonicity, or boundedness on any interval), additive Cauchy forces $g(x) = cx$, i.e., $f(x) = e^{cx}$.",
+        "**Pattern lesson — translate operations on inputs to operations on outputs.** Functional equations characterize entire families: $f(x+y) = f(x) f(y) \\Rightarrow$ exponentials. $f(xy) = f(x) + f(y) \\Rightarrow$ logarithms. $f(x+y) = f(x) + f(y) \\Rightarrow$ linear. $f(xy) = f(x) f(y) \\Rightarrow$ power functions $x^k$. A competition problem typically gives one identity plus a value — derive the family, then evaluate."
+      ],
+      "id": "q15",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A linear function } f(x) = ax + b \\text{ satisfies } f(f(x)) = 4x - 3 \\\\ \\text{with } a > 0. \\text{ Find } a + b.",
+      "answer": 1,
+      "tolerance": 0,
+      "hints": [
+        "Compute $f(f(x))$ in terms of $a, b$ and match coefficients to $4x - 3$.",
+        "$f(f(x)) = a(ax + b) + b = a^2 x + b(a + 1)$. Match: $a^2 = 4$, $b(a + 1) = -3$.",
+        "$a > 0 \\Rightarrow a = 2$. Then $3b = -3 \\Rightarrow b = -1$. So $a + b = 1$."
+      ],
+      "explanation": "Expand $f(f(x)) = a^2 x + b(a+1)$. Match to $4x - 3$: $a^2 = 4$, $b(a+1) = -3$. With $a > 0$: $a = 2$, then $3b = -3 \\Rightarrow b = -1$. So $a + b = 2 + (-1) = \\mathbf{1}$.",
+      "steps": [
+        "**Plug $f$ into itself, symbolically.** $f(f(x)) = f(ax + b)$. Substitute $ax + b$ everywhere $x$ appears in $f$: $f(ax + b) = a(ax + b) + b = a^2 x + ab + b = a^2 x + b(a + 1)$.",
+        "**Match the result to $4x - 3$ coefficient by coefficient.** Two polynomials of degree $\\leq 1$ are equal *as functions* iff their coefficients agree (a polynomial is determined by two coefficients). Match: $\\begin{cases} a^2 = 4 & \\text{(coefficient of } x) \\\\ b(a + 1) = -3 & \\text{(constant term)} \\end{cases}$",
+        "**Solve the first equation.** $a^2 = 4 \\Rightarrow a = \\pm 2$. The given constraint $a > 0$ picks $a = 2$.",
+        "**Solve the second.** With $a = 2$: $b(2 + 1) = -3$, i.e., $3b = -3$, so $b = -1$.",
+        "**Conclude.** $a + b = 2 + (-1) = 1$. The function is $f(x) = 2x - 1$; check: $f(f(x)) = f(2x - 1) = 2(2x - 1) - 1 = 4x - 3$ ✓.",
+        "**Why we got TWO equations from ONE 'apparent equation'.** $f(f(x)) = 4x - 3$ must hold for *every* $x$ — it's an identity, not a numeric equation. Two distinct polynomials can never agree on every $x$, so the identity forces every coefficient to match: one equation per term. Same logic as the surd matching in q25 above — a single identity in $x$ splits into multiple ordinary equations.",
+        "**The discarded solution $a = -2$.** If we hadn't been told $a > 0$, we'd also have $a = -2, b(a+1) = -3 \\Rightarrow b \\cdot (-1) = -3 \\Rightarrow b = 3$, giving $f(x) = -2x + 3$. Check: $f(f(x)) = -2(-2x + 3) + 3 = 4x - 6 + 3 = 4x - 3$ ✓. *Two* linear functions satisfy the condition; the constraint $a > 0$ picks one.",
+        "**Pattern lesson — coefficient matching scales up.** Whenever a functional equation involves *polynomial* compositions on both sides, expand and match coefficients. The technique scales: $f(f(x)) = $ cubic gives three constraints on $f$; matching power-series coefficients in $f(x) f(y) = f(x + y)$ recovers the exponential. Coefficient matching converts 'one equation that must hold everywhere' into 'finitely many algebraic equations' — the workhorse for solving functional-equation problems with polynomial $f$."
+      ],
+      "id": "q16",
+      "difficulty": "hard"
+    }
+  ]
+}

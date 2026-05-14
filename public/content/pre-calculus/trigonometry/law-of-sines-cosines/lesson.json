@@ -1,0 +1,154 @@
+{
+  "title": "Law of Sines & Cosines",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Right-triangle trig and the unit circle handle two extreme cases: angles in a right triangle, and angles wrapped around a circle. But what about a *generic* triangle — one with no right angle? You can't directly apply SOHCAHTOA there.",
+        "Two laws fill the gap. Together they let you solve **any** triangle as long as you know enough sides and angles.",
+        "**Law of Sines** — works when you have **angles paired with sides** opposite them.",
+        "**Law of Cosines** — works when you have **two sides and the angle between them**, or **all three sides**."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Standard naming convention",
+      "body": "In a triangle $ABC$, lower-case letters $a, b, c$ name the sides **opposite** the upper-case vertices $A, B, C$. So side $a$ is opposite angle $A$, etc. This pairing is the heart of both laws."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. Law of Sines",
+        "In any triangle, the ratio of the sine of an angle to the length of the opposite side is the same for all three pairs:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{\\sin A}{a} = \\dfrac{\\sin B}{b} = \\dfrac{\\sin C}{c}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Equivalently (flip both sides — same equation):"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{a}{\\sin A} = \\dfrac{b}{\\sin B} = \\dfrac{c}{\\sin C}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### When to use the Law of Sines",
+        "Use it when you know an **angle and its opposite side**, plus one more piece of info. Two patterns:",
+        "**ASA / AAS** — Two angles and one side: solve for the other sides.",
+        "**SSA** — Two sides and an angle opposite one of them: solve for the other angle (this is the **ambiguous case** — there can be 0, 1, or 2 valid triangles)."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example: AAS",
+        "*In triangle $ABC$, $A = 40°$, $B = 75°$, and $a = 12$. Find side $b$.*",
+        "Set up the law of sines with the two paired ratios:",
+        "$$\\dfrac{\\sin 40°}{12} = \\dfrac{\\sin 75°}{b}$$",
+        "Cross-multiply / solve for $b$:",
+        "$$b = \\dfrac{12 \\sin 75°}{\\sin 40°} \\approx \\dfrac{12 \\cdot 0.966}{0.643} \\approx 18.03$$"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The ambiguous (SSA) case",
+      "body": "If you're given two sides and a non-included angle, there might be no triangle, one triangle, or two different triangles that fit. Always check whether the angle you compute is plausible — and consider its supplement ($180° - \\theta$) too."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. Law of Cosines",
+        "When the law of sines doesn't apply (you don't have a matched angle/opposite-side pair), the law of cosines does. It generalizes the Pythagorean theorem to *any* triangle:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "c^2 = a^2 + b^2 - 2ab\\cos C"
+    },
+    {
+      "type": "text",
+      "md": [
+        "By symmetry, you can swap labels:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "a^2 = b^2 + c^2 - 2bc\\cos A \\qquad b^2 = a^2 + c^2 - 2ac\\cos B"
+    },
+    {
+      "type": "callout",
+      "title": "It's the Pythagorean theorem in disguise",
+      "body": "When $C = 90°$, $\\cos C = 0$ and the formula collapses to $c^2 = a^2 + b^2$. The Pythagorean theorem is just the special case where the included angle is $90°$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### When to use the Law of Cosines",
+        "**SAS** — Two sides and the included angle: solve for the third side.",
+        "**SSS** — All three sides: solve for any angle."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example: SAS",
+        "*Triangle with $a = 7$, $b = 9$, and included angle $C = 60°$. Find $c$.*",
+        "$$c^2 = 7^2 + 9^2 - 2 \\cdot 7 \\cdot 9 \\cdot \\cos 60°$$",
+        "$$c^2 = 49 + 81 - 126 \\cdot 0.5 = 130 - 63 = 67$$",
+        "$$c = \\sqrt{67} \\approx 8.19$$"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example: SSS — find an angle",
+        "*Triangle with sides $a = 5$, $b = 7$, $c = 8$. Find angle $A$.*",
+        "Use the form solved for $\\cos A$:",
+        "$$\\cos A = \\dfrac{b^2 + c^2 - a^2}{2bc} = \\dfrac{49 + 64 - 25}{2 \\cdot 7 \\cdot 8} = \\dfrac{88}{112} = \\dfrac{11}{14}$$",
+        "$$A = \\cos^{-1}\\!\\left(\\dfrac{11}{14}\\right) \\approx 38.2°$$"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. Applications",
+        "The two laws turn into surveying, navigation, and geometry tools. The pattern is always the same: identify what you know, pick the law that uses *exactly* that info, and solve."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Application 1 — Triangulation (surveying)",
+        "*Two observers stand $500$ m apart along a road. Both see a tower across the field. Observer A measures the angle to the tower as $50°$; observer B measures it as $65°$. How far is the tower from observer A?*",
+        "Sketch the triangle: A and B are at the base ($500$ m apart), tower is at vertex $C$. The third angle at C is $180° - 50° - 65° = 65°$.",
+        "Now we have AAS. Use law of sines to find $AC$ (side $b$, opposite angle $B = 65°$):",
+        "$$\\dfrac{AC}{\\sin B} = \\dfrac{AB}{\\sin C} \\Rightarrow AC = \\dfrac{500 \\sin 65°}{\\sin 65°} = 500 \\text{ m}$$",
+        "(Convenient — angles $B$ and $C$ are both $65°$, so the triangle is isosceles.)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Application 2 — Navigation",
+        "*A ship sails $20$ km from port A to port B on a bearing of $050°$, then turns and sails $30$ km to port C on a bearing of $110°$. How far is port C from port A?*",
+        "Sketch the triangle and identify the interior angle at B. Bearings tell you the angle the path makes with North; the change in bearing between the two legs is $110° - 50° = 60°$, so the *interior* angle at B is $180° - 60° = 120°$.",
+        "We have SAS: $a = 20, c = 30, B = 120°$. Use law of cosines:",
+        "$$b^2 = 20^2 + 30^2 - 2 \\cdot 20 \\cdot 30 \\cdot \\cos 120°$$",
+        "$$b^2 = 400 + 900 - 1200 \\cdot (-0.5) = 1300 + 600 = 1900$$",
+        "$$b = \\sqrt{1900} \\approx 43.59 \\text{ km}$$"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Decision tree for picking a law",
+      "body": "**Have angle/opposite-side pair?** → Law of Sines. **Have two sides + included angle (SAS) or all three sides (SSS)?** → Law of Cosines. If you have a right triangle, SOHCAHTOA still works (and is usually faster)."
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{In a 45-45-90 triangle, each leg has length } 7. \\\\ \\text{What is the length of the hypotenuse?} \\\\ \\text{(Use } \\sqrt{2} \\approx 1.414 \\text{; round to 2 decimals.)}",
+      "answer": 9.9,
+      "tolerance": 0.05,
+      "hints": [
+        "In 45-45-90: hyp $=$ leg $\\cdot \\sqrt{2}$.",
+        "$7 \\cdot 1.414 \\approx ?$"
+      ],
+      "explanation": "$\\text{hyp} = 7\\sqrt{2} \\approx 7 \\cdot 1.414 \\approx 9.9$.",
+      "steps": [
+        "Recognize the pattern: 45-45-90 triangle, side ratio $1 : 1 : \\sqrt{2}$.",
+        "Each leg $= 7$, so the hypotenuse follows the rule: $$\\text{hyp} = \\text{leg} \\cdot \\sqrt{2} = 7\\sqrt{2}$$",
+        "Convert to decimal using $\\sqrt{2} \\approx 1.414$: $$\\text{hyp} \\approx 7 \\cdot 1.414 \\approx 9.9$$",
+        "**Answer:** hypotenuse $\\approx 9.9$ (exact form: $7\\sqrt{2}$)."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{45-45-90 triangle: hypotenuse } = 12. \\\\ \\text{What is the length of each leg (exact)?}",
+      "choices": [
+        "6\\sqrt{2}",
+        "12\\sqrt{2}",
+        "\\dfrac{12}{3}",
+        "\\dfrac{12}{\\sqrt{3}}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Leg $= \\dfrac{\\text{hyp}}{\\sqrt{2}}$.",
+        "Rationalize: $\\dfrac{12}{\\sqrt{2}} \\cdot \\dfrac{\\sqrt{2}}{\\sqrt{2}} = \\dfrac{12\\sqrt{2}}{2}$."
+      ],
+      "explanation": "$\\text{leg} = \\dfrac{12}{\\sqrt{2}} = \\dfrac{12\\sqrt{2}}{2} = 6\\sqrt{2}$.",
+      "steps": [
+        "In 45-45-90, leg $= \\dfrac{\\text{hyp}}{\\sqrt{2}}$.",
+        "Substitute hyp $= 12$: $$\\text{leg} = \\dfrac{12}{\\sqrt{2}}$$",
+        "Rationalize the denominator (multiply top and bottom by $\\sqrt{2}$): $$\\text{leg} = \\dfrac{12 \\cdot \\sqrt{2}}{\\sqrt{2} \\cdot \\sqrt{2}} = \\dfrac{12\\sqrt{2}}{2}$$",
+        "Simplify: $$\\text{leg} = 6\\sqrt{2}$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the exact value of } \\sin 45° + \\cos 45°?",
+      "choices": [
+        "\\sqrt{2}",
+        "1",
+        "\\dfrac{\\sqrt{2}}{2}",
+        "2"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Both $\\sin 45°$ and $\\cos 45°$ equal $\\dfrac{\\sqrt{2}}{2}$.",
+        "$\\dfrac{\\sqrt{2}}{2} + \\dfrac{\\sqrt{2}}{2} = ?$"
+      ],
+      "explanation": "$\\sin 45° + \\cos 45° = \\dfrac{\\sqrt{2}}{2} + \\dfrac{\\sqrt{2}}{2} = \\sqrt{2}$.",
+      "steps": [
+        "Recall $\\sin 45° = \\dfrac{\\sqrt{2}}{2}$ and $\\cos 45° = \\dfrac{\\sqrt{2}}{2}$ (from the 45-45-90 triangle).",
+        "Add them: $$\\sin 45° + \\cos 45° = \\dfrac{\\sqrt{2}}{2} + \\dfrac{\\sqrt{2}}{2}$$",
+        "Common denominator already; combine numerators: $$= \\dfrac{2\\sqrt{2}}{2}$$",
+        "Simplify: $$= \\sqrt{2}$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Evaluate exactly: } \\tan 45° \\cdot \\sin 45°. \\text{ (Decimal answer.)}",
+      "answer": 0.707,
+      "tolerance": 0.005,
+      "hints": [
+        "$\\tan 45° = 1$, so the product equals $\\sin 45°$.",
+        "$\\sin 45° = \\dfrac{\\sqrt{2}}{2} \\approx 0.707$."
+      ],
+      "explanation": "$\\tan 45° \\cdot \\sin 45° = 1 \\cdot \\dfrac{\\sqrt{2}}{2} = \\dfrac{\\sqrt{2}}{2} \\approx 0.707$.",
+      "steps": [
+        "Recall the special values: $\\tan 45° = 1$ and $\\sin 45° = \\dfrac{\\sqrt{2}}{2}$.",
+        "Substitute: $$\\tan 45° \\cdot \\sin 45° = 1 \\cdot \\dfrac{\\sqrt{2}}{2} = \\dfrac{\\sqrt{2}}{2}$$",
+        "Convert to decimal: $$\\dfrac{\\sqrt{2}}{2} \\approx \\dfrac{1.414}{2} \\approx 0.707$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{A square has side length } 6. \\\\ \\text{What is the length of its diagonal?} \\\\ \\text{(Round to 2 decimals.)}",
+      "answer": 8.49,
+      "tolerance": 0.05,
+      "hints": [
+        "A diagonal of a square splits it into two 45-45-90 triangles.",
+        "diagonal $=$ side $\\cdot \\sqrt{2}$."
+      ],
+      "explanation": "$d = 6\\sqrt{2} \\approx 8.49$.",
+      "steps": [
+        "Draw a diagonal of the square. It splits the square into two **45-45-90** triangles. The diagonal becomes the hypotenuse, and the side becomes the legs.",
+        "So this is a 45-45-90 triangle with leg $= 6$.",
+        "Apply the ratio: $$d = 6 \\cdot \\sqrt{2} = 6\\sqrt{2}$$",
+        "Decimal: $$d \\approx 6 \\cdot 1.414 \\approx 8.49$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A 45-45-90 triangle has hypotenuse } = 8\\sqrt{2}. \\\\ \\text{What are the leg lengths?}",
+      "choices": [
+        "8",
+        "4",
+        "8\\sqrt{2}",
+        "16"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "leg $= \\dfrac{\\text{hyp}}{\\sqrt{2}}$.",
+        "$\\dfrac{8\\sqrt{2}}{\\sqrt{2}} = 8$."
+      ],
+      "explanation": "$\\text{leg} = \\dfrac{8\\sqrt{2}}{\\sqrt{2}} = 8$.",
+      "steps": [
+        "Use the rule: leg $= \\dfrac{\\text{hyp}}{\\sqrt{2}}$.",
+        "Substitute hyp $= 8\\sqrt{2}$: $$\\text{leg} = \\dfrac{8\\sqrt{2}}{\\sqrt{2}}$$",
+        "The $\\sqrt{2}$ cancels: $$\\text{leg} = 8$$",
+        "Quick sanity check: $8, 8, 8\\sqrt{2}$ matches the $1 : 1 : \\sqrt{2}$ pattern. ✓"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{30-60-90 triangle: short leg } = 6. \\\\ \\text{What is the hypotenuse?}",
+      "answer": 12,
+      "tolerance": 0.05,
+      "hints": [
+        "Hyp $= 2 \\cdot$ short leg.",
+        "$2 \\cdot 6 = ?$"
+      ],
+      "explanation": "Hyp $= 2 \\cdot 6 = 12$.",
+      "steps": [
+        "Identify the side: a length given as 'short leg' is opposite the $30°$ angle, the $1$ in the $1 : \\sqrt{3} : 2$ ratio.",
+        "Apply the rule: hypotenuse $= 2 \\cdot$ short leg.",
+        "Substitute: $$\\text{hyp} = 2 \\cdot 6 = 12$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "promptTex": "\\text{30-60-90 triangle: short leg } = 5. \\\\ \\text{What is the long leg (exact)?}",
+      "choices": [
+        "5\\sqrt{3}",
+        "10",
+        "5\\sqrt{2}",
+        "\\dfrac{5}{\\sqrt{3}}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Long leg $= $ short leg $\\cdot \\sqrt{3}$.",
+        "$5 \\cdot \\sqrt{3} = ?$"
+      ],
+      "explanation": "Long leg $= 5\\sqrt{3}$.",
+      "steps": [
+        "In a 30-60-90 triangle, the long leg (opposite $60°$) is short leg $\\cdot \\sqrt{3}$.",
+        "Substitute short leg $= 5$: $$\\text{long leg} = 5 \\cdot \\sqrt{3} = 5\\sqrt{3}$$",
+        "Pattern check: sides are $5, 5\\sqrt{3}, 10$ — that's the $1 : \\sqrt{3} : 2$ pattern scaled by $5$. ✓"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{30-60-90 triangle: hypotenuse } = 18. \\\\ \\text{What is the short leg?}",
+      "answer": 9,
+      "tolerance": 0.05,
+      "hints": [
+        "Short leg $= $ hyp $/ 2$.",
+        "$18 / 2 = ?$"
+      ],
+      "explanation": "Short leg $= 18 / 2 = 9$.",
+      "steps": [
+        "In a 30-60-90 triangle, the hypotenuse is twice the short leg.",
+        "Solve for short leg: $$\\text{short leg} = \\dfrac{\\text{hyp}}{2} = \\dfrac{18}{2} = 9$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{30-60-90 triangle: hypotenuse } = 18. \\\\ \\text{Find the long leg, rounded to 2 decimals.} \\\\ \\text{(Use } \\sqrt{3} \\approx 1.732 \\text{)}",
+      "answer": 15.59,
+      "tolerance": 0.1,
+      "hints": [
+        "First find the short leg ($= $ hyp$/2 = 9$).",
+        "Long leg $= $ short leg $\\cdot \\sqrt{3} = 9\\sqrt{3}$."
+      ],
+      "explanation": "Short leg $= 9$, so long leg $= 9\\sqrt{3} \\approx 9 \\cdot 1.732 \\approx 15.59$.",
+      "steps": [
+        "Step 1 — find the short leg from the hypotenuse: $$\\text{short leg} = \\dfrac{18}{2} = 9$$",
+        "Step 2 — long leg $=$ short leg $\\cdot \\sqrt{3}$: $$\\text{long leg} = 9\\sqrt{3}$$",
+        "Decimal: $$\\text{long leg} \\approx 9 \\cdot 1.732 \\approx 15.59$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q11",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Evaluate exactly: } 2\\sin 60° - \\tan 30°.",
+      "choices": [
+        "\\dfrac{2\\sqrt{3}}{3}",
+        "\\sqrt{3}",
+        "\\dfrac{\\sqrt{3}}{2}",
+        "0"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "$\\sin 60° = \\dfrac{\\sqrt{3}}{2}$ and $\\tan 30° = \\dfrac{\\sqrt{3}}{3}$.",
+        "$2 \\cdot \\dfrac{\\sqrt{3}}{2} - \\dfrac{\\sqrt{3}}{3} = \\sqrt{3} - \\dfrac{\\sqrt{3}}{3}$. Common denominator?"
+      ],
+      "explanation": "$2\\sin 60° = \\sqrt{3}$. Then $\\sqrt{3} - \\dfrac{\\sqrt{3}}{3} = \\dfrac{3\\sqrt{3} - \\sqrt{3}}{3} = \\dfrac{2\\sqrt{3}}{3}$.",
+      "steps": [
+        "Recall the special values: $\\sin 60° = \\dfrac{\\sqrt{3}}{2}$ and $\\tan 30° = \\dfrac{\\sqrt{3}}{3}$.",
+        "Substitute: $$2 \\cdot \\dfrac{\\sqrt{3}}{2} - \\dfrac{\\sqrt{3}}{3}$$",
+        "Simplify the first term: $$\\sqrt{3} - \\dfrac{\\sqrt{3}}{3}$$",
+        "Common denominator $3$: $$\\dfrac{3\\sqrt{3}}{3} - \\dfrac{\\sqrt{3}}{3} = \\dfrac{2\\sqrt{3}}{3}$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\text{An equilateral triangle has side length } 10. \\\\ \\text{What is the height of the triangle?} \\\\ \\text{(Round to 2 decimals; use } \\sqrt{3} \\approx 1.732 \\text{)}",
+      "answer": 8.66,
+      "tolerance": 0.05,
+      "hints": [
+        "Drop a perpendicular from a vertex — it splits the triangle into two 30-60-90 triangles.",
+        "The height is the long leg of the 30-60-90 with hypotenuse $10$ and short leg $5$. Long leg $= 5\\sqrt{3}$."
+      ],
+      "explanation": "$h = 5\\sqrt{3} \\approx 5 \\cdot 1.732 \\approx 8.66$.",
+      "steps": [
+        "Drop a perpendicular from one vertex of the equilateral triangle to the opposite side. It bisects that side and creates two **30-60-90** triangles.",
+        "In each 30-60-90: the hypotenuse is the original side ($10$), and the short leg is half of the bisected side: $$\\text{short leg} = \\dfrac{10}{2} = 5$$",
+        "The height of the equilateral triangle is the **long leg** of this 30-60-90: $$h = 5 \\cdot \\sqrt{3} = 5\\sqrt{3}$$",
+        "Decimal: $$h \\approx 5 \\cdot 1.732 \\approx 8.66$$"
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Simplify the ratio } 12 : 8.",
+      "choices": [
+        "6 : 4",
+        "3 : 2",
+        "4 : 3",
+        "1 : 2"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Divide both parts by their greatest common divisor.",
+        "$\\gcd(12, 8) = 4$."
+      ],
+      "explanation": "$\\gcd(12, 8) = 4$. Divide both by $4$: $12 : 8 = 3 : 2$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which ratio is equivalent to } 2 : 5?",
+      "choices": [
+        "4 : 7",
+        "5 : 2",
+        "6 : 15",
+        "10 : 20"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Multiply both parts by the same number.",
+        "$2 \\times 3 : 5 \\times 3$."
+      ],
+      "explanation": "Multiply both parts by $3$: $2 : 5 = 6 : 15$. The other choices either swap parts or use different multipliers.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{A recipe uses flour and sugar in a } 2 : 3 \\text{ ratio.} \\\\ \\text{If you use 8 cups of flour, how many cups of sugar?}",
+      "answer": 12,
+      "tolerance": 0,
+      "hints": [
+        "Set up: $\\dfrac{2}{3} = \\dfrac{8}{?}$.",
+        "Multiply both parts of $2 : 3$ by $4$ (since $2 \\times 4 = 8$)."
+      ],
+      "explanation": "Scale the ratio: $2 \\times 4 = 8$ for flour, so sugar is $3 \\times 4 = 12$ cups.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A class has 8 girls and 12 boys. The ratio of girls to total students is:}",
+      "choices": [
+        "8 : 12",
+        "2 : 3",
+        "8 : 20",
+        "2 : 5"
+      ],
+      "answerIndex": 3,
+      "hints": [
+        "Total students = girls + boys.",
+        "$8 : 20$, then simplify."
+      ],
+      "explanation": "Total = $8 + 12 = 20$. Girls : total = $8 : 20$. Simplify by dividing by $4$: $2 : 5$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which ratio is NOT equivalent to } \\dfrac{3}{4}?",
+      "choices": [
+        "6 : 8",
+        "9 : 12",
+        "12 : 15",
+        "15 : 20"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Reduce each to simplest form.",
+        "$12 : 15$ simplifies to..."
+      ],
+      "explanation": "$12 : 15 = 4 : 5$ (divide both by $3$), which is *not* $3 : 4$. The other choices all reduce to $3 : 4$.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{In a class of } 32 \\text{ students, the ratio of boys to girls} \\\\ \\text{is } 5{:}3. \\text{ How many boys are there?}",
+      "choices": [
+        "20",
+        "12",
+        "16",
+        "8"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Total parts: $5 + 3 = 8$. Each part = $32/8 = 4$ students.",
+        "Boys = $5 \\cdot 4 = 20$."
+      ],
+      "explanation": "Total parts: 8. Each part = $32/8 = 4$. Boys = $5 \\cdot 4 = 20$.",
+      "steps": [
+        "**Universal 'parts' technique.** A ratio $a:b$ splits a total into $a+b$ EQUAL parts. Find the value of ONE part, then multiply.",
+        "**Count total parts.** $5 + 3 = 8$.",
+        "**Value of one part.** Total / parts $= 32 / 8 = 4$ students per part.",
+        "**Boys (5 parts).** $5 \\cdot 4 = 20$ boys.",
+        "**Sanity check.** Girls (3 parts) = $3 \\cdot 4 = 12$. $20 + 12 = 32$ ✓ matches total."
+      ],
+      "id": "q6",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Simplify the ratio } 18 : 24 \\text{ to lowest terms.}",
+      "choices": [
+        "9:12",
+        "6:8",
+        "3:4",
+        "1:1"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Divide both by their GCD.",
+        "$\\gcd(18, 24) = 6$. So $18/6 : 24/6 = 3 : 4$."
+      ],
+      "explanation": "$\\gcd(18, 24) = 6$. Divide both: $3 : 4$.",
+      "steps": [
+        "**To simplify a ratio: divide BOTH parts by their GCD.** Same logic as reducing a fraction.",
+        "**Find GCD via prime factorization.** $18 = 2 \\cdot 3^2$. $24 = 2^3 \\cdot 3$. Common: $2 \\cdot 3 = 6$.",
+        "**Divide.** $\\dfrac{18}{6} : \\dfrac{24}{6} = 3 : 4$."
+      ],
+      "id": "q7",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{A recipe has flour : sugar : butter in ratio } 4:2:1. \\\\ \\text{If you use } 6 \\text{ cups of sugar, how much flour?}",
+      "choices": [
+        "3 cups",
+        "8 cups",
+        "12 cups",
+        "24 cups"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Sugar's ratio part is 2. So 1 part = $6/2 = 3$ cups.",
+        "Flour is 4 parts: $4 \\cdot 3 = 12$."
+      ],
+      "explanation": "Sugar = 2 parts = 6 cups → 1 part = 3 cups. Flour = 4 parts = 12 cups.",
+      "steps": [
+        "**Same 'parts' technique, applied to a 3-part ratio.** Find the value of ONE part, then scale.",
+        "**Identify the known.** Sugar = 2 parts = 6 cups.",
+        "**Value of one part.** $6 / 2 = 3$ cups.",
+        "**Flour (4 parts).** $4 \\cdot 3 = 12$ cups.",
+        "**(Butter, 1 part, would be 3 cups — but the question only asks for flour.)**"
+      ],
+      "id": "q8",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Are these ratios equivalent: } 12:18 \\text{ and } 8:12?",
+      "choices": [
+        "Yes",
+        "No"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Reduce both to lowest terms.",
+        "$12:18 = 2:3$ and $8:12 = 2:3$. Same!"
+      ],
+      "explanation": "Both reduce to $2:3$, so they are equivalent.",
+      "steps": [
+        "**Test for equivalent ratios: reduce both to lowest terms and compare.**",
+        "**Reduce $12:18$.** GCD = 6. → $2:3$.",
+        "**Reduce $8:12$.** GCD = 4. → $2:3$.",
+        "**Both reduce to $2:3$ — EQUIVALENT.**",
+        "**Alternative: cross-multiply test.** $12 \\cdot 12 = 144$. $18 \\cdot 8 = 144$. Equal → equivalent ratios."
+      ],
+      "id": "q9",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{In a 3:5:7 ratio, the parts total } 60. \\text{ What is the largest part?}",
+      "choices": [
+        "28",
+        "20",
+        "12",
+        "35"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Total parts: $3 + 5 + 7 = 15$. Each part = $60/15 = 4$.",
+        "Largest = $7 \\cdot 4 = 28$."
+      ],
+      "explanation": "Total parts: 15. Each part = 4. Largest = $7 \\cdot 4 = 28$.",
+      "steps": [
+        "**Same 'parts' technique. Total → divide by sum-of-parts → multiply each by the result.**",
+        "**Sum the ratio parts.** $3 + 5 + 7 = 15$.",
+        "**Value of one part.** $60 / 15 = 4$.",
+        "**Largest is the 7-part piece.** $7 \\cdot 4 = 28$.",
+        "**Verify the split.** $3 \\cdot 4 + 5 \\cdot 4 + 7 \\cdot 4 = 12 + 20 + 28 = 60$ ✓."
+      ],
+      "id": "q10",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{The ratio of cats to dogs at a shelter is } 7:4. \\\\ \\text{There are 28 cats. How many dogs?}",
+      "choices": [
+        "12",
+        "16",
+        "20",
+        "24"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Cats are 7 parts = 28. So 1 part = 4.",
+        "Dogs are 4 parts = $4 \\cdot 4 = 16$."
+      ],
+      "explanation": "1 part = $28 / 7 = 4$. Dogs = $4 \\cdot 4 = 16$.",
+      "steps": [
+        "**Same recipe: find value of one part, scale up.**",
+        "**Cats (7 parts) = 28** → 1 part = $28 / 7 = 4$.",
+        "**Dogs (4 parts).** $4 \\cdot 4 = 16$."
+      ],
+      "id": "q11",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{A car travels } 240 \\text{ miles on } 8 \\text{ gallons. What is the unit rate} \\\\ \\text{(miles per gallon)?}",
+      "choices": [
+        "30 mpg",
+        "32 mpg",
+        "20 mpg",
+        "240 mpg"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Unit rate = total / per-unit. Miles per gallon = total miles / total gallons.",
+        "$240 / 8 = ?$"
+      ],
+      "explanation": "$240 / 8 = 30$ mpg.",
+      "steps": [
+        "**'Unit rate' means 'per ONE'. The word 'per' = division.**",
+        "**Miles per gallon = total miles / total gallons.**",
+        "**Apply.** $240 / 8 = 30$ miles per gallon.",
+        "**Universal pattern.** Anything 'per' → divide. Price per pound, words per minute, dollars per hour — all the same trick."
+      ],
+      "id": "q12",
+      "difficulty": "easy"
+    }
+  ]
+}

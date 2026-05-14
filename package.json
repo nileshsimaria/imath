@@ -1,0 +1,28 @@
+{
+  "name": "imath",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build:widget-index": "node scripts/build-widget-index.cjs",
+    "build:stats": "node scripts/build-stats.cjs",
+    "build:precompute": "npm run build:widget-index && npm run build:stats",
+    "predev": "npm run build:precompute",
+    "prebuild": "npm run build:precompute",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check:math": "node scripts/check-math.cjs",
+    "check:render": "node scripts/check-render.mjs",
+    "check:widgets": "node scripts/check-widgets.mjs",
+    "check": "npm run check:math && npm run build && npm run check:render && npm run check:widgets"
+  },
+  "dependencies": {
+    "function-plot": "^1.25.1",
+    "katex": "^0.16.11"
+  },
+  "devDependencies": {
+    "playwright": "^1.59.1",
+    "vite": "^5.4.10"
+  }
+}

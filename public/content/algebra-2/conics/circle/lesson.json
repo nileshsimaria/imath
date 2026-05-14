@@ -1,0 +1,67 @@
+{
+  "title": "Circles (Conic Section)",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### A circle as a conic",
+        "Slice a cone *perpendicular* to its axis and the cross-section is a circle. That's why circles are one of the four **conic sections** — curves you get from slicing a cone at different angles.",
+        "Algebraically, a circle is the set of points at a fixed distance (the **radius** $r$) from a fixed point (the **center** $(h, k)$):"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\boxed{\\;(x - h)^2 + (y - k)^2 = r^2\\;}"
+    },
+    {
+      "type": "widget",
+      "kind": "conic-section",
+      "config": {
+        "mode": "circle",
+        "h": 0,
+        "k": 0,
+        "r": 3
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "Drag the sliders for $h$, $k$, $r$ above. The equation in the readout updates in real time. Notice that the standard form is just the **distance formula** with $r^2$ on the right:",
+        "$\\text{dist}((x, y), (h, k))^2 = r^2 \\;\\;\\Longleftrightarrow\\;\\; \\sqrt{(x-h)^2 + (y-k)^2} = r.$"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Circle from a general second-degree equation",
+      "body": "A general conic equation has the form $Ax^2 + Bxy + Cy^2 + Dx + Ey + F = 0$. It's a **circle** when:\n\n- $A = C$ (equal coefficients on $x^2$ and $y^2$)\n- $B = 0$ (no $xy$ term)\n- The implied radius is positive\n\nIf you encounter $x^2 + y^2 - 6x + 4y - 12 = 0$ and want to recognize it as a circle, **complete the square** on the $x$ and $y$ groups.\n\n$(x^2 - 6x) + (y^2 + 4y) = 12$\n$(x^2 - 6x + 9) + (y^2 + 4y + 4) = 12 + 9 + 4$\n$(x - 3)^2 + (y + 2)^2 = 25$\n\nCenter $(3, -2)$, radius $5$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — find center and radius",
+        "Given $x^2 + y^2 - 8x + 6y + 9 = 0$.",
+        "**Group $x$ and $y$ terms:** $(x^2 - 8x) + (y^2 + 6y) = -9$.",
+        "**Complete the square** on each: $(x^2 - 8x + 16) + (y^2 + 6y + 9) = -9 + 16 + 9 = 16$.",
+        "**Standard form:** $(x - 4)^2 + (y + 3)^2 = 16 = 4^2$.",
+        "**Center $(4, -3)$, radius $4$.**"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Circumference and area",
+      "body": "Two formulas every student should have at fingertip readiness:\n\n**Circumference:** $C = 2\\pi r$ (or $\\pi d$ using diameter $d = 2r$).\n**Area:** $A = \\pi r^2$.\n\nIf you double the radius, circumference doubles but area quadruples. If you triple it, area is 9× larger. (Area scales with the square of the linear dimension — same scaling law as for any similar figures.)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Equation from a description",
+        "**Center $(2, -1)$, radius $5$:**",
+        "$(x - 2)^2 + (y + 1)^2 = 25$.",
+        "**Passing through origin, center $(3, 4)$:**",
+        "First find radius = distance from $(3, 4)$ to $(0, 0) = \\sqrt{9 + 16} = 5$.",
+        "Equation: $(x - 3)^2 + (y - 4)^2 = 25$.",
+        "**Tangent to x-axis at $(0, 0)$:** Center on y-axis, radius = y-coord of center. If center is at $(0, r)$, equation is $x^2 + (y - r)^2 = r^2$. Without more info, we'd need a second condition to pin down $r$."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{What is } |\\langle 3, 4 \\rangle|?",
+      "answer": 5,
+      "tolerance": 0,
+      "hints": [
+        "$|\\mathbf{v}| = \\sqrt{a^2 + b^2}$.",
+        "$\\sqrt{9 + 16} = \\sqrt{25}$."
+      ],
+      "explanation": "$|\\langle 3, 4 \\rangle| = \\sqrt{3^2 + 4^2} = \\sqrt{25} = 5$. The classic 3-4-5 triangle.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\langle 2, -3 \\rangle + \\langle -5, 4 \\rangle = ?",
+      "choices": [
+        "\\langle -3, 1 \\rangle",
+        "\\langle 7, 7 \\rangle",
+        "\\langle -3, -7 \\rangle",
+        "\\langle -7, 1 \\rangle"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Add component-wise.",
+        "$2 + (-5) = -3$. $-3 + 4 = 1$."
+      ],
+      "explanation": "Add components: $\\langle 2 + (-5), -3 + 4 \\rangle = \\langle -3, 1 \\rangle$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "3 \\langle 2, -1 \\rangle = ?",
+      "choices": [
+        "\\langle 5, 2 \\rangle",
+        "\\langle 6, -3 \\rangle",
+        "\\langle 6, 1 \\rangle",
+        "\\langle 2, -3 \\rangle"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Multiply each component by the scalar.",
+        "$3 \\cdot 2 = 6$, $3 \\cdot (-1) = -3$."
+      ],
+      "explanation": "Scalar multiplication multiplies each component: $3 \\langle 2, -1 \\rangle = \\langle 6, -3 \\rangle$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which is a unit vector?}",
+      "choices": [
+        "\\langle 3, 4 \\rangle",
+        "\\langle 1, 1 \\rangle",
+        "\\langle 0, 1 \\rangle",
+        "\\langle 2, 0 \\rangle"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "Magnitude must equal 1.",
+        "$\\sqrt{a^2 + b^2} = 1$."
+      ],
+      "explanation": "$|\\langle 0, 1 \\rangle| = \\sqrt{0 + 1} = 1$ — unit vector. The others have magnitudes $5$, $\\sqrt{2}$, and $2$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{What's the geometric meaning of vector addition (head-to-tail method)?}",
+      "choices": [
+        "Stack the vectors at the origin",
+        "Place the second vector's tail at the first vector's head",
+        "Subtract magnitudes",
+        "Multiply directions"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Pictorial 'head to tail'.",
+        "Move the second vector to start where the first ends."
+      ],
+      "explanation": "Translate $\\mathbf{v}$ so it starts (its tail) at the head of $\\mathbf{u}$. The sum $\\mathbf{u} + \\mathbf{v}$ goes from the original origin to the tip of the translated $\\mathbf{v}$.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Find the magnitude of the vector } \\mathbf{v} = \\langle 6, 8 \\rangle.",
+      "answer": 10,
+      "tolerance": 0,
+      "hints": [
+        "$|\\mathbf{v}| = \\sqrt{v_x^2 + v_y^2}$.",
+        "$\\sqrt{36 + 64} = \\sqrt{100} = 10$."
+      ],
+      "explanation": "$|\\mathbf{v}| = \\sqrt{6^2 + 8^2} = \\sqrt{100} = 10$.",
+      "steps": [
+        "Magnitude formula: $|\\mathbf{v}| = \\sqrt{v_x^2 + v_y^2}$.",
+        "$|\\mathbf{v}| = \\sqrt{36 + 64} = \\sqrt{100} = 10$. (6-8-10 triple.)"
+      ],
+      "id": "q6",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Add } \\mathbf{u} = \\langle 3, -2 \\rangle \\text{ and } \\mathbf{v} = \\langle -1, 5 \\rangle.",
+      "choices": [
+        "\\langle 2, 3 \\rangle",
+        "\\langle 4, 7 \\rangle",
+        "\\langle -3, -10 \\rangle",
+        "\\langle 4, -7 \\rangle"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Add component-wise: $\\langle 3 + (-1), -2 + 5 \\rangle$.",
+        "$\\langle 2, 3 \\rangle$."
+      ],
+      "explanation": "$\\langle 3 + (-1), -2 + 5 \\rangle = \\langle 2, 3 \\rangle$.",
+      "steps": [
+        "Vector addition is component-wise.",
+        "$\\mathbf{u} + \\mathbf{v} = \\langle 3 + (-1), -2 + 5 \\rangle = \\langle 2, 3 \\rangle$."
+      ],
+      "id": "q7",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Compute } 3\\mathbf{v} \\text{ where } \\mathbf{v} = \\langle 2, -4 \\rangle.",
+      "choices": [
+        "\\langle 6, -12 \\rangle",
+        "\\langle 5, -1 \\rangle",
+        "\\langle 6, 12 \\rangle",
+        "\\langle 2/3, -4/3 \\rangle"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Scalar mult is component-wise: $\\langle 3 \\cdot 2, 3 \\cdot (-4) \\rangle$.",
+        "$\\langle 6, -12 \\rangle$."
+      ],
+      "explanation": "$3\\mathbf{v} = \\langle 6, -12 \\rangle$.",
+      "steps": [
+        "Scalar multiplication: multiply each component by the scalar.",
+        "$3 \\langle 2, -4 \\rangle = \\langle 3 \\cdot 2, 3 \\cdot (-4) \\rangle = \\langle 6, -12 \\rangle$."
+      ],
+      "id": "q8",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Find a unit vector in the direction of } \\mathbf{v} = \\langle 3, 4 \\rangle.",
+      "choices": [
+        "\\langle 3/5, 4/5 \\rangle",
+        "\\langle 1, 1 \\rangle",
+        "\\langle 3, 4 \\rangle",
+        "\\langle 1/3, 1/4 \\rangle"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Unit vector $\\hat{\\mathbf{v}} = \\mathbf{v} / |\\mathbf{v}|$.",
+        "$|\\mathbf{v}| = 5$. So $\\langle 3/5, 4/5 \\rangle$."
+      ],
+      "explanation": "$|\\mathbf{v}| = 5$. Unit vector: $\\langle 3, 4 \\rangle / 5 = \\langle 3/5, 4/5 \\rangle$.",
+      "steps": [
+        "Magnitude: $|\\mathbf{v}| = \\sqrt{9 + 16} = 5$.",
+        "Unit vector: $\\hat{\\mathbf{v}} = \\dfrac{\\mathbf{v}}{|\\mathbf{v}|} = \\dfrac{\\langle 3, 4 \\rangle}{5} = \\langle 3/5, 4/5 \\rangle$.",
+        "(Check: $|\\hat{\\mathbf{v}}| = \\sqrt{(3/5)^2 + (4/5)^2} = \\sqrt{9/25 + 16/25} = 1$ ✓.)"
+      ],
+      "id": "q9",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Find vector from point } P(2, 3) \\text{ to point } Q(7, -1).",
+      "choices": [
+        "\\langle 5, -4 \\rangle",
+        "\\langle -5, 4 \\rangle",
+        "\\langle 9, 2 \\rangle",
+        "\\langle 5, 4 \\rangle"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "$\\overrightarrow{PQ} = Q - P$ (component-wise).",
+        "$\\langle 7 - 2, -1 - 3 \\rangle = \\langle 5, -4 \\rangle$."
+      ],
+      "explanation": "$\\overrightarrow{PQ} = \\langle 7 - 2, -1 - 3 \\rangle = \\langle 5, -4 \\rangle$.",
+      "steps": [
+        "Vector from $P$ to $Q$: subtract $P$ from $Q$ component-wise.",
+        "$\\overrightarrow{PQ} = \\langle 7 - 2, -1 - 3 \\rangle = \\langle 5, -4 \\rangle$."
+      ],
+      "id": "q10",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Compute } 2\\mathbf{u} - 3\\mathbf{v} \\text{ where } \\mathbf{u} = \\langle 4, 1 \\rangle \\text{ and } \\mathbf{v} = \\langle 2, -1 \\rangle. \\\\ \\text{Find the } x\\text{-component of the result.}",
+      "answer": 2,
+      "tolerance": 0,
+      "hints": [
+        "$2\\mathbf{u} = \\langle 8, 2 \\rangle$. $3\\mathbf{v} = \\langle 6, -3 \\rangle$.",
+        "$\\langle 8 - 6, 2 - (-3) \\rangle = \\langle 2, 5 \\rangle$. x-comp = 2."
+      ],
+      "explanation": "$2\\mathbf{u} - 3\\mathbf{v} = \\langle 8, 2 \\rangle - \\langle 6, -3 \\rangle = \\langle 2, 5 \\rangle$. x-component = 2.",
+      "steps": [
+        "$2\\mathbf{u} = \\langle 8, 2 \\rangle$.",
+        "$3\\mathbf{v} = \\langle 6, -3 \\rangle$.",
+        "Subtract: $\\langle 8 - 6, 2 - (-3) \\rangle = \\langle 2, 5 \\rangle$.",
+        "x-component: **2**."
+      ],
+      "id": "q11",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Two vectors are } \\textbf{parallel} \\text{ if:}",
+      "choices": [
+        "One is a scalar multiple of the other",
+        "They have the same magnitude",
+        "Their dot product is zero",
+        "They have the same direction"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Parallel vectors point along the same line (same or opposite direction).",
+        "$\\mathbf{u} = c \\cdot \\mathbf{v}$ for some scalar $c$."
+      ],
+      "explanation": "Parallel vectors are scalar multiples: $\\mathbf{u} = c \\mathbf{v}$ for some scalar $c$ (positive = same direction, negative = opposite).",
+      "steps": [
+        "**Parallel** vectors lie on the same line (or parallel lines), pointing the same or opposite direction.",
+        "Algebraically: $\\mathbf{u} = c \\cdot \\mathbf{v}$ for some scalar $c$.",
+        "(Same magnitude is **congruent**, not parallel. Zero dot product is **perpendicular**.)"
+      ],
+      "id": "q12",
+      "difficulty": "easy"
+    }
+  ]
+}

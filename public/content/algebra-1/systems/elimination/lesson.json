@@ -1,0 +1,115 @@
+{
+  "title": "Solving Systems by Elimination",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "**Elimination** is the third method for solving systems — and often the fastest when neither equation is already solved for a variable. The idea: add or subtract the two equations strategically so that *one variable cancels*, leaving a simple equation in the other variable."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The simplest case — variables already cancel",
+        "Solve the system:",
+        "$3x + 2y = 12$",
+        "$5x - 2y = 4$",
+        "Notice $+2y$ in the first equation and $-2y$ in the second. Add the two equations directly — the $y$ terms cancel:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\begin{aligned} 3x + 2y &= 12 \\\\ 5x - 2y &= 4 \\\\ \\hline 8x \\phantom{- 2y} &= 16 \\end{aligned}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "$8x = 16 \\Rightarrow x = 2$. Now plug back into either original equation:",
+        "$3(2) + 2y = 12 \\Rightarrow 6 + 2y = 12 \\Rightarrow y = 3$.",
+        "**Solution: $(2, 3)$.** Check both equations to confirm."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "coordinate-plane",
+      "config": {
+        "mode": "two-lines",
+        "line1": {
+          "m": -1.5,
+          "b": 6
+        },
+        "line2": {
+          "m": 2.5,
+          "b": -2
+        },
+        "mRange": [
+          -3,
+          3
+        ],
+        "bRange": [
+          -6,
+          6
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "Both lines pass through $(2, 3)$ — confirming our algebraic answer."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### When you need to multiply first",
+        "Sometimes coefficients don't already cancel. **Multiply one or both equations** by a constant so that a pair of variables matches in magnitude with opposite sign. Then add.",
+        "**Example.** Solve:",
+        "$2x + 3y = 13$",
+        "$x + 2y = 8$",
+        "Multiply the second equation by $-2$ to get $-2x - 4y = -16$. Now add it to the first:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\begin{aligned} 2x + 3y &= 13 \\\\ -2x - 4y &= -16 \\\\ \\hline -y &= -3 \\end{aligned}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "So $y = 3$. Plug into $x + 2y = 8$: $x + 6 = 8 \\Rightarrow x = 2$.",
+        "**Solution: $(2, 3)$** — same point as the previous example."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Step-by-step",
+        "**1.** Line up the equations so like variables are in columns.",
+        "**2.** Multiply one or both equations (if necessary) so the coefficients of one variable are opposites.",
+        "**3.** Add the equations — that variable cancels.",
+        "**4.** Solve the resulting one-variable equation.",
+        "**5.** Substitute back into either original to find the other variable.",
+        "**6.** Check."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Choosing which variable to eliminate",
+      "body": "Pick the variable whose coefficients have the smallest LCM. Often there's a clear winner — for $4x + 3y = \\ldots$ and $6x + y = \\ldots$, eliminating $y$ is easier (just multiply the second equation by $-3$)."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Substitution vs. elimination",
+        "**Substitution** is best when one variable is already isolated (or has a coefficient of $1$ or $-1$).",
+        "**Elimination** is best when neither equation is solved for a variable, especially with messy coefficients.",
+        "Both give exact answers and handle the no-solution / infinite-solutions cases the same way: a contradiction ($0 = 5$) means no solution; an identity ($0 = 0$) means infinitely many."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "Add or subtract the equations (multiplying first if needed) so a variable cancels. Solve the remaining one-variable equation, substitute back, and check. Best when neither equation has a variable already isolated."
+    }
+  ]
+}

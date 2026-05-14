@@ -1,0 +1,72 @@
+{
+  "title": "Congruence & Similarity",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Two triangles can have the same shape but different sizes, the same shape *and* the same size, or be totally different. The first situation is called **similarity**; the second is **congruence**. Both ideas show up everywhere — in proofs, in scaling drawings, in solving real-world problems with proportions."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Definitions",
+      "body": "**Congruent** triangles: same shape AND same size. All corresponding sides equal, all corresponding angles equal. Symbol: $\\cong$.\n**Similar** triangles: same shape, sizes can differ. Corresponding angles equal, corresponding sides *proportional*. Symbol: $\\sim$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The four congruence shortcuts",
+        "You don't need to verify all six measurements (3 sides + 3 angles) to prove congruence. Any of these four 'shortcuts' is enough:",
+        "**SSS** (Side-Side-Side): all three pairs of sides equal.",
+        "**SAS** (Side-Angle-Side): two sides and the *included* angle (between them) equal.",
+        "**ASA** (Angle-Side-Angle): two angles and the *included* side equal.",
+        "**AAS** (Angle-Angle-Side): two angles and a non-included side equal."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Watch out — SSA doesn't work",
+      "body": "Two sides and a *non-included* angle (SSA) is **not** enough to guarantee congruence. There can be two different triangles satisfying the same SSA setup. SSA is sometimes called the 'ambiguous case.'"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### CPCTC",
+        "Once two triangles are proved congruent, all corresponding parts are equal. This shorthand is **CPCTC**: *Corresponding Parts of Congruent Triangles are Congruent*. It's a classic chain of reasoning in proofs: prove congruent first by SSS/SAS/ASA/AAS, then use CPCTC to claim any other matching parts are equal."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The similarity shortcut: AA",
+        "Two triangles are similar if just **two pairs of angles are equal**. Why two? Because the third pair must also be equal — the angles of a triangle sum to 180°, so if two pairs match, the third is forced.",
+        "Two other similarity tests: **SAS similarity** (two sides proportional and the included angle equal) and **SSS similarity** (all three sides proportional)."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why similarity matters — proportions",
+        "When two triangles are similar with scale factor $k$, every length in one is $k$ times the corresponding length in the other. That includes sides, but also altitudes, medians, perimeters, and so on.",
+        "**Areas scale by $k^2$.** This is why doubling the dimensions of a triangle multiplies its area by 4, not 2."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{\\text{side in big}}{\\text{corresponding side in small}} = k \\qquad \\dfrac{\\text{area of big}}{\\text{area of small}} = k^2"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example",
+        "Two similar triangles have a scale factor of 3. The smaller triangle has sides $4, 5, 6$. What are the sides of the bigger one?",
+        "Multiply each side by 3: $12, 15, 18$. The big triangle's perimeter is also 3× bigger; its area is $3^2 = 9$× bigger."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "**Congruent**: same shape AND size. Prove with SSS, SAS, ASA, or AAS — never SSA. Then use **CPCTC** for the rest of the parts. **Similar**: same shape, possibly different size. Prove with AA, SAS sim, or SSS sim. Sides scale by $k$, areas scale by $k^2$."
+    }
+  ]
+}

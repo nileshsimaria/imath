@@ -1,0 +1,106 @@
+{
+  "title": "Implicit Differentiation",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Sometimes $y$ isn't explicitly given as a function of $x$. The unit circle is the classic example: $x^2 + y^2 = 1$. Solving for $y$ explicitly gives $y = \\pm\\sqrt{1 - x^2}$ — two functions, neither defined everywhere.",
+        "**Implicit differentiation** lets you find $dy/dx$ directly from the equation, without solving for $y$ first."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. The Idea"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Differentiate **both sides** of the equation with respect to $x$, treating $y$ as a function of $x$. Each $y$ term needs the chain rule — multiply by $dy/dx$ when you differentiate.",
+        "**Example.** Differentiate $x^2 + y^2 = 1$.",
+        "$\\dfrac{d}{dx}(x^2) + \\dfrac{d}{dx}(y^2) = \\dfrac{d}{dx}(1)$",
+        "$2x + 2y \\cdot \\dfrac{dy}{dx} = 0$",
+        "Solve for $dy/dx$: $\\dfrac{dy}{dx} = -\\dfrac{x}{y}$.",
+        "**Notice:** the answer depends on **both** $x$ and $y$ — that's typical for implicit derivatives."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The chain-rule moment",
+      "body": "$\\dfrac{d}{dx}(y^2) = 2y \\cdot \\dfrac{dy}{dx}$ — NOT just $2y$. This is the chain rule: outer $u^2$ → $2u$, inner $y$ (function of $x$) → $dy/dx$. Forgetting the $dy/dx$ is the #1 implicit-differentiation mistake."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. The Procedure"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Step 1.** Differentiate both sides with respect to $x$.",
+        "**Step 2.** Each time you differentiate a $y$ term, **multiply by $dy/dx$** (chain rule).",
+        "**Step 3.** Collect all $dy/dx$ terms on one side; everything else on the other.",
+        "**Step 4.** Factor out $dy/dx$ and solve."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example",
+        "Find $dy/dx$ for $xy + y^2 = 5$.",
+        "**Differentiate** both sides with respect to $x$:",
+        "$\\dfrac{d}{dx}(xy) + \\dfrac{d}{dx}(y^2) = 0$.",
+        "$xy$: product rule. $\\dfrac{d}{dx}(xy) = 1 \\cdot y + x \\cdot \\dfrac{dy}{dx} = y + x \\dfrac{dy}{dx}$.",
+        "$y^2$: chain rule. $\\dfrac{d}{dx}(y^2) = 2y \\dfrac{dy}{dx}$.",
+        "Combine: $y + x \\dfrac{dy}{dx} + 2y \\dfrac{dy}{dx} = 0$.",
+        "**Collect $dy/dx$:** $\\dfrac{dy}{dx}(x + 2y) = -y$.",
+        "**Solve:** $\\dfrac{dy}{dx} = -\\dfrac{y}{x + 2y}$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. Tangent Lines on Implicit Curves"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Example.** Find the tangent to $x^2 + y^2 = 25$ at the point $(3, 4)$.",
+        "From above: $dy/dx = -x/y$.",
+        "**At $(3, 4)$:** slope $= -3/4$.",
+        "**Tangent:** $y - 4 = -\\dfrac{3}{4}(x - 3)$.",
+        "**Notice** how clean this is — no need to solve for $y$ first."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. When Implicit Differentiation Shines"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Curves that aren't functions** of $x$ alone (circles, ellipses, complicated curves).",
+        "**Equations where solving for $y$ is hard or impossible** (e.g., $x^3 + y^3 = 3xy$ — the folium of Descartes).",
+        "**Related rates problems** (next chapter) — different variables related by an equation, differentiate with respect to time.",
+        "**Logarithmic differentiation** — for ugly products/quotients, take $\\ln$ of both sides, then differentiate implicitly."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — folium of Descartes",
+        "Find $dy/dx$ for $x^3 + y^3 = 6xy$ (a famous self-intersecting curve).",
+        "Differentiate both sides:",
+        "$3x^2 + 3y^2 \\dfrac{dy}{dx} = 6y + 6x \\dfrac{dy}{dx}$.",
+        "Collect $dy/dx$: $3y^2 \\dfrac{dy}{dx} - 6x \\dfrac{dy}{dx} = 6y - 3x^2$.",
+        "Factor: $\\dfrac{dy}{dx}(3y^2 - 6x) = 6y - 3x^2$.",
+        "Solve: $\\dfrac{dy}{dx} = \\dfrac{6y - 3x^2}{3y^2 - 6x} = \\dfrac{2y - x^2}{y^2 - 2x}$."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "title": "Time & Work",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### The core trick: work rates",
+        "If a person can complete a job in $n$ days, then **in 1 day they do $1/n$ of the job**. That's the *work rate*. Once you express each worker as a rate, time-and-work problems collapse into simple addition and division.",
+        "**Example.** A can do a job in 12 days, B in 18 days. How long together?",
+        "**A's rate:** $1/12$ jobs/day. **B's rate:** $1/18$ jobs/day.",
+        "**Combined rate:** $1/12 + 1/18 = 3/36 + 2/36 = 5/36$ jobs/day.",
+        "**Time together:** $1 / (5/36) = 36/5 = 7.2$ days."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The LCM trick (use this — much cleaner)",
+      "body": "Avoid fractions by letting **total work = LCM of the days**.\n\n**A in 12 days, B in 18 days.** LCM(12, 18) = 36.\n\nSay total work = 36 units. Then:\n- A does $36/12 = 3$ units/day.\n- B does $36/18 = 2$ units/day.\n- Together: $3 + 2 = 5$ units/day.\n- Time together: $36/5 = 7.2$ days.\n\nNo fraction arithmetic — just integer division all the way."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — three workers",
+        "A, B, C can finish a job in 6, 8, and 12 days respectively. How long together?",
+        "**LCM trick.** LCM(6, 8, 12) = 24. Take total work = 24 units.",
+        "Rates: A = 4, B = 3, C = 2 units/day.",
+        "Together: $9$ units/day.",
+        "Time: $24/9 = 8/3 \\approx 2.67$ days."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### When one quits midway",
+        "**Example.** A can finish in 10 days, B in 15. They work together for 4 days, then B quits. How long does A take to finish?",
+        "**LCM(10, 15) = 30. Total work = 30 units.**",
+        "Rates: A = 3, B = 2 → together = 5 units/day.",
+        "After 4 days together: $5 \\times 4 = 20$ units done. Remaining: $10$ units.",
+        "A alone finishes the rest in $10/3$ days.",
+        "**Total time: $4 + 10/3 = 22/3 \\approx 7.33$ days.**"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Pipes and cisterns (a variant of time-and-work)",
+      "body": "**Inlet pipes** fill the tank (positive rate). **Outlet pipes** empty it (negative rate). Apply the same rate-sum logic, with outlets contributing negative rates.\n\n**Example.** Pipe A fills a tank in 6 h. Pipe B empties it in 10 h. Both open. Time to fill?\n\nLCM(6, 10) = 30. Tank capacity = 30 units.\nA's rate = $+5$ units/h. B's rate = $-3$ units/h.\nNet = $+2$ units/h. Time: $30/2 = 15$ h."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Efficiency comparisons",
+        "**Phrase:** 'A is twice as efficient as B.' Means A's rate is twice B's. So if B does the job in $n$ days alone, A does it in $n/2$ days.",
+        "**Phrase:** 'A and B can do a job together in 6 days. A alone in 10 days. How long does B alone take?'",
+        "Together: $1/6$ jobs/day. A alone: $1/10$ jobs/day.",
+        "B's rate = $1/6 - 1/10 = (5 - 3)/30 = 2/30 = 1/15$.",
+        "**B alone: 15 days.**"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Person-day calculation",
+      "body": "If $m$ workers take $d$ days to finish a job, then total work = $m \\cdot d$ person-days. Use this for problems involving changing crew size.\n\n**Example.** 10 men finish a job in 12 days. How long for 15 men?\n\nTotal work = $10 \\times 12 = 120$ person-days.\nWith 15 men: $120/15 = 8$ days.\n\n*(Assumes all workers are equally productive.)*"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — alternating workers",
+        "A finishes in 12 days, B finishes in 16 days. They take turns: A on day 1, B on day 2, A on day 3, etc. When does the job finish?",
+        "**LCM(12, 16) = 48. Total = 48 units.**",
+        "A's rate = 4 units/day. B's rate = 3 units/day.",
+        "Each 2-day cycle (A then B) does $4 + 3 = 7$ units.",
+        "Number of full cycles: $\\lfloor 48/7 \\rfloor = 6$. Done in 6 cycles: $42$ units in $12$ days. Remaining: $6$ units.",
+        "Day 13: A's turn — A does 4 units. Total: $46$.",
+        "Day 14: B's turn — B needs $2$ units. B's rate is $3$/day, so B needs $2/3$ of a day.",
+        "**Total: $13 + 2/3 = 41/3$ days $\\approx 13.67$ days.**"
+      ]
+    }
+  ]
+}

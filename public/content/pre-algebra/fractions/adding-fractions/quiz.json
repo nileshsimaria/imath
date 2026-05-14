@@ -1,0 +1,301 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{2}{7} + \\dfrac{3}{7} = ?",
+      "choices": [
+        "\\dfrac{5}{14}",
+        "\\dfrac{5}{7}",
+        "\\dfrac{6}{7}",
+        "\\dfrac{6}{14}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Same denominators! No conversion needed.",
+        "Just add the numerators and keep the denominator."
+      ],
+      "explanation": "$\\dfrac{2}{7} + \\dfrac{3}{7} = \\dfrac{2+3}{7} = \\dfrac{5}{7}$. Don't add denominators — the pieces are the same size, you just have $5$ of them now.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{What is the LCD of } 6 \\text{ and } 8?",
+      "answer": 24,
+      "tolerance": 0,
+      "hints": [
+        "List multiples of $6$: $6, 12, 18, 24, 30, \\dots$",
+        "List multiples of $8$: $8, 16, 24, 32, \\dots$ Find the smallest number in both lists."
+      ],
+      "explanation": "Multiples of $6$: $6, 12, 18, \\textbf{24}, 30$. Multiples of $8$: $8, 16, \\textbf{24}, 32$. The smallest shared multiple is $24$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{1}{4} + \\dfrac{1}{2} = ?",
+      "choices": [
+        "\\dfrac{2}{6}",
+        "\\dfrac{3}{4}",
+        "\\dfrac{1}{6}",
+        "\\dfrac{2}{4}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "LCD of $4$ and $2$ is $4$.",
+        "Rewrite $\\dfrac{1}{2}$ with denominator $4$: $\\dfrac{1}{2} = \\dfrac{2}{4}$."
+      ],
+      "explanation": "Convert to common denominator: $\\dfrac{1}{2} = \\dfrac{2}{4}$. Then $\\dfrac{1}{4} + \\dfrac{2}{4} = \\dfrac{3}{4}$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{2}{3} + \\dfrac{1}{6} = ?",
+      "choices": [
+        "\\dfrac{3}{9}",
+        "\\dfrac{5}{6}",
+        "\\dfrac{3}{6}",
+        "\\dfrac{1}{2}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "LCD of $3$ and $6$ is $6$.",
+        "Convert: $\\dfrac{2}{3} = \\dfrac{4}{6}$. Now add $\\dfrac{4}{6} + \\dfrac{1}{6}$."
+      ],
+      "explanation": "Convert: $\\dfrac{2}{3} = \\dfrac{4}{6}$. Then $\\dfrac{4}{6} + \\dfrac{1}{6} = \\dfrac{5}{6}$. Already simplified ($\\gcd(5, 6) = 1$).",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{1}{4} + \\dfrac{1}{4} = ?\\\\\\text{(Give the simplified form.)}",
+      "choices": [
+        "\\dfrac{2}{8}",
+        "\\dfrac{2}{4}",
+        "\\dfrac{1}{2}",
+        "\\dfrac{1}{4}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "First add: $\\dfrac{1}{4} + \\dfrac{1}{4} = \\dfrac{2}{4}$.",
+        "Now simplify $\\dfrac{2}{4}$ — divide top and bottom by $\\gcd(2, 4) = 2$."
+      ],
+      "explanation": "$\\dfrac{1}{4} + \\dfrac{1}{4} = \\dfrac{2}{4}$. Both top and bottom share a factor of $2$, so $\\dfrac{2}{4} = \\dfrac{1}{2}$.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{2}{3} + \\dfrac{1}{4} = ?",
+      "choices": [
+        "\\dfrac{3}{7}",
+        "\\dfrac{11}{12}",
+        "\\dfrac{2}{12}",
+        "\\dfrac{3}{12}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "LCD of 3 and 4 is 12.",
+        "$\\dfrac{2}{3} = \\dfrac{8}{12}$ and $\\dfrac{1}{4} = \\dfrac{3}{12}$. Then add."
+      ],
+      "explanation": "Common denominator 12: $\\dfrac{8}{12} + \\dfrac{3}{12} = \\dfrac{11}{12}$.",
+      "steps": [
+        "**Universal fraction-addition recipe.** Different denominators? Find the LCD, convert both fractions, then add numerators.",
+        "**Find the LCD.** $3$ and $4$ share no common factors → LCD = $3 \\cdot 4 = 12$.",
+        "**Convert each fraction to LCD.** $\\dfrac{2}{3} = \\dfrac{2 \\cdot 4}{3 \\cdot 4} = \\dfrac{8}{12}$. $\\dfrac{1}{4} = \\dfrac{1 \\cdot 3}{4 \\cdot 3} = \\dfrac{3}{12}$. (Multiply top and bottom by the same factor — keeps the VALUE the same.)",
+        "**Add numerators.** $\\dfrac{8}{12} + \\dfrac{3}{12} = \\dfrac{11}{12}$.",
+        "**Simplify.** $\\gcd(11, 12) = 1$ → already in lowest terms."
+      ],
+      "id": "q6",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{1}{2} + \\dfrac{1}{3} + \\dfrac{1}{6} = ?",
+      "choices": [
+        "\\dfrac{3}{11}",
+        "1",
+        "\\dfrac{1}{6}",
+        "\\dfrac{5}{6}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "LCD of 2, 3, 6 is 6.",
+        "$\\dfrac{3}{6} + \\dfrac{2}{6} + \\dfrac{1}{6} = ?$"
+      ],
+      "explanation": "$\\dfrac{3}{6} + \\dfrac{2}{6} + \\dfrac{1}{6} = \\dfrac{6}{6} = 1$.",
+      "steps": [
+        "**Find LCD of 2, 3, 6.** Since 6 is already divisible by 2 and 3, LCD = 6. (Shortcut: when one denominator is a multiple of all others, it IS the LCD.)",
+        "**Convert each.** $\\dfrac{1}{2} = \\dfrac{3}{6}$. $\\dfrac{1}{3} = \\dfrac{2}{6}$. $\\dfrac{1}{6}$ stays.",
+        "**Add numerators.** $3 + 2 + 1 = 6$. Result: $\\dfrac{6}{6} = 1$.",
+        "**Pattern lesson.** Sums of unit fractions often surprisingly add to nice numbers. (Ancient Egyptians used unit-fraction decompositions.)"
+      ],
+      "id": "q7",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{5}{6} - \\dfrac{3}{8} = ?",
+      "choices": [
+        "\\dfrac{2}{14}",
+        "\\dfrac{11}{24}",
+        "\\dfrac{2}{2}",
+        "\\dfrac{1}{2}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "LCD of 6 and 8 is 24.",
+        "$\\dfrac{5}{6} = \\dfrac{20}{24}$ and $\\dfrac{3}{8} = \\dfrac{9}{24}$. Subtract."
+      ],
+      "explanation": "$\\dfrac{20}{24} - \\dfrac{9}{24} = \\dfrac{11}{24}$.",
+      "steps": [
+        "**Subtraction works the same way as addition: find LCD, convert, subtract numerators.**",
+        "**LCD.** $6 = 2 \\cdot 3$, $8 = 2^3$. LCD takes the maximum power of each prime: $2^3 \\cdot 3 = 24$.",
+        "**Convert.** $\\dfrac{5}{6} = \\dfrac{20}{24}$ (multiply by 4). $\\dfrac{3}{8} = \\dfrac{9}{24}$ (multiply by 3).",
+        "**Subtract numerators.** $\\dfrac{20 - 9}{24} = \\dfrac{11}{24}$.",
+        "**Simplify check.** $\\gcd(11, 24) = 1$ (11 is prime, doesn't divide 24) → lowest terms."
+      ],
+      "id": "q8",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "2\\dfrac{1}{3} + 1\\dfrac{1}{2} = ?",
+      "choices": [
+        "3\\dfrac{2}{5}",
+        "3\\dfrac{5}{6}",
+        "3\\dfrac{1}{6}",
+        "3\\dfrac{1}{5}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Convert mixed numbers to improper or add whole and fractional parts separately.",
+        "Whole parts: $2 + 1 = 3$. Fractional: $\\dfrac{1}{3} + \\dfrac{1}{2}$ with LCD 6."
+      ],
+      "explanation": "Whole: $3$. Fractional: $\\dfrac{2}{6} + \\dfrac{3}{6} = \\dfrac{5}{6}$. Total: $3\\dfrac{5}{6}$.",
+      "steps": [
+        "**Strategy for mixed numbers: add whole parts and fractional parts SEPARATELY.** Simpler than converting to improper fractions first.",
+        "**Whole parts.** $2 + 1 = 3$.",
+        "**Fractional parts.** $\\dfrac{1}{3} + \\dfrac{1}{2}$, LCD = 6. $\\dfrac{2}{6} + \\dfrac{3}{6} = \\dfrac{5}{6}$.",
+        "**Combine.** $3 + \\dfrac{5}{6} = 3\\dfrac{5}{6}$.",
+        "**Watch out: if fractional part exceeds 1.** E.g., if you'd gotten $\\dfrac{7}{6}$, convert to $1\\dfrac{1}{6}$ and add the 1 to the whole part."
+      ],
+      "id": "q9",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Maria ate } \\dfrac{1}{4} \\text{ of a pizza, John ate } \\dfrac{2}{5}, \\\\ \\text{and Sam ate } \\dfrac{1}{10}. \\text{ How much pizza is left?}",
+      "choices": [
+        "\\dfrac{1}{4}",
+        "\\dfrac{3}{4}",
+        "\\dfrac{1}{20}",
+        "\\dfrac{1}{5}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Add what was eaten, then subtract from 1.",
+        "LCD of 4, 5, 10 is 20."
+      ],
+      "explanation": "Eaten: $\\dfrac{5}{20} + \\dfrac{8}{20} + \\dfrac{2}{20} = \\dfrac{15}{20} = \\dfrac{3}{4}$. Left: $1 - \\dfrac{3}{4} = \\dfrac{1}{4}$.",
+      "steps": [
+        "**'Whole minus parts' template.** Whole pizza = 1. Total eaten = sum of fractions. Pizza left = 1 − total eaten.",
+        "**Find LCD of 4, 5, 10.** $4 = 2^2$, $5$, $10 = 2 \\cdot 5$. LCD = $2^2 \\cdot 5 = 20$.",
+        "**Convert.** $\\dfrac{1}{4} = \\dfrac{5}{20}$, $\\dfrac{2}{5} = \\dfrac{8}{20}$, $\\dfrac{1}{10} = \\dfrac{2}{20}$.",
+        "**Total eaten.** $\\dfrac{5 + 8 + 2}{20} = \\dfrac{15}{20} = \\dfrac{3}{4}$ (simplifies by $\\gcd = 5$).",
+        "**Remaining.** $1 - \\dfrac{3}{4} = \\dfrac{1}{4}$."
+      ],
+      "id": "q10",
+      "difficulty": "hard"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve for } x \\text{: } x + \\dfrac{2}{3} = \\dfrac{5}{6}.",
+      "choices": [
+        "x = \\dfrac{1}{6}",
+        "x = \\dfrac{3}{6}",
+        "x = \\dfrac{1}{2}",
+        "x = \\dfrac{3}{3}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Subtract $\\dfrac{2}{3}$ from both sides.",
+        "$x = \\dfrac{5}{6} - \\dfrac{2}{3} = \\dfrac{5}{6} - \\dfrac{4}{6}$."
+      ],
+      "explanation": "$x = \\dfrac{5}{6} - \\dfrac{4}{6} = \\dfrac{1}{6}$.",
+      "steps": [
+        "**Goal: isolate $x$.** $x$ has $\\dfrac{2}{3}$ added to it; undo by subtracting $\\dfrac{2}{3}$ from both sides.",
+        "**Apply.** $x = \\dfrac{5}{6} - \\dfrac{2}{3}$.",
+        "**Convert to common denominator.** $\\dfrac{2}{3} = \\dfrac{4}{6}$.",
+        "**Subtract.** $x = \\dfrac{5}{6} - \\dfrac{4}{6} = \\dfrac{1}{6}$.",
+        "**Check.** $\\dfrac{1}{6} + \\dfrac{2}{3} = \\dfrac{1}{6} + \\dfrac{4}{6} = \\dfrac{5}{6}$ ✓."
+      ],
+      "id": "q11",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{7}{12} + \\dfrac{5}{18} = ?",
+      "choices": [
+        "\\dfrac{12}{30}",
+        "\\dfrac{31}{36}",
+        "\\dfrac{12}{18}",
+        "\\dfrac{1}{2}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "LCD of 12 and 18 is 36.",
+        "$\\dfrac{7}{12} = \\dfrac{21}{36}$, $\\dfrac{5}{18} = \\dfrac{10}{36}$. Add."
+      ],
+      "explanation": "$\\dfrac{21}{36} + \\dfrac{10}{36} = \\dfrac{31}{36}$.",
+      "steps": [
+        "**Find LCD with prime factorization.** $12 = 2^2 \\cdot 3$, $18 = 2 \\cdot 3^2$. LCD = max of each prime: $2^2 \\cdot 3^2 = 36$.",
+        "**Why prime factorization beats listing multiples here.** Multiples of 12 and 18 grow apart fast; factorization gives the LCD in seconds.",
+        "**Convert.** $\\dfrac{7}{12} = \\dfrac{21}{36}$ (× 3 top and bottom). $\\dfrac{5}{18} = \\dfrac{10}{36}$ (× 2).",
+        "**Add numerators.** $\\dfrac{21 + 10}{36} = \\dfrac{31}{36}$.",
+        "**Simplify.** $\\gcd(31, 36) = 1$ (31 prime) → lowest terms."
+      ],
+      "id": "q12",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "3\\dfrac{1}{2} - 1\\dfrac{3}{4} = ?",
+      "choices": [
+        "1\\dfrac{3}{4}",
+        "2\\dfrac{1}{4}",
+        "1\\dfrac{1}{4}",
+        "2\\dfrac{1}{2}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Convert to improper: $3\\dfrac{1}{2} = \\dfrac{7}{2}$ and $1\\dfrac{3}{4} = \\dfrac{7}{4}$.",
+        "$\\dfrac{7}{2} - \\dfrac{7}{4} = \\dfrac{14}{4} - \\dfrac{7}{4} = \\dfrac{7}{4}$. Convert back."
+      ],
+      "explanation": "$\\dfrac{14}{4} - \\dfrac{7}{4} = \\dfrac{7}{4} = 1\\dfrac{3}{4}$.",
+      "steps": [
+        "**Subtraction with mixed numbers: convert to IMPROPER fractions first.** Avoids 'borrowing' from the whole part.",
+        "**Convert.** $3\\dfrac{1}{2} = \\dfrac{3 \\cdot 2 + 1}{2} = \\dfrac{7}{2}$. $1\\dfrac{3}{4} = \\dfrac{1 \\cdot 4 + 3}{4} = \\dfrac{7}{4}$.",
+        "**Common denominator 4.** $\\dfrac{7}{2} = \\dfrac{14}{4}$.",
+        "**Subtract.** $\\dfrac{14 - 7}{4} = \\dfrac{7}{4}$.",
+        "**Convert back to mixed.** $\\dfrac{7}{4} = 1\\dfrac{3}{4}$ (since $4 \\cdot 1 = 4$, remainder $3$).",
+        "**Why not separate-whole-parts here?** Because $\\dfrac{1}{2} < \\dfrac{3}{4}$, you'd have to 'borrow' a 1 from the whole part to subtract the fractions. The improper-fraction method sidesteps this."
+      ],
+      "id": "q13",
+      "difficulty": "medium"
+    }
+  ]
+}

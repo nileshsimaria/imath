@@ -1,0 +1,474 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A box plot's box stretches from the } \\_\\_\\_ \\text{ to the } \\_\\_\\_.",
+      "choices": [
+        "min, max",
+        "Q1, Q3",
+        "Q1, median",
+        "median, Q3"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "The box represents the middle 50% — between the quartiles.",
+        "Q1 to Q3."
+      ],
+      "explanation": "The box spans Q1 to Q3 (the IQR — middle 50% of data).",
+      "steps": [
+        "Box plot anatomy: box from **Q1 to Q3** (the IQR), with a line at the median inside the box.",
+        "Whiskers extend from the box out to the min and max (or to fences for outlier plots)."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A distribution is } \\textbf{right-skewed}. \\text{ Compare mean and median:}",
+      "choices": [
+        "mean = median",
+        "mean > median",
+        "mean < median",
+        "depends on data"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Right-skewed = long tail on the right. Mean is dragged to the right.",
+        "Mean > median in right-skewed data."
+      ],
+      "explanation": "Right-skewed: tail on the right pulls the mean above the median.",
+      "steps": [
+        "Right-skew = long tail on the **right** (toward larger values).",
+        "Outliers in the tail drag the **mean** toward them.",
+        "Median is largely unaffected.",
+        "Result: **mean > median** in right-skewed distributions."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which is the BEST display to compare distributions of three different classes?}",
+      "choices": [
+        "Three histograms",
+        "Three side-by-side box plots",
+        "Three pie charts",
+        "A scatterplot"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Box plots side-by-side make comparison super easy: at a glance you see medians, spreads, skew.",
+        "Pie charts don't show distributions of numerical data."
+      ],
+      "explanation": "Side-by-side box plots are designed for distribution comparison: medians, IQRs, ranges all directly comparable.",
+      "steps": [
+        "Side-by-side box plots align all the key summary stats (median, quartiles, range) for instant comparison.",
+        "Histograms work too but are bulky — hard to compare 3 at once.",
+        "Pie charts are for categorical proportions, not distributions.",
+        "Scatterplots show two-variable relationships, not single-variable distributions."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The bars in a histogram have NO gaps between them, but bars in a } \\\\ \\text{bar chart DO. Why?}",
+      "choices": [
+        "Just convention — no real reason",
+        "Histogram bins are continuous intervals; bar-chart categories are separate",
+        "Histograms use color, bar charts don't",
+        "Histograms are bigger"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Histograms describe ranges of numerical data; bar charts describe distinct categories.",
+        "Continuous → no gap. Categorical → gaps."
+      ],
+      "explanation": "Histogram bins are adjacent intervals on a number line — gaps would imply missing values. Bar charts represent separate categories, so gaps emphasize separation.",
+      "steps": [
+        "Histograms: x-axis is a continuous variable split into bins. Adjacent bins share endpoints, so bars touch.",
+        "Bar charts: x-axis lists discrete categories (no continuity). Gaps emphasize that they're separate.",
+        "**Continuous data → touching bars; categorical → gaps.**"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A symmetric distribution has:}",
+      "choices": [
+        "mean ≈ median",
+        "mean ≫ median",
+        "mean ≪ median",
+        "no median"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Symmetry → no skew → mean and median agree.",
+        "Both at the center."
+      ],
+      "explanation": "In a symmetric distribution, mean and median both sit at the center — they're approximately equal.",
+      "steps": [
+        "Symmetric: equal weight on both sides of center.",
+        "No tail to drag the mean.",
+        "Mean ≈ median (and they're both at the center)."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A bimodal histogram (two peaks) often suggests:}",
+      "choices": [
+        "A measurement error",
+        "Two underlying subgroups mixed together",
+        "Random noise",
+        "An incorrectly-drawn chart"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Two peaks = two centers in the data.",
+        "Often the data combines two distinct populations."
+      ],
+      "explanation": "Two peaks frequently mean the data set is a mixture of two different groups (e.g., heights of adults of two species).",
+      "steps": [
+        "A single peak (unimodal) is what we expect for a homogeneous population.",
+        "Two peaks (bimodal) often means the data secretly combines two subpopulations.",
+        "Real example: heights of all adults — bimodal peaks at the average male and average female heights."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{Stem-and-leaf plot: } \\\\ 3 | 4 7 \\\\ 4 | 1 5 8 \\\\ 5 | 2 6 \\\\ \\text{How many values does this dataset have?}",
+      "answer": 7,
+      "tolerance": 0,
+      "hints": [
+        "Each leaf is one value.",
+        "Count: 2 + 3 + 2 = 7."
+      ],
+      "explanation": "Counting leaves: 34, 37, 41, 45, 48, 52, 56 — seven values.",
+      "steps": [
+        "Each digit on the right side (a 'leaf') represents one data point.",
+        "Stem 3: leaves '4 7' → values 34, 37.",
+        "Stem 4: leaves '1 5 8' → values 41, 45, 48.",
+        "Stem 5: leaves '2 6' → values 52, 56.",
+        "Total: 2 + 3 + 2 = 7."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "promptTex": "\\text{In a box plot, the median appears as:}",
+      "choices": [
+        "The left edge of the box",
+        "A line inside the box",
+        "The right edge of the box",
+        "An asterisk above the box"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Median is the line dividing the box into two halves.",
+        "Inside, somewhere between Q1 and Q3."
+      ],
+      "explanation": "The median is the vertical line drawn inside the box (between Q1 and Q3).",
+      "steps": [
+        "Box plot shows: min — Q1 [box: median line] Q3 — max.",
+        "The median is the **line inside the box**.",
+        "(Box edges are Q1 and Q3.)"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A histogram of test scores is highly LEFT-skewed. What does this suggest?}",
+      "choices": [
+        "Most students did poorly; a few did very well",
+        "Most students did well; a few did very poorly",
+        "Scores are evenly distributed",
+        "There were two distinct groups"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Left-skewed: long tail on the LEFT (low values).",
+        "Bulk on the right (high scores), tail on the left (low scores)."
+      ],
+      "explanation": "Left-skewed: long tail extends LEFT (toward low values), and the bulk (peak) sits on the RIGHT (high values).",
+      "steps": [
+        "Left-skewed = long tail on the **left** (toward smaller values).",
+        "The 'bulk' of data sits on the **right**.",
+        "For test scores: most students scored high (bulk on right), a few scored very low (tail on left).",
+        "**Most did well; a few did poorly.**"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A box plot has a much longer right whisker than left. The data is:}",
+      "choices": [
+        "symmetric",
+        "left-skewed",
+        "right-skewed",
+        "uniform"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Long whisker on the right means values stretch far to the right.",
+        "That's right-skew (tail on right)."
+      ],
+      "explanation": "Long right whisker = data extends far to the right beyond Q3 = right-skewed.",
+      "steps": [
+        "Whisker length on each side measures how far the extremes reach.",
+        "Long right whisker → max is far above Q3 → right tail is long.",
+        "**Right-skewed.**"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The five-number summary is } (4, 12, 18, 28, 80). \\text{ This dataset is likely:}",
+      "choices": [
+        "right-skewed",
+        "left-skewed",
+        "symmetric",
+        "uniform"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Distance from Q3 to max: $80 - 28 = 52$. From min to Q1: $12 - 4 = 8$.",
+        "Right side stretches MUCH more — right-skewed."
+      ],
+      "explanation": "Right whisker length $52$ vs left whisker length $8$ → strongly right-skewed.",
+      "steps": [
+        "Compare whisker lengths.",
+        "Left whisker (min to Q1): $12 - 4 = 8$.",
+        "Right whisker (Q3 to max): $80 - 28 = 52$.",
+        "Right is much longer → **right-skewed**.",
+        "(Likely an outlier on the right.)"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which display is BEST for showing every individual data point in a small dataset?}",
+      "choices": [
+        "histogram",
+        "box plot",
+        "dot plot",
+        "pie chart"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Dot plot shows one dot per data point — no aggregation.",
+        "Histograms and box plots aggregate."
+      ],
+      "explanation": "Dot plots show every individual point as a separate dot — best for small datasets where you want to see each value.",
+      "steps": [
+        "Dot plot: one dot per value, stacked above the value's position. **Every point visible.**",
+        "Histogram: groups data into bins → individual points lost.",
+        "Box plot: only 5 summary numbers shown.",
+        "Pie chart: shows proportions, not values."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q13",
+      "type": "multiple-choice",
+      "prompt": "A histogram of exam scores has these frequencies: bin 10-20 has 5 students, bin 20-30 has 12, bin 30-40 has 18, bin 40-50 has 9, bin 50-60 has 6. Which is the MODAL CLASS (the bin with the most data)?",
+      "choices": [
+        "10-20",
+        "20-30",
+        "30-40",
+        "40-50"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Find the bin with the highest frequency (tallest bar).",
+        "30-40 has 18 — the highest."
+      ],
+      "explanation": "The MODAL CLASS is the bin with the highest frequency (the tallest bar). With 18 students, 30-40 is the modal class. The mode itself for grouped data is typically taken as the midpoint of this class (≈ 35).",
+      "steps": [
+        "**Recognize the type — reading a histogram.** The 'mode' for grouped data is the bin with the highest frequency, called the *modal class*.",
+        { "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"30\" y1=\"170\" x2=\"300\" y2=\"170\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><line x1=\"30\" y1=\"170\" x2=\"30\" y2=\"20\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><rect x=\"30\" y=\"145\" width=\"50\" height=\"25\" fill=\"#bfdbfe\" stroke=\"#1e3a8a\" stroke-width=\"1.2\"/><rect x=\"80\" y=\"110\" width=\"50\" height=\"60\" fill=\"#bfdbfe\" stroke=\"#1e3a8a\" stroke-width=\"1.2\"/><rect x=\"130\" y=\"80\" width=\"50\" height=\"90\" fill=\"#fca5a5\" stroke=\"#b91c1c\" stroke-width=\"2\"/><rect x=\"180\" y=\"125\" width=\"50\" height=\"45\" fill=\"#bfdbfe\" stroke=\"#1e3a8a\" stroke-width=\"1.2\"/><rect x=\"230\" y=\"140\" width=\"50\" height=\"30\" fill=\"#bfdbfe\" stroke=\"#1e3a8a\" stroke-width=\"1.2\"/><text x=\"55\" y=\"185\" font-size=\"10\" fill=\"#475569\" text-anchor=\"middle\">10-20</text><text x=\"105\" y=\"185\" font-size=\"10\" fill=\"#475569\" text-anchor=\"middle\">20-30</text><text x=\"155\" y=\"185\" font-size=\"10\" font-weight=\"700\" fill=\"#b91c1c\" text-anchor=\"middle\">30-40</text><text x=\"205\" y=\"185\" font-size=\"10\" fill=\"#475569\" text-anchor=\"middle\">40-50</text><text x=\"255\" y=\"185\" font-size=\"10\" fill=\"#475569\" text-anchor=\"middle\">50-60</text><text x=\"55\" y=\"140\" font-size=\"10\" fill=\"#0f172a\" text-anchor=\"middle\">5</text><text x=\"105\" y=\"105\" font-size=\"10\" fill=\"#0f172a\" text-anchor=\"middle\">12</text><text x=\"155\" y=\"75\" font-size=\"11\" font-weight=\"700\" fill=\"#b91c1c\" text-anchor=\"middle\">18</text><text x=\"205\" y=\"120\" font-size=\"10\" fill=\"#0f172a\" text-anchor=\"middle\">9</text><text x=\"255\" y=\"135\" font-size=\"10\" fill=\"#0f172a\" text-anchor=\"middle\">6</text><text x=\"60\" y=\"40\" font-size=\"11\" fill=\"#475569\" font-style=\"italic\">modal class = tallest bar = 30-40</text></svg>" },
+        "**Find the tallest bar.** Frequencies: 5, 12, 18, 9, 6. Maximum: 18 → bin 30-40.",
+        "**(Estimate the mode itself if needed.)** For grouped data, the *modal value* is typically reported as the midpoint of the modal class: $(30 + 40)/2 = 35$. (More precise formulas refine this using the neighbors' frequencies.)"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q14",
+      "type": "multiple-choice",
+      "prompt": "In a scatterplot, points cluster tightly around a line going from upper-left to lower-right. What does this indicate?",
+      "choices": [
+        "Strong positive correlation",
+        "Strong negative correlation",
+        "No correlation",
+        "A curved (non-linear) relationship"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Upper-left to lower-right means: as $x$ increases, $y$ decreases.",
+        "That's negative correlation. The tight clustering indicates a STRONG one."
+      ],
+      "explanation": "Going from upper-left to lower-right means $y$ DECREASES as $x$ increases — that's negative correlation. The tight clustering near a line says the relationship is strong (close to linear). Numerically, this would correspond to a Pearson correlation coefficient $r$ near $-1$.",
+      "steps": [
+        "**Recognize the shape.** Direction (positive/negative) is the slope direction. Tightness (strong/weak) is how closely points hug the line.",
+        "**Upper-left → lower-right.** As $x$ moves right, $y$ moves down. Negative slope → negative correlation.",
+        "**Tight clustering.** Points right on the line ⇒ strong relationship.",
+        "**Numerical scale (Pearson $r$).** $r = +1$: perfect positive line. $r = 0$: no linear relationship. $r = -1$: perfect negative line. Tight upper-left → lower-right ≈ $r \\approx -0.9$ or stronger.",
+        "**Pattern lesson — don't confuse correlation with causation.** $r$ describes association, NOT cause. Two correlated variables may share a common cause without one causing the other. Always interpret scatterplots in context."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q15",
+      "type": "multiple-choice",
+      "prompt": "Which display is BEST for showing monthly average temperature in a city over 12 months?",
+      "choices": [
+        "Pie chart",
+        "Line graph",
+        "Histogram",
+        "Stem-and-leaf plot"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Time-series data wants to emphasize the trend over time.",
+        "Line graphs connect successive time points, making the seasonal cycle visible."
+      ],
+      "explanation": "*Time-series* data (measurements at successive points in time) is best shown by a line graph. The connecting lines emphasize the seasonal pattern. Pie charts are for proportions; histograms collapse the time axis; stem-and-leaf is for individual values without time order.",
+      "steps": [
+        "**Recognize the data type — time series.** One variable measured at successive time points. The natural emphasis is the trend or cycle over time.",
+        "**Line graph.** Plot temperature on the y-axis vs month on the x-axis. Connect consecutive months. The line makes seasonal patterns (summer peak, winter trough) instantly visible.",
+        "**Why not the others?** Pie chart loses time order entirely. Histogram bins the temperature values, losing which month each came from. Stem-and-leaf lists values but doesn't convey time order well either.",
+        "**Pattern lesson — match display to story.** Time series → line. Comparing groups → side-by-side box plots or bar charts. Distribution shape → histogram. Two-variable relationship → scatterplot. Parts of a whole → pie chart or stacked bar."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q16",
+      "type": "multiple-choice",
+      "prompt": "A bar chart of company quarterly sales has a y-axis starting at $90 million (not $0), making three bars at $92M, $95M, $98M look dramatically different. This chart is:",
+      "choices": [
+        "Acceptable — y-axis scale is the author's choice",
+        "Misleading — the visual differences are exaggerated by the broken axis; relative size of bars suggests bigger differences than the data shows",
+        "Required for clarity",
+        "A statistical convention"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Visually, the bar at $98M would look ~3× taller than the bar at $92M with a y-axis starting at $90.",
+        "But the actual difference is only ~6% — a much smaller story than the visuals suggest."
+      ],
+      "explanation": "A 'broken axis' (one that doesn't start at zero) exaggerates visual differences. A bar at $92M vs $98M with y-axis at $90 looks like 1 unit vs 8 units — an 8× visual ratio for a 6% actual difference. Honest data displays start the y-axis at zero (or clearly label the truncation).",
+      "steps": [
+        "**The trick — y-axis doesn't start at 0.** With y-axis starting at $90M, a bar at $92M has visible height '2', a bar at $98M has height '8'. The visual ratio is 4×.",
+        "**Compare to a zero-start axis.** Bar heights would be $92$ and $98$ — a $1.065×$ ratio. The story is 'modest 6% growth', not '4× growth'.",
+        "**When to flag.** Bar charts and column charts almost always want a zero-start y-axis. Line graphs sometimes use non-zero starts (when small relative changes matter), but always label the convention explicitly.",
+        "**Real-world consequences.** Manipulated y-axes have been used to overstate election results, drug-trial outcomes, and economic recoveries. Always check the y-axis range before believing the visual.",
+        "**Pattern lesson — be a skeptical reader.** Look at the axis numbers, not just the visual. Visualization can lie even when the underlying numbers are correct."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q17",
+      "type": "numeric",
+      "promptTex": "\\text{Stem-and-leaf plot:} \\\\ 2 | 1\\;\\;3\\;\\;5 \\\\ 3 | 0\\;\\;2\\;\\;4\\;\\;7\\;\\;9 \\\\ 4 | 1\\;\\;6\\;\\;8 \\\\ \\text{Find the median.}",
+      "answer": 34,
+      "tolerance": 0,
+      "hints": [
+        "Decode: 21, 23, 25, 30, 32, 34, 37, 39, 41, 46, 48 — 11 values.",
+        "Odd count → median is the 6th value = 34."
+      ],
+      "explanation": "Decoding the leaves: $21, 23, 25, 30, 32, 34, 37, 39, 41, 46, 48$ — eleven values (already sorted). Median = middle = 6th value = 34.",
+      "steps": [
+        "**Decode the plot.** Each stem-leaf combination is one data value. Stem 2 + leaves 1, 3, 5 → values 21, 23, 25. Continuing: 30, 32, 34, 37, 39, 41, 46, 48.",
+        "**Count.** $3 + 5 + 3 = 11$ values total.",
+        "**Identify median position.** 11 values, sorted (stem-and-leaf is inherently sorted). Odd count → median is the *middle* value = the 6th.",
+        "**Read it off.** 6th value: 21, 23, 25, 30, 32, **34**, 37, 39, 41, 46, 48. Median = 34.",
+        "**Why stem-and-leaf is great for medians.** Data is already sorted, individual values are preserved. You can read off the median, quartiles, range, and quickly spot duplicates — without any computation."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q18",
+      "type": "multiple-choice",
+      "prompt": "A pie chart is most appropriate for displaying:",
+      "choices": [
+        "Numerical changes over time",
+        "Proportions of a single whole (e.g., percentage of a budget spent on each category)",
+        "Two-variable relationships (e.g., height vs weight)",
+        "Distribution shape of continuous data"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "A pie shows slices summing to a whole — parts of one total.",
+        "Time series → line graph. Two variables → scatterplot. Distribution → histogram."
+      ],
+      "explanation": "Pie charts show parts of a single whole — slices that sum to 100%. They're appropriate when you have categorical proportions of one quantity (budget breakdown, market share, demographic percentages). They're poor for time series, distributions of continuous data, or comparing two variables.",
+      "steps": [
+        "**When pie charts work.** Categorical data that adds up to a whole, with a small number of categories (≤ 6 or so) and meaningful proportional differences.",
+        "**When they fail.**\n\n• Too many slices (>7) — hard to compare.\n• Slices of similar size — hard to rank visually.\n• Time series — pies don't show progression.\n• Numerical (non-categorical) data — better suited to histograms or box plots.\n• Comparing multiple wholes — better as stacked or grouped bar charts.",
+        "**Modern criticism.** Many data-viz experts (e.g., Edward Tufte) actively discourage pie charts: humans compare angles and areas worse than they compare lengths. A bar chart of the same data is usually more readable. But for small, well-known proportions (a budget breakdown), pies remain widely used for cultural familiarity.",
+        "**Pattern lesson — match display to question.** 'How is this whole broken up?' → pie. 'How has it changed?' → line. 'How is it distributed?' → histogram. Different questions need different charts."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q19",
+      "type": "multiple-choice",
+      "prompt": "An OGIVE (cumulative frequency curve) is best used to:",
+      "choices": [
+        "Show three distributions side by side",
+        "Read off percentiles, quartiles, or 'how many data points fall below value X'",
+        "Display categorical proportions",
+        "Plot two variables against each other"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "An ogive shows cumulative frequency vs value — always increasing.",
+        "At any value $x$, the height = how many points are ≤ $x$. So you can read off percentiles."
+      ],
+      "explanation": "An ogive plots cumulative frequency against the variable, producing an upward-rising curve from 0% to 100%. At any point on the curve, the height gives the fraction (or count) of data at or below that value. Pull horizontally at 50% to read off the median; at 25% → Q1; at 90% → 90th percentile.",
+      "steps": [
+        "**What an ogive shows.** x-axis: variable value. y-axis: cumulative frequency (or relative cumulative percentage). The curve always rises monotonically from $0$ to $n$ (or 0% to 100%).",
+        "**How to read it.** Pick a percentile on the y-axis → draw a horizontal line → drop down to the x-axis → that's the value at that percentile.",
+        "**Reverse direction.** Pick a value on the x-axis → go up to the curve → over to the y-axis → that fraction of data is at or below the chosen value.",
+        "**When to use.** Quick visual reading of percentiles. Great for class grade thresholds (e.g., 'top 10% of scores are above what value?').",
+        "**Pattern lesson.** Ogive is to percentiles what a histogram is to frequencies. Same data, two complementary views."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q20",
+      "type": "multiple-choice",
+      "prompt": "A survey of 200 people asks 'what is your favorite breakfast food?' (categorical responses: pancakes, eggs, cereal, oatmeal, smoothie). The BEST display is:",
+      "choices": [
+        "Histogram",
+        "Bar chart",
+        "Box plot",
+        "Scatterplot"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Categorical data — distinct, unordered groups → BAR chart (with gaps).",
+        "Histograms are for NUMERICAL data binned into ranges."
+      ],
+      "explanation": "Categorical responses (no ordering, no arithmetic) call for a bar chart — one bar per category, with gaps between bars to emphasize discreteness. Histograms are for *numerical* data; the lack of gaps emphasizes continuity. Box plots and scatterplots both require numerical data.",
+      "steps": [
+        "**Identify the data type.** Favorite breakfast = nominal categorical. No order, no arithmetic.",
+        "**Match the display.** Categorical → bar chart. Numerical (continuous) → histogram. Two numerical variables → scatterplot. One numerical variable's distribution → box plot or histogram.",
+        "**Why gaps matter.** A bar chart leaves gaps between bars because the categories are *separate things*, not adjacent ranges on a number line. A histogram has touching bars because the bins are adjacent intervals.",
+        "**A subtle improvement — Pareto chart.** A bar chart with bars sorted from tallest to shortest. Even faster scanning for 'most popular'. Same data, smarter order.",
+        "**Pattern lesson — first ask what the data is.** Numerical vs categorical, ordered vs unordered, one variable vs many. The right display follows from the answer."
+      ],
+      "difficulty": "easy"
+    }
+  ]
+}

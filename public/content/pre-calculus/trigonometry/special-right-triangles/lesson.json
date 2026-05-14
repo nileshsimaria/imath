@@ -1,0 +1,130 @@
+{
+  "title": "Special Right Triangles",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "## 45-45-90 Triangles"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "A **45-45-90 triangle** is a right triangle whose two acute angles are both $45°$. Because the angles opposite the two legs are equal, the legs themselves are equal — it's an isosceles right triangle.",
+        "These triangles show up so often that it's worth memorizing their side ratios so you don't need a calculator."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The 45-45-90 ratio",
+      "body": "If each leg has length $x$, the hypotenuse has length $x\\sqrt{2}$. Side ratio: $1 : 1 : \\sqrt{2}$."
+    },
+    {
+      "type": "math",
+      "tex": "\\text{leg} : \\text{leg} : \\text{hypotenuse} = x : x : x\\sqrt{2}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why $\\sqrt{2}$?",
+        "Apply the Pythagorean theorem to legs $x, x$:",
+        "$$\\text{hyp}^2 = x^2 + x^2 = 2x^2 \\;\\Longrightarrow\\; \\text{hyp} = x\\sqrt{2}$$"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Three patterns to recognize",
+        "**Given a leg ($x$):** the other leg is also $x$, and the hypotenuse is $x\\sqrt{2}$.",
+        "**Given the hypotenuse ($h$):** each leg is $\\dfrac{h}{\\sqrt{2}} = \\dfrac{h\\sqrt{2}}{2}$.",
+        "**Trig values to remember:** $\\sin 45° = \\cos 45° = \\dfrac{\\sqrt{2}}{2}$, $\\tan 45° = 1$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 1 — leg → hypotenuse",
+        "A 45-45-90 triangle has each leg of length $5$. Find the hypotenuse.",
+        "$$\\text{hyp} = 5 \\cdot \\sqrt{2} = 5\\sqrt{2} \\approx 7.07$$"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 2 — hypotenuse → leg",
+        "Hypotenuse $= 10$. Find the legs.",
+        "$$\\text{leg} = \\dfrac{10}{\\sqrt{2}} = \\dfrac{10\\sqrt{2}}{2} = 5\\sqrt{2} \\approx 7.07$$"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Rationalizing $\\dfrac{1}{\\sqrt{2}}$",
+      "body": "Multiply top and bottom by $\\sqrt{2}$: $\\dfrac{1}{\\sqrt{2}} = \\dfrac{1}{\\sqrt{2}} \\cdot \\dfrac{\\sqrt{2}}{\\sqrt{2}} = \\dfrac{\\sqrt{2}}{2}$. Both forms are correct; the rationalized form is the conventional one."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 30-60-90 Triangles"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "A **30-60-90 triangle** has acute angles of $30°$ and $60°$. Like the 45-45-90, its sides come in a fixed ratio — and the ratio gives you exact answers without a calculator.",
+        "The fastest way to *see* it: take an equilateral triangle with side $2$ and drop a perpendicular from a vertex to the opposite side. You split it into two 30-60-90 triangles."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The 30-60-90 ratio",
+      "body": "Side opposite $30° : $ Side opposite $60° :$ hypotenuse  $= 1 : \\sqrt{3} : 2$."
+    },
+    {
+      "type": "math",
+      "tex": "\\text{short leg} : \\text{long leg} : \\text{hypotenuse} = x : x\\sqrt{3} : 2x"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Memorize this layout",
+        "**Short leg** is **opposite the $30°$ angle** — call it $x$.",
+        "**Long leg** is **opposite the $60°$ angle** — it's $x\\sqrt{3}$.",
+        "**Hypotenuse** is **opposite the $90°$ angle** — it's $2x$.",
+        "(The smaller angle is across from the smaller side. Always.)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Three patterns",
+        "**Given the short leg ($x$):** long leg $= x\\sqrt{3}$, hyp $= 2x$.",
+        "**Given the long leg ($\\ell$):** short leg $= \\dfrac{\\ell}{\\sqrt{3}} = \\dfrac{\\ell\\sqrt{3}}{3}$; hyp $= 2 \\cdot \\dfrac{\\ell}{\\sqrt{3}}$.",
+        "**Given the hypotenuse ($h$):** short leg $= \\dfrac{h}{2}$; long leg $= \\dfrac{h}{2} \\cdot \\sqrt{3}$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Key trig values",
+        "From a 30-60-90 triangle with short leg $1$, long leg $\\sqrt{3}$, hyp $2$:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\sin 30° = \\tfrac{1}{2} \\quad \\cos 30° = \\tfrac{\\sqrt{3}}{2} \\quad \\tan 30° = \\tfrac{1}{\\sqrt{3}} = \\tfrac{\\sqrt{3}}{3}"
+    },
+    {
+      "type": "math",
+      "tex": "\\sin 60° = \\tfrac{\\sqrt{3}}{2} \\quad \\cos 60° = \\tfrac{1}{2} \\quad \\tan 60° = \\sqrt{3}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example",
+        "A 30-60-90 triangle has hypotenuse $14$. Find the two legs.",
+        "$$\\text{short leg} = \\dfrac{14}{2} = 7$$",
+        "$$\\text{long leg} = 7\\sqrt{3} \\approx 12.12$$"
+      ]
+    }
+  ]
+}

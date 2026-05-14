@@ -1,0 +1,91 @@
+{
+  "title": "Time, Speed & Distance",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### The fundamental triangle",
+        "$\\text{Distance} = \\text{Speed} \\times \\text{Time}$",
+        "Or, rearranged: $\\text{Speed} = \\dfrac{\\text{Distance}}{\\text{Time}}$ and $\\text{Time} = \\dfrac{\\text{Distance}}{\\text{Speed}}$.",
+        "This trio governs every problem involving motion. The art is in setting up the units and choosing which version to use."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Critical unit conversions",
+      "body": "**km/hr ↔ m/s:**\n\n$1\\, \\text{km/hr} = \\dfrac{1000}{3600} \\,\\text{m/s} = \\dfrac{5}{18}\\, \\text{m/s}$.\n\n$1\\, \\text{m/s} = \\dfrac{18}{5}\\, \\text{km/hr} = 3.6 \\,\\text{km/hr}$.\n\n**Memorize:** multiply by $5/18$ to convert km/hr → m/s. Multiply by $18/5$ for the reverse. This is the #1 cause of wrong answers in time-speed-distance problems."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Average speed (subtle)",
+        "For a single journey at constant speed, average speed = that speed. But when speed *changes*, use:",
+        "$\\text{Average speed} = \\dfrac{\\text{Total distance}}{\\text{Total time}}$",
+        "**NOT** the simple average of speeds.",
+        "**Example.** Travel from A to B at 40 km/h and return from B to A at 60 km/h. Average speed for the round trip?",
+        "**Wrong:** $(40 + 60)/2 = 50$ km/h.",
+        "**Right:** Let distance one-way = $d$. Time A→B = $d/40$. Time B→A = $d/60$. Total distance = $2d$. Total time = $d/40 + d/60 = d(3 + 2)/120 = 5d/120 = d/24$.",
+        "Average speed = $\\dfrac{2d}{d/24} = 48$ km/h."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Harmonic-mean shortcut for equal distances",
+      "body": "When the same **distance** is covered at two different speeds $u$ and $v$:\n\n$\\text{Average speed} = \\dfrac{2uv}{u + v}$\n\nFor $u = 40, v = 60$: $\\dfrac{2 \\cdot 40 \\cdot 60}{100} = 48$ km/h. ✓\n\nThis is the **harmonic mean** of the two speeds. Slower than the arithmetic mean — you spend more time at the slower speed, which drags the average down."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Relative speed",
+        "Two objects move on the same road.",
+        "**Same direction:** relative speed = $|v_1 - v_2|$ (slower's frame).",
+        "**Opposite directions** (towards each other): relative speed = $v_1 + v_2$.",
+        "**Example.** Two cars approach each other from 200 km apart, at 60 and 40 km/h. When do they meet?",
+        "Relative speed = $100$ km/h. Time to close 200 km = $200/100 = 2$ hours."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Train problems",
+        "A train has length. Crossing a stationary point (pole, person, signal) takes $\\dfrac{\\text{train length}}{\\text{speed}}$ time. Crossing something with length (platform, bridge, another train) takes $\\dfrac{\\text{train length} + \\text{other length}}{\\text{relative speed}}$.",
+        "**Crossing a pole:** distance = train's length.",
+        "**Crossing a platform of length $L$:** distance = train + platform = $L_\\text{train} + L$.",
+        "**Crossing another train:** distance = sum of lengths. Use relative speed.",
+        "**Example.** A 150 m train at 54 km/h crosses a 250 m platform. Time?",
+        "Convert speed: $54 \\times 5/18 = 15$ m/s.",
+        "Total distance to cover: $150 + 250 = 400$ m.",
+        "Time = $400/15 \\approx 26.67$ s."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Boats in streams",
+      "body": "A boat's speed in still water is $u$ km/h. A stream flows at $v$ km/h.\n\n**Downstream** (with the stream): effective speed = $u + v$.\n**Upstream** (against the stream): effective speed = $u - v$.\n\nGiven downstream speed $d$ and upstream speed $u$:\n- Speed in still water = $(d + u)/2$.\n- Speed of stream = $(d - u)/2$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — boats",
+        "A boat takes 4 hours downstream and 6 hours upstream to cover the same 36 km.",
+        "Find speed of boat in still water and speed of stream.",
+        "Downstream speed = $36/4 = 9$ km/h.",
+        "Upstream speed = $36/6 = 6$ km/h.",
+        "Boat's still-water speed = $(9 + 6)/2 = 7.5$ km/h.",
+        "Stream's speed = $(9 - 6)/2 = 1.5$ km/h."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Catching up and meeting problems",
+        "**Catching up** (same direction, different speeds).",
+        "Faster-by-X km/h. Slower starts T hours earlier. When does fast catch up?",
+        "Slower's head-start distance = (slower speed) × T. Fast closes at relative speed = (faster − slower). Catch-up time = head-start / relative speed.",
+        "**Example.** A leaves at 9 AM at 50 km/h. B leaves at 10 AM at 70 km/h. When does B catch A?",
+        "At 10 AM, A is 50 km ahead. B closes at $70 - 50 = 20$ km/h. Catch-up time: $50/20 = 2.5$ h.",
+        "**B catches A at 12:30 PM.** Distance from start: $A$ has gone $50 \\times 3.5 = 175$ km; $B$ has gone $70 \\times 2.5 = 175$ km ✓."
+      ]
+    }
+  ]
+}

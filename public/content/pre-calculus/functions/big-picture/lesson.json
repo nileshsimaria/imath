@@ -1,0 +1,104 @@
+{
+  "title": "Functions: The Big Picture",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Before formulas, before $f(x)$, before graphs — what *is* a function really? Strip away the notation and you are left with one idea: **a function is a rule that links two varying quantities**, so that fixing the first one pins down the second.",
+        "The cleanest place to see this is something everyone has experienced — walking up a trail."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### A hike up a mountain",
+        "Imagine a marked hiking trail. At every kilometer mark along the path, there's some elevation above sea level: maybe a gentle valley near the start, a steep climb in the middle, a saddle in the ridge, a peak. **For every position you stand at, the mountain hands you back exactly one number — your elevation.**",
+        "Drag the hiker below."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "trail-function",
+      "config": {
+        "mode": "single",
+        "trail": "two-peaks",
+        "probeX": 4
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "Two quantities are varying here: **distance along the trail** (somewhere between 0 and 10 km) and **elevation** (a number on the meter on the right). The dashed lines and curved arrow show exactly what the function does: it takes your position, looks it up, and replies with one specific elevation.",
+        "We say *distance* is the **input** and *elevation* is the **output**. Or in fancier language: distance is the **independent variable** (the hiker chooses it) and elevation is the **dependent variable** (the mountain decides it)."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The defining rule",
+      "body": "A function assigns **exactly one output to each input.** Two different elevations for the same trail marker — and you'd no longer have a function. A hiker standing at km 6.0 cannot simultaneously be at two altitudes."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Many inputs, one mapping",
+        "Below, every kilometer marker is connected to its elevation by a colored arc. This is the whole function drawn at once — a fat bundle of input → output pairings, one arrow per input."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "trail-function",
+      "config": {
+        "mode": "all",
+        "trail": "two-peaks"
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "Notice that some *outputs* are reached by more than one input — coming up one side of a peak you pass elevation 800 m, and you pass it again coming down the other side. Two km-markers map to the same elevation. That is **allowed**. The rule only says \"one arrow leaves each input\"; it says nothing about how many arrive at each output."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Different trails, different functions",
+        "Same input set (positions from 0 to 10 km). Same kind of output (meters above sea level). But the *rule* — what elevation each km-marker maps to — can be totally different from one trail to another. Try the buttons below."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "trail-function",
+      "config": {
+        "mode": "compare",
+        "trail": "rolling-hills"
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "The hiker stands at km 5 in every case, but the ground beneath their feet — the elevation the function assigns to that input — changes completely depending on which rule is in play. *That* is what people mean by \"a different function\"."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Three words to remember",
+      "body": "**Variable** — a measurable quantity that varies. **Function** — a rule pairing one variable's value with another's. **Input / Output** — the *direction* of the rule. Most students lose the plot in calculus not because the formulas are hard, but because they never built a feel for these three words."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### From mountains to formulas",
+        "When you later write $f(x) = x^2 + 1$, you're doing the same thing in symbols. The formula is just a compact way to describe a rule:",
+        "**'Whatever number you hand me, I square it and add 1.'**",
+        "$f$ is the rule, $x$ is the input, $f(x)$ is the output. The whole function is the *entire* collection of input-output pairs the rule produces — exactly like the whole elevation profile of a trail."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Where this leads",
+        "Once you internalize 'function = rule between two variables', the rest of pre-calculus is just *cataloguing* different kinds of rules — linear, polynomial, rational, exponential, logarithmic, trigonometric. And calculus is the study of **how outputs respond when inputs change a tiny bit** (derivatives — the *steepness* of the trail) and **how outputs accumulate as inputs sweep through a range** (integrals — the *area* swept out under the trail). All built on this one picture."
+      ]
+    }
+  ]
+}

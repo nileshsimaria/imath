@@ -1,0 +1,215 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{The diameter of a circle is 14. What is the radius?}",
+      "answer": 7,
+      "tolerance": 0,
+      "hints": [
+        "$d = 2r$, so $r = d/2$.",
+        "$14 / 2$."
+      ],
+      "explanation": "$r = d / 2 = 14 / 2 = 7$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The circumference of a circle with radius 5 is approximately:}",
+      "choices": [
+        "15.7",
+        "31.4",
+        "78.5",
+        "10π"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$C = 2\\pi r$.",
+        "$2 \\cdot \\pi \\cdot 5 \\approx 31.4$."
+      ],
+      "explanation": "$C = 2\\pi r = 2\\pi(5) = 10\\pi \\approx 31.4$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which is the longest chord of a circle?}",
+      "choices": [
+        "Any chord through the center",
+        "The radius",
+        "The arc",
+        "The sector"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "What's the special name for a chord through the center?",
+        "Diameter — the longest possible chord."
+      ],
+      "explanation": "A chord through the center is the **diameter**, and it's the longest possible chord of the circle. Any chord that doesn't pass through the center is shorter.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{The area of a circle with } r = 4 \\text{ is exactly } k\\pi. \\text{ Find } k.",
+      "answer": 16,
+      "tolerance": 0,
+      "hints": [
+        "$A = \\pi r^2$.",
+        "$\\pi \\cdot 4^2 = 16\\pi$."
+      ],
+      "explanation": "$A = \\pi r^2 = \\pi(4)^2 = 16\\pi$. So $k = 16$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If you double a circle's radius, its area:}",
+      "choices": [
+        "Doubles",
+        "Triples",
+        "Quadruples",
+        "Stays the same"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "$A = \\pi r^2$.",
+        "Doubling $r$ multiplies $r^2$ by $4$."
+      ],
+      "explanation": "$A = \\pi r^2$. If you replace $r$ with $2r$, you get $\\pi (2r)^2 = 4\\pi r^2$ — **four times** the original area. Linear scale by 2 → area scale by $2^2 = 4$.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A circle has radius } 7. \\text{ Find its circumference} \\\\ \\text{(use } \\pi \\approx 3.14159; \\text{ round to 2 decimals).}",
+      "answer": 43.98,
+      "tolerance": 0.05,
+      "hints": [
+        "$C = 2\\pi r$.",
+        "$2\\pi \\cdot 7 = 14\\pi \\approx 43.98$."
+      ],
+      "explanation": "$C = 2\\pi r = 14\\pi \\approx 43.98$.",
+      "steps": [
+        "Circumference formula: $C = 2\\pi r$.",
+        "$C = 2\\pi (7) = 14\\pi$.",
+        "$\\approx 14 \\cdot 3.14159 \\approx 43.98$."
+      ],
+      "id": "q6",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A circle has area } 78.54 \\text{ cm}^2. \\text{ Find its radius} \\\\ \\text{(round to 2 decimals).}",
+      "answer": 5,
+      "tolerance": 0.05,
+      "hints": [
+        "$A = \\pi r^2$, so $r = \\sqrt{A/\\pi}$.",
+        "$\\sqrt{78.54 / 3.14159} = \\sqrt{25} = 5$."
+      ],
+      "explanation": "$r = \\sqrt{78.54 / \\pi} = \\sqrt{25} = 5$ cm.",
+      "steps": [
+        "Area formula: $A = \\pi r^2$.",
+        "Solve for $r$: $r = \\sqrt{A / \\pi}$.",
+        "$r = \\sqrt{78.54 / 3.14159} = \\sqrt{25} = 5$ cm."
+      ],
+      "id": "q7",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A circle has diameter } 18 \\text{ inches.} \\\\ \\text{What is its area (use } \\pi \\approx 3.14159; \\text{ round to 1 decimal)?}",
+      "answer": 254.5,
+      "tolerance": 0.5,
+      "hints": [
+        "Radius = diameter/2 = 9. Then $A = \\pi r^2 = 81\\pi$.",
+        "$81 \\cdot 3.14159 \\approx 254.5$."
+      ],
+      "explanation": "$r = 9$. $A = 81\\pi \\approx 254.5$ in².",
+      "steps": [
+        "Diameter $18$ → radius $r = 9$.",
+        "$A = \\pi r^2 = \\pi \\cdot 81 = 81\\pi$.",
+        "$\\approx 81 \\cdot 3.14159 \\approx 254.5$ in²."
+      ],
+      "id": "q8",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Two concentric circles have radii } 5 \\text{ and } 8. \\\\ \\text{Find the area of the ring between them (round to 2 decimals).}",
+      "answer": 122.52,
+      "tolerance": 0.1,
+      "hints": [
+        "Outer area − inner area.",
+        "$\\pi(8^2 - 5^2) = \\pi(64 - 25) = 39\\pi$."
+      ],
+      "explanation": "$A = \\pi(64 - 25) = 39\\pi \\approx 122.52$.",
+      "steps": [
+        "The ring (annulus) area = outer area − inner area.",
+        "$A = \\pi R^2 - \\pi r^2 = \\pi(R^2 - r^2)$.",
+        "$= \\pi(8^2 - 5^2) = \\pi(64 - 25) = 39\\pi$.",
+        "$\\approx 39 \\cdot 3.14159 \\approx 122.52$."
+      ],
+      "id": "q9",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{If you double a circle's radius, what happens to its area?}",
+      "choices": [
+        "doubles",
+        "triples",
+        "quadruples",
+        "stays the same"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "$A = \\pi r^2$. Doubling $r$ → multiplies $A$ by $2^2 = 4$.",
+        "Quadruples!"
+      ],
+      "explanation": "$A \\propto r^2$, so doubling the radius multiplies the area by $4$.",
+      "steps": [
+        "Area formula: $A = \\pi r^2$.",
+        "If new $r = 2r$: $A_{\\text{new}} = \\pi(2r)^2 = 4\\pi r^2 = 4A$.",
+        "**Area quadruples.** (Generally, if $r$ scales by $k$, $A$ scales by $k^2$.)"
+      ],
+      "id": "q10",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A pizza has a } 16\\text{-inch diameter.} \\\\ \\text{What is its area (round to nearest in}^2)?",
+      "answer": 201,
+      "tolerance": 1,
+      "hints": [
+        "Radius = 8. Area $= \\pi r^2 = 64\\pi$.",
+        "$\\approx 201$ in²."
+      ],
+      "explanation": "$A = \\pi (8)^2 = 64\\pi \\approx 201$ in².",
+      "steps": [
+        "Diameter $16$ → radius $r = 8$ in.",
+        "Area: $A = \\pi r^2 = 64\\pi \\approx 201.06$ in².",
+        "Rounded: **201 in².**"
+      ],
+      "id": "q11",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A circle has circumference } 31.42 \\text{ cm.} \\\\ \\text{What is its radius (round to 2 decimals)?}",
+      "answer": 5,
+      "tolerance": 0.05,
+      "hints": [
+        "$C = 2\\pi r$, so $r = C/(2\\pi)$.",
+        "$31.42 / (2 \\cdot 3.14159) \\approx 5$."
+      ],
+      "explanation": "$r = C / (2\\pi) = 31.42 / 6.28318 \\approx 5$ cm.",
+      "steps": [
+        "Solve $C = 2\\pi r$ for $r$: $$r = \\dfrac{C}{2\\pi}$$",
+        "Substitute: $r = \\dfrac{31.42}{2\\pi} \\approx \\dfrac{31.42}{6.2832} \\approx 5$ cm."
+      ],
+      "id": "q12",
+      "difficulty": "medium"
+    }
+  ]
+}

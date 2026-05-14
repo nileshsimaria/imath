@@ -1,0 +1,72 @@
+{
+  "title": "The Fibonacci Sequence",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### A sequence born from rabbits",
+        "In 1202, the Italian mathematician Leonardo of Pisa — better known as **Fibonacci** — posed a puzzle: if rabbits never die and a pair produces one new pair each month after maturing, how many pairs are there in $n$ months?",
+        "Counting carefully gives:",
+        "$1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, \\ldots$",
+        "**Each term is the sum of the previous two.** That's the Fibonacci sequence."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\boxed{\\;F_n = F_{n-1} + F_{n-2}, \\quad F_1 = F_2 = 1\\;}"
+    },
+    {
+      "type": "widget",
+      "kind": "fibonacci-spiral",
+      "config": {
+        "n": 7,
+        "show": "tiles-and-numbers"
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "Slide the **Terms** slider to vary how many squares are drawn. Each square has side length equal to the corresponding Fibonacci number. Notice the squares nest perfectly into a growing rectangle — every Fibonacci square sits along the long edge of the previous rectangle. That's a direct geometric consequence of $F_n = F_{n-1} + F_{n-2}$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Why squares fit so nicely",
+      "body": "Look at any two consecutive Fibonacci numbers, say $5$ and $8$. They form a $5 \\times 8$ rectangle. Glue an $8 \\times 8$ square onto the long edge → you now have a $13 \\times 8$ rectangle. The new long edge is $13$ — the next Fibonacci number.\n\nIn general: after a $(F_{n-1}) \\times (F_n)$ rectangle, attach an $F_n \\times F_n$ square to the long edge, producing a $(F_n) \\times (F_{n+1})$ rectangle. The dimensions march along the sequence."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### A few values to memorize",
+        "$F_1 = 1, F_2 = 1, F_3 = 2, F_4 = 3, F_5 = 5,$",
+        "$F_6 = 8, F_7 = 13, F_8 = 21, F_9 = 34, F_{10} = 55,$",
+        "$F_{11} = 89, F_{12} = 144, F_{13} = 233, \\ldots$",
+        "Knowing these by heart is worth your while — they pop up everywhere."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Cool identities",
+      "body": "Some neat patterns inside the sequence:\n\n**Sum of the first $n$ Fibonacci numbers:** $F_1 + F_2 + \\cdots + F_n = F_{n+2} - 1$.\nExample: $1+1+2+3+5+8 = 20 = 21 - 1 = F_8 - 1$. ✓\n\n**Sum of squares:** $F_1^2 + F_2^2 + \\cdots + F_n^2 = F_n \\cdot F_{n+1}$.\nExample: $1 + 1 + 4 + 9 + 25 = 40 = 5 \\cdot 8 = F_5 \\cdot F_6$. ✓\n\n**Every third Fibonacci number is even.** $F_3 = 2, F_6 = 8, F_9 = 34, \\ldots$\n**Every fourth one is divisible by 3.** $F_4 = 3, F_8 = 21, F_{12} = 144, \\ldots$\n\nIn general, $\\gcd(F_m, F_n) = F_{\\gcd(m, n)}$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Where Fibonacci numbers show up",
+        "**Plants.** Sunflower seeds, pine cone scales, and pineapple eyes are arranged in spirals — and the number of spirals (going each way) is almost always two consecutive Fibonacci numbers.",
+        "**Flower petals.** Lilies have 3, buttercups 5, delphiniums 8, marigolds 13, asters 21, daisies often 34 or 55 or 89. All Fibonacci.",
+        "**Honeybee ancestry.** Male bees have one parent, female bees have two. Trace a male bee's ancestry generation by generation: the number of ancestors is the Fibonacci sequence.",
+        "**Stock market analysis.** Technical traders use 'Fibonacci retracements' to identify support/resistance levels. (How well it works is debated.)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Closed-form (Binet's formula)",
+        "It's possible to compute any Fibonacci number directly without going through all the earlier ones:",
+        "$F_n = \\dfrac{\\phi^n - \\psi^n}{\\sqrt{5}}, \\quad \\phi = \\dfrac{1 + \\sqrt{5}}{2}, \\quad \\psi = \\dfrac{1 - \\sqrt{5}}{2}.$",
+        "where $\\phi \\approx 1.618$ (the golden ratio — next lesson!) and $\\psi \\approx -0.618$. Because $|\\psi| < 1$, the $\\psi^n$ term shrinks fast, and $F_n \\approx \\phi^n / \\sqrt{5}$ for large $n$. The Fibonacci numbers are essentially powers of $\\phi$ scaled by $1/\\sqrt{5}$. Wild."
+      ]
+    }
+  ]
+}

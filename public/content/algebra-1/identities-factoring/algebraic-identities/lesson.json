@@ -1,0 +1,174 @@
+{
+  "title": "Algebraic Identities — The Big Eight",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### Why identities matter",
+        "An **algebraic identity** is an equation that holds for *every* value of the variables — not just some. Mastering a handful of these transforms intimidating algebra into one-line moves.",
+        "These eight identities are the workhorses of school algebra, competitive exams, and just about every algebraic manipulation you'll ever do. Memorize them all."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The Big Eight",
+      "body": "**1.** $(a + b)^2 = a^2 + 2ab + b^2$\n\n**2.** $(a - b)^2 = a^2 - 2ab + b^2$\n\n**3.** $a^2 - b^2 = (a + b)(a - b)$\n\n**4.** $(x + a)(x + b) = x^2 + (a + b)x + ab$\n\n**5.** $(a + b)^3 = a^3 + 3a^2 b + 3 a b^2 + b^3 = a^3 + b^3 + 3ab(a + b)$\n\n**6.** $(a - b)^3 = a^3 - 3a^2 b + 3 a b^2 - b^3 = a^3 - b^3 - 3ab(a - b)$\n\n**7.** $a^3 + b^3 = (a + b)(a^2 - ab + b^2)$\n\n**8.** $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$\n\n**Bonus (three-term):** $(a + b + c)^2 = a^2 + b^2 + c^2 + 2(ab + bc + ca)$\n\n**Bonus (cubic):** $a^3 + b^3 + c^3 - 3abc = (a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca)$"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Identity 1: $(a+b)^2$ — the area-model picture",
+        "Draw a square of side $a + b$. Split each side into segments of length $a$ and $b$. You get four pieces:",
+        "- A small square of area $a^2$ (the $a \\times a$ corner)",
+        "- A small square of area $b^2$ (the $b \\times b$ corner)",
+        "- Two rectangles of area $a \\times b$ each",
+        "Total area: $(a+b)^2 = a^2 + 2ab + b^2$. The picture is the proof."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "polynomial-area",
+      "config": {
+        "a": 3,
+        "b": 2
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "Use it. **$(x + 5)^2 = x^2 + 10x + 25$**. Here $a = x, b = 5$. The middle term is $2 \\cdot x \\cdot 5 = 10x$, not $5^2$ — a common mistake. **$(2x + 3y)^2 = 4x^2 + 12xy + 9y^2$**. Here $a = 2x, b = 3y$. Square each, then $2(2x)(3y) = 12xy$.",
+        "**Don't fall for** $(a + b)^2 = a^2 + b^2$. That's NEVER true (unless $a$ or $b$ is zero). The cross term $2ab$ matters."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Identity 3: difference of squares",
+        "$a^2 - b^2 = (a + b)(a - b)$ is the most-used identity in school algebra. Recognize it instantly.",
+        "**$x^2 - 49 = (x + 7)(x - 7)$**. **$25y^2 - 1 = (5y + 1)(5y - 1)$**. **$x^4 - 16 = (x^2 + 4)(x^2 - 4) = (x^2 + 4)(x + 2)(x - 2)$** — apply twice."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Identity 5 & 6: cubes",
+        "$(a + b)^3 = a^3 + 3a^2 b + 3ab^2 + b^3$ — coefficients 1, 3, 3, 1 (row 3 of Pascal's triangle).",
+        "$(a - b)^3 = a^3 - 3a^2 b + 3ab^2 - b^3$ — same coefficients with alternating signs.",
+        "**Compact form:** $(a + b)^3 = a^3 + b^3 + 3ab(a + b)$. Useful when you know $a + b$ and $ab$.",
+        "**Example.** If $a + b = 5$ and $ab = 6$, then $a^3 + b^3 = (a+b)^3 - 3ab(a+b) = 125 - 3 \\cdot 6 \\cdot 5 = 125 - 90 = 35$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Identities 7 & 8: sum/difference of cubes",
+        "$a^3 + b^3 = (a + b)(a^2 - ab + b^2)$ — note the **minus** $ab$ inside.",
+        "$a^3 - b^3 = (a - b)(a^2 + ab + b^2)$ — note the **plus** $ab$ inside.",
+        "Memory trick: **SOAP** — *Same, Opposite, Always Positive*. The first sign matches the cube's sign; the cross term has the opposite sign; the squared terms are always positive."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Worked example — factor $x^3 - 27$",
+      "body": "Recognize: $27 = 3^3$. So $x^3 - 27 = x^3 - 3^3$.\n\nApply identity 8: $a = x, b = 3$:\n\n$x^3 - 27 = (x - 3)(x^2 + 3x + 9)$.\n\nVerify the second factor: $a^2 + ab + b^2 = x^2 + 3x + 9$. ✓"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Bonus: three-variable identities",
+        "$(a + b + c)^2 = a^2 + b^2 + c^2 + 2(ab + bc + ca)$",
+        "Most useful inverted: if you know $a + b + c$ and $ab + bc + ca$, you can compute $a^2 + b^2 + c^2$. Or vice versa.",
+        "**Example.** $a + b + c = 6$, $ab + bc + ca = 11$. Find $a^2 + b^2 + c^2$.",
+        "$(a+b+c)^2 = a^2 + b^2 + c^2 + 2(ab + bc + ca)$",
+        "$36 = a^2 + b^2 + c^2 + 22$",
+        "$a^2 + b^2 + c^2 = 14$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The grand identity",
+      "body": "$a^3 + b^3 + c^3 - 3abc = (a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca)$\n\n**Corollary:** if $a + b + c = 0$, then $a^3 + b^3 + c^3 = 3abc$.\n\n**Example.** $5^3 + (-2)^3 + (-3)^3 = 125 - 8 - 27 = 90$. Check $3abc = 3 \\cdot 5 \\cdot (-2) \\cdot (-3) = 90$. ✓ Because $5 + (-2) + (-3) = 0$.\n\nThis identity simplifies many olympiad and competitive exam problems instantly."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Direction of use",
+        "Identities work both ways:",
+        "**Expand** (forward direction): given $(x + 7)^2$, get $x^2 + 14x + 49$.",
+        "**Factor** (reverse): given $x^2 - 49$, get $(x + 7)(x - 7)$.",
+        "**Substitute** clever values: to compute $97^2$ without a calculator, write $97 = 100 - 3$ and use $(a - b)^2 = a^2 - 2ab + b^2$: $97^2 = 10000 - 600 + 9 = 9409$.",
+        "Once these become reflexes, algebra speed increases dramatically."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## Reciprocal-sum identities — the $x + \\dfrac{1}{x}$ family",
+        "A classic problem type goes: *given* $x + \\dfrac{1}{x} = k$, *find* $x^n + \\dfrac{1}{x^n}$ for some $n$. The shortcut is that **every $x^n + \\dfrac{1}{x^n}$ can be expressed as a polynomial in $k$** — no need to ever solve for $x$.",
+        "Two key observations make the whole family tractable:",
+        "**Observation 1 — the expression is symmetric.** Swapping $x \\leftrightarrow \\dfrac{1}{x}$ leaves $x^n + \\dfrac{1}{x^n}$ unchanged. So any equation built from these expressions is invariant under reciprocal swap, which is why their roots come in *reciprocal pairs* and why $x + \\dfrac{1}{x}$ is a natural variable.",
+        "**Observation 2 — the cross term collapses.** Whenever you multiply two reciprocal-symmetric quantities, the term $x \\cdot \\dfrac{1}{x} = 1$ kills the surrounding $x$'s. So squaring, cubing, or multiplying just produces clean integer constants.",
+        "Let $S_n = x^n + \\dfrac{1}{x^n}$. Note $S_0 = 2$, $S_1 = k$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The square and cube identities",
+      "body": "**Square:** $S_2 = x^2 + \\dfrac{1}{x^2} = k^2 - 2$.\n\n*Derivation.* $(x + \\tfrac{1}{x})^2 = x^2 + 2 \\cdot x \\cdot \\tfrac{1}{x} + \\tfrac{1}{x^2} = x^2 + 2 + \\tfrac{1}{x^2}$. The middle term is $2$ because $x \\cdot \\tfrac{1}{x} = 1$.\n\n**Cube:** $S_3 = x^3 + \\dfrac{1}{x^3} = k^3 - 3k$.\n\n*Derivation.* $(x + \\tfrac{1}{x})^3 = x^3 + 3 \\cdot x^2 \\cdot \\tfrac{1}{x} + 3 \\cdot x \\cdot \\tfrac{1}{x^2} + \\tfrac{1}{x^3} = x^3 + 3x + \\tfrac{3}{x} + \\tfrac{1}{x^3} = S_3 + 3k$. So $S_3 = k^3 - 3k$.\n\n**Minus variant:** $(x - \\tfrac{1}{x})^2 = x^2 - 2 + \\tfrac{1}{x^2}$, so $S_2 = (x - \\tfrac{1}{x})^2 + 2$. Same identity, opposite sign in the middle."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Climbing higher: three tools",
+        "Once you know $S_2$ and $S_3$ from $k$, three general tools build any $S_n$:"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Tool A — doubling: $S_{2n} = S_n^2 - 2$",
+      "body": "*Derivation.* $(x^n + \\tfrac{1}{x^n})^2 = x^{2n} + 2 + \\tfrac{1}{x^{2n}}$, so $S_{2n} = S_n^2 - 2$.\n\nEach application **doubles** the exponent. Powers $1 \\to 2 \\to 4 \\to 8 \\to \\ldots$ reachable in $\\log_2 n$ steps.\n\n*Example.* $k = 3 \\Rightarrow S_2 = 7 \\Rightarrow S_4 = 47 \\Rightarrow S_8 = 2207$."
+    },
+    {
+      "type": "callout",
+      "title": "Tool B — add-and-subtract: $S_m \\cdot S_n = S_{m+n} + S_{|m-n|}$",
+      "body": "*Derivation.* $(x^m + \\tfrac{1}{x^m})(x^n + \\tfrac{1}{x^n}) = x^{m+n} + x^{m-n} + x^{n-m} + \\tfrac{1}{x^{m+n}} = S_{m+n} + S_{|m-n|}$ (assuming $m \\geq n$).\n\nThis is the cleanest tool for a single exponent. Pick $m + n$ equal to the target, $|m - n|$ as small as possible.\n\n*Example.* For $S_5$ with $k = 5$: use $m = 2, n = 3$. $S_2 \\cdot S_3 = S_5 + S_1$, so $S_5 = 23 \\cdot 110 - 5 = 2525$."
+    },
+    {
+      "type": "callout",
+      "title": "Tool C — recurrence: $S_{n+1} = k \\cdot S_n - S_{n-1}$",
+      "body": "*Derivation.* Tool B with $m = 1$: $k \\cdot S_n = S_{n+1} + S_{n-1}$.\n\nStarts from $S_0 = 2$, $S_1 = k$. Each step costs one multiplication and one subtraction. Best when you want a whole *sequence* of $S_n$ values, not just one.\n\n*Example.* $k = 5$: $S_0 = 2, S_1 = 5, S_2 = 23, S_3 = 110, S_4 = 527, S_5 = 2525, \\ldots$\n\n**Chebyshev connection (optional).** Substituting $x = e^{i\\theta}$ gives $S_n = 2\\cos(n\\theta)$, $k = 2\\cos\\theta$, and the recurrence becomes the Chebyshev identity $T_{n+1}(c) = 2c\\,T_n(c) - T_{n-1}(c)$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The finite-order shortcut",
+        "For *most* values of $k$, the polynomial $S_n(k)$ grows unboundedly with $n$. But for a special set of $k$ values, $x$ is a **root of unity** (its powers cycle), and **every $S_n$** reduces to $S_{n \\bmod p}$ for some small period $p$. These are the only $k$ values where high-exponent problems have *truly* clean answers:"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "$k$ values that make $x$ a root of unity",
+      "body": "| $k = x + \\frac{1}{x}$ | Forces | Order of $x$ |\n|---|---|---|\n| $2$ | $x = 1$ | $1$ |\n| $-2$ | $x = -1$ | $2$ |\n| $1$ | $x^3 = -1$ | $6$ |\n| $-1$ | $x^3 = 1$ | $3$ |\n| $0$ | $x^2 = -1$ | $4$ |\n| $\\sqrt 2$ | $x^4 = -1$ | $8$ |\n| $-\\sqrt 2$ | $x^4 = 1$ | $4$ (or $8$) |\n| $\\sqrt 3$ | $x^6 = -1$ | $12$ |\n| $-\\sqrt 3$ | $x^6 = 1$ | $6$ |\n\nGeneral rule: these are exactly $k = 2\\cos(\\pi p/q)$ for rational $p/q$ — values where $x$ becomes a root of unity.\n\n**How to spot it.** Square the given to get $S_2$. Multiply by $x$ to climb to $x^3 + \\tfrac{1}{x}$. Substitute back the given $k$. If you arrive at $x^m = \\pm 1$ for some small $m$, you're in a finite-order regime — reduce the target exponent mod $m$ (or mod $2m$) and you're done."
+    },
+    {
+      "type": "callout",
+      "title": "Worked example — finite-order in 4 lines",
+      "body": "*Problem.* If $x + \\tfrac{1}{x} = 1$, find $x^{17} + \\tfrac{1}{x^{17}}$.\n\n**Line 1.** Square: $S_2 = 1^2 - 2 = -1$.\n\n**Line 2.** Multiply $S_2 = -1$ by $x$: $x^3 + \\tfrac{1}{x} = -x$, i.e., $x^3 + (x + \\tfrac{1}{x}) = 0$, i.e., $x^3 + 1 = 0$. So $x^3 = -1$, hence $x^{18} = 1$.\n\n**Line 3.** $x^{17} = x^{18}/x = 1/x$ and $1/x^{17} = x$.\n\n**Line 4.** $x^{17} + 1/x^{17} = 1/x + x = 1$.\n\nNo recurrence, no big arithmetic — the finite order of $x$ does all the work."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Palindromic polynomials — the family in disguise",
+        "A polynomial whose coefficients read the same forwards and backwards ($a_k = a_{n-k}$) is called **palindromic**. Examples: $x^4 + 3x^3 + 5x^2 + 3x + 1$, $2x^4 - 5x^3 + 4x^2 - 5x + 2$.",
+        "**Key fact.** If $P(x)$ is palindromic and $r \\neq 0$ is a root, then $1/r$ is also a root. *Proof.* $x^n P(1/x) = P(x)$ for palindromic $P$, so $P(1/r) = (1/r)^n P(r) = 0$.",
+        "**Why this matters.** A palindromic polynomial of degree $2n$ can be reduced to a polynomial of degree $n$ in $y = x + \\tfrac{1}{x}$. Divide by $x^n$, group reciprocal pairs, substitute.",
+        "*Example.* $2x^4 - 5x^3 + 4x^2 - 5x + 2 = 0$ divided by $x^2$: $2(x^2 + 1/x^2) - 5(x + 1/x) + 4 = 0$. Set $y = x + 1/x$: $2(y^2 - 2) - 5y + 4 = 0 \\Rightarrow 2y^2 - 5y = 0 \\Rightarrow y = 0$ or $y = 5/2$. From $y = 5/2$: $x = 2$ or $x = 1/2$. **A quartic collapsed to a quadratic.**"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Practice questions in this lesson",
+      "body": "The quiz below has a dedicated track on this family — questions Q16–Q24 cover every tool above:\n\n- [Q16](?q=16): cube identity ($x + 1/x = 4 \\to x^3 + 1/x^3$)\n- [Q17](?q=17): reverse direction with sign ambiguity\n- [Q18](?q=18): minus variant ($x - 1/x = 3 \\to x^2 + 1/x^2$)\n- [Q19](?q=19): surd input via conjugate rationalization\n- [Q20](?q=20): doubling ladder ($k = 3 \\to S_4 = 47$)\n- [Q21](?q=21): reciprocal-root quadratic\n- [Q22](?q=22): boundary trivialization at $k = 2$\n- [Q23](?q=23): finite-order at $k = 1$ ($x^{17} + 1/x^{17}$)\n- [Q24](?q=24): finite-order at $k = -1$ ($x^{512} + 1/x^{512}$)\n\nAnd the algebra-2 polynomial section has companion questions on the recurrence and palindromic reduction."
+    }
+  ]
+}

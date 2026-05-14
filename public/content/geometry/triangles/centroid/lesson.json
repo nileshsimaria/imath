@@ -1,0 +1,75 @@
+{
+  "title": "Centroid & Medians",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### The center of mass of a triangle",
+        "A **median** of a triangle is a segment from a vertex to the **midpoint of the opposite side**. Every triangle has exactly three medians.",
+        "The three medians meet at a single point called the **centroid** $G$. The centroid is the **center of mass** (or **balance point**) of a triangle made of uniform material — if you cut a triangle out of stiff paper, it would balance perfectly on a pin placed at $G$.",
+        "Toggle on 'Centroid (medians)' below and watch the three dashed green lines from each vertex to the opposite midpoint."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "triangle-centers",
+      "config": {
+        "showCentroid": true,
+        "showCircumcenter": false,
+        "showOrthocenter": false
+      }
+    },
+    {
+      "type": "callout",
+      "title": "The coordinate formula — disarmingly clean",
+      "body": "If the triangle has vertices at coordinates $A$, $B$, $C$, then the centroid is the **average** of the three:\n\n$G = \\dfrac{A + B + C}{3} = \\left(\\dfrac{x_A + x_B + x_C}{3},\\; \\dfrac{y_A + y_B + y_C}{3}\\right).$\n\nNo weighted average, no fuss — just the plain average. This is why $G$ is the center of mass: it's the average of the vertex positions."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The 2:1 ratio",
+        "Here is the most famous fact about the centroid:",
+        "**The centroid divides each median in ratio 2:1, with the longer piece next to the vertex.**",
+        "If $M$ is the midpoint of the side opposite $A$, and $G$ is the centroid, then",
+        "$AG : GM = 2 : 1.$",
+        "So $G$ sits two-thirds of the way along each median from the vertex (or one-third of the way from the midpoint)."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\boxed{\\;AG : GM = 2 : 1\\;}"
+    },
+    {
+      "type": "callout",
+      "title": "Why 2:1? (Sketch)",
+      "body": "Consider two medians from $A$ and $B$. They meet at some point $G$. Use vectors with origin at $A$ for clarity:\n- Midpoint $M_a$ of $BC$ has position $(B + C)/2$ in $A$-centered coordinates.\n- The median from $A$ is the segment from $0$ to $(B+C)/2$.\n- The median from $B$ is from $B$ to the midpoint of $AC$, which is $C/2$.\n\nParametrize and solve for the intersection — you find $G = (B + C)/3$ in $A$-coords. So $AG = |(B+C)/3|$ and $GM_a = |(B+C)/2 - (B+C)/3| = |(B+C)/6|$. Ratio $AG : GM_a = 1/3 : 1/6 = 2 : 1$. ∎\n\nThe same argument works at every vertex."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example",
+        "Triangle with vertices $A(2, 1)$, $B(8, 3)$, $C(2, 8)$.",
+        "**Centroid:**",
+        "$G = \\left(\\dfrac{2 + 8 + 2}{3},\\; \\dfrac{1 + 3 + 8}{3}\\right) = (4, 4).$",
+        "**Verify the 2:1 ratio with the median from $A$.**",
+        "Midpoint of $BC = ((8 + 2)/2, (3 + 8)/2) = (5, 5.5)$.",
+        "Median from $A$ runs from $A(2,1)$ to $M_a(5, 5.5)$. Compute $AG$: distance from $A$ to $G$ = $\\sqrt{4 + 9} = \\sqrt{13}$. Compute $GM_a$: distance from $G$ to $M_a$ = $\\sqrt{1 + 2.25} = \\sqrt{3.25}$.",
+        "Ratio: $\\sqrt{13} / \\sqrt{3.25} = \\sqrt{4} = 2$. So $AG = 2 \\cdot GM_a$, confirming $2:1$. ✓"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Physical interpretation",
+      "body": "Pretend each vertex carries equal mass $m$. The center of mass of the system is at the average position of the three masses, which is exactly $G$.\n\nIf instead the entire (uniform) triangular region carries mass, the center of mass is still at the same $G$ — by symmetry and the fact that the medians divide the triangle into equal-area pieces (each of area = total/6)."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Where the centroid sits",
+        "**Always inside the triangle** — for every triangle (acute, right, obtuse, scalene, isosceles, equilateral). Unlike the circumcenter and orthocenter, the centroid never escapes the triangle.",
+        "**Equilateral triangle:** $G$ coincides with the circumcenter, incenter, and orthocenter.",
+        "**Isosceles triangle:** $G$ lies on the axis of symmetry."
+      ]
+    }
+  ]
+}

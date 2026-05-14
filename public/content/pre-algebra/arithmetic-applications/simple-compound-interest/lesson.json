@@ -1,0 +1,85 @@
+{
+  "title": "Simple & Compound Interest",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### Two ways money grows",
+        "Lend \\$100 at 10% per year for 3 years. How much interest do you earn?",
+        "**Simple Interest:** \\$10 each year. Total: \\$30. Final amount: \\$130.",
+        "**Compound Interest:** \\$10 the first year. The second year you earn 10% of \\$110 = \\$11. The third year you earn 10% of \\$121 = \\$12.10. Total interest: \\$33.10. Final amount: \\$133.10.",
+        "Compound interest is faster because **the interest itself earns interest**."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Simple Interest formula",
+      "body": "$\\boxed{\\;SI = \\dfrac{P \\cdot R \\cdot T}{100}\\;}$\n\nwhere:\n- $P$ = Principal (initial amount, in \\$)\n- $R$ = Rate of interest (% per annum)\n- $T$ = Time (in years)\n\n**Total amount after T years:** $A = P + SI$."
+    },
+    {
+      "type": "callout",
+      "title": "Compound Interest formula",
+      "body": "$\\boxed{\\;A = P \\left(1 + \\dfrac{R}{100}\\right)^T\\;}$\n\nand $CI = A - P$.\n\nFor **half-yearly** compounding, halve the rate and double the periods: $A = P (1 + R/200)^{2T}$.\nFor **quarterly**: $A = P (1 + R/400)^{4T}$.\nFor **monthly**: $A = P (1 + R/1200)^{12T}$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 1 — Simple interest",
+        "\\$2400 at 8% per annum for 3 years.",
+        "$SI = \\dfrac{2400 \\times 8 \\times 3}{100} = \\dfrac{57600}{100} = \\$576$.",
+        "**Total amount:** $A = \\$2976$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 2 — Compound interest, annually",
+        "\\$10000 at 10% per annum, compounded annually, for 2 years.",
+        "$A = 10000 \\left(1 + \\dfrac{10}{100}\\right)^2 = 10000 \\times 1.21 = \\$12100$.",
+        "$CI = \\$12100 - \\$10000 = \\$2100$.",
+        "Compare to simple interest for the same scenario: $SI = (10000 \\cdot 10 \\cdot 2)/100 = \\$2000$.",
+        "**CI is \\$100 more than SI** — that's the interest earned on the first year's interest (\\$1000) during the second year (10% of \\$1000 = \\$100)."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "CI − SI for 2 years (a special shortcut)",
+      "body": "For a 2-year period:\n\n$CI - SI = P \\left(\\dfrac{R}{100}\\right)^2$\n\n**Example.** \\$5000 at 12% per annum for 2 years.\n\n$CI - SI = 5000 \\times (12/100)^2 = 5000 \\times 0.0144 = \\$72$.\n\nUseful when only the difference is asked."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 3 — Half-yearly compounding",
+        "\\$8000 at 10% per annum, compounded **half-yearly**, for 1.5 years.",
+        "Half-yearly rate: $5\\%$. Number of periods: $3$.",
+        "$A = 8000 \\left(1 + \\dfrac{5}{100}\\right)^3 = 8000 \\times 1.157625 = \\$9261$.",
+        "$CI = \\$1261$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The doubling-time rule of 72",
+        "How long does it take an investment to double at a given rate $R$ (% per annum, compounded)?",
+        "**Approximate rule:** $T \\approx \\dfrac{72}{R}$ years.",
+        "At 6%: doubles in 12 years. At 8%: 9 years. At 12%: 6 years. At 24%: 3 years.",
+        "This is a famous mental-math shortcut for compound growth. The exact answer uses logarithms ($T = \\ln 2 / \\ln(1 + R/100)$), but the rule of 72 is accurate within a year or so for most reasonable rates."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Comparing SI and CI",
+      "body": "For the same $P, R, T$:\n\n**Year 1:** $SI = CI$ (both equal $P \\cdot R / 100$).\n\n**Year 2 onward:** $CI > SI$, and the gap widens each year.\n\nThe longer the term, the bigger the CI advantage. Over 30 years at 8%:\n- SI multiplies money by $1 + 0.08 \\cdot 30 = 3.4×$.\n- CI multiplies money by $1.08^{30} \\approx 10.06×$.\n\nThree times more! That's why people say *compound interest is the eighth wonder of the world*."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Reverse problems",
+        "**Given final amount, find rate or time.** Use logarithms (for CI) or rearrange (for SI).",
+        "**Example.** \\$5000 grows to \\$6050 in 2 years compounded annually. Find the rate.",
+        "$A = P(1 + R/100)^T \\Rightarrow 6050 = 5000(1 + R/100)^2$.",
+        "$(1 + R/100)^2 = 1.21$. So $1 + R/100 = 1.1$. So $R = 10\\%$."
+      ]
+    }
+  ]
+}

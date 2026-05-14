@@ -1,0 +1,202 @@
+{
+  "title": "Factors, Multiples, GCD & LCM",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "## Two ways to look at a number",
+        "Every counting number can be viewed two ways:",
+        "**As a multiple** of smaller numbers — what numbers divide INTO it.",
+        "**As a building block** for larger numbers — what numbers it divides INTO.",
+        "These two perspectives lead to **factors** and **multiples** — and once you have them, GCD and LCM follow naturally."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Factor vs multiple — same relationship, two angles",
+      "body": "$3$ is a **factor** of $12$ because $3$ divides $12$ evenly. $12$ is a **multiple** of $3$ because $12 = 3 \\cdot 4$. The same fact, looked at from each end."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Listing factors",
+        "**Factors of $24$:** $1, 2, 3, 4, 6, 8, 12, 24$. (Trick: pair them — $1 \\cdot 24$, $2 \\cdot 12$, $3 \\cdot 8$, $4 \\cdot 6$. Once you reach a pair where the factors meet, you're done.)",
+        "**Factors of $30$:** $1, 2, 3, 5, 6, 10, 15, 30$.",
+        "**Factors of $36$:** $1, 2, 3, 4, 6, 9, 12, 18, 36$. (Note $6 \\cdot 6 = 36$ — this is why $36$ has an *odd* number of factors. All perfect squares do.)"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Divisibility rules — quick checks",
+      "body": "**$2$:** ends in $0, 2, 4, 6, 8$. **$3$:** digit sum is divisible by $3$ ($1+2+3=6$, so $123$ is divisible by $3$). **$5$:** ends in $0$ or $5$. **$9$:** digit sum is divisible by $9$. **$10$:** ends in $0$. **$4$:** last two digits divisible by $4$. **$6$:** divisible by both $2$ and $3$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## Prime numbers — the atoms",
+        "A **prime** is a number greater than $1$ whose only factors are $1$ and itself.",
+        "**The first ten primes:** $2, 3, 5, 7, 11, 13, 17, 19, 23, 29$.",
+        "$2$ is the only **even** prime — every other even number has $2$ as a factor.",
+        "$1$ is **not** prime (by convention — and for very good reasons that show up in Algebra II)."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Why primes matter",
+      "body": "Every counting number greater than $1$ can be written as a product of primes in **exactly one way** (up to order). This is the **Fundamental Theorem of Arithmetic** — primes are the indivisible atoms of multiplication."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## Prime factorization — the factor tree",
+        "To find a number's prime factorization, keep splitting until every leaf is prime.",
+        "**Example:** $60$.",
+        "$60 = 6 \\cdot 10 = (2 \\cdot 3)(2 \\cdot 5) = 2 \\cdot 2 \\cdot 3 \\cdot 5 = 2^2 \\cdot 3 \\cdot 5$.",
+        "It doesn't matter which split you make first — the final list of primes is always the same."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "60 = 2^2 \\cdot 3 \\cdot 5 \\qquad 84 = 2^2 \\cdot 3 \\cdot 7 \\qquad 100 = 2^2 \\cdot 5^2"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Try it yourself.** Drag the slider (or type a number) to see its factor tree. Notice: **prime** numbers are single orange dots — no splits to make. **Perfect squares** (like 36, 49, 64) make tidy symmetric trees."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "factor-tree",
+      "config": {
+        "mode": "single",
+        "n": 60,
+        "min": 2,
+        "max": 200
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "## GCD — the biggest factor in common",
+        "The **GCD** (Greatest Common Divisor) of two numbers, also called **GCF** (Greatest Common Factor), is the largest number that divides both.",
+        "**Example:** $\\gcd(12, 18)$.",
+        "Factors of $12$: $1, 2, 3, 4, 6, 12$.",
+        "Factors of $18$: $1, 2, 3, 6, 9, 18$.",
+        "Common factors: $1, 2, 3, 6$. **Biggest is $6$**, so $\\gcd(12, 18) = 6$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "GCD via prime factorization",
+      "body": "Write each number's prime factorization. For each prime, take the **smaller** exponent. Multiply.\n\n$12 = 2^2 \\cdot 3$. $\\;18 = 2 \\cdot 3^2$. Take $\\min$ of each exponent: $2^1 \\cdot 3^1 = 6$. ✓"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### When does GCD show up?",
+        "**Simplifying fractions.** $\\dfrac{18}{24}$: $\\gcd(18, 24) = 6$, so $\\dfrac{18}{24} = \\dfrac{3}{4}$.",
+        "**Simplifying ratios.** $24 : 36 \\Rightarrow$ divide both by $\\gcd = 12 \\Rightarrow 2 : 3$.",
+        "**Tile problems.** 'Largest square tile that fits a $24 \\times 36$ floor exactly?' Answer: $\\gcd(24, 36) = 12$ inches."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## LCM — the smallest multiple in common",
+        "The **LCM** (Least Common Multiple) of two numbers is the smallest number both divide into.",
+        "**Example:** $\\mathrm{lcm}(4, 6)$.",
+        "Multiples of $4$: $4, 8, 12, 16, 20, 24, \\ldots$",
+        "Multiples of $6$: $6, 12, 18, 24, \\ldots$",
+        "Smallest in both lists: **$12$**. So $\\mathrm{lcm}(4, 6) = 12$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "LCM via prime factorization",
+      "body": "Write each number's prime factorization. For each prime, take the **larger** exponent. Multiply.\n\n$4 = 2^2$. $\\;6 = 2 \\cdot 3$. Take $\\max$ of each exponent: $2^2 \\cdot 3 = 12$. ✓"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### When does LCM show up?",
+        "**Adding fractions.** $\\dfrac{1}{4} + \\dfrac{1}{6}$: common denominator is $\\mathrm{lcm}(4, 6) = 12$.",
+        "**Cycle / synchronization problems.** 'Two clocks chime every $12$ and $18$ minutes. They just chimed together — when next?' Answer: $\\mathrm{lcm}(12, 18) = 36$ minutes."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The beautiful identity: $\\gcd(a, b) \\cdot \\mathrm{lcm}(a, b) = a \\cdot b$",
+      "body": "Once you know one of them, you get the other for free. $\\gcd(12, 18) = 6$ and $12 \\cdot 18 = 216$, so $\\mathrm{lcm}(12, 18) = 216 / 6 = 36$. ✓"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Reading GCD & LCM straight from the trees",
+        "**Step 1.** Build the prime factor tree of each number.",
+        "**Step 2.** For each prime that appears in **at least one** tree, count how many times it shows up in each.",
+        "**Step 3.** **GCD** uses only primes that appear in **every** tree (green below) — take the **smallest** count.",
+        "**Step 4.** **LCM** uses every prime that appears anywhere — take the **largest** count.",
+        "**Step 5.** Multiply your selected primes together."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Worked example: $\\gcd(12, 18)$ and $\\mathrm{lcm}(12, 18)$",
+      "body": "$12 = 2^2 \\cdot 3$ and $18 = 2 \\cdot 3^2$. Both trees share **2 and 3** (green). For GCD take the smaller exponent of each: $\\min(2,1) = 1$ for $2$, and $\\min(1,2) = 1$ for $3$ → $\\gcd = 2 \\cdot 3 = 6$. For LCM take the larger: $\\max(2,1) = 2$ for $2$, and $\\max(1,2) = 2$ for $3$ → $\\mathrm{lcm} = 2^2 \\cdot 3^2 = 36$. Slide the numbers below to test other pairs."
+    },
+    {
+      "type": "widget",
+      "kind": "factor-tree",
+      "config": {
+        "mode": "compare",
+        "nums": [
+          12,
+          18
+        ],
+        "min": 2,
+        "max": 100
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Three numbers — the rule still works",
+        "Same algorithm — just check more trees. A prime contributes to GCD only if it appears in **all three**. Try this set: $12$, $18$, $24$ (the kind of group you'd see when adding three fractions with different denominators)."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "factor-tree",
+      "config": {
+        "mode": "compare",
+        "nums": [
+          12,
+          18,
+          24
+        ],
+        "min": 2,
+        "max": 60
+      }
+    },
+    {
+      "type": "callout",
+      "title": "Watch out: the $\\gcd \\cdot \\mathrm{lcm} = a \\cdot b$ identity is for TWO numbers only",
+      "body": "It does NOT generalize to three or more. For $12, 18, 24$: $\\gcd = 6$, $\\mathrm{lcm} = 72$, $\\gcd \\cdot \\mathrm{lcm} = 432$, but $12 \\cdot 18 \\cdot 24 = 5184$. Different numbers entirely."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## Mental shortcuts to remember",
+        "**For two numbers where one divides the other:** GCD is the smaller, LCM is the larger. $\\gcd(6, 24) = 6$, $\\mathrm{lcm}(6, 24) = 24$.",
+        "**For two coprime numbers** (no common factors besides $1$): GCD $= 1$, LCM $= a \\cdot b$. $\\gcd(4, 9) = 1$, $\\mathrm{lcm}(4, 9) = 36$.",
+        "**For larger numbers:** prime-factorize and take min/max exponents. Always works."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Common mistake",
+      "body": "Don't confuse GCD and LCM. **GCD is small** (a divisor — never bigger than the inputs). **LCM is big** (a multiple — never smaller than the larger input). 'Smallest common multiple' and 'largest common divisor' — the *adjective* tells you which side."
+    }
+  ]
+}

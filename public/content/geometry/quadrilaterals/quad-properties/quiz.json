@@ -1,0 +1,228 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{The four angles of any quadrilateral sum to:}",
+      "answer": 360,
+      "tolerance": 0,
+      "hints": [
+        "$(n - 2) \\cdot 180°$ with $n = 4$.",
+        "$(4 - 2) \\cdot 180 = ?$"
+      ],
+      "explanation": "$(n - 2) \\cdot 180° = (4 - 2) \\cdot 180 = 360°$. Or: split the quadrilateral into two triangles with a diagonal — each triangle gives 180°.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A rhombus is always a:}",
+      "choices": [
+        "square",
+        "rectangle",
+        "parallelogram",
+        "trapezoid only"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "All rhombuses have 2 pairs of parallel sides.",
+        "What's a quadrilateral with 2 pairs of parallel sides?"
+      ],
+      "explanation": "A rhombus has 2 pairs of parallel sides → it's always a **parallelogram**. (Not always a rectangle — only if its angles are 90°.)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A parallelogram has one angle of } 50°. \\text{ The angle adjacent to it (sharing a side) is:}",
+      "choices": [
+        "50°",
+        "100°",
+        "130°",
+        "180°"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Consecutive angles in a parallelogram are supplementary.",
+        "$180 - 50$."
+      ],
+      "explanation": "Consecutive angles of a parallelogram are supplementary: $180° - 50° = 130°$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which property is unique to rectangles (among parallelograms)?}",
+      "choices": [
+        "Opposite sides parallel",
+        "Diagonals bisect each other",
+        "Diagonals are equal in length",
+        "Opposite angles equal"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "All parallelograms have the first, second, and fourth properties.",
+        "What's special about rectangle diagonals?"
+      ],
+      "explanation": "Diagonals bisect each other in *every* parallelogram. But diagonals are **equal in length** only when the parallelogram is a rectangle (or square).",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A square is:}",
+      "choices": [
+        "A rectangle but not a rhombus",
+        "A rhombus but not a rectangle",
+        "Both a rectangle AND a rhombus",
+        "Neither"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "A square has 4 right angles AND 4 equal sides.",
+        "Right angles → rectangle. Equal sides → rhombus."
+      ],
+      "explanation": "A square has 4 right angles (so it's a rectangle) AND 4 equal sides (so it's a rhombus). The intersection of the two — that's exactly what a square is.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{A quadrilateral with all four sides equal AND four right angles is a:}",
+      "choices": [
+        "square",
+        "rectangle",
+        "rhombus",
+        "trapezoid"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "All sides equal → at least a rhombus. All angles right → at least a rectangle.",
+        "Both conditions → square."
+      ],
+      "explanation": "All sides equal + all right angles = square.",
+      "steps": [
+        "All four sides equal: classifies as a rhombus.",
+        "All four right angles: classifies as a rectangle.",
+        "Both conditions together: **square** (the most specific quadrilateral, intersection of rhombus and rectangle)."
+      ],
+      "id": "q6",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A rectangle has length } 12 \\text{ and width } 5. \\text{ Find its diagonal.}",
+      "answer": 13,
+      "tolerance": 0,
+      "hints": [
+        "Diagonal = $\\sqrt{L^2 + W^2}$.",
+        "$\\sqrt{144 + 25} = 13$."
+      ],
+      "explanation": "$d = \\sqrt{12^2 + 5^2} = \\sqrt{169} = 13$.",
+      "steps": [
+        "A rectangle's diagonal is the hypotenuse of a right triangle with legs $L$ and $W$.",
+        "$d = \\sqrt{12^2 + 5^2} = \\sqrt{144 + 25} = \\sqrt{169} = 13$. (5-12-13 triple.)"
+      ],
+      "id": "q7",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A parallelogram has consecutive angles } x° \\text{ and } (3x + 20)°. \\\\ \\text{Find } x.",
+      "answer": 40,
+      "tolerance": 0,
+      "hints": [
+        "Consecutive angles in a parallelogram are SUPPLEMENTARY.",
+        "$x + 3x + 20 = 180$."
+      ],
+      "explanation": "$4x + 20 = 180 \\Rightarrow 4x = 160 \\Rightarrow x = 40$.",
+      "steps": [
+        "Consecutive angles of a parallelogram are supplementary.",
+        "$$x + (3x + 20) = 180$$",
+        "$$4x + 20 = 180 \\Rightarrow 4x = 160 \\Rightarrow x = 40$$"
+      ],
+      "id": "q8",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A rhombus has diagonals of length } 6 \\text{ and } 8. \\\\ \\text{Find the length of one side.}",
+      "answer": 5,
+      "tolerance": 0,
+      "hints": [
+        "Diagonals of a rhombus bisect each other at right angles.",
+        "Each side is the hypotenuse of a triangle with legs 3 and 4."
+      ],
+      "explanation": "Half-diagonals: $3$ and $4$. Side $= \\sqrt{9 + 16} = 5$.",
+      "steps": [
+        "The diagonals of a rhombus bisect each other and are perpendicular.",
+        "So each side is the hypotenuse of a right triangle with legs $6/2 = 3$ and $8/2 = 4$.",
+        "Side $= \\sqrt{3^2 + 4^2} = \\sqrt{25} = 5$. (3-4-5 triple.)"
+      ],
+      "id": "q9",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{An isosceles trapezoid has base angles of } 70°. \\\\ \\text{What is the measure of each top angle?}",
+      "answer": 110,
+      "tolerance": 0,
+      "hints": [
+        "Base + top angle on the same leg are supplementary.",
+        "$180 - 70 = 110$."
+      ],
+      "explanation": "$180 - 70 = 110°$.",
+      "steps": [
+        "In a trapezoid, angles on the same leg (bottom and top of one side) are supplementary because the bases are parallel.",
+        "Top angle = $180° - 70° = 110°$.",
+        "(In an isosceles trapezoid, both top angles are $110°$ and both base angles are $70°$.)"
+      ],
+      "id": "q10",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which is true of the diagonals of a rectangle (but NOT a parallelogram in general)?}",
+      "choices": [
+        "They bisect each other",
+        "They are perpendicular",
+        "They are equal in length",
+        "They bisect the angles"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "All parallelograms have diagonals that bisect each other.",
+        "Only rectangles (and squares) have equal-length diagonals."
+      ],
+      "explanation": "Diagonals of any parallelogram bisect each other. But only rectangles (and squares) have **equal-length** diagonals.",
+      "steps": [
+        "Bisecting: true for all parallelograms.",
+        "Perpendicular: true only for rhombi (and squares).",
+        "**Equal length:** true for rectangles (and squares) — special property.",
+        "Bisecting angles: true only for rhombi.",
+        "**Answer:** equal in length."
+      ],
+      "id": "q11",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A rhombus has side length } 13 \\text{ and one diagonal } 10. \\\\ \\text{Find the other diagonal.}",
+      "answer": 24,
+      "tolerance": 0,
+      "hints": [
+        "The diagonals are perpendicular bisectors. Half-diagonals are legs of a right triangle with side as hypotenuse.",
+        "$\\sqrt{13^2 - 5^2} = 12$ is half the other diagonal."
+      ],
+      "explanation": "Half of one diagonal: $5$. Other half-diagonal $= \\sqrt{13^2 - 5^2} = 12$. Other diagonal $= 2 \\cdot 12 = 24$.",
+      "steps": [
+        "In a rhombus, diagonals bisect each other at right angles.",
+        "Half of the known diagonal: $10/2 = 5$.",
+        "Each side ($13$) is the hypotenuse of a right triangle with legs = half-diagonals.",
+        "Other half-diagonal: $\\sqrt{13^2 - 5^2} = \\sqrt{169 - 25} = \\sqrt{144} = 12$.",
+        "Full other diagonal: $2 \\cdot 12 = 24$. (5-12-13 triple.)"
+      ],
+      "id": "q12",
+      "difficulty": "medium"
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "title": "The Normal Distribution",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "The **normal distribution** (or **bell curve**) is the most important continuous distribution in statistics. Many real-world quantities — heights, test scores, measurement errors — are approximately normal."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. Anatomy of the Bell Curve"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "A normal distribution is described by two parameters:",
+        "**Mean $\\mu$** — the center. The peak of the bell.",
+        "**Standard deviation $\\sigma$** — the spread. Larger $\\sigma$ = wider, flatter curve.",
+        "**Notation:** $X \\sim N(\\mu, \\sigma^2)$. (Some textbooks use $N(\\mu, \\sigma)$ — check yours.)",
+        "Try the widget below. Slide $\\mu$ to shift the curve left/right; slide $\\sigma$ to make it wider or narrower."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "normal-distribution",
+      "config": {
+        "mean": 0,
+        "sd": 1,
+        "regionType": "less",
+        "a": -1
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. The Empirical Rule (68-95-99.7)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "For *any* normal distribution:",
+        "**About $68\\%$** of the data falls within $1\\sigma$ of the mean.",
+        "**About $95\\%$** falls within $2\\sigma$.",
+        "**About $99.7\\%$** falls within $3\\sigma$.",
+        "**This is universal** — works for any normal distribution regardless of $\\mu$ or $\\sigma$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The 68-95-99.7 rule in action",
+      "body": "**SAT scores** are designed to be approximately normal with $\\mu = 1000$ and $\\sigma = 200$. So about 68% score between 800 and 1200. About 95% between 600 and 1400. About 99.7% between 400 and 1600. A score above 1600 (or below 400) is extremely rare."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. The z-Score (Standardization)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "A **z-score** measures how many standard deviations a value is from the mean."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "z = \\dfrac{x - \\mu}{\\sigma}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**$z > 0$:** above the mean. **$z < 0$:** below. **$z = 0$:** at the mean.",
+        "**Example.** SAT $\\mu = 1000, \\sigma = 200$. Your score: $1300$.",
+        "$z = (1300 - 1000) / 200 = 1.5$. You scored **1.5 standard deviations above the mean**.",
+        "z-scores let you compare data from different normal distributions on the same scale."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. The Standard Normal"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "When you standardize ($z$-score everything), you get the **standard normal distribution**: $\\mu = 0$, $\\sigma = 1$. Written $Z \\sim N(0, 1)$.",
+        "Probabilities for the standard normal are tabulated (z-tables) or built into calculators. For any other normal, convert to z-scores first."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — using the empirical rule",
+        "Adult male heights are approximately $N(70, 3)$ inches.",
+        "**About what fraction are between 67 and 73 inches?** This is $\\mu \\pm 1\\sigma = 70 \\pm 3$. By the empirical rule: **about 68%**.",
+        "**Above 76 inches?** That's $\\mu + 2\\sigma$. About 95% are within $\\pm 2\\sigma$, so 5% are outside. Symmetry → about **2.5%** above 76 inches.",
+        "**Below 64 inches?** $\\mu - 2\\sigma$. Same logic — **about 2.5%**."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — z-scores",
+        "Test 1: $\\mu = 75, \\sigma = 10$. You score 88.",
+        "Test 2: $\\mu = 60, \\sigma = 5$. You score 70.",
+        "Which is the better performance?",
+        "**Test 1 z:** $(88 - 75)/10 = 1.3$.",
+        "**Test 2 z:** $(70 - 60)/5 = 2.0$.",
+        "Test 2 is the better performance — you're 2 standard deviations above the mean, vs only 1.3 on Test 1."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — using the widget",
+        "What's $P(X < 1)$ for the standard normal $N(0, 1)$? Set up the widget with mean=0, sd=1, region=`X < a`, a=1. The shaded area is the probability — about **0.8413**.",
+        "What's $P(-1 < X < 1)$? Set region to 'between', a=-1, b=1. Area should be about **0.6827** — that's the 68% in the empirical rule, computed exactly!"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 5. Computing Probabilities with a z-Table"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "For non-round z-scores (anything other than 0, ±1, ±2, ±3), the empirical rule isn't precise enough. We need actual values of $\\Phi(z) = P(Z \\leq z)$ — the standard-normal CDF.",
+        "Modern usage: calculators and statistical software have it built in. Historical / handbook usage: a printed *z-table*. Either way, here are the values you'll see most often:"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Key values of Φ(z) = P(Z ≤ z)",
+      "body": "| z | Φ(z) | z | Φ(z) |\n|---|---|---|---|\n| 0.00 | 0.5000 | 1.65 | 0.9505 |\n| 0.50 | 0.6915 | 1.96 | 0.9750 |\n| 1.00 | 0.8413 | 2.00 | 0.9772 |\n| 1.28 | 0.8997 | 2.33 | 0.9901 |\n| 1.50 | 0.9332 | 2.58 | 0.9951 |\n| 1.64 | 0.9495 | 3.00 | 0.9987 |\n\n**Symmetry:** $\\Phi(-z) = 1 - \\Phi(z)$. So $\\Phi(-1) = 1 - 0.8413 = 0.1587$.\n\n**Tail (one-sided):** $P(Z > z) = 1 - \\Phi(z)$. So $P(Z > 1.96) = 1 - 0.9750 = 0.0250$.\n\n**Between:** $P(a < Z < b) = \\Phi(b) - \\Phi(a)$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — using the table",
+        "$X \\sim N(70, 5)$. Find $P(X < 78)$.",
+        "**Step 1.** Standardize: $z = (78 - 70)/5 = 1.6$.",
+        "**Step 2.** Look up $\\Phi(1.6)$. The table gives $\\Phi(1.5) = 0.9332$ and $\\Phi(2.0) = 0.9772$. Either interpolate to $\\Phi(1.6) \\approx 0.9452$, or accept the nearest available value.",
+        "**Step 3.** Done: $P(X < 78) \\approx 0.945$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 6. Reverse: Percentile → z-score"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Sometimes you know the probability and want to find the $z$. Read the table BACKWARDS:",
+        "**Example.** 90th percentile of the standard normal — find $z$ such that $\\Phi(z) = 0.90$.",
+        "Scan the table: $\\Phi(1.28) \\approx 0.9$. So the 90th percentile $z \\approx 1.28$.",
+        "**Apply to non-standard normal.** For SAT $\\sim N(1000, 200)$, the 90th percentile is at $x = \\mu + z \\sigma = 1000 + 1.28 \\cdot 200 \\approx 1256$. So $90\\%$ of SAT scores are below $\\approx 1256$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Critical values you'll see again",
+      "body": "Certain $z$-values appear all the time in statistics — memorize these:\n\n| Percentile | z-value |\n|---|---|\n| 90% (one-tail) | 1.28 |\n| 95% (one-tail) | 1.645 |\n| 95% (two-tail, ±) | 1.96 |\n| 99% (one-tail) | 2.326 |\n| 99% (two-tail, ±) | 2.576 |\n\nThe two-tail $1.96$ is the most famous — it's the basis of $95\\%$ confidence intervals."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 7. Why the Normal Is Everywhere"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Heights, test scores, measurement errors, IQs, blood pressures, weights — countless real-world quantities are approximately normal. Why?",
+        "**Central Limit Theorem (CLT).** When a quantity is the SUM (or average) of many independent small contributions, its distribution becomes approximately normal — regardless of the shape of the individual contributions.",
+        "**Height** = sum of many genetic + environmental factors → approximately normal.",
+        "**Test scores** = sum of points across many questions → approximately normal.",
+        "**Measurement error** = sum of many tiny random perturbations → approximately normal.",
+        "(The Galton board topic visualizes the CLT directly: each marble's bin = sum of independent ± choices, and the histogram converges to a bell curve.)"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "Normal distribution = bell curve, parameters $\\mu, \\sigma$. **Empirical rule:** 68% within $1\\sigma$, 95% within $2\\sigma$, 99.7% within $3\\sigma$. **z-score:** $z = (x - \\mu)/\\sigma$ — measures distance from mean in standard deviations. Standardize to compare across different normal distributions. **Key table values:** $\\Phi(1) \\approx 0.84, \\Phi(1.96) = 0.975, \\Phi(2) \\approx 0.98, \\Phi(2.58) \\approx 0.995$. **CLT** explains why so much real-world data is approximately normal."
+    }
+  ]
+}

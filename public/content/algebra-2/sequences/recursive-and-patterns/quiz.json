@@ -1,0 +1,414 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which of the following is the correct } \\textbf{recursive} \\text{ form of the} \\\\ \\text{Fibonacci sequence } 1, 1, 2, 3, 5, 8, \\ldots?",
+      "choices": [
+        "F_1 = 1, F_2 = 1, F_n = F_{n-1} + F_{n-2}",
+        "F_n = F_{n-1} + 1",
+        "F_n = 2 \\cdot F_{n-1}",
+        "F_n = n + (n-1)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "A recursive form needs both initial conditions and a rule.",
+        "Each Fibonacci number is the sum of the two before it."
+      ],
+      "explanation": "Fibonacci: $F_1 = 1$, $F_2 = 1$, $F_n = F_{n-1} + F_{n-2}$.",
+      "steps": [
+        "Recursive form needs **initial values** + a **rule**.",
+        "Fibonacci needs *two* initial values because the rule uses the previous **two** terms.",
+        "$F_1 = 1$ and $F_2 = 1$ are the seeds.",
+        "Rule: $F_n = F_{n-1} + F_{n-2}$ — each term is the sum of the two before."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{Find the 8th Fibonacci number } F_8.",
+      "answer": 21,
+      "tolerance": 0,
+      "hints": [
+        "Generate term by term: $1, 1, 2, 3, 5, 8, 13, 21, \\ldots$",
+        "$F_8$ is the 8th in the list."
+      ],
+      "explanation": "$F_8 = 21$ (the sequence is $1, 1, 2, 3, 5, 8, 13, 21, \\ldots$).",
+      "steps": [
+        "Apply the recursion starting from $F_1 = F_2 = 1$.",
+        "$F_3 = F_2 + F_1 = 1 + 1 = 2$.",
+        "$F_4 = 2 + 1 = 3$. $F_5 = 3 + 2 = 5$. $F_6 = 5 + 3 = 8$. $F_7 = 8 + 5 = 13$. $F_8 = 13 + 8 = 21$.",
+        "**Answer:** $F_8 = 21$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{Compute } 5! - 4!.",
+      "answer": 96,
+      "tolerance": 0,
+      "hints": [
+        "$5! = 120$, $4! = 24$.",
+        "Or factor: $5! - 4! = 4!(5 - 1) = 4! \\cdot 4 = 24 \\cdot 4$."
+      ],
+      "explanation": "$5! = 120$, $4! = 24$. $120 - 24 = 96$.",
+      "steps": [
+        "Compute factorials: $5! = 5 \\cdot 4 \\cdot 3 \\cdot 2 \\cdot 1 = 120$ and $4! = 24$.",
+        "Subtract: $120 - 24 = 96$.",
+        "(Slick: $5! - 4! = 4!(5 - 1) = 24 \\cdot 4 = 96$.)"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Look at the sequence } 3, 6, 11, 18, 27, 38, \\ldots \\\\ \\text{Which best describes its growth?}",
+      "choices": [
+        "Arithmetic (constant first differences)",
+        "Geometric (constant ratios)",
+        "Quadratic (constant second differences)",
+        "Fibonacci-like"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Compute first differences: $3, 5, 7, 9, 11$.",
+        "Are first differences constant? No. Now compute second differences."
+      ],
+      "explanation": "First differences: $3, 5, 7, 9, 11$ (not constant — so not arithmetic). Second differences: $2, 2, 2, 2$ (constant!) → quadratic.",
+      "steps": [
+        "First differences (consecutive subtractions): $6-3, 11-6, 18-11, 27-18, 38-27 = 3, 5, 7, 9, 11$.",
+        "Not constant → not arithmetic.",
+        "Compute ratios: $6/3 = 2$, $11/6 \\approx 1.83$ — not constant either, so not geometric.",
+        "Compute **second** differences (diffs of diffs): $5-3, 7-5, 9-7, 11-9 = 2, 2, 2, 2$ — constant!",
+        "Constant second differences → **quadratic** sequence. (In fact, $a_n = n^2 + 2$.)"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{A sequence is defined recursively by } a_1 = 5, \\;\\; a_n = 2 a_{n-1} - 3. \\\\ \\text{Find } a_4.",
+      "answer": 19,
+      "tolerance": 0,
+      "hints": [
+        "Build term-by-term: $a_2 = 2 a_1 - 3$.",
+        "$a_2 = 7$, $a_3 = 11$, $a_4 = ?$"
+      ],
+      "explanation": "$a_2 = 2(5) - 3 = 7$. $a_3 = 2(7) - 3 = 11$. $a_4 = 2(11) - 3 = 19$.",
+      "steps": [
+        "$a_1 = 5$ (given).",
+        "$a_2 = 2 a_1 - 3 = 2(5) - 3 = 10 - 3 = 7$.",
+        "$a_3 = 2 a_2 - 3 = 2(7) - 3 = 14 - 3 = 11$.",
+        "$a_4 = 2 a_3 - 3 = 2(11) - 3 = 22 - 3 = 19$.",
+        "**Answer:** $a_4 = 19$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which growth wins for large } n: \\text{ arithmetic } a_n = 100 n \\\\ \\text{or geometric } b_n = 2^n?",
+      "choices": [
+        "Arithmetic — grows by 100 each step",
+        "Geometric — exponential always wins eventually",
+        "They grow at the same rate forever",
+        "Depends on the starting term"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Compute both at $n = 5, 10, 20$.",
+        "$2^{20} > 1\\,000\\,000$ but $100 \\cdot 20 = 2000$. Exponential wins."
+      ],
+      "explanation": "Exponential growth always beats linear (or any polynomial) eventually. By $n = 20$, $b_n = 1{,}048{,}576$ vs. $a_n = 2{,}000$.",
+      "steps": [
+        "Compare values at $n = 5$: $a_5 = 500$, $b_5 = 32$. (Linear ahead.)",
+        "At $n = 10$: $a_{10} = 1000$, $b_{10} = 1024$. (Exponential just barely catches up.)",
+        "At $n = 20$: $a_{20} = 2000$, $b_{20} \\approx 1{,}048{,}576$. (Exponential blows past.)",
+        "**Exponential growth always wins eventually**, no matter how big the linear coefficient. This is one of the deepest facts about growth rates."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A sequence is defined recursively by } a_1 = 4, \\; a_n = a_{n-1} + 3. \\\\ \\text{This is the same as which kind of sequence?}",
+      "choices": [
+        "arithmetic",
+        "geometric",
+        "Fibonacci",
+        "quadratic"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "The rule: each term = previous + a constant.",
+        "That's the definition of arithmetic with $d = 3$."
+      ],
+      "explanation": "$a_n = a_{n-1} + 3$ adds a constant each step → **arithmetic** with $d = 3$ and $a_1 = 4$.",
+      "steps": [
+        "Read the recurrence: each new term equals the previous **plus 3**.",
+        "Adding a constant each step is the defining property of an **arithmetic** sequence.",
+        "Common difference $d = 3$, first term $a_1 = 4$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "promptTex": "\\text{An arithmetic sequence corresponds to which type of function?}",
+      "choices": [
+        "constant",
+        "linear",
+        "exponential",
+        "quadratic"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Plot the sequence: arithmetic dots lie on a straight line.",
+        "Straight line = linear function."
+      ],
+      "explanation": "Arithmetic sequences correspond to **linear** functions: $a_n = a_1 + (n - 1)d$ has the same shape as $f(x) = mx + b$.",
+      "steps": [
+        "Arithmetic explicit form: $a_n = a_1 + (n - 1)d$.",
+        "Distribute: $a_n = (a_1 - d) + d \\cdot n$.",
+        "Identify: this is **linear** in $n$ with slope $d$ and intercept $a_1 - d$.",
+        "Match to function form $f(x) = mx + b$: $m = d$, $b = a_1 - d$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The sequence } 3, 9, 27, 81, \\ldots \\text{ corresponds to which function form?}",
+      "choices": [
+        "f(x) = 3x",
+        "f(x) = 3^x",
+        "f(x) = 3x + 1",
+        "f(x) = x^3"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "It's geometric. Geometric sequences correspond to exponential functions.",
+        "$a_n = 3 \\cdot 3^{n-1} = 3^n$. So $f(x) = 3^x$."
+      ],
+      "explanation": "Geometric with $a_1 = 3$, $r = 3$: $a_n = 3 \\cdot 3^{n - 1} = 3^n$. Corresponds to $f(x) = 3^x$.",
+      "steps": [
+        "Identify: ratios $9/3 = 3$, $27/9 = 3$, … — geometric with $r = 3$, $a_1 = 3$.",
+        "Explicit form: $a_n = 3 \\cdot 3^{n-1} = 3^n$.",
+        "As a function: $f(x) = 3^x$ — **exponential**."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{Tower of Hanoi: a stack of } 6 \\text{ disks. Minimum number of moves} \\\\ \\text{to transfer the stack? (Use the formula } T_n = 2^n - 1.)",
+      "answer": 63,
+      "tolerance": 0,
+      "hints": [
+        "$T_n = 2^n - 1$.",
+        "$2^6 - 1 = 64 - 1 = 63$."
+      ],
+      "explanation": "$T_6 = 2^6 - 1 = 63$ moves.",
+      "steps": [
+        "Closed-form solution to the Tower of Hanoi recurrence: $T_n = 2^n - 1$.",
+        "Substitute $n = 6$: $$T_6 = 2^6 - 1 = 64 - 1 = 63$$",
+        "**63 moves.** (For 64 disks — the original legend's stack — that's $2^{64} - 1 \\approx 1.8 \\times 10^{19}$ moves. Hence the legend that the priests would still be working on it at the end of the universe.)"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{What are the first three } \\textbf{first differences} \\text{ of the squares} \\\\ 1, 4, 9, 16, 25, 36, \\ldots? \\\\ \\text{(Enter just the } \\textbf{first} \\text{ first difference.)}",
+      "answer": 3,
+      "tolerance": 0,
+      "hints": [
+        "First difference = $a_2 - a_1 = 4 - 1$.",
+        "Then the next ones are $9 - 4 = 5$, $16 - 9 = 7$, …"
+      ],
+      "explanation": "First differences of $1, 4, 9, 16, \\ldots$: $4 - 1 = 3$. (Subsequent: $5, 7, 9, 11$ — themselves arithmetic with $d = 2$.)",
+      "steps": [
+        "First difference = (term 2) − (term 1) = $4 - 1 = 3$.",
+        "Continuing: $9 - 4 = 5$, $16 - 9 = 7$, $25 - 16 = 9$, … — the **odd numbers**.",
+        "**Second** differences: $5 - 3 = 2$, $7 - 5 = 2$, $9 - 7 = 2$, … — *constant* at $2$. This is the signature of a quadratic sequence."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\text{Compute the ratio } F_{12} / F_{11} \\text{ for Fibonacci numbers} \\\\ \\text{(round to 4 decimals).}",
+      "answer": 1.618,
+      "tolerance": 0.001,
+      "hints": [
+        "$F_{11} = 89$, $F_{12} = 144$.",
+        "$144 / 89 \\approx ?$ This ratio approaches the golden ratio $\\varphi$."
+      ],
+      "explanation": "$144 / 89 \\approx 1.6180$. The ratio of consecutive Fibonacci numbers approaches $\\varphi = (1 + \\sqrt{5})/2 \\approx 1.6180$ as $n \\to \\infty$.",
+      "steps": [
+        "Recall $F_{11} = 89$, $F_{12} = 144$ (extending the Fibonacci sequence).",
+        "Compute: $$\\dfrac{F_{12}}{F_{11}} = \\dfrac{144}{89} \\approx 1.6180$$",
+        "**Cool fact:** as $n$ grows, $\\dfrac{F_{n+1}}{F_n}$ converges to the **golden ratio** $\\varphi = \\dfrac{1 + \\sqrt{5}}{2} \\approx 1.61803$. By $n = 11$ we're already accurate to 4 decimal places."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q13",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which is true about a sequence and its corresponding function?}",
+      "choices": [
+        "A sequence is a function whose domain is the positive integers",
+        "A sequence is a function whose domain is the real numbers",
+        "Sequences are unrelated to functions",
+        "Only arithmetic sequences correspond to functions"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "A sequence assigns a value to each integer index $n$.",
+        "That's literally a function with domain = positive integers."
+      ],
+      "explanation": "A sequence assigns a value $a_n$ to each positive integer $n$ — that's the definition of a function with domain $\\mathbb{N}$.",
+      "steps": [
+        "A function maps inputs to outputs.",
+        "A sequence maps the index $n$ (a positive integer) to a value $a_n$.",
+        "So a sequence **is** a function — its domain just happens to be $\\{1, 2, 3, \\ldots\\}$ instead of $\\mathbb{R}$.",
+        "This means everything you know about functions (graphs, transformations, comparisons) applies to sequences."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Compute } \\displaystyle\\sum_{k=1}^{99} \\frac{1}{k(k+1)}.",
+      "answer": 0.99,
+      "tolerance": 0.001,
+      "hints": [
+        "Try partial fractions: $\\dfrac{1}{k(k+1)} = \\dfrac{1}{k} - \\dfrac{1}{k+1}$.",
+        "When you sum, most terms cancel — that's the 'telescoping' trick."
+      ],
+      "explanation": "Partial fractions: $\\dfrac{1}{k(k+1)} = \\dfrac{1}{k} - \\dfrac{1}{k+1}$. So the sum is $\\left(1 - \\dfrac{1}{2}\\right) + \\left(\\dfrac{1}{2} - \\dfrac{1}{3}\\right) + \\cdots + \\left(\\dfrac{1}{99} - \\dfrac{1}{100}\\right) = 1 - \\dfrac{1}{100} = \\dfrac{99}{100} = 0.99$.",
+      "steps": [
+        "Decompose: $\\dfrac{1}{k(k+1)} = \\dfrac{1}{k} - \\dfrac{1}{k+1}$ (verify by combining).",
+        "The sum becomes $\\sum_{k=1}^{99} \\left(\\dfrac{1}{k} - \\dfrac{1}{k+1}\\right)$.",
+        "Most terms cancel — only the first and last survive: $1 - \\dfrac{1}{100}$.",
+        "Result: $\\dfrac{99}{100} = 0.99$."
+      ],
+      "id": "q14",
+      "difficulty": "hard"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Tower of Hanoi satisfies } T_1 = 1 \\text{ and } T_n = 2T_{n-1} + 1. \\text{ Find } T_{10}.",
+      "answer": 1023,
+      "tolerance": 0,
+      "hints": [
+        "Compute the first few: $T_1 = 1, T_2 = 3, T_3 = 7, T_4 = 15$ — pattern?",
+        "Closed form: $T_n = 2^n - 1$."
+      ],
+      "explanation": "Computing terms: $T_1 = 1, T_2 = 3, T_3 = 7, T_4 = 15$ — these are $2^n - 1$. So $T_{10} = 2^{10} - 1 = 1023$. (To move 10 disks requires 1023 moves; for $n = 64$ disks it would take $\\sim$585 billion years at one move per second.)",
+      "steps": [
+        "Compute first few: $T_1 = 1$, $T_2 = 2(1) + 1 = 3$, $T_3 = 2(3) + 1 = 7$, $T_4 = 15$.",
+        "Pattern: $T_n = 2^n - 1$.",
+        "$T_{10} = 2^{10} - 1 = 1024 - 1 = 1023$."
+      ],
+      "id": "q15",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{The identity } F_1 + F_2 + \\cdots + F_n = F_{n+2} - 1 \\text{ is famous.} \\\\ \\text{Use it to find } F_1 + F_2 + \\cdots + F_{10}. \\text{ (Use } F_1 = F_2 = 1.)",
+      "answer": 143,
+      "tolerance": 0,
+      "hints": [
+        "You only need $F_{12}$. The Fibonacci sequence: $1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, \\ldots$",
+        "$F_{12} = 144$, so the sum is $F_{12} - 1 = 143$."
+      ],
+      "explanation": "Apply the identity with $n = 10$: sum $= F_{12} - 1$. Compute $F_{12}$: $1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144$. So $F_{12} = 144$ and the answer is $144 - 1 = 143$.",
+      "steps": [
+        "Identity: $F_1 + \\cdots + F_n = F_{n+2} - 1$.",
+        "For $n = 10$: need $F_{12}$.",
+        "Fibonacci: $1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144$ — so $F_{12} = 144$.",
+        "Sum = $144 - 1 = 143$."
+      ],
+      "id": "q16",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Notice the pattern:} \\\\ 1 = 1, \\quad 3+5 = 8, \\quad 7+9+11 = 27, \\quad 13+15+17+19 = 64. \\\\ \\text{What is the sum of the next group (}n=5\\text{)?}",
+      "answer": 125,
+      "tolerance": 0,
+      "hints": [
+        "The sums so far are $1, 8, 27, 64$. Recognize them?",
+        "These are perfect cubes: $1^3, 2^3, 3^3, 4^3$. So the next is $5^3$."
+      ],
+      "explanation": "The sums are $1^3, 2^3, 3^3, 4^3, \\ldots$ — the $n$-th group sums to $n^3$. So the $5$-th group ($21+23+25+27+29$) sums to $5^3 = 125$. (Check: $21+23+25+27+29 = 125$ ✓.)",
+      "steps": [
+        "Compute the given sums: $1, 8, 27, 64$.",
+        "Recognize as cubes: $1^3, 2^3, 3^3, 4^3$.",
+        "Pattern: $n$-th group sums to $n^3$.",
+        "For $n = 5$: $5^3 = 125$. (Verify: $21+23+25+27+29 = 125$ ✓.)"
+      ],
+      "id": "q17",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Define } a_1 = 1, \\; a_2 = 3, \\text{ and } a_n = a_{n-1} + 2a_{n-2} \\text{ for } n \\geq 3. \\\\ \\text{Find } a_6.",
+      "answer": 43,
+      "tolerance": 0,
+      "hints": [
+        "Compute term by term: $a_3, a_4, a_5, a_6$.",
+        "Don't forget the factor of $2$ on the $a_{n-2}$ term."
+      ],
+      "explanation": "$a_3 = a_2 + 2a_1 = 3 + 2 = 5$. $a_4 = a_3 + 2a_2 = 5 + 6 = 11$. $a_5 = a_4 + 2a_3 = 11 + 10 = 21$. $a_6 = a_5 + 2a_4 = 21 + 22 = 43$.",
+      "steps": [
+        "$a_3 = a_2 + 2a_1 = 3 + 2(1) = 5$.",
+        "$a_4 = a_3 + 2a_2 = 5 + 2(3) = 11$.",
+        "$a_5 = a_4 + 2a_3 = 11 + 2(5) = 21$.",
+        "$a_6 = a_5 + 2a_4 = 21 + 2(11) = 43$."
+      ],
+      "id": "q18",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A bacterial colony starts at } 500 \\text{ and doubles every } 3 \\text{ hours.} \\\\ \\text{Find the population after } 15 \\text{ hours.}",
+      "answer": 16000,
+      "tolerance": 0,
+      "hints": [
+        "Number of doublings in 15 hours: $15 / 3 = 5$.",
+        "Population: $500 \\cdot 2^5$."
+      ],
+      "explanation": "Doublings = $15 / 3 = 5$. Population = $500 \\cdot 2^5 = 500 \\cdot 32 = 16{,}000$. (General formula: $P(t) = 500 \\cdot 2^{t/3}$.)",
+      "steps": [
+        "Each 3-hr period doubles the population.",
+        "In 15 hr: $15/3 = 5$ doublings.",
+        "Population: $500 \\cdot 2^5 = 500 \\cdot 32 = 16{,}000$."
+      ],
+      "id": "q19",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "n \\text{ straight lines drawn in the plane in general position} \\\\ \\text{(no two parallel, no three concurrent) divide it into how many regions when } n = 6? \\\\ \\text{(Recurrence: each new line adds } n \\text{ new regions; closed form: } R_n = 1 + \\dfrac{n(n+1)}{2}.)",
+      "answer": 22,
+      "tolerance": 0,
+      "hints": [
+        "Closed form: $R_n = 1 + \\dfrac{n(n+1)}{2}$.",
+        "Plug in $n = 6$: $R_6 = 1 + \\dfrac{6 \\cdot 7}{2}$."
+      ],
+      "explanation": "$R_6 = 1 + \\dfrac{6 \\cdot 7}{2} = 1 + 21 = 22$. (The recurrence $R_n = R_{n-1} + n$ comes from: each new line crosses all $n - 1$ previous lines, gaining $n$ new regions.)",
+      "steps": [
+        "Apply $R_n = 1 + \\dfrac{n(n+1)}{2}$ for $n = 6$.",
+        "$R_6 = 1 + \\dfrac{42}{2} = 1 + 21 = 22$.",
+        "Sanity check via recurrence: $R_0 = 1, R_1 = 2, R_2 = 4, R_3 = 7, R_4 = 11, R_5 = 16, R_6 = 22$ ✓."
+      ],
+      "id": "q20",
+      "difficulty": "hard"
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "2 + 3 \\times 4 = ?",
+      "answer": 14,
+      "tolerance": 0,
+      "hints": [
+        "PEMDAS — multiplication before addition.",
+        "$3 \\times 4 = 12$ first, then $2 + 12$."
+      ],
+      "explanation": "Multiply before adding: $3 \\times 4 = 12$, then $2 + 12 = 14$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "(2 + 3) \\times 4 = ?",
+      "answer": 20,
+      "tolerance": 0,
+      "hints": [
+        "Parentheses come first.",
+        "$(2 + 3) = 5$, then multiply by $4$."
+      ],
+      "explanation": "Parentheses first: $2 + 3 = 5$. Then $5 \\times 4 = 20$. The parentheses change the answer.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "8 \\div 2 \\times 4 = ?",
+      "answer": 16,
+      "tolerance": 0,
+      "hints": [
+        "Multiplication and division are tied — go left to right.",
+        "$8 \\div 2 = 4$ first, then $\\times 4$."
+      ],
+      "explanation": "Division and multiplication are evaluated left to right: $8 \\div 2 = 4$, then $4 \\times 4 = 16$. (A common trap is doing $\\times 4$ first and getting $1$.)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "3^2 + 4 \\times 2 = ?",
+      "answer": 17,
+      "tolerance": 0,
+      "hints": [
+        "Exponents before multiplication, multiplication before addition.",
+        "$3^2 = 9$, then $4 \\times 2 = 8$, then add."
+      ],
+      "explanation": "Exponent first: $3^2 = 9$. Then multiply: $4 \\times 2 = 8$. Then add: $9 + 8 = 17$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "20 - 6 \\div 2 + 1 = ?",
+      "answer": 18,
+      "tolerance": 0,
+      "hints": [
+        "Division before addition/subtraction.",
+        "$6 \\div 2 = 3$ first, then evaluate left to right."
+      ],
+      "explanation": "Division first: $6 \\div 2 = 3$, giving $20 - 3 + 1$. Then left to right: $20 - 3 = 17$, then $17 + 1 = 18$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**PEMDAS hierarchy.** Parentheses → Exponents → Multiplication/Division → Addition/Subtraction. Same-tier operations go left-to-right."
+        },
+        {
+          "text": "**Division before +/−.** $6 \\div 2 = 3$. Expression becomes $20 - 3 + 1$."
+        },
+        {
+          "text": "**Left to right** for +/−. $20 - 3 = 17$, then $17 + 1 = 18$."
+        }
+      ]
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Evaluate: } 4 + 3 \\cdot 2^3 - (10 - 6).",
+      "answer": 24,
+      "tolerance": 0,
+      "hints": [
+        "PEMDAS: parentheses, exponents, ×/÷, +/−.",
+        "Inside parens: $10 - 6 = 4$. Exponent: $2^3 = 8$. Then $4 + 3 \\cdot 8 - 4$."
+      ],
+      "explanation": "$4 + 24 - 4 = 24$.",
+      "steps": [
+        "**Plan PEMDAS in order: P → E → MD → AS.** Pick off ONE tier at a time, simplifying as you go.",
+        "**Parentheses.** $10 - 6 = 4$. Expression: $4 + 3 \\cdot 2^3 - 4$.",
+        "**Exponent.** $2^3 = 8$. Expression: $4 + 3 \\cdot 8 - 4$.",
+        "**Multiplication.** $3 \\cdot 8 = 24$. Expression: $4 + 24 - 4$.",
+        "**Addition/Subtraction left to right.** $4 + 24 = 28$. $28 - 4 = 24$."
+      ],
+      "id": "q6",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Evaluate: } 4(3 + 2(5 - 7)).",
+      "answer": -4,
+      "tolerance": 0,
+      "hints": [
+        "Innermost parens first: $5 - 7 = -2$.",
+        "Then $4(3 + 2(-2)) = 4(3 - 4) = 4(-1)$."
+      ],
+      "explanation": "Innermost: $5 - 7 = -2$. Next: $3 + 2(-2) = 3 - 4 = -1$. Final: $4 \\cdot (-1) = -4$.",
+      "steps": [
+        "**Nested parentheses — work from INSIDE OUT.** Always tackle the innermost layer first.",
+        "**Innermost.** $5 - 7 = -2$. Now $4(3 + 2(-2))$.",
+        "**Next layer: multiplication inside.** $2 \\cdot (-2) = -4$. Now $4(3 + (-4))$.",
+        "**Addition inside.** $3 + (-4) = -1$. Now $4 \\cdot (-1)$.",
+        "**Outermost multiplication.** $4 \\cdot (-1) = -4$."
+      ],
+      "id": "q7",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Evaluate: } \\dfrac{20 - 4 \\cdot 3}{2^2 - 2}.",
+      "answer": 4,
+      "tolerance": 0,
+      "hints": [
+        "Numerator and denominator separately, then divide.",
+        "Numerator: $20 - 12 = 8$. Denominator: $4 - 2 = 2$. $8/2 = ?$"
+      ],
+      "explanation": "Numerator: $20 - 12 = 8$. Denominator: $4 - 2 = 2$. $8/2 = 4$.",
+      "steps": [
+        "**Fraction bar acts as a grouping symbol.** Simplify NUMERATOR and DENOMINATOR independently before dividing.",
+        "**Numerator** ($20 - 4 \\cdot 3$): multiplication first → $4 \\cdot 3 = 12$. Then $20 - 12 = 8$.",
+        "**Denominator** ($2^2 - 2$): exponent first → $2^2 = 4$. Then $4 - 2 = 2$.",
+        "**Divide.** $\\dfrac{8}{2} = 4$."
+      ],
+      "id": "q8",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Evaluate: } 5 - 2 \\cdot (4 - 6)^2 + 3.",
+      "answer": 0,
+      "tolerance": 0,
+      "hints": [
+        "Inside parens first: $4 - 6 = -2$. Then exponent: $(-2)^2 = 4$.",
+        "Now $5 - 2 \\cdot 4 + 3 = 5 - 8 + 3$."
+      ],
+      "explanation": "$(4-6)^2 = (-2)^2 = 4$. $5 - 2(4) + 3 = 5 - 8 + 3 = 0$.",
+      "steps": [
+        "**PEMDAS in order.**",
+        "**Parentheses.** $4 - 6 = -2$.",
+        "**Exponent.** $(-2)^2 = 4$ (even power → positive).",
+        "**Substitute.** $5 - 2 \\cdot 4 + 3$.",
+        "**Multiplication.** $2 \\cdot 4 = 8$. Now $5 - 8 + 3$.",
+        "**Left-to-right.** $5 - 8 = -3$. $-3 + 3 = 0$."
+      ],
+      "id": "q9",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which is the correct value of } 8 - 3 + 2?",
+      "choices": [
+        "3",
+        "7",
+        "13",
+        "9"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Same precedence (+ and −): work LEFT to RIGHT.",
+        "$8 - 3 = 5$, then $5 + 2 = 7$. Don't add 3 + 2 first!"
+      ],
+      "explanation": "Left to right: $8 - 3 = 5$, then $5 + 2 = 7$. Common mistake: doing $3 + 2 = 5$ first gives $8 - 5 = 3$ — wrong!",
+      "steps": [
+        "**Same-precedence rule: + and − evaluate LEFT TO RIGHT.** Not 'multiplication before addition' — they're the SAME tier.",
+        "**Apply left-to-right.** $8 - 3 = 5$ first. Then $5 + 2 = 7$.",
+        "**Common mistake.** Doing $3 + 2 = 5$ first, then $8 - 5 = 3$. WRONG — that effectively groups it as $8 - (3 + 2)$, which is a different expression.",
+        "**Why left-to-right matters.** Subtraction is NOT associative: $(8 - 3) + 2 \\neq 8 - (3 + 2)$. Sticking to left-to-right gives the correct unambiguous answer."
+      ],
+      "id": "q10",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Evaluate: } 36 \\div 6 \\cdot 2.",
+      "answer": 12,
+      "tolerance": 0,
+      "hints": [
+        "Same precedence (× and ÷): work LEFT to RIGHT.",
+        "$36 \\div 6 = 6$, then $6 \\cdot 2 = 12$. Don't compute $6 \\cdot 2 = 12$ first!"
+      ],
+      "explanation": "Left to right: $36 \\div 6 = 6$, then $6 \\cdot 2 = 12$.",
+      "steps": [
+        "**× and ÷ have the same precedence — LEFT TO RIGHT.**",
+        "**Apply.** $36 \\div 6 = 6$. Then $6 \\cdot 2 = 12$.",
+        "**Common mistake.** Doing $6 \\cdot 2 = 12$ first, then $36 \\div 12 = 3$. WRONG — that groups it as $36 \\div (6 \\cdot 2)$, not $(36 \\div 6) \\cdot 2$.",
+        "**Universal rule.** Among same-tier operations, ALWAYS go left to right."
+      ],
+      "id": "q11",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Evaluate: } 2 \\cdot 3^2 + (4 - 1)^3.",
+      "answer": 45,
+      "tolerance": 0,
+      "hints": [
+        "Exponents first. $3^2 = 9$. Inside parens: $4 - 1 = 3$, then $3^3 = 27$.",
+        "Then: $2 \\cdot 9 + 27$."
+      ],
+      "explanation": "$2 \\cdot 9 + 27 = 18 + 27 = 45$.",
+      "steps": [
+        "**PEMDAS.** Parentheses, then exponents, then multiplication, then addition.",
+        "**Inner parens.** $4 - 1 = 3$. Expression: $2 \\cdot 3^2 + 3^3$.",
+        "**Exponents.** $3^2 = 9$. $3^3 = 27$. Expression: $2 \\cdot 9 + 27$.",
+        "**Multiplication.** $2 \\cdot 9 = 18$. Expression: $18 + 27$.",
+        "**Addition.** $18 + 27 = 45$."
+      ],
+      "id": "q12",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Evaluate: } \\dfrac{(8 - 3)^2 + 2 \\cdot 3}{|-7| - 2}.",
+      "answer": 6.2,
+      "tolerance": 0.01,
+      "hints": [
+        "Numerator: $(8-3)^2 + 2 \\cdot 3 = 25 + 6 = 31$.",
+        "Denominator: $|-7| - 2 = 7 - 2 = 5$. Then $31 / 5$."
+      ],
+      "explanation": "Numerator: $25 + 6 = 31$. Denominator: $7 - 2 = 5$. $31/5 = 6.2$.",
+      "steps": [
+        "**Fraction bar groups numerator and denominator.** Simplify each independently.",
+        "**Numerator** $(8-3)^2 + 2 \\cdot 3$:",
+        "  Parens: $8 - 3 = 5$. Exponent: $5^2 = 25$. Multiply: $2 \\cdot 3 = 6$. Add: $25 + 6 = 31$.",
+        "**Denominator** $|-7| - 2$:",
+        "  Absolute value: $|-7| = 7$. Subtract: $7 - 2 = 5$.",
+        "**Divide.** $\\dfrac{31}{5} = 6.2$."
+      ],
+      "id": "q13",
+      "difficulty": "hard"
+    }
+  ]
+}

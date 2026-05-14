@@ -1,0 +1,97 @@
+{
+  "title": "Continuity",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Intuitively, a **continuous** function is one whose graph you can draw without lifting your pen. Formally, continuity is defined in terms of limits — and most theorems in calculus assume the functions involved are continuous."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. The Three Conditions"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "A function $f$ is **continuous at $a$** if all three are true:",
+        "**1.** $f(a)$ is defined (i.e., $a$ is in the domain).",
+        "**2.** $\\displaystyle\\lim_{x \\to a} f(x)$ exists (the two-sided limit).",
+        "**3.** $\\displaystyle\\lim_{x \\to a} f(x) = f(a)$ (the limit equals the function value).",
+        "If any condition fails, $f$ has a **discontinuity** at $a$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. Types of Discontinuity"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Removable (hole):** the limit exists but doesn't equal $f(a)$ — or $f(a)$ doesn't exist. We could 'fix' it by redefining $f(a)$.",
+        "Example: $f(x) = \\dfrac{x^2 - 4}{x - 2}$ at $x = 2$. The limit is 4 (we computed it earlier); but the function isn't defined there. Hole at $(2, 4)$.",
+        "**Jump:** the left and right limits both exist but are different.",
+        "Example: a step function. $\\lim_{x \\to 0^-} = 0$, $\\lim_{x \\to 0^+} = 1$ — function jumps.",
+        "**Infinite (vertical asymptote):** the function diverges to $\\pm\\infty$.",
+        "Example: $f(x) = 1/x$ at $x = 0$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Continuous on an interval",
+      "body": "$f$ is continuous on $[a, b]$ if it's continuous at every point in the interval. (For endpoints, use one-sided limits.) Polynomials, exponentials, sines, cosines are continuous everywhere. Rational functions are continuous everywhere except where their denominator is 0."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. Why Continuity Matters"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Continuous functions behave nicely:",
+        "**Direct substitution works** for limits: $\\lim_{x \\to a} f(x) = f(a)$.",
+        "They satisfy the **Intermediate Value Theorem (IVT)**.",
+        "They have a **maximum and minimum** on any closed bounded interval (Extreme Value Theorem).",
+        "They can be **integrated** (and the integral has nice properties).",
+        "Most theorems in differential and integral calculus require continuity as a hypothesis."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. The Intermediate Value Theorem (IVT)"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Intermediate Value Theorem",
+      "body": "If $f$ is continuous on $[a, b]$ and $N$ is any value between $f(a)$ and $f(b)$, then there exists at least one $c$ in $(a, b)$ with $f(c) = N$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Plain English:** a continuous curve from height $f(a)$ to height $f(b)$ must pass through every height in between. It can't skip a value.",
+        "**A useful corollary:** if $f$ is continuous and $f(a)$ and $f(b)$ have *opposite signs*, then $f$ has at least one **root** in $(a, b)$. This is the basis of root-finding by bisection.",
+        "**Example.** Show that $f(x) = x^3 - x - 1$ has a root between 1 and 2.",
+        "$f(1) = 1 - 1 - 1 = -1 < 0$. $f(2) = 8 - 2 - 1 = 5 > 0$. $f$ continuous (polynomial). By IVT, $f$ has a root somewhere in $(1, 2)$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — analyze continuity",
+        "$f(x) = \\begin{cases} x^2 & \\text{if } x < 1 \\\\ 3 - x & \\text{if } x \\geq 1 \\end{cases}$",
+        "Is $f$ continuous at $x = 1$?",
+        "**Check 1:** $f(1) = 3 - 1 = 2$. Defined ✓.",
+        "**Check 2:** $\\lim_{x \\to 1^-} f(x) = 1^2 = 1$. $\\lim_{x \\to 1^+} f(x) = 3 - 1 = 2$. **Left ≠ right** — limit doesn't exist.",
+        "Condition 2 fails. **Jump discontinuity at $x = 1$**."
+      ]
+    }
+  ]
+}

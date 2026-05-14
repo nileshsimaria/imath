@@ -1,0 +1,255 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{Find the slope of the line through } (2, 3) \\text{ and } (6, 11).",
+      "answer": 2,
+      "tolerance": 0.001,
+      "hints": [
+        "Use $m = \\dfrac{y_2 - y_1}{x_2 - x_1}$.",
+        "$m = \\dfrac{11 - 3}{6 - 2} = \\dfrac{8}{4}$."
+      ],
+      "explanation": "$m = \\dfrac{11 - 3}{6 - 2} = \\dfrac{8}{4} = 2$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{Find the slope of the line through } (-1, 4) \\text{ and } (3, -4).",
+      "answer": -2,
+      "tolerance": 0.001,
+      "hints": [
+        "Watch the signs carefully when subtracting.",
+        "$m = \\dfrac{-4 - 4}{3 - (-1)} = \\dfrac{-8}{4}$."
+      ],
+      "explanation": "$m = \\dfrac{-4 - 4}{3 - (-1)} = \\dfrac{-8}{4} = -2$. The line tilts downward.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the slope of the line } y = 7\\,?",
+      "choices": [
+        "7",
+        "0",
+        "Undefined",
+        "1"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$y = 7$ means $y$ is always $7$ — it doesn't change as $x$ changes.",
+        "If $y$ never changes, what's the rise?"
+      ],
+      "explanation": "$y = 7$ is a horizontal line. Rise is $0$ for any run, so $m = 0$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the slope of the line } x = -3\\,?",
+      "choices": [
+        "-3",
+        "3",
+        "0",
+        "Undefined"
+      ],
+      "answerIndex": 3,
+      "hints": [
+        "$x = -3$ is a vertical line — every point has the same $x$.",
+        "Slope is rise over run. If run is $0$, what does division by zero give you?"
+      ],
+      "explanation": "$x = -3$ is vertical. Run is $0$ for any rise, so the slope is undefined (you can't divide by zero).",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which slope describes the steepest line?}",
+      "choices": [
+        "m = 3",
+        "m = -5",
+        "m = 0",
+        "m = 2"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Steepness is the absolute value of slope, not the sign.",
+        "Compare $|3|, |-5|, |0|, |2|$."
+      ],
+      "explanation": "Steepness equals $|m|$. The values are $3, 5, 0, 2$ — the largest is $5$, so $m = -5$ is steepest. The negative sign just means it tilts downward.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Find the slope of the line through } (-2, 5) \\text{ and } (4, -7).",
+      "answer": -2,
+      "tolerance": 0,
+      "hints": [
+        "Slope $m = \\dfrac{y_2 - y_1}{x_2 - x_1}$.",
+        "$\\dfrac{-7 - 5}{4 - (-2)} = \\dfrac{-12}{6}$."
+      ],
+      "explanation": "$m = \\dfrac{-7 - 5}{4 - (-2)} = \\dfrac{-12}{6} = -2$.",
+      "steps": [
+        "**Universal recipe for slope between two points.** $m = \\dfrac{\\text{rise}}{\\text{run}} = \\dfrac{y_2 - y_1}{x_2 - x_1}$. The DIFFERENCE of the $y$'s over the DIFFERENCE of the $x$'s.",
+        "**Match the points.** $(x_1, y_1) = (-2, 5)$, $(x_2, y_2) = (4, -7)$.",
+        "**Plug in carefully (signs!).** $m = \\dfrac{-7 - 5}{4 - (-2)} = \\dfrac{-12}{6} = -2$.",
+        "**Sign sanity.** $y$ DROPPED from 5 to $-7$ → slope should be negative ✓.",
+        "**Pitfall.** Mix up $(x_1, y_1)$ and $(x_2, y_2)$? It still works as long as you keep them CONSISTENT — both subtractions go in the same direction. (Otherwise you flip the sign of $m$.)"
+      ],
+      "id": "q6",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Find the slope of the line through } \\left(\\tfrac{1}{2}, 3\\right) \\text{ and } \\left(\\tfrac{5}{2}, -1\\right).",
+      "answer": -2,
+      "tolerance": 0,
+      "hints": [
+        "$\\dfrac{-1 - 3}{5/2 - 1/2}$.",
+        "Numerator $-4$, denominator $2$. So $-2$."
+      ],
+      "explanation": "$m = \\dfrac{-1 - 3}{5/2 - 1/2} = \\dfrac{-4}{2} = -2$.",
+      "steps": [
+        "**Same slope formula — fractions are fine, just be careful with the subtractions.**",
+        "**Numerator: $y$ difference.** $-1 - 3 = -4$.",
+        "**Denominator: $x$ difference.** $\\dfrac{5}{2} - \\dfrac{1}{2} = \\dfrac{4}{2} = 2$. (Same denominator → just subtract numerators.)",
+        "**Compute.** $m = \\dfrac{-4}{2} = -2$."
+      ],
+      "id": "q7",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the slope of the horizontal line } y = 7?",
+      "choices": [
+        "0",
+        "1",
+        "7",
+        "undefined"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "A horizontal line has no rise.",
+        "$\\Delta y = 0$, so slope $= 0/\\Delta x = 0$."
+      ],
+      "explanation": "Horizontal lines have slope **0** (no rise).",
+      "steps": [
+        "**Horizontal line: $y$ never changes.** $\\Delta y = 0$ for any choice of points.",
+        "**Slope = $\\dfrac{\\Delta y}{\\Delta x} = \\dfrac{0}{\\Delta x} = 0$** (as long as $\\Delta x \\neq 0$, which is true since the points are distinct).",
+        "**Universal fact.** ALL horizontal lines have slope 0."
+      ],
+      "id": "q8",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the slope of the vertical line } x = -2?",
+      "choices": [
+        "0",
+        "1",
+        "-2",
+        "undefined"
+      ],
+      "answerIndex": 3,
+      "hints": [
+        "A vertical line has no run.",
+        "$\\Delta x = 0$ → division by zero → undefined."
+      ],
+      "explanation": "Vertical lines have **undefined** slope (division by zero).",
+      "steps": [
+        "**Vertical line: $x$ never changes.** $\\Delta x = 0$ for any two points on it.",
+        "**Slope formula gives $\\dfrac{\\Delta y}{0}$** — DIVISION BY ZERO. Undefined.",
+        "**Universal fact.** ALL vertical lines have UNDEFINED slope.",
+        "**Distinction.** Horizontal slope = $0$ (defined, just zero). Vertical slope = undefined (no value at all). Different things."
+      ],
+      "id": "q9",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{The slope of a line is } \\dfrac{2}{3}. \\text{ The line passes through } (3, 1). \\\\ \\text{Find } y \\text{ when } x = 9.",
+      "answer": 5,
+      "tolerance": 0,
+      "hints": [
+        "Slope = rise/run. From $x=3$ to $x=9$ is run $6$.",
+        "Rise $= 6 \\cdot 2/3 = 4$. So $y = 1 + 4 = 5$."
+      ],
+      "explanation": "Run from 3 to 9 is 6. Rise $= 6 \\cdot 2/3 = 4$. New $y = 1 + 4 = 5$.",
+      "steps": [
+        "**Use the slope as a CONVERSION FACTOR.** Slope $= \\dfrac{\\text{rise}}{\\text{run}}$ means rise = slope × run.",
+        "**Compute the run.** From $x = 3$ to $x = 9$: run = $9 - 3 = 6$.",
+        "**Compute the rise.** rise = slope × run = $\\dfrac{2}{3} \\cdot 6 = 4$.",
+        "**New $y$.** $y_{\\text{new}} = y_{\\text{old}} + \\text{rise} = 1 + 4 = 5$.",
+        "**Alternative.** Write the line: $y = 1 + \\tfrac{2}{3}(x - 3)$. At $x = 9$: $y = 1 + \\tfrac{2}{3}(6) = 5$. Same answer."
+      ],
+      "id": "q10",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A car's distance from home: at } t = 2 \\text{ hr it's at } 80 \\text{ mi,} \\\\ \\text{at } t = 5 \\text{ hr it's at } 245 \\text{ mi. What is the average speed (in mph)?}",
+      "answer": 55,
+      "tolerance": 0,
+      "hints": [
+        "Speed = (change in distance) / (change in time).",
+        "$(245 - 80)/(5 - 2)$."
+      ],
+      "explanation": "$(245 - 80) / (5 - 2) = 165 / 3 = 55$ mph.",
+      "steps": [
+        "**Physics meaning of slope.** When you plot DISTANCE vs TIME, the slope IS the SPEED. (Slope = rise/run = $\\Delta d / \\Delta t$ = speed.)",
+        "**Compute the changes.** $\\Delta d = 245 - 80 = 165$ mi. $\\Delta t = 5 - 2 = 3$ hr.",
+        "**Compute the speed.** $\\Delta d / \\Delta t = 165 / 3 = 55$ mph.",
+        "**General principle: slope is RATE OF CHANGE.** Distance-vs-time → speed. Position-vs-time → velocity. Cost-vs-units → unit price. Universal across all linear contexts."
+      ],
+      "id": "q11",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{The slopes of two lines are } 3 \\text{ and } -\\dfrac{1}{3}. \\text{ The lines are:}",
+      "choices": [
+        "parallel",
+        "perpendicular",
+        "the same line",
+        "intersecting at any angle"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Two slopes are negative reciprocals: $3$ and $-1/3$.",
+        "Negative reciprocals → perpendicular."
+      ],
+      "explanation": "$3 \\cdot (-\\tfrac{1}{3}) = -1$ → the slopes are negative reciprocals → the lines are perpendicular.",
+      "steps": [
+        "**Universal slope-relationship rules.**",
+        "  PARALLEL lines: same slope. ($m_1 = m_2$.)",
+        "  PERPENDICULAR lines: NEGATIVE RECIPROCAL slopes. ($m_1 \\cdot m_2 = -1$.)",
+        "**Test the slopes.** $3 \\cdot (-\\tfrac{1}{3}) = -1$ ✓. Negative reciprocals.",
+        "**Conclusion: perpendicular.**",
+        "**Why $m_1 \\cdot m_2 = -1$ means perpendicular.** Rotating a line 90° trades 'rise' and 'run' AND flips one's sign. So slope $m$ becomes $-1/m$ after a 90° rotation."
+      ],
+      "id": "q12",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{The slope between } (4, k) \\text{ and } (-2, 5) \\text{ is } -1. \\\\ \\text{Find } k.",
+      "answer": -1,
+      "tolerance": 0,
+      "hints": [
+        "Slope $= \\dfrac{5 - k}{-2 - 4} = -1$.",
+        "Solve: $5 - k = -1 \\cdot (-6) = 6$, so $k = -1$."
+      ],
+      "explanation": "$\\dfrac{5 - k}{-6} = -1 \\Rightarrow 5 - k = 6 \\Rightarrow k = -1$.",
+      "steps": [
+        "**Set up the slope formula with $k$ as the unknown.** $\\dfrac{5 - k}{-2 - 4} = -1$.",
+        "**Simplify denominator.** $\\dfrac{5 - k}{-6} = -1$.",
+        "**Multiply both sides by $-6$.** $5 - k = 6$.",
+        "**Solve.** $-k = 1 \\Rightarrow k = -1$.",
+        "**Verify.** Points: $(4, -1)$ and $(-2, 5)$. Slope: $\\dfrac{5 - (-1)}{-2 - 4} = \\dfrac{6}{-6} = -1$ ✓."
+      ],
+      "id": "q13",
+      "difficulty": "medium"
+    }
+  ]
+}

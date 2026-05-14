@@ -1,0 +1,60 @@
+{
+  "title": "Hidden Patterns in Pascal's Triangle",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### The triangle that keeps giving",
+        "Pascal's triangle is one of the most pattern-rich objects in all of math. The basic rule is simple — each entry is the sum of the two above it — but once you have the numbers, an absurd number of patterns reveal themselves.",
+        "Let's hunt for them. Open the widget and look at the first few rows."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "pascals-triangle",
+      "config": {
+        "rows": 10
+      }
+    },
+    {
+      "type": "callout",
+      "title": "Pattern 1: rows sum to powers of 2",
+      "body": "Row 0: $1 = 2^0$.\nRow 1: $1+1 = 2 = 2^1$.\nRow 2: $1+2+1 = 4 = 2^2$.\nRow 3: $1+3+3+1 = 8 = 2^3$.\nRow 4: $1+4+6+4+1 = 16 = 2^4$.\nRow $n$: total $= 2^n$.\n\n**Why?** Row $n$ entries are $\\binom{n}{0}, \\binom{n}{1}, \\ldots, \\binom{n}{n}$. The sum $\\sum_k \\binom{n}{k}$ counts all subsets of an $n$-element set — and there are $2^n$ such subsets."
+    },
+    {
+      "type": "callout",
+      "title": "Pattern 2: Fibonacci on the diagonals",
+      "body": "Draw shallow diagonals across the triangle (going $\\rightarrow$ down-and-right) and sum the entries on each diagonal:\n\n- 1st diagonal: 1 → sum = 1\n- 2nd: 1 → 1\n- 3rd: 1 + 1 → 2\n- 4th: 1 + 2 → 3\n- 5th: 1 + 3 + 1 → 5\n- 6th: 1 + 4 + 3 → 8\n- 7th: 1 + 5 + 6 + 1 → 13\n- 8th: 1 + 6 + 10 + 4 → 21\n\n**Fibonacci!**\n\nThis isn't a coincidence — the identity $F_{n+1} = \\sum_{k=0}^{\\lfloor n/2 \\rfloor} \\binom{n-k}{k}$ is the algebraic reason."
+    },
+    {
+      "type": "callout",
+      "title": "Pattern 3: powers of 11",
+      "body": "Read each row as a multi-digit number (with carries):\n\nRow 0: 1 = $11^0$\nRow 1: 11 = $11^1$\nRow 2: 121 = $11^2$\nRow 3: 1331 = $11^3$\nRow 4: 14641 = $11^4$\nRow 5: 1, 5, 10, 10, 5, 1 → with carries: 161051 = $11^5$. ✓\n\n**Why?** Because Pascal's row $n$ is the binomial expansion of $(1 + 10)^n = 11^n$, which equals $\\sum_k \\binom{n}{k} 10^k$ — which is exactly $11^n$ written digit by digit when no carries are needed."
+    },
+    {
+      "type": "callout",
+      "title": "Pattern 4: hockey stick identity",
+      "body": "Pick any 1 in the leftmost diagonal. Go down-right at constant slope, summing up entries as you go. Stop at any entry and then **turn 90° right** — you'll land on the sum.\n\nE.g., starting at row 1: $1 + 3 + 6 + 10 = 20$. Turn right → land on $\\binom{6}{3} = 20$. ✓\n\nIn formula: $$\\sum_{k=r}^{n} \\binom{k}{r} = \\binom{n+1}{r+1}.$$\n\nThe sum 'hides' in the next entry of Pascal's triangle. Very neat for computing partial sums."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Pattern 5: edges and the 1-diagonal",
+        "**Edges of the triangle are all 1s** because $\\binom{n}{0} = \\binom{n}{n} = 1$ (one way to choose 'none' or 'all').",
+        "**Second diagonal** (next to the 1s): $1, 2, 3, 4, 5, \\ldots$ — the natural numbers. ($\\binom{n}{1} = n$.)",
+        "**Third diagonal:** $1, 3, 6, 10, 15, \\ldots$ — the **triangular numbers** $T_n = n(n+1)/2$. ($\\binom{n}{2} = \\binom{n}{2}$.)",
+        "**Fourth diagonal:** $1, 4, 10, 20, 35, \\ldots$ — the **tetrahedral numbers**. ($\\binom{n}{3}$.)",
+        "These diagonals are the *figurate numbers*: numbers counting points in geometric arrangements (triangles, tetrahedra, simplices)."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Pattern 6: symmetry",
+        "Every row of Pascal's triangle is **symmetric**: $\\binom{n}{k} = \\binom{n}{n - k}$.",
+        "*Why?* Choosing $k$ things from $n$ is the same as choosing $n - k$ to *leave behind*. Same count from a different angle.",
+        "**Bonus.** The maximum entry in row $n$ is at the middle: $\\binom{n}{\\lfloor n/2 \\rfloor}$. This is the 'most balanced' choice."
+      ]
+    }
+  ]
+}

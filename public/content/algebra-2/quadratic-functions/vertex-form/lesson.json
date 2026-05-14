@@ -1,0 +1,84 @@
+{
+  "title": "Vertex Form & Graphs",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Standard form $y = ax^2 + bx + c$ is great for arithmetic but **hides** the geometric features of a parabola. **Vertex form** rearranges the same parabola so its vertex is right there in the equation:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "y = a(x - h)^2 + k"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**The vertex is $(h, k)$.** Just read it off — the parabola's lowest point (or highest, if $a < 0$) sits at $(h, k)$. The number $a$ controls the shape: positive $a$ opens up, negative $a$ opens down, and the magnitude controls how wide or narrow the curve is.",
+        "Move the sliders below — the vertex follows $h$ and $k$ exactly."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "parabola",
+      "config": {
+        "mode": "vertex-form",
+        "a": 1,
+        "vh": 2,
+        "vk": -3,
+        "yRange": [
+          -7,
+          7
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why this form is so powerful",
+        "**Vertex visible**: $(h, k)$ — no algebra needed.",
+        "**Axis of symmetry**: the vertical line $x = h$.",
+        "**Direction**: $a > 0$ opens up (vertex is min); $a < 0$ opens down (vertex is max).",
+        "**Width**: $|a|$ large → narrow; $|a|$ small → wide. $a = 1$ is the standard $y = x^2$ shape."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Watch the sign on h",
+      "body": "Vertex form has $(x - h)$, so $y = a(x - 3)^2 + 5$ has vertex at $(3, 5)$, but $y = a(x + 4)^2 + 5 = a(x - (-4))^2 + 5$ has vertex at $(-4, 5)$. The $h$ value is the *opposite* of the sign you see inside the parentheses."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Converting vertex form → standard form",
+        "Just expand the square. $y = 2(x - 3)^2 + 5$ becomes:",
+        "$y = 2(x^2 - 6x + 9) + 5 = 2x^2 - 12x + 18 + 5 = 2x^2 - 12x + 23$.",
+        "Same parabola, different form."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Converting standard form → vertex form",
+        "This direction takes a technique called **completing the square**. The vertex is also calculable directly from $a$ and $b$:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "h = -\\dfrac{b}{2a}, \\qquad k = c - \\dfrac{b^2}{4a}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Example.** Convert $y = x^2 - 6x + 13$ to vertex form.",
+        "$h = -\\dfrac{-6}{2} = 3$. $k = 13 - \\dfrac{36}{4} = 13 - 9 = 4$.",
+        "So the vertex is $(3, 4)$ and the equation is $y = (x - 3)^2 + 4$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "**Vertex form** $y = a(x - h)^2 + k$ shows the vertex $(h, k)$ instantly and makes graphing a parabola trivial — plot the vertex, decide if it opens up or down based on the sign of $a$, sketch. Convert to/from standard form using $h = -b/(2a)$ and $k = c - b^2/(4a)$."
+    }
+  ]
+}

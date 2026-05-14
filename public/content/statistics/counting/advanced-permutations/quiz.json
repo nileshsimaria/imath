@@ -1,0 +1,455 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{Number of ways to arrange the letters of MATHS?}",
+      "answer": 120,
+      "tolerance": 0.001,
+      "hints": [
+        "All 5 distinct.",
+        "$5! = 120$."
+      ],
+      "explanation": "$5! = 120$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{Number of words from } MISSISSIPPI (\\text{11 letters, M=1, I=4, S=4, P=2})?",
+      "answer": 34650,
+      "tolerance": 0.5,
+      "hints": [
+        "$\\dfrac{11!}{1! \\cdot 4! \\cdot 4! \\cdot 2!}$.",
+        "$11!/4!/4!/2! = 34650$."
+      ],
+      "explanation": "$\\dfrac{11!}{4! \\cdot 4! \\cdot 2!} = \\dfrac{39916800}{1152} = 34650$.",
+      "steps": [
+        {
+          "text": "**With identical letters, the count is** $n! / (a! \\cdot b! \\cdot \\ldots)$ where $a, b, \\ldots$ are the repeat-counts."
+        },
+        {
+          "text": "**MISSISSIPPI:** 11 letters; I appears 4 times, S appears 4 times, P appears 2 times, M once."
+        },
+        {
+          "math": "\\dfrac{11!}{1! \\cdot 4! \\cdot 4! \\cdot 2!} = \\dfrac{39916800}{1 \\cdot 24 \\cdot 24 \\cdot 2} = \\dfrac{39916800}{1152} = 34650"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{Number of ways to choose 3 people from 10?}",
+      "answer": 120,
+      "tolerance": 0.001,
+      "hints": [
+        "Combination $\\binom{10}{3}$.",
+        "$10!/3!/7! = 120$."
+      ],
+      "explanation": "$\\binom{10}{3} = 120$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{6 people sit around a circular table. Number of arrangements?}",
+      "answer": 120,
+      "tolerance": 0.001,
+      "hints": [
+        "Circular: $(n-1)!$.",
+        "$5! = 120$."
+      ],
+      "explanation": "$(6-1)! = 120$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{Arrangements of 5 boys and 3 girls in a row so that all girls are together?}",
+      "answer": 4320,
+      "tolerance": 0.5,
+      "hints": [
+        "Treat 3 girls as one block. 6 entities: 5 boys + 1 block.",
+        "$6! \\cdot 3! = 720 \\cdot 6 = 4320$."
+      ],
+      "explanation": "Block of girls + 5 boys = 6 entities. $6! \\cdot 3! = 4320$.",
+      "steps": [
+        {
+          "text": "**Treat the 3 girls as a single block.** Now we arrange 5 boys + 1 block = 6 entities:"
+        },
+        {
+          "math": "6! = 720"
+        },
+        {
+          "text": "**Inside the block, the 3 girls can permute:**"
+        },
+        {
+          "math": "3! = 6"
+        },
+        {
+          "math": "\\text{Total} = 720 \\times 6 = 4320"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{From a group of 5 men and 4 women, how many committees of 4 contain exactly 2 women?}",
+      "answer": 60,
+      "tolerance": 0.001,
+      "hints": [
+        "Choose 2 women from 4: $\\binom{4}{2}$. Choose 2 men from 5: $\\binom{5}{2}$.",
+        "$6 \\cdot 10 = 60$."
+      ],
+      "explanation": "$\\binom{4}{2} \\cdot \\binom{5}{2} = 6 \\cdot 10 = 60$.",
+      "steps": [
+        {
+          "text": "**Committee = unordered selection** (combinations)."
+        },
+        {
+          "text": "**Choose 2 women from 4:** $\\binom{4}{2} = 6$."
+        },
+        {
+          "text": "**Choose 2 men from 5** (to fill the rest of the 4-person committee): $\\binom{5}{2} = 10$."
+        },
+        {
+          "math": "\\text{Total} = 6 \\cdot 10 = 60"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{Number of 5-card poker hands from a 52-card deck containing exactly 2 aces?}",
+      "answer": 103776,
+      "tolerance": 1,
+      "hints": [
+        "Choose 2 aces from 4: $\\binom{4}{2}$. Choose 3 non-aces from 48: $\\binom{48}{3}$.",
+        "$6 \\cdot 17296 = 103776$."
+      ],
+      "explanation": "$\\binom{4}{2} \\cdot \\binom{48}{3} = 6 \\cdot 17296 = 103776$.",
+      "steps": [
+        {
+          "text": "**Choose which 2 aces are in the hand** (from 4 available aces):"
+        },
+        {
+          "math": "\\binom{4}{2} = 6"
+        },
+        {
+          "text": "**Choose the remaining 3 cards from the 48 non-ace cards:**"
+        },
+        {
+          "math": "\\binom{48}{3} = \\dfrac{48 \\cdot 47 \\cdot 46}{6} = 17296"
+        },
+        {
+          "math": "\\text{Total} = 6 \\cdot 17296 = 103776"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{Number of ways to arrange the letters of } SUCCESS \\text{ (S=3, U=1, C=2, E=1)?}",
+      "answer": 420,
+      "tolerance": 0.5,
+      "hints": [
+        "$\\dfrac{7!}{3! \\cdot 2!}$.",
+        "$5040 / 12 = 420$."
+      ],
+      "explanation": "$\\dfrac{7!}{3! \\cdot 2!} = 5040/12 = 420$.",
+      "steps": [
+        {
+          "text": "**SUCCESS:** 7 letters total. S appears 3 times, C appears 2 times, U and E each once."
+        },
+        {
+          "math": "\\dfrac{7!}{3! \\cdot 2!} = \\dfrac{5040}{6 \\cdot 2} = \\dfrac{5040}{12} = 420"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{Number of 4-digit numbers formed from digits 1, 2, 3, 4, 5 without repetition.}",
+      "answer": 120,
+      "tolerance": 0.001,
+      "hints": [
+        "Choose 4 of 5 digits and arrange: $P(5, 4)$.",
+        "$5!/(5-4)! = 5!/1! = 120$."
+      ],
+      "explanation": "$P(5, 4) = 5! = 120$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{6 boys, 4 girls in a row. Number of arrangements where no two girls are adjacent?}",
+      "answer": 604800,
+      "tolerance": 1,
+      "hints": [
+        "Place 6 boys: $6!$ ways. Creates 7 gaps. Place 4 girls in 4 of 7 gaps: $\\binom{7}{4} \\cdot 4!$.",
+        "$720 \\cdot 35 \\cdot 24 = 604800$."
+      ],
+      "explanation": "Boys: $6! = 720$. Gaps: 7. Choose & arrange 4 girls: $\\binom{7}{4} \\cdot 4! = 35 \\cdot 24 = 840$. Total: $720 \\cdot 840 = 604800$.",
+      "steps": [
+        {
+          "text": "**Place the 6 boys first:**"
+        },
+        {
+          "math": "6! = 720 \\text{ arrangements}"
+        },
+        {
+          "text": "**This creates 7 gaps** (one before each boy and one after the last): _ B _ B _ B _ B _ B _ B _"
+        },
+        {
+          "text": "**Choose 4 of these 7 gaps for girls** ($\\binom{7}{4}$) **and arrange 4 girls in them** ($4!$):"
+        },
+        {
+          "math": "\\binom{7}{4} \\cdot 4! = 35 \\cdot 24 = 840"
+        },
+        {
+          "math": "\\text{Total} = 720 \\cdot 840 = 604800"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{Number of subsets of a 5-element set (including empty set)?}",
+      "answer": 32,
+      "tolerance": 0.001,
+      "hints": [
+        "$2^n$ subsets.",
+        "$2^5 = 32$."
+      ],
+      "explanation": "$2^5 = 32$ subsets total.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\text{Words from } PERMUTATIONS \\text{ starting with } P (\\text{12 letters, all distinct except T appears twice — wait, all distinct except T=2).} \\\\ \\text{Hint: T appears twice in PERMUTATIONS.}",
+      "answer": 19958400,
+      "tolerance": 100,
+      "hints": [
+        "Fix P at start. Arrange remaining 11 letters with T appearing twice: $11!/2!$.",
+        "$11! = 39916800$, divide by 2 → 19958400."
+      ],
+      "explanation": "Fix P. Remaining 11 letters with T repeated twice: $11!/2! = 19958400$.",
+      "steps": [
+        {
+          "text": "**Fix P at the start** — 1 way."
+        },
+        {
+          "text": "**Arrange the remaining 11 letters** (E, R, M, U, T, A, T, I, O, N, S — note T appears twice, all others once):"
+        },
+        {
+          "math": "\\dfrac{11!}{2!} = \\dfrac{39{,}916{,}800}{2} = 19{,}958{,}400"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q13",
+      "type": "numeric",
+      "promptTex": "\\text{Number of arrangements of letters of } INDIA \\text{ with both I's together?}",
+      "answer": 24,
+      "tolerance": 0.001,
+      "hints": [
+        "Treat II as a single letter: II, N, D, A — 4 entities.",
+        "$4! = 24$. (II is identical so we don't multiply by 2! inside the block.)"
+      ],
+      "explanation": "II as block: 4 entities → $4! = 24$. (No internal permutation since II is identical.)",
+      "steps": [
+        {
+          "text": "**Treat 'II' as a single block.** That gives 4 entities to arrange: II, N, D, A."
+        },
+        {
+          "math": "4! = 24"
+        },
+        {
+          "text": "**Don't multiply by an internal $2!$** because the two I's are identical — swapping them produces the same word."
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q14",
+      "type": "numeric",
+      "promptTex": "\\text{Number of 5-letter words (with possible repetition) from a 3-letter alphabet?}",
+      "answer": 243,
+      "tolerance": 0.5,
+      "hints": [
+        "Each of 5 positions: 3 choices independently.",
+        "$3^5 = 243$."
+      ],
+      "explanation": "$3^5 = 243$. (Repetition allowed = exponentiation.)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q15",
+      "type": "numeric",
+      "promptTex": "\\text{From 8 candidates, in how many ways can a President, VP, Treasurer be chosen?}",
+      "answer": 336,
+      "tolerance": 0.5,
+      "hints": [
+        "Order matters (different titles), so permutation $P(8, 3) = 8 \\cdot 7 \\cdot 6$.",
+        "$= 336$."
+      ],
+      "explanation": "$P(8, 3) = 8!/5! = 8 \\cdot 7 \\cdot 6 = 336$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q16",
+      "type": "numeric",
+      "promptTex": "\\text{How many ways to distribute 10 IDENTICAL candies among 3 distinguishable children} \\\\ \\text{(any child may receive 0 or more)?}",
+      "answer": 66,
+      "tolerance": 0,
+      "hints": [
+        "Classic 'stars and bars'. Number of ways to write $10 = x_1 + x_2 + x_3$ with non-negative integers.",
+        "Formula: $\\binom{n + k - 1}{k - 1}$ for $n$ items into $k$ bins.",
+        "$\\binom{10 + 2}{2} = \\binom{12}{2} = 66$."
+      ],
+      "explanation": "Stars and bars: distributing $n$ identical items into $k$ distinguishable bins = $\\binom{n + k - 1}{k - 1}$. Here $n = 10, k = 3$: $\\binom{12}{2} = 66$.",
+      "steps": [
+        "**Recognize — stars and bars.** Distribute $n$ identical items into $k$ distinguishable bins. Imagine $n$ stars (the candies) and $k - 1$ bars (dividers). Each arrangement of stars and bars defines a distribution.",
+        "**Visualize.** Example for $n = 10, k = 3$: `★★★|★★★★|★★★` means child 1 gets 3, child 2 gets 4, child 3 gets 3.",
+        "**Count arrangements.** Total positions: $n + k - 1 = 12$. Choose positions for the $k - 1 = 2$ bars (the rest are stars): $\\binom{12}{2}$.",
+        "**Compute.** $\\binom{12}{2} = \\dfrac{12 \\cdot 11}{2} = 66$.",
+        "**Pattern lesson.** This is the FUNDAMENTAL formula for distributing identical objects. It also counts non-negative integer solutions to $x_1 + x_2 + \\cdots + x_k = n$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q17",
+      "type": "numeric",
+      "promptTex": "\\text{Same distribution, but each child must get AT LEAST one candy.} \\\\ \\text{How many ways?}",
+      "answer": 36,
+      "tolerance": 0,
+      "hints": [
+        "Pre-give 1 candy to each child (3 candies used). 7 left to distribute freely.",
+        "Now stars and bars with $n = 7, k = 3$: $\\binom{7 + 2}{2} = \\binom{9}{2} = 36$."
+      ],
+      "explanation": "Subtraction trick: pre-allocate 1 candy to each child, then distribute the remaining $10 - 3 = 7$ freely. Stars-and-bars on 7 candies into 3 bins: $\\binom{7 + 2}{2} = \\binom{9}{2} = 36$.",
+      "steps": [
+        "**Strategy — pre-allocate.** Each child must get $\\geq 1$. Give each child 1 candy first ($3$ candies used). Now $7$ remain, with no further constraint.",
+        "**Apply stars-and-bars on the remaining.** $n = 7$ candies into $k = 3$ bins: $\\binom{7 + 2}{2} = \\binom{9}{2} = 36$.",
+        "**General formula.** Distribute $n$ identical items into $k$ bins, each at least 1 → $\\binom{n - 1}{k - 1}$. Here $\\binom{10-1}{3-1} = \\binom{9}{2} = 36$ ✓.",
+        "**Sanity vs. no-restriction case.** No-restriction (Q16): 66. With $\\geq 1$ each: 36. Difference: $66 - 36 = 30$ distributions where at least one child gets 0. Makes sense."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q18",
+      "type": "numeric",
+      "promptTex": "\\text{Number of distinct arrangements of the letters of } STATISTICS? \\\\ \\text{(10 letters: S}=3, T=3, A=1, I=2, C=1.\\text{)}",
+      "answer": 50400,
+      "tolerance": 0,
+      "hints": [
+        "Multinomial: $\\dfrac{10!}{3! \\cdot 3! \\cdot 1! \\cdot 2! \\cdot 1!} = \\dfrac{3628800}{6 \\cdot 6 \\cdot 2} = \\dfrac{3628800}{72}$.",
+        "$= 50400$."
+      ],
+      "explanation": "Multinomial coefficient: $\\dfrac{10!}{3! \\cdot 3! \\cdot 2!} = \\dfrac{3{,}628{,}800}{72} = 50{,}400$. (Divide by the factorial of each repeat-count.)",
+      "steps": [
+        "**Catalog the letters.** STATISTICS = S, T, A, T, I, S, T, I, C, S. Total 10. Counts: S × 3, T × 3, I × 2, A × 1, C × 1.",
+        "**Apply the multinomial formula.** Arrangements = $\\dfrac{n!}{a_1! \\, a_2! \\cdots a_m!}$ where $a_i$ are the repeat-counts.",
+        "**Plug in.** $\\dfrac{10!}{3! \\cdot 3! \\cdot 2!} = \\dfrac{3{,}628{,}800}{6 \\cdot 6 \\cdot 2} = \\dfrac{3{,}628{,}800}{72} = 50{,}400$.",
+        "**Why this formula?** Treating all 10 letters as distinct gives $10!$ orderings, but each genuine arrangement is over-counted by $3! \\cdot 3! \\cdot 2!$ (the permutations of identical letters that don't change the word). Divide to correct.",
+        "**Connection to combinations.** $\\binom{n}{a_1, a_2, \\ldots, a_m} = \\dfrac{n!}{a_1! \\, a_2! \\cdots a_m!}$ is the multinomial coefficient — generalizing $\\binom{n}{k}$ to multiple groups."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q19",
+      "type": "numeric",
+      "promptTex": "\\text{How many distinct NECKLACES can be made using 6 distinct beads?} \\\\ \\text{(Necklaces are identified under both rotation AND reflection.)}",
+      "answer": 60,
+      "tolerance": 0,
+      "hints": [
+        "Linear arrangements: $6!$. Circular (rotations identified): $(6-1)! = 5! = 120$.",
+        "Necklaces (also reflections identified): divide by 2 → $5!/2 = 60$."
+      ],
+      "explanation": "Linear: $6!$. Circular (rotations identified): $5! = 120$. Necklaces (reflections also identified): $5!/2 = 60$.",
+      "steps": [
+        "**Three levels of identification, three divisions.**",
+        "**Step 1 — start linear.** $6!$ arrangements of 6 distinct beads in a row: $720$.",
+        "**Step 2 — identify rotations (circular).** Each circular arrangement corresponds to 6 linear arrangements (rotations of the same circle). Divide by 6: $720 / 6 = 120 = (6-1)! = 5!$.",
+        "**Step 3 — identify reflections (necklaces).** Each necklace also corresponds to its mirror image (flipping the necklace over). Divide by 2: $120 / 2 = 60$.",
+        "**Pattern lesson.** Symmetry groups give you the divisor. Linear arrangements have a trivial symmetry (just identity → divide by 1). Circular arrangements have rotation symmetry → divide by $n$. Necklaces have rotation + reflection (dihedral group of order $2n$) → divide by $2n$. Total: $n! / (2n) = (n-1)!/2$."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q20",
+      "type": "numeric",
+      "promptTex": "\\text{From a standard 52-card deck, draw 5 cards.} \\\\ \\text{Probability that ALL 5 are hearts? Round to 5 decimals.}",
+      "answer": 0.00050,
+      "tolerance": 0.0001,
+      "hints": [
+        "Favorable: choose 5 hearts from 13 hearts → $\\binom{13}{5}$.",
+        "Total hands: $\\binom{52}{5}$.",
+        "$\\binom{13}{5} / \\binom{52}{5} = 1287 / 2{,}598{,}960 \\approx 0.000495$."
+      ],
+      "explanation": "Favorable outcomes (all-heart hands): $\\binom{13}{5} = 1287$. Total possible 5-card hands: $\\binom{52}{5} = 2{,}598{,}960$. Probability: $1287 / 2{,}598{,}960 \\approx 0.000495$ — about 1 in 2020 hands.",
+      "steps": [
+        "**Recipe — probability = favorable / total.** For equally-likely 5-card hands.",
+        "**Count favorable hands.** All 5 cards must be hearts. There are 13 hearts; choose 5: $\\binom{13}{5} = \\dfrac{13 \\cdot 12 \\cdot 11 \\cdot 10 \\cdot 9}{120} = 1287$.",
+        "**Count total hands.** $\\binom{52}{5} = 2{,}598{,}960$.",
+        "**Divide.** $P = 1287 / 2{,}598{,}960 \\approx 0.000495$.",
+        "**Sanity check.** Per-draw P(heart) ≈ 0.25; for 5 in a row WITHOUT replacement it should be a bit less than $0.25^5 = 0.00098$. Got $0.000495$ — close to half of the rough estimate, as expected because non-replacement makes hearts harder to get repeatedly."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q21",
+      "type": "numeric",
+      "promptTex": "\\text{How many integers from 1 to 1000 are } \\textbf{NOT divisible} \\text{ by 2, 3, OR 5?}",
+      "answer": 266,
+      "tolerance": 0,
+      "hints": [
+        "Use inclusion-exclusion to count those divisible by 2 or 3 or 5, then subtract from 1000.",
+        "Single counts: 500, 333, 200. Pair counts (by 6, 10, 15): 166, 100, 66. Triple count (by 30): 33.",
+        "|2 ∪ 3 ∪ 5| = 500+333+200 − 166−100−66 + 33 = 734.",
+        "Not divisible: 1000 − 734 = 266."
+      ],
+      "explanation": "Inclusion-exclusion for three sets: $|2 \\cup 3 \\cup 5| = 500 + 333 + 200 - 166 - 100 - 66 + 33 = 734$. Subtract from 1000: $1000 - 734 = 266$ integers are not divisible by any of 2, 3, or 5.",
+      "steps": [
+        "**Recognize — three-set inclusion-exclusion.** $|A \\cup B \\cup C| = |A| + |B| + |C| - |A \\cap B| - |A \\cap C| - |B \\cap C| + |A \\cap B \\cap C|$.",
+        "**Single-set counts.** $|2| = \\lfloor 1000/2 \\rfloor = 500$. $|3| = 333$. $|5| = 200$.",
+        "**Pairwise intersections (lcm).** $|2 \\cap 3| = |6| = 166$. $|2 \\cap 5| = |10| = 100$. $|3 \\cap 5| = |15| = 66$.",
+        "**Triple intersection.** $|2 \\cap 3 \\cap 5| = |30| = 33$.",
+        "**Apply.** $|2 \\cup 3 \\cup 5| = 500 + 333 + 200 - 166 - 100 - 66 + 33 = 1033 - 332 + 33 = 734$.",
+        "**Subtract from total.** Not divisible by any: $1000 - 734 = 266$.",
+        "**Pattern lesson — sign alternation.** Inclusion-exclusion alternates signs: +singletons − pairs + triples − quadruples + ... This counterintuitive 'add the triples back' is the heart of the method."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q22",
+      "type": "numeric",
+      "promptTex": "\\text{4 hats are randomly returned to 4 people.} \\\\ \\text{In how many ways do NONE of the 4 people get their own hat?}",
+      "answer": 9,
+      "tolerance": 0,
+      "hints": [
+        "This is the *derangement* count $D_4$.",
+        "Inclusion-exclusion: $D_n = n! \\sum_{k=0}^{n} (-1)^k / k!$.",
+        "$D_4 = 4! (1 - 1 + 1/2 - 1/6 + 1/24) = 24 \\cdot 9/24 = 9$."
+      ],
+      "explanation": "This is a *derangement* — a permutation with no fixed point. The count $D_n = n! \\sum_{k=0}^{n} (-1)^k/k!$. For $n = 4$: $D_4 = 9$.",
+      "steps": [
+        "**Recognize the type — derangement.** Number of permutations of $n$ items where NO item stays in its original position.",
+        "**Inclusion-exclusion derivation.** Bad outcome (at least one fixed point) → subtract. Use IE over the events 'person $i$ gets their own hat'.",
+        "**Closed form.** $D_n = n! \\left( 1 - \\dfrac{1}{1!} + \\dfrac{1}{2!} - \\dfrac{1}{3!} + \\cdots + \\dfrac{(-1)^n}{n!} \\right)$.",
+        "**Plug in $n = 4$.** $D_4 = 24 \\cdot \\left( 1 - 1 + \\dfrac{1}{2} - \\dfrac{1}{6} + \\dfrac{1}{24} \\right) = 24 \\cdot \\dfrac{9}{24} = 9$.",
+        "**Verify by listing $D_3$ (smaller case).** $D_3$: for $(1,2,3) \\to (?,?,?)$ with no fixed point: $(2,3,1)$ and $(3,1,2)$. So $D_3 = 2$ — and the formula gives $3!(1 - 1 + 1/2 - 1/6) = 6 \\cdot 1/3 = 2$ ✓.",
+        "**The famous limit.** $D_n / n! \\to 1/e \\approx 0.368$. So as $n \\to \\infty$, the probability that a random permutation has no fixed point approaches $1/e$. (For $n = 4$: $9/24 = 0.375$, already very close to $1/e$.)"
+      ],
+      "difficulty": "hard"
+    }
+  ]
+}

@@ -1,0 +1,270 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{Find the discriminant of } x^2 - 5x + 6 = 0.",
+      "answer": 1,
+      "tolerance": 0,
+      "hints": [
+        "$\\Delta = b^2 - 4ac$.",
+        "$a = 1, b = -5, c = 6$. So $\\Delta = 25 - 24$."
+      ],
+      "explanation": "$\\Delta = (-5)^2 - 4(1)(6) = 25 - 24 = 1$. (And $\\Delta > 0$ — two real roots.)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If } \\Delta = 0, \\text{ the parabola:}",
+      "choices": [
+        "Crosses the x-axis at two points",
+        "Touches the x-axis at exactly one point",
+        "Doesn't reach the x-axis",
+        "Is tangent to the y-axis"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Zero discriminant means one repeated root.",
+        "The parabola's vertex sits exactly on the x-axis."
+      ],
+      "explanation": "$\\Delta = 0$ → one repeated real root → parabola **touches** the x-axis at one point (its vertex).",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{For which equation does the parabola NOT cross the x-axis?}",
+      "choices": [
+        "x^2 - 9 = 0",
+        "x^2 + 4 = 0",
+        "x^2 - 2x + 1 = 0",
+        "x^2 + 5x + 6 = 0"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Compute the discriminant for each.",
+        "$x^2 + 4 = 0$: $\\Delta = 0 - 16 = -16$ — negative."
+      ],
+      "explanation": "Compute $\\Delta = b^2 - 4ac$ for each: $36, -16, 0, 1$. Only $x^2 + 4 = 0$ has $\\Delta < 0$ — no real roots, so the parabola never crosses the x-axis.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** Compute the discriminant for each."
+        },
+        {
+          "text": "$x^2 + 4 = 0$: $\\Delta = 0 - 16 = -16$ — negative."
+        },
+        {
+          "text": "**Solution.** Compute $\\Delta = b^2 - 4ac$ for each: $36, -16, 0, 1$. Only $x^2 + 4 = 0$ has $\\Delta < 0$ — no real roots, so the parabola never crosses the x-axis."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If } \\Delta > 0 \\text{ and is a perfect square, the roots are:}",
+      "choices": [
+        "Imaginary",
+        "Rational",
+        "Irrational",
+        "Equal"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$\\sqrt{\\text{perfect square}}$ is a whole number.",
+        "The formula then gives clean fractions."
+      ],
+      "explanation": "If $\\Delta$ is a perfect square, $\\sqrt{\\Delta}$ is a whole number. Plugged into the quadratic formula, the result is rational — and the trinomial factors over the integers.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{For } 3x^2 + bx + 12 = 0 \\text{ to have exactly one real root, the discriminant must equal zero.} \\\\ \\text{What is } b^2?",
+      "answer": 144,
+      "tolerance": 0,
+      "hints": [
+        "Set $\\Delta = b^2 - 4ac = 0$.",
+        "$b^2 - 4(3)(12) = 0$, so $b^2 = 144$."
+      ],
+      "explanation": "One repeated root means $\\Delta = 0$. So $b^2 - 4(3)(12) = 0 \\Rightarrow b^2 = 144$. (Then $b = \\pm 12$.)",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Find the discriminant of } 3x^2 - 6x + 2 = 0.",
+      "answer": 12,
+      "tolerance": 0,
+      "hints": [
+        "$D = b^2 - 4ac$.",
+        "$36 - 24 = 12$."
+      ],
+      "explanation": "$D = (-6)^2 - 4(3)(2) = 36 - 24 = 12$.",
+      "steps": [
+        "Identify: $a = 3, b = -6, c = 2$.",
+        "$D = b^2 - 4ac = 36 - 24 = 12$.",
+        "(Positive but not a perfect square → two distinct irrational roots.)"
+      ],
+      "id": "q6",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{The equation } x^2 - 4x + 7 = 0 \\text{ has:}",
+      "choices": [
+        "two real roots",
+        "one repeated real root",
+        "no real roots",
+        "two equal roots"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "$D = 16 - 28 = -12 < 0$.",
+        "Negative discriminant → no real roots."
+      ],
+      "explanation": "$D = 16 - 28 = -12 < 0$ → no real roots (two complex conjugate roots).",
+      "steps": [
+        "$D = (-4)^2 - 4(1)(7) = 16 - 28 = -12$.",
+        "$D < 0$ → no real roots."
+      ],
+      "id": "q7",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{For what value of } k \\text{ does } x^2 + kx + 9 = 0 \\\\ \\text{have exactly one repeated root?}",
+      "answer": 6,
+      "tolerance": 0,
+      "hints": [
+        "Repeated root → $D = 0$.",
+        "$k^2 - 36 = 0 \\Rightarrow k = \\pm 6$. Smaller positive: 6."
+      ],
+      "explanation": "$D = k^2 - 36 = 0 \\Rightarrow k = \\pm 6$. Either value works (giving $(x \\pm 3)^2$).",
+      "steps": [
+        "Repeated root condition: $D = 0$.",
+        "$D = k^2 - 4(1)(9) = k^2 - 36$.",
+        "Set $k^2 - 36 = 0 \\Rightarrow k^2 = 36 \\Rightarrow k = \\pm 6$.",
+        "(Either value gives a repeated root: $k = 6$ → $(x + 3)^2 = 0$; $k = -6$ → $(x - 3)^2 = 0$.)"
+      ],
+      "id": "q8",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{The discriminant of } 4x^2 - 12x + 9 = 0 \\text{ is } 0. \\text{ This means:}",
+      "choices": [
+        "Two distinct real roots",
+        "One repeated real root",
+        "No real roots",
+        "Cannot determine"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$D = 0$ → exactly one root (repeated).",
+        "Geometrically: parabola touches x-axis at exactly one point."
+      ],
+      "explanation": "$D = 0$ → one repeated real root (the parabola is tangent to the x-axis).",
+      "steps": [
+        "Discriminant cases:",
+        "$D > 0$ → two distinct real roots.",
+        "$D = 0$ → one repeated real root.",
+        "$D < 0$ → no real roots.",
+        "Here $D = 0$ → **one repeated real root**.",
+        "(Indeed $4x^2 - 12x + 9 = (2x - 3)^2$, root $x = 3/2$ with multiplicity 2.)"
+      ],
+      "id": "q9",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{For } x^2 - 8x + k = 0 \\text{ to have two distinct real roots,} \\\\ \\text{what is the largest integer value of } k?",
+      "answer": 15,
+      "tolerance": 0,
+      "hints": [
+        "Need $D > 0$: $64 - 4k > 0 \\Rightarrow k < 16$.",
+        "Largest integer less than 16: 15."
+      ],
+      "explanation": "$D = 64 - 4k > 0 \\Rightarrow k < 16$. Largest integer: $k = 15$.",
+      "steps": [
+        "Two distinct real roots → $D > 0$.",
+        "$D = (-8)^2 - 4(1)(k) = 64 - 4k$.",
+        "$64 - 4k > 0 \\Rightarrow k < 16$.",
+        "Largest integer satisfying $k < 16$: **$k = 15$**."
+      ],
+      "id": "q10",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{If } a, b, c \\text{ are integers and the discriminant is a perfect square,} \\\\ \\text{the roots are:}",
+      "choices": [
+        "Always rational",
+        "Always irrational",
+        "Always integers",
+        "Could be either rational or irrational"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "$x = \\dfrac{-b \\pm \\sqrt{D}}{2a}$. If $\\sqrt{D}$ is rational AND $a, b$ are integers, the result is rational.",
+        "Perfect square D → rational $\\sqrt{D}$ → rational roots."
+      ],
+      "explanation": "If $D$ is a perfect square, $\\sqrt{D}$ is rational. Combined with integer $a, b$, the formula gives rational roots.",
+      "steps": [
+        "Quadratic formula: $x = \\dfrac{-b \\pm \\sqrt{D}}{2a}$.",
+        "$D$ is a perfect square → $\\sqrt{D}$ is an integer (rational).",
+        "$-b \\pm \\sqrt{D}$ is integer; divided by $2a$ (rational) gives a rational number.",
+        "**Roots are always rational** when $D$ is a perfect square (with integer coefficients)."
+      ],
+      "id": "q11",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{The graph of } y = ax^2 + bx + c \\text{ passes through the x-axis} \\\\ \\text{exactly twice. What can you conclude about the discriminant?}",
+      "choices": [
+        "D > 0",
+        "D = 0",
+        "D < 0",
+        "Cannot tell"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Two x-intercepts ↔ two distinct real roots ↔ $D > 0$.",
+        "Each crossing is a root."
+      ],
+      "explanation": "Crossing the x-axis twice means two distinct real roots → $D > 0$.",
+      "steps": [
+        "x-intercepts of the parabola = real roots of $ax^2 + bx + c = 0$.",
+        "Two distinct x-intercepts → two distinct real roots → $D > 0$."
+      ],
+      "id": "q12",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Find the } \\textbf{sum} \\text{ of the roots of } 2x^2 - 5x + 1 = 0 \\\\ \\text{(Vieta's formulas: sum = } -b/a).",
+      "choices": [
+        "5/2",
+        "-5/2",
+        "1/2",
+        "-1/2"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Vieta: sum of roots = $-b/a = -(-5)/2 = 5/2$.",
+        "No need to compute the actual roots."
+      ],
+      "explanation": "Sum of roots $= -b/a = 5/2$. (Vieta's formula — works without solving.)",
+      "steps": [
+        "Vieta's formulas: for $ax^2 + bx + c = 0$, **sum** of roots is $-b/a$ and **product** is $c/a$.",
+        "Here $a = 2, b = -5$. Sum $= -(-5)/2 = 5/2$.",
+        "(The actual roots are $\\dfrac{5 \\pm \\sqrt{17}}{4}$ — they sum to $\\dfrac{10}{4} = 5/2$ ✓.)"
+      ],
+      "id": "q13",
+      "difficulty": "easy"
+    }
+  ]
+}

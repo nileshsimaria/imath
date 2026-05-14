@@ -1,0 +1,63 @@
+{
+  "title": "Order of Operations",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Evaluate $2 + 3 \\times 4$. Did you get $20$ or $14$?",
+        "If you went left to right, you got $20$ (computing $2 + 3 = 5$, then $\\times 4 = 20$). If you multiplied first, you got $14$ (computing $3 \\times 4 = 12$, then $2 + 12 = 14$).",
+        "**Math has agreed on a single order**, so every expression has exactly one correct value. That order is called **PEMDAS**."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### PEMDAS",
+        "**P**arentheses (or brackets)",
+        "**E**xponents (powers and roots)",
+        "**M**ultiplication and **D**ivision (left to right, *not* M before D)",
+        "**A**ddition and **S**ubtraction (left to right, *not* A before S)",
+        "Some places use **BODMAS** (brackets, orders, division/multiplication, addition/subtraction). Same idea, different name."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The trap people fall into",
+      "body": "PEMDAS is **not** P → E → M → D → A → S in strict order. **M and D are tied** — do them left to right. Same for **A and S**. So $8 \\div 2 \\times 4$ is $16$, not $1$ — division and multiplication, evaluated left to right."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 1",
+        "Evaluate $2 + 3 \\times 4$.",
+        "**P** — no parentheses.",
+        "**E** — no exponents.",
+        "**M/D** — multiply: $3 \\times 4 = 12$. Now we have $2 + 12$.",
+        "**A/S** — add: $2 + 12 = 14$.",
+        "**Answer: $14$.**"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 2",
+        "Evaluate $(5 - 1)^2 + 6 \\div 2 \\times 3$.",
+        "**P** — $5 - 1 = 4$. Now $(4)^2 + 6 \\div 2 \\times 3$.",
+        "**E** — $4^2 = 16$. Now $16 + 6 \\div 2 \\times 3$.",
+        "**M/D, left to right** — $6 \\div 2 = 3$, then $3 \\times 3 = 9$. Now $16 + 9$.",
+        "**A/S** — $16 + 9 = 25$.",
+        "**Answer: $25$.**"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Tip — show your work",
+      "body": "Rewrite the expression after each step, replacing the part you computed. It looks slow but it makes mistakes obvious. Computers and calculators do exactly this internally."
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "**P → E → M/D → A/S**, with M/D and A/S evaluated left to right. Parentheses always come first. When in doubt, add parentheses to make your intent clear."
+    }
+  ]
+}

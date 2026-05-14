@@ -1,0 +1,221 @@
+{
+  "title": "Pascal's Triangle, Binomial Theorem & The Number e",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Two beautiful series-related ideas live in this lesson, and they're more connected than they look at first.",
+        "**Pascal's Triangle and the Binomial Theorem** — a clean way to expand $(a + b)^n$ for any positive integer $n$.",
+        "**The Number $e$** — Euler's constant ($\\approx 2.71828$), defined naturally as a limit and equally naturally as an infinite series of factorials. Both definitions hint at why $e$ shows up in compound interest, calculus, and probability."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. Pascal's Triangle",
+        "Pascal's Triangle is a number pattern where each row starts and ends with $1$, and every other entry is the **sum of the two numbers diagonally above it**. The first few rows:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\begin{array}{c} 1 \\\\ 1 \\quad 1 \\\\ 1 \\quad 2 \\quad 1 \\\\ 1 \\quad 3 \\quad 3 \\quad 1 \\\\ 1 \\quad 4 \\quad 6 \\quad 4 \\quad 1 \\\\ 1 \\quad 5 \\quad 10 \\quad 10 \\quad 5 \\quad 1 \\\\ \\vdots \\end{array}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Click any cell in the widget below to see the value and the binomial coefficient formula. Adjust the slider to show more rows."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "pascals-triangle",
+      "config": {
+        "rows": 8,
+        "highlight": {
+          "n": 4,
+          "k": 2
+        }
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Binomial coefficients $\\binom{n}{k}$",
+        "The entries of Pascal's Triangle have a name: **binomial coefficients**, written $\\binom{n}{k}$ (read 'n choose k'). They count the number of ways to choose $k$ items from a set of $n$ — a fundamental quantity in combinatorics. Formula:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\binom{n}{k} \\;=\\; \\dfrac{n!}{k!\\,(n - k)!}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Recall **factorial**: $n! = n \\cdot (n-1) \\cdot (n-2) \\cdots 2 \\cdot 1$, with the convention $0! = 1$.",
+        "**Examples.** $\\binom{5}{2} = \\dfrac{5!}{2!\\,3!} = \\dfrac{120}{2 \\cdot 6} = 10$. $\\binom{6}{3} = \\dfrac{720}{6 \\cdot 6} = 20$. $\\binom{n}{0} = \\binom{n}{n} = 1$ always."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Pascal's identity",
+      "body": "The 'sum of the two diagonally above' rule is the identity $\\binom{n}{k} = \\binom{n-1}{k-1} + \\binom{n-1}{k}$. It's how you build any row from the previous one without computing factorials."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Symmetry",
+        "Each row of Pascal's Triangle is symmetric — read it left to right or right to left, you get the same numbers. Algebraically:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\binom{n}{k} = \\binom{n}{n - k}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Choosing $k$ items to *include* is the same as choosing $n - k$ items to *exclude*."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. The Binomial Theorem",
+        "Here's the magic: **Pascal's Triangle gives you the coefficients in the expansion of $(a + b)^n$.** The $n$th row tells you exactly how to expand."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "(a + b)^n \\;=\\; \\binom{n}{0} a^n + \\binom{n}{1} a^{n-1} b + \\binom{n}{2} a^{n-2} b^2 + \\cdots + \\binom{n}{n} b^n"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Or in compact summation notation:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "(a + b)^n = \\sum_{k=0}^{n} \\binom{n}{k}\\, a^{n-k}\\, b^k"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Each term has the same anatomy",
+        "Term $k$ (counting from $k = 0$) of $(a + b)^n$ is:",
+        "$$T_{k+1} = \\binom{n}{k}\\, a^{n-k}\\, b^k$$",
+        "**Coefficient:** $\\binom{n}{k}$ from Pascal's row $n$.",
+        "**Powers of $a$ and $b$:** add up to $n$. As $k$ goes $0, 1, 2, \\ldots, n$, the power of $a$ counts down ($n, n-1, n-2, \\ldots$) and the power of $b$ counts up ($0, 1, 2, \\ldots$)."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 1 — expand $(x + y)^4$",
+        "Row 4 of Pascal's: $1, 4, 6, 4, 1$.",
+        "$$(x + y)^4 = x^4 + 4x^3 y + 6x^2 y^2 + 4x y^3 + y^4$$",
+        "Powers of $x$: $4, 3, 2, 1, 0$. Powers of $y$: $0, 1, 2, 3, 4$. They always sum to $4$ ✓."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 2 — expand $(2x - 1)^3$",
+        "Treat as $(a + b)^3$ with $a = 2x$ and $b = -1$. Row 3: $1, 3, 3, 1$.",
+        "$$(2x - 1)^3 = (2x)^3 + 3(2x)^2(-1) + 3(2x)(-1)^2 + (-1)^3$$",
+        "$$= 8x^3 - 12x^2 + 6x - 1$$",
+        "Note the **alternating signs** — they come from the powers of $-1$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 3 — find a specific term, no full expansion",
+        "What is the coefficient of $x^4$ in the expansion of $(x + 3)^7$?",
+        "We need the term where $a^{n - k} = x^{n-k}$ has $n - k = 4$. With $n = 7$: $k = 3$.",
+        "$$T_{4} = \\binom{7}{3} x^{4} \\cdot 3^{3} = 35 \\cdot x^4 \\cdot 27 = 945\\, x^4$$",
+        "**The coefficient is $945$.** No need to expand the whole thing."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "A great party-trick application",
+      "body": "Plugging in $a = b = 1$ gives $\\sum_{k=0}^{n} \\binom{n}{k} = 2^n$. So the row sums of Pascal's Triangle are powers of two. (Row 0: $1 = 2^0$. Row 1: $1+1 = 2$. Row 2: $1+2+1 = 4$. Row 3: $1+3+3+1 = 8$. …)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. The Number $e$",
+        "$e \\approx 2.71828$ is one of the most important constants in mathematics — alongside $\\pi$. Like $\\pi$, it's irrational and transcendental. Unlike $\\pi$ (which is geometric — about circles), $e$ is *analytic* — it shows up wherever quantities grow continuously."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Definition 1 — the compound-interest limit",
+        "Suppose you invest $\\$1$ at $100\\%$ annual interest. If interest is compounded once a year, after a year you have $\\$2$. If compounded $n$ times, you have $\\$(1 + 1/n)^n$. The more often you compound, the larger this number gets — but the gains shrink. Let's see:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\begin{array}{c|l} n & (1 + 1/n)^n \\\\ \\hline 1 & 2.000000 \\\\ 2 & 2.250000 \\\\ 12 & 2.613035 \\\\ 365 & 2.714567 \\\\ 1{,}000{,}000 & 2.718280 \\\\ \\infty & e \\approx 2.718282 \\end{array}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "The limit *exists* — and it's irrational. It's the number we call $e$. Formally:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "e \\;=\\; \\lim_{n \\to \\infty} \\left(1 + \\dfrac{1}{n}\\right)^{\\!n}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Definition 2 — the factorial series",
+        "Equally fundamental, $e$ can be written as an infinite series of reciprocal factorials:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "e \\;=\\; \\sum_{k=0}^{\\infty} \\dfrac{1}{k!} \\;=\\; \\dfrac{1}{0!} + \\dfrac{1}{1!} + \\dfrac{1}{2!} + \\dfrac{1}{3!} + \\dfrac{1}{4!} + \\cdots"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Each term: $1 + 1 + 0.5 + 0.1\\overline{6} + 0.04\\overline{1}\\overline{6} + \\cdots$. The terms shrink fast (factorials grow fast), so the series converges quickly:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\begin{array}{c|l} N & S_N = \\sum_{k=0}^{N} \\tfrac{1}{k!} \\\\ \\hline 0 & 1.000000 \\\\ 1 & 2.000000 \\\\ 2 & 2.500000 \\\\ 4 & 2.708333 \\\\ 6 & 2.718056 \\\\ 8 & 2.718278 \\\\ 10 & 2.718282 \\\\ \\infty & e \\approx 2.718282 \\end{array}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "By $N = 10$, the partial sum already matches $e$ to 6 decimal places. This is the *fast* way to compute $e$ in practice."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Why two definitions?",
+      "body": "Because they capture different intuitions: the limit is about *continuous compounding* (real-world growth), and the series is about *what happens when you sum reciprocal factorials* (clean and computational). They're both the same number — Euler's $e$ — but each illuminates a different facet."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why $e$ matters",
+        "**Continuous compound interest.** $\\$P$ growing at rate $r$ continuously compounded for $t$ years: $A = P\\,e^{rt}$. The base is $e$ because of definition 1.",
+        "**Population & decay.** Anything growing or shrinking at a rate proportional to its current size satisfies $y(t) = y_0 e^{rt}$. Bacteria, radioactive atoms, money in a savings account — all the same form.",
+        "**Calculus.** $e^x$ is the unique function whose derivative equals itself. That property is *why* $e$ is the natural base of the natural logarithm $\\ln$.",
+        "**Probability.** The *expected number* of coin flips to get $n$ heads in a row, divided by $2^n$, approaches $e$. $e$ shows up in many counting problems where exactness gives way to long-run averages."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "**Pascal's Triangle:** rows of binomial coefficients $\\binom{n}{k}$. **Binomial Theorem:** $(a+b)^n = \\sum_{k=0}^n \\binom{n}{k} a^{n-k} b^k$. **The number $e \\approx 2.71828$:** equals both $\\lim_{n \\to \\infty}(1 + 1/n)^n$ and $\\sum_{k=0}^\\infty \\tfrac{1}{k!}$. Two paths, same constant."
+    }
+  ]
+}

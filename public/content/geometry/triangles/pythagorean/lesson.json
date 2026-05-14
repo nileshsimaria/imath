@@ -1,0 +1,83 @@
+{
+  "title": "The Pythagorean Theorem",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Possibly the most famous theorem in all of math. It says something startling: in a **right triangle**, the area of the square built on the hypotenuse equals the *sum* of the areas of the squares on the two legs."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "a^2 + b^2 = c^2"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Here $a$ and $b$ are the **legs** (the two shorter sides next to the right angle) and $c$ is the **hypotenuse** (the longest side, opposite the right angle).",
+        "The visualization below shows it literally — the colored squares are drawn on each side, and their areas add up exactly."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "pythagorean",
+      "config": {
+        "a": 3,
+        "b": 4
+      }
+    },
+    {
+      "type": "callout",
+      "title": "Try the classic 3-4-5 triangle",
+      "body": "Set $a = 3$, $b = 4$. Then $a^2 + b^2 = 9 + 16 = 25$, and $c = \\sqrt{25} = 5$. The squares of areas 9 and 16 fit exactly into a square of area 25 on the hypotenuse — try other Pythagorean triples like (5, 12, 13) and (8, 15, 17)."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Finding a missing side",
+        "**Find the hypotenuse** (given both legs):"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "c = \\sqrt{a^2 + b^2}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Find a leg** (given the other leg and the hypotenuse): rearrange. $a^2 = c^2 - b^2$, so:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "a = \\sqrt{c^2 - b^2}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example",
+        "A ladder is 13 ft long. Its base is 5 ft from the wall. How high up does it reach?",
+        "The ladder, the wall, and the ground form a right triangle. The ladder is the hypotenuse ($c = 13$), the base is one leg ($a = 5$), the height up the wall is the other leg ($b$).",
+        "$5^2 + b^2 = 13^2 \\Rightarrow 25 + b^2 = 169 \\Rightarrow b^2 = 144 \\Rightarrow b = 12$.",
+        "**The ladder reaches 12 feet up the wall.**"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "It only works on right triangles",
+      "body": "$a^2 + b^2 = c^2$ is *exclusive* to right triangles. For other triangles you need the **law of cosines** (a generalization you'll meet in pre-calculus). Always check that you have a right angle before applying the theorem."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The converse — using it to detect right angles",
+        "If a triangle's sides satisfy $a^2 + b^2 = c^2$, then the angle opposite $c$ is a right angle. This is sometimes used in construction: builders use the **3-4-5 rule** to verify that a corner is square — if the diagonal of a 3-by-4 corner measures exactly 5, the corner is a perfect right angle."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "**$a^2 + b^2 = c^2$** for any right triangle, where $c$ is the hypotenuse. Use it to find a missing side. The famous Pythagorean triples (3-4-5, 5-12-13, 8-15-17) come up everywhere — worth memorizing."
+    }
+  ]
+}

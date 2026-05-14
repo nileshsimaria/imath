@@ -1,0 +1,97 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "prompt": "On the dashboard pair, what physical quantity is the area under the speedometer curve up to time $t$?",
+      "choices": [
+        "The speed at time $t$",
+        "The acceleration at time $t$",
+        "The distance traveled by time $t$",
+        "The time elapsed"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Slice time into small intervals — what's the distance traveled in each one?",
+        "Sum thin rectangles of (speed × dt) = total distance."
+      ],
+      "explanation": "Each thin vertical strip has area $v(t)\\,dt$ = distance traveled in that tiny interval. Summing all strips gives the total distance — that's $\\int v\\,dt = s(t)$.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "prompt": "And what does the SLOPE of the distance curve at time $t$ equal?",
+      "choices": [
+        "The acceleration",
+        "The current speed",
+        "The total distance",
+        "The time"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Slope = rate of change = how fast distance is increasing.",
+        "How fast distance increases = speed."
+      ],
+      "explanation": "Slope of distance vs. time is the derivative $ds/dt$, which equals the instantaneous speed $v(t)$. Both halves of the FTC live in this dashboard.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "During the 'stop & go' trip, the distance curve has flat sections. Why?",
+      "choices": [
+        "Because the car was driving backwards.",
+        "Because the speedometer reads zero, so the rate of distance change is zero — no new distance accumulates.",
+        "Because the FTC fails for piecewise functions.",
+        "Because the odometer was reset."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Slope of distance = speed.",
+        "If speed is 0, slope is 0."
+      ],
+      "explanation": "When the speedometer reads 0, distance isn't accumulating, so the distance curve is locally flat (slope 0). FTC: $\\frac{ds}{dt} = v(t) = 0 \\Rightarrow s$ constant.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{A car moves at constant 20 m/s for 8 s. What is the area under } v(t) \\text{ from 0 to 8?}",
+      "answer": 160,
+      "tolerance": 0.5,
+      "hints": [
+        "Constant speed = rectangle.",
+        "Width × height = $8 \\times 20$."
+      ],
+      "explanation": "Area of the rectangle is $8 \\text{ s} \\times 20 \\text{ m/s} = 160 \\text{ m}$ — exactly the distance traveled. Confirms 'area = distance'.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If } s(t) = 5t^2 \\text{, what is } v(t)?",
+      "choices": [
+        "5t",
+        "10t",
+        "5t^2",
+        "10"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Speed is the derivative of distance.",
+        "Power rule: $\\frac{d}{dt}t^n = nt^{n-1}$."
+      ],
+      "explanation": "$v(t) = \\frac{ds}{dt} = \\frac{d}{dt}(5t^2) = 10t$. So the speedometer reads $10t$ — speed is growing linearly. (This is uniformly accelerated motion: acceleration $\\frac{dv}{dt}=10$ m/s².)",
+      "steps": [
+        "**Recognize the physics translation.** 'Speed' is how fast position is changing — the DERIVATIVE of position with respect to time. So $v(t) = \\dfrac{ds}{dt}$.",
+        "**Apply the power rule.** $\\dfrac{d}{dt}(5t^2) = 5 \\cdot 2t = 10t$.",
+        "**Result.** $v(t) = 10t$ — speed grows LINEARLY in time.",
+        "**Interpret physically.** At $t = 0$, $v = 0$ (starts from rest). At $t = 1$ s, $v = 10$ m/s. At $t = 2$ s, $v = 20$ m/s. The speedometer needle climbs at a constant rate. Constant *rate of speed change* = constant ACCELERATION: $a = \\dfrac{dv}{dt} = 10$ m/s². Uniformly accelerated motion (free-fall-like).",
+        "**Bigger picture.** Position $s(t)$ → derivative → velocity $v(t)$ → derivative → acceleration $a(t)$. Three layers, each more about 'how it's changing' than the one before."
+      ],
+      "difficulty": "hard"
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "title": "The Derivative: Definition & Tangent Lines",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "The **derivative** is the central object of differential calculus. It captures one of the most useful ideas in mathematics: **the instantaneous rate of change** of a function. Geometrically, it's the slope of the tangent line."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. From Average to Instantaneous Rate of Change"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "The **average rate of change** of $f$ over $[a, a + h]$ is the slope of the secant line:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{f(a + h) - f(a)}{h}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "As $h \\to 0$, this secant slope approaches the slope of the **tangent line** at $x = a$ — the instantaneous rate of change. That limit IS the derivative."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\boxed{\\;f'(a) = \\lim_{h \\to 0} \\dfrac{f(a + h) - f(a)}{h}\\;}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "This is the **limit definition of the derivative**, sometimes called the 'difference quotient' definition. Memorize it — every derivative rule traces back to this."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. Try It — See the Tangent Line"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Slide the point in the widget below. The red tangent line's slope IS the derivative at that x-value. Switch functions and feel the relationship."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "derivative-explorer",
+      "config": {
+        "func": "parabola",
+        "x0": 1
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. Computing a Derivative from the Definition"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Example.** Find $f'(a)$ for $f(x) = x^2$.",
+        "$$f'(a) = \\lim_{h \\to 0} \\dfrac{(a + h)^2 - a^2}{h}$$",
+        "Expand: $(a + h)^2 - a^2 = a^2 + 2ah + h^2 - a^2 = 2ah + h^2 = h(2a + h)$.",
+        "Divide by $h$: $2a + h$.",
+        "Take limit as $h \\to 0$: $f'(a) = 2a$.",
+        "**Result:** $f(x) = x^2 \\Rightarrow f'(x) = 2x$. (Famous!)",
+        "**Sanity check:** at $x = 1$, slope = 2. The widget above shows exactly this."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — derivative of $f(x) = 1/x$",
+        "$$f'(a) = \\lim_{h \\to 0} \\dfrac{1/(a+h) - 1/a}{h}$$",
+        "Combine the top: $\\dfrac{1}{a+h} - \\dfrac{1}{a} = \\dfrac{a - (a+h)}{a(a+h)} = \\dfrac{-h}{a(a+h)}$.",
+        "Divide by $h$: $\\dfrac{-1}{a(a+h)}$.",
+        "Take limit: $\\dfrac{-1}{a^2}$.",
+        "**Result:** $f(x) = 1/x \\Rightarrow f'(x) = -1/x^2$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. Notation"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Several equivalent notations for the derivative of $f$:",
+        "**$f'(x)$** — Lagrange's notation (most common in intro calc).",
+        "**$\\dfrac{df}{dx}$** or **$\\dfrac{dy}{dx}$** — Leibniz's notation. Useful for emphasizing what variable you're differentiating with respect to.",
+        "**$Df$** — operator notation (less common in intro classes).",
+        "All mean the same thing. Use whichever is clearest in context."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 5. Tangent Line Equation"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "The tangent line to $f$ at $x = a$ has:",
+        "**Point:** $(a, f(a))$",
+        "**Slope:** $m = f'(a)$",
+        "Using point-slope form:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "y - f(a) = f'(a)(x - a)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Example.** Find the tangent to $f(x) = x^2$ at $x = 3$.",
+        "$f(3) = 9$. $f'(3) = 2(3) = 6$.",
+        "Tangent: $y - 9 = 6(x - 3) \\Rightarrow y = 6x - 9$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 6. Interpretations of the Derivative"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "What the derivative tells you",
+      "body": "**Geometrically:** slope of the tangent line. **Physically:** instantaneous rate of change (e.g., velocity is the derivative of position; acceleration is the derivative of velocity). **Statistically:** sensitivity (how much $f$ changes per unit change in $x$). The same number means all of these — depends on what you're modeling."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — velocity from position",
+        "A ball's height (in feet) at time $t$ (seconds) is $s(t) = -16t^2 + 64t$.",
+        "**Velocity at time $t$:** $v(t) = s'(t)$.",
+        "Using the limit definition (or the rules we'll prove next): $s'(t) = -32t + 64$.",
+        "**Velocity at $t = 1$:** $v(1) = -32 + 64 = 32$ ft/sec (going up).",
+        "**Velocity at $t = 3$:** $v(3) = -96 + 64 = -32$ ft/sec (going down — falling).",
+        "**Velocity at $t = 2$:** $v(2) = 0$ ft/sec — the ball is momentarily stopped at the peak of its arc."
+      ]
+    }
+  ]
+}

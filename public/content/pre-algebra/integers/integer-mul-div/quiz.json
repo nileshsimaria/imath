@@ -1,0 +1,256 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "(-6) \\times 4 = ?",
+      "answer": -24,
+      "tolerance": 0,
+      "hints": [
+        "Different signs.",
+        "Compute the product of the magnitudes, then apply the sign."
+      ],
+      "explanation": "$|-6| \\times |4| = 24$. One factor is negative, the other is positive — different signs → negative. Answer: $-24$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "(-7) \\times (-3) = ?",
+      "answer": 21,
+      "tolerance": 0,
+      "hints": [
+        "Same signs (both negative).",
+        "Same signs always give a positive result."
+      ],
+      "explanation": "Both factors are negative — same signs → positive. $7 \\times 3 = 21$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\dfrac{-30}{-5} = ?",
+      "answer": 6,
+      "tolerance": 0,
+      "hints": [
+        "Same signs (both negative).",
+        "Division follows the same sign rules as multiplication."
+      ],
+      "explanation": "Same signs (both negative) → positive. $30 \\div 5 = 6$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "(-2) \\times 3 \\times (-4) = ?",
+      "answer": 24,
+      "tolerance": 0,
+      "hints": [
+        "Count the negatives: how many factors are negative?",
+        "Even count of negatives → positive."
+      ],
+      "explanation": "Two factors are negative ($-2$ and $-4$). Even count → positive. $2 \\times 3 \\times 4 = 24$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which is true?}",
+      "choices": [
+        "\\text{negative} \\times \\text{negative} = \\text{negative}",
+        "\\text{positive} \\times \\text{negative} = \\text{positive}",
+        "\\text{negative} \\div \\text{negative} = \\text{positive}",
+        "\\text{positive} \\times \\text{positive} = \\text{negative}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "Same signs give positive; different signs give negative.",
+        "Both negative is the same-signs case."
+      ],
+      "explanation": "Same signs (both negative) → positive — for multiplication and for division. The other three statements all break the sign rules.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Compute: } (-2)(-3)(4)(-5).",
+      "answer": -120,
+      "tolerance": 0,
+      "hints": [
+        "Count the negatives: 3 of them. Odd count → result is negative.",
+        "Multiply absolute values: $2 \\cdot 3 \\cdot 4 \\cdot 5 = 120$."
+      ],
+      "explanation": "Three negatives → odd, so result is negative. $|2 \\cdot 3 \\cdot 4 \\cdot 5| = 120$. Answer: $-120$.",
+      "steps": [
+        "**Separate the sign from the magnitude** — it's much easier than tracking signs through each multiplication.",
+        "**Sign step.** Count negative factors: $-2, -3, -5$ — THREE. Odd count → result is NEGATIVE.",
+        "**Magnitude step.** Multiply absolute values: $2 \\cdot 3 \\cdot 4 \\cdot 5 = 120$.",
+        "**Combine.** $-120$.",
+        "**Universal rule.** Even negatives → positive; odd negatives → negative. Works for any number of factors."
+      ],
+      "id": "q6",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Compute: } \\dfrac{-72}{-9}.",
+      "answer": 8,
+      "tolerance": 0,
+      "hints": [
+        "Negative ÷ negative = positive.",
+        "$72 / 9 = ?$"
+      ],
+      "explanation": "Negative ÷ negative = positive. $72 / 9 = 8$.",
+      "steps": [
+        "**Same-sign rule for DIVISION** (same as for multiplication): same signs → positive result.",
+        "**Apply.** $\\dfrac{-72}{-9} = +\\dfrac{72}{9} = 8$."
+      ],
+      "id": "q7",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{The temperature drops at a rate of } 4°\\text{F per hour.} \\\\ \\text{What is the total temperature change after } 6 \\text{ hours} \\\\ \\text{(as a signed number)?}",
+      "answer": -24,
+      "tolerance": 0,
+      "hints": [
+        "Drop rate is negative: $-4°$F per hour.",
+        "Total change = rate × time = $-4 \\cdot 6$."
+      ],
+      "explanation": "Rate $\\times$ time = $-4 \\cdot 6 = -24$°F.",
+      "steps": [
+        "**Translate the words to a signed RATE.** A 'drop of 4°F per hour' = $-4$°F per hour. Drops are negative rates.",
+        "**Formula.** Total change = rate × time.",
+        "**Compute.** $(-4) \\cdot 6 = -24$°F.",
+        "**Interpret.** Temperature has fallen 24°F total over the 6 hours."
+      ],
+      "id": "q8",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Solve for } x \\text{: } -3x = 27.",
+      "answer": -9,
+      "tolerance": 0,
+      "hints": [
+        "Divide both sides by $-3$.",
+        "$x = 27 / (-3)$."
+      ],
+      "explanation": "$x = 27 / (-3) = -9$.",
+      "steps": [
+        "**Goal: isolate $x$.** $x$ is being multiplied by $-3$. Undo by dividing by $-3$.",
+        "**Apply equally to both sides.** $\\dfrac{-3x}{-3} = \\dfrac{27}{-3}$.",
+        "**Simplify.** $x = -9$. (Different signs → negative.)",
+        "**Check.** $-3 \\cdot (-9) = 27$ ✓."
+      ],
+      "id": "q9",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Compute: } (-5)^4.",
+      "answer": 625,
+      "tolerance": 0,
+      "hints": [
+        "$(-5)^4 = (-5)(-5)(-5)(-5)$.",
+        "Even exponent → positive result. $5^4 = ?$"
+      ],
+      "explanation": "Even exponent on a negative gives a positive result. $5^4 = 625$.",
+      "steps": [
+        "**Parentheses make the negative part of the BASE.** $(-5)^4 = (-5) \\cdot (-5) \\cdot (-5) \\cdot (-5)$.",
+        "**Count negatives.** Four — even count → positive product.",
+        "**Compute the magnitude.** $5^4 = 625$.",
+        "**Result.** $+625$.",
+        "**Rule of thumb.** Even powers of a negative → positive; odd powers → negative."
+      ],
+      "id": "q10",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Compute: } -5^4.",
+      "answer": -625,
+      "tolerance": 0,
+      "hints": [
+        "Watch the parentheses (or lack of them). $-5^4 = -(5^4)$, NOT $(-5)^4$.",
+        "$5^4 = 625$, then negate."
+      ],
+      "explanation": "$-5^4 = -(5^4) = -625$. The minus sign applies AFTER the exponent — different from $(-5)^4 = +625$.",
+      "steps": [
+        "**Critical reading: WITHOUT parentheses, the minus is NOT part of the base.** $-5^4$ means $-(5^4)$, not $(-5)^4$.",
+        "**Order of operations.** Exponents bind tighter than the unary minus sign. So apply the exponent first, then negate.",
+        "**Compute.** $5^4 = 625$. Apply minus: $-625$.",
+        "**Compare with Q10.** $(-5)^4 = +625$ (negative IS part of base). $-5^4 = -625$ (negative applied AFTER). Same digits, opposite signs — parentheses decide.",
+        "**Lesson.** Always write parentheses around a NEGATIVE base when raising to a power — eliminates ambiguity."
+      ],
+      "id": "q11",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{The product of any odd number of negative integers is:}",
+      "choices": [
+        "always positive",
+        "always negative",
+        "depends on the magnitudes",
+        "always zero"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Pair up negatives: each pair gives a positive.",
+        "An odd number can't fully pair — one negative is left over."
+      ],
+      "explanation": "Negatives pair up to give positives. An odd count leaves one unpaired negative, so the result is negative.",
+      "steps": [
+        "**Mental model: pair up the negatives.** Each pair $(-)(-) = +$.",
+        "**Odd count.** Can't fully pair — one negative is left over.",
+        "**That leftover negative is the FINAL sign.** Product is negative.",
+        "**Magnitude irrelevant for the SIGN question.** Whether the numbers are big or small, the sign rule is purely about the count of negatives.",
+        "**Rule.** Odd negatives → negative product. Even negatives → positive product. Universal."
+      ],
+      "id": "q12",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Compute: } -3 \\cdot (4 - 7) - (-2) \\cdot 5.",
+      "answer": 19,
+      "tolerance": 0,
+      "hints": [
+        "Inside the parentheses first: $4 - 7 = -3$.",
+        "Then: $-3 \\cdot (-3) - (-2)(5)$. Watch the signs!"
+      ],
+      "explanation": "$-3 \\cdot (-3) - (-2)(5) = 9 - (-10) = 9 + 10 = 19$.",
+      "steps": [
+        "**Order of operations: PEMDAS.** Parentheses first, then multiplication, then addition/subtraction.",
+        "**Parentheses.** $4 - 7 = -3$. Expression becomes $-3 \\cdot (-3) - (-2) \\cdot 5$.",
+        "**Multiplications.** $-3 \\cdot (-3) = +9$ (same signs). $(-2) \\cdot 5 = -10$ (different signs).",
+        "**Substitute back.** $9 - (-10)$.",
+        "**Subtract a negative = add the positive.** $9 + 10 = 19$.",
+        "**Common pitfall.** The double-negative $-(-10)$ catches many students. Practice: subtracting a negative ALWAYS flips it to addition."
+      ],
+      "id": "q13",
+      "difficulty": "hard"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{If } a = -4 \\text{ and } b = 6, \\text{ compute } -2a^2 + 3b.",
+      "answer": -14,
+      "tolerance": 0,
+      "hints": [
+        "Apply exponents first. $a^2 = (-4)^2 = 16$.",
+        "Then $-2 \\cdot 16 + 3 \\cdot 6 = -32 + 18$."
+      ],
+      "explanation": "$a^2 = 16$. $-2(16) + 3(6) = -32 + 18 = -14$.",
+      "steps": [
+        "**Substitute carefully.** Use parentheses around negative substitutions: $-2(-4)^2 + 3(6)$.",
+        "**PEMDAS: exponent first.** $(-4)^2 = 16$ (negative squared → positive). Note: parentheses CRUCIAL here.",
+        "**Multiplications.** $-2 \\cdot 16 = -32$. $3 \\cdot 6 = 18$.",
+        "**Add.** $-32 + 18 = -14$.",
+        "**Watch out without parentheses.** If you wrote $-2 \\cdot (-4)^2$ as $-2 \\cdot -4^2$, the exponent would apply to just $4$, giving $-2 \\cdot -16 = +32$ — wrong! Always wrap negative substitutes in parens."
+      ],
+      "id": "q14",
+      "difficulty": "hard"
+    }
+  ]
+}

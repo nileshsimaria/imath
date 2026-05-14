@@ -1,0 +1,281 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the domain of } f(x) = \\dfrac{1}{x - 5}?",
+      "choices": [
+        "All real numbers",
+        "x \\neq 5",
+        "x \\geq 5",
+        "x = 5"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Denominator can't be zero.",
+        "Where does $x - 5 = 0$? Exclude that."
+      ],
+      "explanation": "Division by zero is undefined. $x - 5 = 0$ at $x = 5$ — exclude. Domain: $\\{x : x \\neq 5\\}$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Domain of } g(x) = \\sqrt{x - 7}?",
+      "choices": [
+        "x > 7",
+        "x \\geq 7",
+        "x \\leq 7",
+        "All real numbers"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Inside a square root must be non-negative.",
+        "$x - 7 \\geq 0$."
+      ],
+      "explanation": "$\\sqrt{x - 7}$ requires $x - 7 \\geq 0$, i.e., $x \\geq 7$. ($x = 7$ is included since $\\sqrt{0} = 0$ is fine.)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Range of } y = x^2?",
+      "choices": [
+        "All reals",
+        "[0, \\infty)",
+        "(-\\infty, 0]",
+        "[-1, 1]"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Squaring any real gives a non-negative result.",
+        "Minimum value is at $x = 0$."
+      ],
+      "explanation": "$x^2 \\geq 0$ always. The minimum (at $x = 0$) is $0$ — included. So range is $[0, \\infty)$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Range of } y = \\sin x?",
+      "choices": [
+        "[0, 1]",
+        "[-1, 1]",
+        "All reals",
+        "[-\\pi, \\pi]"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Recall how sin behaves on the unit circle.",
+        "Maximum value is 1, minimum is -1, both inclusive."
+      ],
+      "explanation": "Sine oscillates between $-1$ and $1$, hitting both endpoints. Range: $[-1, 1]$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Domain of } h(x) = \\dfrac{1}{\\sqrt{x - 2}}?",
+      "choices": [
+        "x \\geq 2",
+        "x > 2",
+        "x \\neq 2",
+        "All reals"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Two restrictions: square root needs non-negative, denominator can't be zero.",
+        "$x - 2 > 0$ — strict inequality (since $\\sqrt{0} = 0$ would give division by zero)."
+      ],
+      "explanation": "Need $x - 2 \\geq 0$ for the square root AND $x - 2 \\neq 0$ to avoid division by zero. Combined: $x - 2 > 0$, i.e., $x > 2$ (strict).",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** Two restrictions: square root needs non-negative, denominator can't be zero."
+        },
+        {
+          "text": "$x - 2 > 0$ — strict inequality (since $\\sqrt{0} = 0$ would give division by zero)."
+        },
+        {
+          "text": "**Solution.** Need $x - 2 \\geq 0$ for the square root AND $x - 2 \\neq 0$ to avoid division by zero. Combined: $x - 2 > 0$, i.e., $x > 2$ (strict)."
+        }
+      ]
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Find the domain of } f(x) = \\sqrt{x - 5}.",
+      "choices": [
+        "x \\geq 5",
+        "x \\leq 5",
+        "x \\neq 5",
+        "all reals"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Radicand must be non-negative: $x - 5 \\geq 0$.",
+        "$x \\geq 5$."
+      ],
+      "explanation": "Square root requires non-negative input: $x - 5 \\geq 0 \\Rightarrow x \\geq 5$.",
+      "steps": [
+        "Square root needs $\\sqrt{\\cdot}$ to take a non-negative input.",
+        "$x - 5 \\geq 0 \\Rightarrow x \\geq 5$."
+      ],
+      "id": "q6",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Find the domain of } f(x) = \\dfrac{1}{x^2 - 9}.",
+      "choices": [
+        "x \\neq 3",
+        "x \\neq -3",
+        "x \\neq \\pm 3",
+        "all reals"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "Denominator can't be zero. Solve $x^2 - 9 = 0$.",
+        "$x = \\pm 3$. Exclude both."
+      ],
+      "explanation": "$x^2 - 9 = 0$ at $x = \\pm 3$. Domain: $x \\neq \\pm 3$.",
+      "steps": [
+        "Denominator must be nonzero.",
+        "$x^2 - 9 = 0 \\Rightarrow x = \\pm 3$.",
+        "Exclude both: domain is all reals **except** $x = \\pm 3$."
+      ],
+      "id": "q7",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Find the domain of } f(x) = \\dfrac{\\sqrt{x + 2}}{x - 4}.",
+      "choices": [
+        "x \\geq -2 \\text{ and } x \\neq 4",
+        "x \\geq -2",
+        "x \\neq 4",
+        "x > -2 \\text{ and } x < 4"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Two restrictions: numerator radicand $\\geq 0$ AND denominator $\\neq 0$.",
+        "$x + 2 \\geq 0$ and $x - 4 \\neq 0$."
+      ],
+      "explanation": "Need $x + 2 \\geq 0$ AND $x - 4 \\neq 0$ → $x \\geq -2$ and $x \\neq 4$.",
+      "steps": [
+        "Two restrictions:",
+        "**Numerator:** $\\sqrt{x + 2}$ needs $x + 2 \\geq 0 \\Rightarrow x \\geq -2$.",
+        "**Denominator:** $x - 4 \\neq 0 \\Rightarrow x \\neq 4$.",
+        "Combine: $x \\geq -2$ AND $x \\neq 4$."
+      ],
+      "id": "q8",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Find the range of } f(x) = x^2 + 3.",
+      "choices": [
+        "y \\geq 3",
+        "y \\leq 3",
+        "y \\geq 0",
+        "all reals"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "$x^2 \\geq 0$ for all $x$. So $f(x) \\geq 3$.",
+        "Minimum at $x = 0$: $f(0) = 3$."
+      ],
+      "explanation": "$x^2 \\geq 0$ → $x^2 + 3 \\geq 3$. Range: $y \\geq 3$.",
+      "steps": [
+        "$x^2 \\geq 0$ for all real $x$ (a square is non-negative).",
+        "Adding 3: $x^2 + 3 \\geq 3$.",
+        "Minimum value is 3 (achieved at $x = 0$); no maximum.",
+        "Range: $y \\geq 3$."
+      ],
+      "id": "q9",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Find the domain of } f(x) = \\log(x + 1).",
+      "choices": [
+        "x > -1",
+        "x \\geq -1",
+        "x \\neq -1",
+        "all reals"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Logarithm requires its argument > 0 (strictly positive).",
+        "$x + 1 > 0 \\Rightarrow x > -1$."
+      ],
+      "explanation": "Log requires positive input: $x + 1 > 0 \\Rightarrow x > -1$.",
+      "steps": [
+        "Logarithm $\\log(\\cdot)$ requires input $> 0$ (strictly).",
+        "$x + 1 > 0 \\Rightarrow x > -1$.",
+        "(Note: strict inequality, not $\\geq$ — log of 0 is undefined.)"
+      ],
+      "id": "q10",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Range of } f(x) = -3x^2 + 5?",
+      "choices": [
+        "y \\leq 5",
+        "y \\geq 5",
+        "y \\leq -3",
+        "all reals"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "$-3x^2 \\leq 0$ (negative coefficient × non-negative).",
+        "$f(x) \\leq 0 + 5 = 5$. Max is 5."
+      ],
+      "explanation": "$-3x^2 \\leq 0$ → $-3x^2 + 5 \\leq 5$. Range: $y \\leq 5$.",
+      "steps": [
+        "$x^2 \\geq 0$, so $-3x^2 \\leq 0$ (multiplying a non-negative by a negative).",
+        "Adding 5: $-3x^2 + 5 \\leq 5$.",
+        "Maximum is 5 (at $x = 0$); no lower bound (parabola opens downward).",
+        "Range: $y \\leq 5$."
+      ],
+      "id": "q11",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Domain of } f(x) = \\sqrt{16 - x^2}?",
+      "choices": [
+        "-4 \\leq x \\leq 4",
+        "x \\geq 4",
+        "x \\leq 4",
+        "all reals"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Need $16 - x^2 \\geq 0 \\Rightarrow x^2 \\leq 16$.",
+        "$|x| \\leq 4$, i.e., $-4 \\leq x \\leq 4$."
+      ],
+      "explanation": "$16 - x^2 \\geq 0 \\Rightarrow x^2 \\leq 16 \\Rightarrow |x| \\leq 4$. Domain: $[-4, 4]$.",
+      "steps": [
+        "Square root needs non-negative input: $16 - x^2 \\geq 0$.",
+        "Rearrange: $x^2 \\leq 16$.",
+        "Take square root: $|x| \\leq 4$, i.e., $-4 \\leq x \\leq 4$.",
+        "(This is the upper half of a circle of radius 4 centered at origin, in fact.)"
+      ],
+      "id": "q12",
+      "difficulty": "medium"
+    }
+  ]
+}

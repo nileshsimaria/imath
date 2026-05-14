@@ -1,0 +1,149 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Find the vertices of } \\dfrac{x^2}{16} - \\dfrac{y^2}{9} = 1.",
+      "choices": [
+        "(±3, 0)",
+        "(±4, 0)",
+        "(0, ±3)",
+        "(0, ±4)"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$a^2 = 16$, so $a = 4$.",
+        "Vertices at $(\\pm a, 0) = (\\pm 4, 0)$ for horizontal hyperbola."
+      ],
+      "explanation": "Vertices at $(\\pm 4, 0)$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{Find the focal distance } c \\text{ for } \\dfrac{x^2}{16} - \\dfrac{y^2}{9} = 1.",
+      "answer": 5,
+      "tolerance": 0.001,
+      "hints": [
+        "$c^2 = a^2 + b^2$ (plus, not minus, for hyperbola!).",
+        "$c^2 = 16 + 9 = 25$."
+      ],
+      "explanation": "$c^2 = a^2 + b^2 = 16 + 9 = 25$, so $c = 5$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Asymptotes of } \\dfrac{x^2}{9} - \\dfrac{y^2}{4} = 1?",
+      "choices": [
+        "y = ±(3/2)x",
+        "y = ±(2/3)x",
+        "y = ±(9/4)x",
+        "y = ±(4/9)x"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Asymptotes: $y = \\pm (b/a) x$.",
+        "$b/a = \\sqrt{4}/\\sqrt{9} = 2/3$."
+      ],
+      "explanation": "$y = \\pm (b/a) x = \\pm (2/3) x$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "prompt": "Compared to an ellipse, what defining quantity changes for a hyperbola?",
+      "choices": [
+        "Sum of distances becomes product.",
+        "Sum of distances to two foci becomes DIFFERENCE.",
+        "There are three foci instead of two.",
+        "The directrix changes."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Ellipse: dist₁ + dist₂ = const. Hyperbola: dist₁ - dist₂ = const.",
+        "Just swap '+' for '-'."
+      ],
+      "explanation": "Ellipse uses sum of distances to two foci; hyperbola uses DIFFERENCE.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{Eccentricity of } \\dfrac{x^2}{9} - \\dfrac{y^2}{16} = 1 \\text{ (round to 3 decimals)?}",
+      "answer": 1.667,
+      "tolerance": 0.01,
+      "hints": [
+        "$a = 3$, $c^2 = 9 + 16 = 25$, $c = 5$.",
+        "$e = c/a = 5/3 \\approx 1.667$."
+      ],
+      "explanation": "$c = 5$, $a = 3$, $e = 5/3 \\approx 1.667$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** $a = 3$, $c^2 = 9 + 16 = 25$, $c = 5$."
+        },
+        {
+          "text": "$e = c/a = 5/3 \\approx 1.667$."
+        },
+        {
+          "text": "**Solution.** $c = 5$, $a = 3$, $e = 5/3 \\approx 1.667$."
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "prompt": "Which conic has eccentricity exactly 1?",
+      "choices": [
+        "Circle",
+        "Ellipse",
+        "Parabola",
+        "Hyperbola"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Parabolas sit on the boundary between ellipses and hyperbolas.",
+        "$e = 1$ is the transition."
+      ],
+      "explanation": "Parabolas have eccentricity 1. Ellipses: $e < 1$. Hyperbolas: $e > 1$. Circles: $e = 0$.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "promptTex": "\\text{In standard form } \\dfrac{x^2}{a^2} - \\dfrac{y^2}{b^2} = 1, \\\\ \\text{do the curves cross the y-axis?}",
+      "choices": [
+        "Yes, at $(0, \\pm b)$",
+        "Yes, at $(0, \\pm a)$",
+        "No — they never reach the y-axis",
+        "Only if $a = b$"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Plug $x = 0$ into the equation.",
+        "$-y^2/b^2 = 1 \\Rightarrow y^2 = -b^2$ has no real solution."
+      ],
+      "explanation": "Setting $x = 0$ gives $-y^2/b^2 = 1$, which has no real solution. The horizontal hyperbola never crosses the y-axis.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "prompt": "Cooling towers in nuclear plants are hyperboloid because:",
+      "choices": [
+        "Hyperboloids are easier to build than cylinders.",
+        "They efficiently support their own weight with minimal material and resist wind loads.",
+        "Hyperbolas refract heat better.",
+        "It's a tradition from the 1950s."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Structural engineering reason.",
+        "Curved surfaces can be very efficient structurally."
+      ],
+      "explanation": "Hyperboloid towers are a 'ruled surface' (made of straight lines!) that combines structural efficiency with the right airflow shape — minimal material, strong against wind.",
+      "difficulty": "medium"
+    }
+  ]
+}

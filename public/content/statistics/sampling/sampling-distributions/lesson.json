@@ -1,0 +1,123 @@
+{
+  "title": "Sampling Distributions",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Take a sample. Compute its mean. Get a number. Take **another** sample (same size, same population). Compute its mean. Get a slightly different number. Do this many times — you build up a distribution of sample means. That's a **sampling distribution**.",
+        "It's a *distribution of statistics* (one number per sample), not a distribution of data points within a sample. The sampling distribution is the bridge between a single sample and the truth about the population."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. Sampling Distribution of the Mean"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Suppose a population has true mean $\\mu$ and std dev $\\sigma$. Take random samples of size $n$, compute the sample mean $\\bar{x}$ for each.",
+        "**Mean of the sampling distribution:** equal to $\\mu$ (the population mean). The sample-mean estimator is *unbiased*."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "E[\\bar{x}] = \\mu"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Standard deviation of the sampling distribution** (called the **standard error**):"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\text{SE}(\\bar{x}) = \\dfrac{\\sigma}{\\sqrt{n}}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Bigger $n$ → smaller standard error**. Sample means of size 100 cluster more tightly around the true mean than sample means of size 10.",
+        "**Notice the $\\sqrt{n}$:** to halve the standard error, you need 4× the sample size. Precision is expensive."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. The Central Limit Theorem (CLT)"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The Central Limit Theorem",
+      "body": "**For sufficiently large $n$, the sampling distribution of the sample mean is approximately normal — even if the original population is NOT normal.** This is why the normal distribution is so central to statistics. It's not just a model — it's a *consequence* of how averages behave."
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Practical rule of thumb:** $n \\geq 30$ is usually 'large enough' for the CLT to give a good normal approximation, even for skewed populations.",
+        "**Why it matters:** even if you don't know the population's distribution, you CAN compute probabilities about the sample mean using the normal distribution — provided $n$ is large."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. Putting It Together"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Pull a random sample of size $n$ from a population with mean $\\mu$, std dev $\\sigma$. The sample mean $\\bar{x}$:",
+        "**Has mean $\\mu$** (centered on the truth).",
+        "**Has standard error $\\sigma / \\sqrt{n}$** (less variable for larger $n$).",
+        "**Is approximately normal** (for $n$ large, by CLT).",
+        "Combine these: $\\bar{x} \\approx N(\\mu, \\sigma/\\sqrt{n})$.",
+        "Use this to compute things like 'what's the probability that a sample of 100 has a mean above 102 if the population mean is 100?'"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example",
+        "A population has $\\mu = 50$, $\\sigma = 10$. Take a sample of size $n = 25$.",
+        "**Mean of $\\bar{x}$:** 50.",
+        "**Standard error:** $10 / \\sqrt{25} = 10 / 5 = 2$.",
+        "**Distribution of $\\bar{x}$:** approximately $N(50, 2)$.",
+        "**Probability that $\\bar{x} > 53$:** $z = (53 - 50)/2 = 1.5$. Look up $P(Z > 1.5) \\approx 0.067$.",
+        "About a 6.7% chance that a random sample of 25 has mean above 53.",
+        "Try the widget — set μ = 50 and σ = 2 (the sampling distribution's parameters), then a region X > 53. The shaded area should be about 0.067."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "normal-distribution",
+      "config": {
+        "mean": 50,
+        "sd": 2,
+        "regionType": "greater",
+        "a": 53
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. Margin of Error (Intro)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Polls report results with a **margin of error** like '$45\\% \\pm 3\\%$'. The 3% comes from the sampling distribution — typically 2× the standard error (for ~95% confidence by the empirical rule).",
+        "**Bigger samples → smaller margin of error.** This is why news polls report things like '1000 adults surveyed' — that sample size yields a margin of about ±3% for a yes/no proportion.",
+        "**Smaller margin of error costs:** to halve the margin, you need 4× the sample. To shrink from ±3% to ±1.5%, you'd need ~4000 instead of 1000 respondents."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "**Sampling distribution** = distribution of a statistic (e.g., $\\bar{x}$) over many samples. **Center:** equals population parameter ($E[\\bar{x}] = \\mu$). **Spread:** standard error $= \\sigma/\\sqrt{n}$ (shrinks with bigger $n$, but only as $\\sqrt{n}$). **Shape:** approximately normal for $n$ large enough (Central Limit Theorem). **Margin of error** $\\approx 2 \\times$ SE for ~95% confidence."
+    }
+  ]
+}

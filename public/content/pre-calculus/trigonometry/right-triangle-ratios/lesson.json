@@ -1,0 +1,329 @@
+{
+  "title": "Right-Triangle Ratios (SOHCAHTOA)",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "## Introduction"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Trigonometry** is the study of relationships between angles and side lengths in triangles. It started with one simple question: *given an angle in a right triangle, can we predict the ratios of its sides?* The answer turns out to be yes — and it leads to three of the most important functions in all of mathematics."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Naming the sides",
+        "Pick one of the *non-right* angles in a right triangle and call it $\\theta$. Now we name the sides relative to $\\theta$:",
+        "**Hypotenuse** — the longest side, always across from the right angle.",
+        "**Opposite** — the side directly across from $\\theta$.",
+        "**Adjacent** — the *other* leg (next to $\\theta$, not the hypotenuse)."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Switch your perspective",
+      "body": "If you pick the *other* non-right angle as $\\theta$, the labels for opposite and adjacent swap. The hypotenuse never changes — it's always across from the right angle."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The three trig ratios",
+        "Given an angle $\\theta$, three ratios of the sides matter:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\sin\\theta = \\dfrac{\\text{opposite}}{\\text{hypotenuse}} \\qquad \\cos\\theta = \\dfrac{\\text{adjacent}}{\\text{hypotenuse}} \\qquad \\tan\\theta = \\dfrac{\\text{opposite}}{\\text{adjacent}}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Memorize them with **SOHCAHTOA**:",
+        "**S**ine = **O**pposite / **H**ypotenuse",
+        "**C**osine = **A**djacent / **H**ypotenuse",
+        "**T**angent = **O**pposite / **A**djacent"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Try the interactive triangle below. Drag the slider to change $\\theta$ — watch the side lengths and the three ratios update together."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "right-triangle",
+      "config": {
+        "initialAngle": 30,
+        "hypotenuse": 10
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Key insight",
+        "The ratios depend *only on the angle*, not on the size of the triangle. Two right triangles with the same angle $\\theta$ have the same sin/cos/tan values — even if one is tiny and the other huge. The ratios encode the *shape* of the triangle, not the *size*. That's why they're so useful."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Special angles",
+      "body": "Some angles give clean exact values: $\\sin 30° = \\tfrac{1}{2}$, $\\cos 60° = \\tfrac{1}{2}$, $\\sin 45° = \\cos 45° = \\tfrac{\\sqrt{2}}{2}$, $\\sin 60° = \\tfrac{\\sqrt{3}}{2}$. These come up *constantly* — worth memorizing."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example: how tall is the tree?",
+        "You stand 20 m from a tree and look up at the top with a measured angle of $35°$. How tall is the tree (above your eye level)?",
+        "**Set up.** The horizontal distance ($20$) is *adjacent*; the tree's height is *opposite*. We want opposite, we have adjacent — that calls for the **tangent** ratio:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\tan 35° = \\dfrac{\\text{height}}{20}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Solve.** $\\text{height} = 20 \\cdot \\tan 35° \\approx 20 \\cdot 0.700 \\approx 14$ m. The tree is about 14 meters tall above your eye level."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "Every angle $\\theta$ in a right triangle determines three ratios: $\\sin\\theta$ (opp/hyp), $\\cos\\theta$ (adj/hyp), $\\tan\\theta$ (opp/adj). SOHCAHTOA is your friend. The ratios depend only on the angle — that's why they're powerful."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## The Sine Ratio"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "The **sine** of an angle in a right triangle is the ratio of the side *opposite* the angle to the *hypotenuse*. The sine ratio lets you do two things:",
+        "1. **Find a missing side** when you know one side and an angle.",
+        "2. **Find a missing angle** when you know two sides (using $\\sin^{-1}$)."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\sin\\theta = \\dfrac{\\text{opposite}}{\\text{hypotenuse}}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Identifying *opposite* and *hypotenuse*",
+        "Pick the angle $\\theta$ you care about (not the right angle).",
+        "**Hypotenuse** — the longest side, *across from the right angle*. It never changes.",
+        "**Opposite** — the leg *across from* $\\theta$ (not touching it)."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Quick tip",
+      "body": "If your unknown is on top of the fraction (opposite), multiply: $\\text{opposite} = \\text{hyp} \\cdot \\sin\\theta$. If it's on the bottom (hypotenuse), divide: $\\text{hyp} = \\dfrac{\\text{opposite}}{\\sin\\theta}$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 1 — find a side",
+        "A right triangle has hypotenuse $12$ and an angle of $35°$. Find the side opposite the $35°$ angle.",
+        "**Set up.** Opposite is unknown, hypotenuse is known, angle is known — sine is the right ratio.",
+        "$$\\sin 35° = \\dfrac{x}{12}$$",
+        "**Solve.** Multiply both sides by $12$:",
+        "$$x = 12 \\cdot \\sin 35° \\approx 12 \\cdot 0.5736 \\approx 6.88$$"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 2 — find an angle",
+        "A right triangle has opposite side $5$ and hypotenuse $13$. Find $\\theta$.",
+        "**Set up.** Both opposite and hypotenuse are known.",
+        "$$\\sin\\theta = \\dfrac{5}{13}$$",
+        "**Solve.** Use the inverse sine ($\\sin^{-1}$ or $\\arcsin$):",
+        "$$\\theta = \\sin^{-1}\\!\\left(\\dfrac{5}{13}\\right) \\approx 22.6°$$"
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "right-triangle",
+      "config": {
+        "initialAngle": 35,
+        "hypotenuse": 12
+      }
+    },
+    {
+      "type": "callout",
+      "title": "Two patterns to recognize",
+      "body": "When the **angle and hypotenuse** are known and you want the **opposite**, multiply. When **two sides (opp + hyp)** are known and you want the **angle**, take $\\sin^{-1}$ of opp/hyp."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## The Cosine Ratio"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "The **cosine** of an angle in a right triangle is the ratio of the *adjacent* side to the *hypotenuse*. Use cosine whenever your problem involves the **adjacent** side."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\cos\\theta = \\dfrac{\\text{adjacent}}{\\text{hypotenuse}}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Identifying *adjacent*",
+        "The **adjacent** side is the leg that is *next to* $\\theta$ — but **not** the hypotenuse. Of the two legs, one touches $\\theta$ (adjacent) and one is across from it (opposite).",
+        "If the angle changes, the adjacent and opposite *swap*. The hypotenuse never moves."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Sine vs cosine",
+      "body": "Both have hypotenuse on the bottom. Sine uses **opposite** (across), cosine uses **adjacent** (touching). Same algebra, different leg."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 1 — find a side",
+        "A right triangle has hypotenuse $20$ and an angle of $60°$. Find the side **adjacent** to that angle.",
+        "**Set up.** Adjacent unknown, hypotenuse known, angle known → cosine.",
+        "$$\\cos 60° = \\dfrac{x}{20}$$",
+        "**Solve.** $x = 20 \\cdot \\cos 60° = 20 \\cdot 0.5 = 10$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 2 — find an angle",
+        "Adjacent $= 6$, hypotenuse $= 10$. Find $\\theta$.",
+        "**Set up.** $\\cos\\theta = \\dfrac{6}{10} = 0.6$.",
+        "**Solve.** $\\theta = \\cos^{-1}(0.6) \\approx 53.13°$."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "right-triangle",
+      "config": {
+        "initialAngle": 60,
+        "hypotenuse": 20
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "## The Tangent Ratio"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "The **tangent** of an angle is the ratio of the *opposite* side to the *adjacent* side. Tangent is special — there's no hypotenuse in it. So whenever a problem involves only the *two legs* of the right triangle (and not the hypotenuse), tangent is your tool."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\tan\\theta = \\dfrac{\\text{opposite}}{\\text{adjacent}}"
+    },
+    {
+      "type": "callout",
+      "title": "When to choose tangent",
+      "body": "If your problem mentions the **two legs** (and not the hypotenuse), use tangent. If it mentions the **hypotenuse and one leg**, use sine or cosine."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 1 — find a side",
+        "$\\theta = 40°$ and the side **adjacent** to $\\theta$ is $10$. Find the **opposite** side.",
+        "**Set up.** Opposite is unknown, adjacent is known, hypotenuse not in play → tangent.",
+        "$$\\tan 40° = \\dfrac{x}{10}$$",
+        "**Solve.** $x = 10 \\cdot \\tan 40° \\approx 10 \\cdot 0.839 \\approx 8.39$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 2 — find an angle",
+        "Opposite $= 7$, adjacent $= 24$. Find $\\theta$.",
+        "$$\\tan\\theta = \\dfrac{7}{24}$$",
+        "$$\\theta = \\tan^{-1}\\!\\left(\\dfrac{7}{24}\\right) \\approx 16.26°$$"
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "right-triangle",
+      "config": {
+        "initialAngle": 40,
+        "hypotenuse": 13
+      }
+    },
+    {
+      "type": "callout",
+      "title": "Heads up",
+      "body": "If the unknown is the **adjacent** side instead, the unknown is in the *denominator*: $\\tan\\theta = \\dfrac{\\text{opp}}{\\text{adj}}$ → $\\text{adj} = \\dfrac{\\text{opp}}{\\tan\\theta}$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## Combining SOHCAHTOA"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "When you face a right-triangle problem, the *hard* part isn't doing the algebra — it's choosing the right ratio. SOHCAHTOA is a memory aid; the real skill is matching the problem to the formula."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\sin\\theta = \\dfrac{\\text{opp}}{\\text{hyp}} \\quad \\cos\\theta = \\dfrac{\\text{adj}}{\\text{hyp}} \\quad \\tan\\theta = \\dfrac{\\text{opp}}{\\text{adj}}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### A 3-step decision rule",
+        "**Step 1.** Label the sides relative to the angle you're working with: opposite, adjacent, hypotenuse.",
+        "**Step 2.** Identify the **two sides** in the problem — the one you know and the one you want.",
+        "**Step 3.** Match those two sides to a ratio:"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The matching table",
+      "body": "**opp + hyp** → use **sin**. **adj + hyp** → use **cos**. **opp + adj** → use **tan**."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — which ratio?",
+        "*A right triangle has hypotenuse $20$. The angle of interest is $\\theta = 28°$. Find the side **adjacent** to $\\theta$.*",
+        "Two sides involved: **adjacent** (unknown) and **hypotenuse** (known). That's adj + hyp → **cosine**.",
+        "$$\\cos 28° = \\dfrac{x}{20} \\Rightarrow x = 20 \\cos 28° \\approx 17.66$$"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Finding angles vs finding sides",
+        "If the unknown is a **side**, isolate the variable and multiply (or divide) by a sin/cos/tan value.",
+        "If the unknown is the **angle**, take the *inverse* trig function: $\\sin^{-1}, \\cos^{-1}, \\tan^{-1}$ (also written $\\arcsin, \\arccos, \\arctan$)."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Common pitfall",
+      "body": "When you switch which acute angle you call $\\theta$, the **opposite** and **adjacent** labels swap. The hypotenuse stays put. Always re-label *before* picking the ratio."
+    }
+  ]
+}

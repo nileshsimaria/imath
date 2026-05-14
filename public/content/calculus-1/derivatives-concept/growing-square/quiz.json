@@ -1,0 +1,503 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "prompt": "In the symbol $dx$, what does the $d$ mean?",
+      "choices": [
+        "A function called \"d\" being applied to $x$",
+        "\"A little bit of\" — so $dx$ is a small change in $x$",
+        "Division — so $dx$ is $d \\div x$",
+        "Derivative — so $dx$ already means the slope"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Read it the way Leibniz intended.",
+        "$d$ is a prefix, not a thing being multiplied or divided."
+      ],
+      "explanation": "$d$ is read \"a little bit of\". So $dx$ = a small change in $x$, $dy$ = a small change in $y$, and $\\dfrac{dy}{dx}$ = (little bit of $y$) per (little bit of $x$) — that is, the rate at which $y$ changes when $x$ changes.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{A square has side } x = 3.\\ \\text{It grows by } dx = 0.1.\\ \\text{What is the area of the tiny corner }(dx)^2?",
+      "answer": 0.01,
+      "tolerance": 0.001,
+      "hints": [
+        "The corner is a square with side $dx$.",
+        "$(0.1)^2 = ?$"
+      ],
+      "explanation": "$(dx)^2 = (0.1)^2 = 0.01$. Compare to the two strips: $2 \\cdot x \\cdot dx = 2 \\cdot 3 \\cdot 0.1 = 0.6$. The corner is **60 times smaller** than the strips — that's why we drop it.",
+      "steps": [
+        "**Recognize the geometry.** When a square of side $x$ grows by $dx$, three new pieces appear: TWO strips (each of area $x \\cdot dx$) along the right and top, and ONE tiny corner square of side $dx$. The question asks for the corner.",
+        "**Apply the formula.** Corner area = side $\\times$ side = $dx \\times dx = (dx)^2$.",
+        "**Plug in.** With $dx = 0.1$: $(0.1)^2 = 0.01$.",
+        "**Sanity check why this matters.** The two strips contribute $2 \\cdot 3 \\cdot 0.1 = 0.6$. The corner contributes $0.01$ — sixty times smaller. As $dx$ shrinks the corner becomes negligible — and *that* is why $d(x^2)/dx = 2x$ rather than $2x + dx$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "When deriving $\\dfrac{d(x^2)}{dx} = 2x$ from the growing square, why do we drop the $(dx)^2$ corner?",
+      "choices": [
+        "Because $(dx)^2$ is always exactly zero.",
+        "Because the corner has a different shape than the strips.",
+        "Because $(dx)^2$ shrinks much faster than $dx$, so its share of the growth vanishes in the limit $dx \\to 0$.",
+        "Because the corner is outside the new square."
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Both $dx$ and $(dx)^2$ are small. But not equally small.",
+        "Compute $(dx)^2 / dx = dx$ — it goes to 0."
+      ],
+      "explanation": "Thompson called this \"different degrees of smallness\". If $dx = 0.001$, then $(dx)^2 = 0.000001$ — a million times smaller. As $dx \\to 0$, the ratio of the corner to the strips goes to 0. So in the limit, the corner contributes nothing to the rate of change.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Use the power rule to find } \\dfrac{d}{dx}(x^7) \\text{ at } x = 2.",
+      "answer": 448,
+      "tolerance": 0,
+      "hints": [
+        "Power rule: bring the 7 down, reduce exponent by 1. $\\dfrac{d}{dx}(x^7) = 7x^6$.",
+        "$7 \\cdot 2^6 = 7 \\cdot 64$."
+      ],
+      "explanation": "$\\dfrac{d}{dx}(x^7) = 7x^6$. At $x = 2$: $7 \\cdot 2^6 = 7 \\cdot 64 = 448$.",
+      "steps": [
+        "**Recognize the type.** A power $x^n$ being differentiated — this is exactly what the power rule was made for.",
+        "**Recite the recipe.** Power rule: $\\dfrac{d}{dx}(x^n) = n \\cdot x^{n-1}$ — *bring the exponent down as a coefficient; reduce the exponent by 1*.",
+        "**Apply with $n = 7$.** $\\dfrac{d}{dx}(x^7) = 7 x^6$.",
+        "**Evaluate.** At $x = 2$: $7 \\cdot 2^6 = 7 \\cdot 64 = 448$. (Compute $2^6$ before multiplying — easier than multiplying through symbolically.)"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\dfrac{d}{dx}\\left(\\sqrt{x}\\right) \\text{ at } x = 4 = ?",
+      "answer": 0.25,
+      "tolerance": 0.001,
+      "hints": [
+        "Rewrite: $\\sqrt{x} = x^{1/2}$.",
+        "Power rule: $\\dfrac{d}{dx}(x^{1/2}) = \\tfrac{1}{2} x^{-1/2} = \\dfrac{1}{2\\sqrt{x}}$.",
+        "At $x = 4$: $\\dfrac{1}{2 \\cdot 2} = \\dfrac{1}{4}$."
+      ],
+      "explanation": "The power rule works for fractional exponents. $\\sqrt{x} = x^{1/2}$, so $\\dfrac{d}{dx}(x^{1/2}) = \\tfrac{1}{2} x^{-1/2} = \\dfrac{1}{2\\sqrt{x}}$. At $x = 4$, this is $\\dfrac{1}{2 \\cdot 2} = 0.25$.",
+      "steps": [
+        "**Recognize the trick.** Square roots, cube roots, and reciprocals don't *look* like powers — but they ARE powers in disguise. Step 1 of any 'root or reciprocal' derivative is: rewrite as a power of $x$.",
+        "**Rewrite.** $\\sqrt{x} = x^{1/2}$.",
+        "**Apply the power rule with $n = 1/2$.** Coefficient $\\tfrac{1}{2}$ comes down; new exponent is $1/2 - 1 = -1/2$. So derivative $= \\tfrac{1}{2}\\,x^{-1/2}$.",
+        "**Translate back to a friendly form.** $\\tfrac{1}{2}\\,x^{-1/2} = \\dfrac{1}{2\\sqrt{x}}$ — easier to plug numbers into.",
+        "**Evaluate at $x = 4$.** $\\dfrac{1}{2\\sqrt{4}} = \\dfrac{1}{2 \\cdot 2} = \\dfrac{1}{4} = 0.25$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\dfrac{d}{dx}\\!\\left(5x^3 - 2x + 1\\right) \\text{ at } x = 2 = ?",
+      "answer": 58,
+      "tolerance": 0,
+      "hints": [
+        "Differentiate term by term. The $+1$ vanishes (constant).",
+        "$\\dfrac{d}{dx}(5x^3) = 15x^2$. $\\dfrac{d}{dx}(-2x) = -2$.",
+        "At $x = 2$: $15 \\cdot 4 - 2 = 58$."
+      ],
+      "explanation": "Use linearity (term by term) + power rule + constants vanish: derivative is $15x^2 - 2$. Plug $x=2$: $15 \\cdot 4 - 2 = 60 - 2 = 58$.",
+      "steps": [
+        "**Recognize the type.** A polynomial being differentiated. The single most-used technique in calculus: *differentiate term-by-term*, using the power rule on each piece.",
+        "**Why term-by-term works.** Derivatives obey LINEARITY: $\\dfrac{d}{dx}(f + g) = f' + g'$, and constant multipliers pass through. So we can handle each term independently.",
+        "**Differentiate each term.** $\\dfrac{d}{dx}(5x^3) = 5 \\cdot 3 x^2 = 15 x^2$. $\\dfrac{d}{dx}(-2x) = -2$. $\\dfrac{d}{dx}(1) = 0$ — *constants always vanish under differentiation*.",
+        "**Reassemble.** $f'(x) = 15x^2 - 2$.",
+        "**Evaluate.** At $x = 2$: $15 \\cdot 4 - 2 = 58$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "prompt": "Expand $(x + dx)^3$. Which of its four terms is the ONLY one we KEEP after dropping all pieces with $(dx)^2$ or higher?",
+      "choices": [
+        "$x^3$ — but it's the OLD area, not the growth.",
+        "$3x^2 \\, dx$ — proportional to one power of $dx$, so it's the genuine 'growth per little bit of $x$'.",
+        "$3x \\,(dx)^2$ — the dominant new piece.",
+        "$(dx)^3$ — the most important correction."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$(x+dx)^3 = x^3 + 3x^2\\,dx + 3x\\,(dx)^2 + (dx)^3$.",
+        "The first piece is the *old* area; the last two are 'higher-order smallness' (drop them).",
+        "What's left as the genuine growth?"
+      ],
+      "explanation": "$(x+dx)^3 = x^3 + 3x^2 dx + 3x(dx)^2 + (dx)^3$. The first term is the original cube — not growth. The last two terms contain $(dx)^2$ and $(dx)^3$, both vanishingly small. The middle term $3x^2 dx$ is the *first-order growth*. Divide by $dx$ → $\\dfrac{d(x^3)}{dx} = 3x^2$.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\dfrac{d}{dx}\\!\\left(\\dfrac{1}{x^2}\\right) \\text{ at } x = 3 = ?",
+      "answer": -0.0741,
+      "tolerance": 0.001,
+      "hints": [
+        "Rewrite: $\\dfrac{1}{x^2} = x^{-2}$.",
+        "Power rule with $n = -2$: derivative is $-2 x^{-3} = -\\dfrac{2}{x^3}$.",
+        "At $x = 3$: $-\\dfrac{2}{27}$."
+      ],
+      "explanation": "Power rule works for negative exponents too. $\\dfrac{1}{x^2} = x^{-2}$, so its derivative is $-2 x^{-3} = -\\dfrac{2}{x^3}$. At $x = 3$: $-\\dfrac{2}{27} \\approx -0.0741$.",
+      "steps": [
+        "**Recognize the type.** A reciprocal $1/x^n$. Same 'rewrite as a power' technique as roots.",
+        "**Rewrite.** $\\dfrac{1}{x^2} = x^{-2}$. A reciprocal is just a NEGATIVE power.",
+        "**Apply power rule with $n = -2$.** Bring exponent down: coefficient $-2$. Reduce exponent: $-2 - 1 = -3$. So derivative $= -2 x^{-3}$.",
+        "**Translate to friendly form.** $-2 x^{-3} = -\\dfrac{2}{x^3}$.",
+        "**Evaluate.** At $x = 3$: $-\\dfrac{2}{27} \\approx -0.0741$.",
+        "**Sign sanity check.** Reciprocals DECREASE as $x$ grows (for $x > 0$). So the slope should be negative. ✓"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "prompt": "What is $\\dfrac{d}{dx}(9)$?",
+      "choices": [
+        "9",
+        "9x",
+        "0",
+        "1"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "A constant doesn't change as $x$ changes.",
+        "No growth → zero derivative."
+      ],
+      "explanation": "Any constant has derivative $0$. The function $y = 9$ is a flat horizontal line — its rate of change is zero everywhere. You can also see this from the power rule: $9 = 9 x^0$, and $\\dfrac{d}{dx}(9 x^0) = 9 \\cdot 0 \\cdot x^{-1} = 0$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{Thompson's Exercise I, simplified: find }\\dfrac{d}{dx}\\left(x^{13}\\right)\\text{ at }x=1.",
+      "answer": 13,
+      "tolerance": 0,
+      "hints": [
+        "Power rule: bring 13 down, reduce exponent.",
+        "$13 \\cdot 1^{12} = 13$."
+      ],
+      "explanation": "$\\dfrac{d}{dx}(x^{13}) = 13 x^{12}$. At $x = 1$: $13 \\cdot 1 = 13$. (Whatever the exponent, the derivative at $x=1$ is just the exponent. Useful sanity check.)",
+      "steps": [
+        "**Same recipe, no matter how big the exponent.** Power rule: $\\dfrac{d}{dx}(x^n) = n\\,x^{n-1}$. Don't be intimidated by $n = 13$ — the rule doesn't care.",
+        "**Apply.** $\\dfrac{d}{dx}(x^{13}) = 13\\,x^{12}$.",
+        "**Evaluate at $x = 1$.** $1^{12} = 1$, so derivative $= 13$.",
+        "**Useful shortcut to remember.** At $x = 1$, the derivative of any $x^n$ equals just $n$. ($n \\cdot 1^{n-1} = n$.) This makes $x = 1$ a great sanity-check value."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\dfrac{d}{dx}(x^5)\\text{ at }x = 2 = ?",
+      "answer": 80,
+      "tolerance": 0,
+      "hints": [
+        "Power rule: $\\dfrac{d}{dx}(x^5) = 5x^4$.",
+        "$5 \\cdot 2^4 = 5 \\cdot 16$."
+      ],
+      "explanation": "$\\dfrac{d}{dx}(x^5) = 5x^4$. At $x = 2$: $5 \\cdot 16 = 80$.",
+      "steps": [
+        "**Power rule pattern.** $\\dfrac{d}{dx}(x^n) = n\\,x^{n-1}$ — bring down, reduce by 1.",
+        "**Apply with $n = 5$.** $\\dfrac{d}{dx}(x^5) = 5\\,x^4$.",
+        "**Evaluate at $x = 2$.** $5 \\cdot 16 = 80$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\dfrac{d}{dx}\\!\\left(x^{-3/2}\\right)\\text{ at }x = 1.\\ \\text{(Thompson Ex.\\ I, simplified.)}",
+      "answer": -1.5,
+      "tolerance": 0.001,
+      "hints": [
+        "Power rule with $n = -3/2$: derivative is $-\\tfrac{3}{2}\\,x^{-5/2}$.",
+        "At $x = 1$: $-\\tfrac{3}{2} \\cdot 1 = -1.5$."
+      ],
+      "explanation": "Power rule works for any real exponent. $\\dfrac{d}{dx}(x^{-3/2}) = -\\tfrac{3}{2}\\,x^{-5/2}$. At $x = 1$: $-1.5$.",
+      "steps": [
+        "**Key idea: power rule works for ANY real exponent.** Negative, fractional, irrational — the formula doesn't care.",
+        "**Apply with $n = -3/2$.** Coefficient $= n = -\\tfrac{3}{2}$. New exponent $= n - 1 = -\\tfrac{3}{2} - 1 = -\\tfrac{5}{2}$.",
+        "**Write it out.** $\\dfrac{d}{dx}(x^{-3/2}) = -\\tfrac{3}{2}\\,x^{-5/2}$.",
+        "**Evaluate at $x = 1$.** Anything to the 1-power is 1, so $-\\tfrac{3}{2} \\cdot 1 = -1.5$.",
+        "**Pattern lesson.** The exponent's sign carries over: starting from a negative exponent, the derivative's coefficient is also negative."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q13",
+      "type": "numeric",
+      "promptTex": "\\dfrac{d}{dx}\\!\\left(\\sqrt[3]{x}\\right)\\text{ at }x = 8.\\ \\text{(4 decimal places)}",
+      "answer": 0.0833,
+      "tolerance": 0.001,
+      "hints": [
+        "Rewrite: $\\sqrt[3]{x} = x^{1/3}$.",
+        "Power rule: $\\dfrac{d}{dx}(x^{1/3}) = \\tfrac{1}{3} x^{-2/3} = \\dfrac{1}{3 \\sqrt[3]{x^2}}$.",
+        "At $x = 8$: $\\sqrt[3]{8^2} = \\sqrt[3]{64} = 4$. So $\\dfrac{1}{12}$."
+      ],
+      "explanation": "$\\sqrt[3]{x} = x^{1/3}$. By the power rule, $\\dfrac{d}{dx}(x^{1/3}) = \\tfrac{1}{3}\\,x^{-2/3} = \\dfrac{1}{3\\,\\sqrt[3]{x^2}}$. At $x = 8$, $\\sqrt[3]{64} = 4$, so derivative $= \\dfrac{1}{12} \\approx 0.0833$.",
+      "steps": [
+        "**Recognize a root in disguise.** A cube root is a fractional power: $\\sqrt[3]{x} = x^{1/3}$. (General rule: $\\sqrt[k]{x} = x^{1/k}$.)",
+        "**Apply power rule with $n = 1/3$.** Coefficient $\\tfrac{1}{3}$ comes down; new exponent $= 1/3 - 1 = -2/3$. So derivative $= \\tfrac{1}{3}\\,x^{-2/3}$.",
+        "**Translate back to a friendly form.** $x^{-2/3} = \\dfrac{1}{x^{2/3}} = \\dfrac{1}{\\sqrt[3]{x^2}}$. So derivative $= \\dfrac{1}{3 \\sqrt[3]{x^2}}$.",
+        "**Choose $x = 8$ wisely.** $8 = 2^3$, so $\\sqrt[3]{8^2} = \\sqrt[3]{64} = 4$. (The problem picks $x = 8$ on purpose — it makes the cube root clean.)",
+        "**Final value.** $\\dfrac{1}{3 \\cdot 4} = \\dfrac{1}{12} \\approx 0.0833$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q14",
+      "type": "numeric",
+      "promptTex": "f(x) = 2x^3 + 3x^2 - 4x + 5.\\ \\text{Find }f'(1).",
+      "answer": 8,
+      "tolerance": 0,
+      "hints": [
+        "Differentiate term by term: $f'(x) = 6x^2 + 6x - 4$.",
+        "At $x = 1$: $6 + 6 - 4$."
+      ],
+      "explanation": "Term-by-term: $\\dfrac{d}{dx}(2x^3) = 6x^2$. $\\dfrac{d}{dx}(3x^2) = 6x$. $\\dfrac{d}{dx}(-4x) = -4$. $\\dfrac{d}{dx}(5) = 0$. Sum: $f'(x) = 6x^2 + 6x - 4$. At $x = 1$: $6 + 6 - 4 = 8$.",
+      "steps": [
+        "**Polynomial differentiation = linearity + power rule.** Handle each term independently; sum the results.",
+        "**Term 1.** $\\dfrac{d}{dx}(2x^3) = 2 \\cdot 3 x^2 = 6x^2$.",
+        "**Term 2.** $\\dfrac{d}{dx}(3x^2) = 3 \\cdot 2 x = 6x$.",
+        "**Term 3.** $\\dfrac{d}{dx}(-4x) = -4$ (derivative of $x$ is $1$).",
+        "**Term 4.** $\\dfrac{d}{dx}(5) = 0$ — constants vanish.",
+        "**Reassemble.** $f'(x) = 6x^2 + 6x - 4$.",
+        "**Evaluate at $x = 1$.** $6 + 6 - 4 = 8$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q15",
+      "type": "multiple-choice",
+      "prompt": "Given $\\dfrac{d}{dx}(x^{11}) = 11x^{10}$, what is $\\dfrac{d}{dx}(x^{100})$?",
+      "choices": [
+        "100x^{99}",
+        "x^{100}",
+        "100x^{101}",
+        "x^{99}/100"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Same rule: bring exponent down, reduce by 1.",
+        "$n = 100$: derivative is $100 x^{99}$."
+      ],
+      "explanation": "Power rule: $\\dfrac{d}{dx}(x^n) = nx^{n-1}$. With $n = 100$: $100 x^{99}$. The rule doesn't care how big the exponent is.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q16",
+      "type": "multiple-choice",
+      "prompt": "At $x = 1$, which function has the LARGER derivative?",
+      "choices": [
+        "$y = x^3$ (derivative is 3)",
+        "$y = x^5$ (derivative is 5)",
+        "They're equal.",
+        "Both are 1."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Power rule at $x = 1$: derivative equals the exponent.",
+        "Higher exponent → larger derivative at $x = 1$."
+      ],
+      "explanation": "At $x = 1$, $\\dfrac{d}{dx}(x^n) = n \\cdot 1^{n-1} = n$. So $x^3$ has slope 3, $x^5$ has slope 5 — the larger one is $x^5$. Lesson: at $x = 1$, the exponent IS the slope.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q17",
+      "type": "multiple-choice",
+      "prompt": "Expand $(x + dx)^3$. After dropping every term containing $(dx)^2$ or higher, what's the ONLY thing left with one power of $dx$?",
+      "choices": [
+        "x^3",
+        "3x^2 \\, dx",
+        "3x \\, (dx)^2",
+        "(dx)^3"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "$(x+dx)^3 = x^3 + 3x^2 dx + 3x(dx)^2 + (dx)^3$.",
+        "$x^3$ is the OLD volume — not growth.",
+        "The last two terms have $(dx)^2$ or higher — drop them."
+      ],
+      "explanation": "$(x+dx)^3 = x^3 + 3x^2 dx + 3x(dx)^2 + (dx)^3$. $x^3$ is the original volume. $3x(dx)^2$ and $(dx)^3$ are vanishingly small. The genuine first-order growth is $3x^2\\,dx$. Divide by $dx$: $\\dfrac{d(x^3)}{dx} = 3x^2$ — the power rule recovered.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q18",
+      "type": "numeric",
+      "promptTex": "\\text{A square has side }5.\\ \\text{It grows to side }5.01.\\ \\text{By exactly how much does its area grow?}",
+      "answer": 0.1001,
+      "tolerance": 0.0001,
+      "hints": [
+        "New area $= (5.01)^2$. Old area $= 25$.",
+        "Growth $= (5.01)^2 - 25 = 2 \\cdot 5 \\cdot 0.01 + (0.01)^2 = 0.1 + 0.0001$."
+      ],
+      "explanation": "Growth $= 2x\\,dx + (dx)^2 = 2 \\cdot 5 \\cdot 0.01 + (0.01)^2 = 0.1 + 0.0001 = 0.1001$. The two strips give $0.1$; the tiny corner gives $0.0001$ — a thousand times smaller, exactly as the 'different degrees of smallness' principle predicts.",
+      "steps": [
+        "**Recognize the dissection.** When a square of side $x$ grows by $dx$: TWO strips ($x \\cdot dx$ each) + ONE corner ($(dx)^2$). So growth $= 2 x\\,dx + (dx)^2$.",
+        "**Identify the numbers.** $x = 5$, $dx = 0.01$ (since $5 + 0.01 = 5.01$).",
+        "**Two strips.** $2 \\cdot 5 \\cdot 0.01 = 0.10$.",
+        "**One corner.** $(0.01)^2 = 0.0001$.",
+        "**Add.** Total growth $= 0.10 + 0.0001 = 0.1001$.",
+        "**Sanity-check by direct computation.** $(5.01)^2 - 5^2 = 25.1001 - 25 = 0.1001$. ✓ Two methods agreeing — confidence-building.",
+        "**Lesson.** The corner $(0.0001)$ is a *thousand times smaller* than the strips $(0.1)$. Imagine $dx = 0.0001$ instead — corner would be $0.00000001$. As $dx \\to 0$, the corner's share $\\to 0$. *This* is why $d(x^2)/dx = 2x$ exactly (not $2x + dx$)."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q19",
+      "type": "numeric",
+      "promptTex": "\\dfrac{d}{dx}\\!\\left(\\dfrac{1}{x^3}\\right)\\text{ at }x = 2 = ?\\ \\text{(4 decimal places)}",
+      "answer": -0.1875,
+      "tolerance": 0.001,
+      "hints": [
+        "Rewrite: $\\dfrac{1}{x^3} = x^{-3}$.",
+        "Power rule with $n = -3$: derivative is $-3 x^{-4} = -\\dfrac{3}{x^4}$.",
+        "At $x = 2$: $-\\dfrac{3}{16} = -0.1875$."
+      ],
+      "explanation": "$\\dfrac{1}{x^3} = x^{-3}$. Derivative is $-3 x^{-4} = -\\dfrac{3}{x^4}$. At $x = 2$: $-\\dfrac{3}{16} = -0.1875$. Negative — reciprocal powers DECREASE as $x$ increases.",
+      "steps": [
+        "**Reciprocal → negative power.** $\\dfrac{1}{x^3} = x^{-3}$. Now it's a pure power, ready for the power rule.",
+        "**Apply with $n = -3$.** Coefficient $-3$ comes down; new exponent $= -3 - 1 = -4$. Derivative $= -3\\,x^{-4}$.",
+        "**Translate.** $-3\\,x^{-4} = -\\dfrac{3}{x^4}$.",
+        "**Evaluate at $x = 2$.** $-\\dfrac{3}{16} = -0.1875$.",
+        "**Sign sanity-check.** $1/x^3$ DECREASES as $x$ grows (for $x > 0$). Slope must be negative — and indeed $-0.1875$ is. ✓"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q20",
+      "type": "numeric",
+      "promptTex": "f(x) = 5x^2 - \\dfrac{1}{x}.\\ \\text{Find }f'(1).",
+      "answer": 11,
+      "tolerance": 0,
+      "hints": [
+        "Rewrite $\\dfrac{1}{x}$ as $x^{-1}$. Derivative: $-x^{-2} = -\\dfrac{1}{x^2}$.",
+        "So $-\\dfrac{1}{x}$ has derivative $+\\dfrac{1}{x^2}$.",
+        "$f'(x) = 10x + \\dfrac{1}{x^2}$. At $x = 1$: $10 + 1 = 11$."
+      ],
+      "explanation": "$f(x) = 5x^2 - x^{-1}$. $f'(x) = 10x + x^{-2} = 10x + \\dfrac{1}{x^2}$. At $x = 1$: $10 + 1 = 11$.",
+      "steps": [
+        "**Rewrite reciprocals as powers FIRST.** $\\dfrac{1}{x} = x^{-1}$, so $f(x) = 5x^2 - x^{-1}$. Now everything is a power ready for the power rule.",
+        "**Differentiate term-by-term.** Linearity + power rule.",
+        "**Term 1.** $\\dfrac{d}{dx}(5x^2) = 10x$.",
+        "**Term 2.** $\\dfrac{d}{dx}(-x^{-1}) = -(-1) x^{-2} = x^{-2} = \\dfrac{1}{x^2}$. *Watch the sign:* the $-$ in $-x^{-1}$ AND the $-$ from differentiating $x^{-1}$ combine to a $+$.",
+        "**Reassemble.** $f'(x) = 10x + \\dfrac{1}{x^2}$.",
+        "**Evaluate at $x = 1$.** $10 \\cdot 1 + \\dfrac{1}{1} = 10 + 1 = 11$."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q21",
+      "type": "multiple-choice",
+      "prompt": "A function $f$ satisfies $f'(x) = 3x^2$. Which of these could be $f$?",
+      "choices": [
+        "f(x) = x^3 + 5",
+        "f(x) = 9x",
+        "f(x) = 3x",
+        "f(x) = 6x"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Differentiate each candidate and see which gives $3x^2$.",
+        "$\\dfrac{d}{dx}(x^3 + 5) = 3x^2$ (constants vanish)."
+      ],
+      "explanation": "Differentiating $x^3 + 5$: power rule gives $3x^2$, and the $+5$ vanishes (constant). So $f(x) = x^3 + 5$ satisfies $f' = 3x^2$. (Actually, $x^3 + C$ for any constant $C$ would work — this is the family of antiderivatives.)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q22",
+      "type": "numeric",
+      "promptTex": "\\text{Find }\\dfrac{d}{dx}\\!\\left(x^{7/3}\\right)\\text{ at }x = 8.\\ \\text{(2 decimal places)}",
+      "answer": 37.33,
+      "tolerance": 0.1,
+      "hints": [
+        "Power rule: $\\dfrac{d}{dx}(x^{7/3}) = \\tfrac{7}{3}\\,x^{4/3}$.",
+        "At $x = 8$: $\\sqrt[3]{8^4} = (\\sqrt[3]{8})^4 = 2^4 = 16$.",
+        "$\\tfrac{7}{3} \\cdot 16 = \\dfrac{112}{3} \\approx 37.33$."
+      ],
+      "explanation": "$\\dfrac{d}{dx}(x^{7/3}) = \\tfrac{7}{3}\\,x^{4/3}$. At $x = 8$: $x^{4/3} = (8^{1/3})^4 = 2^4 = 16$. So derivative $= \\tfrac{7}{3} \\cdot 16 = \\tfrac{112}{3} \\approx 37.33$.",
+      "steps": [
+        "**Power rule applies to any rational exponent.** No special treatment needed for fractions.",
+        "**Apply with $n = 7/3$.** Coefficient $\\tfrac{7}{3}$ comes down; new exponent $= \\tfrac{7}{3} - 1 = \\tfrac{4}{3}$.",
+        "**Derivative.** $\\dfrac{d}{dx}(x^{7/3}) = \\tfrac{7}{3}\\,x^{4/3}$.",
+        "**Trick: split $x^{4/3}$ as $(x^{1/3})^4$.** When $x = 8$, $x^{1/3} = 2$, so $x^{4/3} = 2^4 = 16$. (Why split? Because $8$ is a perfect cube — taking the cube root first turns a hard exponent into easy arithmetic.)",
+        "**Combine.** $\\tfrac{7}{3} \\cdot 16 = \\tfrac{112}{3} \\approx 37.33$."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q23",
+      "type": "numeric",
+      "promptTex": "\\text{From the growing-CUBE argument, what is }\\dfrac{d}{dx}(x^3)\\text{ at }x = 5?",
+      "answer": 75,
+      "tolerance": 0,
+      "hints": [
+        "Growing-cube gives $\\dfrac{d}{dx}(x^3) = 3x^2$.",
+        "At $x = 5$: $3 \\cdot 25 = 75$."
+      ],
+      "explanation": "Just like the growing square gives $d(x^2)/dx = 2x$, the growing cube gives $d(x^3)/dx = 3x^2$. (Pieces of the new cube: 3 slabs of $x^2 \\cdot dx$, 3 sticks of $x \\cdot (dx)^2$, 1 tiny cube of $(dx)^3$ — keep only the first-order $3x^2\\,dx$.) At $x = 5$: $3 \\cdot 25 = 75$.",
+      "steps": [
+        "**Two paths to the same answer — pick whichever you find clearer.**",
+        "**Path A (Thompson-style intuition).** A cube of side $x$ grows by $dx$: 3 SLABS (each $x^2 \\cdot dx$) + 3 STICKS (each $x \\cdot (dx)^2$) + 1 TINY CUBE ($(dx)^3$). Drop higher-order terms (sticks + tiny cube). First-order growth: $3 x^2 dx$. Divide by $dx$ → derivative $= 3x^2$.",
+        "**Path B (power rule).** $\\dfrac{d}{dx}(x^3) = 3 x^2$. Same answer, no diagrams needed.",
+        "**Either way, evaluate.** At $x = 5$: $3 \\cdot 25 = 75$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q24",
+      "type": "numeric",
+      "promptTex": "f(x) = 4x^4 - 6x^2 + 2x - 7.\\ \\text{Find }f'(-1).",
+      "answer": -2,
+      "tolerance": 0,
+      "hints": [
+        "$f'(x) = 16x^3 - 12x + 2$.",
+        "At $x = -1$: $16(-1) - 12(-1) + 2 = -16 + 12 + 2$."
+      ],
+      "explanation": "$f'(x) = 16x^3 - 12x + 2$. At $x = -1$: $16(-1) - 12(-1) + 2 = -16 + 12 + 2 = -2$.",
+      "steps": [
+        "**Polynomial → differentiate term-by-term.**",
+        "**Each term.** $\\dfrac{d}{dx}(4x^4) = 16x^3$; $\\dfrac{d}{dx}(-6x^2) = -12x$; $\\dfrac{d}{dx}(2x) = 2$; $\\dfrac{d}{dx}(-7) = 0$.",
+        "**Reassemble.** $f'(x) = 16x^3 - 12x + 2$.",
+        "**Be careful with signs at $x = -1$.** Odd powers of $-1$ are $-1$; even powers are $+1$.",
+        "**Evaluate.** $16(-1)^3 - 12(-1) + 2 = 16 \\cdot (-1) - 12 \\cdot (-1) + 2 = -16 + 12 + 2 = -2$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q25",
+      "type": "numeric",
+      "promptTex": "\\dfrac{d}{dx}\\!\\left(\\dfrac{2}{\\sqrt{x}}\\right)\\text{ at }x = 4.\\ \\text{(4 decimal places)}",
+      "answer": -0.125,
+      "tolerance": 0.001,
+      "hints": [
+        "Rewrite: $\\dfrac{2}{\\sqrt{x}} = 2 x^{-1/2}$.",
+        "Power rule: $\\dfrac{d}{dx}(2 x^{-1/2}) = -x^{-3/2} = -\\dfrac{1}{x^{3/2}}$.",
+        "At $x = 4$: $x^{3/2} = (\\sqrt{4})^3 = 8$. So $-\\dfrac{1}{8} = -0.125$."
+      ],
+      "explanation": "Rewrite $\\dfrac{2}{\\sqrt{x}}$ as $2 x^{-1/2}$. Derivative: $2 \\cdot (-\\tfrac{1}{2}) x^{-3/2} = -x^{-3/2} = -\\dfrac{1}{x^{3/2}}$. At $x = 4$: $x^{3/2} = 4^{3/2} = (\\sqrt{4})^3 = 8$. So derivative $= -\\dfrac{1}{8} = -0.125$.",
+      "steps": [
+        "**Rewrite the whole expression as a power.** $\\dfrac{2}{\\sqrt{x}} = 2 \\cdot \\dfrac{1}{x^{1/2}} = 2\\,x^{-1/2}$. Now ready for the power rule.",
+        "**Power rule with $n = -1/2$, and constant 2 stays out front.** $\\dfrac{d}{dx}(2\\,x^{-1/2}) = 2 \\cdot (-\\tfrac{1}{2})\\,x^{-3/2} = -x^{-3/2}$.",
+        "**Translate to friendly form.** $-x^{-3/2} = -\\dfrac{1}{x^{3/2}}$.",
+        "**Choose a clever evaluation.** At $x = 4$: $x^{3/2} = (x^{1/2})^3 = (\\sqrt{4})^3 = 2^3 = 8$. (The problem picks $x = 4$ deliberately — it's a perfect square, making $\\sqrt{x}$ clean.)",
+        "**Final value.** $-\\dfrac{1}{8} = -0.125$.",
+        "**Sign sanity-check.** $\\dfrac{2}{\\sqrt{x}}$ decreases as $x$ grows — slope is negative. ✓"
+      ],
+      "difficulty": "hard"
+    }
+  ]
+}

@@ -1,0 +1,420 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{At } \\theta = 90°, \\text{ the point on the unit circle is:}",
+      "choices": [
+        "(1, 0)",
+        "(0, 1)",
+        "(-1, 0)",
+        "(0, -1)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "$\\theta = 90°$ points straight up (positive y-direction).",
+        "$\\cos 90° = 0$ and $\\sin 90° = 1$."
+      ],
+      "explanation": "At $90°$, the radius points along the positive y-axis, hitting the circle at $(0, 1)$. So $\\cos 90° = 0$ and $\\sin 90° = 1$.",
+      "steps": [
+        "Sketch the unit circle. Standard position means the angle starts on the positive x-axis.",
+        "Rotate counterclockwise by $90°$ — that's a quarter turn. The terminal side now points straight up along the positive y-axis.",
+        "It hits the unit circle at the point $(0, 1)$.",
+        "By definition, $\\cos\\theta = x$-coordinate $= 0$ and $\\sin\\theta = y$-coordinate $= 1$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\cos 180° = ?",
+      "choices": [
+        "1",
+        "0",
+        "-1",
+        "\\dfrac{1}{2}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "$180°$ points along the negative x-axis.",
+        "The point on the circle is $(-1, 0)$."
+      ],
+      "explanation": "At $180°$, the unit-circle point is $(-1, 0)$. The x-coordinate is $\\cos 180° = -1$.",
+      "steps": [
+        "$180°$ is half a revolution counterclockwise from the positive x-axis.",
+        "The terminal side ends along the **negative** x-axis.",
+        "It hits the unit circle at $(-1, 0)$.",
+        "$\\cos 180°$ = x-coordinate of that point $= -1$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{In which quadrant is } \\cos\\theta < 0 \\text{ and } \\sin\\theta > 0?",
+      "choices": [
+        "I (0°–90°)",
+        "II (90°–180°)",
+        "III (180°–270°)",
+        "IV (270°–360°)"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$\\cos < 0$ means $x < 0$ — left half of the plane.",
+        "$\\sin > 0$ means $y > 0$ — upper half. Where do those overlap?"
+      ],
+      "explanation": "$\\cos < 0$ puts us on the left half ($x < 0$); $\\sin > 0$ puts us on the upper half ($y > 0$). That's Quadrant II — angles between $90°$ and $180°$.",
+      "steps": [
+        "On the unit circle, $\\cos\\theta = x$ and $\\sin\\theta = y$.",
+        "$\\cos < 0 \\Rightarrow x < 0$ → the **left** half of the plane (Q II or Q III).",
+        "$\\sin > 0 \\Rightarrow y > 0$ → the **upper** half (Q I or Q II).",
+        "The overlap: **Q II** ($90°$–$180°$)."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\sin^2 45° + \\cos^2 45° = ?",
+      "answer": 1,
+      "tolerance": 0.001,
+      "hints": [
+        "This is the Pythagorean identity.",
+        "$\\sin^2\\theta + \\cos^2\\theta = 1$ for *every* angle."
+      ],
+      "explanation": "By the Pythagorean identity, $\\sin^2\\theta + \\cos^2\\theta = 1$ always. The angle doesn't matter — every point on the unit circle satisfies $x^2 + y^2 = 1$.",
+      "steps": [
+        "Recognize the form: $\\sin^2\\theta + \\cos^2\\theta$. This is the **Pythagorean identity**.",
+        "It says $\\sin^2\\theta + \\cos^2\\theta = 1$ for **every** angle $\\theta$.",
+        "So $\\sin^2 45° + \\cos^2 45° = 1$.",
+        "Verify the long way: $\\sin 45° = \\cos 45° = \\tfrac{\\sqrt{2}}{2}$, so $\\left(\\tfrac{\\sqrt{2}}{2}\\right)^2 + \\left(\\tfrac{\\sqrt{2}}{2}\\right)^2 = \\tfrac{1}{2} + \\tfrac{1}{2} = 1$. ✓"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\tan 90° = ?",
+      "choices": [
+        "0",
+        "1",
+        "Undefined",
+        "\\sqrt{2}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "$\\tan\\theta = \\dfrac{\\sin\\theta}{\\cos\\theta}$.",
+        "At $90°$, $\\cos 90° = 0$. What happens when you divide by zero?"
+      ],
+      "explanation": "$\\tan 90° = \\dfrac{\\sin 90°}{\\cos 90°} = \\dfrac{1}{0}$. Division by zero is undefined, so $\\tan 90°$ is **undefined**.",
+      "steps": [
+        "Use the definition: $\\tan\\theta = \\dfrac{\\sin\\theta}{\\cos\\theta}$.",
+        "Plug in $\\theta = 90°$: $\\sin 90° = 1$, $\\cos 90° = 0$.",
+        "$$\\tan 90° = \\dfrac{1}{0}$$",
+        "Division by zero is **undefined**, so $\\tan 90°$ is undefined."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\text{In which quadrant does the terminal side of } 215° \\text{ lie?}",
+      "choices": [
+        "I",
+        "II",
+        "III",
+        "IV"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Q I: $0°$–$90°$. Q II: $90°$–$180°$. Q III: $180°$–$270°$. Q IV: $270°$–$360°$.",
+        "Where does $215°$ fall?"
+      ],
+      "explanation": "$180° < 215° < 270°$, so the terminal side is in **Quadrant III**.",
+      "steps": [
+        "The four quadrants by angle range: Q I ($0$–$90°$), Q II ($90$–$180°$), Q III ($180$–$270°$), Q IV ($270$–$360°$).",
+        "Check $215°$: it's between $180°$ and $270°$.",
+        "So the terminal side lies in **Quadrant III**."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{Find the angle in } [0°, 360°) \\text{ that is coterminal with } 460°.",
+      "answer": 100,
+      "tolerance": 0.5,
+      "hints": [
+        "Coterminal angles differ by full rotations of $360°$.",
+        "Subtract $360°$ until the result is in $[0°, 360°)$."
+      ],
+      "explanation": "$460° - 360° = 100°$.",
+      "steps": [
+        "Two angles are **coterminal** if they differ by a whole number of full revolutions ($\\pm 360°$).",
+        "$460°$ is more than one full rotation. Subtract $360°$: $$460° - 360° = 100°$$",
+        "Check: $100° \\in [0°, 360°)$. ✓",
+        "So $460°$ is coterminal with $100°$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{Find the smallest positive angle coterminal with } -120°.",
+      "answer": 240,
+      "tolerance": 0.5,
+      "hints": [
+        "Add $360°$ until the result is positive.",
+        "$-120° + 360° = ?$"
+      ],
+      "explanation": "$-120° + 360° = 240°$.",
+      "steps": [
+        "Negative angles rotate clockwise. To find a coterminal positive angle, add $360°$.",
+        "$$-120° + 360° = 240°$$",
+        "Check: $240° \\in [0°, 360°)$ and is positive. ✓",
+        "$240°$ is the smallest positive angle coterminal with $-120°$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{Find the reference angle of } 150° \\text{ (in degrees).}",
+      "answer": 30,
+      "tolerance": 0.5,
+      "hints": [
+        "$150°$ is in Quadrant II.",
+        "Reference angle in Q II: $\\alpha = 180° - \\theta$."
+      ],
+      "explanation": "$\\alpha = 180° - 150° = 30°$.",
+      "steps": [
+        "Identify the quadrant of $150°$: $90° < 150° < 180°$, so **Q II**.",
+        "Reference-angle rule for Q II: $$\\alpha = 180° - \\theta$$",
+        "Substitute: $$\\alpha = 180° - 150° = 30°$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{Find the reference angle of } 300° \\text{ (in degrees).}",
+      "answer": 60,
+      "tolerance": 0.5,
+      "hints": [
+        "$300°$ is in Quadrant IV.",
+        "Reference angle in Q IV: $\\alpha = 360° - \\theta$."
+      ],
+      "explanation": "$\\alpha = 360° - 300° = 60°$.",
+      "steps": [
+        "Identify the quadrant: $270° < 300° < 360°$, so **Q IV**.",
+        "Reference-angle rule for Q IV: $$\\alpha = 360° - \\theta$$",
+        "Substitute: $$\\alpha = 360° - 300° = 60°$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "multiple-choice",
+      "promptTex": "\\text{In Quadrant III, which trig functions are positive?}",
+      "choices": [
+        "All three (sin, cos, tan)",
+        "Only sine",
+        "Only tangent",
+        "Only cosine"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "ASTC mnemonic: All Students Take Calculus, going counterclockwise from Q I.",
+        "Q I → All. Q II → Sin. Q III → Tan. Q IV → Cos."
+      ],
+      "explanation": "ASTC: in Quadrant III, only **T**angent is positive (sin and cos are both negative, but tan = sin/cos = (-)/(-) > 0).",
+      "steps": [
+        "Recall the **ASTC** mnemonic going counterclockwise from Q I: All–Sin–Tan–Cos.",
+        "Q III is the third quadrant (counting counterclockwise), which corresponds to **T**: only **tangent** is positive.",
+        "Sanity check: in Q III, $x < 0$ and $y < 0$, so $\\sin = y < 0$ and $\\cos = x < 0$. But $\\tan = y/x =$ negative/negative $> 0$. ✓"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If } \\theta \\text{ is in Quadrant II, what is the sign of } \\cos\\theta?",
+      "choices": [
+        "Positive",
+        "Negative",
+        "Zero",
+        "Undefined"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "In Q II, only sine is positive.",
+        "$\\cos\\theta = x$, and in Q II $x < 0$."
+      ],
+      "explanation": "In Q II, $x < 0$, so $\\cos\\theta < 0$ (negative).",
+      "steps": [
+        "In Q II, points have $x < 0$ and $y > 0$.",
+        "Since $\\cos\\theta = x$, $\\cos\\theta$ is **negative** in Q II.",
+        "ASTC confirms: in Q II only **S**ine is positive — cos and tan are both negative."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q13",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Find the exact value of } \\cos 210°.",
+      "choices": [
+        "\\dfrac{\\sqrt{3}}{2}",
+        "-\\dfrac{\\sqrt{3}}{2}",
+        "\\dfrac{1}{2}",
+        "-\\dfrac{1}{2}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "$210°$ is in Q III. Reference angle is $210° - 180° = 30°$.",
+        "$\\cos 30° = \\tfrac{\\sqrt{3}}{2}$. In Q III, cosine is negative."
+      ],
+      "explanation": "$\\cos 210° = -\\cos 30° = -\\tfrac{\\sqrt{3}}{2}$.",
+      "steps": [
+        "**Step 1.** Identify the quadrant: $180° < 210° < 270°$, so **Q III**.",
+        "**Step 2.** Find the reference angle (Q III rule): $$\\alpha = 210° - 180° = 30°$$",
+        "**Step 3.** Look up $\\cos 30°$ from the special-angle table: $\\cos 30° = \\dfrac{\\sqrt{3}}{2}$.",
+        "**Step 4.** Apply the sign from ASTC. In Q III, cosine is **negative** (only T is positive).",
+        "$$\\cos 210° = -\\dfrac{\\sqrt{3}}{2}$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q14",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Find the exact value of } \\sin 315°.",
+      "choices": [
+        "\\dfrac{\\sqrt{2}}{2}",
+        "-\\dfrac{\\sqrt{2}}{2}",
+        "\\dfrac{\\sqrt{3}}{2}",
+        "-\\dfrac{1}{2}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "$315°$ is in Q IV. Reference angle is $360° - 315° = 45°$.",
+        "$\\sin 45° = \\tfrac{\\sqrt{2}}{2}$. In Q IV, sine is negative."
+      ],
+      "explanation": "$\\sin 315° = -\\sin 45° = -\\tfrac{\\sqrt{2}}{2}$.",
+      "steps": [
+        "**Step 1.** Quadrant: $270° < 315° < 360°$, so **Q IV**.",
+        "**Step 2.** Reference angle (Q IV rule): $$\\alpha = 360° - 315° = 45°$$",
+        "**Step 3.** $\\sin 45° = \\dfrac{\\sqrt{2}}{2}$.",
+        "**Step 4.** ASTC: in Q IV, only cosine is positive — so sine is **negative**.",
+        "$$\\sin 315° = -\\dfrac{\\sqrt{2}}{2}$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q15",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Find the exact value of } \\tan 225°.",
+      "choices": [
+        "1",
+        "-1",
+        "\\sqrt{3}",
+        "-\\sqrt{3}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "$225°$ is in Q III. Reference angle is $225° - 180° = 45°$.",
+        "$\\tan 45° = 1$. In Q III, tangent is positive (ASTC)."
+      ],
+      "explanation": "$\\tan 225° = +\\tan 45° = 1$.",
+      "steps": [
+        "**Step 1.** Quadrant: $180° < 225° < 270°$, so **Q III**.",
+        "**Step 2.** Reference angle: $$\\alpha = 225° - 180° = 45°$$",
+        "**Step 3.** $\\tan 45° = 1$.",
+        "**Step 4.** ASTC: in Q III, **T**angent is **positive**. (Both sin and cos are negative, so tan = neg/neg = positive.)",
+        "$$\\tan 225° = +1$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q16",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Find the exact value of } \\sin\\dfrac{4\\pi}{3}.",
+      "choices": [
+        "\\dfrac{\\sqrt{3}}{2}",
+        "-\\dfrac{\\sqrt{3}}{2}",
+        "\\dfrac{1}{2}",
+        "-\\dfrac{1}{2}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Convert to a quadrant: $\\pi < \\tfrac{4\\pi}{3} < \\tfrac{3\\pi}{2}$, so Q III.",
+        "Reference angle: $\\tfrac{4\\pi}{3} - \\pi = \\tfrac{\\pi}{3}$. In Q III, sine is negative."
+      ],
+      "explanation": "$\\sin\\tfrac{\\pi}{3} = \\tfrac{\\sqrt{3}}{2}$, and Q III sine is negative, so $\\sin\\tfrac{4\\pi}{3} = -\\tfrac{\\sqrt{3}}{2}$.",
+      "steps": [
+        "**Step 1.** Locate the quadrant. $\\pi \\approx 3.14$ and $\\tfrac{3\\pi}{2} \\approx 4.71$, so $\\tfrac{4\\pi}{3} \\approx 4.19$ falls between them → **Q III**.",
+        "**Step 2.** Reference angle (Q III in radians): $$\\alpha = \\dfrac{4\\pi}{3} - \\pi = \\dfrac{\\pi}{3}$$",
+        "**Step 3.** $\\sin\\dfrac{\\pi}{3} = \\dfrac{\\sqrt{3}}{2}$.",
+        "**Step 4.** ASTC: in Q III, sine is **negative**.",
+        "$$\\sin\\dfrac{4\\pi}{3} = -\\dfrac{\\sqrt{3}}{2}$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q17",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Find the exact value of } \\cos\\dfrac{5\\pi}{6}.",
+      "choices": [
+        "\\dfrac{\\sqrt{3}}{2}",
+        "-\\dfrac{\\sqrt{3}}{2}",
+        "\\dfrac{1}{2}",
+        "-\\dfrac{1}{2}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "$\\tfrac{5\\pi}{6}$ is in Q II. Reference angle: $\\pi - \\tfrac{5\\pi}{6} = \\tfrac{\\pi}{6}$.",
+        "$\\cos\\tfrac{\\pi}{6} = \\tfrac{\\sqrt{3}}{2}$. In Q II, cosine is negative."
+      ],
+      "explanation": "$\\cos\\tfrac{5\\pi}{6} = -\\cos\\tfrac{\\pi}{6} = -\\tfrac{\\sqrt{3}}{2}$.",
+      "steps": [
+        "**Step 1.** Quadrant: $\\tfrac{\\pi}{2} < \\tfrac{5\\pi}{6} < \\pi$ → **Q II**.",
+        "**Step 2.** Reference angle (Q II): $$\\alpha = \\pi - \\dfrac{5\\pi}{6} = \\dfrac{\\pi}{6}$$",
+        "**Step 3.** $\\cos\\dfrac{\\pi}{6} = \\dfrac{\\sqrt{3}}{2}$.",
+        "**Step 4.** ASTC: in Q II only sine is positive — cosine is **negative**.",
+        "$$\\cos\\dfrac{5\\pi}{6} = -\\dfrac{\\sqrt{3}}{2}$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q18",
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the angle (in radians) in } [0, 2\\pi) \\text{ coterminal with } \\dfrac{9\\pi}{4}?",
+      "choices": [
+        "\\dfrac{\\pi}{4}",
+        "\\dfrac{3\\pi}{4}",
+        "\\dfrac{5\\pi}{4}",
+        "\\dfrac{7\\pi}{4}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Coterminal angles differ by $2\\pi$.",
+        "$\\tfrac{9\\pi}{4} - 2\\pi = \\tfrac{9\\pi}{4} - \\tfrac{8\\pi}{4} = ?$"
+      ],
+      "explanation": "$\\dfrac{9\\pi}{4} - 2\\pi = \\dfrac{9\\pi - 8\\pi}{4} = \\dfrac{\\pi}{4}$.",
+      "steps": [
+        "Coterminal angles in radians differ by $2\\pi$.",
+        "Subtract $2\\pi$ from $\\dfrac{9\\pi}{4}$. First express $2\\pi$ with denominator $4$: $$2\\pi = \\dfrac{8\\pi}{4}$$",
+        "$$\\dfrac{9\\pi}{4} - \\dfrac{8\\pi}{4} = \\dfrac{\\pi}{4}$$",
+        "$\\dfrac{\\pi}{4} \\in [0, 2\\pi)$. ✓"
+      ],
+      "difficulty": "easy"
+    }
+  ]
+}

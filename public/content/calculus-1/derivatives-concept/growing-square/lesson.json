@@ -1,0 +1,118 @@
+{
+  "title": "The Growing Square: Where 2x Comes From",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "There is a classical calculus textbook, *Calculus Made Easy* by Silvanus P. Thompson (1910), that opens with a line worth keeping near you the whole time you study calculus:",
+        "> *\"What one fool can do, another can.\"*",
+        "Calculus has a reputation for being hard. It is not, really. It is *unfamiliar* — and the unfamiliar part is mostly **two symbols** that get used without ever being explained:",
+        "$d$ — a tiny prefix meaning **\"a little bit of\"**. So $dx$ is *a little bit of* $x$. Not a fraction. Not a function. Just: a small change in $x$.",
+        "$\\int$ — a stretched-out letter S, meaning **\"the sum of\"**. So $\\int f(x)\\,dx$ is **the sum of** $f(x)$ multiplied by *a little bit of* $x$, added up.",
+        "Both of these symbols are 300 years old and were chosen for exactly the meanings above. Once you read them as plain English, calculus is mostly arithmetic."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The whole lesson in one sentence",
+      "body": "We are going to *grow a square* by a little bit and watch what new area appears. That observation alone — no limits, no formulas — will hand us the derivative of $x^2$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. A square that grows",
+        "Picture a square with side $x$. Its area is $x^2$ — no calculus needed.",
+        "Now let $x$ grow by a tiny amount $dx$. The square gets a little wider AND a little taller. **Three new pieces of area appear**:",
+        "(a) a thin strip of width $dx$ along the **right** side — area $x \\cdot dx$",
+        "(b) a thin strip of width $dx$ along the **top** side — area $x \\cdot dx$",
+        "(c) a tiny **corner square** of side $dx$ — area $(dx)^2$",
+        "Drag the sliders below — change $x$ and $dx$ and watch the three new pieces."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "growing-square",
+      "config": { "x": 4, "dx": 0.8 }
+    },
+    {
+      "type": "text",
+      "md": [
+        "Add the three new pieces:",
+        "$\\text{new area} = x^2 + \\underbrace{x\\,dx + x\\,dx}_{\\text{two strips}} + \\underbrace{(dx)^2}_{\\text{tiny corner}} = x^2 + 2x\\,dx + (dx)^2$",
+        "So the **growth** in area (what was *added*) is $2x\\,dx + (dx)^2$.",
+        "Now here is the famous trick."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Different degrees of smallness",
+      "body": "If $dx$ is small — say $dx = 0.01$ — then $(dx)^2 = 0.0001$. A hundred times smaller. If $dx$ is even smaller, $(dx)^2$ is **vanishingly** smaller. The corner is always smaller than the strips, and it gets smaller *faster* as $dx$ shrinks.\n\nThompson called this difference \"different degrees of smallness\": both $dx$ and $(dx)^2$ are small, but $(dx)^2$ is *much* smaller. In the limit where $dx \\to 0$, the corner doesn't just shrink — it disappears compared to the strips. **Tick the \"drop the corner\" box in the widget.** The corner is gone. What's left is the truth about how the square grew."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. The derivative falls out",
+        "After dropping the negligible corner, the area's growth is",
+        "$\\text{growth} = 2x \\, dx$",
+        "Divide both sides by $dx$:",
+        "$\\dfrac{\\text{growth}}{dx} = 2x$",
+        "The left-hand side has a name. \"Growth in area per little bit of $x$\" is exactly what mathematicians call $\\dfrac{d(x^2)}{dx}$ — read it as **\"a little bit of $x^2$ per little bit of $x$\"**. So:",
+        "$\\boxed{\\;\\dfrac{d(x^2)}{dx} = 2x\\;}$",
+        "No limits, no $h \\to 0$, no algebra. We *grew a square* and *looked at it*. That is calculus."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. Same trick gives the power rule",
+        "What if the side were $x^3$ — a cube growing by $dx$?",
+        "$(x + dx)^3 = x^3 + 3x^2\\,dx + 3x\\,(dx)^2 + (dx)^3$",
+        "Three terms involve different degrees of smallness:",
+        "$3x^2\\,dx$ — proportional to $dx$ — the **important** part",
+        "$3x\\,(dx)^2$ — proportional to $(dx)^2$ — vanishingly small",
+        "$(dx)^3$ — even more vanishingly small",
+        "Drop everything with $(dx)^2$ or higher. What remains is $3x^2 \\, dx$. Divide by $dx$:",
+        "$\\dfrac{d(x^3)}{dx} = 3x^2$"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "See the pattern",
+      "body": "$\\dfrac{d(x^2)}{dx} = 2 x^{1}$\n\n$\\dfrac{d(x^3)}{dx} = 3 x^{2}$\n\n$\\dfrac{d(x^4)}{dx} = 4 x^{3}$ (try expanding $(x+dx)^4$ if you don't believe it)\n\n**Guess what comes next** before reading on."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. The Power Rule",
+        "The pattern is:",
+        "$\\boxed{\\;\\dfrac{d(x^n)}{dx} = n \\, x^{\\,n-1}\\;}$",
+        "**Bring the exponent down in front; reduce the exponent by 1.** That is the most-used formula in all of calculus, and we discovered it without memorizing anything — just by watching squares and cubes grow.",
+        "It also works for $n$ that isn't a whole number. For example, $\\sqrt{x} = x^{1/2}$:",
+        "$\\dfrac{d}{dx}(x^{1/2}) = \\tfrac{1}{2}\\,x^{-1/2} = \\dfrac{1}{2\\sqrt{x}}$",
+        "And for negative powers — $\\dfrac{1}{x} = x^{-1}$:",
+        "$\\dfrac{d}{dx}(x^{-1}) = -1 \\cdot x^{-2} = -\\dfrac{1}{x^2}$"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Two more rules you can guess",
+      "body": "**Constants vanish.** $\\dfrac{d}{dx}(7) = 0$ — a constant doesn't change, so it has no growth. (A square whose side is 7 — fine. But a square whose *area* is always 7, no matter how $x$ moves — it isn't growing at all.)\n\n**Multiplied constants pass through.** $\\dfrac{d}{dx}(7 x^2) = 7 \\cdot 2x = 14x$. Multiplying $x^2$ by 7 just makes it grow 7 times faster; the *rule* for how it grows ($2x$) is unchanged."
+
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 5. Why this matters",
+        "Almost every derivative in this course will reduce — sooner or later — to the power rule. Trig, log, exp derivatives are different formulas, but for **polynomials**, you now have a complete shortcut:",
+        "$\\dfrac{d}{dx}\\bigl(3x^4 - 5x^2 + 7x - 9\\bigr) = 12x^3 - 10x + 7$",
+        "Bring the exponent down, reduce by 1, term by term. Constants vanish.",
+        "And the *reason* it works isn't a memorized formula. It is: **little bits of area get smaller faster than little bits of length, so corners drop out**. That's it."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "What about limits?",
+      "body": "Modern textbooks introduce the derivative as a *limit*: $f'(x) = \\lim_{h \\to 0} \\dfrac{f(x+h) - f(x)}{h}$. That definition is rigorous and important — and you should know it. But it tends to come BEFORE any intuition for what a derivative *is*. Thompson's growing-square argument is what you should picture in your head every time you see that limit. The limit is the formal version of *\"drop the $(dx)^2$ corner\"*."
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "title": "Injective, Surjective, Bijective",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Once you accept that a function is a rule pairing each input with one output, the next natural questions are about the *shape* of that pairing:",
+        "**Do two inputs ever land on the same output?** If never — the function is **injective** (also called *one-to-one*).",
+        "**Does every output get hit by at least one input?** If yes — the function is **surjective** (also called *onto*).",
+        "A function that is both is **bijective** — a perfect pairing where every input matches a unique output and no output is left out."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Play with the cases",
+        "Click the tabs below. Each shows a small input set $X$ on the left and an output set $Y$ on the right, with arrows representing the function. The verdict box explains why each example does or does not satisfy each property."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "function-mapping",
+      "config": {
+        "mode": "function"
+      }
+    },
+    {
+      "type": "callout",
+      "title": "Watch for these failure modes",
+      "body": "**Not a function** — some input has two arrows leaving it.\n**Not injective** — two arrows land on the same output.\n**Not surjective** — some output has no arrow arriving at it."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why bijective matters: inverses",
+        "If a function $f$ is **bijective**, you can run it backwards. For every output $y$, there is exactly one input $x$ with $f(x) = y$ — so the reverse arrow is unambiguous. That reverse function is called the **inverse**, written $f^{-1}$.",
+        "If $f$ is NOT bijective, the inverse fails for one of two reasons:",
+        "**Not injective** → some output is shared by two inputs, so running backwards is ambiguous.",
+        "**Not surjective** → some output has no input pointing to it, so $f^{-1}$ has nothing to send it to."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Real-function examples",
+        "**$f(x) = x^2$ from $\\mathbb{R}$ to $\\mathbb{R}$.** Not injective ($f(2) = f(-2) = 4$) and not surjective (no $x$ gives $-1$). To make it bijective, restrict the domain to $[0, \\infty)$ and the codomain to $[0, \\infty)$. Then $f^{-1}(y) = \\sqrt{y}$.",
+        "**$f(x) = 2x + 1$ from $\\mathbb{R}$ to $\\mathbb{R}$.** Injective (different inputs give different outputs) AND surjective (any real $y$ is hit by $x = (y-1)/2$). So it's bijective, and $f^{-1}(y) = (y-1)/2$.",
+        "**$f(x) = e^x$ from $\\mathbb{R}$ to $\\mathbb{R}$.** Injective, but not surjective onto $\\mathbb{R}$ (it never outputs $\\leq 0$). To make it bijective, change the codomain to $(0, \\infty)$. Then $f^{-1}(y) = \\ln y$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Horizontal Line Test",
+      "body": "Graphically: a function is **injective** iff every horizontal line crosses its graph at most once. **Surjective** (onto a chosen codomain) iff every horizontal line within that codomain crosses at least once. **Bijective** iff every horizontal line crosses exactly once."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The point of these labels",
+        "Injective / surjective / bijective aren't just vocabulary to memorize for a test. They classify *what kind* of relationship a function sets up — and they decide whether you can undo it. Every time you write 'take the square root', 'take the log', 'take the inverse sine', you're using the fact that the underlying function was restricted to be bijective."
+      ]
+    }
+  ]
+}

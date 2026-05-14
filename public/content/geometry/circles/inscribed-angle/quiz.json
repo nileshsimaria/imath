@@ -1,0 +1,170 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{A chord } AB \\text{ subtends a central angle of } 100°. \\\\ \\text{What is the inscribed angle on the major arc?}",
+      "answer": 50,
+      "tolerance": 0.01,
+      "hints": [
+        "Inscribed angle = half the central angle.",
+        "$100 / 2 = ?$"
+      ],
+      "explanation": "Inscribed angle = central angle / 2 = $100°/2 = 50°$.",
+      "steps": [
+        {
+          "text": "**Apply the Inscribed Angle Theorem:**"
+        },
+        {
+          "math": "\\angle APB = \\dfrac{1}{2} \\angle AOB = \\dfrac{1}{2}(100°) = 50°"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{An inscribed angle measures } 35°. \\text{ What is the central angle on the same arc?}",
+      "answer": 70,
+      "tolerance": 0.01,
+      "hints": [
+        "Central angle = 2 × inscribed angle.",
+        "$2 \\cdot 35 = ?$"
+      ],
+      "explanation": "$\\angle AOB = 2 \\cdot \\angle APB = 2 \\cdot 35° = 70°$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "Two inscribed angles subtend the same chord and lie on the same arc. They must be:",
+      "choices": [
+        "Supplementary (sum to 180°)",
+        "Complementary (sum to 90°)",
+        "Equal",
+        "Cannot be determined"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Both equal half of the same central angle.",
+        "Half of the same number = same number."
+      ],
+      "explanation": "Both inscribed angles equal half of the same central angle, so they're equal. (Same Segment Theorem.)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{In a circle, } \\angle APB = 60° \\text{ where } P \\text{ is on the circle.} \\\\ \\text{Find the arc } AB \\text{ (in degrees, measured as the central angle).}",
+      "answer": 120,
+      "tolerance": 0.01,
+      "hints": [
+        "Arc measure = central angle subtended.",
+        "Arc = 2 × inscribed angle."
+      ],
+      "explanation": "Arc $AB = 2 \\cdot \\angle APB = 2 \\cdot 60° = 120°$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "prompt": "If P is on the MINOR arc (opposite side from the typical inscribed-angle picture) and the central angle is 80°, what is the inscribed angle ∠APB?",
+      "choices": [
+        "40°",
+        "80°",
+        "140°",
+        "160°"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "The inscribed angle on the major arc would be $40°$.",
+        "On the minor arc, the inscribed angle is supplementary to that — $180° - 40°$."
+      ],
+      "explanation": "On the minor arc the inscribed angle is supplementary to the major-arc one: $180 - 40 = 140°$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** The inscribed angle on the major arc would be $40°$."
+        },
+        {
+          "text": "On the minor arc, the inscribed angle is supplementary to that — $180° - 40°$."
+        },
+        {
+          "text": "**Solution.** On the minor arc the inscribed angle is supplementary to the major-arc one: $180 - 40 = 140°$."
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{In a circle, chord } AB \\text{ subtends an inscribed angle of } 45° \\text{ at } P \\\\ \\text{and another inscribed angle at } Q. \\, P, Q \\text{ are on the same side.} \\\\ \\text{What is the inscribed angle at } Q?",
+      "answer": 45,
+      "tolerance": 0.01,
+      "hints": [
+        "Same Segment Theorem applies: same chord, same arc → same angle.",
+        "Same as P."
+      ],
+      "explanation": "All inscribed angles on the same arc subtending the same chord are equal. So angle at Q also equals $45°$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** Same Segment Theorem applies: same chord, same arc → same angle."
+        },
+        {
+          "text": "Same as P."
+        },
+        {
+          "text": "**Solution.** All inscribed angles on the same arc subtending the same chord are equal. So angle at Q also equals $45°$."
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{Quadrilateral } ABCD \\text{ is inscribed in a circle. } \\\\ \\angle A = 75°. \\text{ Find } \\angle C.",
+      "answer": 105,
+      "tolerance": 0.01,
+      "hints": [
+        "Opposite angles in a cyclic quadrilateral are supplementary.",
+        "$\\angle A + \\angle C = 180°$."
+      ],
+      "explanation": "Cyclic quadrilateral: opposite angles sum to $180°$. So $\\angle C = 180 - 75 = 105°$.",
+      "steps": [
+        {
+          "text": "**Cyclic quadrilateral property:** opposite angles are supplementary."
+        },
+        {
+          "math": "\\angle A + \\angle C = 180°"
+        },
+        {
+          "math": "\\angle C = 180° - 75° = 105°"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{In a circle, } \\angle AOB = 140° \\text{ (central). Point } P \\text{ is on the major arc.} \\\\ \\text{Point } Q \\text{ is on the minor arc. Find } \\angle APB + \\angle AQB.",
+      "answer": 180,
+      "tolerance": 0.01,
+      "hints": [
+        "$\\angle APB = 70°$ (half of central).",
+        "$\\angle AQB = 110°$ (supplementary to angle on other arc)."
+      ],
+      "explanation": "$\\angle APB = 70°$, $\\angle AQB = 180 - 70 = 110°$. Sum $= 180°$. (Always true: angles on opposite arcs are supplementary.)",
+      "difficulty": "hard",
+      "steps": [
+        {
+          "text": "**Approach.** $\\angle APB = 70°$ (half of central)."
+        },
+        {
+          "text": "$\\angle AQB = 110°$ (supplementary to angle on other arc)."
+        },
+        {
+          "text": "**Solution.** $\\angle APB = 70°$, $\\angle AQB = 180 - 70 = 110°$. Sum $= 180°$. (Always true: angles on opposite arcs are supplementary.)"
+        }
+      ]
+    }
+  ]
+}

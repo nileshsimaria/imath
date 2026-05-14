@@ -1,0 +1,340 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\sin^2(40°) + \\cos^2(40°) = ?",
+      "answer": 1,
+      "tolerance": 0.001,
+      "hints": [
+        "Pythagorean identity holds for *every* angle.",
+        "$\\sin^2\\theta + \\cos^2\\theta = 1$ always."
+      ],
+      "explanation": "By the Pythagorean identity, $\\sin^2\\theta + \\cos^2\\theta = 1$ for every $\\theta$. The angle ($40°$ in this case) doesn't matter.",
+      "steps": [
+        "Recognize the form: $\\sin^2 + \\cos^2$ = the **Pythagorean identity**.",
+        "It's true for every angle: $\\sin^2\\theta + \\cos^2\\theta = 1$.",
+        "So $\\sin^2 40° + \\cos^2 40° = 1$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which is equivalent to } 1 + \\tan^2\\theta?",
+      "choices": [
+        "\\sec^2\\theta",
+        "\\csc^2\\theta",
+        "\\sin^2\\theta",
+        "\\cot^2\\theta"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Comes from dividing the Pythagorean identity by $\\cos^2\\theta$.",
+        "$\\sin^2/\\cos^2 + 1 = 1/\\cos^2 \\Rightarrow \\tan^2 + 1 = \\sec^2$."
+      ],
+      "explanation": "$1 + \\tan^2\\theta = \\sec^2\\theta$. Derived from $\\sin^2 + \\cos^2 = 1$ by dividing through by $\\cos^2\\theta$.",
+      "steps": [
+        "Start with the Pythagorean identity: $\\sin^2\\theta + \\cos^2\\theta = 1$.",
+        "Divide every term by $\\cos^2\\theta$: $$\\dfrac{\\sin^2\\theta}{\\cos^2\\theta} + 1 = \\dfrac{1}{\\cos^2\\theta}$$",
+        "Recognize: $\\dfrac{\\sin\\theta}{\\cos\\theta} = \\tan\\theta$ and $\\dfrac{1}{\\cos\\theta} = \\sec\\theta$.",
+        "$$\\tan^2\\theta + 1 = \\sec^2\\theta$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\sin(A + B) = ?",
+      "choices": [
+        "\\sin A \\cos B + \\cos A \\sin B",
+        "\\sin A \\cos B - \\cos A \\sin B",
+        "\\cos A \\cos B + \\sin A \\sin B",
+        "\\cos A \\cos B - \\sin A \\sin B"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "'Sin cos plus cos sin' — same operation throughout.",
+        "Don't confuse with cosine: cosine has the OPPOSITE sign inside vs outside."
+      ],
+      "explanation": "$\\sin(A + B) = \\sin A \\cos B + \\cos A \\sin B$. The sine sum identity.",
+      "steps": [
+        "Memorize as: 'sine of A plus B equals sin-cos plus cos-sin'.",
+        "Sine sum/difference both have the **same sign** inside and outside (unlike cosine).",
+        "$\\sin(A + B) = \\sin A \\cos B + \\cos A \\sin B$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\sin(2\\theta) = ?",
+      "choices": [
+        "2\\sin\\theta\\cos\\theta",
+        "2\\sin\\theta",
+        "\\sin^2\\theta",
+        "\\sin\\theta + \\cos\\theta"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Apply the sum identity with $A = B = \\theta$.",
+        "$\\sin(\\theta + \\theta) = \\sin\\theta\\cos\\theta + \\cos\\theta\\sin\\theta$."
+      ],
+      "explanation": "$\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$. From $\\sin(A+B)$ with $A = B$.",
+      "steps": [
+        "Use the sum identity with $A = B = \\theta$: $$\\sin(\\theta + \\theta) = \\sin\\theta\\cos\\theta + \\cos\\theta\\sin\\theta$$",
+        "Both terms are the same: $$= 2\\sin\\theta\\cos\\theta$$",
+        "So $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which is NOT a valid form of } \\cos(2\\theta)?",
+      "choices": [
+        "\\cos^2\\theta - \\sin^2\\theta",
+        "1 - 2\\sin^2\\theta",
+        "2\\cos^2\\theta - 1",
+        "2\\sin\\theta\\cos\\theta"
+      ],
+      "choicesTex": true,
+      "answerIndex": 3,
+      "hints": [
+        "$2\\sin\\theta\\cos\\theta$ is sin double-angle, not cos.",
+        "Cos double-angle has THREE valid forms; sine has one."
+      ],
+      "explanation": "$2\\sin\\theta\\cos\\theta = \\sin(2\\theta)$, not $\\cos(2\\theta)$. The three valid forms of cos double-angle are $\\cos^2 - \\sin^2$, $1 - 2\\sin^2$, $2\\cos^2 - 1$.",
+      "steps": [
+        "Recall: $\\cos(2\\theta)$ has **three** equivalent forms.",
+        "$\\cos^2\\theta - \\sin^2\\theta$ ✓ (the original from the cos sum identity)",
+        "$1 - 2\\sin^2\\theta$ ✓ (substituting $\\cos^2 = 1 - \\sin^2$)",
+        "$2\\cos^2\\theta - 1$ ✓ (substituting $\\sin^2 = 1 - \\cos^2$)",
+        "$2\\sin\\theta\\cos\\theta$ ✗ — this is $\\sin(2\\theta)$, not $\\cos(2\\theta)$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{Use the angle-sum identity to find } \\sin 75° \\\\ \\text{(round to 4 decimals).}",
+      "answer": 0.9659,
+      "tolerance": 0.001,
+      "hints": [
+        "$75° = 45° + 30°$ — both special angles.",
+        "$\\sin 45° \\cos 30° + \\cos 45° \\sin 30° = (\\sqrt{2}/2)(\\sqrt{3}/2) + (\\sqrt{2}/2)(1/2) = \\dfrac{\\sqrt{6} + \\sqrt{2}}{4}$."
+      ],
+      "explanation": "$\\sin 75° = \\sin(45° + 30°) = \\dfrac{\\sqrt{6} + \\sqrt{2}}{4} \\approx 0.9659$.",
+      "steps": [
+        "Decompose: $75° = 45° + 30°$ (both special angles).",
+        "Apply $\\sin(A + B)$: $$\\sin 75° = \\sin 45° \\cos 30° + \\cos 45° \\sin 30°$$",
+        "Plug in: $$= \\dfrac{\\sqrt{2}}{2} \\cdot \\dfrac{\\sqrt{3}}{2} + \\dfrac{\\sqrt{2}}{2} \\cdot \\dfrac{1}{2}$$",
+        "Combine: $$= \\dfrac{\\sqrt{6}}{4} + \\dfrac{\\sqrt{2}}{4} = \\dfrac{\\sqrt{6} + \\sqrt{2}}{4}$$",
+        "Decimal: $\\dfrac{\\sqrt{6} + \\sqrt{2}}{4} \\approx \\dfrac{2.449 + 1.414}{4} \\approx 0.9659$."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{Use the half-angle identity to find } \\cos 15° \\\\ \\text{(round to 4 decimals).}",
+      "answer": 0.9659,
+      "tolerance": 0.001,
+      "hints": [
+        "$15° = 30°/2$. Use $\\cos(\\theta/2) = +\\sqrt{(1 + \\cos\\theta)/2}$ (positive in Q I).",
+        "$\\cos 30° = \\sqrt{3}/2$. Then $\\cos 15° = \\sqrt{(1 + \\sqrt{3}/2)/2}$."
+      ],
+      "explanation": "$\\cos 15° = \\sqrt{(1 + \\cos 30°)/2} = \\sqrt{(2 + \\sqrt{3})/4} = \\dfrac{\\sqrt{2 + \\sqrt{3}}}{2} \\approx 0.9659$.",
+      "steps": [
+        "Use $\\cos(\\theta/2) = \\pm\\sqrt{\\dfrac{1 + \\cos\\theta}{2}}$. With $\\theta = 30°$, $\\theta/2 = 15°$.",
+        "Sign: $15°$ in Q I → cosine **positive**.",
+        "Substitute $\\cos 30° = \\sqrt{3}/2$: $$\\cos 15° = \\sqrt{\\dfrac{1 + \\sqrt{3}/2}{2}} = \\sqrt{\\dfrac{2 + \\sqrt{3}}{4}}$$",
+        "Simplify: $\\cos 15° = \\dfrac{\\sqrt{2 + \\sqrt{3}}}{2} \\approx 0.9659$.",
+        "(Note: this equals $\\sin 75°$ — makes sense because cosine and sine are complementary.)"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Simplify: } \\dfrac{\\sin\\theta}{\\cos\\theta} \\cdot \\dfrac{1}{\\sin\\theta}",
+      "choices": [
+        "\\sec\\theta",
+        "\\csc\\theta",
+        "1",
+        "\\sin\\theta"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Cancel $\\sin\\theta$ from numerator and denominator.",
+        "What's left: $\\dfrac{1}{\\cos\\theta} = \\sec\\theta$."
+      ],
+      "explanation": "$\\dfrac{\\sin\\theta}{\\cos\\theta} \\cdot \\dfrac{1}{\\sin\\theta} = \\dfrac{1}{\\cos\\theta} = \\sec\\theta$.",
+      "steps": [
+        "Multiply: $$\\dfrac{\\sin\\theta}{\\cos\\theta} \\cdot \\dfrac{1}{\\sin\\theta} = \\dfrac{\\sin\\theta}{\\cos\\theta \\cdot \\sin\\theta}$$",
+        "Cancel $\\sin\\theta$: $$= \\dfrac{1}{\\cos\\theta}$$",
+        "By reciprocal identity: $$= \\sec\\theta$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{If } \\sin\\theta = 0.6 \\text{ and } \\theta \\text{ is in Q I, find } \\cos(2\\theta) \\\\ \\text{(decimal, round to 4 places).}",
+      "answer": 0.28,
+      "tolerance": 0.005,
+      "hints": [
+        "$\\cos(2\\theta) = 1 - 2\\sin^2\\theta$ — uses just sine, no need to find cosine first.",
+        "$1 - 2(0.6)^2 = 1 - 0.72 = 0.28$."
+      ],
+      "explanation": "$\\cos(2\\theta) = 1 - 2\\sin^2\\theta = 1 - 2(0.6)^2 = 1 - 0.72 = 0.28$.",
+      "steps": [
+        "Use the form of $\\cos(2\\theta)$ that needs only $\\sin\\theta$: $$\\cos(2\\theta) = 1 - 2\\sin^2\\theta$$",
+        "Substitute $\\sin\\theta = 0.6$: $$\\cos(2\\theta) = 1 - 2(0.6)^2 = 1 - 2 \\cdot 0.36 = 1 - 0.72$$",
+        "$$\\cos(2\\theta) = 0.28$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q10",
+      "type": "multiple-choice",
+      "promptTex": "\\text{To prove an identity, you should:}",
+      "choices": [
+        "Manipulate both sides as if they were equal",
+        "Pick one side and transform it until you reach the other",
+        "Cross-multiply both sides",
+        "Substitute specific angles to test"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Treating both sides as equal would assume what you're trying to prove.",
+        "The standard method: work one side step by step until it matches the other."
+      ],
+      "explanation": "Pick one side and transform it. Manipulating both sides assumes they're equal — exactly what you're trying to prove.",
+      "steps": [
+        "**Wrong approach:** treating both sides as equal and 'solving' the equation. This implicitly assumes what you're trying to show — circular reasoning.",
+        "**Correct approach:** start from one side (usually the messier one) and use definitions, algebra, and known identities to transform it step by step into the other side.",
+        "Each step is 'this expression equals that one' (a substitution or algebraic move) — never 'both sides equal X'."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Simplify: } \\sin(-x) + \\sin x",
+      "choices": [
+        "0",
+        "2\\sin x",
+        "1",
+        "\\sin(2x)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Sine is an odd function: $\\sin(-x) = -\\sin x$.",
+        "So $\\sin(-x) + \\sin x = -\\sin x + \\sin x$."
+      ],
+      "explanation": "$\\sin(-x) + \\sin x = -\\sin x + \\sin x = 0$ (sine is odd).",
+      "steps": [
+        "Recall the odd identity: $\\sin(-x) = -\\sin x$.",
+        "Substitute: $$\\sin(-x) + \\sin x = -\\sin x + \\sin x = 0$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Simplify: } \\dfrac{1 - \\cos^2 x}{\\sin x}",
+      "choices": [
+        "\\sin x",
+        "\\cos x",
+        "\\tan x",
+        "\\sec x"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Pythagorean: $1 - \\cos^2 x = \\sin^2 x$.",
+        "Then $\\sin^2 x / \\sin x = \\sin x$."
+      ],
+      "explanation": "Numerator $1 - \\cos^2 x = \\sin^2 x$ (Pythagorean). So $\\sin^2 x / \\sin x = \\sin x$.",
+      "steps": [
+        "Apply Pythagorean to the numerator: $1 - \\cos^2 x = \\sin^2 x$.",
+        "Substitute: $$\\dfrac{\\sin^2 x}{\\sin x}$$",
+        "Cancel one $\\sin x$: $$= \\sin x$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q13",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The expression } \\sec^2\\theta - \\tan^2\\theta \\text{ simplifies to:}",
+      "choices": [
+        "1",
+        "0",
+        "\\sec\\theta",
+        "\\tan\\theta"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Cousin Pythagorean identity: $1 + \\tan^2\\theta = \\sec^2\\theta$.",
+        "Rearrange: $\\sec^2\\theta - \\tan^2\\theta = 1$."
+      ],
+      "explanation": "Rearranging the cousin Pythagorean identity $\\sec^2 = 1 + \\tan^2$: $\\sec^2\\theta - \\tan^2\\theta = 1$.",
+      "steps": [
+        "Recall the cousin identity: $1 + \\tan^2\\theta = \\sec^2\\theta$.",
+        "Subtract $\\tan^2\\theta$ from both sides: $$1 = \\sec^2\\theta - \\tan^2\\theta$$",
+        "So $\\sec^2\\theta - \\tan^2\\theta = 1$ for every $\\theta$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q14",
+      "type": "multiple-choice",
+      "promptTex": "\\cos(A - B) = ?",
+      "choices": [
+        "\\cos A \\cos B + \\sin A \\sin B",
+        "\\cos A \\cos B - \\sin A \\sin B",
+        "\\sin A \\cos B + \\cos A \\sin B",
+        "\\sin A \\cos B - \\cos A \\sin B"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Cosine difference has OPPOSITE sign inside vs outside.",
+        "Minus inside ↔ plus outside."
+      ],
+      "explanation": "$\\cos(A - B) = \\cos A \\cos B + \\sin A \\sin B$. Note: minus inside the cosine becomes PLUS outside (cosine sign rule is reversed compared to sine).",
+      "steps": [
+        "Cosine sum/difference identity rule: the sign **flips** between inside and outside.",
+        "Inside has $A - B$ (minus) → outside has $\\cos\\cos$ **plus** $\\sin\\sin$.",
+        "$$\\cos(A - B) = \\cos A \\cos B + \\sin A \\sin B$$",
+        "(For comparison: $\\cos(A + B) = \\cos A \\cos B - \\sin A \\sin B$ — flip side.)"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q15",
+      "type": "numeric",
+      "promptTex": "\\text{If } \\sin A = 3/5, \\cos A = 4/5, \\text{ find } \\sin(2A) \\\\ \\text{as a decimal.}",
+      "answer": 0.96,
+      "tolerance": 0.005,
+      "hints": [
+        "$\\sin(2A) = 2\\sin A \\cos A$.",
+        "$2 \\cdot (3/5) \\cdot (4/5) = 24/25$."
+      ],
+      "explanation": "$\\sin(2A) = 2 \\cdot \\tfrac{3}{5} \\cdot \\tfrac{4}{5} = \\tfrac{24}{25} = 0.96$.",
+      "steps": [
+        "Apply the sine double-angle: $$\\sin(2A) = 2\\sin A \\cos A$$",
+        "Substitute: $$\\sin(2A) = 2 \\cdot \\dfrac{3}{5} \\cdot \\dfrac{4}{5}$$",
+        "$$= \\dfrac{24}{25} = 0.96$$"
+      ],
+      "difficulty": "easy"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "title": "Parabolas (Conic Section)",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### A parabola as a slice of a cone",
+        "Slice a cone with a plane *parallel to the slant side* and you get a **parabola** — the same curve you've seen as the graph of $y = x^2$.",
+        "**Geometric definition.** A parabola is the set of points equidistant from a fixed point (the **focus**) and a fixed line (the **directrix**). That single defining property captures everything we need."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "conic-section",
+      "config": {
+        "mode": "parabola",
+        "p": 1
+      }
+    },
+    {
+      "type": "callout",
+      "title": "Standard form",
+      "body": "With vertex at the origin and parabola opening **upward**:\n\n$$x^2 = 4py$$\n\nor equivalently $y = \\dfrac{x^2}{4p}$.\n\nHere $p$ is the distance from the vertex to the focus (and also from the vertex to the directrix, in the opposite direction).\n\n**Focus:** $(0, p)$. **Directrix:** $y = -p$.\n\nFor a parabola opening sideways: swap $x$ and $y$ in the formula. With vertex at origin opening **right**: $y^2 = 4px$, focus $(p, 0)$, directrix $x = -p$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why is the directrix definition equivalent to the equation?",
+        "Take a point $(x, y)$ on the parabola.",
+        "**Distance to focus $(0, p)$:** $\\sqrt{x^2 + (y - p)^2}$.",
+        "**Distance to directrix $y = -p$:** $|y - (-p)| = |y + p|$.",
+        "Set them equal and square:",
+        "$x^2 + (y - p)^2 = (y + p)^2$",
+        "$x^2 + y^2 - 2py + p^2 = y^2 + 2py + p^2$",
+        "$x^2 = 4py$. ∎"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Vertex form (with arbitrary vertex)",
+      "body": "Shift the parabola to have vertex at $(h, k)$:\n\n$$(x - h)^2 = 4p(y - k)$$\n\nopens up ($p > 0$) or down ($p < 0$). Sideways version: $(y - k)^2 = 4p(x - h)$.\n\nIf you instead remember vertex form as $y = a(x - h)^2 + k$, then $a = 1/(4p)$. So $p = 1/(4a)$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example",
+        "Find focus and directrix of $y = (1/8)(x - 3)^2 + 2$.",
+        "**Standard vertex form:** $a = 1/8$, vertex $(h, k) = (3, 2)$.",
+        "**Find $p$ from $a = 1/(4p)$:** $p = 1/(4a) = 1/(4 \\cdot 1/8) = 2$.",
+        "**Focus** is $p$ units above the vertex (since $p > 0$, opens upward): $(3, 2 + 2) = (3, 4)$.",
+        "**Directrix** is $p$ units below the vertex: $y = 2 - 2 = 0$ (the x-axis)."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why parabolas show up in the real world",
+        "**Projectile motion.** Throw a ball; ignoring air resistance, its trajectory is a parabola (gravity is constant, so velocity changes linearly with time → height is quadratic in time).",
+        "**Satellite dishes & headlights.** A parabola has a **reflection property**: parallel rays coming in horizontally are reflected through the focus. That's how a parabolic dish concentrates radio waves at a receiver, and why a headlight bulb at the focus produces a parallel beam.",
+        "**Suspension bridges.** A cable hanging under uniform load along its length is a parabola. (A cable hanging from its own weight is a *catenary*, which looks similar but isn't a parabola.)",
+        "**Optics.** Parabolic mirrors focus light precisely at the focus — used in telescopes, solar cookers, and satellite communications."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Reflection property — why it's so useful",
+      "body": "A light ray (or sound wave, or radio wave) entering a parabola **parallel to its axis** bounces off the surface and passes through the **focus** — without exception, regardless of where on the parabola it hits.\n\nThis is what makes parabolic mirrors and dishes work: incoming parallel signals get focused to a point.\n\n*Proof of the reflection property* uses the directrix definition + the law of reflection (angle of incidence = angle of reflection). It's a beautiful result."
+    }
+  ]
+}

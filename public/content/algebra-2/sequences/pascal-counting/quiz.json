@@ -1,0 +1,135 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{How many distinct pizzas can you make from 6 toppings (any subset, including none)?}",
+      "answer": 64,
+      "tolerance": 0.001,
+      "hints": [
+        "Each topping is in or out. $2^6$.",
+        "$2^6 = 64$."
+      ],
+      "explanation": "$2^6 = 64$ — each of the 6 toppings is independently in or out.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{Number of grid paths from } (0,0) \\text{ to } (4, 3), \\text{ moving only right or up?}",
+      "answer": 35,
+      "tolerance": 0.001,
+      "hints": [
+        "Total moves: 7. Choose 3 of them to be 'up'.",
+        "$\\binom{7}{3} = 35$."
+      ],
+      "explanation": "7 total moves; $\\binom{7}{3} = 35$ ways to choose which 3 are 'up'.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** Total moves: 7. Choose 3 of them to be 'up'."
+        },
+        {
+          "text": "$\\binom{7}{3} = 35$."
+        },
+        {
+          "text": "**Solution.** 7 total moves; $\\binom{7}{3} = 35$ ways to choose which 3 are 'up'."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{Handshake count for 8 people, everyone shaking everyone else's hand once?}",
+      "answer": 28,
+      "tolerance": 0.001,
+      "hints": [
+        "$\\binom{8}{2}$ pairs.",
+        "$8 \\cdot 7 / 2 = 28$."
+      ],
+      "explanation": "$\\binom{8}{2} = 28$ pairs.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Number of binary strings of length 6 with exactly 2 ones?}",
+      "answer": 15,
+      "tolerance": 0.001,
+      "hints": [
+        "Choose 2 of the 6 positions for the 1s.",
+        "$\\binom{6}{2} = 15$."
+      ],
+      "explanation": "$\\binom{6}{2} = 15$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{Flip a fair coin 6 times. How many ways to get exactly 4 heads (sequences)?}",
+      "answer": 15,
+      "tolerance": 0.001,
+      "hints": [
+        "$\\binom{6}{4} = ?$",
+        "Same as $\\binom{6}{2} = 15$ (by symmetry)."
+      ],
+      "explanation": "$\\binom{6}{4} = 15$ (equal to $\\binom{6}{2}$ by symmetry).",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{Expand } (x + y)^5. \\text{ What is the coefficient of } x^2 y^3?",
+      "answer": 10,
+      "tolerance": 0.001,
+      "hints": [
+        "Binomial theorem: coefficient of $x^{5-k} y^k$ is $\\binom{5}{k}$. Here $k = 3$.",
+        "$\\binom{5}{3} = 10$."
+      ],
+      "explanation": "Coefficient is $\\binom{5}{3} = 10$. (Row 5 of Pascal: 1, 5, 10, 10, 5, 1.)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{Probability of exactly 3 heads in 5 fair-coin flips (round to 4 decimals)?}",
+      "answer": 0.3125,
+      "tolerance": 0.005,
+      "hints": [
+        "$\\binom{5}{3}/2^5 = 10/32$.",
+        "$10/32 = 0.3125$."
+      ],
+      "explanation": "$P = \\binom{5}{3}/2^5 = 10/32 = 5/16 = 0.3125$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** $\\binom{5}{3}/2^5 = 10/32$."
+        },
+        {
+          "text": "$10/32 = 0.3125$."
+        },
+        {
+          "text": "**Solution.** $P = \\binom{5}{3}/2^5 = 10/32 = 5/16 = 0.3125$."
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "prompt": "Why is the coefficient of $x^{n-k} y^k$ in $(x+y)^n$ equal to $\\binom{n}{k}$?",
+      "choices": [
+        "Because Pascal said so.",
+        "Because each term comes from choosing 'x' or 'y' from each of the $n$ factors, and the count of terms with exactly $k$ y's is the number of ways to choose those $k$ positions: $\\binom{n}{k}$.",
+        "Because of the quadratic formula.",
+        "Coincidence."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$(x+y)^n = (x+y)(x+y)\\cdots(x+y)$, $n$ factors.",
+        "Pick $y$ from $k$ of them."
+      ],
+      "explanation": "Each term is a string of choices ('x' or 'y') from each factor. Terms with exactly $k$ y's number $\\binom{n}{k}$ — the number of ways to pick which $k$ factors contribute $y$.",
+      "difficulty": "medium"
+    }
+  ]
+}

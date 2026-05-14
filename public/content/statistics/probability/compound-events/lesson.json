@@ -1,0 +1,135 @@
+{
+  "title": "Compound Events",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "When you have **two events** ($A$ and $B$), you can ask:",
+        "**$A$ AND $B$:** both happen. (Intersection.)",
+        "**$A$ OR $B$:** at least one happens. (Union.)",
+        "Computing these requires being careful about whether the events are **independent** or **mutually exclusive** — these are *different concepts* and easy to confuse."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. Independent Events — Multiply for AND"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Two events are **independent** if the outcome of one doesn't affect the other.",
+        "**Examples of independent events:** Flipping a coin twice. Rolling a die, then drawing a card.",
+        "**Examples of dependent events:** Drawing two cards from a deck *without replacement* (the first draw changes the second's probabilities)."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "P(A \\text{ and } B) = P(A) \\cdot P(B) \\quad (\\text{if independent})"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Example.** Flip a coin and roll a die.",
+        "$P(\\text{H and rolling 4}) = \\dfrac{1}{2} \\cdot \\dfrac{1}{6} = \\dfrac{1}{12}$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. Dependent Events"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "When events depend on each other, multiply the probability of $A$ by the probability of $B$ **given $A$ already happened**."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "P(A \\text{ and } B) = P(A) \\cdot P(B \\mid A)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Example — drawing without replacement.** A bag has 3 red and 5 blue marbles. Draw 2 without replacement.",
+        "$P(\\text{first red}) = 3/8$.",
+        "$P(\\text{second red} \\mid \\text{first red}) = 2/7$ (one red gone, one fewer marble total).",
+        "$P(\\text{both red}) = \\dfrac{3}{8} \\cdot \\dfrac{2}{7} = \\dfrac{6}{56} = \\dfrac{3}{28}$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "With vs without replacement",
+      "body": "**With replacement** = independent. The marble goes back, probabilities reset. **Without replacement** = dependent. Each draw shrinks the pool."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. Mutually Exclusive — Add for OR"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Two events are **mutually exclusive** (or **disjoint**) if they cannot both happen at the same time.",
+        "**Examples:** Rolling a 3 and rolling a 5 on the same die. Drawing a heart and drawing a spade in one draw."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "P(A \\text{ or } B) = P(A) + P(B) \\quad (\\text{if mutually exclusive})"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Example.** Roll one die. $P(\\text{2 or 5}) = 1/6 + 1/6 = 2/6 = 1/3$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. The General OR Rule"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "What if $A$ and $B$ *can* both happen? Then adding $P(A) + P(B)$ counts the overlap twice. Subtract it back:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "P(A \\text{ or } B) = P(A) + P(B) - P(A \\text{ and } B)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Example.** Draw one card from a 52-card deck.",
+        "$P(\\text{heart or face card}) = P(\\text{heart}) + P(\\text{face}) - P(\\text{heart and face})$",
+        "$= \\dfrac{13}{52} + \\dfrac{12}{52} - \\dfrac{3}{52} = \\dfrac{22}{52} = \\dfrac{11}{26}$.",
+        "(There are 3 face cards that are hearts: J, Q, K of hearts.)"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Mutually exclusive vs independent — DIFFERENT",
+      "body": "**Mutually exclusive:** can't both happen. $P(A \\text{ and } B) = 0$. Use for OR (just add). **Independent:** one doesn't affect the other. $P(A \\text{ and } B) = P(A) \\cdot P(B)$. Use for AND (multiply). Don't confuse them. In fact, two events with positive probability are mutually exclusive iff they're NOT independent."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — tree diagram",
+        "Flip a coin twice. List all outcomes and find $P(\\text{both heads})$ and $P(\\text{at least one tail})$.",
+        "**Tree:**",
+        "First flip: H or T (each 1/2).",
+        "Second flip: H or T (each 1/2).",
+        "Outcomes: HH, HT, TH, TT — each $\\dfrac{1}{2} \\cdot \\dfrac{1}{2} = \\dfrac{1}{4}$.",
+        "$P(\\text{both heads}) = P(HH) = 1/4$.",
+        "$P(\\text{at least one tail}) = 1 - P(HH) = 1 - 1/4 = 3/4$."
+      ]
+    }
+  ]
+}

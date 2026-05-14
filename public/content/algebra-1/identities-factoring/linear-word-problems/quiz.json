@@ -1,0 +1,326 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{The sum of two numbers is 30 and one is twice the other. Find the larger.}",
+      "answer": 20,
+      "tolerance": 0.001,
+      "hints": [
+        "Let smaller = $x$, then larger = $2x$. Sum: $3x = 30$.",
+        "$x = 10$, larger $= 20$."
+      ],
+      "explanation": "Smaller = 10, larger = 20. Sum = 30, ratio 2:1. ✓",
+      "steps": [
+        {
+          "text": "**Let the smaller number be $x$.** Then the larger is $2x$."
+        },
+        {
+          "math": "x + 2x = 30 \\;\\Longrightarrow\\; 3x = 30 \\;\\Longrightarrow\\; x = 10"
+        },
+        {
+          "text": "**Larger number $= 2x = 20$.**"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{The sum of three consecutive integers is } 87. \\text{ Find the smallest.}",
+      "answer": 28,
+      "tolerance": 0.001,
+      "hints": [
+        "Three consecutive: $n, n+1, n+2$.",
+        "$3n + 3 = 87 \\Rightarrow n = 28$."
+      ],
+      "explanation": "$n + (n+1) + (n+2) = 87 \\Rightarrow 3n + 3 = 87 \\Rightarrow n = 28$. (Trio: 28, 29, 30.)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{Father's age is 3 times son's. In 12 years, father will be twice son's age.} \\\\ \\text{Find son's present age.}",
+      "answer": 12,
+      "tolerance": 0.001,
+      "hints": [
+        "Son = $x$, father = $3x$. In 12 years: son = $x + 12$, father = $3x + 12$.",
+        "$3x + 12 = 2(x + 12) \\Rightarrow 3x + 12 = 2x + 24 \\Rightarrow x = 12$."
+      ],
+      "explanation": "Son = 12, father = 36. In 12 years: son = 24, father = 48 = 2 × 24. ✓",
+      "steps": [
+        {
+          "text": "**Set up.** Son's age = $x$. Father's age = $3x$."
+        },
+        {
+          "text": "**After 12 years:** son is $x + 12$, father is $3x + 12$."
+        },
+        {
+          "text": "**Equation** (father is twice son):"
+        },
+        {
+          "math": "3x + 12 = 2(x + 12) = 2x + 24"
+        },
+        {
+          "math": "x = 12"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Two-digit number: digit sum is 7, ten's digit exceeds units by 3.} \\\\ \\text{Find the number.}",
+      "answer": 52,
+      "tolerance": 0.001,
+      "hints": [
+        "Let units = $b$, tens = $b + 3$. Sum: $(b + 3) + b = 7$.",
+        "$b = 2$, tens $= 5$. Number: $52$."
+      ],
+      "explanation": "Tens = 5, units = 2 (sum 7, tens exceeds units by 3 ✓). Number: 52.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** Let units = $b$, tens = $b + 3$. Sum: $(b + 3) + b = 7$."
+        },
+        {
+          "text": "$b = 2$, tens $= 5$. Number: $52$."
+        },
+        {
+          "text": "**Solution.** Tens = 5, units = 2 (sum 7, tens exceeds units by 3 ✓). Number: 52."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{A bag has } 25 \\text{ coins of } \\$2 \\text{ and } \\$5 \\text{ totaling } \\$95. \\\\ \\text{How many } \\$5 \\text{ coins?}",
+      "answer": 15,
+      "tolerance": 0.001,
+      "hints": [
+        "Let \\$5 coins = $x$. \\$2 coins = $25 - x$.",
+        "$5x + 2(25 - x) = 95 \\Rightarrow 3x + 50 = 95 \\Rightarrow x = 15$."
+      ],
+      "explanation": "15 coins of \\$5 (= \\$75) + 10 coins of \\$2 (= \\$20) = \\$95. ✓",
+      "steps": [
+        {
+          "text": "**Let number of \\$5 coins be $x$.** Then \\$2 coins = $25 - x$."
+        },
+        {
+          "text": "**Value equation:**"
+        },
+        {
+          "math": "5x + 2(25 - x) = 95"
+        },
+        {
+          "math": "5x + 50 - 2x = 95 \\;\\Longrightarrow\\; 3x = 45 \\;\\Longrightarrow\\; x = 15"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{The denominator of a fraction is 4 more than the numerator. If 1 is added to both,} \\\\ \\text{the fraction becomes } 1/2. \\text{ Find the original numerator.}",
+      "answer": 3,
+      "tolerance": 0.001,
+      "hints": [
+        "Let numerator = $x$, denominator = $x + 4$. New: $\\dfrac{x + 1}{x + 5} = \\dfrac{1}{2}$.",
+        "Cross-multiply: $2(x + 1) = x + 5 \\Rightarrow x = 3$."
+      ],
+      "explanation": "Numerator = 3, denominator = 7. New fraction $4/8 = 1/2$ ✓.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** Let numerator = $x$, denominator = $x + 4$. New: $\\dfrac{x + 1}{x + 5} = \\dfrac{1}{2}$."
+        },
+        {
+          "text": "Cross-multiply: $2(x + 1) = x + 5 \\Rightarrow x = 3$."
+        },
+        {
+          "text": "**Solution.** Numerator = 3, denominator = 7. New fraction $4/8 = 1/2$ ✓."
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{Ages in ratio } 5:7. \\text{ After } 6 \\text{ years, ratio is } 3:4. \\\\ \\text{Find the present age of the younger.}",
+      "answer": 30,
+      "tolerance": 0.001,
+      "hints": [
+        "Let ages be $5k, 7k$. After 6 years: $\\dfrac{5k + 6}{7k + 6} = \\dfrac{3}{4}$.",
+        "$4(5k + 6) = 3(7k + 6) \\Rightarrow 20k + 24 = 21k + 18 \\Rightarrow k = 6$. Younger = $5 \\cdot 6 = 30$."
+      ],
+      "explanation": "$k = 6$, ages 30 and 42. After 6 years: 36 and 48 → $36/48 = 3/4$ ✓.",
+      "difficulty": "hard",
+      "steps": [
+        {
+          "text": "**Approach.** Let ages be $5k, 7k$. After 6 years: $\\dfrac{5k + 6}{7k + 6} = \\dfrac{3}{4}$."
+        },
+        {
+          "text": "$4(5k + 6) = 3(7k + 6) \\Rightarrow 20k + 24 = 21k + 18 \\Rightarrow k = 6$. Younger = $5 \\cdot 6 = 30$."
+        },
+        {
+          "text": "**Solution.** $k = 6$, ages 30 and 42. After 6 years: 36 and 48 → $36/48 = 3/4$ ✓."
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{Sum of digits of two-digit number is 8. If digits are reversed, new number is } 18 \\\\ \\text{less than original. Find the original number.}",
+      "answer": 53,
+      "tolerance": 0.001,
+      "hints": [
+        "Let tens digit = $a$, units = $b$. Original = $10a + b$, reverse = $10b + a$.",
+        "$a + b = 8$. $(10a + b) - (10b + a) = 18 \\Rightarrow 9a - 9b = 18 \\Rightarrow a - b = 2$.",
+        "Add: $2a = 10, a = 5$, $b = 3$. Number: 53."
+      ],
+      "explanation": "Tens 5, units 3. Original 53. Reverse 35. 53 - 35 = 18 ✓.",
+      "steps": [
+        {
+          "text": "**Variables.** Tens digit $a$, units $b$. Original number $= 10a + b$, reversed $= 10b + a$."
+        },
+        {
+          "text": "**Equation 1:** $a + b = 8$."
+        },
+        {
+          "text": "**Equation 2:**"
+        },
+        {
+          "math": "(10a + b) - (10b + a) = 18"
+        },
+        {
+          "math": "9a - 9b = 18 \\;\\Longrightarrow\\; a - b = 2"
+        },
+        {
+          "text": "**Solve.** Add the two equations: $2a = 10 \\Rightarrow a = 5$, $b = 3$. Original number: $53$."
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{When a number is multiplied by 3 and 8 is subtracted, the result is } 28. \\\\ \\text{Find the number.}",
+      "answer": 12,
+      "tolerance": 0.001,
+      "hints": [
+        "$3x - 8 = 28 \\Rightarrow 3x = 36 \\Rightarrow x = 12$.",
+        "Just one variable, one equation."
+      ],
+      "explanation": "$3x - 8 = 28 \\Rightarrow x = 12$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{The length of a rectangle is twice its width. Perimeter is } 60 \\text{ cm.} \\\\ \\text{Find the length (cm).}",
+      "answer": 20,
+      "tolerance": 0.001,
+      "hints": [
+        "Width $w$, length $2w$. Perimeter: $2(w + 2w) = 60 \\Rightarrow 6w = 60 \\Rightarrow w = 10$.",
+        "Length $= 2w = 20$."
+      ],
+      "explanation": "Width 10, length 20. Perimeter $= 2(10 + 20) = 60$ ✓.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{A man's monthly salary is } \\$40000. \\text{ He spends } 60\\% \\text{ on living, } 15\\% \\text{ on rent,} \\\\ \\text{and saves the rest. What does he save (in } \\$\\text{)?}",
+      "answer": 10000,
+      "tolerance": 0.001,
+      "hints": [
+        "Spent: $75\\%$. Saved: $25\\%$.",
+        "$25\\%$ of $40000 = \\$10000$."
+      ],
+      "explanation": "Saves $25\\%$ of $40000 = \\$10000$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\text{Sum of two numbers is } 55. \\text{ Difference is } 5. \\text{ Find the larger.}",
+      "answer": 30,
+      "tolerance": 0.001,
+      "hints": [
+        "$x + y = 55$, $x - y = 5$. Add: $2x = 60 \\Rightarrow x = 30$.",
+        "Then $y = 25$."
+      ],
+      "explanation": "$x = 30$, $y = 25$. Sum 55, difference 5 ✓.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q13",
+      "type": "numeric",
+      "promptTex": "\\text{An auto-rickshaw fare is } \\$20 \\text{ for first km plus } \\$10 \\text{ per additional km.} \\\\ \\text{If total fare is } \\$100, \\text{ how many km traveled?}",
+      "answer": 9,
+      "tolerance": 0.001,
+      "hints": [
+        "Let total km = $x$. Fare = $20 + 10(x - 1)$.",
+        "$20 + 10(x - 1) = 100 \\Rightarrow 10(x - 1) = 80 \\Rightarrow x - 1 = 8 \\Rightarrow x = 9$."
+      ],
+      "explanation": "Total fare = 20 (first km) + 10 · 8 (next 8 km) = 100. Total 9 km.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** Let total km = $x$. Fare = $20 + 10(x - 1)$."
+        },
+        {
+          "text": "$20 + 10(x - 1) = 100 \\Rightarrow 10(x - 1) = 80 \\Rightarrow x - 1 = 8 \\Rightarrow x = 9$."
+        },
+        {
+          "text": "**Solution.** Total fare = 20 (first km) + 10 · 8 (next 8 km) = 100. Total 9 km."
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "type": "numeric",
+      "promptTex": "\\text{In a class of } 40, \\text{ boys are } 8 \\text{ more than girls. Number of girls?}",
+      "answer": 16,
+      "tolerance": 0.001,
+      "hints": [
+        "Girls = $g$, boys = $g + 8$. Total: $2g + 8 = 40$.",
+        "$g = 16$."
+      ],
+      "explanation": "Girls 16, boys 24. Total 40, difference 8 ✓.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q15",
+      "type": "numeric",
+      "promptTex": "\\text{Tara is twice as old as her sister. Five years ago, sum of their ages was } 11. \\\\ \\text{Find Tara's present age.}",
+      "answer": 14,
+      "tolerance": 0.001,
+      "hints": [
+        "Sister now = $x$, Tara now = $2x$.",
+        "5 years ago: $(x - 5) + (2x - 5) = 11 \\Rightarrow 3x - 10 = 11 \\Rightarrow x = 7$. Tara = 14."
+      ],
+      "explanation": "Sister 7, Tara 14 now. Five years ago: 2 and 9, sum 11 ✓.",
+      "steps": [
+        {
+          "text": "**Variables.** Sister's age now = $x$, Tara now = $2x$."
+        },
+        {
+          "text": "**Five years ago:** sister was $x - 5$, Tara was $2x - 5$."
+        },
+        {
+          "text": "**Equation:**"
+        },
+        {
+          "math": "(x - 5) + (2x - 5) = 11"
+        },
+        {
+          "math": "3x - 10 = 11 \\;\\Longrightarrow\\; x = 7"
+        },
+        {
+          "text": "**Tara's present age $= 2x = 14$.**"
+        }
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

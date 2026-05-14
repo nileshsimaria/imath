@@ -1,0 +1,96 @@
+{
+  "title": "Optimization",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "**Optimization** problems ask: what's the best (largest, smallest, cheapest, fastest)? Calculus turns 'best' into 'where the derivative is zero.' These are some of the most useful applications of calculus."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. The Strategy"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Optimization recipe",
+      "body": "**1.** Identify what you want to maximize/minimize. **2.** Express it as a function of one variable (use any constraints to eliminate other variables). **3.** Find critical points: set the derivative equal to 0. **4.** Verify it's a max/min (use second derivative test or first derivative test). **5.** Answer the question."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. Worked example — fence problem"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "*A farmer has 100 ft of fencing to enclose a rectangular pen. What dimensions maximize the area?*",
+        "**Setup.** Let length $= L$, width $= W$. Area $A = LW$. Constraint (perimeter): $2L + 2W = 100$, so $L + W = 50$, so $L = 50 - W$.",
+        "**Express in one variable:** $A(W) = (50 - W)W = 50W - W^2$.",
+        "**Find critical points:** $A'(W) = 50 - 2W = 0 \\Rightarrow W = 25$.",
+        "**Verify max:** $A''(W) = -2 < 0$ → max ✓.",
+        "**Answer:** $W = 25$, $L = 25$. **A square pen.** Area $= 625$ sq ft.",
+        "**Insight:** for fixed perimeter, the rectangle of max area is a square. (And in general, for fixed perimeter shapes, the *circle* maximizes area.)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. Worked example — open-top box"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "*A 12 × 12 piece of cardboard has equal squares cut from each corner; the flaps fold up to form an open-top box. What size square gives maximum volume?*",
+        "**Setup.** Let $x$ = side of cut square. Box base: $(12 - 2x)$ × $(12 - 2x)$. Height: $x$.",
+        "$V(x) = x(12 - 2x)^2$.",
+        "**Critical points.** Let $u = 12 - 2x$, so $V = xu^2$. Use product/chain rules:",
+        "$V'(x) = (12 - 2x)^2 + x \\cdot 2(12 - 2x)(-2) = (12 - 2x)\\bigl[(12 - 2x) - 4x\\bigr] = (12 - 2x)(12 - 6x)$.",
+        "Set $= 0$: $x = 6$ (gives 0 volume — degenerate) or $x = 2$.",
+        "**Check:** $V(2) = 2 \\cdot 8^2 = 128$. So $x = 2$ gives max volume of 128 cubic units.",
+        "Box dimensions: $8 \\times 8 \\times 2$, volume $128$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. Worked example — closest point"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "*Find the point on the line $y = 2x + 1$ closest to the point $(0, 0)$.*",
+        "**Setup.** A point on the line: $(x, 2x + 1)$. Distance to origin:",
+        "$D = \\sqrt{x^2 + (2x + 1)^2}$.",
+        "**Trick:** minimize $D^2$ instead of $D$ — easier algebra, same minimizer.",
+        "$D^2 = x^2 + (2x + 1)^2 = x^2 + 4x^2 + 4x + 1 = 5x^2 + 4x + 1$.",
+        "$(D^2)' = 10x + 4 = 0 \\Rightarrow x = -2/5$.",
+        "**Closest point:** $(-2/5, 2(-2/5) + 1) = (-2/5, 1/5)$.",
+        "**Distance:** $\\sqrt{(-2/5)^2 + (1/5)^2} = \\sqrt{5/25} = 1/\\sqrt{5} \\approx 0.447$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Endpoints matter on closed intervals",
+      "body": "If the problem restricts to a closed interval $[a, b]$, the absolute max/min could occur at an endpoint, not just at a critical point. Always **check the endpoints** in addition to critical points."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — minimize cost",
+        "*A box with a square base and no top has volume 32 cubic feet. Cost: \\$4/sq ft for the base, \\$2/sq ft for the sides. Minimize cost.*",
+        "**Setup.** Side of base $s$, height $h$. Volume: $s^2 h = 32 \\Rightarrow h = 32/s^2$.",
+        "**Cost.** Base: $s^2 \\cdot 4 = 4s^2$. Sides (4 of them, each $s \\times h$): $4 \\cdot sh \\cdot 2 = 8sh = 8s \\cdot 32/s^2 = 256/s$.",
+        "$C(s) = 4s^2 + 256/s$.",
+        "**Differentiate:** $C'(s) = 8s - 256/s^2 = 0 \\Rightarrow 8s^3 = 256 \\Rightarrow s^3 = 32 \\Rightarrow s = \\sqrt[3]{32} \\approx 3.17$ ft.",
+        "**Check second derivative:** $C''(s) = 8 + 512/s^3 > 0$ → minimum.",
+        "Cost at the optimum: $C(\\sqrt[3]{32}) \\approx 4(10.08) + 256/3.17 \\approx 40.3 + 80.8 \\approx 121.1$ dollars."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,243 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "-7 + 3 = ?",
+      "answer": -4,
+      "tolerance": 0,
+      "hints": [
+        "Different signs: subtract magnitudes.",
+        "$|-7| - |3| = 4$. Use the sign of the bigger magnitude."
+      ],
+      "explanation": "Different signs, so we subtract magnitudes: $7 - 3 = 4$. The bigger magnitude was $-7$, so the answer is $-4$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "-5 - 8 = ?",
+      "answer": -13,
+      "tolerance": 0,
+      "hints": [
+        "Subtracting is adding the opposite: $-5 - 8 = -5 + (-8)$.",
+        "Same signs (both negative): add magnitudes."
+      ],
+      "explanation": "$-5 - 8 = -5 + (-8) = -13$. Both negative, so add magnitudes ($5 + 8 = 13$), keep the negative sign.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "9 - (-4) = ?",
+      "answer": 13,
+      "tolerance": 0,
+      "hints": [
+        "Subtracting a negative is the same as adding the positive.",
+        "$9 - (-4) = 9 + 4$."
+      ],
+      "explanation": "Two negatives in a row become a plus: $9 - (-4) = 9 + 4 = 13$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which expression equals } -3?",
+      "choices": [
+        "-10 + 7",
+        "10 - 13",
+        "-1 + (-2)",
+        "All of these"
+      ],
+      "answerIndex": 3,
+      "hints": [
+        "Compute each.",
+        "$-10 + 7 = -3$, $10 - 13 = -3$, $-1 + (-2) = -3$."
+      ],
+      "explanation": "All three equal $-3$. There are many ways to write the same integer.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{On a number line, starting at } 4 \\text{ and adding } -7 \\text{ moves you to:}",
+      "choices": [
+        "11",
+        "-3",
+        "3",
+        "-11"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Adding a negative moves you left.",
+        "$4 + (-7) = 4 - 7 = -3$."
+      ],
+      "explanation": "Starting at $4$ and moving $7$ steps left lands at $-3$. Or directly: $4 + (-7) = -3$.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Compute: } -8 - (-15) + (-3) - 7.",
+      "answer": -3,
+      "tolerance": 0,
+      "hints": [
+        "Subtracting a negative becomes adding a positive: $-8 - (-15) = -8 + 15$.",
+        "Now: $-8 + 15 + (-3) - 7 = ?$ Combine left to right."
+      ],
+      "explanation": "$-8 + 15 - 3 - 7 = 7 - 3 - 7 = -3$.",
+      "steps": [
+        "**Strategy: get rid of all 'subtract a negative' patterns first.** $- (- a) = + a$ — two negatives in a row collapse to a plus.",
+        "**Apply.** $-8 - (-15) = -8 + 15$.",
+        "**Rewrite the whole expression with no double-negatives.** $-8 + 15 + (-3) - 7 = -8 + 15 - 3 - 7$.",
+        "**Combine left to right.** $-8 + 15 = 7$. $7 - 3 = 4$. $4 - 7 = -3$.",
+        "**Answer: $-3$.**"
+      ],
+      "id": "q6",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Compute: } -(-(-12)) + |-7| - (-3).",
+      "answer": -2,
+      "tolerance": 0,
+      "hints": [
+        "Stack of negatives: $-(-(-12)) = -(12) = -12$.",
+        "$|-7| = 7$. Now $-12 + 7 - (-3) = -12 + 7 + 3$."
+      ],
+      "explanation": "$-(-(-12)) = -12$. $|-7| = 7$. $-(-3) = +3$. Total: $-12 + 7 + 3 = -2$.",
+      "steps": [
+        "**Strategy: simplify each piece BEFORE combining.** Three notations to resolve: nested negatives, absolute value, subtracting a negative.",
+        "**Nested negatives.** Count the negative signs: $-(-(-12))$ has 3 negatives. Odd number → net negative. So $-(-(-12)) = -12$. (Rule: an odd number of minus signs gives negative; even number gives positive.)",
+        "**Absolute value.** $|-7| = 7$. Absolute value strips the sign — always non-negative.",
+        "**Subtracting a negative.** $-(-3) = +3$.",
+        "**Combine.** $-12 + 7 + 3 = -2$."
+      ],
+      "id": "q7",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{The temperature dropped from } 12°\\text{F to } -8°\\text{F.} \\\\ \\text{What was the temperature change (as a signed number)?}",
+      "answer": -20,
+      "tolerance": 0,
+      "hints": [
+        "Change = final - initial.",
+        "$-8 - 12 = ?$"
+      ],
+      "explanation": "Change = final − initial = $-8 - 12 = -20$°F. The negative sign indicates a drop.",
+      "steps": [
+        "**Universal 'change' formula.** Change $=$ FINAL $-$ INITIAL. Always in that order — final first, initial second.",
+        "**Plug in.** Final $= -8$. Initial $= 12$.",
+        "**Compute.** $-8 - 12 = -20$°F.",
+        "**Interpret the sign.** NEGATIVE change = DECREASE. Temperature dropped by $20$°F.",
+        "**Sanity check direction.** Started at $12$ and ended below zero — clearly went DOWN. Negative answer matches. ✓"
+      ],
+      "id": "q8",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{An elevator starts at floor } -3 \\text{ (3 floors below ground).} \\\\ \\text{It goes up } 8 \\text{ floors, then down } 5, \\text{ then up } 2. \\\\ \\text{What floor does it end on?}",
+      "answer": 2,
+      "tolerance": 0,
+      "hints": [
+        "Add up the moves: $-3 + 8 - 5 + 2$.",
+        "Work left to right."
+      ],
+      "explanation": "$-3 + 8 - 5 + 2 = 5 - 5 + 2 = 2$. The elevator ends on floor 2.",
+      "steps": [
+        "**Translate words to signed numbers.** Start: $-3$. Up = positive; down = negative.",
+        "**Build the expression in order.** $-3 + 8 - 5 + 2$.",
+        "**Compute left to right.** $-3 + 8 = 5$. $5 - 5 = 0$. $0 + 2 = 2$.",
+        "**Answer: floor $2$.**",
+        "**Sanity check.** Net moves: $+8 - 5 + 2 = +5$ from starting floor $-3$. So final $= -3 + 5 = 2$ ✓."
+      ],
+      "id": "q9",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Find } x \\text{: } x + (-7) = -15.",
+      "answer": -8,
+      "tolerance": 0,
+      "hints": [
+        "Isolate $x$: add $7$ to both sides.",
+        "$x = -15 + 7$."
+      ],
+      "explanation": "$x = -15 + 7 = -8$.",
+      "steps": [
+        "**Goal: get $x$ alone on one side.** The $+(-7)$ is stuck to $x$; we must undo it.",
+        "**Undo by adding the opposite.** $-7$'s opposite is $+7$. Add $7$ to BOTH sides (keeps the equation balanced).",
+        "$x + (-7) + 7 = -15 + 7 \\Rightarrow x = -8$.",
+        "**Check.** Plug $x = -8$ back: $-8 + (-7) = -15$ ✓."
+      ],
+      "id": "q10",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which expression equals } 0?",
+      "choices": [
+        "-5 + 5",
+        "-5 - 5",
+        "-5 \\cdot 5",
+        "-5 + (-5)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Look for additive inverses (same number, opposite signs).",
+        "$-5 + 5 = ?$"
+      ],
+      "explanation": "$-5 + 5 = 0$ because $5$ and $-5$ are additive inverses. The other options give $-10$, $-25$, $-10$.",
+      "steps": [
+        "**Spot the additive-inverse pattern.** A number plus its OPPOSITE always equals 0. $-5 + 5 = 0$ ✓.",
+        "**Check the others to be sure.** $-5 - 5 = -10$. $-5 \\cdot 5 = -25$. $-5 + (-5) = -10$.",
+        "**Only option (a) is 0.**",
+        "**Lesson.** The number $a$ and its opposite $-a$ are called 'additive inverses'. Their sum is always $0$ — this is what 'opposite' means."
+      ],
+      "id": "q11",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Compute: } (-3) + (-7) + 12 + (-5) + 8 + (-1).",
+      "answer": 4,
+      "tolerance": 0,
+      "hints": [
+        "Group positives and negatives separately.",
+        "Negatives: $-3 - 7 - 5 - 1 = -16$. Positives: $12 + 8 = 20$. Then $20 + (-16)$."
+      ],
+      "explanation": "Negatives sum to $-16$; positives sum to $20$. Total: $20 - 16 = 4$.",
+      "steps": [
+        "**Strategy for long sums of signed numbers: GROUP by sign.** Avoids tracking signs term by term — much less error-prone.",
+        "**Sum positives.** $12 + 8 = 20$.",
+        "**Sum negatives (their magnitudes).** $3 + 7 + 5 + 1 = 16$, so negatives total $-16$.",
+        "**Combine.** $20 + (-16) = 20 - 16 = 4$.",
+        "**Lesson.** Addition is commutative — you can rearrange freely. Use this to gather likes."
+      ],
+      "id": "q12",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Find } y \\text{ if } -y - 13 = 4.",
+      "answer": -17,
+      "tolerance": 0,
+      "hints": [
+        "Add 13 to both sides: $-y = 17$.",
+        "Multiply both sides by $-1$ (or equivalently, take the opposite)."
+      ],
+      "explanation": "$-y - 13 = 4 \\Rightarrow -y = 17 \\Rightarrow y = -17$.",
+      "steps": [
+        "**Goal: isolate $y$.** Two things in the way: the $-13$ and the leading $-$ sign on $y$.",
+        "**Step 1: undo the $-13$ first.** Add 13 to both sides: $-y - 13 + 13 = 4 + 13 \\Rightarrow -y = 17$.",
+        "**Step 2: undo the negative sign on $y$.** Multiply both sides by $-1$ (equivalently, take the opposite of each side): $y = -17$.",
+        "**Check.** $-(-17) - 13 = 17 - 13 = 4$ ✓.",
+        "**Universal order.** To isolate a variable: undo addition/subtraction FIRST, then multiplication/division. (Reverse of the order of operations.)"
+      ],
+      "id": "q13",
+      "difficulty": "medium"
+    }
+  ]
+}

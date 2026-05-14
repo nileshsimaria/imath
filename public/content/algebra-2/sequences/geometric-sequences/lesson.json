@@ -1,0 +1,286 @@
+{
+  "title": "Geometric Sequences & Series",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "## 1. From Arithmetic to Geometric",
+        "Where arithmetic sequences **add** a fixed amount each step, **geometric sequences** *multiply* by a fixed amount each step. The fixed multiplier is called the **common ratio**, written $r$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Examples.** $2, 6, 18, 54, 162, \\ldots$ has $r = 3$ (each term is the previous one tripled). $80, 40, 20, 10, 5, \\ldots$ has $r = 0.5$ (each term is half the previous). $1, -2, 4, -8, 16, \\ldots$ has $r = -2$ (sign alternates because $r$ is negative)."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Try it — see the curve",
+        "Switch the widget below to **geometric** and slide $r$. Notice that the points form a *curve* (not a straight line). When $r > 1$ they grow exponentially; when $0 < r < 1$ they shrink toward zero; when $r < 0$ they alternate sign on each step."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "sequence",
+      "config": {
+        "mode": "geometric",
+        "a1": 1,
+        "r": 2,
+        "n": 8,
+        "showModeTabs": true
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Recursive vs explicit form",
+        "**Recursive form:**",
+        "$$a_1 = \\text{(some value)}, \\qquad a_n = r \\cdot a_{n-1}$$",
+        "**Explicit form:**"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "a_n = a_1 \\cdot r^{\\,n - 1}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "To go from $a_1$ to $a_n$, multiply by $r$ exactly $n - 1$ times. Same shape as the arithmetic explicit formula, but with multiplication and an exponent instead of addition and a coefficient."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 1 — find a far-out term",
+        "Find $a_8$ for $3, 6, 12, 24, \\ldots$",
+        "**Identify.** $a_1 = 3$, $r = 2$.",
+        "**Apply.** $a_8 = 3 \\cdot 2^{8 - 1} = 3 \\cdot 128 = 384$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 2 — find missing parameters",
+        "If $a_2 = 6$ and $a_5 = 162$, find $a_1$ and $r$.",
+        "**Find $r$ first.** Going from term 2 to term 5 takes **3 multiplications** by $r$:",
+        "$$\\dfrac{a_5}{a_2} = r^3 \\Rightarrow \\dfrac{162}{6} = 27 = r^3 \\Rightarrow r = 3$$",
+        "**Find $a_1$.** $a_2 = a_1 \\cdot r \\Rightarrow 6 = 3 a_1 \\Rightarrow a_1 = 2$.",
+        "Sequence: $2, 6, 18, 54, 162, \\ldots$"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. Geometric Series — the Sum",
+        "A **geometric series** is the sum of terms of a geometric sequence. The closed-form formula:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\boxed{\\;S_n = a_1 \\cdot \\dfrac{1 - r^n}{1 - r}\\;}\\quad (r \\neq 1)"
+    },
+    {
+      "type": "callout",
+      "title": "Where the formula comes from (worth reading once)",
+      "body": "Let $S = a_1 + a_1 r + a_1 r^2 + \\cdots + a_1 r^{n-1}$. Multiply both sides by $r$: $rS = a_1 r + a_1 r^2 + \\cdots + a_1 r^n$. Subtract: $S - rS = a_1 - a_1 r^n$ (most terms cancel down the middle), giving $S(1 - r) = a_1(1 - r^n)$, hence the formula. The cancellation 'telescope' is the heart of the trick."
+    },
+    {
+      "type": "text",
+      "md": [
+        "When $r = 1$, every term equals $a_1$, so the sum is just $S_n = n \\cdot a_1$. (The formula above has $0/0$ in this case, which is why we need the special case.)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 3 — direct computation",
+        "Sum: $1 + 2 + 4 + 8 + 16 + 32$. ($a_1 = 1$, $r = 2$, $n = 6$)",
+        "$$S = 1 \\cdot \\dfrac{1 - 2^6}{1 - 2} = \\dfrac{1 - 64}{-1} = 63$$",
+        "Check: $1 + 2 + 4 + 8 + 16 + 32 = 63$ ✓.",
+        "**Note:** $S_n = 2^n - 1$ for the doubling-from-1 case. So $1 + 2 + 4 + \\cdots + 2^{n-1} = 2^n - 1$. Useful identity."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 4 — first 10 terms of $3, 6, 12, \\ldots$",
+        "$a_1 = 3$, $r = 2$, $n = 10$.",
+        "$$S_{10} = 3 \\cdot \\dfrac{1 - 2^{10}}{1 - 2} = 3 \\cdot \\dfrac{1 - 1024}{-1} = 3 \\cdot 1023 = 3069$$"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 5 — sigma form",
+        "Compute $\\displaystyle \\sum_{k=1}^{8} 5 \\cdot 3^{k-1}$.",
+        "Recognize as a geometric series with $a_1 = 5$, $r = 3$, $n = 8$.",
+        "$$S_8 = 5 \\cdot \\dfrac{1 - 3^8}{1 - 3} = 5 \\cdot \\dfrac{1 - 6561}{-2} = 5 \\cdot \\dfrac{6560}{2} = 5 \\cdot 3280 = 16400$$"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. Infinite Series — When the Sum is Finite",
+        "What if the series goes on forever? Sometimes you get a finite total; sometimes the sum runs off to infinity. Geometric series are the cleanest case where this 'infinite sum' question has a satisfying answer."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The key insight",
+        "Look at the formula $S_n = a_1 \\cdot \\dfrac{1 - r^n}{1 - r}$. As $n \\to \\infty$, what happens to $r^n$?",
+        "**If $|r| < 1$**, then $r^n \\to 0$ (the powers shrink). The formula approaches $\\dfrac{a_1}{1 - r}$ — a finite number.",
+        "**If $|r| \\geq 1$**, then $r^n$ doesn't shrink (it grows or oscillates). The partial sums $S_n$ never settle to a finite value."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\boxed{\\;S_\\infty = \\dfrac{a_1}{1 - r}\\;}\\quad (\\text{only if } |r| < 1)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 6 — Zeno's paradox",
+        "Achilles is racing a tortoise. Each second, he covers half the remaining distance. Does he ever catch up?",
+        "Distance covered: $\\dfrac{1}{2} + \\dfrac{1}{4} + \\dfrac{1}{8} + \\dfrac{1}{16} + \\cdots$",
+        "Geometric series, $a_1 = \\dfrac{1}{2}$, $r = \\dfrac{1}{2}$. Sum:",
+        "$$S_\\infty = \\dfrac{1/2}{1 - 1/2} = \\dfrac{1/2}{1/2} = 1$$",
+        "Yes — the infinite stack of half-steps adds up to a full step. Zeno's paradox dissolves."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 7 — repeating decimals as geometric series",
+        "What rational number is $0.\\overline{3} = 0.333\\overline{3}\\ldots$?",
+        "Write it out: $0.\\overline{3} = 0.3 + 0.03 + 0.003 + \\cdots$",
+        "Geometric with $a_1 = 0.3$ and $r = 0.1$. So:",
+        "$$S_\\infty = \\dfrac{0.3}{1 - 0.1} = \\dfrac{0.3}{0.9} = \\dfrac{1}{3}$$",
+        "**General rule:** any repeating decimal is a geometric series in disguise, and so is rational. Try $0.\\overline{27} = \\dfrac{27}{99} = \\dfrac{3}{11}$ as another exercise."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Convergence summary",
+      "body": "**$|r| < 1$:** infinite sum converges to $\\dfrac{a_1}{1 - r}$. **$|r| > 1$:** terms grow without bound, sum diverges to $\\pm\\infty$. **$r = 1$:** every term is $a_1$, sum diverges (unless $a_1 = 0$). **$r = -1$:** terms alternate $a_1, -a_1, a_1, -a_1, \\ldots$, partial sums oscillate, sum diverges."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### What about a *finite* but enormous sum?",
+        "Even when $|r| > 1$, you can still compute a *finite* partial sum $S_n$ for any specific $n$. Example: $S_{20}$ for $1 + 2 + 4 + 8 + \\cdots$ is $2^{20} - 1 = 1{,}048{,}575$. Big but finite. The 'divergence' only matters when you let $n \\to \\infty$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Arithmetic vs geometric — quick decision",
+      "body": "Compute consecutive **differences** *and* consecutive **ratios**. **Differences equal → arithmetic.** **Ratios equal → geometric.** Some sequences are neither (e.g., squares: $1, 4, 9, 16, \\ldots$ has neither constant difference nor constant ratio)."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. Where Geometric Series Show Up",
+        "**Compound interest.** $A = P(1 + r)^t$ — yearly balances form a geometric sequence with common ratio $1 + r$.",
+        "**Population / radioactive decay.** Multiplicative change per period (e.g., half-life: $r = \\tfrac{1}{2}$).",
+        "**Annuities & present value.** Future payments discounted year by year form a geometric series.",
+        "**Bouncing balls.** A ball that returns to a fraction $r$ of its previous height has bounce-heights forming a geometric sequence — and the *total distance* traveled before rest is a geometric series.",
+        "**Fractals.** Self-similar shapes (Koch snowflake, Sierpinski triangle) have areas/perimeters that come out as geometric series."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 8 — present value of an annuity",
+        "You will receive $\\$1000$ at the end of each of the next $10$ years. The discount rate is $5\\%$ per year. What is the present value (today's worth)?",
+        "Each payment is worth less today: the payment $t$ years from now is worth $\\dfrac{1000}{1.05^t}$ today. Total PV:",
+        "$$\\text{PV} = \\sum_{t=1}^{10} \\dfrac{1000}{1.05^{\\,t}} = 1000 \\sum_{t=1}^{10} (1.05)^{-t}$$",
+        "This is a geometric series with $a_1 = \\tfrac{1}{1.05} \\approx 0.9524$, $r = \\tfrac{1}{1.05}$, $n = 10$. Plugging into the formula gives PV $\\approx \\$7721.73$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 5. Multipliers, Growth Factors & Decay Factors"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "When a quantity is repeatedly **multiplied** by some number each step, that number has a name depending on whether it grows or shrinks the quantity.",
+        "**Growth factor** ($r > 1$): each step multiplies the quantity by $r$, making it bigger. A 5% annual growth rate has growth factor $1.05$ (the original 100% plus 5% more).",
+        "**Decay factor** ($0 < r < 1$): each step multiplies by $r$, making it smaller. A radioactive sample with a 10-year half-life has decay factor $\\tfrac{1}{2}$ per 10-year span.",
+        "Both situations produce a **geometric sequence** with common ratio $r$. The terminology just emphasizes which way the values are heading."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Quick conversions",
+      "body": "**Growth rate $p\\%$ → growth factor $1 + p/100$.** Example: 8% growth → factor 1.08. **Decay rate $p\\%$ → decay factor $1 - p/100$.** Example: 30% decay → factor 0.70 (the quantity *keeps* 70% each step). Don't mix these up — a common mistake is multiplying by $0.30$ instead of $0.70$ for 30% decay."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 9 — population growth as a multiplier",
+        "A town of $10{,}000$ grows by $3\\%$ per year. Population after $n$ years?",
+        "Growth factor: $1.03$. Yearly populations form a geometric sequence with $a_1 = 10{,}000$ (year 0) and $r = 1.03$.",
+        "Population after $n$ years: $$P_n = 10{,}000 \\cdot 1.03^{\\,n}$$",
+        "After $20$ years: $10{,}000 \\cdot 1.03^{20} \\approx 10{,}000 \\cdot 1.806 \\approx 18{,}060$. The town nearly doubles in 20 years."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 10 — exponential decay (medication in bloodstream)",
+        "A patient takes a $200$-mg dose of medication. The body eliminates $25\\%$ of the remaining drug every hour. How much is left after $n$ hours?",
+        "Each hour the body **keeps** $75\\%$ of the previous amount. Decay factor: $0.75$.",
+        "$$A_n = 200 \\cdot 0.75^{\\,n}$$",
+        "After 5 hours: $200 \\cdot 0.75^5 \\approx 200 \\cdot 0.2373 \\approx 47.5$ mg remaining."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 6. Rebound Ratios & The Bouncing Ball"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "A **bouncing ball** is the textbook example of a geometric decay sequence — concrete, visual, and easy to measure.",
+        "**Rebound ratio** $r$: the height a ball returns to after a bounce, divided by the height from which it was dropped (or the previous bounce height). For a real tennis ball on a hard floor, $r$ is typically around $0.55$–$0.60$. A super-bouncy 'high-bounce' rubber ball can hit $r \\approx 0.90$. A piece of clay (no bounce): $r = 0$.",
+        "If you drop the ball from height $h_0$, the bounce heights form a geometric sequence:",
+        "$$h_0,\\; r h_0,\\; r^2 h_0,\\; r^3 h_0,\\; \\ldots$$",
+        "Each term is the previous height times $r$ — a clean geometric decay."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 11 — total vertical distance traveled",
+        "A ball is dropped from $h_0 = 10$ m with rebound ratio $r = 0.6$. What total vertical distance does it travel before coming to rest?",
+        "**Initial drop:** 10 m down.",
+        "**Each bounce after that:** the ball rises to height $r^k h_0$, then falls the same distance — so it travels $2 r^k h_0$ on bounce $k$.",
+        "**Total bounce distance** (geometric series with $a_1 = 0.6 \\cdot 10 = 6$, $r = 0.6$):",
+        "$$2 \\cdot \\dfrac{6}{1 - 0.6} = 2 \\cdot 15 = 30 \\text{ m}$$",
+        "**Total distance:** initial drop + bouncing = $10 + 30 = 40$ m. The infinite series of bounces sums to a finite distance because $|r| < 1$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 12 — finding the rebound ratio from data",
+        "A ball is dropped from $2.0$ m and bounces to $1.4$ m on its first bounce. What is its rebound ratio? What height does it reach on the third bounce?",
+        "**Rebound ratio:** $r = \\dfrac{1.4}{2.0} = 0.7$.",
+        "**Third bounce:** $h_3 = 2.0 \\cdot 0.7^3 = 2.0 \\cdot 0.343 = 0.686$ m, or about $69$ cm."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "**Sequence:** each term = previous × $r$. **Recursive:** $a_n = r \\cdot a_{n-1}$. **Explicit:** $a_n = a_1 \\cdot r^{\\,n-1}$. **Finite sum:** $S_n = a_1 \\cdot \\dfrac{1 - r^n}{1 - r}$ ($r \\neq 1$). **Infinite sum (only if $|r| < 1$):** $S_\\infty = \\dfrac{a_1}{1 - r}$."
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "title": "Sine's Derivative — and the Equation That Makes Waves",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "You probably know already:",
+        "$\\dfrac{d(\\sin \\theta)}{d\\theta} = \\cos \\theta$",
+        "Most textbooks state this as a formula to memorize. **But where does it come from?** And — more importantly — why does this single fact explain why springs vibrate, strings ring, currents oscillate, and light propagates as a wave?",
+        "Thompson's *Calculus Made Easy* gives a geometric proof in three short steps. Then a one-paragraph observation reveals why sine/cosine are not just two functions in a long list — they are the **unique** functions that make oscillation possible."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Prerequisite — one trig identity",
+      "body": "From any trig textbook (sum-to-product):\n\n$\\sin M - \\sin N = 2 \\cos\\!\\left(\\dfrac{M+N}{2}\\right) \\cdot \\sin\\!\\left(\\dfrac{M-N}{2}\\right)$\n\nWe'll use this once and then drop it. If you haven't met it before, accept it on faith — it's a consequence of the angle-addition formulas."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. Differentiating sine — geometrically",
+        "Let $y = \\sin \\theta$. We want $dy / d\\theta$ — the *little bit of $y$* per *little bit of $\\theta$*. As $\\theta$ increases by a small angle $d\\theta$, the height $y$ changes by",
+        "$dy = \\sin(\\theta + d\\theta) - \\sin\\theta$",
+        "Apply the sum-to-product identity with $M = \\theta + d\\theta$ and $N = \\theta$:",
+        "$dy = 2 \\cos\\!\\left(\\theta + \\tfrac{1}{2}d\\theta\\right) \\cdot \\sin\\!\\left(\\tfrac{1}{2}d\\theta\\right)$",
+        "Now **two simplifications** that are valid when $d\\theta$ is tiny:",
+        "**(a)** Inside the cosine, $\\theta + \\tfrac{1}{2}d\\theta$ is essentially just $\\theta$ (the $d\\theta/2$ correction is vanishingly small). So $\\cos(\\theta + \\tfrac{1}{2}d\\theta) \\approx \\cos\\theta$.",
+        "**(b)** For tiny angles, $\\sin x \\approx x$ (in radians). This is the **small-angle approximation** — geometrically, when the angle is small, the sine and the arc are indistinguishable. So $\\sin(\\tfrac{1}{2}d\\theta) \\approx \\tfrac{1}{2}d\\theta$.",
+        "Substituting both:",
+        "$dy \\approx 2 \\cos\\theta \\cdot \\tfrac{1}{2}d\\theta = \\cos\\theta \\cdot d\\theta$",
+        "Divide by $d\\theta$:",
+        "$\\boxed{\\;\\dfrac{dy}{d\\theta} = \\cos\\theta\\;}$"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "What just happened",
+      "body": "We used the same kind of \"drop the second-order small\" reasoning that powered the growing-square derivation of $d(x^2)/dx = 2x$. The pattern is: write the increment exactly, then drop everything that contains $(d\\theta)^2$ or higher.\n\nThe small-angle approximation $\\sin(d\\theta) \\approx d\\theta$ is actually a statement that the difference is $O((d\\theta)^3)$ — third-order small. It's not 'cheating'; it's a clean limit."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. Cosine falls out as a bonus",
+        "Use the identity $\\cos\\theta = \\sin(\\tfrac{\\pi}{2} - \\theta)$ and apply the chain rule:",
+        "$\\dfrac{d(\\cos\\theta)}{d\\theta} = \\dfrac{d}{d\\theta}\\sin\\!\\left(\\tfrac{\\pi}{2} - \\theta\\right) = \\cos\\!\\left(\\tfrac{\\pi}{2} - \\theta\\right) \\cdot (-1) = -\\sin\\theta$",
+        "$\\boxed{\\;\\dfrac{d(\\cos\\theta)}{d\\theta} = -\\sin\\theta\\;}$",
+        "Same shape, sign flipped. **Cosine starts at 1 and decreases**; sine starts at 0 and increases. That sign difference is encoded in the derivatives.",
+        "And by the quotient rule on $\\tan\\theta = \\sin\\theta / \\cos\\theta$ you can show $\\dfrac{d(\\tan\\theta)}{d\\theta} = \\sec^2\\theta$. (Try it as an exercise.)"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Important: all of this assumes radians",
+      "body": "The small-angle approximation $\\sin x \\approx x$ is only true if $x$ is measured in **radians**. If you plug degrees into these derivative formulas, you'll be wrong by a factor of $\\pi / 180 \\approx 0.0175$.\n\nThis is *why* calculus uses radians by default. Radians are the natural unit where derivative formulas come out clean — degrees are an arbitrary historical choice (360 ≈ days in a year, roughly)."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. The most consequential observation in elementary calculus",
+        "Differentiate sine twice:",
+        "$\\sin\\theta \\xrightarrow{\\ d/d\\theta\\ } \\cos\\theta \\xrightarrow{\\ d/d\\theta\\ } -\\sin\\theta$",
+        "Differentiating twice gives back the **same function with a minus sign**. In symbols:",
+        "$\\dfrac{d^2(\\sin\\theta)}{d\\theta^2} = -\\sin\\theta$",
+        "Same for cosine. Together: sine and cosine are functions $y$ that satisfy",
+        "$\\dfrac{d^2 y}{d\\theta^2} = -y$",
+        "And — astonishingly — they are the **only** functions (up to multiplier and shift) with this property."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "What \"$y'' = -y$\" describes",
+      "body": "Reading the equation aloud: *\"the acceleration of $y$ is proportional to $y$ itself, but pulling the OPPOSITE way.\"*\n\nThis is the equation of a **restoring force**. A mass on a spring: the further you stretch it, the harder the spring pulls *back*. Push a pendulum off vertical: gravity pulls it *back*. Squeeze a wave on a string: tension snaps it *back*. \n\nAll of these obey $y'' = -ky$. And the solutions are *always* sines and cosines (or combinations of them). That is why oscillation is sinusoidal — not because of some quirk, but because the only functions whose second derivative is proportional to *minus themselves* are sines and cosines."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### See it move",
+        "The widget below animates a mass-on-spring undergoing simple harmonic motion: $y(t) = A \\sin(\\omega t)$. Watch the three curves track in lockstep — position (blue, solid), velocity (green, dashed), acceleration (red, dashed). Notice:",
+        "**(a) Velocity peaks when position is ZERO** (mass passing through equilibrium at full speed).",
+        "**(b) Acceleration peaks when position is at the EXTREMES $\\pm A$** (maximum restoring force).",
+        "**(c) Acceleration and position are MIRROR IMAGES (negatives of each other, rescaled).** That's the visual proof of $y'' = -\\omega^2 \\, y$ — the SHM equation in action.",
+        "Slide the amplitude $A$ and frequency $\\omega$ — see how the period, max speed, and max acceleration change."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "shm",
+      "config": { "amplitude": 1, "omega": 2 }
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. The leap from oscillation to waves",
+        "If oscillations propagate in space — a wave on a string, an electromagnetic wave in vacuum — you upgrade to the **wave equation**:",
+        "$\\dfrac{\\partial^2 y}{\\partial t^2} = v^2 \\dfrac{\\partial^2 y}{\\partial x^2}$",
+        "where $v$ is the wave speed. The simplest solution is $y(x, t) = \\sin(kx - \\omega t)$ — a traveling sine wave. **Same sine; same property; bigger stage.**",
+        "Try it: substitute $y = \\sin(kx - \\omega t)$. The left side gives $-\\omega^2 \\sin(kx - \\omega t)$. The right side gives $-v^2 k^2 \\sin(kx - \\omega t)$. The equation is satisfied iff $\\omega = vk$ — the **dispersion relation** that ties wavelength to frequency in every wave you've ever met.",
+        "From sound to light to ocean swells to your phone's WiFi signal — the substrate is different but the math is the same equation, with the same sine solutions, for the same reason: $\\dfrac{d^2}{d\\theta^2}(\\sin\\theta) = -\\sin\\theta$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 5. Working derivatives — a small table",
+        "$\\dfrac{d}{d\\theta}(\\sin\\theta) = \\cos\\theta$",
+        "$\\dfrac{d}{d\\theta}(\\cos\\theta) = -\\sin\\theta$",
+        "$\\dfrac{d}{d\\theta}(\\tan\\theta) = \\sec^2\\theta$",
+        "$\\dfrac{d}{d\\theta}(\\sin(k\\theta)) = k \\cos(k\\theta)$ &nbsp;&nbsp;*(chain rule)*",
+        "$\\dfrac{d}{d\\theta}(\\sin^2\\theta) = 2\\sin\\theta\\cos\\theta = \\sin(2\\theta)$",
+        "These are the workhorses. You can derive the rest (sec, csc, cot, etc.) using the product/quotient/chain rules."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The summary",
+      "body": "Differentiating sine gives cosine — proven from the sum-to-product identity plus the small-angle approximation, no harder than algebra.\n\nDifferentiating sine *twice* gives back $-\\sin\\theta$. That property is unique to sines and cosines, and is the reason every oscillating thing in nature traces a sine wave: springs, pendulums, AC current, vibrating strings, light. \n\nWhen you study differential equations later, you'll see the equation $y'' + \\omega^2 y = 0$ has $y = A\\sin(\\omega t) + B\\cos(\\omega t)$ as its general solution. Now you know *why*."
+    }
+  ]
+}

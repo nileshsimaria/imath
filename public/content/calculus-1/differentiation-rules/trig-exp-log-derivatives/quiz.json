@@ -1,0 +1,286 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{d}{dx}\\sin x = ?",
+      "choices": [
+        "\\cos x",
+        "-\\cos x",
+        "-\\sin x",
+        "\\tan x"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Memorize: derivative of sine is cosine.",
+        "$\\cos x$."
+      ],
+      "explanation": "$\\frac{d}{dx} \\sin x = \\cos x$.",
+      "steps": [
+        "**Foundational derivative.** $\\dfrac{d}{dx}(\\sin x) = \\cos x$. Memorize.",
+        "**Always assumes RADIANS.** Degrees mess this up by a factor of $\\pi/180$ — see the *sine-derivative-and-waves* lesson for the derivation."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{d}{dx}\\cos x = ?",
+      "choices": [
+        "\\sin x",
+        "-\\sin x",
+        "-\\cos x",
+        "\\sec^2 x"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "The 'co' version gets a minus.",
+        "$-\\sin x$."
+      ],
+      "explanation": "$\\frac{d}{dx}\\cos x = -\\sin x$.",
+      "steps": [
+        "**Cosine's derivative has a MINUS sign.** $\\dfrac{d}{dx}(\\cos x) = -\\sin x$. Don't forget it.",
+        "**Memory aid.** All 'co'-named trig functions (cosine, cotangent, cosecant) have NEGATIVE derivatives. The non-co versions (sine, tangent, secant) have positive ones."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{d}{dx}\\tan x = ?",
+      "choices": [
+        "\\sec^2 x",
+        "\\sec x \\tan x",
+        "-\\csc^2 x",
+        "1/\\cos x"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Standard: $\\sec^2 x$.",
+        ""
+      ],
+      "explanation": "$\\frac{d}{dx}\\tan x = \\sec^2 x$.",
+      "steps": [
+        "**Memorize:** $\\dfrac{d}{dx}(\\tan x) = \\sec^2 x$.",
+        "**Derivation (in case you forget).** $\\tan x = \\sin x / \\cos x$. Quotient rule: $\\dfrac{\\cos x \\cos x - \\sin x (-\\sin x)}{\\cos^2 x} = \\dfrac{\\cos^2 x + \\sin^2 x}{\\cos^2 x} = \\dfrac{1}{\\cos^2 x} = \\sec^2 x$.",
+        "**Pythagorean identity in disguise.** The numerator collapsing to 1 uses $\\sin^2 + \\cos^2 = 1$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{d}{dx}\\,e^x = ?",
+      "choices": [
+        "e^x",
+        "x e^{x-1}",
+        "1",
+        "\\ln(x)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "The exponential is its own derivative.",
+        "$e^x$."
+      ],
+      "explanation": "$\\frac{d}{dx} e^x = e^x$ — the unique function (up to scale) that equals its own derivative.",
+      "steps": [
+        "**The most-loved derivative in calculus:** $\\dfrac{d}{dx}(e^x) = e^x$.",
+        "**Self-derivative.** $e^x$ is the UNIQUE function (up to a constant multiplier) that equals its own derivative. This is what makes $e$ uniquely 'natural'.",
+        "**Why option (b) is wrong.** That's the rule for $\\dfrac{d}{dx}(x^n) = n x^{n-1}$ — power rule for a CONSTANT base. $e^x$ has a constant in the BASE position and the variable in the EXPONENT, so the power rule doesn't apply."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{d}{dx}\\ln x = ?",
+      "choices": [
+        "\\dfrac{1}{x}",
+        "\\dfrac{1}{\\ln x}",
+        "x",
+        "e^x"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Memorize: derivative of natural log is 1/x.",
+        "(Only valid for $x > 0$.)"
+      ],
+      "explanation": "$\\frac{d}{dx}\\ln x = \\frac{1}{x}$ (for $x > 0$).",
+      "steps": [
+        "**Foundational derivative.** $\\dfrac{d}{dx}(\\ln x) = \\dfrac{1}{x}$ for $x > 0$.",
+        "**Beautiful symmetry.** The power rule's antiderivative formula $\\int x^n\\,dx = \\dfrac{x^{n+1}}{n+1}$ FAILS at $n = -1$. The natural log fills this gap: $\\int \\dfrac{1}{x}\\,dx = \\ln|x| + C$. The two formulas are partners covering the whole power family."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{d}{dx}\\,2^x = ?",
+      "choices": [
+        "2^x \\ln 2",
+        "x \\cdot 2^{x-1}",
+        "2^x",
+        "2 \\ln(x)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "For other bases: pick up a $\\ln a$ factor.",
+        "$2^x \\ln 2$."
+      ],
+      "explanation": "$\\frac{d}{dx} a^x = a^x \\ln a$. For $a = 2$: $2^x \\ln 2$.",
+      "steps": [
+        "**Generalization to other bases.** $\\dfrac{d}{dx}(a^x) = a^x \\ln a$. The extra $\\ln a$ factor is the 'penalty' for using a base other than $e$.",
+        "**Derivation.** $a^x = e^{x \\ln a}$. Chain rule: $\\dfrac{d}{dx}(e^{x \\ln a}) = e^{x \\ln a} \\cdot \\ln a = a^x \\ln a$. (The $\\ln a$ comes directly from the chain rule.)",
+        "**Apply with $a = 2$.** Derivative is $2^x \\ln 2$. (For $a = e$: $\\ln e = 1$ — the extra factor disappears. THAT is what makes $e$ uniquely 'natural'.)"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{d}{dx}\\sin(5x) = ?",
+      "choices": [
+        "5\\cos(5x)",
+        "\\cos(5x)",
+        "5\\sin(5x)",
+        "\\cos(5)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Chain rule: outer $\\sin$ → $\\cos$, inner $5x$ → $5$.",
+        "$\\cos(5x) \\cdot 5 = 5\\cos(5x)$."
+      ],
+      "explanation": "$\\cos(5x) \\cdot 5 = 5\\cos(5x)$.",
+      "steps": [
+        "**Pattern: $\\sin(kx)$ → $k \\cos(kx)$.** Chain rule with the coefficient $k$ popping out front.",
+        "**Apply with $k = 5$.** $\\sin(5x) \\to 5\\cos(5x)$.",
+        "**Intuition.** $\\sin(5x)$ oscillates 5 times faster than $\\sin x$, so slopes are 5 times steeper. The factor of 5 records that frequency scaling."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{d}{dx}(e^{2x + 1}) = ?",
+      "choices": [
+        "2 e^{2x + 1}",
+        "e^{2x + 1}",
+        "e^{2x}",
+        "(2x + 1) e^{2x}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Chain rule: outer $e^u \\to e^u$, inner $2x + 1 \\to 2$.",
+        "$e^{2x+1} \\cdot 2 = 2e^{2x+1}$."
+      ],
+      "explanation": "$e^{2x+1} \\cdot 2 = 2e^{2x+1}$.",
+      "steps": [
+        "**Pattern: $e^{(\\text{anything})}$ → $e^{(\\text{anything})} \\cdot (\\text{anything})'$.**",
+        "**With anything $= 2x + 1$:** derivative is $2$.",
+        "**Result.** $e^{2x + 1} \\cdot 2 = 2 e^{2x + 1}$.",
+        "**The constant $+1$ in the exponent doesn't matter for the chain-rule MULTIPLIER** — only the part that depends on $x$. (But it DOES stay in the exponent itself.)"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{d}{dx}(\\ln(x^3)) = ?",
+      "choices": [
+        "3/x",
+        "\\dfrac{3x^2}{x^3}",
+        "1/x^3",
+        "3 \\ln x"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Either chain rule OR log property: $\\ln(x^3) = 3\\ln x$. Derivative: $3/x$.",
+        "$3/x$."
+      ],
+      "explanation": "Easy via log property: $\\ln(x^3) = 3 \\ln x$. Derivative: $3/x$. (Or chain rule: $\\frac{1}{x^3} \\cdot 3x^2 = 3/x$.)",
+      "steps": [
+        "**Two paths — pick the easier one for the problem.**",
+        "**Path A: log property first.** $\\ln(x^3) = 3 \\ln x$ (rule: $\\ln(a^n) = n \\ln a$). Now differentiate trivially: $3 \\cdot \\dfrac{1}{x} = \\dfrac{3}{x}$.",
+        "**Path B: chain rule directly.** $\\dfrac{1}{x^3} \\cdot 3x^2 = \\dfrac{3x^2}{x^3} = \\dfrac{3}{x}$. Same answer.",
+        "**Lesson.** When log laws can simplify the function, USE them first. Differentiating $3 \\ln x$ is simpler than chain-ruling $\\ln(x^3)$. (Bigger picture: 'logarithmic differentiation' — coming in later lessons — exploits this everywhere.)"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{Find } f'(0) \\text{ for } f(x) = \\sin(2x).",
+      "answer": 2,
+      "tolerance": 0,
+      "hints": [
+        "$f'(x) = 2\\cos(2x)$. $f'(0) = 2 \\cdot 1 = 2$.",
+        "$2$."
+      ],
+      "explanation": "$f'(x) = 2\\cos(2x)$. $f'(0) = 2 \\cos 0 = 2$.",
+      "steps": [
+        "**Apply the $\\sin(kx) \\to k\\cos(kx)$ pattern.** $f'(x) = 2\\cos(2x)$.",
+        "**Evaluate at $x = 0$.** $2\\cos(0) = 2 \\cdot 1 = 2$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{d}{dx}(x^2 \\ln x) = ?",
+      "choices": [
+        "2x \\ln x + x",
+        "2x \\ln x",
+        "\\dfrac{x^2}{x} = x",
+        "2x + 1/x"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Product rule: $f = x^2$, $g = \\ln x$. $f' = 2x, g' = 1/x$.",
+        "$2x \\ln x + x^2 \\cdot 1/x = 2x \\ln x + x$."
+      ],
+      "explanation": "Product: $2x \\ln x + x^2/x = 2x \\ln x + x$.",
+      "steps": [
+        "**Product of TWO different kinds of function** ($x^2$ and $\\ln x$) → product rule.",
+        "**Identify.** $f = x^2$, $g = \\ln x$. $f' = 2x$, $g' = \\dfrac{1}{x}$.",
+        "**Apply.** $(fg)' = f'g + fg' = 2x \\ln x + x^2 \\cdot \\dfrac{1}{x} = 2x \\ln x + x$.",
+        "**The $x^2/x$ simplified to $x$.** Always simplify the final answer where you can."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{d}{dx}(\\ln(\\cos x)) = ?",
+      "choices": [
+        "-\\tan x",
+        "\\tan x",
+        "-\\sin x",
+        "\\dfrac{1}{\\cos x}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Outer $\\ln u \\to 1/u$, inner $\\cos x \\to -\\sin x$.",
+        "$\\dfrac{1}{\\cos x} \\cdot (-\\sin x) = -\\dfrac{\\sin x}{\\cos x} = -\\tan x$."
+      ],
+      "explanation": "$\\dfrac{1}{\\cos x} \\cdot (-\\sin x) = -\\tan x$.",
+      "steps": [
+        "**Chain rule on $\\ln$.** Pattern: $\\dfrac{d}{dx}\\ln(g(x)) = \\dfrac{g'(x)}{g(x)}$.",
+        "**Apply with $g(x) = \\cos x$.** $g'(x) = -\\sin x$. So derivative $= \\dfrac{-\\sin x}{\\cos x}$.",
+        "**Simplify.** $\\dfrac{-\\sin x}{\\cos x} = -\\dfrac{\\sin x}{\\cos x} = -\\tan x$.",
+        "**Neat identity.** $\\dfrac{d}{dx}\\ln(\\cos x) = -\\tan x$ — worth remembering. (Equivalently: $\\int \\tan x\\,dx = -\\ln|\\cos x| + C$.)"
+      ],
+      "difficulty": "easy"
+    }
+  ]
+}

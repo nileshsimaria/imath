@@ -1,0 +1,301 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A } \\textbf{critical point} \\text{ of } f \\text{ is where:}",
+      "choices": [
+        "$f(x) = 0$",
+        "$f'(x) = 0$ or $f'$ doesn't exist",
+        "$f$ is increasing",
+        "$f''(x) = 0$"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Two cases: derivative is zero OR derivative doesn't exist.",
+        "Critical = potentially extremal."
+      ],
+      "explanation": "Critical points: $f'(x) = 0$ (horizontal tangent) or $f'$ undefined (corner, cusp, vertical tangent).",
+      "steps": [
+        "**Definition.** A critical point is an $x$ in the domain of $f$ where EITHER $f'(x) = 0$ OR $f'(x)$ doesn't exist (corner, cusp, vertical tangent).",
+        "**Why care.** Local maxima and minima can ONLY occur at critical points (or domain endpoints). Critical points are the CANDIDATE locations for extrema.",
+        "**Important caveat.** Being a critical point doesn't make you an extremum. $f(x) = x^3$ has a critical point at $x = 0$ (since $f'(0) = 0$) but it's an INFLECTION, not a max or min. Always classify."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If } f'(x) > 0 \\text{ on an interval, } f \\text{ is } \\_\\_\\_ \\text{ on that interval.}",
+      "choices": [
+        "increasing",
+        "decreasing",
+        "constant",
+        "concave up"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Positive derivative = positive slope = climbing.",
+        "Increasing."
+      ],
+      "explanation": "$f' > 0$ → positive slope → function increasing.",
+      "steps": [
+        "**Derivative = slope. Positive slope = function climbing.**",
+        "**Universal sign-of-derivative rules:**",
+        "  $f'(x) > 0$ on $I$ → $f$ INCREASING on $I$.",
+        "  $f'(x) < 0$ on $I$ → $f$ DECREASING on $I$.",
+        "  $f'(x) = 0$ on $I$ → $f$ CONSTANT on $I$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If } f''(x) > 0 \\text{ on an interval, } f \\text{ is:}",
+      "choices": [
+        "increasing",
+        "decreasing",
+        "concave up",
+        "concave down"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Second derivative positive = curving upward = cup-shape.",
+        "Concave up."
+      ],
+      "explanation": "$f''(x) > 0$ → concave up (cup-shaped).",
+      "steps": [
+        "**The second derivative measures CONCAVITY** — which way the curve bends.",
+        "**Sign-of-second-derivative rules:**",
+        "  $f''(x) > 0$ → CONCAVE UP (cup shape, ∪).",
+        "  $f''(x) < 0$ → CONCAVE DOWN (frown shape, ∩).",
+        "**Why these rules work.** $f'' > 0$ means $f'$ is INCREASING — the slope is growing. So the curve is bending upward (like a smile, hitting steeper slopes as $x$ grows)."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If } f'(c) = 0 \\text{ and } f''(c) > 0, \\text{ then at } c, f \\text{ has a:}",
+      "choices": [
+        "local max",
+        "local min",
+        "inflection point",
+        "discontinuity"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Second derivative test: positive → minimum.",
+        "Concave up at a critical point = bottom of a cup = min."
+      ],
+      "explanation": "Second derivative test: $f''(c) > 0$ at a critical point → local **minimum**.",
+      "steps": [
+        "**The Second Derivative Test for classifying critical points:** at a critical point $c$ (where $f'(c) = 0$):",
+        "  $f''(c) > 0$ → concave UP at $c$ → BOTTOM OF A CUP → local **MIN**.",
+        "  $f''(c) < 0$ → concave DOWN at $c$ → TOP OF A FROWN → local **MAX**.",
+        "  $f''(c) = 0$ → INCONCLUSIVE (could be max, min, inflection, or none).",
+        "**Intuition.** Concave up at a flat point = the curve is bending upward AWAY from the critical $x$ → that's a bottom. Concave down = bending downward → top."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Find the critical points of } f(x) = x^3 - 12x.",
+      "choices": [
+        "$x = \\pm 2$",
+        "$x = \\pm 4$",
+        "$x = 0, \\pm 2$",
+        "$x = \\pm \\sqrt{4}$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "$f'(x) = 3x^2 - 12 = 0 \\Rightarrow x^2 = 4 \\Rightarrow x = \\pm 2$.",
+        "Critical at $\\pm 2$."
+      ],
+      "explanation": "$f'(x) = 3x^2 - 12 = 3(x^2 - 4) = 0 \\Rightarrow x = \\pm 2$.",
+      "steps": [
+        "**Procedure for finding critical points: compute $f'$, set to zero, solve.** (Also check where $f'$ is undefined — but for polynomials, $f'$ is defined everywhere.)",
+        "**Differentiate.** $f'(x) = 3x^2 - 12$.",
+        "**Set to zero.** $3x^2 - 12 = 0 \\Rightarrow x^2 = 4 \\Rightarrow x = \\pm 2$.",
+        "**Result.** Critical points at $x = -2$ and $x = 2$.",
+        "**Lesson.** A degree-$n$ polynomial has $f'$ of degree $n - 1$, which has at most $n - 1$ real roots. So a cubic has at most 2 critical points — exactly what we found."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\text{For } f(x) = x^3 - 12x, \\text{ which is the local MAXIMUM?}",
+      "choices": [
+        "x = -2",
+        "x = 2",
+        "x = 0",
+        "no local max"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "$f''(x) = 6x$. $f''(-2) = -12 < 0$ → max at $-2$. $f''(2) = 12 > 0$ → min at $2$.",
+        "Local max at $x = -2$."
+      ],
+      "explanation": "$f''(-2) = -12 < 0$ → concave down → local **max** at $x = -2$.",
+      "steps": [
+        "**Classify each critical point with the second derivative test.**",
+        "**From Q5: critical points at $x = \\pm 2$.**",
+        "**Compute $f''$.** $f''(x) = 6x$.",
+        "**At $x = -2$.** $f''(-2) = -12 < 0$ → concave down → local **MAX** ✓.",
+        "**At $x = +2$.** $f''(+2) = +12 > 0$ → concave up → local MIN.",
+        "**Answer: local max at $x = -2$.**",
+        "**Pattern for positive-leading cubics.** Always: LEFT critical point is max, RIGHT is min. (The cubic rises from $-\\infty$, peaks, dips, then rises to $+\\infty$ — like a roller coaster with one hump and one valley.)"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Find the inflection point(s) of } f(x) = x^3 - 6x^2.",
+      "choices": [
+        "x = 2",
+        "x = 0, 4",
+        "x = ±2",
+        "x = 6"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "$f'(x) = 3x^2 - 12x$. $f''(x) = 6x - 12 = 0 \\Rightarrow x = 2$.",
+        "Concavity changes at $x = 2$."
+      ],
+      "explanation": "$f''(x) = 6x - 12 = 0 \\Rightarrow x = 2$. Sign of $f''$ flips there → inflection at $x = 2$.",
+      "steps": [
+        "**Procedure for finding inflection points: compute $f''$, set to zero, VERIFY sign change.** (Setting $f'' = 0$ gives candidates — not all are real inflections.)",
+        "**Compute $f''$.** $f'(x) = 3x^2 - 12x$, so $f''(x) = 6x - 12$.",
+        "**Set to zero.** $6x - 12 = 0 \\Rightarrow x = 2$. Candidate.",
+        "**Verify sign change.** Test on both sides: $f''(1) = -6 < 0$ (concave down on the left). $f''(3) = 6 > 0$ (concave up on the right). YES, sign changes → genuine inflection.",
+        "**Answer: $x = 2$ is the inflection point.**",
+        "**Why verify the sign change?** $f''(c) = 0$ at $c$ doesn't guarantee an inflection. Example: $f(x) = x^4$ has $f''(0) = 0$ but $f'' \\geq 0$ everywhere — concavity NEVER changes. Always check."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If } f'(x) < 0 \\text{ on an interval, } f \\text{ is:}",
+      "choices": [
+        "increasing",
+        "decreasing",
+        "constant",
+        "concave down"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Negative slope = going down.",
+        "Decreasing."
+      ],
+      "explanation": "$f' < 0$ → negative slope → function decreasing.",
+      "steps": [
+        "**Negative slope → function decreasing.**",
+        "**$f'(x) < 0$ on $I$ ⟹ $f$ decreasing on $I$.** Mirror of Q2."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\text{An inflection point is where:}",
+      "choices": [
+        "$f$ is at a maximum or minimum",
+        "$f''$ changes sign (concavity flips)",
+        "$f'$ is zero",
+        "the function is undefined"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Inflection = concavity changes.",
+        "$f''$ flips sign."
+      ],
+      "explanation": "Inflection point = where concavity changes = where $f''$ changes sign.",
+      "steps": [
+        "**Definition.** An inflection point is where the CURVATURE flips — concave up changes to concave down, or vice versa.",
+        "**Algebraic test.** $f''$ changes sign at $x = c$ means $c$ is an inflection point.",
+        "**Necessary but NOT sufficient: $f''(c) = 0$.** Sign change is the deciding factor; $f''(c) = 0$ is just a candidate marker.",
+        "**Distinct from extrema.** A local max/min is about $f'$ being zero. An inflection is about $f''$ changing sign. Different tests, different points generally."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "multiple-choice",
+      "promptTex": "\\text{For } f(x) = x^3, \\text{ what happens at } x = 0?",
+      "choices": [
+        "Local minimum",
+        "Local maximum",
+        "Inflection point (no extremum)",
+        "Both max and min"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "$f'(0) = 0$ (critical), but $f'(x) = 3x^2 \\geq 0$ everywhere — sign doesn't change.",
+        "Not an extremum, but $f''$ changes sign at 0 → inflection."
+      ],
+      "explanation": "$f'(0) = 0$ (critical), but $f'$ doesn't change sign → not an extremum. $f''(x) = 6x$ changes sign at 0 → inflection.",
+      "steps": [
+        "**$x = 0$ is a CRITICAL point but NOT an extremum.** This is THE classic counterexample to 'critical point = extremum'.",
+        "**$f'(x) = 3x^2$.** At $x = 0$: $f'(0) = 0$. ✓ Critical.",
+        "**First derivative test.** $f'(x) = 3x^2 \\geq 0$ for ALL $x$. The function is INCREASING on both sides of 0 — no max, no min (the curve doesn't change direction).",
+        "**Check for inflection.** $f''(x) = 6x$. At $x = 0$: $f''(0) = 0$. To the left $f'' < 0$ (concave down), to the right $f'' > 0$ (concave up). Sign change → genuine inflection.",
+        "**Conclusion.** Inflection point at $x = 0$, NOT an extremum.",
+        "**Memorize this example.** $y = x^3$ at $0$ is the canonical 'critical-but-not-extreme' case. Comes up constantly."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q11",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If } f''(c) = 0, \\text{ the second derivative test is:}",
+      "choices": [
+        "inconclusive — try first derivative test",
+        "always says local max",
+        "always says inflection",
+        "always says local min"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "When $f''(c) = 0$, you can't tell from the second derivative.",
+        "Fall back to the first derivative test."
+      ],
+      "explanation": "$f''(c) = 0$ doesn't determine concavity uniquely — could be max, min, inflection, or none. Use the first derivative test instead.",
+      "steps": [
+        "**Second derivative test summary:**",
+        "  $f''(c) > 0$ → local MIN.",
+        "  $f''(c) < 0$ → local MAX.",
+        "  $f''(c) = 0$ → **INCONCLUSIVE.**",
+        "**Why $f''(c) = 0$ is inconclusive.** All four cases are POSSIBLE: min ($x^4$ at 0), max ($-x^4$ at 0), inflection ($x^3$ at 0), or none ($x^2 \\sin(1/x)$ at 0).",
+        "**Fall-back: First Derivative Test.** Check the sign of $f'$ on both sides of $c$.",
+        "  $f'$ goes $+ \\to -$: local MAX.",
+        "  $f'$ goes $- \\to +$: local MIN.",
+        "  $f'$ same sign on both sides: NOT an extremum (just a flat spot, like $x^3$ at 0)."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\text{For } f(x) = -2x^2 + 8x + 1, \\text{ find the } \\textbf{maximum} \\text{ value of } f. \\\\ (\\text{Maximum value, not the } x.)",
+      "answer": 9,
+      "tolerance": 0,
+      "hints": [
+        "$f'(x) = -4x + 8 = 0 \\Rightarrow x = 2$. $f(2) = -8 + 16 + 1 = 9$.",
+        "$9$."
+      ],
+      "explanation": "Critical point: $x = 2$. $f(2) = -8 + 16 + 1 = 9$. (Parabola opens down, so max.)",
+      "steps": [
+        "**Parabola → single critical point at the vertex. Sign of $x^2$ coefficient tells you whether it's a max ($-$) or min ($+$).**",
+        "**Coefficient $-2 < 0$:** parabola opens DOWN → vertex is the MAX. We're on track.",
+        "**Find the critical point.** $f'(x) = -4x + 8 = 0 \\Rightarrow x = 2$.",
+        "**Compute the maximum VALUE.** $f(2) = -2(4) + 8(2) + 1 = -8 + 16 + 1 = 9$.",
+        "**Read the question carefully.** Asked for the maximum VALUE of $f$, not the $x$ where it occurs. Answer: $9$ (not $2$)."
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

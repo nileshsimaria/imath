@@ -1,0 +1,84 @@
+{
+  "title": "Composition & Inverses",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Two of the most important things you can do with functions: **chain them together** (composition) and **reverse them** (inverse). Both ideas show up everywhere — calculus, computer science, and any time you need to 'undo' a process."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Function composition",
+        "**$(f \\circ g)(x)$ means $f(g(x))$.** Apply $g$ first, then feed the result into $f$. Read it 'f composed with g' or 'f of g of x'."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "(f \\circ g)(x) = f(g(x))"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Example.** $f(x) = x^2$ and $g(x) = x + 3$.",
+        "$(f \\circ g)(x) = f(g(x)) = f(x + 3) = (x + 3)^2$.",
+        "$(g \\circ f)(x) = g(f(x)) = g(x^2) = x^2 + 3$.",
+        "Notice — **composition is not commutative.** $f \\circ g \\neq g \\circ f$ in general."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Domain considerations",
+      "body": "For $(f \\circ g)(x)$ to make sense, $g(x)$ has to land in $f$'s domain. Always check the domain of the inner function first, then make sure its outputs are valid inputs for the outer function."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Inverse functions",
+        "An **inverse function** undoes the original. If $f$ takes $x$ to $y$, then $f^{-1}$ takes $y$ back to $x$."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "f(f^{-1}(x)) = x \\quad\\text{and}\\quad f^{-1}(f(x)) = x"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Not every function has an inverse. To have one, $f$ must be **one-to-one** — different inputs must give different outputs. Otherwise the inverse can't decide which input to send a given output back to.",
+        "**Test for one-to-one — the horizontal line test.** If every horizontal line crosses the graph of $f$ at most once, $f$ is one-to-one and has an inverse."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### How to find an inverse algebraically",
+        "**1.** Replace $f(x)$ with $y$.",
+        "**2.** Swap $x$ and $y$.",
+        "**3.** Solve for $y$.",
+        "**4.** Replace $y$ with $f^{-1}(x)$.",
+        "Why swap? Because the inverse takes outputs back to inputs — so its 'input' is the original's output, and its 'output' is the original's input."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example",
+        "Find the inverse of $f(x) = 2x + 5$.",
+        "$y = 2x + 5$. Swap: $x = 2y + 5$. Solve for $y$: $y = \\dfrac{x - 5}{2}$.",
+        "So $f^{-1}(x) = \\dfrac{x - 5}{2}$. **Check.** $f(f^{-1}(x)) = 2 \\cdot \\dfrac{x - 5}{2} + 5 = x - 5 + 5 = x$ ✓."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Geometric picture — reflection",
+      "body": "The graph of $f^{-1}$ is the **reflection** of the graph of $f$ across the line $y = x$. If $(a, b)$ is on $f$, then $(b, a)$ is on $f^{-1}$. Plot both — they look like mirror images of each other across the diagonal."
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "**Composition**: $(f \\circ g)(x) = f(g(x))$, apply inner function first, not commutative. **Inverse**: $f^{-1}$ undoes $f$. Find by swapping $x$ and $y$ and solving. Inverse exists only for one-to-one functions. Geometrically, inverses reflect across $y = x$."
+    }
+  ]
+}

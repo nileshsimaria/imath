@@ -1,0 +1,161 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "prompt": "Sunflower seed-head spirals usually count to which numbers?",
+      "choices": [
+        "Two consecutive Fibonacci numbers (like 21 and 34, or 55 and 89)",
+        "Always exactly 100",
+        "Powers of 2",
+        "Prime numbers"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Plant spirals → Fibonacci.",
+        "Two consecutive Fibonacci numbers, often 21/34 or 55/89."
+      ],
+      "explanation": "Sunflower seed-head spirals (clockwise + counterclockwise) count to consecutive Fibonacci numbers like 21 & 34, or 55 & 89.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{The 'golden angle' that leaves rotate around a stem is approximately:} \\\\ \\text{(answer in degrees, round to 1 decimal)}",
+      "answer": 137.5,
+      "tolerance": 0.5,
+      "hints": [
+        "$360 / \\phi^2 \\approx 360 / 2.618$.",
+        "$\\approx 137.5°$."
+      ],
+      "explanation": "Golden angle = $360 \\cdot (2 - \\phi) \\approx 137.5°$. Also equals $360 / \\phi^2$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** $360 / \\phi^2 \\approx 360 / 2.618$."
+        },
+        {
+          "text": "$\\approx 137.5°$."
+        },
+        {
+          "text": "**Solution.** Golden angle = $360 \\cdot (2 - \\phi) \\approx 137.5°$. Also equals $360 / \\phi^2$."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "Why is $\\phi$ optimal for leaf placement?",
+      "choices": [
+        "It looks pretty.",
+        "It's the 'most irrational' number, so leaves never line up exactly — no shadowing.",
+        "Plants can compute $\\phi$ easily.",
+        "It maximizes the height of the plant."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "What's bad: a rational angle → leaves line up periodically.",
+        "$\\phi$ is irrational and worst-approximable by rationals."
+      ],
+      "explanation": "$\\phi$ resists rational approximation best of all irrationals, so leaves placed at golden angles never line up — they spread out maximally over the stem.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "prompt": "Drone honeybees develop from unfertilized eggs. How many parents does a drone have?",
+      "choices": [
+        "0",
+        "1 (just a mother)",
+        "2",
+        "It varies"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Drones = unfertilized eggs.",
+        "Only the mother contributes."
+      ],
+      "explanation": "Drones have only a mother (one parent), making their ancestor counts follow the Fibonacci sequence.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{A drone bee has 1 mother. The mother has 2 parents. Going back to generation 4, } \\\\ \\text{ how many total ancestors?}",
+      "answer": 5,
+      "tolerance": 0.001,
+      "hints": [
+        "Generations: 1, 1, 2, 3, 5, 8, ...",
+        "Generation 4 = 5."
+      ],
+      "explanation": "Fibonacci! Drone ancestors per generation: 1, 1, 2, 3, 5, 8, 13. Generation 4 has 5 ancestors.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** Generations: 1, 1, 2, 3, 5, 8, ..."
+        },
+        {
+          "text": "Generation 4 = 5."
+        },
+        {
+          "text": "**Solution.** Fibonacci! Drone ancestors per generation: 1, 1, 2, 3, 5, 8, 13. Generation 4 has 5 ancestors."
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "prompt": "A golden spiral grows by what factor per quarter turn?",
+      "choices": [
+        "2",
+        "\\phi",
+        "\\pi",
+        "e"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Self-similar growth.",
+        "Each quarter-turn enlarges by $\\phi$ (since the next square is $\\phi$ times larger)."
+      ],
+      "explanation": "Each quarter-turn of the golden spiral scales by $\\phi$. Full turn scales by $\\phi^4 \\approx 6.85$.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "prompt": "Which of these is a TRUE statement about $\\phi$ in nature?",
+      "choices": [
+        "Every flower has exactly $\\phi$ petals.",
+        "The Parthenon's proportions are precisely $\\phi$.",
+        "Sunflower spirals often count to consecutive Fibonacci numbers, and many plants use the golden angle for leaf placement.",
+        "Da Vinci computed $\\phi$ to 20 decimal places."
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Some claims about $\\phi$ are over-stated; others are verifiable.",
+        "Plant spirals and phyllotaxis are well-documented."
+      ],
+      "explanation": "Plant spirals and phyllotaxis (leaf-placement) verifiably use Fibonacci/$\\phi$ patterns. Many claims about ancient art are exaggerated.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "prompt": "Romanesco broccoli is famous for its:",
+      "choices": [
+        "Fibonacci-numbered spirals AND self-similar (fractal-like) florets.",
+        "Random pattern with no math.",
+        "Perfect circles.",
+        "Exact pentagonal symmetry."
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Both Fibonacci spirals AND fractal self-similarity.",
+        "Bumps on bumps on bumps."
+      ],
+      "explanation": "Romanesco shows two mathematical features at once: Fibonacci-counted spirals AND a fractal-like self-similar floret structure. Lab-grown beauty.",
+      "difficulty": "medium"
+    }
+  ]
+}

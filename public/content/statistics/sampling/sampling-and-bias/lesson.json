@@ -1,0 +1,91 @@
+{
+  "title": "Sampling & Bias",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "**Statistical inference** is the science of learning about a large group (the **population**) from a smaller subset (the **sample**). Done well, you can estimate the average height of all U.S. adults from a sample of 1000. Done badly, you get conclusions that are confidently wrong."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. Population vs Sample"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Population:** the entire group you want to understand. (All U.S. adults; all students at your school; every can off the production line.)",
+        "**Sample:** the subset you actually observe. (A random 1000 U.S. adults; 50 students; 200 cans.)",
+        "**Parameter** vs **Statistic:** parameters describe the population (true mean $\\mu$); statistics describe the sample (sample mean $\\bar{x}$). We use statistics (from samples) to estimate parameters (of populations)."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. Sampling Methods"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Simple random sample (SRS):** every member of the population has an equal chance of being chosen. The gold standard.",
+        "**Stratified sample:** divide the population into groups (strata) — e.g., grade levels in a school — then take a random sample from each group. Useful when the strata differ.",
+        "**Cluster sample:** divide into clusters (e.g., classrooms), randomly pick some clusters, sample everyone in them. Cheaper for large geographies.",
+        "**Systematic sample:** pick every $k$th member (e.g., every 10th name on a list). Simple but watch for hidden patterns.",
+        "**Convenience sample:** sample whoever is easiest to reach. **Almost always biased.** Examples: people willing to answer your phone call, customers at one store. Avoid for serious inference."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The fundamental rule",
+      "body": "**Random sampling is what makes inference possible.** Without it, your sample probably differs systematically from the population, and no amount of math can save you. Always ask: 'how was the sample chosen?'"
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. Bias — How Samples Go Wrong"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "A **biased** sample systematically differs from the population. Different sources of bias:",
+        "**Selection bias:** sampling method itself excludes part of the population. (Phone polls miss people without phones; voluntary online polls draw people with strong opinions.)",
+        "**Non-response bias:** the people who refuse to answer differ from those who do. (Many surveys: low-income people respond less, skewing income estimates upward.)",
+        "**Response bias:** answers are inaccurate due to question wording, social pressure, or interviewer effects. ('Have you ever cheated on a test?' — many people lie.)",
+        "**Undercoverage:** the sampling frame misses part of the population. (Sampling from a list of registered voters misses non-voters.)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. Famous Sampling Disasters"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The 1936 Literary Digest fiasco",
+      "body": "The Literary Digest mailed 10 million ballots predicting the 1936 U.S. presidential election. They got 2.4 million responses and predicted Landon would win in a landslide. Result: Roosevelt won by a landslide. **Why wrong?** They sampled from phone books and car-registration lists — heavily biased toward wealthier voters in 1936. Selection bias, on a massive scale. A small but well-randomized poll by George Gallup correctly called the election."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 5. Sample Size and Variability"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Bigger sample = more reliable estimate.** A sample of 100 typically gives sharper estimates than a sample of 10. But:",
+        "**Bigger doesn't fix bias.** A million-person biased sample is still biased. Random sampling matters more than size."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "**Population** (whole group) vs **sample** (subset you observe). Random sampling (especially SRS) is the foundation of inference. Biased samples produce systematically wrong conclusions; types of bias include selection, non-response, response, and undercoverage. Sample size matters — but not as much as randomness."
+    }
+  ]
+}

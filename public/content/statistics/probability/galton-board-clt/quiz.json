@@ -1,0 +1,385 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "prompt": "In the Galton board, why is the middle bin much more likely to receive a marble than the edge bins?",
+      "choices": [
+        "Marbles are attracted to the center.",
+        "The pegs in the middle are bigger.",
+        "There are many more peg-paths that lead to the middle than to the edges.",
+        "Marbles in the center bounce less often."
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Count paths: how many ways can a marble go to the leftmost bin?",
+        "Hint: 1 way (all-left). For the middle: $\\binom{n}{n/2}$ ways."
+      ],
+      "explanation": "Each path is equally likely, but there are $\\binom{n}{k}$ paths that land in bin $k$. For $k$ near the middle, $\\binom{n}{k}$ is much larger than at the edges. More paths = higher bin probability.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "prompt": "What does the Law of Large Numbers say in the context of the Galton board?",
+      "choices": [
+        "Every bin gets exactly the same number of marbles.",
+        "As the number of drops grows, the fraction of marbles in each bin converges to a fixed probability.",
+        "Marbles always land in the middle bin.",
+        "The total number of marbles equals $2^n$."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Random per drop, predictable in bulk.",
+        "The histogram shape stabilizes as you drop more marbles."
+      ],
+      "explanation": "The LLN says that long-run averages settle to the true probability. In the Galton board: each bin's count divided by total drops converges to $\\binom{n}{k}/2^n$.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "The Central Limit Theorem says: the sum of many independent random ± choices (each with bounded size) approaches what kind of distribution?",
+      "choices": [
+        "A flat (uniform) distribution",
+        "A spike at zero",
+        "A normal (bell) distribution",
+        "A power law"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "The Galton board IS this sum: each marble's bin = sum of $n$ Bernoulli ± choices.",
+        "What shape did you see after 1000 drops?"
+      ],
+      "explanation": "The CLT guarantees that such sums approach a normal distribution. The Galton board is a particularly clean demonstration: $n$ Bernoulli(½) trials summed = Binomial$(n, ½)$ → normal as $n$ grows.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{For an } n\\text{-row Galton board, what is the expected bin number for a marble?}",
+      "answer": 6,
+      "tolerance": 0.5,
+      "hints": [
+        "The widget uses $n = 12$ rows.",
+        "Half the bounces go right on average."
+      ],
+      "explanation": "Each peg contributes 0 or 1 to the bin number with equal probability, so its expected contribution is $\\frac{1}{2}$. With 12 pegs: $E[\\text{bin}] = 12 \\cdot \\frac{1}{2} = 6$.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "prompt": "After dropping 10 marbles, the histogram looks ragged. After 1000, it looks like a smooth bell. Which statement is correct?",
+      "choices": [
+        "The marbles are 'finding' the bell shape over time.",
+        "The true probability of each bin was the same all along; small samples just look noisier than large samples.",
+        "The Galton board changes its peg arrangement during the run.",
+        "The first 10 drops were unusually unlucky."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Each drop is independent — past drops don't influence future drops.",
+        "What changes with more drops is your *estimate* of the probabilities, not the probabilities themselves."
+      ],
+      "explanation": "The bin probabilities never change. With few drops your observed fractions are noisy estimates; with many drops they approach the true probabilities. That's the LLN — and why polls with more respondents are more reliable.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "prompt": "Each marble drop in an n-row Galton board produces a bin number. What probability distribution does the bin number follow?",
+      "choices": [
+        "Uniform — every bin equally likely",
+        "Binomial(n, 1/2) — exactly; approaches a normal distribution as n grows",
+        "Normal (exactly) — for every n",
+        "Poisson"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Each peg is an independent Bernoulli(1/2) trial: 0 (left) or 1 (right).",
+        "The bin number is the SUM of n such trials.",
+        "Sum of n independent Bernoulli(p) = Binomial(n, p)."
+      ],
+      "explanation": "The bin number is the sum of $n$ independent Bernoulli(1/2) trials (one per peg), which is by definition $\\text{Binomial}(n, 1/2)$. For finite $n$, the distribution is exactly binomial. As $n$ grows, by the Central Limit Theorem, the binomial shape becomes increasingly bell-shaped — approximating a normal distribution.",
+      "steps": [
+        "**Identify the random variable.** Bin number $X = $ number of right-bounces out of $n$ pegs.",
+        "**Each peg is Bernoulli(1/2).** $X_i = 1$ if right, $0$ if left, each with probability $1/2$, independent.",
+        "**Sum of Bernoullis = Binomial.** $X = X_1 + X_2 + \\cdots + X_n \\sim \\text{Binomial}(n, 1/2)$.",
+        "**Asymptotic normality.** For large $n$, CLT says $X \\approx \\text{Normal}(np, np(1-p)) = \\text{Normal}(n/2, n/4)$. So the histogram smoothes into the familiar bell curve as $n$ grows."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{For the widget's } 12\\text{-row Galton board, find } P(\\text{marble lands in the center bin, bin 6}). \\\\ \\text{Round to 4 decimals.}",
+      "answer": 0.2256,
+      "tolerance": 0.005,
+      "hints": [
+        "$P(\\text{bin } k) = \\dfrac{\\binom{n}{k}}{2^n}$.",
+        "$P(\\text{bin } 6) = \\dfrac{\\binom{12}{6}}{2^{12}} = \\dfrac{924}{4096}$.",
+        "$\\approx 0.2256$."
+      ],
+      "explanation": "$P(\\text{bin } k) = \\binom{n}{k}/2^n$. For $n = 12, k = 6$: $\\binom{12}{6} = 924$, $2^{12} = 4096$. $P = 924/4096 \\approx 0.2256$ — about $23\\%$ of marbles land in the center bin.",
+      "steps": [
+        "**Binomial formula.** $P(\\text{bin } k) = \\dfrac{\\text{paths to bin } k}{\\text{total paths}} = \\dfrac{\\binom{n}{k}}{2^n}$.",
+        "**Plug in $n = 12$, $k = 6$.** Compute $\\binom{12}{6} = 924$. Compute $2^{12} = 4096$.",
+        "**Divide.** $P = 924/4096 \\approx 0.2256$.",
+        "**Pattern lesson — peak probability.** The center bin always has the highest probability $\\binom{n}{\\lfloor n/2 \\rfloor}/2^n$. This is the *modal* outcome of a symmetric binomial. Edge bins ($k = 0$ or $n$) have probability $1/2^n$ each — much smaller for large $n$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{For an } n\\text{-row Galton board (each peg bounces left/right with probability } 1/2\\text{),} \\\\ \\text{how many distinct paths lead to bin } k = 4 \\text{ when } n = 12?",
+      "answer": 495,
+      "tolerance": 0,
+      "hints": [
+        "The number of paths to bin $k$ is $\\binom{n}{k}$ — choose which $k$ of the $n$ pegs bounce right.",
+        "$\\binom{12}{4} = \\dfrac{12!}{4! \\cdot 8!} = 495$."
+      ],
+      "explanation": "$\\binom{12}{4} = 495$. Each path to bin $k$ corresponds to choosing which $k$ of the $n$ pegs send the marble right — a combinatorial selection.",
+      "steps": [
+        "**Map paths to combinatorial choices.** A path is a sequence of $n$ left/right decisions. Landing in bin $k$ means exactly $k$ rights and $n-k$ lefts.",
+        "**Count.** Number of ways to choose which $k$ of $n$ pegs bounce right = $\\binom{n}{k}$.",
+        "**For $n=12, k=4$.** $\\binom{12}{4} = \\dfrac{12 \\cdot 11 \\cdot 10 \\cdot 9}{4 \\cdot 3 \\cdot 2 \\cdot 1} = \\dfrac{11880}{24} = 495$.",
+        "**Why this is fundamental.** $\\binom{n}{k}$ governs not just Galton boards but every 'choose $k$ of $n$' problem in probability and statistics. The same numbers appear in Pascal's triangle, binomial expansion, and combinatorics."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "prompt": "The histogram of marble counts in a Galton board mirrors what classical mathematical object?",
+      "choices": [
+        "The Fibonacci sequence",
+        "A row of Pascal's triangle (the binomial coefficients)",
+        "The Mandelbrot set",
+        "A geometric sequence"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Each Galton-board bin has $\\binom{n}{k}$ paths leading to it — the same coefficients as the $n$-th row of Pascal's triangle.",
+        "Row 4: 1, 4, 6, 4, 1."
+      ],
+      "explanation": "Path counts to the $n+1$ bins of an $n$-row board are exactly the binomial coefficients $\\binom{n}{0}, \\binom{n}{1}, \\ldots, \\binom{n}{n}$ — the $n$-th row of Pascal's triangle. So the empirical histogram (after many drops) traces out Pascal's row, rescaled by $2^n$.",
+      "steps": [
+        "**Pascal's triangle is binomial coefficients.** Row $n$ of Pascal's triangle: $\\binom{n}{0}, \\binom{n}{1}, \\ldots, \\binom{n}{n}$. Each entry counts the paths from the top to that position in a triangular peg grid.",
+        {
+          "svg": "<svg viewBox=\"0 0 280 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"140\" y=\"30\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">1</text><text x=\"125\" y=\"55\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">1</text><text x=\"155\" y=\"55\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">1</text><text x=\"110\" y=\"80\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">1</text><text x=\"140\" y=\"80\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">2</text><text x=\"170\" y=\"80\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">1</text><text x=\"95\" y=\"105\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">1</text><text x=\"125\" y=\"105\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">3</text><text x=\"155\" y=\"105\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">3</text><text x=\"185\" y=\"105\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">1</text><text x=\"80\" y=\"130\" font-size=\"13\" font-weight=\"700\" fill=\"#dc2626\" text-anchor=\"middle\">1</text><text x=\"110\" y=\"130\" font-size=\"13\" font-weight=\"700\" fill=\"#dc2626\" text-anchor=\"middle\">4</text><text x=\"140\" y=\"130\" font-size=\"13\" font-weight=\"700\" fill=\"#dc2626\" text-anchor=\"middle\">6</text><text x=\"170\" y=\"130\" font-size=\"13\" font-weight=\"700\" fill=\"#dc2626\" text-anchor=\"middle\">4</text><text x=\"200\" y=\"130\" font-size=\"13\" font-weight=\"700\" fill=\"#dc2626\" text-anchor=\"middle\">1</text><text x=\"65\" y=\"155\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">1</text><text x=\"95\" y=\"155\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">5</text><text x=\"125\" y=\"155\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">10</text><text x=\"155\" y=\"155\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">10</text><text x=\"185\" y=\"155\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">5</text><text x=\"215\" y=\"155\" font-size=\"13\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">1</text><text x=\"30\" y=\"185\" font-size=\"11\" fill=\"#dc2626\" font-style=\"italic\">row 4: 1, 4, 6, 4, 1 — path counts for a 4-row Galton board</text></svg>"
+        },
+        "**Galton board bin counts = Pascal row.** For an $n$-row Galton board, the number of paths to bin $k$ is exactly $\\binom{n}{k}$ — the $k$-th entry of row $n$.",
+        "**Sum of a row = $2^n$.** Row 4: $1 + 4 + 6 + 4 + 1 = 16 = 2^4$. This is the total number of paths from top to any bin.",
+        "**Same numbers, three contexts.** Pascal's triangle = binomial expansion coefficients = Galton-board path counts. One mathematical object, many faces."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q10",
+      "type": "multiple-choice",
+      "prompt": "For an n-row Galton board, what is the relationship between P(bin k) and P(bin n−k)?",
+      "choices": [
+        "P(bin k) = P(bin n−k) — the distribution is symmetric",
+        "P(bin k) > P(bin n−k) for k < n/2",
+        "P(bin k) < P(bin n−k) for k < n/2",
+        "There is no general relationship"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Each path to bin $k$ has $k$ rights and $n-k$ lefts. A path to bin $n-k$ has $n-k$ rights and $k$ lefts.",
+        "Swap 'right' and 'left' — bijection between paths.",
+        "$\\binom{n}{k} = \\binom{n}{n-k}$."
+      ],
+      "explanation": "By the symmetry $\\binom{n}{k} = \\binom{n}{n-k}$, every path to bin $k$ corresponds bijectively to a path to bin $n-k$ (just flip every L↔R). Same number of paths → same probability. The Galton-board histogram is perfectly symmetric about the center bin $n/2$.",
+      "steps": [
+        "**Bijection between paths.** Take any path to bin $k$ (with $k$ rights, $n-k$ lefts). Flip every step: right→left, left→right. The new path has $n-k$ rights, $k$ lefts → goes to bin $n-k$. The mapping is invertible (flip again), so paths to bin $k$ pair up one-to-one with paths to bin $n-k$.",
+        "**Algebraic identity.** $\\binom{n}{k} = \\binom{n}{n-k}$ — the same combinatorial fact, written as 'choose $k$ to be R' vs 'choose $n-k$ to be L'.",
+        "**Visual.** Pascal's triangle is symmetric across its central vertical axis. The Galton board's histogram inherits this symmetry.",
+        "**Pattern lesson.** Symmetric problems → symmetric distributions. The 50/50 peg is the symmetry; biased pegs (e.g., 60/40) break it and the histogram shifts and skews."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{For the 12-row board, find } P(\\text{marble lands in the leftmost bin, bin 0}). \\\\ \\text{Express as 1/N and give N.}",
+      "answer": 4096,
+      "tolerance": 0,
+      "hints": [
+        "Only ONE path leads to bin 0: all 12 pegs bounce left.",
+        "Total paths: $2^{12} = 4096$.",
+        "$P(\\text{bin 0}) = 1/4096$."
+      ],
+      "explanation": "Bin 0 requires all 12 pegs to bounce left — exactly ONE path. Total paths: $2^{12} = 4096$. So $P(\\text{bin 0}) = 1/4096 \\approx 0.000244$. By symmetry $P(\\text{bin 12}) = 1/4096$ too.",
+      "steps": [
+        "**Edge bin = single path.** Bin 0 means every peg bounces left — no choice. $\\binom{12}{0} = 1$.",
+        "**Total paths.** $2^{12} = 4096$.",
+        "**Divide.** $P = 1/4096$.",
+        "**Contrast with center.** $P(\\text{center bin 6}) = 924/4096 \\approx 0.226$. Ratio: center is $924\\times$ more likely than edge — a striking gap from a 'fair' 50/50 bounce."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\text{For an } n\\text{-row board, how many distinct paths from the top to the bottom row of bins are there?} \\\\ \\text{Give the formula's value for } n = 12.",
+      "answer": 4096,
+      "tolerance": 0,
+      "hints": [
+        "Each peg has 2 choices (left or right).",
+        "$n$ pegs in a row, all independent: $2 \\times 2 \\times \\cdots \\times 2 = 2^n$.",
+        "$2^{12} = 4096$."
+      ],
+      "explanation": "Each of the $n$ pegs the marble encounters is an independent left/right choice. Total: $2^n$. For $n = 12$: $2^{12} = 4096$. (And these split into the bins as $\\binom{12}{0}, \\binom{12}{1}, \\ldots, \\binom{12}{12}$ which sum to $2^{12}$.)",
+      "steps": [
+        "**Count the choices.** A marble's path is determined by $n$ independent L/R decisions.",
+        "**Multiplication principle.** $\\underbrace{2 \\cdot 2 \\cdots 2}_{n \\text{ factors}} = 2^n$ total distinct paths.",
+        "**Apply.** $n = 12 \\Rightarrow 2^{12} = 4096$.",
+        "**Sanity via Pascal's triangle row sum.** $\\binom{12}{0} + \\binom{12}{1} + \\cdots + \\binom{12}{12} = 2^{12}$ — every path lands in some bin, and bins are disjoint, so summing over bins recovers the total."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q13",
+      "type": "numeric",
+      "promptTex": "\\text{For an } n\\text{-row Galton board with fair pegs (each peg bounces right with probability } 1/2\\text{),} \\\\ \\text{what is the } \\textbf{standard deviation} \\text{ of the bin number when } n = 12? \\\\ \\text{Round to 3 decimals.}",
+      "answer": 1.732,
+      "tolerance": 0.01,
+      "hints": [
+        "For Binomial$(n, p)$: $\\text{Var} = np(1-p)$. So $\\text{SD} = \\sqrt{np(1-p)}$.",
+        "With $n = 12$, $p = 1/2$: $\\text{Var} = 12 \\cdot (1/2)(1/2) = 3$. $\\text{SD} = \\sqrt{3} \\approx 1.732$."
+      ],
+      "explanation": "Binomial variance: $\\text{Var}(X) = np(1-p) = 12 \\cdot 0.5 \\cdot 0.5 = 3$. Standard deviation: $\\text{SD} = \\sqrt{3} \\approx 1.732$. So a typical drop lands about $1.73$ bins away from the center (bin 6).",
+      "steps": [
+        "**Recall the binomial variance formula.** For $X \\sim \\text{Binomial}(n, p)$: $\\text{Var}(X) = np(1-p)$.",
+        "**Compute.** $n = 12$, $p = 1/2$: $\\text{Var} = 12 \\cdot \\dfrac{1}{2} \\cdot \\dfrac{1}{2} = 3$.",
+        "**Take the square root.** $\\text{SD} = \\sqrt{3} \\approx 1.732$.",
+        "**Interpretation.** About $68\\%$ of marbles land within $1\\,\\text{SD}$ of the mean (bin 6): bins 5, 6, 7 (covering range $6 \\pm 1.73$). About $95\\%$ land within $2\\,\\text{SD}$: bins 3–9. These are the *normal-curve* rules-of-thumb applied to the binomial.",
+        "**SD scales as $\\sqrt{n}$.** Doubling $n$ to 24 → $\\text{Var} = 6$, $\\text{SD} = \\sqrt{6} \\approx 2.45$. The histogram widens *absolutely* as $n$ grows, but more slowly than $n$ itself ($\\sqrt{n}$ growth)."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q14",
+      "type": "multiple-choice",
+      "prompt": "As n (the number of rows) grows large, what happens to the SHAPE of the Galton-board histogram (suitably rescaled)?",
+      "choices": [
+        "It becomes flatter and more uniform",
+        "It collapses to a spike at the mean",
+        "It approaches a normal (bell) curve — the Central Limit Theorem in action",
+        "It stays exactly binomial and never changes shape"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Each marble's bin = sum of $n$ independent Bernoulli(1/2) trials.",
+        "Sum of many independent bounded random variables → normal (CLT).",
+        "The Galton board is the textbook visual of the CLT."
+      ],
+      "explanation": "The Central Limit Theorem: the sum of $n$ independent, identically distributed bounded random variables, suitably rescaled, approaches a normal distribution as $n \\to \\infty$. Each marble's bin is exactly such a sum (of $n$ Bernoulli(1/2) trials), so the histogram approaches the bell curve. The Galton board is the canonical *physical demonstration* of the CLT.",
+      "steps": [
+        "**Recall the Central Limit Theorem.** For iid random variables $X_1, \\ldots, X_n$ with mean $\\mu$ and variance $\\sigma^2$: $\\sqrt{n}\\left(\\overline{X} - \\mu\\right) \\to \\text{Normal}(0, \\sigma^2)$ in distribution.",
+        "**Galton board fits the hypothesis.** Each peg's bounce is iid Bernoulli(1/2), $\\mu = 1/2$, $\\sigma^2 = 1/4$.",
+        "**Apply.** As $n$ grows, the binomial histogram becomes increasingly bell-shaped. For $n = 12$ already the resemblance is striking; for $n = 50$ it's essentially indistinguishable from a normal curve.",
+        "**Why this matters far beyond Galton boards.** The CLT explains why so many real-world quantities (heights, measurement errors, test scores, particle positions) follow bell curves: they are *sums of many independent small contributions*. The Galton board is one mechanical realization of this universal pattern."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q15",
+      "type": "numeric",
+      "promptTex": "\\text{For the 12-row board, find } P(\\text{marble lands in bins 5, 6, or 7}). \\\\ \\text{Round to 4 decimals.}",
+      "answer": 0.6123,
+      "tolerance": 0.01,
+      "hints": [
+        "Add three binomial probabilities: $P(5) + P(6) + P(7)$.",
+        "$\\binom{12}{5} = 792, \\binom{12}{6} = 924, \\binom{12}{7} = 792$.",
+        "$(792 + 924 + 792)/4096 = 2508/4096 \\approx 0.6123$."
+      ],
+      "explanation": "Sum $P(5) + P(6) + P(7) = \\dfrac{\\binom{12}{5} + \\binom{12}{6} + \\binom{12}{7}}{2^{12}} = \\dfrac{792 + 924 + 792}{4096} = \\dfrac{2508}{4096} \\approx 0.6123$. Over $60\\%$ of marbles land in just three of the thirteen bins — the steep concentration at the center is exactly what makes a Galton board look like a bell.",
+      "steps": [
+        "**Recognize the type — discrete probability range.** Sum probabilities over the three central bins.",
+        "**Compute each binomial coefficient.** $\\binom{12}{5} = 792$. $\\binom{12}{6} = 924$. $\\binom{12}{7} = 792$.",
+        "**Sum and divide.** $P = (792 + 924 + 792)/4096 = 2508/4096 \\approx 0.6123$.",
+        "**Connection to the normal-curve rule of thumb.** Bins $5, 6, 7$ span $\\pm 1$ from the mean $6$, but $\\text{SD} = \\sqrt{3} \\approx 1.73$, so this is roughly $\\pm 0.58$ SD. The normal approximation predicts $P(|Z| < 0.58) \\approx 0.44$. The discrete binomial gives $0.61$ — a bit higher because we're counting three full bins, not just the $\\pm 0.58$ slice. As $n$ grows, the discrete count and the continuous integral converge."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q16",
+      "type": "multiple-choice",
+      "prompt": "Suppose the Galton-board pegs are slightly biased — each one sends the marble right with probability 0.6 (and left with 0.4). What changes?",
+      "choices": [
+        "Nothing — the histogram is still centered at the middle bin",
+        "The histogram shifts right (mean now 0.6n), is still bell-shaped, but slightly skewed",
+        "The histogram becomes uniform",
+        "All marbles land in the rightmost bin"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Mean of $\\text{Binomial}(n, p)$ is $np$.",
+        "With $n = 12, p = 0.6$: mean shifts to $7.2$.",
+        "CLT still applies — shape remains bell-like (just shifted and slightly asymmetric for finite $n$)."
+      ],
+      "explanation": "Biased peg → biased binomial $\\text{Binomial}(n, 0.6)$. Mean shifts to $np = 7.2$. Variance: $np(1-p) = 12 \\cdot 0.6 \\cdot 0.4 = 2.88$, slightly smaller than the symmetric case. The histogram is still bell-like (CLT applies to any binomial as $n$ grows), but shifted right and somewhat asymmetric (skewed) for moderate $n$.",
+      "steps": [
+        "**Effect on mean.** For $\\text{Binomial}(n, p)$: mean $= np$. Bias shifts the center to $7.2$ instead of $6$.",
+        "**Effect on variance.** Variance $= np(1-p) = 12 \\cdot 0.6 \\cdot 0.4 = 2.88$ (vs $3$ for fair pegs). Asymmetric pegs slightly narrow the distribution.",
+        "**Shape.** Still approximately bell-shaped by the CLT, but with mild skew for moderate $n$. (Skew $\\to 0$ as $n \\to \\infty$.)",
+        "**Pattern lesson — the CLT is forgiving.** Even biased independent additions give bell-like aggregates. The CLT requires only iid and finite variance, NOT symmetric per-step distributions. This is why so many real-world phenomena look bell-shaped, even when underlying choices aren't 50/50."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q17",
+      "type": "multiple-choice",
+      "prompt": "What familiar mathematical object is exactly the same as a Galton-board path?",
+      "choices": [
+        "An arithmetic sequence",
+        "A simple random walk on the integers (each step ±1 with probability 1/2)",
+        "A geometric progression",
+        "A Markov chain with state-dependent transition probabilities"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Reinterpret 'left' as step $-1$ and 'right' as step $+1$.",
+        "Position after $n$ steps = $2 \\cdot (\\text{# rights}) - n$ — a one-dimensional walk on integers."
+      ],
+      "explanation": "A Galton-board path IS a simple random walk: each step is $\\pm 1$ (left or right) with equal probability. The final bin maps linearly to walk position: bin $k$ ↔ position $2k - n$. So the Galton board is just a random walk visualized vertically.",
+      "steps": [
+        "**Recode the steps.** Bounce right = step $+1$. Bounce left = step $-1$. Each peg = independent ±1 with probability $1/2$.",
+        "**Total walk distance.** After $n$ steps with $k$ rights and $n-k$ lefts, position is $+k - (n-k) = 2k - n$. Bin $k$ corresponds to position $2k - n$ on the integer line.",
+        "**Bijection.** Random walks of length $n$ ↔ paths through an $n$-row Galton board, exactly.",
+        "**Why this connection matters.** Random walks are a fundamental object: Brownian motion (continuous limit), gambler's ruin, diffusion processes in physics, search algorithms in CS, stock-price models in finance. The Galton board's CLT-shape is the same reason Brownian motion has Gaussian increments — once you spot the connection, the math transfers."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q18",
+      "type": "multiple-choice",
+      "prompt": "Two facts about the bin distribution: (a) each individual path is equally likely (probability 1/2^n). (b) the center bin is hundreds of times more likely than the edge bins. How can both be true?",
+      "choices": [
+        "Contradiction — one must be wrong",
+        "Equal-path probability doesn't mean equal-BIN probability; the center has many more paths leading to it, so the probabilities pile up",
+        "Path probabilities aren't really equal — pegs near the middle are 'easier'",
+        "Galton boards violate basic probability"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$2^n$ total paths, each with probability $1/2^n$ → individual paths equal.",
+        "Bin $k$ contains $\\binom{n}{k}$ of those paths.",
+        "$P(\\text{bin } k) = \\binom{n}{k}/2^n$ — paths add, since they're disjoint."
+      ],
+      "explanation": "Both facts are simultaneously true and consistent. Each of $2^n$ distinct paths has probability $1/2^n$ (equal). Bins differ because they pool different *numbers* of paths: bin $k$ gets $\\binom{n}{k}$ paths. Center bins pool many paths (large $\\binom{n}{k}$), edge bins pool just one. $P(\\text{bin}) = (\\text{paths to bin}) \\times (\\text{probability per path}) = \\binom{n}{k}/2^n$. No contradiction — outcomes and aggregates are different things.",
+      "steps": [
+        "**Carefully distinguish 'path' and 'bin'.** A path is a specific sequence of $n$ L/R choices. A bin is a *set* of paths that share the same number of R's.",
+        "**All paths equally likely.** Independence + Bernoulli(1/2) → every specific path has probability $(1/2)^n = 1/2^n$.",
+        "**Bins pool paths.** Bin $k$ contains $\\binom{n}{k}$ distinct paths. They're disjoint (no path is in two bins), so $P(\\text{bin } k) = \\binom{n}{k} \\cdot \\dfrac{1}{2^n} = \\dfrac{\\binom{n}{k}}{2^n}$.",
+        "**Why edges seem rare.** Bin 0 has just *one* path (all-left); bin 6 (center, for $n=12$) has $924$ paths. Same per-path probability, $924\\times$ more pooling — that's where the discrepancy comes from.",
+        "**Pattern lesson.** Probability of a *category* ≠ probability of a *specific outcome*. When categories pool different numbers of equally-likely atomic outcomes, the category probabilities can vary wildly. Crucial conceptual distinction throughout probability and combinatorics."
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

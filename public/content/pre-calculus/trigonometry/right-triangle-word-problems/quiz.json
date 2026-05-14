@@ -1,0 +1,588 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{A } 12\\text{-foot ladder leans against a wall, making a } 70° \\text{ angle} \\\\ \\text{with the ground. How high up the wall does it reach?} \\\\ \\text{(Round to 2 decimals; use } \\sin 70° \\approx 0.940 \\text{)}",
+      "answer": 11.28,
+      "tolerance": 0.1,
+      "hints": [
+        "Sketch: ladder = hypotenuse, wall height = opposite, angle is at the base.",
+        "Wall height $= $ ladder $\\cdot \\sin\\theta$."
+      ],
+      "explanation": "$h = 12 \\sin 70° \\approx 12 \\cdot 0.940 \\approx 11.28$ ft.",
+      "steps": [
+        "Sketch a right triangle: ladder is the hypotenuse, wall is the vertical leg, ground is the horizontal leg. The $70°$ angle is between the ladder and the ground.",
+        "Identify what's known/unknown: hypotenuse $= 12$, want the **opposite** side (wall height $h$).",
+        "opp + hyp + angle → use **sine**: $$\\sin 70° = \\dfrac{h}{12}$$",
+        "Multiply both sides by $12$: $$h = 12 \\sin 70°$$",
+        "Plug in $\\sin 70° \\approx 0.940$: $$h \\approx 12 \\cdot 0.940 \\approx 11.28 \\text{ ft}$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{A } 15\\text{-foot ladder leans against a wall. Its base is } 5 \\text{ feet} \\\\ \\text{from the wall. What angle does the ladder make with the ground} \\\\ \\text{(round to nearest 0.1°)?}",
+      "answer": 70.5,
+      "tolerance": 0.5,
+      "hints": [
+        "Ground distance is the adjacent side, ladder is the hypotenuse.",
+        "$\\cos\\theta = \\dfrac{5}{15} = \\dfrac{1}{3}$, then $\\theta = \\cos^{-1}(1/3)$."
+      ],
+      "explanation": "$\\theta = \\cos^{-1}(5/15) = \\cos^{-1}(1/3) \\approx 70.53°$.",
+      "steps": [
+        "Sketch: ladder $= 15$ (hyp), ground distance $= 5$ (adjacent to the angle of inclination).",
+        "Two sides involved: adjacent + hypotenuse → use **cosine**.",
+        "Set up: $$\\cos\\theta = \\dfrac{5}{15} = \\dfrac{1}{3}$$",
+        "Take inverse cosine: $$\\theta = \\cos^{-1}\\!\\left(\\dfrac{1}{3}\\right)$$",
+        "Compute: $$\\theta \\approx 70.53°$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{A ladder reaches } 8 \\text{ feet up a wall and makes a } 60° \\text{ angle} \\\\ \\text{with the ground. How long is the ladder?} \\\\ \\text{(Round to 2 decimals.)}",
+      "answer": 9.24,
+      "tolerance": 0.05,
+      "hints": [
+        "Wall height = opposite = 8. Ladder = hypotenuse = unknown.",
+        "$\\sin 60° = \\dfrac{8}{L}$, so $L = \\dfrac{8}{\\sin 60°} = \\dfrac{8}{\\sqrt{3}/2} = \\dfrac{16}{\\sqrt{3}}$."
+      ],
+      "explanation": "$L = \\dfrac{8}{\\sin 60°} = \\dfrac{16}{\\sqrt{3}} = \\dfrac{16\\sqrt{3}}{3} \\approx 9.24$ ft.",
+      "steps": [
+        "Identify: wall height $= 8$ (opposite), angle $= 60°$, want **ladder** (hypotenuse).",
+        "opp + hyp + angle → sine: $$\\sin 60° = \\dfrac{8}{L}$$",
+        "Solve for $L$: $$L = \\dfrac{8}{\\sin 60°}$$",
+        "Substitute $\\sin 60° = \\dfrac{\\sqrt{3}}{2}$: $$L = \\dfrac{8}{\\sqrt{3}/2} = \\dfrac{16}{\\sqrt{3}} = \\dfrac{16\\sqrt{3}}{3}$$",
+        "Decimal: $$L \\approx \\dfrac{16 \\cdot 1.732}{3} \\approx 9.24 \\text{ ft}$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{A } 20\\text{-foot ladder is placed against a building. The base must be} \\\\ 4 \\text{ feet from the building (safety code). How high up the building} \\\\ \\text{does the ladder reach? (Round to 2 decimals.)}",
+      "answer": 19.6,
+      "tolerance": 0.1,
+      "hints": [
+        "Two sides known (ladder + ground), no angle. Use the Pythagorean theorem!",
+        "$h = \\sqrt{20^2 - 4^2} = \\sqrt{400 - 16} = \\sqrt{384}$."
+      ],
+      "explanation": "$h = \\sqrt{20^2 - 4^2} = \\sqrt{384} \\approx 19.60$ ft.",
+      "steps": [
+        "Identify: ladder $= 20$ (hyp), ground distance $= 4$ (adj), want wall height (opp). No angle is given — and you don't need one.",
+        "Two sides + right angle → **Pythagorean theorem**: $$h^2 + 4^2 = 20^2$$",
+        "Solve: $$h^2 = 400 - 16 = 384$$",
+        "$$h = \\sqrt{384} \\approx 19.60 \\text{ ft}$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{A ladder rests against a wall at an angle of } 75° \\text{ with the ground.} \\\\ \\text{The base of the ladder is } 3 \\text{ feet from the wall.} \\\\ \\text{How long is the ladder? (Use } \\cos 75° \\approx 0.259 \\text{; round to 2 decimals.)}",
+      "answer": 11.59,
+      "tolerance": 0.1,
+      "hints": [
+        "Ground distance = adjacent = 3, ladder = hypotenuse = unknown.",
+        "$\\cos 75° = \\dfrac{3}{L}$, so $L = \\dfrac{3}{\\cos 75°}$."
+      ],
+      "explanation": "$L = \\dfrac{3}{\\cos 75°} \\approx \\dfrac{3}{0.259} \\approx 11.58$ ft.",
+      "steps": [
+        "Identify: angle $= 75°$, ground distance $= 3$ (adjacent), want ladder (hypotenuse).",
+        "adj + hyp + angle → **cosine**: $$\\cos 75° = \\dfrac{3}{L}$$",
+        "Multiply both sides by $L$: $$L \\cos 75° = 3$$",
+        "Divide by $\\cos 75°$: $$L = \\dfrac{3}{\\cos 75°}$$",
+        "Plug in $\\cos 75° \\approx 0.259$: $$L \\approx \\dfrac{3}{0.259} \\approx 11.59 \\text{ ft}$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{A } 25\\text{-foot ladder leans against a wall, reaching } 24 \\text{ feet up. } \\\\ \\text{What angle does the ladder make with the ground (round to nearest 0.1°)?}",
+      "answer": 73.7,
+      "tolerance": 0.5,
+      "hints": [
+        "Wall height = opposite = 24, ladder = hypotenuse = 25.",
+        "$\\sin\\theta = \\dfrac{24}{25}$. Then $\\theta = \\sin^{-1}(24/25)$."
+      ],
+      "explanation": "$\\theta = \\sin^{-1}(24/25) = \\sin^{-1}(0.96) \\approx 73.74°$.",
+      "steps": [
+        "Identify: ladder $= 25$ (hyp), wall height $= 24$ (opposite), want the angle with the ground.",
+        "opp + hyp → **sine**: $$\\sin\\theta = \\dfrac{24}{25} = 0.96$$",
+        "Take inverse sine: $$\\theta = \\sin^{-1}(0.96)$$",
+        "Compute: $$\\theta \\approx 73.74°$$",
+        "(This is the larger acute angle of a $7$–$24$–$25$ Pythagorean triple.)"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{A guy wire is attached to the top of a } 24\\text{-foot pole and to a stake} \\\\ 7 \\text{ feet from the base of the pole. How long is the wire?}",
+      "answer": 25,
+      "tolerance": 0.05,
+      "hints": [
+        "Right triangle with legs $24$ and $7$ — wire is the hypotenuse.",
+        "$L = \\sqrt{24^2 + 7^2}$."
+      ],
+      "explanation": "$L = \\sqrt{576 + 49} = \\sqrt{625} = 25$ ft. (A $7$-$24$-$25$ Pythagorean triple.)",
+      "steps": [
+        "Sketch: pole vertical (length $24$), ground horizontal (length $7$), wire from the top of the pole to the stake — that's the hypotenuse.",
+        "Two legs known, no angle → Pythagorean theorem: $$L^2 = 24^2 + 7^2$$",
+        "Compute: $$L^2 = 576 + 49 = 625$$",
+        "$$L = \\sqrt{625} = 25 \\text{ ft}$$",
+        "(This is the $7$-$24$-$25$ Pythagorean triple — worth recognizing.)"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{A guy wire makes a } 65° \\text{ angle with the ground and is anchored} \\\\ 12 \\text{ feet from the base of a tower. How tall is the attachment point} \\\\ \\text{on the tower? (Use } \\tan 65° \\approx 2.145 \\text{; round to 2 decimals.)}",
+      "answer": 25.74,
+      "tolerance": 0.2,
+      "hints": [
+        "Pole height = opposite = unknown. Ground distance = adjacent = 12.",
+        "Two legs of the right triangle → use tangent: height $= 12 \\cdot \\tan 65°$."
+      ],
+      "explanation": "$h = 12 \\tan 65° \\approx 12 \\cdot 2.145 \\approx 25.74$ ft.",
+      "steps": [
+        "Identify: angle $= 65°$ (with ground), ground distance $= 12$ (adjacent), want pole height (opposite).",
+        "Two legs in play (no hypotenuse) → **tangent**: $$\\tan 65° = \\dfrac{h}{12}$$",
+        "Multiply both sides by $12$: $$h = 12 \\tan 65°$$",
+        "Plug in $\\tan 65° \\approx 2.145$: $$h \\approx 12 \\cdot 2.145 \\approx 25.74 \\text{ ft}$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{A } 50\\text{-foot guy wire is attached to a tower at a height of} \\\\ 40 \\text{ feet. What angle does the wire make with the ground} \\\\ \\text{(round to nearest 0.1°)?}",
+      "answer": 53.1,
+      "tolerance": 0.5,
+      "hints": [
+        "Wire = hypotenuse = 50, attachment height = opposite = 40.",
+        "$\\sin\\theta = \\dfrac{40}{50} = \\dfrac{4}{5}$, then $\\theta = \\sin^{-1}(0.8)$."
+      ],
+      "explanation": "$\\theta = \\sin^{-1}(40/50) = \\sin^{-1}(0.8) \\approx 53.13°$.",
+      "steps": [
+        "Identify: wire (hyp) $= 50$, height (opp) $= 40$, want the angle with the ground.",
+        "opp + hyp → **sine**: $$\\sin\\theta = \\dfrac{40}{50} = \\dfrac{4}{5} = 0.8$$",
+        "Take inverse sine: $$\\theta = \\sin^{-1}(0.8) \\approx 53.13°$$",
+        "(This is the $3$-$4$-$5$ triangle — its angle opposite the leg of length $4$.)"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{A guy wire makes a } 50° \\text{ angle with the ground and reaches } 18 \\text{ feet} \\\\ \\text{up a pole. How long is the wire? (Use } \\sin 50° \\approx 0.766 \\text{; round to 2 decimals.)}",
+      "answer": 23.5,
+      "tolerance": 0.2,
+      "hints": [
+        "Pole height = opposite = 18, wire = hypotenuse = unknown.",
+        "$\\sin 50° = \\dfrac{18}{L}$, so $L = \\dfrac{18}{\\sin 50°}$."
+      ],
+      "explanation": "$L = \\dfrac{18}{\\sin 50°} \\approx \\dfrac{18}{0.766} \\approx 23.50$ ft.",
+      "steps": [
+        "Identify: angle $= 50°$, height (opp) $= 18$, want **wire** (hyp).",
+        "opp + hyp + angle → **sine**: $$\\sin 50° = \\dfrac{18}{L}$$",
+        "Solve for $L$: multiply both sides by $L$, then divide by $\\sin 50°$: $$L = \\dfrac{18}{\\sin 50°}$$",
+        "Plug in $\\sin 50° \\approx 0.766$: $$L \\approx \\dfrac{18}{0.766} \\approx 23.50 \\text{ ft}$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{A } 100\\text{-foot tall radio antenna has a guy wire that makes a } 60° \\\\ \\text{angle with the ground. The wire is attached to the top of the antenna.} \\\\ \\text{How far from the base of the antenna is the wire anchored} \\\\ \\text{(round to 2 decimals)?}",
+      "answer": 57.74,
+      "tolerance": 0.2,
+      "hints": [
+        "Tower (opposite) = 100, ground distance (adjacent) = unknown.",
+        "$\\tan 60° = \\dfrac{100}{d}$, so $d = \\dfrac{100}{\\tan 60°} = \\dfrac{100}{\\sqrt{3}}$."
+      ],
+      "explanation": "$d = \\dfrac{100}{\\tan 60°} = \\dfrac{100}{\\sqrt{3}} \\approx 57.74$ ft.",
+      "steps": [
+        "Identify: angle $= 60°$, opposite (tower height) $= 100$, want adjacent (ground distance).",
+        "Two legs, no hypotenuse → **tangent**: $$\\tan 60° = \\dfrac{100}{d}$$",
+        "Solve for $d$: $$d = \\dfrac{100}{\\tan 60°}$$",
+        "Substitute $\\tan 60° = \\sqrt{3}$: $$d = \\dfrac{100}{\\sqrt{3}} = \\dfrac{100\\sqrt{3}}{3}$$",
+        "Decimal: $$d \\approx \\dfrac{100 \\cdot 1.732}{3} \\approx 57.74 \\text{ ft}$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\text{A } 65\\text{-foot guy wire is anchored } 25 \\text{ feet from the base of a tower.} \\\\ \\text{What height on the tower is the wire attached to (round to 2 decimals)?}",
+      "answer": 60,
+      "tolerance": 0.1,
+      "hints": [
+        "Wire = hypotenuse = 65, ground distance = adjacent = 25.",
+        "Use Pythagorean: $h = \\sqrt{65^2 - 25^2} = \\sqrt{4225 - 625} = \\sqrt{3600}$."
+      ],
+      "explanation": "$h = \\sqrt{65^2 - 25^2} = \\sqrt{3600} = 60$ ft. (A $25$-$60$-$65$ — a $5$-$12$-$13$ scaled by 5.)",
+      "steps": [
+        "Identify: wire (hyp) $= 65$, ground distance (adj) $= 25$, want pole height (opp).",
+        "Two sides + right angle → Pythagorean theorem: $$h^2 + 25^2 = 65^2$$",
+        "Solve: $$h^2 = 4225 - 625 = 3600$$",
+        "$$h = \\sqrt{3600} = 60 \\text{ ft}$$",
+        "(Pattern check: $25, 60, 65 = 5 \\cdot (5, 12, 13)$. ✓)"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q13",
+      "type": "numeric",
+      "promptTex": "\\text{From a point on the ground } 50 \\text{ meters from the base of a building,} \\\\ \\text{the angle of elevation to the top of the building is } 38°. \\\\ \\text{How tall is the building? (Use } \\tan 38° \\approx 0.781 \\text{; round to 2 decimals.)}",
+      "answer": 39.07,
+      "tolerance": 0.2,
+      "hints": [
+        "Sketch: horizontal distance (adjacent) = 50, height (opposite) = unknown.",
+        "Two legs → tangent. $h = 50 \\tan 38°$."
+      ],
+      "explanation": "$h = 50 \\tan 38° \\approx 50 \\cdot 0.781 \\approx 39.06$ m.",
+      "steps": [
+        "Sketch the picture: you stand 50 m from the building, look up at $38°$. The right triangle has horizontal leg (ground distance) $50$ and vertical leg (height) $h$.",
+        "Identify which sides: adjacent $= 50$, opposite $= h$. Two legs → **tangent**.",
+        "Set up: $$\\tan 38° = \\dfrac{h}{50}$$",
+        "Solve for $h$: $$h = 50 \\tan 38°$$",
+        "Plug in $\\tan 38° \\approx 0.781$: $$h \\approx 50 \\cdot 0.781 \\approx 39.07 \\text{ m}$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q14",
+      "type": "numeric",
+      "promptTex": "\\text{A bird sits on top of a tree. From a point } 30 \\text{ m away on the ground,} \\\\ \\text{the angle of elevation to the bird is } 25°. \\\\ \\text{How high above the ground is the bird?} \\\\ \\text{(Use } \\tan 25° \\approx 0.466 \\text{; round to 2 decimals.)}",
+      "answer": 13.99,
+      "tolerance": 0.1,
+      "hints": [
+        "Adjacent = 30 (ground distance), opposite = bird's height.",
+        "$h = 30 \\tan 25°$."
+      ],
+      "explanation": "$h = 30 \\tan 25° \\approx 30 \\cdot 0.466 \\approx 13.99$ m.",
+      "steps": [
+        "Sketch: ground distance $30$ m (adjacent), bird height $h$ (opposite), elevation angle $25°$.",
+        "Two legs → **tangent**: $$\\tan 25° = \\dfrac{h}{30}$$",
+        "Multiply both sides by $30$: $$h = 30 \\tan 25°$$",
+        "Plug in $\\tan 25° \\approx 0.466$: $$h \\approx 30 \\cdot 0.466 \\approx 13.99 \\text{ m}$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q15",
+      "type": "numeric",
+      "promptTex": "\\text{From the top of a } 75\\text{-meter cliff, the angle of depression to a boat} \\\\ \\text{at sea is } 22°. \\text{ How far is the boat from the base of the cliff?} \\\\ \\text{(Use } \\tan 22° \\approx 0.404 \\text{; round to 2 decimals.)}",
+      "answer": 185.64,
+      "tolerance": 0.5,
+      "hints": [
+        "The angle of depression from the top equals the angle of elevation from the boat (alternate interior angles).",
+        "Cliff height (opposite) = 75, distance (adjacent) = unknown. $\\tan 22° = \\dfrac{75}{d}$."
+      ],
+      "explanation": "$d = \\dfrac{75}{\\tan 22°} \\approx \\dfrac{75}{0.404} \\approx 185.64$ m.",
+      "steps": [
+        "Sketch: cliff is vertical (height $75$), boat is on water some horizontal distance $d$ away. From the top of the cliff the line of sight goes down to the boat at $22°$ below horizontal.",
+        "By alternate interior angles, the angle of elevation from the boat back up to the cliff-top is also $22°$. This gives a right triangle with: opposite $= 75$, adjacent $= d$, angle $= 22°$.",
+        "Two legs → **tangent**: $$\\tan 22° = \\dfrac{75}{d}$$",
+        "Solve for $d$: $$d = \\dfrac{75}{\\tan 22°}$$",
+        "Plug in $\\tan 22° \\approx 0.404$: $$d \\approx \\dfrac{75}{0.404} \\approx 185.64 \\text{ m}$$"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q16",
+      "type": "numeric",
+      "promptTex": "\\text{An airplane is flying at an altitude of } 2000 \\text{ feet. The pilot spots} \\\\ \\text{a runway with an angle of depression of } 15°. \\\\ \\text{What is the horizontal distance from the plane to the runway?} \\\\ \\text{(Use } \\tan 15° \\approx 0.268 \\text{; round to nearest foot.)}",
+      "answer": 7463,
+      "tolerance": 30,
+      "hints": [
+        "Altitude (opposite) = 2000, distance (adjacent) = unknown.",
+        "$\\tan 15° = \\dfrac{2000}{d}$."
+      ],
+      "explanation": "$d = \\dfrac{2000}{\\tan 15°} \\approx \\dfrac{2000}{0.268} \\approx 7463$ ft.",
+      "steps": [
+        "Sketch: altitude $= 2000$ ft (opposite), horizontal distance to runway $= d$ (adjacent), depression angle $= 15°$.",
+        "Two legs → tangent: $$\\tan 15° = \\dfrac{2000}{d}$$",
+        "Solve for $d$: $$d = \\dfrac{2000}{\\tan 15°}$$",
+        "Plug in $\\tan 15° \\approx 0.268$: $$d \\approx \\dfrac{2000}{0.268} \\approx 7463 \\text{ ft}$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q17",
+      "type": "numeric",
+      "promptTex": "\\text{A } 6\\text{-foot person casts a shadow that is } 8 \\text{ feet long.} \\\\ \\text{What is the angle of elevation of the sun} \\\\ \\text{(round to nearest 0.1°)?}",
+      "answer": 36.9,
+      "tolerance": 0.3,
+      "hints": [
+        "Person's height = opposite = 6, shadow length = adjacent = 8.",
+        "$\\tan\\theta = \\dfrac{6}{8} = 0.75$, then $\\theta = \\tan^{-1}(0.75)$."
+      ],
+      "explanation": "$\\theta = \\tan^{-1}(6/8) = \\tan^{-1}(0.75) \\approx 36.87°$.",
+      "steps": [
+        "Sketch: person stands vertically (height $6$), shadow lies on the ground (length $8$). The sun's rays make an angle with the ground equal to the angle of elevation.",
+        "In the right triangle: opposite (person's height) $= 6$, adjacent (shadow) $= 8$, want the angle.",
+        "Two legs → tangent: $$\\tan\\theta = \\dfrac{6}{8} = 0.75$$",
+        "Inverse tangent: $$\\theta = \\tan^{-1}(0.75)$$",
+        "Compute: $$\\theta \\approx 36.87°$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q18",
+      "type": "numeric",
+      "promptTex": "\\text{From the top of a tower, the angle of depression to point A is } 30°. \\\\ \\text{Point A is } 100 \\text{ m from the base of the tower.} \\\\ \\text{How tall is the tower?} \\\\ \\text{(Use exact value of } \\tan 30°; \\text{ round to 2 decimals.)}",
+      "answer": 57.74,
+      "tolerance": 0.2,
+      "hints": [
+        "Angle of depression at the top = angle of elevation at point A (both $30°$).",
+        "Adjacent = 100, opposite = h. $h = 100 \\tan 30°$."
+      ],
+      "explanation": "$h = 100 \\tan 30° = 100 \\cdot \\dfrac{1}{\\sqrt{3}} = \\dfrac{100}{\\sqrt{3}} \\approx 57.74$ m.",
+      "steps": [
+        "Sketch: tower height $h$, ground distance $100$ to point A, angle of depression $30°$ from the top.",
+        "Equivalent angle of elevation from A is $30°$. Right triangle: opposite $= h$, adjacent $= 100$.",
+        "Two legs → tangent: $$\\tan 30° = \\dfrac{h}{100}$$",
+        "Solve: $$h = 100 \\tan 30°$$",
+        "Use $\\tan 30° = \\dfrac{1}{\\sqrt{3}} = \\dfrac{\\sqrt{3}}{3}$: $$h = \\dfrac{100\\sqrt{3}}{3}$$",
+        "Decimal: $$h \\approx \\dfrac{100 \\cdot 1.732}{3} \\approx 57.74 \\text{ m}$$"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the three-figure bearing of due East?}",
+      "choices": [
+        "000°",
+        "090°",
+        "180°",
+        "270°"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Three-figure bearings are measured clockwise from North.",
+        "Going 90° clockwise from North gets you to East."
+      ],
+      "explanation": "Bearings: N = 000°, E = 090°, S = 180°, W = 270°.",
+      "steps": [
+        "Three-figure bearings count **clockwise from North**.",
+        "North is 000° (the reference).",
+        "90° clockwise from North = **East = 090°**.",
+        "(Continuing: 180° = South, 270° = West, then back to 360°/000° = North.)"
+      ],
+      "id": "q19",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Convert the compass bearing N 30° E to a three-figure bearing.}",
+      "choices": [
+        "030°",
+        "060°",
+        "150°",
+        "330°"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "N 30° E means 30° east of due North.",
+        "Three-figure bearings start at North and count clockwise."
+      ],
+      "explanation": "N 30° E = 30° clockwise from North = 030°.",
+      "steps": [
+        "N 30° E means **starting at North and rotating 30° toward East**.",
+        "Three-figure bearings also start at North and count clockwise.",
+        "Same starting point, same direction of rotation, same magnitude → bearing is **030°**."
+      ],
+      "id": "q20",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Convert the compass bearing S 45° W to a three-figure bearing.}",
+      "choices": [
+        "045°",
+        "135°",
+        "225°",
+        "315°"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Start at North (000°), go clockwise to South (180°), then continue 45° more toward West.",
+        "180° + 45° = ?"
+      ],
+      "explanation": "S 45° W is 180° (south) + 45° (more clockwise toward west) = 225°.",
+      "steps": [
+        "S 45° W means starting at South and rotating 45° toward West.",
+        "In three-figure bearings, South is **180°**.",
+        "Rotating further clockwise (toward West) adds: 180° + 45° = **225°**.",
+        "(Continuing past 270° would be north of due west; we stop at 225° in the SW.)"
+      ],
+      "id": "q21",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A plane flies on a bearing of } 070° \\text{ for } 200 \\text{ km.} \\\\ \\text{How far east of its starting point is it (round to 2 decimals)?} \\\\ \\text{(Use } \\sin 70° \\approx 0.940 \\text{)}",
+      "answer": 187.94,
+      "tolerance": 1,
+      "hints": [
+        "Bearing 070° = 70° clockwise from North.",
+        "East displacement = total distance × sin(bearing). Why? The east leg is opposite the angle from North."
+      ],
+      "explanation": "East displacement = 200 sin 70° ≈ 200 × 0.940 ≈ 187.94 km.",
+      "steps": [
+        "Sketch: North up, East right. The plane's path is at 070° (clockwise from North) — i.e., 70° east of due North.",
+        "Decompose the path into east and north components — a right triangle.",
+        "The east leg is **opposite** the 70° angle (measured at the start, between the path and the North axis).",
+        "opposite + hypotenuse + angle → sine: $$\\sin 70° = \\dfrac{\\text{east}}{200}$$",
+        "Solve: $$\\text{east} = 200 \\sin 70° \\approx 200 \\cdot 0.940 \\approx 187.94 \\text{ km}$$"
+      ],
+      "id": "q22",
+      "difficulty": "hard"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A boat sails } 12 \\text{ km due East, then } 9 \\text{ km due North.} \\\\ \\text{How far is it from the starting point?}",
+      "answer": 15,
+      "tolerance": 0.05,
+      "hints": [
+        "Two perpendicular legs → right triangle, Pythagorean theorem.",
+        "$\\sqrt{12^2 + 9^2} = ?$"
+      ],
+      "explanation": "Distance = √(12² + 9²) = √(144 + 81) = √225 = 15 km. (A 3-4-5 triple scaled by 3.)",
+      "steps": [
+        "East and North are perpendicular — the two legs form a right angle at the turning point.",
+        "Apply the Pythagorean theorem: $$d^2 = 12^2 + 9^2 = 144 + 81 = 225$$",
+        "$$d = \\sqrt{225} = 15 \\text{ km}$$",
+        "(This is the 9-12-15 = 3 · (3-4-5) triple.)"
+      ],
+      "id": "q23",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A hiker walks on a bearing of } 050° \\text{ for } 4 \\text{ km.} \\\\ \\text{How far north of the start is she (round to 2 decimals)?} \\\\ \\text{(Use } \\cos 50° \\approx 0.643 \\text{)}",
+      "answer": 2.57,
+      "tolerance": 0.05,
+      "hints": [
+        "Bearing 050° = 50° east of North.",
+        "North displacement = distance × cos(bearing). The north leg is adjacent to the bearing angle (measured from North)."
+      ],
+      "explanation": "North displacement = 4 cos 50° ≈ 4 × 0.643 ≈ 2.57 km.",
+      "steps": [
+        "Sketch: hiker's path goes 050° (50° east of North).",
+        "The right triangle has hypotenuse 4 (path length), with the angle measured **from the North axis**.",
+        "North leg is **adjacent** to that angle, east leg is opposite.",
+        "adj + hyp + angle → cosine: $$\\cos 50° = \\dfrac{\\text{north}}{4}$$",
+        "$$\\text{north} = 4 \\cos 50° \\approx 4 \\cdot 0.643 \\approx 2.57 \\text{ km}$$"
+      ],
+      "id": "q24",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q25",
+      "type": "numeric",
+      "promptTex": "\\text{From a boat at sea, the angle of elevation to the top of an 80 m lighthouse is } 25°. \\\\ \\text{How far is the boat from the base of the lighthouse? (Round to nearest meter.)} \\\\ \\text{Use } \\tan 25° \\approx 0.466.",
+      "answer": 172,
+      "tolerance": 2,
+      "hints": [
+        "The lighthouse is vertical; the sea line is horizontal — that's your right angle.",
+        "Opposite = 80 (lighthouse height). Adjacent = distance to base. Angle at the boat = 25°. Two legs → tangent."
+      ],
+      "explanation": "$\\tan 25° = \\dfrac{80}{d} \\Rightarrow d = \\dfrac{80}{\\tan 25°} \\approx \\dfrac{80}{0.466} \\approx 172$ m.",
+      "steps": [
+        {
+          "text": "**Draw the scene.** The lighthouse rises vertically from the sea. The boat looks up at the top at 25°. The right angle is at the lighthouse's base where the wall meets the sea."
+        },
+        {
+          "svg": "<svg viewBox='0 0 260 170' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='130' width='260' height='40' fill='#dbeafe'/><line x1='0' y1='130' x2='260' y2='130' stroke='#3b82f6' stroke-width='1.5'/><rect x='210' y='42' width='22' height='88' fill='#f8fafc' stroke='#1e293b' stroke-width='1.5'/><rect x='205' y='34' width='32' height='10' fill='#dc2626'/><circle cx='221' cy='30' r='3' fill='#fde68a'/><path d='M 30 132 L 70 132 L 64 142 L 36 142 Z' fill='#92400e' stroke='#1e293b' stroke-width='1.2'/><line x1='50' y1='132' x2='50' y2='112' stroke='#1e293b' stroke-width='1.5'/><polygon points='50,112 68,128 50,128' fill='#fef3c7' stroke='#1e293b' stroke-width='1'/><line x1='52' y1='132' x2='210' y2='42' stroke='#dc2626' stroke-width='2'/><line x1='52' y1='132' x2='210' y2='132' stroke='#475569' stroke-width='1.5' stroke-dasharray='4 3'/><line x1='210' y1='42' x2='210' y2='132' stroke='#475569' stroke-width='1.5' stroke-dasharray='4 3'/><rect x='200' y='122' width='10' height='10' fill='none' stroke='#1e293b' stroke-width='1.2'/><path d='M 78 132 A 28 28 0 0 0 75 122' fill='none' stroke='#dc2626' stroke-width='1.5'/><text x='82' y='128' font-size='12' fill='#dc2626' font-weight='700'>25°</text><text x='131' y='148' font-size='12' text-anchor='middle'>d = ?</text><text x='218' y='90' font-size='12'>80 m</text></svg>"
+        },
+        {
+          "text": "**Identify the sides.** From the boat's 25° angle: opposite = 80 (the lighthouse height), adjacent = $d$ (what we want). Two legs of the triangle — use **tangent**."
+        },
+        {
+          "math": "\\tan 25° = \\dfrac{\\text{opposite}}{\\text{adjacent}} = \\dfrac{80}{d}"
+        },
+        {
+          "text": "**Solve for $d$.** Multiply both sides by $d$, then divide by $\\tan 25°$:"
+        },
+        {
+          "math": "d = \\dfrac{80}{\\tan 25°} \\approx \\dfrac{80}{0.466} \\approx 172 \\text{ m}"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q26",
+      "type": "numeric",
+      "promptTex": "\\text{A tree casts a 12 m shadow when the sun's angle of elevation is } 35°. \\\\ \\text{How tall is the tree (round to 2 decimals)?} \\\\ \\text{Use } \\tan 35° \\approx 0.700.",
+      "answer": 8.4,
+      "tolerance": 0.05,
+      "hints": [
+        "Tree is vertical, shadow is horizontal — right angle at the tree's base.",
+        "Angle 35° is at the tip of the shadow (where the sun ray hits the ground). From there: opposite = tree height, adjacent = shadow length."
+      ],
+      "explanation": "$\\tan 35° = \\dfrac{h}{12} \\Rightarrow h = 12 \\tan 35° \\approx 12 \\cdot 0.700 = 8.40$ m.",
+      "steps": [
+        {
+          "text": "**Set up the triangle.** Three pieces: the vertical tree, the horizontal shadow, and the sun ray slanting from sun to the top of the tree. The right angle sits where the tree meets the ground."
+        },
+        {
+          "svg": "<svg viewBox='0 0 260 170' xmlns='http://www.w3.org/2000/svg'><line x1='0' y1='140' x2='260' y2='140' stroke='#92400e' stroke-width='2'/><rect x='52' y='66' width='10' height='74' fill='#78350f'/><circle cx='57' cy='58' r='22' fill='#16a34a'/><line x1='62' y1='140' x2='198' y2='140' stroke='#1e293b' stroke-width='3'/><line x1='57' y1='36' x2='198' y2='140' stroke='#fde047' stroke-width='2.5'/><circle cx='228' cy='62' r='14' fill='#fde047' stroke='#a16207' stroke-width='1.5'/><line x1='220' y1='52' x2='234' y2='40' stroke='#fde047' stroke-width='1.5'/><line x1='240' y1='62' x2='256' y2='62' stroke='#fde047' stroke-width='1.5'/><line x1='234' y1='80' x2='246' y2='90' stroke='#fde047' stroke-width='1.5'/><rect x='62' y='130' width='10' height='10' fill='none' stroke='#1e293b' stroke-width='1.2'/><path d='M 180 140 A 24 24 0 0 0 178 124' fill='none' stroke='#dc2626' stroke-width='1.5'/><text x='168' y='134' font-size='12' fill='#dc2626' font-weight='700'>35°</text><text x='130' y='156' font-size='12' text-anchor='middle'>12 m (shadow)</text><text x='14' y='100' font-size='12'>h = ?</text></svg>"
+        },
+        {
+          "text": "**Locate the 35° angle.** It's at the tip of the shadow (where the sun-ray hits the ground). From that vertex: opposite = $h$ (tree), adjacent = $12$ (shadow). Two legs → tangent."
+        },
+        {
+          "math": "\\tan 35° = \\dfrac{h}{12}"
+        },
+        {
+          "text": "**Solve.** Multiply both sides by 12:"
+        },
+        {
+          "math": "h = 12 \\tan 35° \\approx 12 \\cdot 0.700 = 8.40 \\text{ m}"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q27",
+      "type": "numeric",
+      "promptTex": "\\text{A 6 m wheelchair ramp rises at an angle of } 8° \\text{ from the ground.} \\\\ \\text{How high above the ground is the top of the ramp (round to 2 decimals)?} \\\\ \\text{Use } \\sin 8° \\approx 0.139.",
+      "answer": 0.83,
+      "tolerance": 0.02,
+      "hints": [
+        "The ramp itself is the hypotenuse (the long slanted edge). Height is the vertical leg.",
+        "Opposite (height) + hypotenuse (ramp) + angle → sine."
+      ],
+      "explanation": "$\\sin 8° = \\dfrac{h}{6} \\Rightarrow h = 6\\sin 8° \\approx 6 \\cdot 0.139 \\approx 0.83$ m.",
+      "steps": [
+        {
+          "text": "**Picture the ramp.** A slanted board, one end on the ground, the other end raised to height $h$. The board itself (6 m) is the hypotenuse; the vertical lift is the opposite side of the 8° angle."
+        },
+        {
+          "svg": "<svg viewBox='0 0 260 140' xmlns='http://www.w3.org/2000/svg'><line x1='0' y1='120' x2='260' y2='120' stroke='#92400e' stroke-width='2'/><polygon points='30,120 220,120 220,90' fill='#fed7aa' stroke='#1e293b' stroke-width='1.5'/><line x1='30' y1='120' x2='220' y2='90' stroke='#dc2626' stroke-width='2.5'/><rect x='210' y='110' width='10' height='10' fill='none' stroke='#1e293b' stroke-width='1.2'/><path d='M 56 120 A 22 22 0 0 0 55 116' fill='none' stroke='#dc2626' stroke-width='1.5'/><text x='62' y='115' font-size='12' fill='#dc2626' font-weight='700'>8°</text><text x='118' y='114' font-size='12' text-anchor='middle' fill='#dc2626' font-weight='700'>6 m</text><text x='228' y='108' font-size='12'>h = ?</text></svg>"
+        },
+        {
+          "text": "**Identify the sides.** From the 8° angle at the base: hypotenuse = 6 (ramp), opposite = $h$ (height). One side and hypotenuse → sine."
+        },
+        {
+          "math": "\\sin 8° = \\dfrac{h}{6}"
+        },
+        {
+          "text": "**Solve.** Multiply both sides by 6:"
+        },
+        {
+          "math": "h = 6\\sin 8° \\approx 6 \\cdot 0.139 \\approx 0.83 \\text{ m}"
+        }
+      ],
+      "difficulty": "easy"
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{In triangle } ABC, \\text{ you know angles } A \\text{ and } B \\text{ and side } a. \\\\ \\text{Which law solves for side } b?",
+      "choices": [
+        "Law of Sines",
+        "Law of Cosines",
+        "Pythagorean theorem",
+        "SOHCAHTOA"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "You have an angle ($A$) paired with its opposite side ($a$).",
+        "And you want another side ($b$) paired with another known angle ($B$). That's exactly the law of sines pattern."
+      ],
+      "explanation": "Two angles + one side (with one of them opposite the known side) is the AAS / ASA pattern — solve with the Law of Sines.",
+      "steps": [
+        "List what's known: angle $A$, angle $B$, side $a$.",
+        "Side $a$ is opposite angle $A$ — that's an angle/opposite-side pair. ✓",
+        "We want side $b$, which is opposite angle $B$ — another pair.",
+        "When we have angles paired with opposite sides, use **Law of Sines**: $$\\dfrac{\\sin A}{a} = \\dfrac{\\sin B}{b}$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{In triangle } ABC, \\text{ you know sides } a, b \\text{ and the included angle } C. \\\\ \\text{Which law solves for side } c?",
+      "choices": [
+        "Law of Sines",
+        "Law of Cosines",
+        "AAS rule",
+        "ASA rule"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "You don't have a complete angle/opposite-side pair (no opposite of $a$ or $b$ is known).",
+        "Two sides + included angle is the SAS pattern — Law of Cosines."
+      ],
+      "explanation": "Two sides and the angle between them (SAS) is solved by the Law of Cosines: $c^2 = a^2 + b^2 - 2ab\\cos C$.",
+      "steps": [
+        "Knowns: sides $a, b$, angle $C$ (between them).",
+        "Note: angle $C$ is **not** opposite side $a$ or $b$ — it's between them. So no usable angle/side pair exists for the law of sines.",
+        "SAS pattern → use **Law of Cosines**: $$c^2 = a^2 + b^2 - 2ab\\cos C$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{Triangle: } A = 30°, B = 45°, a = 10. \\text{ Find } b. \\\\ \\text{(Use exact values; round to 2 decimals.)}",
+      "answer": 14.14,
+      "tolerance": 0.1,
+      "hints": [
+        "Use law of sines: $\\dfrac{\\sin A}{a} = \\dfrac{\\sin B}{b}$.",
+        "Solve for $b$: $b = \\dfrac{a \\sin B}{\\sin A} = \\dfrac{10 \\sin 45°}{\\sin 30°}$."
+      ],
+      "explanation": "$b = \\dfrac{10 \\cdot \\sin 45°}{\\sin 30°} = \\dfrac{10 \\cdot \\tfrac{\\sqrt{2}}{2}}{\\tfrac{1}{2}} = 10\\sqrt{2} \\approx 14.14$.",
+      "steps": [
+        "Set up the law of sines: $$\\dfrac{\\sin A}{a} = \\dfrac{\\sin B}{b}$$",
+        "Solve for $b$: $$b = \\dfrac{a \\sin B}{\\sin A}$$",
+        "Substitute $a = 10$, $A = 30°$, $B = 45°$: $$b = \\dfrac{10 \\sin 45°}{\\sin 30°}$$",
+        "Plug in $\\sin 45° = \\tfrac{\\sqrt{2}}{2}$ and $\\sin 30° = \\tfrac{1}{2}$: $$b = \\dfrac{10 \\cdot \\tfrac{\\sqrt{2}}{2}}{\\tfrac{1}{2}} = \\dfrac{5\\sqrt{2}}{0.5} = 10\\sqrt{2}$$",
+        "Decimal: $$b \\approx 10 \\cdot 1.414 \\approx 14.14$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Triangle: } a = 8, b = 11, C = 60°. \\text{ Find side } c. \\\\ \\text{(Round to 2 decimals.)}",
+      "answer": 9.85,
+      "tolerance": 0.05,
+      "hints": [
+        "SAS — use law of cosines: $c^2 = a^2 + b^2 - 2ab\\cos C$.",
+        "$\\cos 60° = \\tfrac{1}{2}$."
+      ],
+      "explanation": "$c^2 = 64 + 121 - 2 \\cdot 8 \\cdot 11 \\cdot 0.5 = 185 - 88 = 97$, so $c = \\sqrt{97} \\approx 9.85$.",
+      "steps": [
+        "SAS pattern → law of cosines: $$c^2 = a^2 + b^2 - 2ab\\cos C$$",
+        "Substitute $a = 8$, $b = 11$, $C = 60°$: $$c^2 = 8^2 + 11^2 - 2(8)(11)\\cos 60°$$",
+        "Compute: $$c^2 = 64 + 121 - 176 \\cdot 0.5 = 185 - 88 = 97$$",
+        "$$c = \\sqrt{97} \\approx 9.85$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{Triangle with sides } a = 4, b = 5, c = 6. \\\\ \\text{Find angle } A \\text{ in degrees (round to 0.1°).}",
+      "answer": 41.4,
+      "tolerance": 0.5,
+      "hints": [
+        "SSS — use law of cosines solved for $\\cos A$.",
+        "$\\cos A = \\dfrac{b^2 + c^2 - a^2}{2bc} = \\dfrac{25 + 36 - 16}{60} = \\dfrac{45}{60}$."
+      ],
+      "explanation": "$\\cos A = \\dfrac{45}{60} = 0.75$, so $A = \\cos^{-1}(0.75) \\approx 41.41°$.",
+      "steps": [
+        "SSS pattern. Use law of cosines rearranged for the angle: $$\\cos A = \\dfrac{b^2 + c^2 - a^2}{2bc}$$",
+        "Substitute $a = 4$, $b = 5$, $c = 6$: $$\\cos A = \\dfrac{25 + 36 - 16}{2 \\cdot 5 \\cdot 6} = \\dfrac{45}{60} = 0.75$$",
+        "Take inverse cosine: $$A = \\cos^{-1}(0.75) \\approx 41.41°$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{Triangle: } A = 50°, a = 10, b = 8. \\text{ Find angle } B \\text{ (round to 0.1°).} \\\\ \\text{(Use } \\sin 50° \\approx 0.766 \\text{)}",
+      "answer": 37.8,
+      "tolerance": 0.5,
+      "hints": [
+        "Law of sines: $\\dfrac{\\sin A}{a} = \\dfrac{\\sin B}{b}$.",
+        "$\\sin B = \\dfrac{b \\sin A}{a} = \\dfrac{8 \\cdot 0.766}{10}$."
+      ],
+      "explanation": "$\\sin B = \\dfrac{8 \\cdot 0.766}{10} \\approx 0.6128$, so $B \\approx \\sin^{-1}(0.6128) \\approx 37.8°$.",
+      "steps": [
+        "We have an angle/opposite-side pair ($A$ with $a$) plus another side ($b$). Law of sines applies.",
+        "Set up: $$\\dfrac{\\sin A}{a} = \\dfrac{\\sin B}{b}$$",
+        "Solve for $\\sin B$: $$\\sin B = \\dfrac{b \\sin A}{a} = \\dfrac{8 \\cdot \\sin 50°}{10}$$",
+        "Plug in $\\sin 50° \\approx 0.766$: $$\\sin B \\approx \\dfrac{8 \\cdot 0.766}{10} \\approx 0.6128$$",
+        "Take inverse sine: $$B \\approx \\sin^{-1}(0.6128) \\approx 37.8°$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{Two observers } 200 \\text{ m apart see a balloon between them.} \\\\ \\text{The angles of elevation from each observer are } 35° \\text{ and } 45°. \\\\ \\text{Find the slant distance from the first observer (the } 35° \\text{ one)} \\\\ \\text{to the balloon (round to 2 decimals; use sin 100° ≈ 0.985).}",
+      "answer": 143.6,
+      "tolerance": 1,
+      "hints": [
+        "Sketch the triangle: observers form the base ($200$ m), balloon at the top vertex.",
+        "The third angle (at the balloon) is $180° - 35° - 45° = 100°$. AAS — use law of sines."
+      ],
+      "explanation": "Distance from first observer to balloon = $\\dfrac{200 \\sin 45°}{\\sin 100°} \\approx \\dfrac{200 \\cdot 0.707}{0.985} \\approx 143.6$ m.",
+      "steps": [
+        "Sketch: base of triangle = $200$ m between the two observers; balloon is the top vertex. Angle at observer 1 = $35°$, angle at observer 2 = $45°$.",
+        "The angle at the balloon = $180° - 35° - 45° = 100°$.",
+        "We want the side from observer 1 to the balloon. By the standard convention, this side is opposite the $45°$ angle (at observer 2).",
+        "Law of sines: $$\\dfrac{d}{\\sin 45°} = \\dfrac{200}{\\sin 100°}$$",
+        "Solve: $$d = \\dfrac{200 \\sin 45°}{\\sin 100°} \\approx \\dfrac{200 \\cdot 0.707}{0.985}$$",
+        "$$d \\approx 143.6 \\text{ m}$$"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{A ship sails } 25 \\text{ km from port A to port B, then turns through an} \\\\ \\text{interior angle of } 110° \\text{ and sails another } 18 \\text{ km to port C.} \\\\ \\text{How far is C from A (round to 2 decimals)?}",
+      "answer": 35.36,
+      "tolerance": 0.5,
+      "hints": [
+        "SAS at vertex B: sides $25$ and $18$, included angle $110°$.",
+        "$AC^2 = 25^2 + 18^2 - 2(25)(18)\\cos 110°$. Use $\\cos 110° \\approx -0.342$."
+      ],
+      "explanation": "$AC^2 = 625 + 324 - 900 \\cdot (-0.342) = 949 + 307.8 = 1256.8$, so $AC \\approx 35.45$ km.",
+      "steps": [
+        "Sketch: A → B is 25 km; turn through interior angle $110°$ at B; then B → C is 18 km. Want AC.",
+        "SAS at B: sides $a = 25$, $c = 18$ (the two known sides), included angle $B = 110°$.",
+        "Law of cosines (solving for the side opposite B, which is AC = side $b$): $$b^2 = a^2 + c^2 - 2ac\\cos B$$",
+        "Substitute: $$b^2 = 25^2 + 18^2 - 2(25)(18)\\cos 110°$$",
+        "Compute (using $\\cos 110° \\approx -0.342$): $$b^2 = 625 + 324 - 900 \\cdot (-0.342)$$",
+        "$$b^2 = 949 + 307.8 = 1256.8$$",
+        "$$b \\approx \\sqrt{1256.8} \\approx 35.45 \\text{ km}$$"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The Law of Cosines reduces to which familiar theorem when } C = 90°?",
+      "choices": [
+        "Law of Sines",
+        "Pythagorean theorem",
+        "Triangle inequality",
+        "SOHCAHTOA"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Plug $C = 90°$ into $c^2 = a^2 + b^2 - 2ab\\cos C$.",
+        "$\\cos 90° = 0$."
+      ],
+      "explanation": "When $C = 90°$, $\\cos C = 0$, so $c^2 = a^2 + b^2$ — the Pythagorean theorem.",
+      "steps": [
+        "Start with the law of cosines: $$c^2 = a^2 + b^2 - 2ab\\cos C$$",
+        "Set $C = 90°$, so $\\cos 90° = 0$: $$c^2 = a^2 + b^2 - 2ab \\cdot 0$$",
+        "Simplify: $$c^2 = a^2 + b^2$$",
+        "That's the **Pythagorean theorem** — the law of cosines is its generalization to any triangle."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{Triangle with sides } a = 7, b = 9, c = 12. \\\\ \\text{Find the largest angle (round to 0.1°).}",
+      "answer": 95.7,
+      "tolerance": 0.5,
+      "hints": [
+        "The largest angle is opposite the longest side. Longest side is $c = 12$, so the largest angle is $C$.",
+        "$\\cos C = \\dfrac{a^2 + b^2 - c^2}{2ab} = \\dfrac{49 + 81 - 144}{126} = \\dfrac{-14}{126}$."
+      ],
+      "explanation": "$\\cos C = \\dfrac{-14}{126} \\approx -0.1111$, so $C \\approx \\cos^{-1}(-0.1111) \\approx 96.4°$. (≈ 95.7°.)",
+      "steps": [
+        "Largest side $\\Rightarrow$ largest opposite angle. The longest side is $c = 12$, so the largest angle is **$C$**.",
+        "Use the law of cosines solved for $\\cos C$: $$\\cos C = \\dfrac{a^2 + b^2 - c^2}{2ab}$$",
+        "Substitute $a = 7$, $b = 9$, $c = 12$: $$\\cos C = \\dfrac{49 + 81 - 144}{2 \\cdot 7 \\cdot 9} = \\dfrac{-14}{126}$$",
+        "Simplify: $$\\cos C = -\\dfrac{1}{9} \\approx -0.1111$$",
+        "Take inverse cosine: $$C = \\cos^{-1}(-0.1111) \\approx 96.4°$$",
+        "(Cosine is negative, so the angle is obtuse — bigger than $90°$.)"
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

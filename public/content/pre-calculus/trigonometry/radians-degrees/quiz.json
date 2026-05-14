@@ -1,0 +1,233 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "180° \\text{ in radians} = ?",
+      "choices": [
+        "\\dfrac{\\pi}{2}",
+        "\\pi",
+        "2\\pi",
+        "\\dfrac{\\pi}{180}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Half a full revolution.",
+        "$2\\pi$ radians is a full circle. Half of that is..."
+      ],
+      "explanation": "Half a revolution: $\\dfrac{2\\pi}{2} = \\pi$ radians.",
+      "steps": [
+        "$180°$ is half of a full revolution ($360°$).",
+        "A full revolution in radians is $2\\pi$.",
+        "Half of that: $$\\dfrac{2\\pi}{2} = \\pi \\text{ radians}$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{\\pi}{6} \\text{ rad} = ? \\text{ degrees}",
+      "choices": [
+        "15°",
+        "30°",
+        "45°",
+        "60°"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Multiply by $\\dfrac{180}{\\pi}$.",
+        "$\\dfrac{\\pi}{6} \\cdot \\dfrac{180}{\\pi} = \\dfrac{180}{6}$."
+      ],
+      "explanation": "$\\dfrac{\\pi}{6} \\cdot \\dfrac{180}{\\pi} = \\dfrac{180}{6} = 30°$.",
+      "steps": [
+        "Convert radians → degrees: multiply by $\\dfrac{180}{\\pi}$.",
+        "$$\\dfrac{\\pi}{6} \\cdot \\dfrac{180}{\\pi}$$",
+        "The $\\pi$'s cancel: $$\\dfrac{180}{6} = 30°$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "90° \\text{ in radians} = ?",
+      "choices": [
+        "\\dfrac{\\pi}{4}",
+        "\\dfrac{\\pi}{3}",
+        "\\dfrac{\\pi}{2}",
+        "\\pi"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "Multiply by $\\dfrac{\\pi}{180}$.",
+        "$90 \\cdot \\dfrac{\\pi}{180} = \\dfrac{90\\pi}{180}$."
+      ],
+      "explanation": "$90° = 90 \\cdot \\dfrac{\\pi}{180}\\text{ rad} = \\dfrac{\\pi}{2}$ — a quarter of a full revolution.",
+      "steps": [
+        "Convert degrees → radians: multiply by $\\dfrac{\\pi}{180}$.",
+        "$$90 \\cdot \\dfrac{\\pi}{180} = \\dfrac{90\\pi}{180}$$",
+        "Simplify (divide top and bottom by $90$): $$\\dfrac{\\pi}{2}$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{On a unit circle, an arc of length 1 corresponds to an angle of how many radians?}",
+      "answer": 1,
+      "tolerance": 0,
+      "hints": [
+        "That's literally the definition of a radian.",
+        "Arc length on the unit circle $=$ angle in radians."
+      ],
+      "explanation": "By definition: a radian is the angle subtended by an arc of length equal to the radius. On the unit circle, an arc of length $1$ $=$ $1$ radian.",
+      "steps": [
+        "By definition, $1$ radian = the angle subtended by an arc whose length equals the radius.",
+        "On the unit circle, the radius is $1$. So an arc of length $1$ subtends exactly $1$ radian.",
+        "**Answer:** $1$ radian."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "2\\pi \\text{ radians} = ? \\text{ degrees}",
+      "answer": 360,
+      "tolerance": 0,
+      "hints": [
+        "$2\\pi$ radians is a full revolution.",
+        "How many degrees in a full revolution?"
+      ],
+      "explanation": "$2\\pi$ radians $=$ one full revolution $=$ $360°$.",
+      "steps": [
+        "$2\\pi$ radians = one full circle.",
+        "A full circle in degrees is $360°$.",
+        "Or compute: $$2\\pi \\cdot \\dfrac{180}{\\pi} = 2 \\cdot 180 = 360°$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Convert } 240° \\text{ to radians (exact form).}",
+      "choices": [
+        "\\dfrac{4\\pi}{3}",
+        "\\dfrac{2\\pi}{3}",
+        "\\dfrac{3\\pi}{4}",
+        "\\dfrac{5\\pi}{6}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Multiply by $\\dfrac{\\pi}{180}$.",
+        "$240 \\cdot \\dfrac{\\pi}{180} = \\dfrac{240\\pi}{180}$. Simplify."
+      ],
+      "explanation": "$240 \\cdot \\dfrac{\\pi}{180} = \\dfrac{240\\pi}{180} = \\dfrac{4\\pi}{3}$.",
+      "steps": [
+        "Multiply by $\\dfrac{\\pi}{180}$: $$240 \\cdot \\dfrac{\\pi}{180} = \\dfrac{240\\pi}{180}$$",
+        "Simplify the fraction. GCD of $240$ and $180$ is $60$: $$\\dfrac{240\\pi}{180} = \\dfrac{4\\pi}{3}$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Convert } \\dfrac{7\\pi}{4} \\text{ rad to degrees.}",
+      "choices": [
+        "210°",
+        "270°",
+        "315°",
+        "330°"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Multiply by $\\dfrac{180}{\\pi}$.",
+        "$\\dfrac{7\\pi}{4} \\cdot \\dfrac{180}{\\pi} = \\dfrac{7 \\cdot 180}{4}$."
+      ],
+      "explanation": "$\\dfrac{7\\pi}{4} \\cdot \\dfrac{180}{\\pi} = \\dfrac{1260}{4} = 315°$.",
+      "steps": [
+        "Multiply by $\\dfrac{180}{\\pi}$: $$\\dfrac{7\\pi}{4} \\cdot \\dfrac{180}{\\pi}$$",
+        "Cancel $\\pi$: $$\\dfrac{7 \\cdot 180}{4} = \\dfrac{1260}{4}$$",
+        "Divide: $$1260 \\div 4 = 315°$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{On a circle of radius } 8, \\text{ what is the arc length subtended by an} \\\\ \\text{angle of } \\dfrac{\\pi}{2} \\text{ radians?} \\\\ \\text{(Use } \\pi \\approx 3.14159; \\text{ round to 2 decimals.)}",
+      "answer": 12.57,
+      "tolerance": 0.05,
+      "hints": [
+        "Use $s = r\\theta$ (angle must be in radians).",
+        "$s = 8 \\cdot \\dfrac{\\pi}{2} = 4\\pi$."
+      ],
+      "explanation": "$s = r\\theta = 8 \\cdot \\dfrac{\\pi}{2} = 4\\pi \\approx 12.57$.",
+      "steps": [
+        "Apply the arc-length formula (angle is already in radians): $$s = r\\theta$$",
+        "Substitute $r = 8$ and $\\theta = \\dfrac{\\pi}{2}$: $$s = 8 \\cdot \\dfrac{\\pi}{2} = 4\\pi$$",
+        "Decimal: $$s \\approx 4 \\cdot 3.14159 \\approx 12.57$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{On a circle of radius } 12, \\text{ find the arc length subtended by an} \\\\ \\text{angle of } 90°. \\text{ (Round to 2 decimals.)}",
+      "answer": 18.85,
+      "tolerance": 0.1,
+      "hints": [
+        "First convert $90°$ to radians: $\\dfrac{\\pi}{2}$.",
+        "Then $s = r\\theta = 12 \\cdot \\dfrac{\\pi}{2} = 6\\pi$."
+      ],
+      "explanation": "$90° = \\dfrac{\\pi}{2}$ rad, so $s = 12 \\cdot \\dfrac{\\pi}{2} = 6\\pi \\approx 18.85$.",
+      "steps": [
+        "**Step 1.** Convert the angle to radians (the formula needs radians): $$90° = 90 \\cdot \\dfrac{\\pi}{180} = \\dfrac{\\pi}{2}$$",
+        "**Step 2.** Apply $s = r\\theta$ with $r = 12$: $$s = 12 \\cdot \\dfrac{\\pi}{2} = 6\\pi$$",
+        "**Step 3.** Decimal: $$s \\approx 6 \\cdot 3.14159 \\approx 18.85$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{An arc of length } 15 \\text{ on a circle subtends an angle of } 3 \\text{ radians.} \\\\ \\text{What is the radius of the circle?}",
+      "answer": 5,
+      "tolerance": 0.05,
+      "hints": [
+        "Rearrange $s = r\\theta$ to solve for $r$.",
+        "$r = \\dfrac{s}{\\theta} = \\dfrac{15}{3}$."
+      ],
+      "explanation": "$r = \\dfrac{s}{\\theta} = \\dfrac{15}{3} = 5$.",
+      "steps": [
+        "Start from $s = r\\theta$ and solve for $r$: $$r = \\dfrac{s}{\\theta}$$",
+        "Substitute: $$r = \\dfrac{15}{3} = 5$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Convert } -45° \\text{ to radians (exact).}",
+      "choices": [
+        "-\\dfrac{\\pi}{4}",
+        "\\dfrac{\\pi}{4}",
+        "-\\dfrac{\\pi}{2}",
+        "-\\dfrac{3\\pi}{4}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Sign carries through.",
+        "$-45 \\cdot \\dfrac{\\pi}{180} = ?$"
+      ],
+      "explanation": "$-45 \\cdot \\dfrac{\\pi}{180} = -\\dfrac{\\pi}{4}$.",
+      "steps": [
+        "Multiply by $\\dfrac{\\pi}{180}$, keeping the negative sign: $$-45 \\cdot \\dfrac{\\pi}{180} = -\\dfrac{45\\pi}{180}$$",
+        "Simplify ($\\gcd(45, 180) = 45$): $$-\\dfrac{45\\pi}{180} = -\\dfrac{\\pi}{4}$$"
+      ],
+      "difficulty": "easy"
+    }
+  ]
+}

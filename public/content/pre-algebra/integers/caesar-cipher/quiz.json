@@ -1,0 +1,143 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "free-response",
+      "promptTex": "\\text{Encrypt the word } HELLO \\text{ with Caesar shift 3.} \\\\ \\text{Enter the result (in capital letters, no spaces).}",
+      "answer": "KHOOR",
+      "hints": [
+        "Shift each letter forward by 3: H→K, E→H, L→O, L→O, O→R.",
+        "KHOOR."
+      ],
+      "explanation": "$H + 3 = K, E + 3 = H, L + 3 = O, L + 3 = O, O + 3 = R$. Encrypted: KHOOR.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "free-response",
+      "promptTex": "\\text{Encrypt } MATH \\text{ with shift 5.}",
+      "answer": "RFYM",
+      "hints": [
+        "M(12)+5=17=R, A(0)+5=5=F, T(19)+5=24=Y, H(7)+5=12=M.",
+        "RFYM."
+      ],
+      "explanation": "M→R, A→F, T→Y, H→M. Result: RFYM.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "free-response",
+      "promptTex": "\\text{Decrypt } QHHG \\text{ with shift 3 (i.e., shift back by 3).}",
+      "answer": "NEED",
+      "hints": [
+        "Apply shift $-3$ to each letter, with mod 26 to wrap if you go below A.",
+        "Q(16)-3=13=N. H(7)-3=4=E. G(6)-3=3=D."
+      ],
+      "explanation": "Shift each letter back by 3: Q→N, H→E, H→E, G→D. Result: NEED.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Recognize the recipe.** Decryption is the inverse of encryption: shift each letter BACKWARDS by 3 (i.e., apply shift $-3$ mod 26)."
+        },
+        {
+          "text": "**Letter-by-letter.** Q(16) → 16-3=13 → N. H(7) → 7-3=4 → E. H → E. G(6) → 6-3=3 → D."
+        },
+        {
+          "text": "**Result: NEED.**"
+        },
+        {
+          "text": "**Why mod-26 matters in general.** If a letter index would go negative (e.g., A=0 shifted by $-3$ gives $-3$), add 26 to wrap: $-3 + 26 = 23 = X$. The Caesar cipher *is* modular arithmetic on the alphabet."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Letter } X \\text{ (= 23) shifted by } 7 \\text{ becomes which letter (give 0-25 number)?}",
+      "answer": 4,
+      "tolerance": 0.001,
+      "hints": [
+        "$23 + 7 = 30$.",
+        "$30 \\bmod 26 = 4$. (Letter E.)"
+      ],
+      "explanation": "$23 + 7 = 30 \\equiv 4 \\pmod{26}$. So X shifts to E (= 4).",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "prompt": "Why is the Caesar cipher easily broken?",
+      "choices": [
+        "There are only 25 possible shifts — brute force works.",
+        "Modular arithmetic is reversible.",
+        "It uses letters of the alphabet.",
+        "Caesar used it long ago."
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Try all 25 nontrivial shifts.",
+        "Frequency analysis also reveals it."
+      ],
+      "explanation": "Only 25 possible keys — brute force is trivial. Modern ciphers use astronomically large key spaces (e.g., $2^{256}$ keys for AES-256) to defeat brute force.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{Shift 13 (ROT13) applied twice to letter } G \\text{ gives:}",
+      "answer": 6,
+      "tolerance": 0.001,
+      "hints": [
+        "$G + 13 + 13 = G + 26 \\equiv G \\pmod{26}$.",
+        "Back to G. G is letter 6."
+      ],
+      "explanation": "ROT13 applied twice = shift by 26 = identity. So $G \\to G$ (number 6).",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Compose the two shifts.** Applying ROT13 twice is equivalent to a single shift of $13 + 13 = 26$."
+        },
+        {
+          "text": "**A shift of 26 is the IDENTITY mod 26.** $26 \\bmod 26 = 0$ — every letter returns to itself."
+        },
+        {
+          "text": "**So ROT13 is its OWN INVERSE.** Apply it once to encrypt, apply it AGAIN to decrypt. Same operation."
+        },
+        {
+          "text": "**For G specifically.** G has index 6. After ROT13 twice: still 6 = G."
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Why is ROT13 (shift 13) special? }",
+      "choices": [
+        "It's the only shift that's its own inverse (ROT13 ∘ ROT13 = identity).",
+        "It can't be decoded.",
+        "It was Caesar's actual shift.",
+        "It uses fewer letters."
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Apply ROT13 twice: $x + 13 + 13 = x + 26 \\equiv x$.",
+        "Self-inverse cipher."
+      ],
+      "explanation": "13 + 13 = 26 ≡ 0, so two applications of ROT13 cancel out. This makes ROT13 a self-inverse — same operation to encrypt and decrypt. Popular for casual obfuscation on the early internet.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{Letter } Z \\text{ (= 25) shifted by } -3 \\text{ becomes which letter (0-25)?}",
+      "answer": 22,
+      "tolerance": 0.001,
+      "hints": [
+        "$25 - 3 = 22$. (Letter W.)",
+        "No wrap-around needed."
+      ],
+      "explanation": "$25 - 3 = 22$. Letter W.",
+      "difficulty": "easy"
+    }
+  ]
+}

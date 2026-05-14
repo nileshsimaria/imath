@@ -1,0 +1,137 @@
+{
+  "title": "Power, Sum & Constant Rules",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Computing every derivative from the limit definition is tedious. Mathematicians proved a small set of **rules** that let you differentiate any polynomial — and most other elementary functions — almost mechanically. We start with the basics."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. The Constant Rule"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{d}{dx}\\,c = 0 \\quad (c \\text{ a constant})"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Why?** A constant function doesn't change as $x$ changes — slope is 0 everywhere.",
+        "**Example.** $\\dfrac{d}{dx}(7) = 0$. $\\dfrac{d}{dx}(\\pi) = 0$. $\\dfrac{d}{dx}(-100) = 0$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. The Power Rule"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Power Rule",
+      "body": "$\\dfrac{d}{dx}\\,x^n = n\\,x^{n-1}$. Bring down the exponent as a coefficient, then reduce the exponent by 1."
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Examples:**",
+        "$\\dfrac{d}{dx}\\,x^3 = 3x^2$",
+        "$\\dfrac{d}{dx}\\,x^{10} = 10x^9$",
+        "$\\dfrac{d}{dx}\\,x = 1$ (since $x = x^1$, derivative is $1 \\cdot x^0 = 1$)",
+        "$\\dfrac{d}{dx}\\,x^{-2} = -2x^{-3} = -\\dfrac{2}{x^3}$",
+        "$\\dfrac{d}{dx}\\,x^{1/2} = \\dfrac{1}{2}x^{-1/2} = \\dfrac{1}{2\\sqrt{x}}$",
+        "**Power rule works for ANY real exponent** — positive, negative, fractional, even irrational."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. The Constant Multiple Rule"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{d}{dx}\\bigl(c \\cdot f(x)\\bigr) = c \\cdot f'(x)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Examples:**",
+        "$\\dfrac{d}{dx}(5x^3) = 5 \\cdot 3x^2 = 15x^2$",
+        "$\\dfrac{d}{dx}(-2x^4) = -8x^3$"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. The Sum and Difference Rules"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{d}{dx}\\bigl(f \\pm g\\bigr) = f' \\pm g'"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Differentiate term by term — each term is independent.",
+        "**Example.** $\\dfrac{d}{dx}(3x^2 + 5x - 7)$",
+        "$= \\dfrac{d}{dx}(3x^2) + \\dfrac{d}{dx}(5x) - \\dfrac{d}{dx}(7)$",
+        "$= 6x + 5 - 0 = 6x + 5$.",
+        "**Example.** $\\dfrac{d}{dx}(2x^4 - x^3 + 4)$ $= 8x^3 - 3x^2 + 0 = 8x^3 - 3x^2$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Combine these and you can differentiate any polynomial",
+      "body": "Power rule + constant multiple + sum/difference = the entire toolkit for polynomials. Most calculus problems start with these and build up."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 5. Worked Examples"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Find $f'(x)$ for $f(x) = x^5 - 3x^4 + 7x^2 - 6$.**",
+        "$f'(x) = 5x^4 - 12x^3 + 14x$.",
+        "(Constant -6 → 0; $7x^2$ → $14x$; $-3x^4$ → $-12x^3$; $x^5$ → $5x^4$.)",
+        "**Find the derivative of $y = \\sqrt{x} + 2/x$.**",
+        "Rewrite: $y = x^{1/2} + 2x^{-1}$.",
+        "$y' = \\dfrac{1}{2}x^{-1/2} - 2x^{-2} = \\dfrac{1}{2\\sqrt{x}} - \\dfrac{2}{x^2}$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — tangent line via the power rule",
+        "Find the tangent line to $f(x) = x^3 - 2x$ at $x = 1$.",
+        "**Slope:** $f'(x) = 3x^2 - 2$. $f'(1) = 3 - 2 = 1$.",
+        "**Point:** $f(1) = 1 - 2 = -1$.",
+        "**Tangent:** $y - (-1) = 1 \\cdot (x - 1) \\Rightarrow y = x - 2$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Try it — see derivatives in action",
+        "Switch the widget to different functions and watch how the slope (derivative) varies. The 'show $f'(x)$' toggle overlays the entire derivative function on the same plot — a powerful visualization."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "derivative-explorer",
+      "config": {
+        "func": "cubic",
+        "x0": 1,
+        "showDerivative": true
+      }
+    }
+  ]
+}

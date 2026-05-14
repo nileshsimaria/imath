@@ -1,0 +1,90 @@
+{
+  "title": "Standard Form",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "**Standard form** is another way to write a linear equation. It puts both variables on the left side and a constant on the right:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "Ax + By = C"
+    },
+    {
+      "type": "text",
+      "md": [
+        "where $A$, $B$, $C$ are constants. Most textbooks ask that $A$, $B$, $C$ be **integers** with $A \\geq 0$, but the form $Ax + By = C$ is the heart of it.",
+        "Try the sliders below — the line shifts, tilts, and the intercepts move with the coefficients."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "coordinate-plane",
+      "config": {
+        "mode": "standard-form",
+        "coefA": 2,
+        "coefB": 3,
+        "coefC": 6,
+        "coefRange": [
+          -5,
+          5
+        ],
+        "coefStep": 1
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why bother with standard form?",
+        "Three good reasons:",
+        "**1. Intercepts come out instantly.** Set $y = 0$ to get the x-intercept; set $x = 0$ to get the y-intercept.",
+        "**2. Vertical lines fit naturally.** Slope-intercept form $y = mx + b$ can't handle vertical lines (slope is undefined). Standard form can — just set $B = 0$.",
+        "**3. It's the form used in systems of equations** — substitution and elimination methods often start with both equations in standard form."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Finding intercepts",
+        "Given $Ax + By = C$:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\text{x-intercept (set } y = 0): \\quad x = \\dfrac{C}{A}"
+    },
+    {
+      "type": "math",
+      "tex": "\\text{y-intercept (set } x = 0): \\quad y = \\dfrac{C}{B}"
+    },
+    {
+      "type": "callout",
+      "title": "Worked example",
+      "body": "For $2x + 3y = 12$ — x-intercept is $\\tfrac{12}{2} = 6$, so $(6, 0)$. y-intercept is $\\tfrac{12}{3} = 4$, so $(0, 4)$. Plot those two points, draw the line, done."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Converting to slope-intercept form",
+        "Solve for $y$:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "Ax + By = C \\;\\Longrightarrow\\; y = -\\dfrac{A}{B}\\,x + \\dfrac{C}{B}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "So in standard form, the slope is $m = -\\dfrac{A}{B}$ and the y-intercept is $b = \\dfrac{C}{B}$.",
+        "**Example.** $4x + 2y = 10$ becomes $y = -\\dfrac{4}{2}x + \\dfrac{10}{2}$, or $y = -2x + 5$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Vertical lines",
+      "body": "If $B = 0$, the equation becomes $Ax = C$, or $x = \\tfrac{C}{A}$. That's a **vertical line** — slope is undefined, but standard form handles it without complaint. Try it in the widget: drag $B$ to $0$ and watch the line go vertical."
+    }
+  ]
+}

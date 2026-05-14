@@ -1,0 +1,83 @@
+{
+  "title": "Arcs & Sectors",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "An **arc** is part of a circle's circumference. A **sector** is the pie-slice area cut off by two radii. Both are measured by their **central angle** — the angle at the center of the circle that opens out to the arc or sector."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The big idea — proportional pieces",
+      "body": "An arc is just *part* of the full circumference. A sector is just *part* of the full area. The fraction is determined by the central angle: $\\dfrac{\\theta}{360°}$ of the whole circle."
+    },
+    {
+      "type": "math",
+      "tex": "\\text{arc length} = \\dfrac{\\theta}{360°} \\cdot 2\\pi r"
+    },
+    {
+      "type": "math",
+      "tex": "\\text{sector area} = \\dfrac{\\theta}{360°} \\cdot \\pi r^2"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Try the widget — adjust the radius and the sector angle. Watch the formulas compute live."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "circle",
+      "config": {
+        "initialRadius": 5,
+        "showSector": true,
+        "initialSectorAngle": 90
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 1",
+        "A circle has radius 6. Find the length of an arc with central angle 60°.",
+        "$\\text{arc length} = \\dfrac{60}{360} \\cdot 2\\pi(6) = \\dfrac{1}{6} \\cdot 12\\pi = 2\\pi \\approx 6.28$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 2",
+        "Same circle (r = 6). Find the area of a sector with central angle 90°.",
+        "$\\text{sector area} = \\dfrac{90}{360} \\cdot \\pi(6)^2 = \\dfrac{1}{4} \\cdot 36\\pi = 9\\pi \\approx 28.27$.",
+        "(A 90° sector is exactly a quarter of the circle. Indeed $9\\pi$ is one-fourth of $36\\pi$.)"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Common fractions worth memorizing",
+      "body": "$\\theta = 90°$ → quarter. $\\theta = 180°$ → half (semicircle). $\\theta = 60°$ → sixth. $\\theta = 45°$ → eighth. $\\theta = 30°$ → twelfth. Knowing the fraction shortcuts the arithmetic."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### A connection — arc length in radians",
+        "If you measure the angle in *radians* instead of degrees, the arc-length formula simplifies dramatically:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\text{arc length} = r\\theta \\quad (\\theta \\text{ in radians})"
+    },
+    {
+      "type": "text",
+      "md": [
+        "On a unit circle ($r = 1$), the arc length is simply $\\theta$ — that's literally the *definition* of a radian. This is why radians are calculus's favorite unit."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "Arc and sector are pieces of the whole, scaled by $\\theta / 360°$. Arc length: $\\frac{\\theta}{360} \\cdot 2\\pi r$. Sector area: $\\frac{\\theta}{360} \\cdot \\pi r^2$. With radians, arc length simplifies to $r\\theta$."
+    }
+  ]
+}

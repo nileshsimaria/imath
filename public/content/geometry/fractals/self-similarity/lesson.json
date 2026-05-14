@@ -1,0 +1,84 @@
+{
+  "title": "Self-Similarity & Fractal Dimension",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### The big idea behind every fractal",
+        "**Self-similarity** is the property of looking 'the same' at every scale. Zoom in on a small piece of a fractal and you see a copy of the whole thing. Zoom in further — another copy. Forever.",
+        "Two fractals you've already met have this property:",
+        "- **Sierpinski triangle:** each of three corners is a smaller Sierpinski triangle.",
+        "- **Koch snowflake:** each segment of its boundary is a tiny Koch curve, recursively.",
+        "Let's meet two more, then formalize what 'fractal dimension' means."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "fractal-explorer",
+      "config": {
+        "mode": "sierpinski-carpet",
+        "iterations": 3
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The Sierpinski carpet",
+        "Take a solid square. Divide it into a $3 \\times 3$ grid of 9 smaller squares. **Remove the middle one.** Repeat with each of the 8 remaining squares.",
+        "Each iteration replaces 1 square with 8 copies at $1/3$ scale. At iteration $n$, there are $8^n$ squares.",
+        "**Fractal dimension:** $d = \\log 8 / \\log 3 \\approx 1.893$. Higher than the Sierpinski triangle (1.585) — it's 'closer to 2D' because it covers more of the plane."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "fractal-explorer",
+      "config": {
+        "mode": "pythagoras-tree",
+        "iterations": 6
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The Pythagoras tree",
+        "Glue an isosceles right triangle on top of a square; then attach smaller squares to the triangle's two short sides. Each new square has side length $1/\\sqrt{2}$ of the previous one. Repeat ad infinitum.",
+        "This isn't strictly *self-similar* — the two child branches go in different directions — but it's still a fractal. With each layer, more detail emerges and the 'leaves' get smaller. By 8 iterations, you have a recognizable tree.",
+        "Fractals like this are the basis of **procedural tree generation** in video games and movies. Real trees aren't perfectly self-similar either, but they're 'close enough' for visual purposes."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "How to compute fractal dimension",
+      "body": "For a self-similar fractal where each iteration replaces 1 piece with $N$ scaled copies, each at scale $1/s$ of the original:\n\n$d = \\dfrac{\\log N}{\\log s}$\n\nExamples:\n\n**Line segment** broken into 4 pieces at 1/4 scale: $d = \\log 4 / \\log 4 = 1$. ✓ (A line is 1-dimensional.)\n**Square** broken into 9 pieces at 1/3 scale: $d = \\log 9 / \\log 3 = 2$. ✓ (A square is 2-dimensional.)\n**Sierpinski triangle:** 3 copies at 1/2 scale: $d = \\log 3 / \\log 2 \\approx 1.585$.\n**Sierpinski carpet:** 8 copies at 1/3 scale: $d = \\log 8 / \\log 3 \\approx 1.893$.\n**Koch curve:** 4 copies at 1/3 scale: $d = \\log 4 / \\log 3 \\approx 1.262$.\n**Menger sponge** (3D Sierpinski): 20 copies at 1/3 scale: $d = \\log 20 / \\log 3 \\approx 2.727$ (in 3D!)."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why fractional dimension makes sense",
+        "Consider a line segment. Cut it into pieces of length $1/s$: you get exactly $s$ pieces. (1 → 2 pieces at half scale; 1 → 3 pieces at third scale.)",
+        "Consider a square. Cut it into pieces of side $1/s$: you get $s^2$ small squares. (1 → 4 squares at half scale.)",
+        "Consider a cube. Cut into pieces of side $1/s$: you get $s^3$ small cubes.",
+        "**Pattern:** $N = s^d$, where $d$ is the dimension. Take logs: $d = \\log N / \\log s$.",
+        "If a fractal has $N$ self-similar pieces at scale $1/s$, this same formula assigns it a (possibly non-integer) dimension."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Mandelbrot's revolution",
+      "body": "Until the 1970s, mathematicians grudgingly tolerated fractals as oddities. Benoit Mandelbrot showed they were **everywhere**: in coastlines, mountains, clouds, blood vessels, lung tissue, financial market timing, lightning, river networks, galaxies.\n\nHe coined the word *fractal* (Latin *fractus* = broken) and developed the theory. His 1975 book *Les objets fractals* and 1982 *The Fractal Geometry of Nature* changed how people see complex shapes.\n\nThe most famous fractal of all — the **Mandelbrot set** — is named after him. It lives in the complex plane, defined by the simple rule $z \\to z^2 + c$, and contains some of the most ornate self-similar structures known to mathematics."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Real-world dimensions",
+        "**Coastline of Norway:** $d \\approx 1.52$ — extremely wiggly.",
+        "**Coastline of South Africa:** $d \\approx 1.05$ — almost smooth.",
+        "**Human lungs (air passages):** $d \\approx 2.97$ — they branch so much they nearly fill 3D space, maximizing gas exchange.",
+        "**Blood vessels:** $d \\approx 2.7$, similar reason.",
+        "**Clouds:** $d \\approx 1.3$ (perimeter in a photo).",
+        "**Brain cortex (folded surface):** $d \\approx 2.5$.",
+        "Nature uses fractal geometry to pack lots of surface area into small volumes. Evolution discovered fractals long before we did."
+      ]
+    }
+  ]
+}

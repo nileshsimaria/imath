@@ -1,0 +1,100 @@
+{
+  "title": "Solving Quadratics by Factoring",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "A **quadratic equation** has the form $ax^2 + bx + c = 0$ (with $a \\neq 0$). 'Solving' means finding the values of $x$ that make it true — its **roots**.",
+        "When the polynomial factors nicely, factoring is the fastest way to solve. Here's the trick that makes it work."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The Zero Product Property",
+      "body": "If $A \\cdot B = 0$, then $A = 0$ or $B = 0$ (or both). The product of two numbers is zero **only when at least one of them is zero**."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Strategy",
+        "**1.** Move everything to one side so the equation reads $\\text{polynomial} = 0$.",
+        "**2.** Factor the polynomial.",
+        "**3.** Set each factor equal to zero.",
+        "**4.** Solve each resulting equation.",
+        "**5.** Check both answers in the original equation."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 1",
+        "Solve $x^2 + 5x + 6 = 0$.",
+        "**Step 1.** Already in the form $\\square = 0$.",
+        "**Step 2.** Factor: $x^2 + 5x + 6 = (x + 2)(x + 3)$. So $(x + 2)(x + 3) = 0$.",
+        "**Step 3.** Zero product → $x + 2 = 0$ or $x + 3 = 0$.",
+        "**Step 4.** Solve each: $x = -2$ or $x = -3$.",
+        "**Step 5.** Check $x = -2$: $(-2)^2 + 5(-2) + 6 = 4 - 10 + 6 = 0$ ✓."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Visualize it. The graph below is $y = x^2 + 5x + 6$. The red dots on the x-axis are at $x = -2$ and $x = -3$ — the two solutions:"
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "parabola",
+      "config": {
+        "a": 1,
+        "b": 5,
+        "c": 6,
+        "xRange": [
+          -7,
+          4
+        ],
+        "yRange": [
+          -3,
+          8
+        ]
+      }
+    },
+    {
+      "type": "callout",
+      "title": "What 'roots' means geometrically",
+      "body": "The roots (solutions) of $ax^2 + bx + c = 0$ are exactly the **x-intercepts** of the parabola $y = ax^2 + bx + c$ — the places where the curve crosses the x-axis."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 2 — rearranging first",
+        "Solve $x^2 = 3x + 10$.",
+        "**Step 1.** Move everything to one side: $x^2 - 3x - 10 = 0$.",
+        "**Step 2.** Factor: need two numbers with product $-10$ and sum $-3$. Pair: $-5, 2$. So $(x - 5)(x + 2) = 0$.",
+        "**Step 3.** $x - 5 = 0$ or $x + 2 = 0$.",
+        "**Step 4.** $x = 5$ or $x = -2$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 3 — common factor first",
+        "Solve $2x^2 - 8x = 0$.",
+        "**Step 2.** Factor out $2x$: $2x(x - 4) = 0$.",
+        "**Step 3.** $2x = 0$ or $x - 4 = 0$.",
+        "**Step 4.** $x = 0$ or $x = 4$.",
+        "Notice — $x = 0$ is a perfectly valid solution. Don't be afraid of zero."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Limitations",
+      "body": "Solving by factoring only works when the polynomial factors *nicely* — with rational, simple roots. For quadratics with irrational or complex roots, factoring is hard or impossible. That's exactly the gap the **quadratic formula** fills (next subtopic)."
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "Move everything to one side ($= 0$). Factor. Zero product property: set each factor to zero and solve. The roots you find are exactly the x-intercepts of the parabola."
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "title": "Curvature — How Bent is a Curve?",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "We have a tool that tells us whether a curve bends UP or DOWN at a point: the sign of $f''(x)$. **Positive → concave up. Negative → concave down.** Two answers, no shades.",
+        "But that's not enough. A *gentle* upward bend and a *sharp* upward bend both give $f'' > 0$. Sign alone can't tell them apart. We need a number — a measurement — for **how much** the curve is bending.",
+        "Silvanus Thompson devotes a whole chapter to this in *Calculus Made Easy* (Ch 12). His trick is so visual it barely feels like math."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The whole lesson in one sentence",
+      "body": "At any point $P$ on a curve, draw the **unique circle** that touches the curve there, matches its slope, AND matches its bend. That circle's radius $R$ measures how bent the curve is. **Small $R$ → tight bend. Large $R$ → almost-straight.** And we can read $R$ straight off $f''$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. The circle of curvature",
+        "Pick a point $P$ on a smooth curve. Now ask: of all circles passing through $P$, which one fits the curve **best** right at that spot? Not 'fits everywhere' — just 'fits where $P$ is'.",
+        "Three conditions:",
+        "(a) The circle passes through $P$.",
+        "(b) Its tangent at $P$ matches the curve's tangent at $P$ (same slope $f'$).",
+        "(c) Its second derivative at $P$ matches the curve's second derivative ($f''$). Same *bend*.",
+        "There is exactly **one** circle satisfying all three. It's called the **osculating circle** at $P$ (from Latin *osculari*, to kiss). The curve and its osculating circle *kiss* — they touch and bend the same way for an instant.",
+        "Drag the slider below — watch the kissing circle shrink and grow as $P$ moves along the curve."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "osculating-circle",
+      "config": { "curve": "parabola" }
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. The formula",
+        "Thompson derives it geometrically. The modern shortcut: combine the slope and the second derivative.",
+        "$\\boxed{\\;R(x) \\;=\\; \\dfrac{\\,\\bigl(1 + f'(x)^2\\bigr)^{3/2}\\,}{\\,\\bigl|f''(x)\\bigr|\\,}\\;}$",
+        "Three things to notice:",
+        "**$R$ depends on $f''$.** Bigger $|f''|$ → smaller $R$. *Sharper bend, tighter circle.* (Exactly what we wanted.)",
+        "**$R$ also depends on $f'$.** A curve that is *also steep* needs a bigger circle to match it. The $(1 + f'^2)^{3/2}$ correction adjusts for that. At a peak or trough where $f' = 0$, it simplifies to $R = 1/|f''|$.",
+        "**$|f''|$ in the denominator.** If $f'' = 0$ at a point, the formula gives $R = \\infty$ — the curve is *momentarily straight*. Those are the inflection points. Switch the widget to **Cubic** and slide through $x = 0$ — the kissing circle balloons to infinity and flips sides."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The curvature κ — the natural number to use",
+      "body": "$\\kappa \\;=\\; \\dfrac{1}{R}$\n\n'Curvature' usually means $\\kappa$, not $R$. It's $0$ for a straight line, larger for a tight curve. **A circle of radius $r$ has constant curvature $\\kappa = 1/r$.**\n\nUseful because $\\kappa$ adds nicely along combined curves, while $R$ does not."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. Sanity check on a circle",
+        "Take the top half of a circle of radius $2$: $y = \\sqrt{4 - x^2}$. We *know* its curvature is $1/2$ everywhere, so $R$ had better come out as exactly $2$ for every $x$.",
+        "Switch the widget to **\"Top of circle\"** and drag $P$ left and right. The displayed $R$ stays locked at $\\textbf{2.0}$. The formula passes its first test: a circle's osculating circle is itself.",
+        "(Try doing this check by hand: differentiate $y = \\sqrt{4 - x^2}$ twice, plug into the formula, simplify. Lots of cancellation; you land on $R = 2$.)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. The peak of a parabola",
+        "$y = \\tfrac{1}{2} x^2$ at $x = 0$.",
+        "$y' = x = 0$, $\\quad y'' = 1$.",
+        "$R = \\dfrac{(1 + 0)^{3/2}}{1} = 1$. **A unit circle**, sitting above the parabola's vertex, touching at $(0, 0)$.",
+        "Now slide to $x = 1$ in the widget. Slope $= 1$, $y'' = 1$.",
+        "$R = \\dfrac{(1 + 1)^{3/2}}{1} = 2\\sqrt{2} \\approx 2.83$. Almost three times bigger! The bend hasn't actually changed — $y''$ is still $1$ — but the curve is *also* rising steeply now, so the kissing circle has to grow."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Why the $(1 + f'^2)^{3/2}$ correction?",
+      "body": "Because curvature is a *geometric* property — it should be the same whether you measure the curve from above or from the side. If you only looked at $|f''|$, a tilted parabola would seem 'less curved' just because it's tilted. The correction undoes that bias, leaving a quantity that depends only on the shape, not the orientation."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 5. Why curvature shows up everywhere",
+        "$\\kappa$ isn't a calculus curiosity. It's the thing engineers compute when they care how much a path *turns*.",
+        "**Highway design.** Sharp bends → drivers can't hold them at speed. Highway curves are designed with bounded curvature.",
+        "**Optics.** A lens's surface is shaped to give it a precise focal length — and the focal length depends on the surface's curvature where light hits it.",
+        "**Physics: centripetal acceleration.** A particle moving along a curve at speed $v$ feels a sideways acceleration $a_c = v^2 / R$. That's the same $R$ — the radius of the curve's osculating circle at that point. The tighter the bend, the harder you're pushed into the seat as the car turns.",
+        "**Differential geometry.** Curvature generalizes beautifully to surfaces (saddle vs. dome vs. cylinder) and is at the heart of Einstein's general relativity: gravity *is* the curvature of spacetime."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Two ways the curve can be 'flat'",
+      "body": "**Straight line.** $f'' = 0$ everywhere → $\\kappa = 0$ everywhere → $R = \\infty$. The curve has no bend at all.\n\n**Inflection point.** $f''(x_0) = 0$ at one isolated $x_0$ → $R \\to \\infty$ as you approach $x_0$. The curve *passes through* a moment of being straight, then bends the other way. Switch the widget to **Cubic** and slide across $x = 0$: the kissing circle flips from below the curve to above it. At the flip itself, the circle becomes a straight line."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 6. The pattern",
+        "Each derivative tells you something the previous one doesn't:",
+        "| order | physical name | geometric name |",
+        "|---|---|---|",
+        "| $f(x)$ | position | height |",
+        "| $f'(x)$ | slope | tangent direction |",
+        "| $f''(x)$ | acceleration | concavity (+ or −) AND curvature (via $R = (1+f'^2)^{3/2} / |f''|$) |",
+        "We started this course by saying 'the derivative is the slope of the tangent line.' By Chapter 12 of Thompson — and right now — we've found a second geometric pal: **the second derivative is the radius of the osculating circle.** Two derivatives, two geometric pictures. Calculus keeps repaying you the more you look."
+      ]
+    }
+  ]
+}

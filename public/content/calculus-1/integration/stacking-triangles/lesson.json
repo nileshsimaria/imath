@@ -1,0 +1,114 @@
+{
+  "title": "Stacking Triangles: Rebuilding a Curve from Its Slope",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Differentiation is like *taking a watch apart*: you start with the whole curve and end up with its slope. **Integration** is putting the watch back together — starting with the slope, recovering the whole curve.",
+        "Thompson's classic *Calculus Made Easy* has a memorable analogy for this:",
+        "> *\"If a stranger to Manhattan were set down in Times Square, and told to find his way to Grand Central Station, he might find the task hopeless. But if he had previously been personally conducted from Grand Central Station to Times Square, it would be comparatively easy for him to find his way back.\"*",
+        "Integration is finding your way **back**. You know the slope at every point (the differentiation already showed you the way). Now retrace your steps to recover the original function."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Two symbols, read as plain English",
+      "body": "$d$ — \"a little bit of\". So $dy$ is *a little bit of* $y$.\n\n$\\int$ — a stretched-out letter S, meaning \"the **sum of**\". So $\\int dy$ is \"the **sum of all** the little bits of $y$\" — which is just $y$ itself.\n\nRead $\\int x^2 \\, dx$ aloud as **\"the sum of $x^2$ multiplied by a little bit of $x$\"**. That's all it means. The symbol isn't trying to scare you — it's a very honest piece of notation."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. Stacking triangles — a constant slope",
+        "Imagine you are told only this: the slope of some unknown curve is **constant**, equal to $a$:",
+        "$\\dfrac{dy}{dx} = a$",
+        "What does the curve look like? You can build it piece by piece. Take little steps of width $dx$ along the $x$-axis. At each step, the curve climbs by $a \\cdot dx$ (slope times run = rise). Each step is a **tiny right triangle**:",
+        "$\\triangleright \\triangleright \\triangleright \\triangleright \\triangleright$",
+        "All identical. Stack them edge-to-edge. The result is a **straight line** with slope $a$.",
+        "But starting from where? The slope doesn't tell you. You could start at the origin, or one unit up, or 100 units up. So the answer involves an *unknown* starting height — call it $C$:",
+        "$y = ax + C$",
+        "**$C$ is the constant of integration** — the part the slope can't tell you."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Why +C is unavoidable",
+      "body": "Two curves can have identical slopes everywhere while sitting at different heights. Imagine a ramp shifted up by 5 — slope is the same as the original, just \"5 higher\". The slope information is *blind* to vertical shifts. So when you integrate, you must always add an arbitrary $+C$ — the slope can't recover the lost altitude.\n\n(If you DO know the starting height — say $y = 7$ when $x = 0$ — then you can pin down $C$. Such information is called an **initial condition**.)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. Stacking triangles — a slope that grows",
+        "Now try a harder case. Suppose the slope grows linearly with $x$:",
+        "$\\dfrac{dy}{dx} = \\tfrac{1}{5}\\, x$",
+        "Tabulate the slope at several points and draw each tile as a triangle whose height equals the slope at that $x$:",
+        "$x = 0 \\Rightarrow \\text{slope } 0 \\Rightarrow$ flat tile (no triangle)",
+        "$x = 1 \\Rightarrow \\text{slope } 0.2 \\Rightarrow$ short triangle",
+        "$x = 2 \\Rightarrow \\text{slope } 0.4 \\Rightarrow$ taller triangle",
+        "$x = 3 \\Rightarrow \\text{slope } 0.6$",
+        "$x = 4 \\Rightarrow \\text{slope } 0.8$",
+        "$x = 5 \\Rightarrow \\text{slope } 1.0$",
+        "Stack these tiles end to end (each one's left edge meets the previous one's right edge). The result is a **growing curve** — taller and steeper as $x$ increases. **It's a parabola.**"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. Reading off the integral",
+        "We need to figure out the actual formula for $y$. Since $dy = (\\tfrac{1}{5}\\,x)\\,dx$, we can write",
+        "$y = \\int dy = \\int \\tfrac{1}{5}\\,x \\, dx$",
+        "*\"$y$ equals the sum of all the little $dy$'s, which equals the sum of all the $\\tfrac{1}{5} x \\, dx$'s.\"*",
+        "Use the **reverse of the power rule** — bump the exponent up by 1, divide by the new exponent:",
+        "$\\int x \\, dx = \\dfrac{x^2}{2} + C$",
+        "So",
+        "$y = \\tfrac{1}{5} \\cdot \\dfrac{x^2}{2} + C = \\dfrac{x^2}{10} + C$",
+        "A parabola — just as we suspected from the picture."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The power rule in reverse",
+      "body": "Forward (differentiate): $\\dfrac{d}{dx}(x^n) = n\\,x^{\\,n-1}$ — bring exponent down, reduce by 1.\n\nBackward (integrate): $\\displaystyle\\int x^n\\,dx = \\dfrac{x^{\\,n+1}}{n+1} + C$ — raise exponent by 1, divide by the new exponent.\n\nIt's the same rule reflected. The only exception: $n = -1$ would force you to divide by 0. That single case is filled in by the logarithm: $\\displaystyle\\int \\dfrac{1}{x}\\,dx = \\ln|x| + C$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. Three integrals at a glance",
+        "**Constant slope** — $\\displaystyle\\int a\\,dx = a x + C$. (Imagine: $y' = a$, stack identical triangles → straight line.)",
+        "**Linear slope** — $\\displaystyle\\int a x\\,dx = \\tfrac{1}{2} a x^2 + C$. (Triangles get taller as $x$ grows → parabola.)",
+        "**Sum of terms** — $\\displaystyle\\int (f + g)\\,dx = \\int f\\,dx + \\int g\\,dx$. (Stack two sets of triangles in parallel; their heights add up.)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 5. A classic standoff: the constant of integration",
+        "Compare these two integrals:",
+        "$\\displaystyle\\int (2x)\\,dx = x^2 + C$",
+        "$\\displaystyle\\int (2x)\\,dx = x^2 + 7$",
+        "Are they different? **No — they're the same.** The second is a particular member of the family the first describes (with $C = 7$). The first answer is **more general** — it's the whole infinite family of curves whose slope is $2x$. The second is a specific one.",
+        "Without an initial condition, **always** include $+C$. With an initial condition, *use* it to pin down $C$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Example with an initial condition",
+      "body": "A ball is thrown upward; its velocity at time $t$ is $v(t) = 20 - 10t$ m/s. The ball starts at height $y(0) = 1.5$ m. Find $y(t)$.\n\n**Integrate** $v$ to get position: $y(t) = \\int (20 - 10t)\\,dt = 20t - 5t^2 + C$.\n\n**Use the initial condition** $y(0) = 1.5$: plug in $t = 0$ to get $0 - 0 + C = 1.5$, so $C = 1.5$.\n\n**Final answer:** $y(t) = 20t - 5t^2 + 1.5$ m.\n\nWithout the initial $1.5$ m, the answer would have been incomplete — $+C$ would still be sitting there, waiting to be filled in."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 6. Reading integration as English",
+        "When you next meet a thicket of integral signs, **read them aloud as English**:",
+        "$\\displaystyle\\int 2x \\, dx \\quad\\to\\quad$ *\"the sum of $2x$ times little bits of $x$\"*",
+        "$\\displaystyle\\int_0^5 v(t)\\, dt \\quad\\to\\quad$ *\"the sum, from $t=0$ to $t=5$, of velocity times little bits of $t$\"* (= distance traveled — speed times time, accumulated)",
+        "$\\displaystyle\\int \\rho(x,y,z) \\, dV \\quad\\to\\quad$ *\"the sum of density times little bits of volume\"* (= total mass)",
+        "Read this way, integrals tell you what they ARE before you compute them. **An integral is an accumulator** — it adds up little contributions to a total."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The whole story so far",
+      "body": "Differentiation: $y \\to \\dfrac{dy}{dx}$ — slope from function. Take a clock apart.\n\nIntegration: $\\dfrac{dy}{dx} \\to y + C$ — function from slope. Put the clock back together (but you have to remember where the hands started).\n\nThese are inverse operations. The $+C$ exists because vertical shifts are invisible to slope. The notation is plain English: $d$ = \"little bit of\", $\\int$ = \"sum of\"."
+    }
+  ]
+}

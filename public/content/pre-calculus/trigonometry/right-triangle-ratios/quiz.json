@@ -1,0 +1,588 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{In a right triangle, the side directly across from angle } \\theta \\\\ \\text{(not the right angle) is called the:}",
+      "choices": [
+        "hypotenuse",
+        "opposite",
+        "adjacent",
+        "secant"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "The hypotenuse is across from the *right* angle, not from $\\theta$.",
+        "Across from $\\theta$ — opposite!"
+      ],
+      "explanation": "The 'opposite' side is the leg across from $\\theta$. The hypotenuse is across from the right angle (always the longest); the adjacent is the *other* leg next to $\\theta$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{In a 3-4-5 right triangle, } \\theta \\text{ is the angle opposite the side of length 3.} \\\\ \\text{What is } \\sin\\theta?",
+      "answer": 0.6,
+      "tolerance": 0.01,
+      "hints": [
+        "$\\sin\\theta = \\dfrac{\\text{opposite}}{\\text{hypotenuse}}$.",
+        "Opposite $= 3$. Hypotenuse $= 5$ (longest side)."
+      ],
+      "explanation": "$\\sin\\theta = \\dfrac{3}{5} = 0.6$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\sin 30° = ?",
+      "choices": [
+        "\\dfrac{1}{2}",
+        "\\dfrac{\\sqrt{2}}{2}",
+        "\\dfrac{\\sqrt{3}}{2}",
+        "1"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Think of an equilateral triangle split in half — that gives a 30-60-90 triangle.",
+        "In a 30-60-90 triangle, the side opposite $30°$ is half the hypotenuse."
+      ],
+      "explanation": "$\\sin 30° = \\tfrac{1}{2}$. Worth memorizing alongside $\\sin 45° = \\tfrac{\\sqrt{2}}{2}$ and $\\sin 60° = \\tfrac{\\sqrt{3}}{2}$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{A right triangle has hypotenuse 10 and one angle of } 60°. \\\\ \\text{What is the length of the side opposite the } 60° \\text{ angle?} \\\\ \\text{(Use } \\sin 60° \\approx 0.866 \\text{)}",
+      "answer": 8.66,
+      "tolerance": 0.05,
+      "hints": [
+        "Use $\\sin\\theta = \\dfrac{\\text{opp}}{\\text{hyp}}$ and solve for opposite.",
+        "$\\text{opposite} = \\text{hyp} \\cdot \\sin\\theta = 10 \\cdot 0.866$."
+      ],
+      "explanation": "$\\text{opposite} = 10 \\cdot \\sin 60° \\approx 10 \\cdot 0.866 = 8.66$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{In SOHCAHTOA, what does CAH stand for?}",
+      "choices": [
+        "\\cos = \\dfrac{\\text{adj}}{\\text{hyp}}",
+        "\\cos = \\dfrac{\\text{adj}}{\\text{opp}}",
+        "\\cos = \\dfrac{\\text{hyp}}{\\text{adj}}",
+        "\\cos = \\dfrac{\\text{opp}}{\\text{hyp}}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "C is for cosine, A is for adjacent, H is for hypotenuse.",
+        "Pattern: function = first letter / second letter."
+      ],
+      "explanation": "**C**AH means **C**osine $= \\dfrac{\\text{Adjacent}}{\\text{Hypotenuse}}$. The first letter is the function; the next two are numerator and denominator.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{Right triangle with hypotenuse } 10 \\text{ and angle } \\theta = 30°. \\\\ \\text{Find the side opposite } \\theta.",
+      "answer": 5,
+      "tolerance": 0.05,
+      "hints": [
+        "$\\sin\\theta = \\dfrac{\\text{opp}}{\\text{hyp}}$, so $\\text{opp} = \\text{hyp} \\cdot \\sin\\theta$.",
+        "$\\sin 30° = \\tfrac{1}{2}$."
+      ],
+      "explanation": "$\\text{opp} = 10 \\cdot \\sin 30° = 10 \\cdot 0.5 = 5$.",
+      "steps": [
+        "**Identify what you know and what you want.** You know the hypotenuse ($10$) and angle ($30°$). You want the side **opposite** the angle. Opposite + hypotenuse + angle → use **sine**.",
+        "Write the sine ratio with the unknown labelled $x$: $$\\sin 30° = \\dfrac{x}{10}$$",
+        "Solve for $x$ by multiplying both sides by $10$: $$x = 10 \\cdot \\sin 30°$$",
+        "Substitute $\\sin 30° = 0.5$: $$x = 10 \\cdot 0.5 = 5$$",
+        "**Answer:** the side opposite $30°$ is $5$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{A right triangle has hypotenuse } 20 \\text{ and one angle of } 50°. \\\\ \\text{Find the side opposite the } 50° \\text{ angle.} \\\\ \\text{(Round to one decimal place. Use } \\sin 50° \\approx 0.766 \\text{)}",
+      "answer": 15.3,
+      "tolerance": 0.1,
+      "hints": [
+        "Opposite + hypotenuse known/unknown → use $\\sin$.",
+        "$\\text{opp} = \\text{hyp} \\cdot \\sin\\theta$."
+      ],
+      "explanation": "$\\text{opp} = 20 \\cdot \\sin 50° \\approx 20 \\cdot 0.766 \\approx 15.3$.",
+      "steps": [
+        "Identify: hypotenuse $= 20$, angle $= 50°$, want **opposite**.",
+        "Use sine: $$\\sin 50° = \\dfrac{x}{20}$$",
+        "Multiply both sides by $20$: $$x = 20 \\cdot \\sin 50°$$",
+        "Plug in $\\sin 50° \\approx 0.766$: $$x \\approx 20 \\cdot 0.766 = 15.32$$",
+        "Rounded: $x \\approx 15.3$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{The side opposite angle } \\theta \\text{ is } 7. \\\\ \\text{The hypotenuse is } 14. \\text{ Find } \\theta \\text{ in degrees.}",
+      "answer": 30,
+      "tolerance": 0.5,
+      "hints": [
+        "$\\sin\\theta = \\dfrac{\\text{opp}}{\\text{hyp}} = \\dfrac{7}{14}$.",
+        "Use $\\theta = \\sin^{-1}\\!\\left(\\dfrac{7}{14}\\right)$. What angle has sine $= 0.5$?"
+      ],
+      "explanation": "$\\sin\\theta = \\tfrac{7}{14} = 0.5$, so $\\theta = \\sin^{-1}(0.5) = 30°$.",
+      "steps": [
+        "You know **opposite** and **hypotenuse**, you want the **angle** — use sine.",
+        "Set up the ratio: $$\\sin\\theta = \\dfrac{7}{14} = \\dfrac{1}{2}$$",
+        "Take the inverse sine of both sides: $$\\theta = \\sin^{-1}\\!\\left(\\dfrac{1}{2}\\right)$$",
+        "Recall the special angle: $\\sin 30° = \\tfrac{1}{2}$, so $\\sin^{-1}(0.5) = 30°$.",
+        "**Answer:** $\\theta = 30°$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{The side opposite angle } \\theta \\text{ is } 8 \\text{ and the hypotenuse is } 17. \\\\ \\text{Find } \\theta \\text{ in degrees (round to nearest 0.1°).}",
+      "answer": 28.1,
+      "tolerance": 0.3,
+      "hints": [
+        "$\\sin\\theta = \\dfrac{8}{17}$.",
+        "$\\theta = \\sin^{-1}(8/17) \\approx \\sin^{-1}(0.4706)$."
+      ],
+      "explanation": "$\\theta = \\sin^{-1}(8/17) \\approx \\sin^{-1}(0.4706) \\approx 28.07°$.",
+      "steps": [
+        "Identify: opposite $= 8$, hypotenuse $= 17$, want angle.",
+        "Write the sine ratio: $$\\sin\\theta = \\dfrac{8}{17}$$",
+        "Compute the decimal: $$\\sin\\theta \\approx 0.4706$$",
+        "Take inverse sine: $$\\theta = \\sin^{-1}(0.4706) \\approx 28.07°$$",
+        "Rounded: $\\theta \\approx 28.1°$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{Right triangle: angle } \\theta = 40°, \\text{ side opposite } \\theta \\text{ is } 9. \\\\ \\text{Find the hypotenuse. (Use } \\sin 40° \\approx 0.643 \\text{)}",
+      "answer": 14,
+      "tolerance": 0.2,
+      "hints": [
+        "Now the *hypotenuse* is the unknown — it's on the bottom of the fraction.",
+        "Solve $\\sin 40° = \\dfrac{9}{h}$ for $h$: $h = \\dfrac{9}{\\sin 40°}$."
+      ],
+      "explanation": "$h = \\dfrac{9}{\\sin 40°} \\approx \\dfrac{9}{0.643} \\approx 14.0$.",
+      "steps": [
+        "Identify: angle $= 40°$, opposite $= 9$, want **hypotenuse**.",
+        "Set up sine: $$\\sin 40° = \\dfrac{9}{h}$$",
+        "Multiply both sides by $h$ to get it out of the denominator: $$h \\cdot \\sin 40° = 9$$",
+        "Divide both sides by $\\sin 40°$: $$h = \\dfrac{9}{\\sin 40°}$$",
+        "Plug in: $$h \\approx \\dfrac{9}{0.643} \\approx 14.0$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q11",
+      "type": "multiple-choice",
+      "promptTex": "\\text{In a right triangle, you know the angle and the hypotenuse,} \\\\ \\text{and you want the side opposite the angle. Which equation do you use?}",
+      "choices": [
+        "\\text{opposite} = \\text{hyp} \\cdot \\sin\\theta",
+        "\\text{opposite} = \\dfrac{\\text{hyp}}{\\sin\\theta}",
+        "\\text{opposite} = \\text{hyp} \\cdot \\cos\\theta",
+        "\\text{opposite} = \\sin\\theta - \\text{hyp}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Start from $\\sin\\theta = \\dfrac{\\text{opp}}{\\text{hyp}}$.",
+        "Multiply both sides by hyp."
+      ],
+      "explanation": "From $\\sin\\theta = \\dfrac{\\text{opp}}{\\text{hyp}}$, multiplying by hyp gives $\\text{opp} = \\text{hyp} \\cdot \\sin\\theta$.",
+      "steps": [
+        "Start from the definition: $$\\sin\\theta = \\dfrac{\\text{opp}}{\\text{hyp}}$$",
+        "Multiply both sides by $\\text{hyp}$: $$\\text{hyp} \\cdot \\sin\\theta = \\text{opp}$$",
+        "Rewrite: $$\\text{opp} = \\text{hyp} \\cdot \\sin\\theta$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\text{Right triangle: hypotenuse } 16, \\text{ angle } \\theta = 60°. \\\\ \\text{Find the side adjacent to } \\theta.",
+      "answer": 8,
+      "tolerance": 0.05,
+      "hints": [
+        "Adjacent + hypotenuse + angle → use cosine.",
+        "$\\cos 60° = \\tfrac{1}{2}$, so adjacent $= \\text{hyp} \\cdot \\cos 60°$."
+      ],
+      "explanation": "$\\text{adj} = 16 \\cdot \\cos 60° = 16 \\cdot 0.5 = 8$.",
+      "steps": [
+        "Identify what's known and what's wanted: hypotenuse $= 16$, angle $= 60°$, want **adjacent**.",
+        "Adjacent + hypotenuse → use **cosine**: $$\\cos 60° = \\dfrac{x}{16}$$",
+        "Multiply both sides by $16$: $$x = 16 \\cdot \\cos 60°$$",
+        "Substitute $\\cos 60° = \\tfrac{1}{2}$: $$x = 16 \\cdot \\tfrac{1}{2} = 8$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q13",
+      "type": "numeric",
+      "promptTex": "\\text{Right triangle: hypotenuse } 25, \\text{ angle } \\theta = 35°. \\\\ \\text{Find the adjacent side. (Use } \\cos 35° \\approx 0.819 \\text{)}",
+      "answer": 20.5,
+      "tolerance": 0.2,
+      "hints": [
+        "$\\text{adj} = \\text{hyp} \\cdot \\cos\\theta$.",
+        "$25 \\cdot 0.819 \\approx ?$"
+      ],
+      "explanation": "$\\text{adj} = 25 \\cdot \\cos 35° \\approx 25 \\cdot 0.819 \\approx 20.47$.",
+      "steps": [
+        "Identify: hypotenuse $= 25$, angle $= 35°$, want adjacent.",
+        "Use cosine: $$\\cos 35° = \\dfrac{x}{25}$$",
+        "Solve for $x$: $$x = 25 \\cdot \\cos 35°$$",
+        "Plug in $\\cos 35° \\approx 0.819$: $$x \\approx 25 \\cdot 0.819 \\approx 20.47$$",
+        "Rounded: $x \\approx 20.5$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q14",
+      "type": "numeric",
+      "promptTex": "\\text{The side adjacent to } \\theta \\text{ is } 9, \\text{ and the hypotenuse is } 18. \\\\ \\text{Find } \\theta \\text{ in degrees.}",
+      "answer": 60,
+      "tolerance": 0.5,
+      "hints": [
+        "$\\cos\\theta = \\dfrac{9}{18} = 0.5$.",
+        "$\\theta = \\cos^{-1}(0.5)$. Which special angle has cosine $0.5$?"
+      ],
+      "explanation": "$\\cos 60° = 0.5$, so $\\theta = 60°$.",
+      "steps": [
+        "Identify: adjacent $= 9$, hypotenuse $= 18$, want angle.",
+        "Set up cosine: $$\\cos\\theta = \\dfrac{9}{18} = \\dfrac{1}{2}$$",
+        "Take inverse cosine: $$\\theta = \\cos^{-1}\\!\\left(\\dfrac{1}{2}\\right)$$",
+        "Recall $\\cos 60° = \\tfrac{1}{2}$, so $$\\theta = 60°$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q15",
+      "type": "numeric",
+      "promptTex": "\\text{Right triangle: angle } \\theta = 25°, \\text{ adjacent side } = 12. \\\\ \\text{Find the hypotenuse. (Use } \\cos 25° \\approx 0.906 \\text{)}",
+      "answer": 13.2,
+      "tolerance": 0.2,
+      "hints": [
+        "Now hypotenuse is the unknown — it's in the denominator.",
+        "$\\text{hyp} = \\dfrac{\\text{adj}}{\\cos\\theta} = \\dfrac{12}{\\cos 25°}$."
+      ],
+      "explanation": "$\\text{hyp} = \\dfrac{12}{\\cos 25°} \\approx \\dfrac{12}{0.906} \\approx 13.24$.",
+      "steps": [
+        "Identify: angle $= 25°$, adjacent $= 12$, want hypotenuse.",
+        "Set up cosine: $$\\cos 25° = \\dfrac{12}{h}$$",
+        "Multiply both sides by $h$: $$h \\cdot \\cos 25° = 12$$",
+        "Divide both sides by $\\cos 25°$: $$h = \\dfrac{12}{\\cos 25°}$$",
+        "Plug in $\\cos 25° \\approx 0.906$: $$h \\approx \\dfrac{12}{0.906} \\approx 13.24$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q16",
+      "type": "multiple-choice",
+      "promptTex": "\\text{In a right triangle, } \\theta \\text{ is one of the acute angles. The } \\textbf{adjacent} \\\\ \\text{side is the leg that...}",
+      "choices": [
+        "is across from the right angle",
+        "is across from $\\theta$",
+        "touches $\\theta$ but is not the hypotenuse",
+        "is always the longest side"
+      ],
+      "choicesTex": false,
+      "answerIndex": 2,
+      "hints": [
+        "The hypotenuse is across from the right angle (the longest side).",
+        "Of the two legs, one is across from $\\theta$ (opposite). The other is the adjacent."
+      ],
+      "explanation": "The adjacent side is the leg that is next to $\\theta$ but is **not** the hypotenuse.",
+      "steps": [
+        "First, the **hypotenuse** is always across from the $90°$ angle. So 'across from right angle' and 'always longest' both describe the hypotenuse, not the adjacent.",
+        "The leg **across from** $\\theta$ is the **opposite** side (used for sine/tangent).",
+        "That leaves the third leg — the one that **touches** $\\theta$ but is **not** the hypotenuse. That's the **adjacent**."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q17",
+      "type": "numeric",
+      "promptTex": "\\text{Adjacent } = 5, \\text{ hypotenuse } = 13. \\text{ Find } \\theta \\text{ in degrees} \\\\ \\text{(round to nearest 0.1°).}",
+      "answer": 67.4,
+      "tolerance": 0.3,
+      "hints": [
+        "$\\cos\\theta = \\dfrac{5}{13}$.",
+        "$\\theta = \\cos^{-1}(5/13) \\approx \\cos^{-1}(0.3846)$."
+      ],
+      "explanation": "$\\theta = \\cos^{-1}(5/13) \\approx 67.38°$.",
+      "steps": [
+        "Identify: adjacent $= 5$, hypotenuse $= 13$, want angle.",
+        "Set up cosine: $$\\cos\\theta = \\dfrac{5}{13} \\approx 0.3846$$",
+        "Take inverse cosine: $$\\theta = \\cos^{-1}(0.3846)$$",
+        "Compute: $$\\theta \\approx 67.38°$$",
+        "Rounded: $\\theta \\approx 67.4°$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q18",
+      "type": "numeric",
+      "promptTex": "\\text{Right triangle: angle } \\theta = 45°, \\text{ adjacent leg } = 8. \\\\ \\text{Find the opposite leg.}",
+      "answer": 8,
+      "tolerance": 0.05,
+      "hints": [
+        "$\\tan 45° = 1$.",
+        "$\\text{opp} = \\text{adj} \\cdot \\tan\\theta = 8 \\cdot 1$."
+      ],
+      "explanation": "$\\text{opp} = 8 \\cdot \\tan 45° = 8 \\cdot 1 = 8$. (At $45°$, the legs are equal.)",
+      "steps": [
+        "Identify: angle $= 45°$, adjacent $= 8$, want opposite. Two legs in play → tangent.",
+        "Set up: $$\\tan 45° = \\dfrac{x}{8}$$",
+        "Multiply both sides by $8$: $$x = 8 \\cdot \\tan 45°$$",
+        "Substitute $\\tan 45° = 1$: $$x = 8 \\cdot 1 = 8$$",
+        "**Answer:** opposite $= 8$. (This makes sense — a $45°$ angle in a right triangle means the two legs are equal.)"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q19",
+      "type": "numeric",
+      "promptTex": "\\text{Adjacent leg } = 15, \\text{ angle } \\theta = 32°. \\\\ \\text{Find the opposite leg. (Use } \\tan 32° \\approx 0.625 \\text{)}",
+      "answer": 9.4,
+      "tolerance": 0.2,
+      "hints": [
+        "$\\text{opp} = \\text{adj} \\cdot \\tan\\theta$.",
+        "$15 \\cdot 0.625 = ?$"
+      ],
+      "explanation": "$\\text{opp} = 15 \\cdot \\tan 32° \\approx 15 \\cdot 0.625 \\approx 9.38$.",
+      "steps": [
+        "Identify: adjacent $= 15$, angle $= 32°$, want opposite.",
+        "Use tangent: $$\\tan 32° = \\dfrac{x}{15}$$",
+        "Solve for $x$: $$x = 15 \\cdot \\tan 32°$$",
+        "Plug in $\\tan 32° \\approx 0.625$: $$x \\approx 15 \\cdot 0.625 = 9.375$$",
+        "Rounded: $x \\approx 9.4$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q20",
+      "type": "numeric",
+      "promptTex": "\\text{Opposite } = 12, \\text{ adjacent } = 5. \\\\ \\text{Find } \\theta \\text{ in degrees (round to nearest 0.1°).}",
+      "answer": 67.4,
+      "tolerance": 0.3,
+      "hints": [
+        "$\\tan\\theta = \\dfrac{12}{5} = 2.4$.",
+        "$\\theta = \\tan^{-1}(2.4)$."
+      ],
+      "explanation": "$\\theta = \\tan^{-1}(12/5) = \\tan^{-1}(2.4) \\approx 67.38°$.",
+      "steps": [
+        "Identify: opposite $= 12$, adjacent $= 5$, want angle. Two legs → tangent.",
+        "Set up: $$\\tan\\theta = \\dfrac{12}{5} = 2.4$$",
+        "Take inverse tangent: $$\\theta = \\tan^{-1}(2.4)$$",
+        "Compute: $$\\theta \\approx 67.38°$$",
+        "Rounded: $\\theta \\approx 67.4°$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q21",
+      "type": "numeric",
+      "promptTex": "\\text{Opposite leg } = 6, \\text{ angle } \\theta = 30°. \\\\ \\text{Find the adjacent leg. (Use } \\tan 30° \\approx 0.577 \\text{)}",
+      "answer": 10.4,
+      "tolerance": 0.2,
+      "hints": [
+        "Now adjacent is the unknown — it's in the denominator.",
+        "$\\text{adj} = \\dfrac{\\text{opp}}{\\tan\\theta} = \\dfrac{6}{\\tan 30°}$."
+      ],
+      "explanation": "$\\text{adj} = \\dfrac{6}{\\tan 30°} \\approx \\dfrac{6}{0.577} \\approx 10.39$.",
+      "steps": [
+        "Identify: opposite $= 6$, angle $= 30°$, want **adjacent**.",
+        "Set up tangent (note adjacent is in the denominator): $$\\tan 30° = \\dfrac{6}{a}$$",
+        "Multiply both sides by $a$: $$a \\cdot \\tan 30° = 6$$",
+        "Divide both sides by $\\tan 30°$: $$a = \\dfrac{6}{\\tan 30°}$$",
+        "Plug in: $$a \\approx \\dfrac{6}{0.577} \\approx 10.4$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q22",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A right triangle has legs } 3 \\text{ and } 4 \\text{ (no hypotenuse given).} \\\\ \\text{What is } \\tan\\theta \\text{ where } \\theta \\text{ is the angle opposite the leg of length 3?}",
+      "choices": [
+        "\\dfrac{3}{4}",
+        "\\dfrac{4}{3}",
+        "\\dfrac{3}{5}",
+        "\\dfrac{4}{5}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "$\\tan\\theta = \\dfrac{\\text{opp}}{\\text{adj}}$.",
+        "Opposite to $\\theta$ is the leg of length 3. The other leg is the adjacent."
+      ],
+      "explanation": "$\\tan\\theta = \\dfrac{\\text{opp}}{\\text{adj}} = \\dfrac{3}{4}$.",
+      "steps": [
+        "$\\theta$ is opposite the leg of length $3$, so **opposite** $= 3$.",
+        "The other leg, length $4$, must be the **adjacent**.",
+        "Apply the tangent ratio: $$\\tan\\theta = \\dfrac{\\text{opp}}{\\text{adj}} = \\dfrac{3}{4}$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q23",
+      "type": "numeric",
+      "promptTex": "\\text{Adjacent } = 11, \\text{ opposite } = 11. \\\\ \\text{Find } \\theta \\text{ in degrees.}",
+      "answer": 45,
+      "tolerance": 0.5,
+      "hints": [
+        "$\\tan\\theta = \\dfrac{11}{11} = 1$.",
+        "Which special angle has tangent $= 1$?"
+      ],
+      "explanation": "$\\tan 45° = 1$, so $\\theta = 45°$.",
+      "steps": [
+        "Set up tangent: $$\\tan\\theta = \\dfrac{11}{11} = 1$$",
+        "Take inverse tangent: $$\\theta = \\tan^{-1}(1)$$",
+        "Special angle: $\\tan 45° = 1$, so $\\theta = 45°$.",
+        "Sanity check: equal legs should give a $45°$ angle. ✓"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q24",
+      "type": "multiple-choice",
+      "promptTex": "\\text{You know the angle and the } \\textbf{adjacent} \\text{ leg, and you want the} \\\\ \\textbf{opposite} \\text{ leg. Which trig ratio do you use?}",
+      "choices": [
+        "\\sin",
+        "\\cos",
+        "\\tan",
+        "\\sin^{-1}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "List the two sides involved.",
+        "opp + adj — no hypotenuse — that's tangent."
+      ],
+      "explanation": "Both legs (opp + adj), no hypotenuse → use **tangent**.",
+      "steps": [
+        "List the two sides in play: **opposite** (unknown) and **adjacent** (known).",
+        "No hypotenuse appears in the problem.",
+        "Match to the table: opp + adj → **tangent**."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q25",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Hypotenuse } = 25, \\text{ opposite } = 10. \\\\ \\text{Which equation lets you find } \\theta?",
+      "choices": [
+        "\\theta = \\sin^{-1}\\!\\left(\\dfrac{10}{25}\\right)",
+        "\\theta = \\cos^{-1}\\!\\left(\\dfrac{10}{25}\\right)",
+        "\\theta = \\tan^{-1}\\!\\left(\\dfrac{10}{25}\\right)",
+        "\\theta = \\sin^{-1}\\!\\left(\\dfrac{25}{10}\\right)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Two sides are opp and hyp — that's sine.",
+        "Sine of the angle = opp/hyp, so the angle = $\\sin^{-1}(\\text{opp}/\\text{hyp})$."
+      ],
+      "explanation": "opp + hyp → sine. To solve for the angle: $\\theta = \\sin^{-1}(\\text{opp}/\\text{hyp}) = \\sin^{-1}(10/25)$.",
+      "steps": [
+        "Two sides given: opposite ($10$) and hypotenuse ($25$).",
+        "opp + hyp matches **sine**: $$\\sin\\theta = \\dfrac{10}{25}$$",
+        "To get the angle alone, take inverse sine of both sides: $$\\theta = \\sin^{-1}\\!\\left(\\dfrac{10}{25}\\right)$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q26",
+      "type": "numeric",
+      "promptTex": "\\text{Right triangle: hypotenuse } 17, \\text{ adjacent } 15. \\\\ \\text{Find the opposite leg.}",
+      "answer": 8,
+      "tolerance": 0.05,
+      "hints": [
+        "You can use the Pythagorean theorem or trig.",
+        "Pythagorean: $\\text{opp}^2 = 17^2 - 15^2 = 289 - 225 = 64$."
+      ],
+      "explanation": "$\\text{opp} = \\sqrt{17^2 - 15^2} = \\sqrt{64} = 8$.",
+      "steps": [
+        "Two sides known: hypotenuse $= 17$ and adjacent $= 15$. Want the opposite (third side).",
+        "Easiest path is the **Pythagorean theorem** since all three sides are integers: $$\\text{opp}^2 + 15^2 = 17^2$$",
+        "Solve: $$\\text{opp}^2 = 289 - 225 = 64$$",
+        "$$\\text{opp} = \\sqrt{64} = 8$$",
+        "(This is the famous $8$–$15$–$17$ Pythagorean triple.)"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q27",
+      "type": "numeric",
+      "promptTex": "\\text{Right triangle: angle } \\theta = 55°, \\text{ adjacent } = 9. \\\\ \\text{Find the hypotenuse. (Use } \\cos 55° \\approx 0.574 \\text{)}",
+      "answer": 15.7,
+      "tolerance": 0.2,
+      "hints": [
+        "adj + hyp + angle → use cosine.",
+        "$\\cos 55° = \\dfrac{9}{h}$, so $h = \\dfrac{9}{\\cos 55°}$."
+      ],
+      "explanation": "$h = \\dfrac{9}{\\cos 55°} \\approx \\dfrac{9}{0.574} \\approx 15.68$.",
+      "steps": [
+        "Identify: angle $= 55°$, adjacent $= 9$, want hypotenuse.",
+        "Two sides involved: adjacent + hypotenuse → use **cosine**.",
+        "Set up (hyp is in the denominator): $$\\cos 55° = \\dfrac{9}{h}$$",
+        "Solve for $h$: $$h = \\dfrac{9}{\\cos 55°}$$",
+        "Plug in $\\cos 55° \\approx 0.574$: $$h \\approx \\dfrac{9}{0.574} \\approx 15.68$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q28",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Triangle with angle } \\theta. \\text{ You know the } \\textbf{hypotenuse} \\text{ and the} \\\\ \\textbf{opposite}, \\text{ and want the } \\textbf{adjacent}. \\text{ The fastest path is...}",
+      "choices": [
+        "use sine to find $\\theta$, then cosine for adjacent",
+        "use Pythagorean theorem: adj $= \\sqrt{\\text{hyp}^2 - \\text{opp}^2}$",
+        "use tangent",
+        "use cosine directly"
+      ],
+      "choicesTex": false,
+      "answerIndex": 1,
+      "hints": [
+        "Notice you have two sides — neither involves an unknown angle.",
+        "Two sides + right angle → Pythagorean theorem skips trig entirely."
+      ],
+      "explanation": "When you know two sides and want the third, the Pythagorean theorem is direct — no need to find the angle first.",
+      "steps": [
+        "You have two sides (hyp + opp), no angle, want the third side (adj).",
+        "The quickest tool is the Pythagorean theorem: $$\\text{adj}^2 + \\text{opp}^2 = \\text{hyp}^2$$",
+        "Solve for adj: $$\\text{adj} = \\sqrt{\\text{hyp}^2 - \\text{opp}^2}$$",
+        "(You *could* find $\\theta$ via sine and then use cosine, but that's two steps for what's really one.)"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q29",
+      "type": "numeric",
+      "promptTex": "\\text{Right triangle: opposite } 7, \\text{ adjacent } 24. \\\\ \\text{Find the angle } \\theta \\text{ in degrees (round to nearest 0.1°).}",
+      "answer": 16.3,
+      "tolerance": 0.3,
+      "hints": [
+        "opp + adj → tangent.",
+        "$\\theta = \\tan^{-1}(7/24)$."
+      ],
+      "explanation": "$\\theta = \\tan^{-1}(7/24) \\approx 16.26°$.",
+      "steps": [
+        "Two legs given (opposite + adjacent), no hypotenuse → tangent.",
+        "Set up: $$\\tan\\theta = \\dfrac{7}{24}$$",
+        "Take inverse tangent: $$\\theta = \\tan^{-1}\\!\\left(\\dfrac{7}{24}\\right)$$",
+        "Compute: $$\\theta \\approx 16.26°$$",
+        "Rounded: $\\theta \\approx 16.3°$. (This is the smaller acute angle of a $7$–$24$–$25$ triangle.)"
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

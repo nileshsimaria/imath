@@ -1,0 +1,265 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{In related rates, you should differentiate both sides with respect to:}",
+      "choices": [
+        "x",
+        "y",
+        "time t",
+        "the unknown variable"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "The variables are changing in time — that's the connecting variable.",
+        "Differentiate w.r.t. $t$."
+      ],
+      "explanation": "All quantities change in time. Differentiate both sides with respect to **time** $t$, applying chain rule to each variable.",
+      "steps": [
+        "**Related rates problems describe HOW quantities change over TIME.** The connecting variable is always $t$.",
+        "**Why differentiate w.r.t. $t$.** All the changing quantities ($x$, $y$, $r$, $V$, $A$, etc.) are functions of time. The equation relating them is true at every moment; differentiating w.r.t. $t$ converts it into an equation relating their RATES.",
+        "**Consequence: chain rule everywhere.** Every variable picks up a factor of its time derivative ($dx/dt$, $dy/dt$, $dr/dt$, etc.).",
+        "**This is the same machinery as implicit differentiation — just with $t$ as the variable instead of $x$.**"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{Sliding ladder: 10-ft ladder, bottom at 6 ft, sliding away at 1 ft/sec.} \\\\ \\text{How fast is the top sliding down (ft/sec, take absolute value)?}",
+      "answer": 0.75,
+      "tolerance": 0.01,
+      "hints": [
+        "From the worked example: top sliding at 3/4 ft/sec.",
+        "$|dy/dt| = 3/4 = 0.75$."
+      ],
+      "explanation": "$dy/dt = -3/4$. Absolute value: 0.75 ft/sec.",
+      "steps": [
+        "**Step 1: Draw and label.** Right triangle with ladder (hypotenuse) leaning against wall. Bottom distance from wall = $x$ (function of $t$); top height = $y$ (function of $t$); hypotenuse = ladder = 10 (CONSTANT).",
+        "**Step 2: Find a relationship.** Pythagoras: $x^2 + y^2 = 100$. (10² is constant; that's the key.)",
+        "**Step 3: Differentiate w.r.t. $t$.** $2x \\, \\dfrac{dx}{dt} + 2y \\, \\dfrac{dy}{dt} = 0$. (Constant 100 → 0 on the right.)",
+        "**Step 4: Find missing values at the moment of interest.** At $x = 6$: $y = \\sqrt{100 - 36} = 8$. Given $\\dfrac{dx}{dt} = 1$.",
+        "**Step 5: Substitute and solve.** $2(6)(1) + 2(8) \\dfrac{dy}{dt} = 0 \\Rightarrow 12 + 16 \\dfrac{dy}{dt} = 0 \\Rightarrow \\dfrac{dy}{dt} = -\\dfrac{3}{4}$ ft/sec.",
+        "**Negative sign meaning.** $y$ is DECREASING — top is sliding DOWN. Magnitude: $0.75$ ft/sec.",
+        "**Universal 5-step recipe for related rates: draw → relate → differentiate → fill in values → solve.**"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{Spherical balloon inflated at 12 cm}^3\\text{/sec. How fast is radius growing} \\\\ \\text{when } r = 3 \\text{ cm? (decimal, round to 4 places)}",
+      "answer": 0.106,
+      "tolerance": 0.01,
+      "hints": [
+        "$V = (4/3)\\pi r^3$. $dV/dt = 4\\pi r^2 dr/dt$.",
+        "$12 = 4\\pi(9) dr/dt \\Rightarrow dr/dt = 12/(36\\pi) = 1/(3\\pi) \\approx 0.106$."
+      ],
+      "explanation": "$dr/dt = 12/(36\\pi) = 1/(3\\pi) \\approx 0.106$ cm/sec.",
+      "steps": [
+        "**Identify variables and relationship.** Sphere: $V = \\tfrac{4}{3}\\pi r^3$. Both $V$ and $r$ change with time.",
+        "**Differentiate w.r.t. $t$.** $\\dfrac{dV}{dt} = 4\\pi r^2 \\cdot \\dfrac{dr}{dt}$. (Chain rule on $r^3$ gives $3r^2 \\cdot r'$; the $\\tfrac{4}{3}$ and the 3 combine to 4.)",
+        "**Plug in the moment-specific values.** $\\dfrac{dV}{dt} = 12$, $r = 3$.",
+        "**Solve.** $12 = 4\\pi(9) \\cdot \\dfrac{dr}{dt} = 36\\pi \\cdot \\dfrac{dr}{dt} \\Rightarrow \\dfrac{dr}{dt} = \\dfrac{1}{3\\pi} \\approx 0.106$ cm/sec.",
+        "**Conceptual takeaway.** Volume grows at a CONSTANT rate, but radius growth SLOWS as the balloon gets bigger (because $\\dfrac{dr}{dt}$ is inversely proportional to $r^2$). Same air, less radius growth — balloons inflate fast at first, slow down."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Square's side increases at 2 cm/sec. How fast is area increasing} \\\\ \\text{when side is 10 cm (cm}^2/\\text{sec})?",
+      "answer": 40,
+      "tolerance": 0,
+      "hints": [
+        "$A = s^2$. $dA/dt = 2s \\cdot ds/dt$.",
+        "$2(10)(2) = 40$ cm²/sec."
+      ],
+      "explanation": "$dA/dt = 2s \\cdot ds/dt = 2(10)(2) = 40$ cm²/sec.",
+      "steps": [
+        "**Variables: side $s(t)$, area $A(t)$.** Relationship: $A = s^2$.",
+        "**Differentiate w.r.t. $t$.** $\\dfrac{dA}{dt} = 2s \\cdot \\dfrac{ds}{dt}$.",
+        "**Plug in.** $s = 10$, $\\dfrac{ds}{dt} = 2$.",
+        "**Result.** $\\dfrac{dA}{dt} = 2(10)(2) = 40$ cm²/sec.",
+        "**This is literally Thompson's growing square in action.** As $s$ grows by $ds$, area grows by $\\approx 2s \\, ds$ — the two strips of the dissection. Related rates is the time-version of the same idea."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{In related rates, when should you substitute numerical values?}",
+      "choices": [
+        "Before differentiating",
+        "After differentiating",
+        "Doesn't matter",
+        "Never use numbers"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Plugging in too early kills the variable.",
+        "Differentiate first, substitute later."
+      ],
+      "explanation": "Always **differentiate first, then substitute**. Plugging in early makes that variable a constant, killing its derivative.",
+      "steps": [
+        "**Cardinal rule: differentiate FIRST, substitute LATER.**",
+        "**Why.** Substituting a numerical value (say $r = 3$) BEFORE differentiating makes that variable a constant. Then $\\dfrac{d}{dt}(3) = 0$ — and you've zeroed out the term you needed.",
+        "**Example of the mistake.** If you substitute $r = 3$ into $V = \\tfrac{4}{3}\\pi r^3 = 36\\pi$ first, then differentiate: $\\dfrac{dV}{dt} = 0$. WRONG. (Volume is changing, not constant.)",
+        "**The right way.** Differentiate $V = \\tfrac{4}{3}\\pi r^3$ symbolically first → $\\dfrac{dV}{dt} = 4\\pi r^2 \\dfrac{dr}{dt}$. THEN plug in $r = 3$.",
+        "**The numerical values describe a SPECIFIC MOMENT.** Differentiation lives in the SYMBOLIC RELATIONSHIP, which is true at every moment."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{Circle's radius grows at 0.5 cm/sec. How fast is the area growing} \\\\ \\text{when } r = 4 \\text{ cm? (decimal, round to 2)}",
+      "answer": 12.57,
+      "tolerance": 0.1,
+      "hints": [
+        "$A = \\pi r^2$. $dA/dt = 2\\pi r \\cdot dr/dt$.",
+        "$2\\pi(4)(0.5) = 4\\pi \\approx 12.57$."
+      ],
+      "explanation": "$dA/dt = 2\\pi r \\cdot dr/dt = 2\\pi(4)(0.5) = 4\\pi \\approx 12.57$.",
+      "steps": [
+        "**Variables: $r(t)$, $A(t)$. Relationship: $A = \\pi r^2$.**",
+        "**Differentiate w.r.t. $t$.** $\\dfrac{dA}{dt} = 2\\pi r \\cdot \\dfrac{dr}{dt}$.",
+        "**Plug in.** $r = 4$, $\\dfrac{dr}{dt} = 0.5$.",
+        "**Compute.** $2\\pi(4)(0.5) = 4\\pi \\approx 12.566$. Rounded: $12.57$.",
+        "**Geometric intuition.** $2\\pi r$ is the CIRCUMFERENCE of the circle. Each second the boundary advances $\\dfrac{dr}{dt}$ outward, sweeping out new area = (circumference) × (radial advance). The formula $\\dfrac{dA}{dt} = 2\\pi r \\cdot \\dfrac{dr}{dt}$ IS that statement."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{Cube's edge grows at 3 mm/sec. How fast is volume growing} \\\\ \\text{when edge is 5 mm (mm}^3/\\text{sec})?",
+      "answer": 225,
+      "tolerance": 0,
+      "hints": [
+        "$V = s^3$. $dV/dt = 3s^2 \\cdot ds/dt$.",
+        "$3(25)(3) = 225$ mm³/sec."
+      ],
+      "explanation": "$dV/dt = 3s^2 ds/dt = 3(25)(3) = 225$ mm³/sec.",
+      "steps": [
+        "**Cube: $V = s^3$.**",
+        "**Differentiate w.r.t. $t$.** $\\dfrac{dV}{dt} = 3 s^2 \\cdot \\dfrac{ds}{dt}$.",
+        "**Plug in.** $s = 5$, $\\dfrac{ds}{dt} = 3$.",
+        "**Result.** $3(25)(3) = 225$ mm³/sec.",
+        "**Thompson's growing cube.** $3 s^2$ is the surface area of THREE faces — the three slabs that get added as the cube grows by $ds$ on each axis. $\\dfrac{dV}{dt}$ counts those slabs sweeping outward."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{Person walks away from a 20-ft lamppost at 4 ft/sec. Person is 6 ft tall.} \\\\ \\text{How fast is the tip of shadow moving (ft/sec)?}",
+      "answer": 5.71,
+      "tolerance": 0.05,
+      "hints": [
+        "Tip moves at $(20/(20-6)) \\cdot $ walk speed = $20/14 \\cdot 4 = 80/14 \\approx 5.71$.",
+        "Or as in the worked example: $10/7 \\cdot 3 = 30/7 \\approx 4.29$ for the 3 ft/sec case. For 4 ft/sec: scale by 4/3."
+      ],
+      "explanation": "Tip moves at $\\dfrac{20}{20 - 6} \\cdot 4 = \\dfrac{20}{14} \\cdot 4 = \\dfrac{80}{14} \\approx 5.71$ ft/sec.",
+      "steps": [
+        "**Draw the picture: lamppost (height 20), person (height 6, distance $x$ from base), shadow extending behind person (length $s$).**",
+        "**Similar triangles.** The big triangle (lamppost-base to shadow tip) has height 20 over base $(x + s)$. The small triangle (person-feet to shadow tip) has height 6 over base $s$. They share the same angle at the shadow tip, so the ratios are equal: $\\dfrac{20}{x + s} = \\dfrac{6}{s}$.",
+        "**Solve for $s$.** $20 s = 6(x + s) \\Rightarrow 20s - 6s = 6x \\Rightarrow s = \\dfrac{6x}{14} = \\dfrac{3x}{7}$.",
+        "**Tip-of-shadow position.** $T = x + s = x + \\dfrac{3x}{7} = \\dfrac{10x}{7}$.",
+        "**Differentiate w.r.t. $t$.** $\\dfrac{dT}{dt} = \\dfrac{10}{7} \\dfrac{dx}{dt}$.",
+        "**Plug in $\\dfrac{dx}{dt} = 4$.** $\\dfrac{dT}{dt} = \\dfrac{10}{7}(4) = \\dfrac{40}{7} \\approx 5.71$ ft/sec.",
+        "**Lesson — similar triangles are the workhorse for shadow / mirror / projection problems.** Look for them whenever there are two scales related by a fixed ratio."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{Two cars: A heads east at 60 mph, B heads north at 80 mph (both from origin).} \\\\ \\text{How fast is the distance between them increasing 1 hr later (mph)?}",
+      "answer": 100,
+      "tolerance": 0.5,
+      "hints": [
+        "At t=1: A at (60, 0), B at (0, 80). Distance = $\\sqrt{60^2 + 80^2} = 100$.",
+        "$D^2 = x^2 + y^2$. $2D \\dot D = 2x \\dot x + 2y \\dot y$. At t=1: $200 \\dot D = 2(60)(60) + 2(80)(80) = 7200 + 12800 = 20000$. $\\dot D = 100$ mph."
+      ],
+      "explanation": "After 1 hr, distance is $\\sqrt{60^2 + 80^2} = 100$ mi. $\\dot D = 100$ mph.",
+      "steps": [
+        "**Set up.** Car A at $(x, 0)$ with $\\dfrac{dx}{dt} = 60$. Car B at $(0, y)$ with $\\dfrac{dy}{dt} = 80$. Distance $D = \\sqrt{x^2 + y^2}$.",
+        "**Useful trick: differentiate $D^2$ instead of $D$.** Avoids the square root. $D^2 = x^2 + y^2$.",
+        "**Differentiate w.r.t. $t$.** $2D \\, \\dfrac{dD}{dt} = 2x \\, \\dfrac{dx}{dt} + 2y \\, \\dfrac{dy}{dt}$.",
+        "**Find values at $t = 1$.** $x = 60$, $y = 80$, $D = \\sqrt{3600 + 6400} = \\sqrt{10000} = 100$.",
+        "**Plug in.** $2(100) \\dfrac{dD}{dt} = 2(60)(60) + 2(80)(80) = 7200 + 12800 = 20000$.",
+        "**Solve.** $\\dfrac{dD}{dt} = \\dfrac{20000}{200} = 100$ mph.",
+        "**Sanity check — 3-4-5 ratio.** Speeds are in 3-4-5 ratio (60-80-100), so distance grows at the 5-side rate, namely 100. Elegant. ✓"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{Volume of a sphere is changing such that surface area is increasing at} \\\\ 4 \\text{ cm}^2/\\text{sec when } r = 2 \\text{ cm. How fast is } r \\text{ changing? (cm/sec, 4 dp)}",
+      "answer": 0.0796,
+      "tolerance": 0.001,
+      "hints": [
+        "$S = 4\\pi r^2$. $dS/dt = 8\\pi r \\cdot dr/dt$.",
+        "$4 = 8\\pi(2) dr/dt = 16\\pi dr/dt$. $dr/dt = 1/(4\\pi) \\approx 0.0796$."
+      ],
+      "explanation": "$dS/dt = 8\\pi r \\cdot dr/dt$. $4 = 16\\pi \\cdot dr/dt \\Rightarrow dr/dt = \\dfrac{1}{4\\pi} \\approx 0.0796$ cm/sec.",
+      "steps": [
+        "**Sphere: $S = 4\\pi r^2$.**",
+        "**Differentiate w.r.t. $t$.** $\\dfrac{dS}{dt} = 8\\pi r \\cdot \\dfrac{dr}{dt}$.",
+        "**Plug in.** $\\dfrac{dS}{dt} = 4$, $r = 2$.",
+        "**Solve.** $4 = 8\\pi(2) \\dfrac{dr}{dt} = 16\\pi \\dfrac{dr}{dt} \\Rightarrow \\dfrac{dr}{dt} = \\dfrac{4}{16\\pi} = \\dfrac{1}{4\\pi} \\approx 0.0796$ cm/sec."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q11",
+      "type": "multiple-choice",
+      "promptTex": "\\text{First step of any related-rates problem:}",
+      "choices": [
+        "Differentiate immediately",
+        "Draw a picture and label variables",
+        "Plug in known numbers",
+        "Solve for the unknown"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Always start with a picture.",
+        "Pictures clarify which variables matter and how they relate."
+      ],
+      "explanation": "Always start with a picture and labels. The geometry usually reveals the relationship between variables.",
+      "steps": [
+        "**The 5-step universal recipe for related-rates problems:**",
+        "  **1. Draw a picture and label** the changing variables (use names, not numbers — numbers come later).",
+        "  **2. Write down the relationship** between the variables (Pythagoras, area formula, similar triangles, etc.).",
+        "  **3. Differentiate** the relationship with respect to $t$. Every variable picks up its rate.",
+        "  **4. Fill in the moment-specific values** for variables and rates.",
+        "  **5. Solve** for the unknown rate.",
+        "**Why drawing first matters.** The picture forces you to identify which quantities are CHANGING (variables) vs. CONSTANT (parameters). Skipping the picture leads to wrong equations or substituting too early."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\text{Water fills a cylindrical tank (radius 3 ft) at 6 ft}^3/\\text{min.} \\\\ \\text{How fast is water level rising (ft/min, round to 2 decimals)?}",
+      "answer": 0.21,
+      "tolerance": 0.01,
+      "hints": [
+        "$V = \\pi r^2 h = 9\\pi h$. $dV/dt = 9\\pi \\cdot dh/dt$.",
+        "$6 = 9\\pi \\cdot dh/dt \\Rightarrow dh/dt = 6/(9\\pi) \\approx 0.212$ ft/min."
+      ],
+      "explanation": "$dh/dt = 6/(9\\pi) \\approx 0.21$ ft/min.",
+      "steps": [
+        "**Cylinder volume: $V = \\pi r^2 h$.** Here $r = 3$ is CONSTANT (it's the tank, not changing). Only $h$ varies.",
+        "**Substitute the constant.** $V = \\pi (3)^2 h = 9\\pi h$. (Constants substituted EARLY are fine — they're not the changing variables we need derivatives of.)",
+        "**Differentiate w.r.t. $t$.** $\\dfrac{dV}{dt} = 9\\pi \\cdot \\dfrac{dh}{dt}$.",
+        "**Plug in $\\dfrac{dV}{dt} = 6$.** $6 = 9\\pi \\cdot \\dfrac{dh}{dt} \\Rightarrow \\dfrac{dh}{dt} = \\dfrac{6}{9\\pi} = \\dfrac{2}{3\\pi} \\approx 0.21$ ft/min.",
+        "**Key distinction.** $r$ is CONSTANT here (a tank dimension), so substitute it early. But the CHANGING variables ($V$, $h$) you must NEVER substitute before differentiating — they're functions of time. Being able to spot which is which is the heart of related rates."
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

@@ -1,0 +1,431 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "P(\\text{rolling a 5 on a fair die}) = ?",
+      "choices": [
+        "1/6",
+        "1/5",
+        "5/6",
+        "1/2"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "6 outcomes, 1 favorable.",
+        "1/6."
+      ],
+      "explanation": "$1$ favorable out of $6$ equally likely → $1/6$.",
+      "steps": [
+        "Sample space: $\\{1,2,3,4,5,6\\}$ — 6 equally likely outcomes.",
+        "Favorable: rolling a 5 — 1 outcome.",
+        "$P = 1/6$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "P(\\text{rolling an even number on a fair die}) = ?",
+      "choices": [
+        "1/3",
+        "1/2",
+        "2/3",
+        "1/6"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Evens: 2, 4, 6 — 3 of 6.",
+        "3/6 = 1/2."
+      ],
+      "explanation": "Evens are 2, 4, 6 (3 outcomes). $3/6 = 1/2$.",
+      "steps": [
+        "Favorable outcomes (even): $\\{2, 4, 6\\}$ — 3 of them.",
+        "$P = 3/6 = 1/2$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If } P(A) = 0.3, \\text{ then } P(A^c) = ?",
+      "choices": [
+        "0.7",
+        "0.3",
+        "1.3",
+        "0"
+      ],
+      "hints": [
+        "Complement formula: $P(A^c) = 1 - P(A)$.",
+        "$1 - 0.3$."
+      ],
+      "answerIndex": 0,
+      "explanation": "$P(A^c) = 1 - 0.3 = 0.7$.",
+      "steps": [
+        "Complement: $P(A^c) = 1 - P(A) = 1 - 0.3 = 0.7$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Probability values must be in the range:}",
+      "choices": [
+        "[0, 1]",
+        "[-1, 1]",
+        "[0, 100]",
+        "any real number"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Probability can't be negative or above 1.",
+        "Always between 0 (impossible) and 1 (certain)."
+      ],
+      "explanation": "Probabilities are always in $[0, 1]$. $0$ = impossible; $1$ = certain.",
+      "steps": [
+        "$P = 0$: event cannot happen.",
+        "$P = 1$: event must happen.",
+        "All other probabilities are between these.",
+        "**Range: $[0, 1]$**."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is } P(\\text{getting heads on at least one of 2 fair coin flips})?",
+      "choices": [
+        "1/2",
+        "3/4",
+        "1/4",
+        "1"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Sample space: HH, HT, TH, TT (4 outcomes).",
+        "Favorable (at least 1 H): HH, HT, TH (3 of 4)."
+      ],
+      "explanation": "3 of 4 outcomes contain at least one H: $3/4$.",
+      "steps": [
+        "Sample space for 2 flips: $\\{HH, HT, TH, TT\\}$ — 4 equally likely.",
+        "Favorable (at least one H): $HH, HT, TH$ — 3 of 4.",
+        "$P = 3/4$.",
+        "(Or via complement: $P(\\text{no heads}) = P(TT) = 1/4$, so $P(\\geq 1\\, H) = 1 - 1/4 = 3/4$.)"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{A bag has 3 red, 4 blue, 5 green marbles. Pick one at random.} \\\\ P(\\text{red}) = ? \\text{ (decimal, round to 3 places)}",
+      "answer": 0.25,
+      "tolerance": 0.005,
+      "hints": [
+        "Total marbles: $3 + 4 + 5 = 12$. Favorable: 3 (red).",
+        "$3/12 = 0.25$."
+      ],
+      "explanation": "$P(\\text{red}) = 3/12 = 1/4 = 0.25$.",
+      "steps": [
+        "Total marbles: $3 + 4 + 5 = 12$.",
+        "Favorable: 3 red.",
+        "$P = 3/12 = 1/4 = 0.25$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{Same bag (3R, 4B, 5G).} \\\\ P(\\text{not red}) = ? \\text{ (round to 3 decimals)}",
+      "answer": 0.75,
+      "tolerance": 0.005,
+      "hints": [
+        "Use complement: $1 - P(\\text{red}) = 1 - 0.25$.",
+        "Or count directly: 9 not-red of 12."
+      ],
+      "explanation": "$P(\\text{not red}) = 1 - P(\\text{red}) = 1 - 0.25 = 0.75$.",
+      "steps": [
+        "Complement: $P(\\text{not red}) = 1 - P(\\text{red}) = 1 - 0.25 = 0.75$.",
+        "Or directly: $9$ marbles are not red, $9/12 = 0.75$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "P(\\text{at least one 6 in 3 rolls of a fair die}) \\\\ \\text{(round to 3 decimals)}.",
+      "answer": 0.421,
+      "tolerance": 0.005,
+      "hints": [
+        "Use complement: $1 - P(\\text{no 6 in 3 rolls})$.",
+        "$P(\\text{no 6}) = (5/6)^3 = 125/216 \\approx 0.579$."
+      ],
+      "explanation": "$P(\\text{no 6 in 3}) = (5/6)^3 \\approx 0.579$. So $P(\\geq 1) \\approx 0.421$.",
+      "steps": [
+        "Complement strategy: easier to count 'no 6 in 3 rolls' than 'at least one 6'.",
+        "Each roll: $P(\\text{not 6}) = 5/6$.",
+        "Three rolls (independent): $(5/6)^3 = 125/216 \\approx 0.579$.",
+        "$P(\\text{at least one 6}) = 1 - 0.579 = 0.421$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Theoretical probability of heads on a fair coin is 0.5. After 100 flips,} \\\\ \\text{which is most likely the empirical probability?}",
+      "choices": [
+        "Exactly 0.5",
+        "Close to 0.5 (e.g., 0.48–0.52)",
+        "Far from 0.5 (e.g., 0.10)",
+        "Cannot say anything"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Empirical probability fluctuates around the theoretical, but tends to be close after many trials.",
+        "100 is moderately many — close, but not exactly."
+      ],
+      "explanation": "After 100 trials, empirical probability is typically close to but not exactly 0.5. With 1000+ trials it gets even tighter.",
+      "steps": [
+        "Law of large numbers: empirical probability approaches theoretical as $n$ grows.",
+        "100 flips: usually within a few percentage points of 0.5 (typical range 0.42–0.58).",
+        "Very rarely exactly 0.5 (would require exactly 50 H and 50 T).",
+        "Almost never far from 0.5 (e.g., 10 heads out of 100 is statistically very unusual)."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{Two fair coins are flipped.} \\\\ P(\\text{exactly one head}) = ? \\text{ (decimal)}",
+      "answer": 0.5,
+      "tolerance": 0.005,
+      "hints": [
+        "Sample space: HH, HT, TH, TT (4 outcomes).",
+        "Exactly one H: HT or TH (2 of 4) → 1/2."
+      ],
+      "explanation": "Outcomes with exactly one H: HT, TH (2 of 4). $2/4 = 0.5$.",
+      "steps": [
+        "Sample space (2 flips, ordered): $\\{HH, HT, TH, TT\\}$.",
+        "Exactly one head: $\\{HT, TH\\}$ — 2 outcomes.",
+        "$P = 2/4 = 0.5$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If } P(A) + P(B) > 1, \\text{ then events } A \\text{ and } B:",
+      "choices": [
+        "are mutually exclusive",
+        "must overlap (have common outcomes)",
+        "are independent",
+        "cannot both happen"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Mutually exclusive events have $P(A) + P(B) \\leq 1$.",
+        "If sum > 1, they MUST share outcomes."
+      ],
+      "explanation": "If $P(A) + P(B) > 1$, the events must share outcomes. Otherwise total would exceed 1.",
+      "steps": [
+        "If $A$ and $B$ are mutually exclusive (no overlap), $P(A) + P(B) \\leq 1$.",
+        "If $P(A) + P(B) > 1$, they cannot be mutually exclusive — they must share outcomes.",
+        "**They must overlap.**"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\text{A spinner has 8 equal sectors, numbered 1–8.} \\\\ P(\\text{spinning a multiple of 3}) = ? \\text{ (decimal)}",
+      "answer": 0.25,
+      "tolerance": 0.005,
+      "hints": [
+        "Multiples of 3 in 1–8: 3, 6 (2 of them).",
+        "$2/8 = 0.25$."
+      ],
+      "explanation": "Multiples of 3: $\\{3, 6\\}$ → 2 of 8 = $0.25$.",
+      "steps": [
+        "Total outcomes: 8.",
+        "Multiples of 3 in {1, 2, …, 8}: $3, 6$ — 2 outcomes.",
+        "$P = 2/8 = 0.25$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q13",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Two fair dice are rolled. What is the SAMPLE SPACE (the set of all possible outcomes)?}",
+      "choices": [
+        "$\\{2, 3, 4, \\ldots, 12\\}$ — the possible sums (11 outcomes)",
+        "$\\{(1,1), (1,2), \\ldots, (6,6)\\}$ — all 36 ordered pairs",
+        "$\\{1, 2, 3, 4, 5, 6\\}$ — the six face values (6 outcomes)",
+        "$\\{(1,2), (1,3), \\ldots, (5,6)\\}$ — only unordered pairs (21 outcomes)"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "The sample space is the set of all *equally likely* outcomes.",
+        "Two dice are distinguishable (think of them as red and blue). (3, 5) ≠ (5, 3) — different outcomes.",
+        "$6 \\times 6 = 36$ equally likely ordered pairs."
+      ],
+      "explanation": "Two distinguishable dice give $6 \\times 6 = 36$ equally likely ordered pairs. The set of sums $\\{2, 3, \\ldots, 12\\}$ is NOT a valid sample space because those outcomes aren't equally likely (e.g., sum 7 has 6 ways, sum 12 has just 1). The face values describe one die, not two. Unordered pairs would under-count because (3, 5) and (5, 3) are distinct dice events.",
+      "steps": [
+        "**Recognize the requirement.** A *sample space* is a set of *equally likely* outcomes that exhaustively covers everything that can happen. Equal likelihood is the key requirement — probabilities then come from counting.",
+        { "svg": "<svg viewBox=\"0 0 280 220\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"140\" y=\"18\" font-size=\"11\" fill=\"#475569\" font-style=\"italic\" text-anchor=\"middle\">die 2 →</text><text x=\"12\" y=\"110\" font-size=\"11\" fill=\"#475569\" font-style=\"italic\" text-anchor=\"middle\" transform=\"rotate(-90 12 110)\">die 1 →</text><text x=\"63\" y=\"36\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">1</text><text x=\"96\" y=\"36\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">2</text><text x=\"129\" y=\"36\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">3</text><text x=\"162\" y=\"36\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">4</text><text x=\"195\" y=\"36\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">5</text><text x=\"228\" y=\"36\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">6</text><text x=\"35\" y=\"60\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">1</text><text x=\"35\" y=\"83\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">2</text><text x=\"35\" y=\"106\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">3</text><text x=\"35\" y=\"129\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">4</text><text x=\"35\" y=\"152\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">5</text><text x=\"35\" y=\"175\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">6</text><rect x=\"48\" y=\"43\" width=\"196\" height=\"138\" fill=\"#fef3c7\" stroke=\"#94a3b8\" stroke-width=\"0.7\"/><line x1=\"48\" y1=\"66\" x2=\"244\" y2=\"66\" stroke=\"#94a3b8\" stroke-width=\"0.5\"/><line x1=\"48\" y1=\"89\" x2=\"244\" y2=\"89\" stroke=\"#94a3b8\" stroke-width=\"0.5\"/><line x1=\"48\" y1=\"112\" x2=\"244\" y2=\"112\" stroke=\"#94a3b8\" stroke-width=\"0.5\"/><line x1=\"48\" y1=\"135\" x2=\"244\" y2=\"135\" stroke=\"#94a3b8\" stroke-width=\"0.5\"/><line x1=\"48\" y1=\"158\" x2=\"244\" y2=\"158\" stroke=\"#94a3b8\" stroke-width=\"0.5\"/><line x1=\"81\" y1=\"43\" x2=\"81\" y2=\"181\" stroke=\"#94a3b8\" stroke-width=\"0.5\"/><line x1=\"114\" y1=\"43\" x2=\"114\" y2=\"181\" stroke=\"#94a3b8\" stroke-width=\"0.5\"/><line x1=\"147\" y1=\"43\" x2=\"147\" y2=\"181\" stroke=\"#94a3b8\" stroke-width=\"0.5\"/><line x1=\"180\" y1=\"43\" x2=\"180\" y2=\"181\" stroke=\"#94a3b8\" stroke-width=\"0.5\"/><line x1=\"213\" y1=\"43\" x2=\"213\" y2=\"181\" stroke=\"#94a3b8\" stroke-width=\"0.5\"/><text x=\"63\" y=\"59\" font-size=\"9\" fill=\"#0f172a\" text-anchor=\"middle\">(1,1)</text><text x=\"129\" y=\"105\" font-size=\"9\" fill=\"#0f172a\" text-anchor=\"middle\">(3,3)</text><text x=\"228\" y=\"174\" font-size=\"9\" fill=\"#0f172a\" text-anchor=\"middle\">(6,6)</text><text x=\"30\" y=\"203\" font-size=\"11\" fill=\"#475569\" font-style=\"italic\">36 cells, each equally likely (probability 1/36)</text></svg>" },
+        "**Why not the 11 sums?** Sums {2, ..., 12} are NOT equally likely. Sum 7 happens 6 different ways: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1). Sum 12 happens just one way: (6,6). Treating sums as equally likely would be wrong.",
+        "**Conclusion.** The 36 ordered pairs $\\{(i, j) : 1 \\leq i, j \\leq 6\\}$ are equally likely (each has probability $1/36$) — that's the genuine sample space.",
+        "**Pattern lesson.** When the problem mentions distinguishable objects (two dice, two coins, two cards), keep them distinguishable. Pretending order doesn't matter loses information and breaks the equal-likelihood property."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q14",
+      "type": "numeric",
+      "promptTex": "\\text{Two fair dice are rolled. } P(\\text{sum} = 7) = ? \\\\ \\text{(Give a decimal, rounded to 3 places.)}",
+      "answer": 0.167,
+      "tolerance": 0.005,
+      "hints": [
+        "Sample space: 36 ordered pairs (die 1, die 2).",
+        "Pairs summing to 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) — exactly 6 of them.",
+        "$P = 6/36 = 1/6 \\approx 0.167$."
+      ],
+      "explanation": "$6$ ordered pairs sum to $7$: $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$. Out of $36$ equally likely pairs: $P = 6/36 = 1/6 \\approx 0.167$. This makes 7 the most likely sum — exactly because 7 sits in the middle, where the most pairs cancel out.",
+      "steps": [
+        "**Use the right sample space.** $6 \\times 6 = 36$ ordered pairs, all equally likely.",
+        { "svg": "<svg viewBox=\"0 0 280 220\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"140\" y=\"18\" font-size=\"11\" fill=\"#475569\" font-style=\"italic\" text-anchor=\"middle\">die 2 →</text><text x=\"12\" y=\"110\" font-size=\"11\" fill=\"#475569\" font-style=\"italic\" text-anchor=\"middle\" transform=\"rotate(-90 12 110)\">die 1 →</text><text x=\"63\" y=\"36\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">1</text><text x=\"96\" y=\"36\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">2</text><text x=\"129\" y=\"36\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">3</text><text x=\"162\" y=\"36\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">4</text><text x=\"195\" y=\"36\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">5</text><text x=\"228\" y=\"36\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">6</text><text x=\"35\" y=\"60\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">1</text><text x=\"35\" y=\"83\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">2</text><text x=\"35\" y=\"106\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">3</text><text x=\"35\" y=\"129\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">4</text><text x=\"35\" y=\"152\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">5</text><text x=\"35\" y=\"175\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">6</text><rect x=\"48\" y=\"43\" width=\"196\" height=\"138\" fill=\"#fef3c7\" stroke=\"#94a3b8\" stroke-width=\"0.7\"/><rect x=\"48\" y=\"158\" width=\"33\" height=\"23\" fill=\"#fca5a5\" stroke=\"#b91c1c\" stroke-width=\"1.2\"/><rect x=\"81\" y=\"135\" width=\"33\" height=\"23\" fill=\"#fca5a5\" stroke=\"#b91c1c\" stroke-width=\"1.2\"/><rect x=\"114\" y=\"112\" width=\"33\" height=\"23\" fill=\"#fca5a5\" stroke=\"#b91c1c\" stroke-width=\"1.2\"/><rect x=\"147\" y=\"89\" width=\"33\" height=\"23\" fill=\"#fca5a5\" stroke=\"#b91c1c\" stroke-width=\"1.2\"/><rect x=\"180\" y=\"66\" width=\"33\" height=\"23\" fill=\"#fca5a5\" stroke=\"#b91c1c\" stroke-width=\"1.2\"/><rect x=\"213\" y=\"43\" width=\"33\" height=\"23\" fill=\"#fca5a5\" stroke=\"#b91c1c\" stroke-width=\"1.2\"/><line x1=\"48\" y1=\"66\" x2=\"244\" y2=\"66\" stroke=\"#94a3b8\" stroke-width=\"0.5\"/><line x1=\"48\" y1=\"89\" x2=\"244\" y2=\"89\" stroke=\"#94a3b8\" stroke-width=\"0.5\"/><line x1=\"48\" y1=\"112\" x2=\"244\" y2=\"112\" stroke=\"#94a3b8\" stroke-width=\"0.5\"/><line x1=\"48\" y1=\"135\" x2=\"244\" y2=\"135\" stroke=\"#94a3b8\" stroke-width=\"0.5\"/><line x1=\"48\" y1=\"158\" x2=\"244\" y2=\"158\" stroke=\"#94a3b8\" stroke-width=\"0.5\"/><line x1=\"81\" y1=\"43\" x2=\"81\" y2=\"181\" stroke=\"#94a3b8\" stroke-width=\"0.5\"/><line x1=\"114\" y1=\"43\" x2=\"114\" y2=\"181\" stroke=\"#94a3b8\" stroke-width=\"0.5\"/><line x1=\"147\" y1=\"43\" x2=\"147\" y2=\"181\" stroke=\"#94a3b8\" stroke-width=\"0.5\"/><line x1=\"180\" y1=\"43\" x2=\"180\" y2=\"181\" stroke=\"#94a3b8\" stroke-width=\"0.5\"/><line x1=\"213\" y1=\"43\" x2=\"213\" y2=\"181\" stroke=\"#94a3b8\" stroke-width=\"0.5\"/><text x=\"63\" y=\"174\" font-size=\"10\" font-weight=\"700\" fill=\"#7f1d1d\" text-anchor=\"middle\">7</text><text x=\"96\" y=\"151\" font-size=\"10\" font-weight=\"700\" fill=\"#7f1d1d\" text-anchor=\"middle\">7</text><text x=\"129\" y=\"128\" font-size=\"10\" font-weight=\"700\" fill=\"#7f1d1d\" text-anchor=\"middle\">7</text><text x=\"162\" y=\"105\" font-size=\"10\" font-weight=\"700\" fill=\"#7f1d1d\" text-anchor=\"middle\">7</text><text x=\"195\" y=\"82\" font-size=\"10\" font-weight=\"700\" fill=\"#7f1d1d\" text-anchor=\"middle\">7</text><text x=\"228\" y=\"59\" font-size=\"10\" font-weight=\"700\" fill=\"#7f1d1d\" text-anchor=\"middle\">7</text><text x=\"30\" y=\"203\" font-size=\"11\" fill=\"#b91c1c\" font-style=\"italic\">6 of 36 cells sum to 7 (anti-diagonal)</text></svg>" },
+        "**Count favorable outcomes.** Pairs $(i, j)$ with $i + j = 7$: $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$ — exactly 6.",
+        "**Compute.** $P = 6/36 = 1/6 \\approx 0.167$.",
+        "**Why is 7 the peak?** The number of pairs summing to $k$ peaks at $k = 7$ (center of the range 2–12) because that's where the most $(i, j)$ combinations fit. The probability distribution of the sum is a *triangular* shape with peak at 7."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q15",
+      "type": "numeric",
+      "promptTex": "\\text{A standard deck has 52 cards: 13 ranks } (A, 2, \\ldots, 10, J, Q, K) \\text{ in 4 suits.} \\\\ \\text{Drawing one card at random, } P(\\text{face card, i.e. } J, Q, \\text{ or } K) = ? \\\\ \\text{Round to 3 decimals.}",
+      "answer": 0.231,
+      "tolerance": 0.005,
+      "hints": [
+        "Face cards: J, Q, K. That's 3 face ranks per suit, 4 suits → 12 face cards.",
+        "$P = 12 / 52 = 3/13 \\approx 0.231$."
+      ],
+      "explanation": "Face cards are J, Q, K — 3 ranks. Each rank has 4 suits, so $3 \\times 4 = 12$ face cards in the deck of $52$. $P = 12/52 = 3/13 \\approx 0.231$.",
+      "steps": [
+        "**Count favorable.** Face cards = J, Q, K. That's $3$ ranks $\\times\\ 4$ suits = $12$ face cards.",
+        "**Count total.** Sample space: all $52$ cards in the deck, equally likely.",
+        "**Divide.** $P = \\dfrac{12}{52} = \\dfrac{3}{13} \\approx 0.231$.",
+        "**Useful mental anchors for card probabilities.** $P(\\text{ace}) = 4/52 = 1/13 \\approx 0.077$. $P(\\text{red}) = 26/52 = 1/2$. $P(\\text{specific suit}) = 13/52 = 1/4$. $P(\\text{face card}) = 12/52 = 3/13$. $P(\\text{specific card, e.g., ace of spades}) = 1/52$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q16",
+      "type": "multiple-choice",
+      "prompt": "Events A and B are BOTH mutually exclusive AND independent. What must be true?",
+      "choices": [
+        "Always — these are essentially the same property",
+        "At least one of P(A) or P(B) must be 0",
+        "P(A) + P(B) = 1",
+        "P(A) = P(B)"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Mutually exclusive: $P(A \\cap B) = 0$.",
+        "Independent: $P(A \\cap B) = P(A) P(B)$.",
+        "Combining: $P(A) P(B) = 0$ → one of them is 0."
+      ],
+      "explanation": "Mutually exclusive ⇒ $P(A \\cap B) = 0$. Independent ⇒ $P(A \\cap B) = P(A) \\cdot P(B)$. Combining: $P(A) \\cdot P(B) = 0$, so $P(A) = 0$ or $P(B) = 0$. In other words: two events with positive probability cannot be both mutually exclusive AND independent. They're DIFFERENT properties.",
+      "steps": [
+        "**Distinguish the two terms.**\n\n• *Mutually exclusive* = $A$ and $B$ cannot both happen at once. $P(A \\cap B) = 0$.\n\n• *Independent* = knowing $A$ happens doesn't change the probability of $B$. $P(A \\cap B) = P(A) \\cdot P(B)$.",
+        "**Combine.** If both hold simultaneously: $0 = P(A) \\cdot P(B)$. So at least one is zero.",
+        "**Concrete example.** $A$ = 'die shows 1', $B$ = 'die shows 6'. Mutually exclusive (can't both happen on one roll). Independent? $P(A \\cap B) = 0$ but $P(A) \\cdot P(B) = 1/36 \\neq 0$. So NOT independent. The terms describe different things.",
+        "**Common confusion.** Many students treat 'mutually exclusive' and 'independent' as synonyms or as opposites. They're neither — they're orthogonal concepts. Memorize the test: $P(A \\cap B) = 0$ vs $P(A \\cap B) = P(A) P(B)$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q17",
+      "type": "numeric",
+      "promptTex": "\\text{Events: } P(A) = 0.6, P(B) = 0.5, P(A \\cap B) = 0.2. \\\\ \\text{Find } P(A \\cup B) \\text{ (the probability that A or B (or both) occurs).}",
+      "answer": 0.9,
+      "tolerance": 0.001,
+      "hints": [
+        "Inclusion-exclusion: $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$.",
+        "$P(A \\cup B) = 0.6 + 0.5 - 0.2 = 0.9$."
+      ],
+      "explanation": "Inclusion-exclusion formula: $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$. Adding $P(A)$ and $P(B)$ double-counts the intersection, so we subtract it once. With the given values: $0.6 + 0.5 - 0.2 = 0.9$.",
+      "steps": [
+        "**The inclusion-exclusion formula.** $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$.",
+        { "svg": "<svg viewBox=\"0 0 280 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"105\" cy=\"100\" r=\"55\" fill=\"rgba(37,99,235,0.25)\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><circle cx=\"175\" cy=\"100\" r=\"55\" fill=\"rgba(220,38,38,0.25)\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><text x=\"75\" y=\"105\" font-size=\"13\" font-weight=\"600\" fill=\"#1e3a8a\">A</text><text x=\"195\" y=\"105\" font-size=\"13\" font-weight=\"600\" fill=\"#991b1b\">B</text><text x=\"140\" y=\"105\" font-size=\"11\" fill=\"#0f172a\" font-weight=\"600\" text-anchor=\"middle\">A ∩ B</text><text x=\"50\" y=\"175\" font-size=\"12\" fill=\"#0f172a\" font-style=\"italic\">P(A ∪ B) = P(A) + P(B) − P(A ∩ B)</text></svg>" },
+        "**Why subtract the intersection?** When you add $P(A)$ and $P(B)$, the overlap region $A \\cap B$ is counted twice (once in $A$, once in $B$). Subtract it once to get the correct $P(A \\cup B)$.",
+        "**Plug in.** $P(A \\cup B) = 0.6 + 0.5 - 0.2 = 0.9$.",
+        "**Sanity bounds.** $P(A \\cup B)$ is always $\\geq \\max(P(A), P(B))$ (here $\\geq 0.6$ ✓) and $\\leq P(A) + P(B)$ (here $\\leq 1.1$, and bounded by 1 anyway). $0.9$ comfortably fits.",
+        "**Special case: mutually exclusive.** If $A$ and $B$ are mutually exclusive, $P(A \\cap B) = 0$ and inclusion-exclusion reduces to $P(A \\cup B) = P(A) + P(B)$. That's the elementary 'addition rule' you learn first."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q18",
+      "type": "numeric",
+      "promptTex": "\\text{A point is chosen uniformly at random inside a } 10 \\times 10 \\text{ square.} \\\\ \\text{What is the probability that the point lies inside the inscribed circle of radius 5? Round to 3 decimals.}",
+      "answer": 0.785,
+      "tolerance": 0.005,
+      "hints": [
+        "For uniform random points in a region, $P(\\text{in subregion}) = \\dfrac{\\text{area of subregion}}{\\text{total area}}$.",
+        "Circle area $= \\pi r^2 = 25\\pi$. Square area $= 100$.",
+        "$P = 25\\pi / 100 = \\pi/4 \\approx 0.785$."
+      ],
+      "explanation": "*Geometric probability*: probabilities are ratios of areas. Circle area $= \\pi \\cdot 5^2 = 25\\pi$. Square area $= 100$. $P = 25\\pi / 100 = \\pi/4 \\approx 0.785$.",
+      "steps": [
+        "**Recognize the type — geometric probability.** When all points are equally likely (uniform distribution over a region), probabilities are area (or length, or volume) ratios.",
+        { "svg": "<svg viewBox=\"0 0 280 220\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"50\" y=\"30\" width=\"160\" height=\"160\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><circle cx=\"130\" cy=\"110\" r=\"80\" fill=\"rgba(37,99,235,0.25)\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"42\" y=\"205\" font-size=\"12\" font-weight=\"600\" fill=\"#0f172a\">10</text><text x=\"205\" y=\"205\" font-size=\"12\" font-weight=\"600\" fill=\"#0f172a\">10</text><text x=\"130\" y=\"114\" font-size=\"12\" font-weight=\"600\" fill=\"#1e3a8a\" text-anchor=\"middle\">circle</text><text x=\"50\" y=\"210\" font-size=\"11\" fill=\"#475569\" font-style=\"italic\">P = (area of circle) / (area of square)</text></svg>" },
+        "**Compute the two areas.** Square area $= 10^2 = 100$. Circle area $= \\pi \\cdot 5^2 = 25\\pi$.",
+        "**Take the ratio.** $P = \\dfrac{25\\pi}{100} = \\dfrac{\\pi}{4} \\approx 0.7854$.",
+        "**Pattern lesson.** $\\pi/4$ appears whenever you inscribe a circle in a square — it's a 'universal constant' you'll see again in Buffon's needle, the Monte Carlo estimation of $\\pi$ (throw darts at a square, count the fraction landing in the circle, multiply by 4), and the geometric meaning of the Gaussian integral."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q19",
+      "type": "numeric",
+      "promptTex": "\\text{A biased coin lands heads with probability } 0.7 \\text{ (and tails with } 0.3). \\\\ \\text{The coin is flipped twice (independent flips).} \\\\ P(\\text{both heads}) = ? \\text{ Give a decimal.}",
+      "answer": 0.49,
+      "tolerance": 0.001,
+      "hints": [
+        "Independent events: multiply probabilities for AND.",
+        "$P(\\text{H then H}) = 0.7 \\times 0.7 = 0.49$."
+      ],
+      "explanation": "Independent flips: $P(\\text{HH}) = P(H) \\cdot P(H) = 0.7 \\cdot 0.7 = 0.49$. The probability tree below shows all four outcomes; the 'H,H' branch has total probability $0.49$.",
+      "steps": [
+        "**Recognize the type — independent compound events.** For independent events, multiply probabilities along each branch of a tree.",
+        { "svg": "<svg viewBox=\"0 0 280 220\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"40\" cy=\"110\" r=\"6\" fill=\"#1e293b\"/><line x1=\"46\" y1=\"105\" x2=\"110\" y2=\"55\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><line x1=\"46\" y1=\"115\" x2=\"110\" y2=\"165\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><circle cx=\"120\" cy=\"50\" r=\"6\" fill=\"#2563eb\"/><circle cx=\"120\" cy=\"170\" r=\"6\" fill=\"#dc2626\"/><text x=\"75\" y=\"70\" font-size=\"11\" fill=\"#2563eb\" font-weight=\"700\">0.7 H</text><text x=\"75\" y=\"155\" font-size=\"11\" fill=\"#dc2626\" font-weight=\"700\">0.3 T</text><line x1=\"126\" y1=\"45\" x2=\"205\" y2=\"30\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><line x1=\"126\" y1=\"55\" x2=\"205\" y2=\"75\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><line x1=\"126\" y1=\"165\" x2=\"205\" y2=\"145\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><line x1=\"126\" y1=\"175\" x2=\"205\" y2=\"195\" stroke=\"#dc2626\" stroke-width=\"1.5\"/><text x=\"160\" y=\"30\" font-size=\"10\" fill=\"#2563eb\" font-weight=\"600\">0.7 H</text><text x=\"160\" y=\"77\" font-size=\"10\" fill=\"#dc2626\" font-weight=\"600\">0.3 T</text><text x=\"160\" y=\"143\" font-size=\"10\" fill=\"#2563eb\" font-weight=\"600\">0.7 H</text><text x=\"160\" y=\"205\" font-size=\"10\" fill=\"#dc2626\" font-weight=\"600\">0.3 T</text><text x=\"212\" y=\"32\" font-size=\"11\" font-weight=\"700\" fill=\"#16a34a\">HH: 0.49</text><text x=\"212\" y=\"79\" font-size=\"11\" fill=\"#0f172a\">HT: 0.21</text><text x=\"212\" y=\"147\" font-size=\"11\" fill=\"#0f172a\">TH: 0.21</text><text x=\"212\" y=\"199\" font-size=\"11\" fill=\"#0f172a\">TT: 0.09</text></svg>" },
+        "**Multiply along the HH branch.** $P(\\text{HH}) = 0.7 \\cdot 0.7 = 0.49$.",
+        "**Sanity check — all four probabilities sum to 1.** $0.49 + 0.21 + 0.21 + 0.09 = 1.00$ ✓",
+        "**Pattern lesson.** For *independent* events $A_1, A_2, \\ldots, A_n$: $P(A_1 \\cap A_2 \\cap \\cdots \\cap A_n) = P(A_1) \\cdot P(A_2) \\cdots P(A_n)$. Multiplication of probabilities is the operational signature of independence."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q20",
+      "type": "numeric",
+      "promptTex": "\\text{The ODDS in favor of an event are quoted as } 3 \\text{ to } 2 \\text{ (written } 3:2). \\\\ \\text{What is the probability of the event? Give a decimal.}",
+      "answer": 0.6,
+      "tolerance": 0.001,
+      "hints": [
+        "Odds $a : b$ in favor → probability $= a/(a+b)$.",
+        "$P = 3/(3+2) = 3/5 = 0.6$."
+      ],
+      "explanation": "Odds $a : b$ in favor mean: for every $a$ expected occurrences, there are $b$ non-occurrences. Total 'slots' is $a + b$. So $P = a/(a+b) = 3/5 = 0.6$. Conversely, given $P$, odds in favor are $P : (1-P)$.",
+      "steps": [
+        "**Translate odds to probability.** Odds $a : b$ in favor of an event → think 'in $a + b$ trials, expect $a$ wins and $b$ losses'. Probability of a single win: $\\dfrac{a}{a + b}$.",
+        "**Apply.** $P = \\dfrac{3}{3 + 2} = \\dfrac{3}{5} = 0.6$.",
+        "**Reverse conversion.** Given a probability $p$, the odds in favor are $p : (1-p)$. For $p = 0.6$: odds = $0.6 : 0.4 = 3 : 2$ ✓.",
+        "**Watch for 'against' vs 'in favor'.** Gambling commonly quotes odds AGAINST ('3:1 against' means $P = 1/(3+1) = 1/4$, not $3/4$). Always confirm the direction before converting."
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

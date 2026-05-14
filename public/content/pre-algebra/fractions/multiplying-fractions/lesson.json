@@ -1,0 +1,62 @@
+{
+  "title": "Multiplying Fractions",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Multiplying fractions is *easier* than adding them — no common denominator needed. Multiply the numerators, multiply the denominators, simplify."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{a}{b} \\times \\dfrac{c}{d} = \\dfrac{a \\cdot c}{b \\cdot d}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "But *why* does this work? The visualization below shows it as **area**. The unit square is divided into a grid: $\\dfrac{n_1}{d_1}$ chooses some columns; $\\dfrac{n_2}{d_2}$ chooses some rows. The cells that are in **both** — the intersection — represent the product."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "fraction-area",
+      "config": {
+        "n1": 1,
+        "d1": 2,
+        "n2": 1,
+        "d2": 3
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "Try it. Set $\\dfrac{1}{2} \\times \\dfrac{1}{3}$. The square is split into $2 \\times 3 = 6$ cells. One column shaded (half the square), one row shaded (a third). Where they overlap is just **one cell out of six** — that's $\\dfrac{1}{6}$.",
+        "$\\dfrac{1}{2} \\times \\dfrac{1}{3} = \\dfrac{1}{6}$. The numerators multiply ($1 \\times 1 = 1$), the denominators multiply ($2 \\times 3 = 6$)."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Multiplying by a whole number",
+      "body": "Treat the whole number as a fraction over $1$. So $\\dfrac{2}{3} \\times 4 = \\dfrac{2}{3} \\times \\dfrac{4}{1} = \\dfrac{8}{3}$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked examples",
+        "**$\\dfrac{2}{3} \\times \\dfrac{4}{5}$.** $\\dfrac{2 \\times 4}{3 \\times 5} = \\dfrac{8}{15}$. Already simplified.",
+        "**$\\dfrac{3}{4} \\times \\dfrac{2}{9}$.** $\\dfrac{6}{36}$. Simplify by dividing top and bottom by $6$: $\\dfrac{1}{6}$.",
+        "**$\\dfrac{5}{6} \\times 0$.** $\\dfrac{5 \\times 0}{6 \\times 1} = \\dfrac{0}{6} = 0$. Multiplying by zero gives zero."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Tip — simplify early",
+      "body": "If a numerator and a denominator share a factor, you can cancel it *before* multiplying. $\\dfrac{3}{4} \\times \\dfrac{2}{9}$: cancel a $3$ from top-3 and bottom-9 to get $\\dfrac{1}{4} \\times \\dfrac{2}{3} = \\dfrac{2}{12} = \\dfrac{1}{6}$. Same answer, smaller numbers along the way."
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "Multiply the numerators, multiply the denominators, simplify. The 'area' picture explains *why*: the product is the count of overlapping cells in a grid. Easier than addition — no common denominator required."
+    }
+  ]
+}

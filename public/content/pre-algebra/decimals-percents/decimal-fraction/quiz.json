@@ -1,0 +1,268 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "0.5 = ?",
+      "choices": [
+        "\\dfrac{1}{2}",
+        "\\dfrac{1}{5}",
+        "\\dfrac{5}{100}",
+        "5"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "$0.5$ means five tenths.",
+        "Five tenths simplifies to..."
+      ],
+      "explanation": "$0.5 = \\dfrac{5}{10} = \\dfrac{1}{2}$ (dividing top and bottom by $5$).",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "0.25 = ?",
+      "choices": [
+        "\\dfrac{2}{5}",
+        "\\dfrac{1}{4}",
+        "\\dfrac{1}{25}",
+        "\\dfrac{25}{10}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "$0.25$ means twenty-five hundredths.",
+        "$\\dfrac{25}{100}$ — simplify by dividing both by $25$."
+      ],
+      "explanation": "$0.25 = \\dfrac{25}{100} = \\dfrac{1}{4}$. Worth memorizing!",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{Convert } \\dfrac{3}{4} \\text{ to a decimal.}",
+      "answer": 0.75,
+      "tolerance": 0.001,
+      "hints": [
+        "Divide the numerator by the denominator.",
+        "$3 \\div 4 = ?$"
+      ],
+      "explanation": "$\\dfrac{3}{4} = 3 \\div 4 = 0.75$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "0.125 = ?",
+      "choices": [
+        "\\dfrac{1}{8}",
+        "\\dfrac{1}{12}",
+        "\\dfrac{12}{100}",
+        "\\dfrac{1}{125}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "$0.125 = \\dfrac{125}{1000}$.",
+        "Simplify $\\dfrac{125}{1000}$ — divide both by $125$."
+      ],
+      "explanation": "$0.125 = \\dfrac{125}{1000} = \\dfrac{1}{8}$. Another one worth memorizing.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{Convert } \\dfrac{1}{5} \\text{ to a decimal.}",
+      "answer": 0.2,
+      "tolerance": 0.001,
+      "hints": [
+        "$1 \\div 5$.",
+        "Or multiply top and bottom by $2$ to get $\\dfrac{2}{10}$."
+      ],
+      "explanation": "$\\dfrac{1}{5} = \\dfrac{2}{10} = 0.2$. Or compute $1 \\div 5 = 0.2$ directly.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Convert } 0.625 \\text{ to a fraction in lowest terms.}",
+      "choices": [
+        "\\dfrac{625}{1000}",
+        "\\dfrac{5}{8}",
+        "\\dfrac{6}{10}",
+        "\\dfrac{125}{200}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "$0.625 = \\dfrac{625}{1000}$. Reduce.",
+        "$\\gcd(625, 1000) = 125$. Divide both by 125."
+      ],
+      "explanation": "$\\dfrac{625}{1000} = \\dfrac{5}{8}$ (divide both by 125).",
+      "steps": [
+        "**Universal decimal-to-fraction recipe.** Decimal with $n$ places becomes a fraction with denominator $10^n$. Then reduce.",
+        "**Write as fraction.** 3 decimal places → denominator $1000$. $0.625 = \\dfrac{625}{1000}$.",
+        "**Find GCD via prime factorization.** $625 = 5^4$. $1000 = 2^3 \\cdot 5^3$. Common: $5^3 = 125$.",
+        "**Divide top and bottom by 125.** $\\dfrac{625/125}{1000/125} = \\dfrac{5}{8}$.",
+        "**Verify.** $5 \\div 8 = 0.625$ ✓."
+      ],
+      "id": "q6",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Convert } \\dfrac{7}{8} \\text{ to a decimal.}",
+      "choices": [
+        "0.875",
+        "0.78",
+        "0.788",
+        "0.875\\overline{0}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Divide $7 \\div 8$.",
+        "Or: $\\dfrac{7}{8} = \\dfrac{7 \\cdot 125}{8 \\cdot 125} = \\dfrac{875}{1000}$."
+      ],
+      "explanation": "$7 \\div 8 = 0.875$.",
+      "steps": [
+        "**Universal fraction-to-decimal recipe.** Numerator ÷ denominator (long division).",
+        "**Compute.** $7 \\div 8 = 0.875$.",
+        "**Alternative: scale to power of 10.** Multiply top and bottom by 125: $\\dfrac{7 \\cdot 125}{8 \\cdot 125} = \\dfrac{875}{1000} = 0.875$.",
+        "**When does a fraction terminate as a decimal?** Only if the denominator (in lowest terms) has ONLY 2's and 5's as prime factors. $8 = 2^3$ ✓ — terminates. (Contrast: $\\dfrac{1}{3}$, $\\dfrac{1}{7}$ → repeating.)"
+      ],
+      "id": "q7",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Convert } 0.\\overline{6} \\text{ (i.e., } 0.6666\\ldots) \\text{ to a fraction.}",
+      "choices": [
+        "\\dfrac{6}{10}",
+        "\\dfrac{2}{3}",
+        "\\dfrac{3}{5}",
+        "\\dfrac{6}{99}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Set $x = 0.\\overline{6}$. Then $10x = 6.\\overline{6}$.",
+        "Subtract: $10x - x = 9x = 6$, so $x = 6/9 = 2/3$."
+      ],
+      "explanation": "$x = 0.\\overline{6} \\Rightarrow 10x = 6.\\overline{6} \\Rightarrow 9x = 6 \\Rightarrow x = \\dfrac{6}{9} = \\dfrac{2}{3}$.",
+      "steps": [
+        "**Classic technique for repeating decimals: the 'multiply, subtract, cancel-the-repeating-part' trick.**",
+        "**Set up.** Let $x = 0.6666\\ldots$ (the unknown fraction).",
+        "**Multiply by 10 (one digit of repeat).** $10x = 6.6666\\ldots$.",
+        "**Subtract to CANCEL the repeating tail.** $10x - x = 6.6666\\ldots - 0.6666\\ldots = 6$ (the tails are identical and cancel).",
+        "**Solve.** $9x = 6 \\Rightarrow x = \\dfrac{6}{9} = \\dfrac{2}{3}$.",
+        "**General rule for one-digit repeats.** $0.\\overline{d} = \\dfrac{d}{9}$ for digit $d$. (Same for $0.\\overline{ab} = \\dfrac{ab}{99}$, $0.\\overline{abc} = \\dfrac{abc}{999}$, etc. — denominator is one 9 per repeating digit.)"
+      ],
+      "id": "q8",
+      "difficulty": "hard"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which is larger: } \\dfrac{3}{8} \\text{ or } 0.4?",
+      "choices": [
+        "\\dfrac{3}{8}",
+        "0.4",
+        "They are equal",
+        "Cannot tell"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Convert one to the form of the other.",
+        "$\\dfrac{3}{8} = 0.375$. Compare to $0.4$."
+      ],
+      "explanation": "$\\dfrac{3}{8} = 0.375 < 0.4$. So $0.4$ is larger.",
+      "steps": [
+        "**Strategy for comparing different forms: convert both to the SAME form.** Decimals are usually easiest.",
+        "**Convert fraction to decimal.** $\\dfrac{3}{8} = 0.375$.",
+        "**Compare.** $0.375$ vs $0.4$. Same units digit, same tenths position — but tenths digit is $3 < 4$. So $0.375 < 0.4$.",
+        "**$0.4$ is larger.**"
+      ],
+      "id": "q9",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Convert } 2.45 \\text{ to a mixed number in lowest terms.}",
+      "choices": [
+        "2\\dfrac{45}{100}",
+        "2\\dfrac{9}{20}",
+        "2\\dfrac{4}{5}",
+        "\\dfrac{49}{20}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Whole part: 2. Decimal part: $0.45 = \\dfrac{45}{100}$.",
+        "Reduce $\\dfrac{45}{100}$ by 5."
+      ],
+      "explanation": "$2.45 = 2 + 0.45 = 2 + \\dfrac{45}{100} = 2\\dfrac{9}{20}$ (divide by 5).",
+      "steps": [
+        "**Separate the whole number and the fractional part.** Same procedure for decimal-to-mixed conversion.",
+        "**Whole part.** 2.",
+        "**Decimal part.** $0.45 = \\dfrac{45}{100}$ (2 decimal places → denominator 100).",
+        "**Reduce.** $\\gcd(45, 100) = 5$. $\\dfrac{45/5}{100/5} = \\dfrac{9}{20}$.",
+        "**Combine.** $2\\dfrac{9}{20}$.",
+        "**Verify.** $2\\dfrac{9}{20} = 2 + 0.45 = 2.45$ ✓."
+      ],
+      "id": "q10",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Order from smallest to largest: } \\dfrac{2}{5}, 0.45, \\dfrac{3}{8}",
+      "choices": [
+        "\\dfrac{2}{5} < 0.45 < \\dfrac{3}{8}",
+        "\\dfrac{3}{8} < \\dfrac{2}{5} < 0.45",
+        "0.45 < \\dfrac{3}{8} < \\dfrac{2}{5}",
+        "\\dfrac{3}{8} < 0.45 < \\dfrac{2}{5}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Convert all to decimals (or all to a common denominator).",
+        "$\\dfrac{2}{5} = 0.4$, $\\dfrac{3}{8} = 0.375$, $0.45 = 0.45$."
+      ],
+      "explanation": "$\\dfrac{3}{8} = 0.375$, $\\dfrac{2}{5} = 0.4$, $0.45 = 0.45$. Order: $0.375 < 0.4 < 0.45$.",
+      "steps": [
+        "**Universal trick for ordering mixed forms: convert ALL to decimals, then compare.**",
+        "**Convert.** $\\dfrac{2}{5} = 0.4$. $\\dfrac{3}{8} = 0.375$. $0.45$ stays.",
+        "**Line up the decimals.** $0.375$, $0.4 = 0.400$, $0.45 = 0.450$. Lining up by decimal place makes comparison trivial.",
+        "**Order.** $0.375 < 0.400 < 0.450$, i.e., $\\dfrac{3}{8} < \\dfrac{2}{5} < 0.45$."
+      ],
+      "id": "q11",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Convert } 0.0125 \\text{ to a fraction in lowest terms.}",
+      "choices": [
+        "\\dfrac{1}{80}",
+        "\\dfrac{125}{10000}",
+        "\\dfrac{1}{8}",
+        "\\dfrac{1}{125}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "$0.0125 = \\dfrac{125}{10000}$. Now reduce.",
+        "$\\gcd(125, 10000) = 125$. Divide both."
+      ],
+      "explanation": "$\\dfrac{125}{10000} = \\dfrac{1}{80}$ (divide both by 125).",
+      "steps": [
+        "**Same recipe as Q6.** 4 decimal places → denominator $10^4 = 10000$.",
+        "**Write.** $0.0125 = \\dfrac{125}{10000}$.",
+        "**GCD via prime factorization.** $125 = 5^3$. $10000 = 2^4 \\cdot 5^4$. Common: $5^3 = 125$.",
+        "**Divide.** $\\dfrac{125/125}{10000/125} = \\dfrac{1}{80}$.",
+        "**Verify.** $1/80 = 0.0125$ ✓."
+      ],
+      "id": "q12",
+      "difficulty": "medium"
+    }
+  ]
+}

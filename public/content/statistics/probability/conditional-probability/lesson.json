@@ -1,0 +1,120 @@
+{
+  "title": "Conditional Probability",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "**Conditional probability** asks: 'Given that $B$ has happened, what's the probability that $A$ also happens?' Written $P(A \\mid B)$, read as 'probability of $A$ **given** $B$.'",
+        "Knowing something restricts the sample space — and that changes the probabilities."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. The Definition"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "P(A \\mid B) = \\dfrac{P(A \\text{ and } B)}{P(B)}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Read it as: 'of the times $B$ happens, what fraction also have $A$?' We restrict to the world where $B$ is true (denominator) and count the cases where $A$ also happens (numerator).",
+        "**Example.** Roll a die. Given the result is even, what's the probability it's a 4?",
+        "$P(\\text{4} \\mid \\text{even}) = \\dfrac{P(\\text{4 and even})}{P(\\text{even})} = \\dfrac{1/6}{3/6} = \\dfrac{1}{3}$.",
+        "(Of three even outcomes 2, 4, 6, exactly one is a 4.)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. Two-Way Tables"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "A **two-way table** organizes data into rows and columns by two categorical variables. They make conditional probability calculations very direct.",
+        "**Example.** A school survey: 200 students.",
+        "$$\\begin{array}{c|cc|c} & \\text{Likes Math} & \\text{Doesn't} & \\text{Total} \\\\ \\hline \\text{Boys} & 60 & 40 & 100 \\\\ \\text{Girls} & 70 & 30 & 100 \\\\ \\hline \\text{Total} & 130 & 70 & 200 \\end{array}$$",
+        "**Find $P(\\text{likes math})$:** $130/200 = 0.65$.",
+        "**Find $P(\\text{likes math} \\mid \\text{girl})$:** restrict to the 100 girls. Of those, 70 like math. $70/100 = 0.70$.",
+        "**Find $P(\\text{girl} \\mid \\text{likes math})$:** restrict to 130 math-likers. Of those, 70 are girls. $70/130 \\approx 0.538$.",
+        "Note: $P(\\text{girl} \\mid \\text{math}) \\neq P(\\text{math} \\mid \\text{girl})$. **Conditional probability is direction-sensitive.**"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Common confusion",
+      "body": "$P(A \\mid B)$ and $P(B \\mid A)$ are usually different! 'P(disease given positive test)' is very different from 'P(positive test given disease)'. The first is what you care about as a patient; the second is what the medical literature publishes about the test's sensitivity. Confusing them is a famous source of bad reasoning ('base rate fallacy')."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. Independence Test"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Recall: events $A$ and $B$ are **independent** if knowing $B$ doesn't change the probability of $A$. Algebraically:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "A, B \\text{ independent} \\Leftrightarrow P(A \\mid B) = P(A)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Equivalently, the multiplicative form: $P(A \\text{ and } B) = P(A) \\cdot P(B)$.",
+        "**Example from the table above.** Are 'being a girl' and 'liking math' independent?",
+        "$P(\\text{likes math}) = 0.65$. $P(\\text{likes math} \\mid \\text{girl}) = 0.70$. Different → **NOT independent**.",
+        "Intuitively: knowing someone is a girl makes them more likely to like math (in this dataset)."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. The Multiplication Rule (Reversed)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Rearranging the conditional definition gives the **general multiplication rule**:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "P(A \\text{ and } B) = P(B) \\cdot P(A \\mid B)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "This generalizes the 'multiply for independent events' rule: when events are dependent, you multiply by the conditional probability instead of the unconditional one."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — medical test",
+        "A disease has prevalence $1\\%$ in a population. A test is $95\\%$ accurate (95% true positive on infected, 95% true negative on healthy).",
+        "Someone tests **positive**. What's the probability they actually have the disease?",
+        "**Set up using a 10,000-person population:**",
+        "**Have disease:** 100 people. Of these, $0.95 \\cdot 100 = 95$ test positive (true positives).",
+        "**Don't have disease:** 9900 people. Of these, $0.05 \\cdot 9900 = 495$ test positive (false positives).",
+        "**Total positives:** $95 + 495 = 590$.",
+        "**$P(\\text{disease} \\mid \\text{positive}) = 95/590 \\approx 0.161$ ≈ 16%.**",
+        "Despite the test being '95% accurate', a positive result only means 16% chance of the disease! This is a classic counterintuitive result."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "$P(A \\mid B) = \\dfrac{P(A \\cap B)}{P(B)}$. Two-way tables make conditional probability easy: restrict to the row/column for the condition, then count. **$P(A|B) \\neq P(B|A)$ in general.** Independence iff $P(A|B) = P(A)$."
+    }
+  ]
+}

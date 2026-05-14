@@ -1,0 +1,104 @@
+{
+  "title": "Parallel & Perpendicular Lines",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Two lines on a plane can have one of four relationships: they're the **same line**, they're **parallel** (never meet), they're **perpendicular** (meet at a right angle), or they're **none of the above** (they meet at some other angle).",
+        "What's beautiful: you can tell which case you're in just by looking at the **slopes**."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Parallel lines: same slope",
+        "Parallel lines have *exactly the same slope*. They tilt the same way, just at different vertical positions:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "L_1 \\parallel L_2 \\;\\Longleftrightarrow\\; m_1 = m_2 \\;\\text{ and }\\; b_1 \\neq b_2"
+    },
+    {
+      "type": "text",
+      "md": [
+        "If the slopes were equal *and* the y-intercepts were equal, they'd be the same line.",
+        "Try it below: set $m_1 = m_2$ but make $b_1 \\neq b_2$. The relationship indicator should say **Parallel**."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "coordinate-plane",
+      "config": {
+        "mode": "two-lines",
+        "line1": {
+          "m": 1,
+          "b": -2
+        },
+        "line2": {
+          "m": -1,
+          "b": 2
+        },
+        "mRange": [
+          -3,
+          3
+        ],
+        "bRange": [
+          -5,
+          5
+        ],
+        "mStep": 0.5,
+        "bStep": 1
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Perpendicular lines: negative reciprocal slopes",
+        "Two lines are perpendicular when their slopes multiply to $-1$:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "L_1 \\perp L_2 \\;\\Longleftrightarrow\\; m_1 \\cdot m_2 = -1"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Equivalently, $m_2 = -\\dfrac{1}{m_1}$. We say $m_2$ is the **negative reciprocal** of $m_1$.",
+        "Examples of perpendicular slope pairs:",
+        "$m_1 = 2$ and $m_2 = -\\tfrac{1}{2}$.",
+        "$m_1 = -3$ and $m_2 = \\tfrac{1}{3}$.",
+        "$m_1 = 1$ and $m_2 = -1$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Quick mental shortcut",
+      "body": "To find the slope of a perpendicular line: **flip the fraction and negate**. So $m = \\tfrac{3}{4}$ gives $m_\\perp = -\\tfrac{4}{3}$. That's the whole rule."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The horizontal–vertical case",
+        "Horizontal lines have $m = 0$; vertical lines have undefined slope. They're perpendicular to each other — the *one* perpendicular pair our formula can't directly verify (you can't multiply something by undefined). Just remember it as a special case."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example",
+        "**Find the equation of the line through $(2, 1)$ that is perpendicular to $y = -3x + 5$.**",
+        "Slope of given line: $m = -3$.",
+        "Perpendicular slope: $m_\\perp = \\tfrac{1}{3}$ (flip and negate).",
+        "Use point-slope: $y - 1 = \\tfrac{1}{3}(x - 2)$.",
+        "Simplify if needed: $y = \\tfrac{1}{3}x + \\tfrac{1}{3}$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "**Parallel** ↔ $m_1 = m_2$ (same slope, different y-intercepts). **Perpendicular** ↔ $m_1 \\cdot m_2 = -1$ (negative reciprocals). Same line ↔ $m_1 = m_2$ AND $b_1 = b_2$."
+    }
+  ]
+}

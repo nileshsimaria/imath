@@ -1,0 +1,230 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{An angle measuring } 110° \\text{ is:}",
+      "choices": [
+        "acute",
+        "right",
+        "obtuse",
+        "reflex"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Greater than 90°, less than 180°.",
+        "That's between right and straight."
+      ],
+      "explanation": "$90° < 110° < 180°$ → **obtuse**.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{What is the complement of an } 28° \\text{ angle?}",
+      "answer": 62,
+      "tolerance": 0,
+      "hints": [
+        "Complementary angles sum to 90°.",
+        "$90 - 28$."
+      ],
+      "explanation": "$90° - 28° = 62°$. The two together form a right angle.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{What is the supplement of a } 130° \\text{ angle?}",
+      "answer": 50,
+      "tolerance": 0,
+      "hints": [
+        "Supplementary angles sum to 180°.",
+        "$180 - 130$."
+      ],
+      "explanation": "$180° - 130° = 50°$. Together they form a straight line.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Two lines intersect, forming an angle of } 75°. \\\\ \\text{What is the measure of the vertical angle?}",
+      "choices": [
+        "15°",
+        "75°",
+        "105°",
+        "180°"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Vertical angles are formed by the intersection.",
+        "Vertical angles are always equal."
+      ],
+      "explanation": "Vertical angles (the angles directly across from each other when two lines cross) are always equal. So the vertical angle is also **75°**.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{An angle of } 250° \\text{ is:}",
+      "choices": [
+        "acute",
+        "obtuse",
+        "straight",
+        "reflex"
+      ],
+      "answerIndex": 3,
+      "hints": [
+        "Greater than 180°.",
+        "That's the reflex range (180°–360°)."
+      ],
+      "explanation": "$180° < 250° < 360°$ → **reflex**. Reflex angles 'wrap around' more than half a revolution.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Two angles are supplementary. One is } 47°. \\\\ \\text{What is the other?}",
+      "answer": 133,
+      "tolerance": 0,
+      "hints": [
+        "Supplementary angles sum to 180°.",
+        "$180° - 47° = ?$"
+      ],
+      "explanation": "$180 - 47 = 133°$.",
+      "steps": [
+        "Supplementary means the two angles add to $180°$.",
+        "Other angle $= 180° - 47° = 133°$."
+      ],
+      "id": "q6",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Two angles are complementary. One is } 38°. \\\\ \\text{What is the other?}",
+      "answer": 52,
+      "tolerance": 0,
+      "hints": [
+        "Complementary angles sum to 90°.",
+        "$90° - 38° = ?$"
+      ],
+      "explanation": "$90 - 38 = 52°$.",
+      "steps": [
+        "Complementary means the two angles add to $90°$.",
+        "Other angle $= 90° - 38° = 52°$."
+      ],
+      "id": "q7",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{An angle and its complement sum to } 90°. \\\\ \\text{The complement is } 4 \\text{ times the angle. Find the angle.}",
+      "answer": 18,
+      "tolerance": 0,
+      "hints": [
+        "Let $x$ = angle. Then complement = $4x$.",
+        "$x + 4x = 90 \\Rightarrow 5x = 90$."
+      ],
+      "explanation": "$5x = 90 \\Rightarrow x = 18°$. (Complement is $72°$.)",
+      "steps": [
+        "Let the angle be $x$. The complement is $4x$.",
+        "$$x + 4x = 90$$",
+        "$$5x = 90 \\Rightarrow x = 18°$$",
+        "(Check: complement $= 4 \\cdot 18 = 72°$, and $18 + 72 = 90$ ✓.)"
+      ],
+      "id": "q8",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Two angles form a linear pair. One is } 63°. \\\\ \\text{What is the other?}",
+      "answer": 117,
+      "tolerance": 0,
+      "hints": [
+        "Linear pair angles are supplementary.",
+        "$180° - 63° = ?$"
+      ],
+      "explanation": "$180 - 63 = 117°$.",
+      "steps": [
+        "A linear pair forms a straight line — together they sum to $180°$.",
+        "Other angle $= 180° - 63° = 117°$."
+      ],
+      "id": "q9",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Two intersecting lines form vertical angles. One vertical angle is} \\\\ (3x + 10)° \\text{ and its vertical partner is } (5x - 30)°. \\\\ \\text{Find } x.",
+      "answer": 20,
+      "tolerance": 0,
+      "hints": [
+        "Vertical angles are equal.",
+        "$3x + 10 = 5x - 30$. Solve."
+      ],
+      "explanation": "$3x + 10 = 5x - 30 \\Rightarrow 40 = 2x \\Rightarrow x = 20$.",
+      "steps": [
+        "Vertical angles (formed by intersecting lines) are **equal**.",
+        "Set them equal: $$3x + 10 = 5x - 30$$",
+        "Move variables to one side: $$10 + 30 = 5x - 3x$$",
+        "$$40 = 2x \\Rightarrow x = 20$$"
+      ],
+      "id": "q10",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{An angle is bisected into two } 27° \\text{ pieces.} \\\\ \\text{What is the original angle?}",
+      "answer": 54,
+      "tolerance": 0,
+      "hints": [
+        "Bisecting splits an angle into two EQUAL halves.",
+        "Original = $2 \\cdot 27°$."
+      ],
+      "explanation": "$2 \\cdot 27° = 54°$.",
+      "steps": [
+        "An angle bisector divides an angle into two equal parts.",
+        "Each half is $27°$, so the original is $2 \\cdot 27° = 54°$."
+      ],
+      "id": "q11",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Three angles around a point sum to } 360°. \\\\ \\text{Two are } 110° \\text{ and } 145°. \\text{ Find the third.}",
+      "answer": 105,
+      "tolerance": 0,
+      "hints": [
+        "All angles around a point sum to $360°$.",
+        "Third = $360 - 110 - 145$."
+      ],
+      "explanation": "$360 - 110 - 145 = 105°$.",
+      "steps": [
+        "Angles around a single point sum to $360°$.",
+        "Subtract the known angles: $$360 - 110 - 145 = 105°$$"
+      ],
+      "id": "q12",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which pair of angles must be congruent?}",
+      "choices": [
+        "Two complementary angles",
+        "Two supplementary angles",
+        "Two vertical angles",
+        "Two adjacent angles"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Vertical angles are formed by two intersecting lines.",
+        "They're across from each other and always equal."
+      ],
+      "explanation": "Vertical angles are always equal. The other pairs are equal only in special cases.",
+      "steps": [
+        "Vertical angles (formed by two intersecting lines, opposite each other) are **always congruent** — that's a theorem.",
+        "Complementary, supplementary, and adjacent are pairs defined by their sum or position; they're not equal in general.",
+        "**Answer:** vertical angles."
+      ],
+      "id": "q13",
+      "difficulty": "easy"
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "title": "Measures of Center",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "When you have a list of numbers — test scores, daily temperatures, household incomes — a **measure of center** is a single number that represents 'where the data sits.' Three measures matter: **mean**, **median**, and **mode**. Each gives a slightly different summary, and each can mislead in characteristic ways."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. The Mean (Average)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "The **mean** (often just 'average') is the sum of all values divided by the count."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\bar{x} = \\dfrac{x_1 + x_2 + \\cdots + x_n}{n} = \\dfrac{1}{n}\\sum_{i=1}^{n} x_i"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Example.** Quiz scores: $75, 82, 88, 91, 84$.",
+        "$\\bar{x} = \\dfrac{75 + 82 + 88 + 91 + 84}{5} = \\dfrac{420}{5} = 84$.",
+        "The class averaged $84$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The mean is sensitive to outliers",
+      "body": "Add one extreme value and the mean shifts a lot. If the same class had a sixth student score $20$, the mean drops from $84$ to $\\dfrac{420 + 20}{6} \\approx 73.3$ — a five-point drop from a single score."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. The Median (Middle Value)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Sort** the data, then the **median** is the middle value.",
+        "**Odd $n$:** the single middle entry.",
+        "**Even $n$:** the average of the two middle entries.",
+        "**Example (odd).** $3, 7, 9, 12, 15$ → median is $9$.",
+        "**Example (even).** $2, 5, 8, 11$ → median is $\\dfrac{5 + 8}{2} = 6.5$.",
+        "**The median ignores extremes.** Add a value of $1000$ to either example and the median barely moves — only one middle position changes."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. The Mode (Most Frequent Value)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "The **mode** is the value (or values) that appears most often.",
+        "**Example.** $4, 7, 7, 9, 12, 7, 4$ → mode is $7$ (appears 3 times).",
+        "A dataset can have **one mode** (unimodal), **multiple modes** (bimodal, multimodal), or **no mode** (every value is unique)."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. Which Center to Use?"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Choosing wisely",
+      "body": "**Mean:** best for symmetric, outlier-free data. Easy to combine and compute. **Median:** best when data is skewed or has outliers (e.g., income, house prices). **Mode:** best for categorical data ('most popular color') or when a peak matters."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — find a missing value",
+        "The mean of five numbers is $20$. Four of them are $10, 18, 22, 30$. Find the fifth.",
+        "**Setup.** Total $= \\bar{x} \\cdot n = 20 \\cdot 5 = 100$.",
+        "**Subtract the known.** $100 - (10 + 18 + 22 + 30) = 100 - 80 = 20$.",
+        "**Fifth value: $20$.**"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — weighted mean",
+        "A course grade is 30% homework, 30% midterm, 40% final. A student earned: HW $90$, midterm $70$, final $85$. Course grade?",
+        "**Weighted mean:** multiply each value by its weight, then sum.",
+        "$0.30(90) + 0.30(70) + 0.40(85) = 27 + 21 + 34 = 82$.",
+        "**Course grade: $82$.**"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 6. See mean, median, and mode side by side"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Pick a distribution shape in the widget below. Watch how the mean (blue), median (red), and mode(s) (green) shift as the shape changes from symmetric, to skewed, to bimodal, to having an outlier."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "dataset-summary",
+      "config": {
+        "preset": "symmetric"
+      }
+    },
+    {
+      "type": "callout",
+      "title": "Watch as you flip presets",
+      "body": "**Symmetric** → all three markers cluster near the center.\n\n**Right-skewed** → the mean shifts RIGHT of the median, dragged by the tail.\n\n**With outlier** → the mean leaps in the direction of the outlier; the median barely budges.\n\n**Bimodal** → the mean lands between the two peaks, at a value no observation actually has — a clear signal that 'mean' alone hides the structure."
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "**Mean** = sum / count. Sensitive to outliers. **Median** = middle (sorted). Robust. **Mode** = most frequent. Good for categories. For skewed data, the median often tells the truer story."
+    }
+  ]
+}

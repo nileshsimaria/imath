@@ -1,0 +1,66 @@
+{
+  "title": "The Inscribed Angle Theorem",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### The most famous circle theorem",
+        "Draw a circle. Pick two points $A$ and $B$ on it — they form a chord. Now pick a third point $P$ on the circle. The angle $\\angle APB$, made by the chords $PA$ and $PB$, is called an **inscribed angle** standing on the arc $AB$.",
+        "Here's the magic: **the inscribed angle is always exactly half the central angle on the same arc**.",
+        "Drag $P$ around the circle in the widget below. The central angle $\\angle AOB$ (green arcs at the center) stays fixed. The inscribed angle $\\angle APB$ (red arcs at $P$) is exactly half of it — at every position of $P$."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "circle-theorems",
+      "config": {
+        "mode": "inscribed-angle"
+      }
+    },
+    {
+      "type": "math",
+      "tex": "\\boxed{\\;\\angle APB \\;=\\; \\tfrac{1}{2}\\, \\angle AOB\\;}"
+    },
+    {
+      "type": "callout",
+      "title": "Why this is wild",
+      "body": "$P$ can be anywhere on the major arc — top of the circle, side of the circle, anywhere — and the inscribed angle does **not** change. That's not how it usually works in geometry: most angles depend on where the vertex sits. But on a circle, all viewing points on the same arc see chord $AB$ at the same angle.\n\nIt's also exactly *half* the central angle. The number 2 sneaks in because of the geometry of isosceles triangles (proof below)."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Sketch of the proof",
+        "Connect $P$ to the center $O$. This creates two isosceles triangles ($OA = OP$ = radius, and $OB = OP$ = radius). In each isosceles triangle the base angles are equal.",
+        "If $\\angle OPA = \\alpha$ and $\\angle OPB = \\beta$, then the inscribed angle is $\\alpha + \\beta$. The two corresponding central angles (the exterior angles of each isosceles triangle at $O$) are $2\\alpha$ and $2\\beta$, summing to $2(\\alpha + \\beta)$.",
+        "So central angle $= 2 \\cdot$ inscribed angle. ∎"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Three special cases",
+      "body": "**1. Same segment.** Two inscribed angles standing on the same chord, on the same side of the chord, are equal (both are half the same central angle).\n\n**2. Diameter ⇒ right angle.** When $AB$ is a diameter, the central angle is $180°$, so the inscribed angle is $90°$. This is **Thales' Theorem** — covered separately.\n\n**3. Opposite arcs.** If $P$ is on the *other* side of chord $AB$ (the minor arc instead of the major one), the inscribed angle there is supplementary to the one on the major arc — i.e., they sum to $180°$. This is why opposite angles of a cyclic quadrilateral sum to $180°$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example",
+        "Chord $AB$ subtends a central angle of $80°$. A point $P$ is on the major arc. What is $\\angle APB$?",
+        "**By the Inscribed Angle Theorem:** $\\angle APB = 80°/2 = 40°$.",
+        "If instead $P$ were on the minor arc (the other side), $\\angle APB$ would be $180° - 40° = 140°$ (supplementary to the major-arc inscribed angle).",
+        "**Reverse problem.** A chord $AB$ is viewed from a point $P$ on a circle at an angle of $25°$. What's the central angle? **Answer:** $50°$ (the central angle is double)."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why students should care",
+        "This theorem is the key to **every** problem about angles in circles. With it you can:",
+        "- Solve for unknown angles in figures involving chords and arcs.",
+        "- Prove that four points are concyclic (lie on the same circle).",
+        "- Derive the cyclic quadrilateral theorem (next lesson).",
+        "- Locate points seeing a fixed segment at a fixed angle — they all lie on a circular arc.",
+        "It's so fundamental that olympiad geometry essentially *runs* on inscribed-angle chasing."
+      ]
+    }
+  ]
+}

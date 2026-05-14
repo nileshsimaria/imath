@@ -1,0 +1,307 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{Each interior angle of an equilateral triangle measures how many degrees?}",
+      "answer": 60,
+      "tolerance": 0.001,
+      "hints": [
+        "All three angles are equal.",
+        "They sum to 180°."
+      ],
+      "explanation": "All three angles are equal; their sum is $180°$; so each is $60°$.",
+      "steps": [
+        {
+          "text": "Three equal angles summing to 180°."
+        },
+        {
+          "math": "180° \\div 3 = 60°"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{An equilateral triangle has side } 8. \\text{ Find its perimeter.}",
+      "answer": 24,
+      "tolerance": 0.001,
+      "hints": [
+        "All three sides are equal — just multiply.",
+        "$P = 3s$."
+      ],
+      "explanation": "$P = 3s = 3(8) = 24$.",
+      "steps": [
+        {
+          "text": "**All three sides have length 8:**"
+        },
+        {
+          "math": "P = 3s = 3(8) = 24"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{Find the altitude of an equilateral triangle with side } 4. \\\\ \\text{(Round to 2 decimals.)}",
+      "answer": 3.46,
+      "tolerance": 0.02,
+      "hints": [
+        "Formula: $h = s\\sqrt{3}/2$.",
+        "$4\\sqrt{3}/2 = 2\\sqrt{3}$, and $\\sqrt{3} \\approx 1.732$."
+      ],
+      "explanation": "$h = 4\\sqrt{3}/2 = 2\\sqrt{3} \\approx 3.46$.",
+      "steps": [
+        {
+          "text": "**Use $h = s\\sqrt{3}/2$ with $s = 4$:**"
+        },
+        {
+          "math": "h = \\dfrac{4\\sqrt{3}}{2} = 2\\sqrt{3}"
+        },
+        {
+          "math": "h \\approx 2(1.732) \\approx 3.46"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Find the area of an equilateral triangle with side } 6. \\\\ \\text{Express the answer in the form } k\\sqrt{3} \\text{ and give } k.",
+      "answer": 9,
+      "tolerance": 0.001,
+      "hints": [
+        "Formula: $A = (\\sqrt{3}/4)\\,s^2$.",
+        "With $s = 6$: $A = (\\sqrt{3}/4)(36) = 9\\sqrt{3}$."
+      ],
+      "explanation": "$A = (\\sqrt{3}/4)(6^2) = (\\sqrt{3}/4)(36) = 9\\sqrt{3}$. So $k = 9$.",
+      "steps": [
+        {
+          "text": "**Use the equilateral area formula:**"
+        },
+        {
+          "math": "A = \\dfrac{\\sqrt{3}}{4} s^2 = \\dfrac{\\sqrt{3}}{4} \\cdot 36 = 9\\sqrt{3}"
+        },
+        {
+          "text": "So $k = 9$."
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{An equilateral triangle has altitude } 6. \\text{ Find its side length.} \\\\ \\text{(Round to 2 decimals.)}",
+      "answer": 6.93,
+      "tolerance": 0.03,
+      "hints": [
+        "Reverse the altitude formula: $h = s\\sqrt{3}/2 \\;\\Rightarrow\\; s = 2h/\\sqrt{3}$.",
+        "Rationalize: $s = 2h\\sqrt{3}/3 = 12\\sqrt{3}/3 = 4\\sqrt{3}$."
+      ],
+      "explanation": "$s = 2h/\\sqrt{3} = 12/\\sqrt{3} = 12\\sqrt{3}/3 = 4\\sqrt{3} \\approx 6.93$.",
+      "steps": [
+        {
+          "text": "**Solve $h = s\\sqrt{3}/2$ for $s$:**"
+        },
+        {
+          "math": "s = \\dfrac{2h}{\\sqrt{3}} = \\dfrac{2 \\cdot 6}{\\sqrt{3}} = \\dfrac{12}{\\sqrt{3}}"
+        },
+        {
+          "text": "**Rationalize the denominator:**"
+        },
+        {
+          "math": "s = \\dfrac{12}{\\sqrt{3}} \\cdot \\dfrac{\\sqrt{3}}{\\sqrt{3}} = \\dfrac{12\\sqrt{3}}{3} = 4\\sqrt{3} \\approx 6.93"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{An equilateral triangle has area } 25\\sqrt{3}. \\text{ Find its side length.}",
+      "answer": 10,
+      "tolerance": 0.001,
+      "hints": [
+        "Reverse $A = (\\sqrt{3}/4)\\,s^2$: $s^2 = 4A/\\sqrt{3}$.",
+        "$s^2 = 4(25\\sqrt{3})/\\sqrt{3} = 100$, so $s = 10$."
+      ],
+      "explanation": "$\\dfrac{\\sqrt{3}}{4} s^2 = 25\\sqrt{3} \\Rightarrow s^2 = 100 \\Rightarrow s = 10$.",
+      "steps": [
+        {
+          "text": "**Set up the area equation:**"
+        },
+        {
+          "math": "\\dfrac{\\sqrt{3}}{4} s^2 = 25\\sqrt{3}"
+        },
+        {
+          "text": "**Divide both sides by $\\sqrt{3}$ and multiply by 4:**"
+        },
+        {
+          "math": "\\dfrac{s^2}{4} = 25 \\;\\Longrightarrow\\; s^2 = 100 \\;\\Longrightarrow\\; s = 10"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{An equilateral triangle has perimeter } 30. \\text{ Find its area.} \\\\ \\text{Express as } k\\sqrt{3} \\text{ and give } k. \\text{ (Round to 2 decimals if needed.)}",
+      "answer": 25,
+      "tolerance": 0.05,
+      "hints": [
+        "Perimeter $= 3s$, so $s = 10$.",
+        "Then area $= (\\sqrt{3}/4)(10)^2 = 25\\sqrt{3}$."
+      ],
+      "explanation": "$s = 30/3 = 10$, so $A = (\\sqrt{3}/4)(100) = 25\\sqrt{3}$. Thus $k = 25$.",
+      "steps": [
+        {
+          "text": "**Side from perimeter:** $s = 30/3 = 10$."
+        },
+        {
+          "text": "**Area:**"
+        },
+        {
+          "math": "A = \\dfrac{\\sqrt{3}}{4}(10)^2 = \\dfrac{\\sqrt{3}}{4}(100) = 25\\sqrt{3}"
+        },
+        {
+          "text": "So $k = 25$."
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{An equilateral triangle has side } 12. \\text{ Find its inradius } r. \\\\ \\text{Express as } k\\sqrt{3} \\text{ and give } k.",
+      "answer": 2,
+      "tolerance": 0.001,
+      "hints": [
+        "Inradius of an equilateral: $r = s\\sqrt{3}/6$.",
+        "Plug in $s = 12$: $r = 12\\sqrt{3}/6 = 2\\sqrt{3}$."
+      ],
+      "explanation": "$r = 12\\sqrt{3}/6 = 2\\sqrt{3}$. So $k = 2$.",
+      "steps": [
+        {
+          "text": "**Inradius formula:**"
+        },
+        {
+          "math": "r = \\dfrac{s\\sqrt{3}}{6} = \\dfrac{12\\sqrt{3}}{6} = 2\\sqrt{3}"
+        },
+        {
+          "text": "So $k = 2$."
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "prompt": "Which statement about an equilateral triangle is FALSE?",
+      "choices": [
+        "The centroid, incenter, circumcenter, and orthocenter are all the same point.",
+        "There are exactly 3 axes of reflection symmetry.",
+        "Every equilateral triangle is also isosceles.",
+        "The inradius is twice the circumradius."
+      ],
+      "answerIndex": 3,
+      "hints": [
+        "Compute the ratio $R/r$ for an equilateral with side $s$.",
+        "$R = s\\sqrt{3}/3$ and $r = s\\sqrt{3}/6$, so $R = 2r$ — the OPPOSITE of choice 4."
+      ],
+      "explanation": "Choice 4 is false. In an equilateral triangle, $R = s\\sqrt{3}/3$ and $r = s\\sqrt{3}/6$, so $R = 2r$ — the **circumradius** is twice the **inradius**, not the other way around. The other three statements are all true.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{An equilateral triangle is inscribed in a circle of radius } 6. \\\\ \\text{Find the side length. (Round to 2 decimals if needed.)}",
+      "answer": 10.39,
+      "tolerance": 0.05,
+      "hints": [
+        "For an equilateral inscribed in a circle, the circumradius is $R = s\\sqrt{3}/3$.",
+        "Solve $6 = s\\sqrt{3}/3$ for $s$: $s = 18/\\sqrt{3} = 6\\sqrt{3} \\approx 10.39$."
+      ],
+      "explanation": "$R = s\\sqrt{3}/3 = 6 \\Rightarrow s = 18/\\sqrt{3} = 6\\sqrt{3} \\approx 10.39$.",
+      "steps": [
+        {
+          "text": "**Equilateral circumradius formula:**"
+        },
+        {
+          "math": "R = \\dfrac{s\\sqrt{3}}{3}"
+        },
+        {
+          "text": "**Solve for $s$ when $R = 6$:**"
+        },
+        {
+          "math": "6 = \\dfrac{s\\sqrt{3}}{3} \\;\\Longrightarrow\\; s = \\dfrac{18}{\\sqrt{3}} = 6\\sqrt{3} \\approx 10.39"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{Two equilateral triangles have side lengths in ratio } 2 : 3. \\\\ \\text{What is the ratio of their AREAS (as a single fraction smaller/bigger)?}",
+      "answer": 0.444,
+      "tolerance": 0.01,
+      "hints": [
+        "If sides scale by a factor $k$, areas scale by $k^2$.",
+        "Sides ratio $2/3$ → areas ratio $(2/3)^2 = 4/9$."
+      ],
+      "explanation": "Areas scale as the square of the linear ratio. $(2/3)^2 = 4/9 \\approx 0.444$.",
+      "steps": [
+        {
+          "text": "**Scaling fact.** When lengths scale by a factor $k$, areas scale by $k^2$ (and volumes by $k^3$). This is general — works for any similar shapes."
+        },
+        {
+          "text": "**Apply with $k = 2/3$:**"
+        },
+        {
+          "math": "\\dfrac{A_1}{A_2} = \\left(\\dfrac{2}{3}\\right)^2 = \\dfrac{4}{9} \\approx 0.444"
+        },
+        {
+          "text": "**Verification.** If the smaller has side 2: $A_1 = (\\sqrt{3}/4)(4) = \\sqrt{3}$. If the bigger has side 3: $A_2 = (\\sqrt{3}/4)(9) = 9\\sqrt{3}/4$. Ratio $= \\sqrt{3} / (9\\sqrt{3}/4) = 4/9$. ✓"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "promptTex": "\\text{An equilateral triangle has vertices at } A(0,0) \\text{ and } B(6,0). \\\\ \\text{Find the coordinates of the third vertex } C.",
+      "choices": [
+        "(3, 3√3) or (3, -3√3)",
+        "(6, 3√3) or (6, -3√3)",
+        "(3, 6) or (3, -6)",
+        "(0, 6) or (6, 0)"
+      ],
+      "choicesTex": false,
+      "answerIndex": 0,
+      "hints": [
+        "$C$ lies on the perpendicular bisector of $AB$ (the vertical line $x = 3$).",
+        "Distance from $C$ to either $A$ or $B$ must equal $AB = 6$. Use this to find the y-coordinate."
+      ],
+      "explanation": "$C = (3, y)$ with $\\sqrt{9 + y^2} = 6 \\Rightarrow y^2 = 27 \\Rightarrow y = \\pm 3\\sqrt{3}$. So $C = (3, 3\\sqrt{3})$ or $(3, -3\\sqrt{3})$.",
+      "steps": [
+        {
+          "text": "**$C$ must be on the perpendicular bisector of $AB$.** Midpoint of $AB$ is $(3, 0)$, perpendicular bisector is $x = 3$. So $C = (3, y)$ for some $y$."
+        },
+        {
+          "text": "**$CA = AB = 6$:**"
+        },
+        {
+          "math": "\\sqrt{(3-0)^2 + (y-0)^2} = 6 \\;\\Longrightarrow\\; 9 + y^2 = 36"
+        },
+        {
+          "math": "y^2 = 27 \\;\\Longrightarrow\\; y = \\pm 3\\sqrt{3}"
+        },
+        {
+          "text": "**Two answers:** $C = (3, 3\\sqrt{3})$ (apex above) or $C = (3, -3\\sqrt{3})$ (apex below). Both give valid equilateral triangles, just reflected across $AB$."
+        }
+      ],
+      "difficulty": "hard"
+    }
+  ]
+}

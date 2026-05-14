@@ -1,0 +1,72 @@
+{
+  "title": "Speed, Distance, and the FTC",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Two dashboards in every car tell the same story from opposite ends.",
+        "**Speedometer**: how fast you're going *right now*. An *instantaneous rate*.",
+        "**Odometer**: how far you've gone *in total*. An *accumulation*.",
+        "These look like different quantities — but they're inseparably linked. Press Play."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "speedo-odo",
+      "config": {
+        "profile": "accel-brake"
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Two graphs, one motion",
+        "**Top graph**: speed $v(t)$ at every instant. **Bottom graph**: cumulative distance $s(t)$.",
+        "Watch closely as the car drives. Two things happen simultaneously:",
+        "**Shaded area under $v(t)$** accumulates and equals $s(t)$ at every moment.",
+        "**Red slope of $s(t)$** at the current point equals the speedometer reading $v(t)$.",
+        "These two observations *are* the two halves of the **Fundamental Theorem of Calculus**."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "FTC, in human language",
+      "body": "Part 1 — **derivative recovers speed**: if $s(t) = \\int_0^t v(\\tau)\\,d\\tau$, then $\\dfrac{ds}{dt} = v(t)$.\n\nPart 2 — **integral recovers distance**: $\\int_a^b v(t)\\,dt = s(b) - s(a)$.\n\nDifferentiation and integration are inverse operations. The car has been demonstrating this on every trip you've ever taken."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why area = distance",
+        "Imagine the speed is constant at $v = 18\\text{ m/s}$ for $10$ seconds. Distance is $v \\cdot t = 180\\text{ m}$. That's the **rectangle** under the (flat) speed graph: width $10$, height $18$, area $180$.",
+        "What if speed varies? Slice time into tiny pieces of width $\\Delta t$. In each tiny slice, speed is roughly constant at $v(t_i)$, so distance traveled in that slice is $v(t_i)\\,\\Delta t$ — a thin rectangle's area. Sum all the rectangles: that's the area under the curve. As $\\Delta t \\to 0$, that sum becomes the integral $\\int v\\,dt$. **Total distance is the area under the speed curve.** Try the trip presets above to see this for non-constant speeds."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why slope = speed",
+        "Now look at the *distance* curve. Speed is the rate of change of distance — how many meters per second you're piling up at this instant. That's exactly the slope of the distance-vs-time graph at the current $t$. The red tangent line on the bottom plot shows it.",
+        "When the car is parked: distance curve is flat → slope $= 0$ → speedometer reads $0$.",
+        "When the car is accelerating: distance curve is curving upward (slope increasing) → speedometer reading rises.",
+        "When the car is braking: distance curve keeps climbing but the slope is decreasing → speedometer reading falls."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Try this",
+      "body": "Switch to **\"Stop & go\"**. During the stops, the distance graph is flat — exactly because the speedometer reads zero. Switch to **\"Accel then brake\"**. The fastest distance accumulation happens at $t = 5$, exactly where the speedometer is at its peak."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### From cars to all of calculus",
+        "Anywhere you have a *rate* and an *accumulation*, the FTC applies the same way:",
+        "**Water flow rate (L/s) ↔ tank volume (L)**: the volume curve's slope is the flow rate; the flow rate curve's area is the volume change.",
+        "**Population birth rate ↔ total population growth**.",
+        "**Economic income rate ↔ total wealth**.",
+        "**Heat flow rate ↔ total heat absorbed**.",
+        "Once you grasp the speed-distance pair, derivatives and integrals stop feeling like two separate ideas. They are one idea seen from two directions."
+      ]
+    }
+  ]
+}

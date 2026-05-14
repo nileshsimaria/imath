@@ -1,0 +1,83 @@
+{
+  "title": "Polygon Angle Sums",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "You already know two facts that look unrelated:",
+        "**Triangles**: angles sum to $180°$.",
+        "**Quadrilaterals**: angles sum to $360°$.",
+        "Both are special cases of one general formula. Here's how it works."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The interior-angle-sum formula",
+      "body": "For any convex polygon with $n$ sides:\n$$\\text{Sum of interior angles} = (n - 2) \\cdot 180°$$"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Why?** Pick a vertex. Draw diagonals from that vertex to every non-adjacent vertex — this splits the polygon into $n - 2$ triangles. Each triangle's angles sum to $180°$, so the polygon's interior angles sum to $(n - 2) \\cdot 180°$.",
+        "Use the slider below to step through different polygons. Watch the formula compute as $n$ changes."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "polygon",
+      "config": {
+        "initialN": 5
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Common polygons",
+        "**Triangle** ($n = 3$): $(3 - 2) \\cdot 180° = 180°$.",
+        "**Quadrilateral** ($n = 4$): $(4 - 2) \\cdot 180° = 360°$.",
+        "**Pentagon** ($n = 5$): $(5 - 2) \\cdot 180° = 540°$.",
+        "**Hexagon** ($n = 6$): $(6 - 2) \\cdot 180° = 720°$.",
+        "**Octagon** ($n = 8$): $(8 - 2) \\cdot 180° = 1080°$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Each angle of a regular polygon",
+        "If the polygon is **regular** (all sides equal AND all angles equal), each angle equals the sum divided by $n$:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\text{Each interior angle} = \\dfrac{(n - 2) \\cdot 180°}{n}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Regular hexagon**: $\\dfrac{4 \\cdot 180}{6} = 120°$ per angle. **Regular octagon**: $\\dfrac{6 \\cdot 180}{8} = 135°$. **Regular pentagon**: $\\dfrac{3 \\cdot 180}{5} = 108°$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The exterior angle sum is always 360°",
+      "body": "An **exterior angle** is the supplement of an interior angle (the angle you'd turn through as you walk around the boundary). For *any* convex polygon — whatever the value of $n$ — the **exterior angles always sum to exactly 360°**. That makes sense: walking once around the boundary is one full revolution."
+    },
+    {
+      "type": "math",
+      "tex": "\\text{Each exterior angle of a regular polygon} = \\dfrac{360°}{n}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example",
+        "What is each interior angle of a regular 12-gon (dodecagon)?",
+        "Sum of interior angles: $(12 - 2) \\cdot 180 = 1800°$. Each one: $\\dfrac{1800}{12} = 150°$. (Or use the exterior trick: each exterior angle is $\\dfrac{360}{12} = 30°$, so each interior is $180 - 30 = 150°$.)"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "Interior-angle sum: $(n - 2) \\cdot 180°$ for any convex polygon. Each interior angle of a regular $n$-gon: $(n - 2) \\cdot 180 / n$. Exterior angles always sum to $360°$. These three facts cover almost every polygon angle question."
+    }
+  ]
+}

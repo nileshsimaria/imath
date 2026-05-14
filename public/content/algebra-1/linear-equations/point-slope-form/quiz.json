@@ -1,0 +1,317 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which equation describes a line with slope } 4 \\\\ \\text{passing through } (2, 5)?",
+      "choices": [
+        "y - 2 = 4(x - 5)",
+        "y - 5 = 4(x - 2)",
+        "y + 5 = 4(x + 2)",
+        "y = 4x + 5"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Point-slope is $y - y_1 = m(x - x_1)$.",
+        "$y_1$ is the y-coordinate of the point — it goes with $y$. $x_1$ is the x-coordinate — it goes with $x$."
+      ],
+      "explanation": "Plug $m = 4$ and $(x_1, y_1) = (2, 5)$ into $y - y_1 = m(x - x_1)$ to get $y - 5 = 4(x - 2)$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Convert } y - 3 = 2(x - 1) \\text{ to slope-intercept form.}",
+      "choices": [
+        "y = 2x + 1",
+        "y = 2x - 1",
+        "y = 2x + 5",
+        "y = 2x + 3"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Distribute the $2$ on the right side first.",
+        "Then add $3$ to both sides to isolate $y$."
+      ],
+      "explanation": "Distribute: $y - 3 = 2x - 2$. Add $3$ to both sides: $y = 2x + 1$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Point-slope → slope-intercept conversion: ALWAYS distribute first, then move the constant.**"
+        },
+        {
+          "text": "**Distribute the 2 across $(x - 1)$.** $y - 3 = 2x - 2$."
+        },
+        {
+          "text": "**Isolate $y$.** Add 3 to both sides: $y = 2x - 2 + 3 = 2x + 1$."
+        },
+        {
+          "text": "**Read off slope and intercept.** $m = 2$, $b = 1$."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{A line through } (3, 7) \\text{ has slope } -2. \\\\ \\text{What is its y-intercept?}",
+      "answer": 13,
+      "tolerance": 0.001,
+      "hints": [
+        "Start with point-slope: $y - 7 = -2(x - 3)$.",
+        "Convert to slope-intercept by distributing and adding $7$."
+      ],
+      "explanation": "$y - 7 = -2(x - 3) \\Rightarrow y - 7 = -2x + 6 \\Rightarrow y = -2x + 13$. So $b = 13$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Strategy: write the line in point-slope form, then convert to slope-intercept to read off $b$.**"
+        },
+        {
+          "text": "**Point-slope.** $y - 7 = -2(x - 3)$."
+        },
+        {
+          "text": "**Distribute.** $y - 7 = -2x + 6$."
+        },
+        {
+          "text": "**Isolate $y$.** $y = -2x + 13$."
+        },
+        {
+          "text": "**y-intercept is $b = 13$.** (Sanity check: at $x = 3$, $y = -6 + 13 = 7$ ✓.)"
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A line passes through } (-2, 4) \\text{ and } (1, -2). \\\\ \\text{Which is its point-slope equation using } (1, -2)?",
+      "choices": [
+        "y - 1 = -2(x - 2)",
+        "y + 2 = -2(x - 1)",
+        "y - 4 = 2(x + 2)",
+        "y + 2 = 2(x - 1)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "First find the slope: $m = \\dfrac{-2 - 4}{1 - (-2)}$.",
+        "$m = \\dfrac{-6}{3} = -2$. Now plug into $y - y_1 = m(x - x_1)$ with $(x_1, y_1) = (1, -2)$."
+      ],
+      "explanation": "Slope: $m = \\dfrac{-2 - 4}{1 - (-2)} = -2$. Using $(1, -2)$: $y - (-2) = -2(x - 1)$, i.e. $y + 2 = -2(x - 1)$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Two-step recipe.** (1) Find the slope from two points. (2) Plug into point-slope using EITHER point."
+        },
+        {
+          "text": "**Slope.** $m = \\dfrac{-2 - 4}{1 - (-2)} = \\dfrac{-6}{3} = -2$."
+        },
+        {
+          "text": "**Point-slope using $(1, -2)$.** $y - (-2) = -2(x - 1)$."
+        },
+        {
+          "text": "**Simplify the double-negative on the LEFT.** $y - (-2) = y + 2$. Final form: $y + 2 = -2(x - 1)$."
+        },
+        {
+          "text": "**Tip on the double-negative.** $y - y_1$ becomes $y + |y_1|$ whenever $y_1$ is negative. Same trick on the right with $x - x_1$."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which point lies on the line } y - 4 = 3(x + 2)?",
+      "choices": [
+        "(-2, 4)",
+        "(2, 4)",
+        "(0, 4)",
+        "(-2, -4)"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "The form is $y - y_1 = m(x - x_1)$.",
+        "Read off $(x_1, y_1)$ — but watch the signs! $x + 2 = x - (-2)$."
+      ],
+      "explanation": "Rewrite as $y - 4 = 3(x - (-2))$. So $(x_1, y_1) = (-2, 4)$ — that point is on the line.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Write the point-slope form of a line through } (3, -1) \\text{ with slope } 5.",
+      "choices": [
+        "y + 1 = 5(x - 3)",
+        "y - 1 = 5(x + 3)",
+        "y - 3 = 5(x + 1)",
+        "y + 3 = 5(x - 1)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Point-slope: $y - y_1 = m(x - x_1)$.",
+        "$y - (-1) = 5(x - 3) \\Rightarrow y + 1 = 5(x - 3)$."
+      ],
+      "explanation": "$y - y_1 = m(x - x_1)$ with point $(3, -1)$ and slope 5: $y - (-1) = 5(x - 3) \\Rightarrow y + 1 = 5(x - 3)$.",
+      "steps": [
+        "**Use the point-slope template.** $y - y_1 = m(x - x_1)$.",
+        "**Plug in** $(x_1, y_1) = (3, -1)$ and $m = 5$: $y - (-1) = 5(x - 3)$.",
+        "**Simplify the double-negative.** $y - (-1) = y + 1$.",
+        "**Final form.** $y + 1 = 5(x - 3)$.",
+        "**Common mistake.** Forgetting to flip $-(-1)$ to $+1$ — the negative sign in the point makes the form sign-tricky. Always rewrite to remove the double negative."
+      ],
+      "id": "q6",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Convert } y - 4 = -2(x + 3) \\text{ to slope-intercept form.}",
+      "choices": [
+        "y = -2x - 2",
+        "y = -2x + 10",
+        "y = -2x - 10",
+        "y = 2x - 2"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Distribute: $y - 4 = -2x - 6$. Add 4 to both sides.",
+        "$y = -2x - 2$."
+      ],
+      "explanation": "$y - 4 = -2x - 6 \\Rightarrow y = -2x - 2$.",
+      "steps": [
+        "**Distribute carefully — watch the sign across $(x + 3)$.** $-2 \\cdot x + (-2) \\cdot 3 = -2x - 6$.",
+        "**Equation becomes.** $y - 4 = -2x - 6$.",
+        "**Isolate $y$ by adding 4.** $y = -2x - 6 + 4 = -2x - 2$.",
+        "**Final.** $y = -2x - 2$. Slope $-2$, intercept $-2$."
+      ],
+      "id": "q7",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Find the y-intercept of the line } y - 7 = 3(x - 2).",
+      "choices": [
+        "7",
+        "-2",
+        "1",
+        "3"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Convert to slope-intercept first, OR plug in $x = 0$.",
+        "$y - 7 = 3(0 - 2) = -6 \\Rightarrow y = 1$."
+      ],
+      "explanation": "Set $x = 0$: $y - 7 = 3(-2) = -6 \\Rightarrow y = 1$. Or convert: $y = 3x + 1$.",
+      "steps": [
+        "**Two equally valid methods. Pick whichever is faster.**",
+        "**Method A: plug in $x = 0$ directly.** $y - 7 = 3(0 - 2) = -6$, so $y = 1$.",
+        "**Method B: convert to slope-intercept.** Distribute: $y - 7 = 3x - 6$. Add 7: $y = 3x + 1$. Read off $b = 1$.",
+        "**Both give the same answer.** Method A is faster when you just need the y-intercept. Method B is better when you also need the equation for other purposes."
+      ],
+      "id": "q8",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Write the equation through } (-2, 5) \\text{ and } (4, -1) \\text{ in point-slope form} \\\\ \\text{using the point } (4, -1).",
+      "choices": [
+        "y + 1 = -1(x - 4)",
+        "y - 1 = -1(x + 4)",
+        "y + 1 = 1(x - 4)",
+        "y - 4 = -1(x + 1)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Slope: $(-1 - 5)/(4 - (-2)) = -6/6 = -1$.",
+        "Use $(4, -1)$: $y - (-1) = -1(x - 4)$."
+      ],
+      "explanation": "Slope $= -1$. Point-slope at $(4, -1)$: $y + 1 = -1(x - 4)$.",
+      "steps": [
+        "**Two-step recipe: slope first, then point-slope.**",
+        "**Slope.** $m = \\dfrac{-1 - 5}{4 - (-2)} = \\dfrac{-6}{6} = -1$.",
+        "**Point-slope with $(4, -1)$.** $y - (-1) = -1(x - 4)$.",
+        "**Simplify the double-negative.** $y + 1 = -1(x - 4)$."
+      ],
+      "id": "q9",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which of these is in } \\textbf{point-slope} \\text{ form?}",
+      "choices": [
+        "y = 2x + 5",
+        "y - 3 = 4(x + 1)",
+        "2x + 3y = 6",
+        "y = -x"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Point-slope is $y - y_1 = m(x - x_1)$.",
+        "Look for the form (y - number) = (number)(x ± number)."
+      ],
+      "explanation": "$y - 3 = 4(x + 1)$ matches the point-slope template $y - y_1 = m(x - x_1)$ with point $(-1, 3)$ and $m = 4$.",
+      "steps": [
+        "**Recognize the THREE standard forms of a line.**",
+        "  Slope-intercept: $y = mx + b$.",
+        "  Point-slope: $y - y_1 = m(x - x_1)$.",
+        "  Standard: $Ax + By = C$.",
+        "**Classify each option.** $y = 2x + 5$ → slope-intercept. $y - 3 = 4(x+1)$ → POINT-SLOPE ✓. $2x + 3y = 6$ → standard. $y = -x$ → slope-intercept (with $b = 0$).",
+        "**Answer: option 2.** Point $(-1, 3)$, slope 4.",
+        "**Why know all three forms.** Each is convenient for different tasks. Slope-intercept: read off slope and y-intercept. Point-slope: build from a point and a slope. Standard: integer coefficients, useful for systems of equations."
+      ],
+      "id": "q10",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the slope of the line described by } y + 2 = -\\dfrac{3}{4}(x - 6)?",
+      "choices": [
+        "-\\dfrac{3}{4}",
+        "\\dfrac{3}{4}",
+        "-2",
+        "6"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Point-slope: $y - y_1 = m(x - x_1)$. $m$ is the multiplier on $(x - x_1)$.",
+        "$m = -\\dfrac{3}{4}$."
+      ],
+      "explanation": "In $y + 2 = -\\dfrac{3}{4}(x - 6)$, the slope is the coefficient on $(x - x_1)$: $m = -\\dfrac{3}{4}$.",
+      "steps": [
+        "**Read off the slope directly — it's the COEFFICIENT of $(x - x_1)$.**",
+        "**Match to template.** $y - y_1 = m(x - x_1)$. The number multiplying $(x - x_1)$ on the right is $m$.",
+        "**Here.** $m = -\\dfrac{3}{4}$."
+      ],
+      "id": "q11",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Write the line with slope } 2 \\text{ through } (0, -3) \\text{ in point-slope form.}",
+      "choices": [
+        "y + 3 = 2(x - 0)",
+        "y - 3 = 2(x + 0)",
+        "y + 3 = -2x",
+        "y - 0 = 2(x - 3)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Plug into $y - y_1 = m(x - x_1)$ with $(0, -3)$ and $m = 2$.",
+        "$y - (-3) = 2(x - 0)$."
+      ],
+      "explanation": "$y - (-3) = 2(x - 0) \\Rightarrow y + 3 = 2(x - 0)$. (Equivalent to $y = 2x - 3$.)",
+      "steps": [
+        "**Standard point-slope substitution.** $(x_1, y_1) = (0, -3)$, $m = 2$.",
+        "**Apply.** $y - (-3) = 2(x - 0)$.",
+        "**Simplify the double-negative on the left.** $y + 3 = 2(x - 0)$.",
+        "**Interesting.** Since the point is on the y-axis ($x = 0$), this is also slope-intercept form: $y + 3 = 2x \\Rightarrow y = 2x - 3$. Both forms describe the same line."
+      ],
+      "id": "q12",
+      "difficulty": "easy"
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "title": "Discrete Random Variables",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "A **random variable** is a number that depends on the outcome of a random experiment. Roll a die: $X = $ the value rolled is a random variable. Flip 5 coins: $Y = $ number of heads is a random variable.",
+        "**Discrete** random variables take on a countable set of values (often integers). **Continuous** random variables take on any value in a range (height, weight, time)."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. Probability Distribution"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "A **probability distribution** lists each possible value of $X$ and its probability. The probabilities must sum to 1.",
+        "**Example.** Roll a die. $X = $ value shown.",
+        "$$\\begin{array}{c|cccccc} X & 1 & 2 & 3 & 4 & 5 & 6 \\\\ \\hline P(X) & 1/6 & 1/6 & 1/6 & 1/6 & 1/6 & 1/6 \\end{array}$$",
+        "All probabilities equal — a **uniform** discrete distribution."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. Expected Value (Mean of a Distribution)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "The **expected value** $E[X]$ is the average value of $X$ if you repeated the experiment many times. Compute it as a weighted sum:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "E[X] = \\sum_{i} x_i \\cdot P(X = x_i)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Example.** Roll a die. $E[X] = 1 \\cdot \\tfrac{1}{6} + 2 \\cdot \\tfrac{1}{6} + \\cdots + 6 \\cdot \\tfrac{1}{6} = \\tfrac{1+2+3+4+5+6}{6} = \\tfrac{21}{6} = 3.5$.",
+        "(You'll never roll a 3.5 — but the long-run average is 3.5.)"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Expected value is an average, not a prediction",
+      "body": "$E[X] = 3.5$ doesn't mean any single roll equals 3.5. It means: average a million rolls, you'll get close to 3.5. Expected value is about long-run behavior, not single trials."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. Expected Value as Decision Tool"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Example — fair gamble.** Toss a coin: H wins \\$2, T loses \\$1. Should you play?",
+        "$E[\\text{winnings}] = (1/2)(\\$2) + (1/2)(-\\$1) = \\$0.50$.",
+        "Positive expected value — favorable game. Long-run, you make 50¢ per play.",
+        "**Example — lottery.** Ticket costs \\$2. 1-in-1000 chance to win \\$1500.",
+        "$E[\\text{net}] = (1/1000)(\\$1500 - \\$2) + (999/1000)(-\\$2) = \\$1.498 - \\$1.998 = -\\$0.50$.",
+        "Negative expected value — bad bet. Long-run, lose 50¢ per ticket."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. Binomial Distribution"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "A very common discrete distribution: count the number of 'successes' in $n$ independent trials, each with success probability $p$.",
+        "**Examples:** number of heads in 10 coin flips ($n=10, p=0.5$). Number of 6s in 20 die rolls ($n=20, p=1/6$). Number of free throws made in 12 attempts (if free-throw % is, say, 0.75).",
+        "**Probability of exactly $k$ successes:**"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "P(X = k) = \\binom{n}{k} p^k (1-p)^{n-k}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Components:**",
+        "$\\binom{n}{k}$ — number of ways to pick which $k$ trials are successes.",
+        "$p^k$ — probability the chosen $k$ are successes.",
+        "$(1-p)^{n-k}$ — probability the other $n - k$ are failures."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Example.** Flip a fair coin 5 times. $P(\\text{exactly 3 heads})$?",
+        "$P(X = 3) = \\binom{5}{3} (1/2)^3 (1/2)^2 = 10 \\cdot \\dfrac{1}{8} \\cdot \\dfrac{1}{4} = \\dfrac{10}{32} = \\dfrac{5}{16} = 0.3125$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Binomial expected value",
+      "body": "For a binomial distribution: $E[X] = np$. (Number of trials times success probability.) Coin-flip example: 5 flips × 0.5 = 2.5 expected heads. Makes intuitive sense."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 5. Variance and Standard Deviation"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Two distributions can have the same mean but vastly different SPREAD. The **variance** quantifies that spread.",
+        "**Definition.** Variance is the *expected squared deviation from the mean*:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\text{Var}(X) = E[(X - \\mu)^2] = \\sum_{i} (x_i - \\mu)^2 \\cdot P(X = x_i)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Each deviation is **squared** (so positive and negative deviations both add up, and farther-out values are penalized quadratically), weighted by its probability, then summed.",
+        "**Standard deviation** is variance's square root — back in the original units of $X$:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\sigma_X = \\sqrt{\\text{Var}(X)}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Example — roll a die.** Mean $\\mu = 3.5$. Sum of squared deviations:",
+        "$(1-3.5)^2 + (2-3.5)^2 + \\cdots + (6-3.5)^2 = 6.25 + 2.25 + 0.25 + 0.25 + 2.25 + 6.25 = 17.5$.",
+        "Each weighted by $1/6$: $\\text{Var}(X) = 17.5/6 \\approx 2.917$.",
+        "Standard deviation: $\\sigma \\approx \\sqrt{2.917} \\approx 1.708$. A typical roll is about $1.7$ away from $3.5$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Shortcut formula",
+      "body": "An algebraically equivalent (often easier) formula:\n\n$\\text{Var}(X) = E[X^2] - (E[X])^2$\n\nCompute $E[X^2] = \\sum x_i^2 \\cdot P(X = x_i)$, then subtract $\\mu^2$. For the die: $E[X^2] = (1 + 4 + 9 + 16 + 25 + 36)/6 = 91/6 \\approx 15.17$. $\\text{Var}(X) = 15.17 - 3.5^2 = 15.17 - 12.25 = 2.92$ ✓."
+    },
+    {
+      "type": "callout",
+      "title": "Variance of a binomial",
+      "body": "For Binomial$(n, p)$:\n\n$E[X] = np$\n\n$\\text{Var}(X) = np(1-p)$\n\n$\\sigma = \\sqrt{np(1-p)}$\n\nExample: 100 fair coin flips. $E = 50$, $\\text{Var} = 25$, $\\sigma = 5$. Typical outcome: $50 \\pm 5$ heads. (This is exactly the standard deviation that determines the width of the Galton-board's bell-shaped histogram.)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 6. Linearity of Expectation"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Expected value is **linear** — it plays nicely with addition and scaling:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "E[a X + b] = a \\, E[X] + b"
+    },
+    {
+      "type": "math",
+      "tex": "E[X + Y] = E[X] + E[Y] \\;\\;\\;\\text{(true even if } X, Y \\text{ are dependent!)}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Variance is NOT linear.** Constants don't shift spread, and scaling shows up squared:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\text{Var}(a X + b) = a^2 \\, \\text{Var}(X)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Equivalently for SD: $\\sigma_{aX + b} = |a| \\cdot \\sigma_X$.",
+        "**Example.** Convert temperatures from Celsius to Fahrenheit: $F = 1.8 C + 32$. If daily temperature $C$ has mean $20°$ and SD $5°$, then $F$ has mean $1.8 \\cdot 20 + 32 = 68°$ and SD $1.8 \\cdot 5 = 9°$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Sum of independent random variables",
+      "body": "For INDEPENDENT $X, Y$:\n\n$\\text{Var}(X + Y) = \\text{Var}(X) + \\text{Var}(Y)$\n\nVariances add (without independence, you need a covariance term). Standard deviations do NOT add directly — only the variances do. So $\\sigma_{X+Y} = \\sqrt{\\sigma_X^2 + \\sigma_Y^2}$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 7. Other Common Discrete Distributions"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Two more distributions worth knowing — both common, both with one-parameter families:",
+        "**Geometric distribution.** Number of trials needed to get the FIRST success in independent Bernoulli$(p)$ trials.",
+        "$P(X = k) = (1 - p)^{k-1} \\, p$\\quad for $k = 1, 2, 3, \\ldots$",
+        "$E[X] = 1/p$\\quad (intuitively: rare success → more trials needed)",
+        "*Example.* Roll a die until you get a 6. Expected number of rolls: $1/(1/6) = 6$.",
+        "**Poisson distribution.** Counts rare events in a fixed interval (radioactive decays per second, typos per page, lightning strikes per hour). One parameter $\\lambda$ = average rate.",
+        "$P(X = k) = \\dfrac{e^{-\\lambda} \\lambda^k}{k!}$\\quad for $k = 0, 1, 2, \\ldots$",
+        "$E[X] = \\lambda$,\\quad $\\text{Var}(X) = \\lambda$.",
+        "(For Poisson, variance equals the mean — a defining signature.)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Try the simulator with the die mode to see empirical distributions converge."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "probability-sim",
+      "config": {
+        "mode": "die"
+      }
+    }
+  ]
+}

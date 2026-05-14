@@ -1,0 +1,511 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Factor: } 12x^3 - 18x^2.",
+      "choices": [
+        "$6x^2(2x - 3)$",
+        "$6x(2x^2 - 3x)$",
+        "$3x^2(4x - 6)$",
+        "$2x^2(6x - 9)$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "GCF of 12 and 18 is 6. GCF of $x^3$ and $x^2$ is $x^2$.",
+        "$6x^2$ comes out."
+      ],
+      "explanation": "GCF = $6x^2$. Pull it out: $6x^2(2x - 3)$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Factor: } x^2 + 8x + 15.",
+      "choices": [
+        "$(x + 3)(x + 5)$",
+        "$(x + 1)(x + 15)$",
+        "$(x - 3)(x - 5)$",
+        "$(x + 4)(x + 4)$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Need two numbers with product 15 and sum 8.",
+        "3 and 5."
+      ],
+      "explanation": "Product 15, sum 8: 3 and 5. So $(x + 3)(x + 5)$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Factor: } x^2 - 11x + 24.",
+      "choices": [
+        "$(x - 3)(x - 8)$",
+        "$(x + 3)(x + 8)$",
+        "$(x - 4)(x - 6)$",
+        "$(x - 2)(x - 12)$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Product 24, sum -11: both factors negative.",
+        "-3 and -8."
+      ],
+      "explanation": "Product 24, sum -11: -3 and -8. So $(x - 3)(x - 8)$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Factor: } x^2 + 2x - 35.",
+      "choices": [
+        "$(x + 5)(x - 7)$",
+        "$(x + 7)(x - 5)$",
+        "$(x + 5)(x + 7)$",
+        "$(x - 5)(x - 7)$"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Product -35, sum 2: opposite signs.",
+        "7 and -5 (the larger gets the positive sign)."
+      ],
+      "explanation": "Product -35, sum 2: 7 and -5. So $(x + 7)(x - 5)$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Factor: } 2x^2 + 11x + 12.",
+      "choices": [
+        "$(2x + 3)(x + 4)$",
+        "$(2x + 4)(x + 3)$",
+        "$(2x + 12)(x + 1)$",
+        "$(2x + 6)(x + 2)$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Splitting the middle term: product $2 \\cdot 12 = 24$, sum $11$. Pair: 3, 8.",
+        "$2x^2 + 3x + 8x + 12 = x(2x + 3) + 4(2x + 3) = (2x + 3)(x + 4)$."
+      ],
+      "explanation": "Split middle: 3 and 8. $2x^2 + 3x + 8x + 12 = x(2x + 3) + 4(2x + 3) = (2x + 3)(x + 4)$.",
+      "steps": [
+        {
+          "text": "**Find numbers with product $ac = 2 \\cdot 12 = 24$ and sum $b = 11$:** the pair is $3$ and $8$."
+        },
+        {
+          "text": "**Split the middle term:**"
+        },
+        {
+          "math": "2x^2 + 11x + 12 = 2x^2 + 3x + 8x + 12"
+        },
+        {
+          "text": "**Group and factor:**"
+        },
+        {
+          "math": "= x(2x + 3) + 4(2x + 3) = (2x + 3)(x + 4)"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Factor: } 6x^2 - 7x - 3.",
+      "choices": [
+        "$(3x + 1)(2x - 3)$",
+        "$(6x + 1)(x - 3)$",
+        "$(3x - 1)(2x + 3)$",
+        "$(2x - 1)(3x + 3)$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Splitting middle: product $6 \\cdot (-3) = -18$, sum $-7$. Pair: $-9, 2$.",
+        "$6x^2 - 9x + 2x - 3 = 3x(2x - 3) + (2x - 3) = (2x - 3)(3x + 1)$."
+      ],
+      "explanation": "Split middle: $-9$ and $2$. $6x^2 - 9x + 2x - 3 = 3x(2x - 3) + 1(2x - 3) = (2x - 3)(3x + 1)$.",
+      "steps": [
+        {
+          "text": "**Splitting the middle term:** find two numbers with product $ac = 6 \\cdot (-3) = -18$ and sum $b = -7$."
+        },
+        {
+          "text": "**Pair:** $-9$ and $2$."
+        },
+        {
+          "math": "6x^2 - 7x - 3 = 6x^2 - 9x + 2x - 3"
+        },
+        {
+          "text": "**Group:**"
+        },
+        {
+          "math": "= 3x(2x - 3) + 1(2x - 3) = (2x - 3)(3x + 1)"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Factor: } x^3 + 5x^2 - 4x - 20.",
+      "choices": [
+        "$(x + 5)(x^2 - 4)$",
+        "$(x + 5)(x - 2)(x + 2)$",
+        "$(x - 5)(x + 2)^2$",
+        "$(x + 2)(x^2 - 10)$"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Group: $(x^3 + 5x^2) + (-4x - 20) = x^2(x + 5) - 4(x + 5) = (x + 5)(x^2 - 4)$.",
+        "Then factor $x^2 - 4 = (x-2)(x+2)$."
+      ],
+      "explanation": "Group: $x^2(x + 5) - 4(x + 5) = (x + 5)(x^2 - 4) = (x + 5)(x - 2)(x + 2)$.",
+      "steps": [
+        {
+          "text": "**Group the four terms in pairs:**"
+        },
+        {
+          "math": "(x^3 + 5x^2) + (-4x - 20)"
+        },
+        {
+          "text": "**Pull common factors from each group:**"
+        },
+        {
+          "math": "x^2(x + 5) - 4(x + 5)"
+        },
+        {
+          "text": "**Pull the shared binomial:**"
+        },
+        {
+          "math": "(x + 5)(x^2 - 4)"
+        },
+        {
+          "text": "**Factor $x^2 - 4$ as a difference of squares:**"
+        },
+        {
+          "math": "(x + 5)(x - 2)(x + 2)"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Factor: } 4x^2 - 81.",
+      "choices": [
+        "$(2x - 9)(2x + 9)$",
+        "$(4x - 9)(x + 9)$",
+        "$(2x - 9)^2$",
+        "$(4x - 81)(x + 1)$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Difference of squares: $(2x)^2 - 9^2$.",
+        "$(2x + 9)(2x - 9)$."
+      ],
+      "explanation": "$(2x)^2 - 9^2 = (2x + 9)(2x - 9)$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Factor completely: } x^4 - 16.",
+      "choices": [
+        "$(x - 2)(x + 2)(x^2 + 4)$",
+        "$(x^2 - 4)^2$",
+        "$(x - 2)^2(x + 2)^2$",
+        "$(x^2 + 4)(x^2 - 4)$ (not yet complete)"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "$x^4 - 16 = (x^2)^2 - 4^2 = (x^2 - 4)(x^2 + 4)$.",
+        "Then factor $x^2 - 4 = (x-2)(x+2)$ further. $x^2 + 4$ is irreducible over the reals."
+      ],
+      "explanation": "$x^4 - 16 = (x^2-4)(x^2+4) = (x-2)(x+2)(x^2+4)$.",
+      "steps": [
+        {
+          "text": "**First difference of squares** ($a^2 - b^2 = (a+b)(a-b)$ with $a = x^2, b = 4$):"
+        },
+        {
+          "math": "x^4 - 16 = (x^2)^2 - 4^2 = (x^2 - 4)(x^2 + 4)"
+        },
+        {
+          "text": "**Factor $x^2 - 4$ further** (another difference of squares):"
+        },
+        {
+          "math": "x^2 - 4 = (x - 2)(x + 2)"
+        },
+        {
+          "text": "**$x^2 + 4$ is irreducible over the reals** (sum of squares — no real factors)."
+        },
+        {
+          "math": "x^4 - 16 = (x - 2)(x + 2)(x^2 + 4)"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q10",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Factor: } 8x^3 - 125.",
+      "choices": [
+        "$(2x - 5)^3$",
+        "$(2x - 5)(4x^2 + 10x + 25)$",
+        "$(2x + 5)(4x^2 - 10x + 25)$",
+        "$(8x - 125)(x + 1)$"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$(2x)^3 - 5^3$ — difference of cubes.",
+        "$a^3 - b^3 = (a-b)(a^2 + ab + b^2)$."
+      ],
+      "explanation": "$8x^3 - 125 = (2x)^3 - 5^3 = (2x - 5)((2x)^2 + (2x)(5) + 5^2) = (2x - 5)(4x^2 + 10x + 25)$.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q11",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Factor: } x^3 - 6x^2 + 11x - 6. \\\\ \\text{(Hint: try } x = 1).",
+      "choices": [
+        "$(x - 1)(x - 2)(x - 3)$",
+        "$(x + 1)(x - 2)(x - 3)$",
+        "$(x - 1)(x - 2)(x + 3)$",
+        "$(x - 1)^2(x - 6)$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Verify $x = 1$: $1 - 6 + 11 - 6 = 0$. ✓ So $(x - 1)$ is a factor.",
+        "Divide and you get $x^2 - 5x + 6 = (x - 2)(x - 3)$."
+      ],
+      "explanation": "$f(1) = 0 \\Rightarrow (x - 1)$ is a factor. Divide: $x^3 - 6x^2 + 11x - 6 = (x - 1)(x^2 - 5x + 6) = (x - 1)(x - 2)(x - 3)$.",
+      "steps": [
+        {
+          "text": "**Try $x = 1$:** $1 - 6 + 11 - 6 = 0$. So $(x - 1)$ is a factor (Factor Theorem)."
+        },
+        {
+          "text": "**Divide $x^3 - 6x^2 + 11x - 6$ by $(x - 1)$:** quotient is $x^2 - 5x + 6$."
+        },
+        {
+          "text": "**Factor the quadratic:**"
+        },
+        {
+          "math": "x^2 - 5x + 6 = (x - 2)(x - 3)"
+        },
+        {
+          "text": "**Full factorization:**"
+        },
+        {
+          "math": "x^3 - 6x^2 + 11x - 6 = (x - 1)(x - 2)(x - 3)"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve: } x^2 - 9x + 20 = 0.",
+      "choices": [
+        "$x = 4, 5$",
+        "$x = -4, -5$",
+        "$x = 2, 10$",
+        "$x = 1, 20$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Factor: product 20, sum -9 → -4, -5.",
+        "$(x - 4)(x - 5) = 0$."
+      ],
+      "explanation": "$(x - 4)(x - 5) = 0 \\Rightarrow x = 4$ or $x = 5$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q13",
+      "type": "numeric",
+      "promptTex": "\\text{Compute } 99^2 - 1^2 \\text{ mentally using factorization.}",
+      "answer": 9800,
+      "tolerance": 0.001,
+      "hints": [
+        "$a^2 - b^2 = (a+b)(a-b)$ with $a = 99, b = 1$.",
+        "$(100)(98) = 9800$."
+      ],
+      "explanation": "$99^2 - 1^2 = (99 + 1)(99 - 1) = 100 \\cdot 98 = 9800$.",
+      "steps": [
+        {
+          "text": "**Difference of squares** $a^2 - b^2 = (a + b)(a - b)$ with $a = 99, b = 1$:"
+        },
+        {
+          "math": "99^2 - 1^2 = (99 + 1)(99 - 1) = 100 \\cdot 98 = 9800"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q14",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Factor: } 9x^2 - 12x + 4.",
+      "choices": [
+        "$(3x - 2)^2$",
+        "$(3x - 2)(3x + 2)$",
+        "$(3x + 2)^2$",
+        "$(9x - 4)(x - 1)$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Perfect square pattern: $a^2 - 2ab + b^2 = (a-b)^2$. Check: $9x^2 = (3x)^2$, $4 = 2^2$, middle $= 2(3x)(2) = 12x$. ✓",
+        "$(3x - 2)^2$."
+      ],
+      "explanation": "$9x^2 - 12x + 4 = (3x)^2 - 2(3x)(2) + 2^2 = (3x - 2)^2$.",
+      "steps": [
+        {
+          "text": "**Check for perfect-square pattern** $a^2 - 2ab + b^2 = (a - b)^2$."
+        },
+        {
+          "text": "Try $a = 3x$ ($9x^2 = (3x)^2$ ✓) and $b = 2$ ($4 = 2^2$ ✓). Middle: $2ab = 2(3x)(2) = 12x$ ✓ (matches sign too)."
+        },
+        {
+          "math": "9x^2 - 12x + 4 = (3x - 2)^2"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q15",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Factor: } x^2 + xy + 4xy + 4y^2 \\;\\; (\\text{rewrite: } x^2 + 5xy + 4y^2).",
+      "choices": [
+        "$(x + y)(x + 4y)$",
+        "$(x + 2y)^2$",
+        "$(x - y)(x - 4y)$",
+        "$(x + 4y)(x - y)$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Treat as quadratic in $x$: need product $4y^2$ and sum $5y$.",
+        "Pair: $y, 4y$ → $(x + y)(x + 4y)$."
+      ],
+      "explanation": "$x^2 + 5xy + 4y^2$: split $5xy = xy + 4xy$. $x^2 + xy + 4xy + 4y^2 = x(x + y) + 4y(x + y) = (x + y)(x + 4y)$.",
+      "steps": [
+        {
+          "text": "**Treat as a quadratic in $x$** with coefficients involving $y$."
+        },
+        {
+          "text": "**Splitting the middle term:** need two terms with product $1 \\cdot 4y^2 = 4y^2$ and sum $5y$. Pair: $y$ and $4y$."
+        },
+        {
+          "math": "x^2 + 5xy + 4y^2 = x^2 + xy + 4xy + 4y^2"
+        },
+        {
+          "math": "= x(x + y) + 4y(x + y) = (x + y)(x + 4y)"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q16",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Factor } x^4 + 4 \\text{ completely over integers.}",
+      "choices": [
+        "$(x^2 + 2)(x^2 - 2)$",
+        "$(x^2 + 2x + 2)(x^2 - 2x + 2)$",
+        "$(x^2 + 4)(x^2 - 1)$",
+        "Irreducible"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$x^4 + 4$ has no real roots (always positive), so simple difference-of-squares like $(x^2 + 2)(x^2 - 2)$ won't work — that would equal $x^4 - 4$, not $+4$.",
+        "Add and subtract $4x^2$ to complete the square: $x^4 + 4 = x^4 + 4x^2 + 4 - 4x^2 = (x^2 + 2)^2 - (2x)^2$.",
+        "Now it's a difference of squares: $(x^2 + 2)^2 - (2x)^2 = (x^2 + 2x + 2)(x^2 - 2x + 2)$."
+      ],
+      "explanation": "Add-and-subtract $4x^2$: $x^4 + 4 = (x^4 + 4x^2 + 4) - 4x^2 = (x^2 + 2)^2 - (2x)^2 = (x^2 + 2x + 2)(x^2 - 2x + 2)$. This is the **Sophie Germain identity** — the standard trick for $a^4 + 4b^4$.",
+      "steps": [
+        "**Why simple factoring fails.** $x^4 + 4$ is *always positive* for real $x$, so it has no real roots and no real linear factors. But factoring over integers means *polynomial* factors with integer coefficients — those can exist even without real roots (e.g., $x^2 + 1$ is irreducible over the reals but $x^4 + 1$ factors).",
+        "**The Sophie Germain trick — complete the square inside the quartic.** $x^4 + 4$ *almost* looks like $(x^2 + 2)^2$, which expands to $x^4 + 4x^2 + 4$. The difference is the missing $4x^2$ term. So add it AND subtract it to keep the expression unchanged.",
+        "**Apply.** $x^4 + 4 = \\underbrace{x^4 + 4x^2 + 4}_{(x^2 + 2)^2} - 4x^2 = (x^2 + 2)^2 - (2x)^2$.",
+        "**Now it's a difference of squares.** $A^2 - B^2 = (A + B)(A - B)$ with $A = x^2 + 2$ and $B = 2x$: $(x^2 + 2)^2 - (2x)^2 = (x^2 + 2 + 2x)(x^2 + 2 - 2x) = (x^2 + 2x + 2)(x^2 - 2x + 2)$.",
+        "**Verify by expanding.** $(x^2 + 2x + 2)(x^2 - 2x + 2)$. Use $(P + Q)(P - Q) = P^2 - Q^2$ with $P = x^2 + 2, Q = 2x$: $(x^2 + 2)^2 - (2x)^2 = x^4 + 4x^2 + 4 - 4x^2 = x^4 + 4$ ✓.",
+        "**Sophie Germain identity (general form).** $a^4 + 4b^4 = (a^2 + 2ab + 2b^2)(a^2 - 2ab + 2b^2)$. The technique generalizes: any quartic of the form $a^4 + 4b^4$ factors over the integers. Try it on $x^4 + 64$ (set $a = x, b = 2\\sqrt 2$... wait, that needs $b$ to be of the form so $4b^4 = 64$, i.e., $b^4 = 16$, $b = 2$): $x^4 + 4 \\cdot 16 = (x^2 + 4x + 8)(x^2 - 4x + 8)$.",
+        "**Pattern lesson — add-and-subtract is a workhorse.** Whenever a polynomial *almost* matches a known identity, the cleanest path is often to add and subtract the missing piece. Same idea behind completing the square ($x^2 + bx = x^2 + bx + (b/2)^2 - (b/2)^2$) and the partial-fraction trick of writing $1/n = 1/(n-1) - 1/(n-1) \\cdot \\text{something}$. The 'illegal' move of adding zero in disguise opens up new factorizations."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q17",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Factor } a^4 + a^2 b^2 + b^4.",
+      "choices": [
+        "$(a^2 + b^2)^2$",
+        "$(a^2 + ab + b^2)(a^2 - ab + b^2)$",
+        "$(a^2 + b^2)(a^2 - b^2)$",
+        "$(a + b)^2 (a - b)^2$"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$(a^2 + b^2)^2 = a^4 + 2a^2 b^2 + b^4$ — has an EXTRA $a^2 b^2$ compared to our expression.",
+        "So $a^4 + a^2 b^2 + b^4 = (a^2 + b^2)^2 - a^2 b^2$ — a difference of squares!",
+        "$(a^2 + b^2)^2 - (ab)^2 = (a^2 + b^2 + ab)(a^2 + b^2 - ab) = (a^2 + ab + b^2)(a^2 - ab + b^2)$."
+      ],
+      "explanation": "Notice $(a^2 + b^2)^2 = a^4 + 2a^2 b^2 + b^4$, one $a^2 b^2$ MORE than we want. Subtract: $a^4 + a^2 b^2 + b^4 = (a^2 + b^2)^2 - a^2 b^2 = (a^2 + b^2)^2 - (ab)^2 = (a^2 + ab + b^2)(a^2 - ab + b^2)$.",
+      "steps": [
+        "**Look for a near-miss to a known identity.** $a^4 + 2a^2 b^2 + b^4 = (a^2 + b^2)^2$ is a perfect square. The target $a^4 + a^2 b^2 + b^4$ is ONE $a^2 b^2$ short of being a perfect square — that's the entire trick.",
+        "**Rewrite as 'perfect square minus correction'.** $a^4 + a^2 b^2 + b^4 = (a^4 + 2 a^2 b^2 + b^4) - a^2 b^2 = (a^2 + b^2)^2 - (ab)^2$.",
+        "**Now it's a difference of squares.** $A^2 - B^2 = (A + B)(A - B)$ with $A = a^2 + b^2$ and $B = ab$: $(a^2 + b^2 + ab)(a^2 + b^2 - ab) = (a^2 + ab + b^2)(a^2 - ab + b^2)$.",
+        "**Verify.** Multiply out using $(P + Q)(P - Q) = P^2 - Q^2$ with $P = a^2 + b^2, Q = ab$: $(a^2 + b^2)^2 - (ab)^2 = a^4 + 2 a^2 b^2 + b^4 - a^2 b^2 = a^4 + a^2 b^2 + b^4$ ✓.",
+        "**Beautiful connection to sum/difference of cubes.** Notice: $a^3 + b^3 = (a + b)(a^2 - ab + b^2)$ and $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$. Multiplying: $(a^3 + b^3)(a^3 - b^3) = (a + b)(a - b)(a^2 + ab + b^2)(a^2 - ab + b^2) = (a^2 - b^2)(a^4 + a^2 b^2 + b^4)$. The LHS is $a^6 - b^6$, so $a^6 - b^6 = (a^2 - b^2)(a^4 + a^2 b^2 + b^4)$. The two cube-identity factors *are* the quartic factorization we just derived.",
+        "**Pattern lesson — same trick across degrees.** The 'add and subtract to complete a square' idea works for $a^4 + 4 b^4$ (Sophie Germain, q16), for $a^4 + a^2 b^2 + b^4$ (this one), for $a^4 + b^4$ (yes — try adding $2a^2 b^2$: $a^4 + b^4 = (a^2 + b^2)^2 - (\\sqrt 2 ab)^2$, but the $\\sqrt 2$ leaves the integers — so $a^4 + b^4$ is irreducible over $\\mathbb{Z}$). The strategy: aim at the nearest perfect square; if the correction term is a perfect square, you win."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q18",
+      "type": "numeric",
+      "promptTex": "\\text{Using the identity } a^2 + b^2 + c^2 - ab - bc - ca = \\tfrac{1}{2}\\big((a-b)^2 + (b-c)^2 + (c-a)^2\\big), \\\\ \\text{compute the value when } a = 2, b = 3, c = 5.",
+      "answer": 7,
+      "tolerance": 0,
+      "hints": [
+        "The identity rewrites the LHS as a sum of squares — always non-negative.",
+        "$(a-b)^2 + (b-c)^2 + (c-a)^2 = (2-3)^2 + (3-5)^2 + (5-2)^2 = 1 + 4 + 9 = 14$.",
+        "Half of $14 = 7$."
+      ],
+      "explanation": "Using the identity: $(a-b)^2 + (b-c)^2 + (c-a)^2 = 1 + 4 + 9 = 14$. Half: $\\mathbf{7}$. (Cross-check by computing the LHS directly: $4 + 9 + 25 - 6 - 15 - 10 = 38 - 31 = 7$ ✓.)",
+      "steps": [
+        "**Why this identity matters — Sum of Squares (SOS) form.** $a^2 + b^2 + c^2 - ab - bc - ca$ looks like it could be negative (mix of positives and negatives), but the SOS form *guarantees* it's $\\geq 0$: half a sum of squares can't be negative. Equality holds iff $a = b = c$.",
+        "**Derive the identity by expanding the RHS.** $(a-b)^2 + (b-c)^2 + (c-a)^2 = (a^2 - 2ab + b^2) + (b^2 - 2bc + c^2) + (c^2 - 2ca + a^2) = 2a^2 + 2b^2 + 2c^2 - 2ab - 2bc - 2ca$. Divide by 2: $\\frac{1}{2}(\\cdot) = a^2 + b^2 + c^2 - ab - bc - ca$. ✓",
+        "**Apply with $a = 2, b = 3, c = 5$.** Compute each squared difference: $(a-b)^2 = (2 - 3)^2 = 1$. $(b-c)^2 = (3 - 5)^2 = 4$. $(c-a)^2 = (5 - 2)^2 = 9$.",
+        "**Sum and halve.** $1 + 4 + 9 = 14$. $\\frac{1}{2}(14) = 7$.",
+        "**Cross-check the direct way.** $a^2 + b^2 + c^2 = 4 + 9 + 25 = 38$. $ab + bc + ca = 6 + 15 + 10 = 31$. Difference: $38 - 31 = 7$ ✓.",
+        "**Why SOS form is the 'right' rewrite.** $a^2 + b^2 + c^2 - ab - bc - ca$ is a quadratic form in three variables — its sign isn't obvious from inspection. The SOS form *exposes* the geometry: it's literally half the squared 'pairwise distance' sum. So this expression is the variance-like measure of how *spread out* $a, b, c$ are. Zero iff all three are equal.",
+        "**Bonus — the AM-GM connection.** From $a^2 + b^2 + c^2 \\geq ab + bc + ca$ (rearranged): for positive $a, b, c$ we recover $\\frac{a^2 + b^2 + c^2}{3} \\geq \\frac{ab + bc + ca}{3}$, a form of the AM-GM inequality. The SOS identity is the elementary proof.",
+        "**Pattern lesson — SOS as the universal positivity certificate.** Any time you need to prove an algebraic expression is non-negative, the gold-standard method is to write it as a sum of squares. Vast areas of optimization and inequalities (Schur, AM-GM, Cauchy-Schwarz) reduce to SOS rewrites at the elementary level. The general theory (Hilbert's 17th problem) explores when this is always possible."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q19",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Factor } a^3 + b^3 + c^3 - 3abc.",
+      "choices": [
+        "$(a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca)$",
+        "$(a + b + c)(a^2 + b^2 + c^2 + ab + bc + ca)$",
+        "$(a - b - c)(a^2 + b^2 + c^2 + ab + bc + ca)$",
+        "Irreducible"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Hunt for $a + b + c$ as a factor — substitute $a = -(b + c)$ and check the expression vanishes.",
+        "$(-(b+c))^3 + b^3 + c^3 - 3(-(b+c))bc = -(b+c)^3 + b^3 + c^3 + 3bc(b+c) = 0$ after expansion. So $(a + b + c)$ divides.",
+        "Polynomial-divide or guess: $(a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca)$."
+      ],
+      "explanation": "The grand identity: $a^3 + b^3 + c^3 - 3abc = (a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca)$. Proof by substitution: if $a + b + c = 0$ then $a = -(b+c)$, and substitution makes both sides zero — so $(a + b + c)$ is a factor of the LHS. The quotient is the second factor (which by the SOS identity in q18 is $\\frac{1}{2}[(a-b)^2 + (b-c)^2 + (c-a)^2]$).",
+      "steps": [
+        "**Hunt for an obvious factor.** Look for symmetric combinations that might vanish. The natural first guess is $(a + b + c)$ — the simplest symmetric polynomial.",
+        "**Test by substitution.** If $(a + b + c)$ is a factor of $P(a, b, c) = a^3 + b^3 + c^3 - 3abc$, then $P$ vanishes whenever $a + b + c = 0$, i.e., whenever $a = -(b + c)$.",
+        "**Substitute $a = -(b + c)$.** $a^3 = -(b + c)^3 = -(b^3 + 3b^2 c + 3bc^2 + c^3)$. $-3abc = -3 \\cdot (-(b+c)) \\cdot bc = 3bc(b + c) = 3b^2 c + 3bc^2$. So $P = -(b^3 + 3b^2 c + 3bc^2 + c^3) + b^3 + c^3 + 3b^2 c + 3bc^2 = -b^3 - 3b^2 c - 3bc^2 - c^3 + b^3 + c^3 + 3b^2 c + 3bc^2 = 0$ ✓.",
+        "**So $(a + b + c)$ IS a factor.** The polynomial $P$ has degree 3 and the factor has degree 1, so the quotient is degree 2 and symmetric in $a, b, c$.",
+        "**Determine the quotient.** The most general degree-2 symmetric polynomial in three variables has the form $\\alpha(a^2 + b^2 + c^2) + \\beta(ab + bc + ca)$. Match coefficients with $P / (a+b+c)$: comparing the $a^3$ term (multiplying $a + b + c$ by $\\alpha(a^2 + \\ldots)$ gives $\\alpha a^3$ at top), we need $\\alpha = 1$. Comparing the $abc$ coefficient determines $\\beta = -1$. So the quotient is $a^2 + b^2 + c^2 - ab - bc - ca$.",
+        "**Final factorization.** $a^3 + b^3 + c^3 - 3abc = (a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca)$.",
+        "**Beautiful corollary 1 — when $a + b + c = 0$.** $a^3 + b^3 + c^3 = 3abc$. *Example.* $5 + (-2) + (-3) = 0$ and $5^3 + (-2)^3 + (-3)^3 = 125 - 8 - 27 = 90 = 3 \\cdot 5 \\cdot (-2) \\cdot (-3)$ ✓.",
+        "**Beautiful corollary 2 — connection to SOS.** Using q18: the second factor equals $\\frac{1}{2}[(a-b)^2 + (b-c)^2 + (c-a)^2] \\geq 0$. So $a^3 + b^3 + c^3 - 3abc$ has the SAME SIGN as $a + b + c$ for *any* real $a, b, c$. This proves AM-GM for three variables: when $a, b, c > 0$, $a + b + c > 0$, so $a^3 + b^3 + c^3 \\geq 3abc$, i.e., $\\frac{a^3 + b^3 + c^3}{3} \\geq abc$ — the AM of $a^3, b^3, c^3$ is at least their GM.",
+        "**Pattern lesson — guess-a-factor-and-verify.** For symmetric polynomials of small degree, the factors are usually symmetric polynomials of even smaller degree. Test the simplest candidates ($a + b + c, ab + bc + ca, a - b$, etc.) by substituting their vanishing locus. If the original polynomial vanishes, you've found a factor — divide it out and repeat."
+      ],
+      "difficulty": "hard"
+    }
+  ]
+}

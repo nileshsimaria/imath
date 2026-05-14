@@ -1,0 +1,280 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Simplify: } \\dfrac{x^2 - 1}{x + 1}",
+      "choices": [
+        "x - 1",
+        "x + 1",
+        "x^2",
+        "1"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Factor the numerator: $x^2 - 1 = (x - 1)(x + 1)$.",
+        "Cancel the $(x + 1)$."
+      ],
+      "explanation": "$\\dfrac{x^2 - 1}{x + 1} = \\dfrac{(x - 1)(x + 1)}{x + 1} = x - 1$ (for $x \\neq -1$).",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Simplify: } \\dfrac{x^2 - 4}{x^2 + 4x + 4}",
+      "choices": [
+        "\\dfrac{x - 2}{x + 2}",
+        "\\dfrac{x + 2}{x - 2}",
+        "\\dfrac{1}{x + 2}",
+        "x - 2"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Numerator: $x^2 - 4 = (x - 2)(x + 2)$.",
+        "Denominator: $x^2 + 4x + 4 = (x + 2)^2$."
+      ],
+      "explanation": "$\\dfrac{(x - 2)(x + 2)}{(x + 2)^2} = \\dfrac{x - 2}{x + 2}$ (one $(x + 2)$ cancels).",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** Numerator: $x^2 - 4 = (x - 2)(x + 2)$."
+        },
+        {
+          "text": "Denominator: $x^2 + 4x + 4 = (x + 2)^2$."
+        },
+        {
+          "text": "**Solution.** $\\dfrac{(x - 2)(x + 2)}{(x + 2)^2} = \\dfrac{x - 2}{x + 2}$ (one $(x + 2)$ cancels)."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The expression } \\dfrac{x + 3}{x^2 - 9} \\text{ is undefined when:}",
+      "choices": [
+        "x = 0",
+        "x = 3 \\text{ only}",
+        "x = -3 \\text{ only}",
+        "x = 3 \\text{ and } x = -3"
+      ],
+      "choicesTex": true,
+      "answerIndex": 3,
+      "hints": [
+        "Set the denominator to zero.",
+        "$x^2 - 9 = (x - 3)(x + 3)$. Both factors give zeros."
+      ],
+      "explanation": "Denominator is zero when $x = 3$ or $x = -3$. Both values must be excluded — even though the simplified form $\\dfrac{1}{x - 3}$ would 'work' at $x = -3$, the original didn't.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{What's wrong with this simplification: } \\dfrac{x + 4}{x + 2} = \\dfrac{4}{2} = 2?",
+      "choices": [
+        "Nothing — it's correct",
+        "You can't cancel the x's like that — they are terms, not factors",
+        "You should subtract instead of cancel",
+        "The answer should be x"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "The $x$'s are added to other things, not multiplied.",
+        "You can only cancel **factors**, not parts of sums."
+      ],
+      "explanation": "You can only cancel **factors** — pieces *multiplied* across the whole numerator and denominator. The $x$'s here are terms in a sum. The expression $\\dfrac{x + 4}{x + 2}$ doesn't simplify to anything cleaner.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Simplify: } \\dfrac{3x + 9}{x^2 + 6x + 9}",
+      "choices": [
+        "\\dfrac{3}{x + 3}",
+        "\\dfrac{3}{x - 3}",
+        "\\dfrac{3x}{x + 3}",
+        "1"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Numerator: $3x + 9 = 3(x + 3)$.",
+        "Denominator: $x^2 + 6x + 9 = (x + 3)^2$."
+      ],
+      "explanation": "$\\dfrac{3(x + 3)}{(x + 3)^2} = \\dfrac{3}{x + 3}$ (with restriction $x \\neq -3$).",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Simplify: } \\dfrac{x^2 - 9}{x - 3}.",
+      "choices": [
+        "x + 3",
+        "x - 3",
+        "x^2 - 9",
+        "1"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Factor numerator: $x^2 - 9 = (x - 3)(x + 3)$.",
+        "Cancel $(x - 3)$: $x + 3$."
+      ],
+      "explanation": "$\\dfrac{(x - 3)(x + 3)}{x - 3} = x + 3$ (with restriction $x \\neq 3$).",
+      "steps": [
+        "Factor the numerator (difference of squares): $x^2 - 9 = (x - 3)(x + 3)$.",
+        "Substitute: $$\\dfrac{(x - 3)(x + 3)}{x - 3}$$",
+        "Cancel $(x - 3)$: $x + 3$ (with restriction $x \\neq 3$, since the original was undefined there)."
+      ],
+      "id": "q6",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Simplify: } \\dfrac{x^2 - 4x + 4}{x^2 - 4}.",
+      "choices": [
+        "\\dfrac{x - 2}{x + 2}",
+        "\\dfrac{x + 2}{x - 2}",
+        "\\dfrac{(x - 2)^2}{x^2 - 4}",
+        "1"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Factor: numerator = $(x - 2)^2$, denominator = $(x - 2)(x + 2)$.",
+        "Cancel one $(x - 2)$: $\\dfrac{x - 2}{x + 2}$."
+      ],
+      "explanation": "$\\dfrac{(x - 2)^2}{(x - 2)(x + 2)} = \\dfrac{x - 2}{x + 2}$.",
+      "steps": [
+        "Factor numerator (perfect square): $x^2 - 4x + 4 = (x - 2)^2$.",
+        "Factor denominator (difference of squares): $x^2 - 4 = (x - 2)(x + 2)$.",
+        "$$\\dfrac{(x - 2)^2}{(x - 2)(x + 2)}$$",
+        "Cancel one $(x - 2)$: $\\dfrac{x - 2}{x + 2}$ (with $x \\neq 2$ and $x \\neq -2$)."
+      ],
+      "id": "q7",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{What are the domain restrictions of } \\dfrac{x + 1}{x^2 - 5x + 6}?",
+      "choices": [
+        "x \\neq 2, 3",
+        "x \\neq -2, -3",
+        "x \\neq 2",
+        "x \\neq -1"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Denominator can't be zero. Factor it.",
+        "$x^2 - 5x + 6 = (x - 2)(x - 3) = 0$ at $x = 2, 3$."
+      ],
+      "explanation": "Denominator factors as $(x - 2)(x - 3)$. Excluded values: $x = 2$ or $3$.",
+      "steps": [
+        "Set the denominator equal to 0: $x^2 - 5x + 6 = 0$.",
+        "Factor: $(x - 2)(x - 3) = 0$.",
+        "Solve: $x = 2$ or $x = 3$.",
+        "**Restrictions: $x \\neq 2, 3$**."
+      ],
+      "id": "q8",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Simplify: } \\dfrac{2x + 6}{x^2 + 5x + 6}.",
+      "choices": [
+        "\\dfrac{2}{x + 2}",
+        "\\dfrac{2}{x + 3}",
+        "\\dfrac{2x}{x + 2}",
+        "x + 6"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Numerator: $2(x + 3)$. Denominator: $(x + 2)(x + 3)$.",
+        "Cancel $(x + 3)$: $\\dfrac{2}{x + 2}$."
+      ],
+      "explanation": "$\\dfrac{2(x + 3)}{(x + 2)(x + 3)} = \\dfrac{2}{x + 2}$.",
+      "steps": [
+        "Factor numerator: $2x + 6 = 2(x + 3)$.",
+        "Factor denominator: $x^2 + 5x + 6 = (x + 2)(x + 3)$.",
+        "$$\\dfrac{2(x + 3)}{(x + 2)(x + 3)}$$",
+        "Cancel $(x + 3)$: $\\dfrac{2}{x + 2}$."
+      ],
+      "id": "q9",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Add: } \\dfrac{1}{x} + \\dfrac{1}{x + 1}.",
+      "choices": [
+        "\\dfrac{2x + 1}{x(x + 1)}",
+        "\\dfrac{2}{2x + 1}",
+        "\\dfrac{1}{x(x + 1)}",
+        "\\dfrac{x + 1 + x}{x + (x + 1)}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "LCD = $x(x + 1)$.",
+        "$\\dfrac{x + 1}{x(x + 1)} + \\dfrac{x}{x(x + 1)} = \\dfrac{2x + 1}{x(x + 1)}$."
+      ],
+      "explanation": "Common denominator $x(x + 1)$: $\\dfrac{x + 1}{x(x + 1)} + \\dfrac{x}{x(x + 1)} = \\dfrac{2x + 1}{x(x + 1)}$.",
+      "steps": [
+        "Find LCD: $x(x + 1)$.",
+        "Convert each fraction: $\\dfrac{1}{x} = \\dfrac{x + 1}{x(x + 1)}$ and $\\dfrac{1}{x + 1} = \\dfrac{x}{x(x + 1)}$.",
+        "Add: $\\dfrac{(x + 1) + x}{x(x + 1)} = \\dfrac{2x + 1}{x(x + 1)}$."
+      ],
+      "id": "q10",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Multiply: } \\dfrac{x^2 - 1}{x + 2} \\cdot \\dfrac{x + 2}{x - 1}.",
+      "choices": [
+        "x + 1",
+        "x - 1",
+        "x^2 - 1",
+        "1"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Factor: $x^2 - 1 = (x - 1)(x + 1)$. Then cancel.",
+        "$(x + 2)$ cancels too. Left: $x + 1$."
+      ],
+      "explanation": "$\\dfrac{(x - 1)(x + 1)}{x + 2} \\cdot \\dfrac{x + 2}{x - 1} = x + 1$ (after cancelling).",
+      "steps": [
+        "Factor: $x^2 - 1 = (x - 1)(x + 1)$.",
+        "$$\\dfrac{(x - 1)(x + 1)}{x + 2} \\cdot \\dfrac{x + 2}{x - 1}$$",
+        "Cancel $(x + 2)$ and $(x - 1)$: $x + 1$."
+      ],
+      "id": "q11",
+      "difficulty": "hard"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Simplify the complex fraction: } \\dfrac{1/x + 1/2}{x + 2}.",
+      "choices": [
+        "\\dfrac{1}{2x}",
+        "\\dfrac{x + 2}{2x(x + 2)}",
+        "\\dfrac{2 + x}{2x(x + 2)}",
+        "\\dfrac{1}{2x + 2}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Combine numerator over LCD $2x$: $\\dfrac{2 + x}{2x}$.",
+        "Then divide by $(x + 2)$: $\\dfrac{2 + x}{2x(x + 2)}$. Cancel $(x + 2) = (2 + x)$."
+      ],
+      "explanation": "Numerator: $\\dfrac{2 + x}{2x}$. Divide: $\\dfrac{2 + x}{2x(x + 2)} = \\dfrac{1}{2x}$ (cancel $(x + 2) = (2 + x)$).",
+      "steps": [
+        "Combine the numerator: $\\dfrac{1}{x} + \\dfrac{1}{2} = \\dfrac{2 + x}{2x}$.",
+        "Now the complex fraction is $\\dfrac{(2 + x)/(2x)}{x + 2}$.",
+        "Dividing by $(x + 2)$: $\\dfrac{2 + x}{2x(x + 2)}$.",
+        "Note $(2 + x) = (x + 2)$ — they cancel.",
+        "Result: $\\dfrac{1}{2x}$."
+      ],
+      "id": "q12",
+      "difficulty": "hard"
+    }
+  ]
+}

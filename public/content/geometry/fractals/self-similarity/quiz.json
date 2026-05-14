@@ -1,0 +1,160 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{The Sierpinski carpet replaces 1 square with 8 copies at 1/3 scale.} \\\\ \\text{ Compute its fractal dimension (round to 3 decimals).}",
+      "answer": 1.893,
+      "tolerance": 0.01,
+      "hints": [
+        "$d = \\log N / \\log s = \\log 8 / \\log 3$.",
+        "$\\log 8 = 3\\log 2 \\approx 2.079$, $\\log 3 \\approx 1.099$. $\\approx 1.893$."
+      ],
+      "explanation": "$d = \\log 8 / \\log 3 \\approx 2.079/1.099 \\approx 1.893$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** $d = \\log N / \\log s = \\log 8 / \\log 3$."
+        },
+        {
+          "text": "$\\log 8 = 3\\log 2 \\approx 2.079$, $\\log 3 \\approx 1.099$. $\\approx 1.893$."
+        },
+        {
+          "text": "**Solution.** $d = \\log 8 / \\log 3 \\approx 2.079/1.099 \\approx 1.893$."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "prompt": "Self-similarity means:",
+      "choices": [
+        "A shape looks like every other shape.",
+        "A shape's small pieces resemble the whole shape.",
+        "A shape is symmetric.",
+        "A shape has perfect rotational symmetry."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Zoom in → see a copy.",
+        "Whole-to-part resemblance."
+      ],
+      "explanation": "A self-similar shape has small parts that look like (often exactly are) scaled copies of the whole shape.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{The Menger sponge (3D Sierpinski) replaces 1 cube with 20 copies at 1/3 scale.} \\\\ \\text{ Compute its fractal dimension (round to 3 decimals).}",
+      "answer": 2.727,
+      "tolerance": 0.01,
+      "hints": [
+        "$d = \\log 20 / \\log 3$.",
+        "$\\log 20 \\approx 2.996$, $\\log 3 \\approx 1.099$. $\\approx 2.727$."
+      ],
+      "explanation": "$d = \\log 20 / \\log 3 \\approx 2.727$ — between 2D and 3D.",
+      "difficulty": "hard",
+      "steps": [
+        {
+          "text": "**Approach.** $d = \\log 20 / \\log 3$."
+        },
+        {
+          "text": "$\\log 20 \\approx 2.996$, $\\log 3 \\approx 1.099$. $\\approx 2.727$."
+        },
+        {
+          "text": "**Solution.** $d = \\log 20 / \\log 3 \\approx 2.727$ — between 2D and 3D."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "prompt": "An ordinary line segment cut into N pieces, each at scale 1/N, has fractal dimension:",
+      "choices": [
+        "0",
+        "1",
+        "log N",
+        "Cannot be defined"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "A line is 1-dimensional.",
+        "$d = \\log N / \\log N = 1$."
+      ],
+      "explanation": "$d = \\log N / \\log N = 1$. The line's 'fractal dimension' is just 1 — its ordinary dimension.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "prompt": "Why are human lungs nearly fractal (dimension ≈ 2.97)?",
+      "choices": [
+        "Random.",
+        "Evolution found that fractal branching packs maximum surface area into small volume — essential for gas exchange.",
+        "Lungs are made of paper.",
+        "Genetic mistakes."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Surface area matters for gas exchange.",
+        "Fractal branching = lots of surface in a small space."
+      ],
+      "explanation": "Lungs need maximum surface area for O₂/CO₂ exchange but must fit in your chest. Fractal branching nearly fills the volume with surface — dimension close to 3 (the ambient space dimension).",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "prompt": "Who coined the term 'fractal' and developed the modern theory?",
+      "choices": [
+        "Sierpinski",
+        "Mandelbrot",
+        "Cantor",
+        "Newton"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "20th-century French-American mathematician.",
+        "The Mandelbrot set is named after him."
+      ],
+      "explanation": "Benoit Mandelbrot coined 'fractal' (from Latin *fractus*) and developed the theory in the 1970s.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "prompt": "If you cut a 2D square into pieces, each at scale 1/4, how many pieces do you get?",
+      "choices": [
+        "4",
+        "8",
+        "16",
+        "64"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "$N = s^d$ with $s = 4, d = 2$.",
+        "$4^2 = 16$."
+      ],
+      "explanation": "$N = s^d = 4^2 = 16$. Squares scale by area as the square of the linear scale.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "prompt": "Which is NOT a real example of approximate fractal structure in nature?",
+      "choices": [
+        "Coastlines",
+        "Lightning bolts",
+        "Lungs/blood vessels",
+        "Perfect spheres (e.g., billiard balls)"
+      ],
+      "answerIndex": 3,
+      "hints": [
+        "Smooth objects → not fractal.",
+        "Manufactured smooth surfaces are NOT fractal."
+      ],
+      "explanation": "Coastlines, lightning, lungs, and blood vessels are all approximately fractal. Manufactured smooth balls are NOT — they're (approximately) Euclidean shapes.",
+      "difficulty": "medium"
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The quadratic formula gives the roots of:}",
+      "choices": [
+        "ax + b = 0",
+        "ax^2 + bx + c = 0",
+        "x^a + b^c = 0",
+        "y = mx + b"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Quadratic = degree 2.",
+        "The standard form is $ax^2 + bx + c = 0$."
+      ],
+      "explanation": "The quadratic formula solves any equation of the form $ax^2 + bx + c = 0$ (with $a \\neq 0$).",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve using the quadratic formula: } x^2 - 5x + 6 = 0",
+      "choices": [
+        "x = 1 \\text{ or } x = 6",
+        "x = 2 \\text{ or } x = 3",
+        "x = -2 \\text{ or } x = -3",
+        "x = \\dfrac{5 \\pm 1}{2}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "$a = 1, b = -5, c = 6$. Discriminant: $25 - 24 = 1$.",
+        "$x = \\dfrac{5 \\pm 1}{2}$ → $x = 3$ or $x = 2$."
+      ],
+      "explanation": "$a = 1, b = -5, c = 6$. $x = \\dfrac{-(-5) \\pm \\sqrt{25 - 24}}{2} = \\dfrac{5 \\pm 1}{2}$. So $x = 3$ or $x = 2$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** $a = 1, b = -5, c = 6$. Discriminant: $25 - 24 = 1$."
+        },
+        {
+          "text": "$x = \\dfrac{5 \\pm 1}{2}$ → $x = 3$ or $x = 2$."
+        },
+        {
+          "text": "**Solution.** $a = 1, b = -5, c = 6$. $x = \\dfrac{-(-5) \\pm \\sqrt{25 - 24}}{2} = \\dfrac{5 \\pm 1}{2}$. So $x = 3$ or $x = 2$."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{What is the discriminant of } 2x^2 + 3x - 5 = 0?",
+      "answer": 49,
+      "tolerance": 0,
+      "hints": [
+        "Discriminant = $b^2 - 4ac$.",
+        "$a = 2, b = 3, c = -5$. So $9 - 4(2)(-5) = 9 + 40$."
+      ],
+      "explanation": "$b^2 - 4ac = 3^2 - 4(2)(-5) = 9 + 40 = 49$. (Since $49 > 0$, this quadratic has two distinct real roots.)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If } b^2 - 4ac < 0, \\text{ how many real roots does the quadratic have?}",
+      "choices": [
+        "Two",
+        "One (repeated)",
+        "Zero",
+        "Infinitely many"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "What's $\\sqrt{\\text{negative}}$? Not a real number.",
+        "Geometrically: the parabola doesn't reach the x-axis."
+      ],
+      "explanation": "Negative discriminant → the formula tries to take the square root of a negative number, which has no real result. Geometrically, the parabola never crosses the x-axis. **Zero** real roots.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If } b^2 - 4ac = 0, \\text{ the parabola:}",
+      "choices": [
+        "Crosses the x-axis at two points",
+        "Touches the x-axis at exactly one point (the vertex)",
+        "Never reaches the x-axis",
+        "Is a horizontal line"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Zero discriminant gives $x = \\dfrac{-b \\pm 0}{2a}$ — same value twice.",
+        "Geometrically the vertex sits on the x-axis."
+      ],
+      "explanation": "When $b^2 - 4ac = 0$, the formula gives $x = \\dfrac{-b}{2a}$ — a single repeated root. The parabola's vertex sits *on* the x-axis, touching it at exactly one point.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Use the quadratic formula on } x^2 + 5x + 6 = 0.",
+      "choices": [
+        "x = -2, -3",
+        "x = 2, 3",
+        "x = -2, 3",
+        "x = 2, -3"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "$a = 1, b = 5, c = 6$. Discriminant $= 25 - 24 = 1$.",
+        "$x = \\dfrac{-5 \\pm 1}{2}$. So $x = -2$ or $-3$."
+      ],
+      "explanation": "$x = \\dfrac{-5 \\pm \\sqrt{1}}{2} = \\dfrac{-5 \\pm 1}{2} = -2$ or $-3$.",
+      "steps": [
+        "Identify $a = 1, b = 5, c = 6$.",
+        "Apply quadratic formula: $$x = \\dfrac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} = \\dfrac{-5 \\pm \\sqrt{25 - 24}}{2}$$",
+        "$\\sqrt{1} = 1$, so $x = \\dfrac{-5 \\pm 1}{2}$.",
+        "$x = -2$ or $x = -3$."
+      ],
+      "id": "q6",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Find the discriminant of } 2x^2 - 5x + 1 = 0.",
+      "answer": 17,
+      "tolerance": 0,
+      "hints": [
+        "Discriminant $= b^2 - 4ac$.",
+        "$25 - 4(2)(1) = 25 - 8 = 17$."
+      ],
+      "explanation": "$D = (-5)^2 - 4(2)(1) = 25 - 8 = 17$.",
+      "steps": [
+        "Identify: $a = 2, b = -5, c = 1$.",
+        "Discriminant: $b^2 - 4ac = 25 - 8 = 17$.",
+        "(Positive → two real roots, irrational because $\\sqrt{17}$ is irrational.)"
+      ],
+      "id": "q7",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{The equation } x^2 + 4x + 5 = 0 \\text{ has:}",
+      "choices": [
+        "Two real roots",
+        "One repeated real root",
+        "No real roots",
+        "Cannot determine"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Discriminant: $16 - 20 = -4$. Negative.",
+        "Negative discriminant → no real roots."
+      ],
+      "explanation": "$D = 16 - 20 = -4 < 0$. No real roots (two complex conjugate roots).",
+      "steps": [
+        "Discriminant: $b^2 - 4ac = 16 - 20 = -4$.",
+        "$D > 0$: two distinct real roots.",
+        "$D = 0$: one repeated real root.",
+        "$D < 0$: no real roots (two complex conjugate roots).",
+        "Here $D = -4 < 0$ → **no real roots**."
+      ],
+      "id": "q8",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Use the quadratic formula: } 2x^2 - 7x + 3 = 0.",
+      "choices": [
+        "x = 3, 1/2",
+        "x = -3, 1/2",
+        "x = 3, -1/2",
+        "x = 7, 3"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "$a=2, b=-7, c=3$. $D = 49 - 24 = 25$. $\\sqrt{25} = 5$.",
+        "$x = \\dfrac{7 \\pm 5}{4}$. So $x = 3$ or $x = 1/2$."
+      ],
+      "explanation": "$x = \\dfrac{7 \\pm 5}{4} = 3$ or $1/2$.",
+      "steps": [
+        "$a = 2, b = -7, c = 3$.",
+        "$D = 49 - 24 = 25$. $\\sqrt{D} = 5$.",
+        "$x = \\dfrac{-(-7) \\pm 5}{2 \\cdot 2} = \\dfrac{7 \\pm 5}{4}$.",
+        "$x = 12/4 = 3$ or $x = 2/4 = 1/2$."
+      ],
+      "id": "q9",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{For } x^2 + 6x + 9 = 0, \\text{ find the discriminant.}",
+      "answer": 0,
+      "tolerance": 0,
+      "hints": [
+        "$D = b^2 - 4ac = 36 - 36 = 0$.",
+        "Zero discriminant → one repeated root."
+      ],
+      "explanation": "$D = 36 - 36 = 0$. (One repeated root: $x = -3$.)",
+      "steps": [
+        "$a = 1, b = 6, c = 9$.",
+        "$D = 36 - 4(1)(9) = 36 - 36 = 0$.",
+        "(Zero discriminant → repeated root. Indeed $x^2 + 6x + 9 = (x + 3)^2$, root $x = -3$ with multiplicity 2.)"
+      ],
+      "id": "q10",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve using the quadratic formula: } x^2 - 4x - 6 = 0. \\\\ \\text{(Express in simplest exact form.)}",
+      "choices": [
+        "x = 2 \\pm \\sqrt{10}",
+        "x = 2 \\pm \\sqrt{6}",
+        "x = -2 \\pm \\sqrt{10}",
+        "x = 4 \\pm \\sqrt{6}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "$a = 1, b = -4, c = -6$. $D = 16 + 24 = 40$.",
+        "$\\sqrt{40} = 2\\sqrt{10}$. $x = \\dfrac{4 \\pm 2\\sqrt{10}}{2} = 2 \\pm \\sqrt{10}$."
+      ],
+      "explanation": "$x = \\dfrac{4 \\pm \\sqrt{40}}{2} = \\dfrac{4 \\pm 2\\sqrt{10}}{2} = 2 \\pm \\sqrt{10}$.",
+      "steps": [
+        "$a = 1, b = -4, c = -6$.",
+        "$D = 16 + 24 = 40$. $\\sqrt{40} = \\sqrt{4 \\cdot 10} = 2\\sqrt{10}$.",
+        "$x = \\dfrac{4 \\pm 2\\sqrt{10}}{2}$.",
+        "Divide each term by 2: $x = 2 \\pm \\sqrt{10}$."
+      ],
+      "id": "q11",
+      "difficulty": "hard"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which equation has two distinct irrational roots?}",
+      "choices": [
+        "x^2 - 4x + 3 = 0",
+        "x^2 - 4x + 4 = 0",
+        "x^2 - 4x + 1 = 0",
+        "x^2 - 4x + 5 = 0"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "Compute discriminant for each. Want $D > 0$ but not a perfect square.",
+        "Option 3: $D = 16 - 4 = 12$. Not a perfect square → irrational roots."
+      ],
+      "explanation": "Discriminants: 4 (perfect square → rational), 0 (one root), 12 (not perfect square → irrational), -4 (no real roots). Answer: $x^2 - 4x + 1 = 0$.",
+      "steps": [
+        "For two distinct irrational roots: $D > 0$ and $D$ is **not** a perfect square.",
+        "Option 1: $D = 16 - 12 = 4$. Perfect square → rational roots.",
+        "Option 2: $D = 16 - 16 = 0$. One repeated root.",
+        "Option 3: $D = 16 - 4 = 12$. Positive, not a perfect square → **two irrational roots** ✓.",
+        "Option 4: $D = 16 - 20 = -4$. No real roots."
+      ],
+      "id": "q12",
+      "difficulty": "hard"
+    }
+  ]
+}

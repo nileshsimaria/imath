@@ -1,0 +1,74 @@
+{
+  "title": "Caesar Cipher: Modular Arithmetic Encrypts",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### A 2000-year-old code",
+        "Julius Caesar reportedly used a simple cipher for military messages: shift every letter forward by 3 places in the alphabet. **A → D, B → E, C → F, ...** What happens at the end? **X → A, Y → B, Z → C** — the alphabet wraps around.",
+        "**The alphabet has 26 letters, and the wrap-around is just modular arithmetic mod 26.** Letters 0–25 (A–Z); shift adds, modulo 26.",
+        "Play with it:"
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "modular-clock",
+      "config": {
+        "mode": "caesar",
+        "shift": 3
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "The widget shows the alphabet on a circle (outer ring = original letter, inner ring = shifted/encoded letter). Change the shift slider to see how each letter maps.",
+        "Type a message — it'll be encrypted in real time. Type someone's encrypted message and dial back the shift to decrypt."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The math, formally",
+      "body": "Number the letters: $A = 0, B = 1, \\ldots, Z = 25$.\n\n**Encryption with shift $k$:** each letter $x$ becomes $x' = (x + k) \\bmod 26$.\n\n**Decryption with shift $k$:** apply the inverse shift: $x = (x' - k) \\bmod 26$, i.e. shift back by $k$ (or equivalently, shift forward by $26 - k$).\n\nFor Caesar's original shift of 3: HELLO → KHOOR.\n\nTo decode KHOOR, shift each letter back by 3: K → H, H → E, O → L, O → L, R → O. Get HELLO."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example",
+        "Encrypt the word **CAESAR** with shift $k = 5$.",
+        "- C (= 2) → $2 + 5 = 7$ → H",
+        "- A (= 0) → $0 + 5 = 5$ → F",
+        "- E (= 4) → $4 + 5 = 9$ → J",
+        "- S (= 18) → $18 + 5 = 23$ → X",
+        "- A (= 0) → 5 → F",
+        "- R (= 17) → $17 + 5 = 22$ → W",
+        "Encrypted: **HFJXFW**.",
+        "**Now decrypt.** Same word, shifted back by 5: HFJXFW → CAESAR. ✓"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Wrap-around in action",
+      "body": "Encrypt **WIZARD** with shift 4:\n\n- W (22) → $22 + 4 = 26 \\equiv 0 \\pmod{26}$ → A\n- I (8) → 12 → M\n- Z (25) → $25 + 4 = 29 \\equiv 3 \\pmod{26}$ → D\n- A (0) → 4 → E\n- R (17) → 21 → V\n- D (3) → 7 → H\n\nEncrypted: **AMDEVH**. The W → A wrap-around is mod 26 in action — without modular arithmetic this whole scheme would fall apart."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### How (in)secure is the Caesar cipher?",
+        "Terribly insecure by modern standards.",
+        "**Brute force:** there are only 25 nontrivial shifts (k = 1, 2, ..., 25). A human can try all 25 and pick the readable one in under a minute.",
+        "**Frequency analysis:** in English, E is the most common letter, then T, A, O, I, N. Look at the cipher; whichever letter appears most often is probably the encoding of E. That immediately gives away the shift.",
+        "But the Caesar cipher is a beautiful first example of how modular arithmetic enables cryptography. Modern ciphers (AES, RSA, elliptic curve) are vastly more complex, but they all rely fundamentally on arithmetic modulo large numbers."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Generalization: shift cipher and beyond",
+        "The Caesar cipher is the special case $k = 3$ of a **shift cipher** with any shift $k$.",
+        "The shift cipher is the special case of an **affine cipher** with map $x \\to (ax + b) \\bmod 26$ (where $\\gcd(a, 26) = 1$ for decryptability).",
+        "The affine cipher is the special case of a **substitution cipher** with any permutation of letters.",
+        "Substitution ciphers are still breakable by frequency analysis. Modern crypto uses arithmetic on much larger structures (mod a 256-bit prime, for example) where brute force and frequency analysis don't work."
+      ]
+    }
+  ]
+}

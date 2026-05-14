@@ -1,0 +1,73 @@
+{
+  "title": "Where Sine Comes From",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "If someone shows you the equation $y = \\sin\\theta$ and tells you to memorize it, you've already lost. **Sine is not a formula — it's a measurement.** Specifically: the **height** of a point that's going around a circle at constant speed.",
+        "Here's a Ferris wheel. Press Play and watch the highlighted rider."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "ferris-wheel",
+      "config": {
+        "show": "sin",
+        "speed": 0.5
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "The rider is going in a circle. But if you focus only on how *high* they are above the wheel's center, that height rises and falls — smoothly, repeatedly, between $+1$ and $-1$ (in units of the wheel's radius). The graph on the right traces that height over time. **It's a sine wave. There's no formula being applied — that's literally just the rider's altitude.**",
+        "Switch the display to `x-pos (cos)` to see what the *horizontal* position does instead. Same circular motion, different measurement: now you get a cosine wave. Same shape as sine but shifted by 90°."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The takeaway",
+      "body": "A point rotating uniformly around a circle produces TWO simultaneous oscillations: its height (= sine) and its horizontal position (= cosine). The two functions are tied together because they're the two coordinates of the same rotating thing. That is why $\\sin^2\\theta + \\cos^2\\theta = 1$ — it's the Pythagorean theorem applied to those two coordinates."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why this matters",
+        "Anything that goes around in a circle — or anything that *behaves like* it goes around in a circle — produces sine and cosine waves as side-effects:",
+        "**Sound:** vibrating eardrum, swinging pendulum, plucked guitar string → all sinusoidal.",
+        "**Light & radio:** AC current, electromagnetic waves → sinusoidal.",
+        "**Tides:** moon orbiting Earth → sinusoidal tidal cycle.",
+        "**Mechanical engines:** pistons driven by a rotating crankshaft → their height vs. time is sine.",
+        "Trig isn't really about triangles. It's about **rotations**, and the linear shadows rotations cast."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Reading the standard definitions",
+        "Now the textbook definitions make sense:",
+        "$\\sin\\theta = y\\text{-coordinate of the unit-circle point at angle }\\theta$",
+        "$\\cos\\theta = x\\text{-coordinate of the unit-circle point at angle }\\theta$",
+        "These aren't arbitrary abbreviations — they label the two measurements you can extract from a rotating point. The wave shapes are just what those measurements look like, plotted against time (or angle)."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "ferris-wheel",
+      "config": {
+        "show": "both",
+        "speed": 0.5
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "Watch both at once. The red curve (sine) starts at 0 and goes up. The green curve (cosine) starts at 1 and goes down. They're partners — always exactly 90° apart, always with $\\sin^2 + \\cos^2 = 1$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Try this",
+      "body": "Crank up the speed slider. The wave gets compressed horizontally — same shape, more cycles per second. That's **frequency**. A faster Ferris wheel = a higher-pitched sine wave. This is exactly how audio frequencies work — higher pitch = faster rotation."
+    }
+  ]
+}

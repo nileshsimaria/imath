@@ -1,0 +1,71 @@
+{
+  "title": "Tangent ⊥ Radius",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### The tangent line at a point",
+        "A line that touches a circle at exactly one point — without crossing it — is called a **tangent line**. The point of contact is the **point of tangency**.",
+        "Here is the foundational fact about tangent lines:",
+        "**A tangent line to a circle is perpendicular to the radius drawn to the point of tangency.**"
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "circle-theorems",
+      "config": {
+        "mode": "tangent-radius"
+      }
+    },
+    {
+      "type": "math",
+      "tex": "\\boxed{\\;OT \\perp \\text{tangent at } T\\;}"
+    },
+    {
+      "type": "callout",
+      "title": "Why must it be perpendicular?",
+      "body": "Suppose the tangent at $T$ were *not* perpendicular to $OT$. Drop a perpendicular from $O$ to the tangent line, meeting it at some other point $T'$. Then $OT' < OT = r$ (the perpendicular is the shortest distance), so $T'$ would be inside the circle. But $T'$ is on the tangent line — meaning the tangent line enters the circle and would have to exit, intersecting the circle at two points. That contradicts the definition of tangent (touches at exactly one point). ∎"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Practical consequences",
+        "**Right angle at the point of tangency.** Whenever a tangent and a radius meet, you have a $90°$ angle to work with — perfect for Pythagoras.",
+        "**Two tangents from an external point.** From any external point $E$ to a circle, exactly two tangent lines can be drawn. The two tangent lengths from $E$ (distance from $E$ to each point of tangency) are *equal*. We used this fact in the incircle lesson — tangent lengths from a vertex are equal."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example",
+        "A circle has center $O$ and radius $5$. From an external point $E$ at distance $13$ from $O$, draw a tangent. Find the tangent length (the distance from $E$ to the point of tangency $T$).",
+        "**Setup.** $\\triangle OTE$ has a right angle at $T$ (tangent ⊥ radius). $OT = 5$ (radius), $OE = 13$ (given), $TE = ?$",
+        "**Pythagoras:** $TE^2 + OT^2 = OE^2 \\Rightarrow TE^2 = 169 - 25 = 144 \\Rightarrow TE = 12$.",
+        "(Yet another 5-12-13 triangle.)"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Tangent-tangent angle theorem",
+      "body": "From external point $E$, draw two tangents touching the circle at $T_1$ and $T_2$. Then $ET_1 = ET_2$ (equal tangent lengths), and the angle $\\angle T_1 E T_2$ at $E$ plus the central angle $\\angle T_1 O T_2$ at $O$ sum to $180°$.\n\nIntuitively: the quadrilateral $E T_1 O T_2$ has two right angles (at $T_1$ and $T_2$). The other two angles must complete the $360°$ — so they sum to $360 - 180 = 180°$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example (tangent from external point)",
+        "Two tangents are drawn from external point $E$ to a circle, touching at $T_1$ and $T_2$. The angle at $E$ is $40°$. Find the central angle $\\angle T_1 O T_2$.",
+        "**Use the supplement rule:** $\\angle T_1 O T_2 = 180° - \\angle T_1 E T_2 = 180° - 40° = 140°$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Where this comes up",
+        "**Geometric constructions** — tangent from an external point (using a Thales-circle trick).",
+        "**Optimization** — \"shortest path from a point to a circle\" goes through the tangent.",
+        "**Physics** — instantaneous direction of a particle moving along a circle is tangent (perpendicular to the radius vector).",
+        "**Engineering** — gear teeth, belt drives, optics. Whenever something rolls or pivots around a fixed center."
+      ]
+    }
+  ]
+}

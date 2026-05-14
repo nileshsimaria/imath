@@ -1,0 +1,70 @@
+{
+  "title": "Quadrants",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "The two axes divide the coordinate plane into **four regions**, called **quadrants**. Each one has a Roman numeral name: I, II, III, IV. They're numbered starting from the top right and going *counterclockwise*."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Drag the point and see",
+        "Pick any spot — the readout will tell you which quadrant (or which axis) the point is on."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "coordinate-plane",
+      "config": {
+        "mode": "quadrants",
+        "initialPoint": [
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### What's true in each quadrant",
+        "**Quadrant I** (top right): $x > 0$, $y > 0$ — both positive.",
+        "**Quadrant II** (top left): $x < 0$, $y > 0$ — x negative, y positive.",
+        "**Quadrant III** (bottom left): $x < 0$, $y < 0$ — both negative.",
+        "**Quadrant IV** (bottom right): $x > 0$, $y < 0$ — x positive, y negative."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "How to remember the order",
+      "body": "Start at the top right and go around the way a hand sweeps a clock *backwards* (counterclockwise). I, II, III, IV. The numbering is the same in every textbook everywhere."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Points on the axes",
+        "Some points don't belong to any quadrant — they sit *on* an axis.",
+        "**On the x-axis**: $y = 0$ (e.g., $(5, 0)$ or $(-3, 0)$).",
+        "**On the y-axis**: $x = 0$ (e.g., $(0, 4)$ or $(0, -7)$).",
+        "**The origin**: $x = 0$ and $y = 0$ — it's where all four quadrants meet."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Quick quadrant check",
+        "Given $(x, y)$, you only need the **signs**:",
+        "$(+, +)$ → Quadrant **I**.",
+        "$(-, +)$ → Quadrant **II**.",
+        "$(-, -)$ → Quadrant **III**.",
+        "$(+, -)$ → Quadrant **IV**."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "Four quadrants, numbered counterclockwise from the top right. Use the sign of $x$ and $y$ to identify the quadrant in seconds. Points with a zero coordinate sit on an axis, not in a quadrant."
+    }
+  ]
+}

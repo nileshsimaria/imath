@@ -1,0 +1,69 @@
+{
+  "title": "Circle Vocabulary",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "A **circle** is the set of all points in a plane that are the same distance from a central point. That distance is the **radius**, and the central point is the **center**. Circles are everywhere in geometry — and most of the vocabulary you'll need is just names for the parts."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The basic parts",
+        "**Center**: the point equidistant from every point on the circle.",
+        "**Radius** ($r$): the distance from the center to any point on the circle. Any line segment from the center to the circle is also called a radius.",
+        "**Diameter** ($d$): a line segment through the center connecting two opposite points of the circle. The diameter is twice the radius: $d = 2r$.",
+        "**Chord**: any line segment whose endpoints are both on the circle. The diameter is the longest possible chord.",
+        "**Arc**: a portion of the circle's circumference (the curve itself).",
+        "**Sector**: the pie-slice region bounded by two radii and an arc.",
+        "**Segment**: the region bounded by a chord and an arc."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "circle",
+      "config": {
+        "initialRadius": 5
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Two iconic formulas",
+        "Every circle obeys two beautiful formulas — both involving the constant $\\pi \\approx 3.14159$:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "C = 2\\pi r = \\pi d \\quad\\quad A = \\pi r^2"
+    },
+    {
+      "type": "text",
+      "md": [
+        "$C$ is the **circumference** — the distance around the circle. $A$ is the **area** — the region inside.",
+        "$\\pi$ (pi) is the ratio of any circle's circumference to its diameter. It's the same number for every circle, regardless of size — that's the magic.",
+        "$\\pi$ is irrational (its decimal goes on forever without repeating). Common approximations: $\\pi \\approx 3.14$ or $\\pi \\approx \\frac{22}{7}$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Try it",
+      "body": "Adjust the radius slider in the widget. Watch how doubling $r$ doubles the circumference but **quadruples** the area. (Area scales by $r^2$ — a key fact.)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked examples",
+        "**Find circumference** of a circle with $r = 5$. $C = 2\\pi(5) = 10\\pi \\approx 31.42$.",
+        "**Find area** of a circle with $d = 8$. First $r = d/2 = 4$. $A = \\pi(4)^2 = 16\\pi \\approx 50.27$.",
+        "**Find radius** from circumference. If $C = 18\\pi$, then $2\\pi r = 18\\pi \\Rightarrow r = 9$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "**Center, radius, diameter, chord, arc, sector, segment** — know the vocabulary. **$C = 2\\pi r$** for circumference, **$A = \\pi r^2$** for area. The diameter is twice the radius. Doubling the radius quadruples the area."
+    }
+  ]
+}

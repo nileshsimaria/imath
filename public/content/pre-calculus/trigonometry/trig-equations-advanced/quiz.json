@@ -1,0 +1,387 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{General solution of } \\sin x = 1?",
+      "choices": [
+        "$x = n\\pi$",
+        "$x = (4n+1)\\pi/2$",
+        "$x = 2n\\pi$",
+        "$x = (2n+1)\\pi$"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$\\sin x = 1$ at $x = \\pi/2$.",
+        "Periodic with period $2\\pi$: $x = (4n+1)\\pi/2$."
+      ],
+      "explanation": "$\\sin x = 1$ only at $x = \\pi/2 + 2n\\pi = (4n+1)\\pi/2$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{General solution of } \\tan x = 1?",
+      "choices": [
+        "$x = n\\pi + \\pi/4$",
+        "$x = 2n\\pi + \\pi/4$",
+        "$x = n\\pi \\pm \\pi/4$",
+        "$x = n\\pi + (-1)^n \\pi/4$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "$\\tan x$ has period $\\pi$.",
+        "$x = n\\pi + \\pi/4$."
+      ],
+      "explanation": "$\\tan x = 1 \\Rightarrow x = n\\pi + \\pi/4$ (period $\\pi$).",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{Number of solutions of } \\sin x = 1/2 \\text{ in } [0, 2\\pi]?",
+      "answer": 2,
+      "tolerance": 0.001,
+      "hints": [
+        "$x = \\pi/6$ and $5\\pi/6$.",
+        "Two."
+      ],
+      "explanation": "$\\sin x = 1/2$ has solutions $\\pi/6$ and $5\\pi/6$ in $[0, 2\\pi]$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Number of solutions of } \\cos x = -1/2 \\text{ in } [0, 2\\pi]?",
+      "answer": 2,
+      "tolerance": 0.001,
+      "hints": [
+        "$\\cos x = -1/2$ at $x = 2\\pi/3$ and $4\\pi/3$.",
+        "Two."
+      ],
+      "explanation": "$\\cos x = -1/2$ at $2\\pi/3$ and $4\\pi/3$. Two solutions in $[0, 2\\pi]$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{Number of solutions of } 2\\sin^2 x - \\sin x - 1 = 0 \\text{ in } [0, 2\\pi]?",
+      "answer": 3,
+      "tolerance": 0.001,
+      "hints": [
+        "Factor: $(2\\sin x + 1)(\\sin x - 1) = 0$.",
+        "$\\sin x = -1/2$ → 2 solutions; $\\sin x = 1$ → 1 solution. Total 3."
+      ],
+      "explanation": "$(2\\sin x + 1)(\\sin x - 1) = 0$. $\\sin x = -1/2$ in $[0, 2\\pi]$: $7\\pi/6, 11\\pi/6$. $\\sin x = 1$: $\\pi/2$. Total: 3.",
+      "steps": [
+        {
+          "text": "**Treat as quadratic in $\\sin x$:**"
+        },
+        {
+          "math": "2u^2 - u - 1 = 0, \\quad u = \\sin x"
+        },
+        {
+          "text": "**Factor:**"
+        },
+        {
+          "math": "(2u + 1)(u - 1) = 0 \\Rightarrow u = -1/2 \\text{ or } u = 1"
+        },
+        {
+          "text": "**Solve each in $[0, 2\\pi]$:**"
+        },
+        {
+          "text": "$\\sin x = -1/2$: $x = 7\\pi/6, 11\\pi/6$ (2 solutions)"
+        },
+        {
+          "text": "$\\sin x = 1$: $x = \\pi/2$ (1 solution)"
+        },
+        {
+          "math": "\\text{Total} = 3"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve } \\sin x = \\cos x.",
+      "choices": [
+        "$x = n\\pi + \\pi/4$",
+        "$x = 2n\\pi + \\pi/4$",
+        "$x = n\\pi$",
+        "$x = (2n+1)\\pi/4$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Divide by $\\cos x$: $\\tan x = 1$.",
+        "$\\tan x = 1 \\Rightarrow x = n\\pi + \\pi/4$."
+      ],
+      "explanation": "$\\tan x = 1 \\Rightarrow x = n\\pi + \\pi/4$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{Solutions of } \\cos 2x = 1/2 \\text{ in } [0, 2\\pi] \\text{ (how many)?}",
+      "answer": 4,
+      "tolerance": 0.001,
+      "hints": [
+        "$2x = 2n\\pi \\pm \\pi/3 \\Rightarrow x = n\\pi \\pm \\pi/6$.",
+        "Values in $[0, 2\\pi]$: $\\pi/6, 5\\pi/6, 7\\pi/6, 11\\pi/6$. Total 4."
+      ],
+      "explanation": "4 solutions: $\\pi/6, 5\\pi/6, 7\\pi/6, 11\\pi/6$.",
+      "steps": [
+        {
+          "text": "**Use the cos general solution:** $\\cos A = \\cos\\alpha \\Rightarrow A = 2n\\pi \\pm \\alpha$. Here $\\cos\\alpha = 1/2$, so $\\alpha = \\pi/3$."
+        },
+        {
+          "math": "2x = 2n\\pi \\pm \\pi/3 \\;\\Longrightarrow\\; x = n\\pi \\pm \\pi/6"
+        },
+        {
+          "text": "**Enumerate $n$ to stay in $[0, 2\\pi]$:**"
+        },
+        {
+          "text": "$n = 0$: $x = \\pi/6$ ✓ ($-\\pi/6$ negative, skip)"
+        },
+        {
+          "text": "$n = 1$: $x = \\pi \\pm \\pi/6 = 5\\pi/6$ or $7\\pi/6$ (both in range)"
+        },
+        {
+          "text": "$n = 2$: $x = 2\\pi \\pm \\pi/6 = 11\\pi/6$ ✓ ($13\\pi/6 > 2\\pi$ skip)"
+        },
+        {
+          "text": "**Total: 4 solutions.**"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{Smallest positive solution of } \\sin x + \\sqrt{3}\\cos x = 1 \\text{ (in radians; round 2 decimals)?}",
+      "answer": 1.57,
+      "tolerance": 0.05,
+      "hints": [
+        "Rewrite: $\\sin x + \\sqrt{3}\\cos x = 2(\\sin x \\cdot 1/2 + \\cos x \\cdot \\sqrt{3}/2) = 2\\sin(x + \\pi/3)$.",
+        "$2\\sin(x + \\pi/3) = 1 \\Rightarrow \\sin(x + \\pi/3) = 1/2$.",
+        "$x + \\pi/3 = \\pi/6$ or $5\\pi/6$. So $x = -\\pi/6$ or $\\pi/2$. Smallest positive: $\\pi/2 \\approx 1.57$."
+      ],
+      "explanation": "Rewrite as $2\\sin(x + \\pi/3) = 1$. Then $\\sin(x + \\pi/3) = 1/2$, giving $x + \\pi/3 = \\pi/6$ or $5\\pi/6$. So $x = -\\pi/6$ or $\\pi/2$. Smallest positive: $\\pi/2 \\approx 1.57$.",
+      "steps": [
+        {
+          "text": "**Rewrite the LHS as a single sinusoid.** With $a = 1, b = \\sqrt{3}$, amplitude $\\sqrt{a^2 + b^2} = 2$."
+        },
+        {
+          "math": "\\sin x + \\sqrt{3}\\cos x = 2\\left(\\dfrac{1}{2}\\sin x + \\dfrac{\\sqrt{3}}{2}\\cos x\\right) = 2\\sin(x + \\pi/3)"
+        },
+        {
+          "text": "**Set equal to 1:**"
+        },
+        {
+          "math": "2\\sin(x + \\pi/3) = 1 \\;\\Longrightarrow\\; \\sin(x + \\pi/3) = \\dfrac{1}{2}"
+        },
+        {
+          "text": "**General solution:** $x + \\pi/3 = n\\pi + (-1)^n \\pi/6$."
+        },
+        {
+          "text": "$n = 0$: $x + \\pi/3 = \\pi/6 \\Rightarrow x = -\\pi/6$ (negative)."
+        },
+        {
+          "text": "$n = 1$: $x + \\pi/3 = \\pi - \\pi/6 = 5\\pi/6 \\Rightarrow x = \\pi/2 \\approx 1.57$."
+        },
+        {
+          "text": "**Smallest positive: $x = \\pi/2 \\approx 1.57$.**"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\text{General solution of } \\sin x = 0?",
+      "choices": [
+        "$x = n\\pi$",
+        "$x = 2n\\pi$",
+        "$x = (2n+1)\\pi$",
+        "$x = (2n+1)\\pi/2$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "$\\sin x = 0$ at $0, \\pi, 2\\pi, \\ldots$",
+        "Pattern: $x = n\\pi$."
+      ],
+      "explanation": "$\\sin x = 0$ ⇔ $x = n\\pi$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solutions of } \\sin x + \\cos x = 1 \\text{ in } [0, 2\\pi]?",
+      "choices": [
+        "$\\{0, \\pi/2\\}$",
+        "$\\{\\pi/4\\}$",
+        "$\\{0, 3\\pi/2\\}$",
+        "$\\{\\pi/2, \\pi\\}$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Rewrite: $\\sqrt{2}\\sin(x + \\pi/4) = 1$.",
+        "$\\sin(x + \\pi/4) = 1/\\sqrt{2} \\Rightarrow x + \\pi/4 = \\pi/4$ or $3\\pi/4$. So $x = 0$ or $\\pi/2$."
+      ],
+      "explanation": "$\\sqrt{2}\\sin(x + \\pi/4) = 1$. $\\sin(x + \\pi/4) = 1/\\sqrt{2}$. $x + \\pi/4 = \\pi/4$ or $3\\pi/4$ → $x = 0$ or $\\pi/2$.",
+      "steps": [
+        {
+          "text": "**Rewrite** $\\sin x + \\cos x$ as a single sinusoid (amplitude $\\sqrt{2}$, phase $\\pi/4$):"
+        },
+        {
+          "math": "\\sin x + \\cos x = \\sqrt{2}\\sin(x + \\pi/4)"
+        },
+        {
+          "text": "**Set equal to 1:**"
+        },
+        {
+          "math": "\\sqrt{2}\\sin(x + \\pi/4) = 1 \\;\\Longrightarrow\\; \\sin(x + \\pi/4) = \\dfrac{1}{\\sqrt{2}}"
+        },
+        {
+          "text": "**General solution:** $x + \\pi/4 = \\pi/4 + 2n\\pi$ or $3\\pi/4 + 2n\\pi$."
+        },
+        {
+          "text": "In $[0, 2\\pi]$: $x = 0$ or $\\pi/2$."
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{Number of solutions of } \\tan x = 0 \\text{ in } [0, 2\\pi]?",
+      "answer": 3,
+      "tolerance": 0.001,
+      "hints": [
+        "$\\tan x = 0$ at $0, \\pi, 2\\pi$.",
+        "Three."
+      ],
+      "explanation": "$\\tan x = 0$ at $0, \\pi, 2\\pi$. Three solutions in $[0, 2\\pi]$ (inclusive).",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\text{Number of solutions of } \\sin 2x = \\sin x \\text{ in } [0, 2\\pi]?",
+      "answer": 5,
+      "tolerance": 0.001,
+      "hints": [
+        "$\\sin 2x = 2\\sin x \\cos x$. Equation: $2\\sin x \\cos x = \\sin x \\Rightarrow \\sin x (2\\cos x - 1) = 0$.",
+        "$\\sin x = 0$: $x = 0, \\pi, 2\\pi$ (3 solutions). $\\cos x = 1/2$: $x = \\pi/3, 5\\pi/3$ (2 solutions). Total 5."
+      ],
+      "explanation": "$\\sin x(2\\cos x - 1) = 0$. $\\sin x = 0$: 3 solutions. $\\cos x = 1/2$: 2. Total: 5.",
+      "steps": [
+        {
+          "text": "**Use double-angle identity:** $\\sin 2x = 2\\sin x \\cos x$. The equation becomes:"
+        },
+        {
+          "math": "2\\sin x \\cos x = \\sin x"
+        },
+        {
+          "math": "\\sin x (2\\cos x - 1) = 0"
+        },
+        {
+          "text": "**Factor case 1: $\\sin x = 0$** → $x = 0, \\pi, 2\\pi$ in $[0, 2\\pi]$ (3 solutions)."
+        },
+        {
+          "text": "**Factor case 2: $2\\cos x - 1 = 0 \\Rightarrow \\cos x = 1/2$** → $x = \\pi/3, 5\\pi/3$ (2 solutions)."
+        },
+        {
+          "text": "**Total: $3 + 2 = 5$ solutions.**"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q13",
+      "type": "multiple-choice",
+      "promptTex": "\\text{General solution of } \\cos 3x = \\cos 2x?",
+      "choices": [
+        "$x = 2n\\pi$",
+        "$x = 2n\\pi$ or $x = 2n\\pi/5$",
+        "$x = n\\pi$",
+        "$x = n\\pi/5$"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$\\cos A = \\cos B \\Rightarrow A = 2n\\pi \\pm B$.",
+        "$3x = 2n\\pi \\pm 2x \\Rightarrow x = 2n\\pi$ or $5x = 2n\\pi \\Rightarrow x = 2n\\pi/5$."
+      ],
+      "explanation": "$3x = 2n\\pi + 2x$ gives $x = 2n\\pi$. $3x = 2n\\pi - 2x$ gives $x = 2n\\pi/5$. Combined: $x = 2n\\pi$ or $2n\\pi/5$.",
+      "steps": [
+        {
+          "text": "**General cos rule:** $\\cos A = \\cos B \\Longleftrightarrow A = 2n\\pi \\pm B$."
+        },
+        {
+          "text": "Apply with $A = 3x, B = 2x$:"
+        },
+        {
+          "math": "3x = 2n\\pi \\pm 2x"
+        },
+        {
+          "text": "**$+$ case:** $3x - 2x = 2n\\pi \\Rightarrow x = 2n\\pi$."
+        },
+        {
+          "text": "**$-$ case:** $3x + 2x = 2n\\pi \\Rightarrow x = 2n\\pi/5$."
+        },
+        {
+          "text": "**Combined:** $x = 2n\\pi$ or $x = 2n\\pi/5$."
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q14",
+      "type": "multiple-choice",
+      "promptTex": "\\text{General solution of } \\cos x = -1?",
+      "choices": [
+        "$x = 2n\\pi$",
+        "$x = (2n+1)\\pi$",
+        "$x = n\\pi$",
+        "$x = n\\pi - \\pi/2$"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$\\cos x = -1$ at $\\pi, 3\\pi, 5\\pi, \\ldots = (2n+1)\\pi$.",
+        "Odd multiples of $\\pi$."
+      ],
+      "explanation": "$\\cos x = -1 \\Rightarrow x = (2n+1)\\pi$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q15",
+      "type": "numeric",
+      "promptTex": "\\text{Number of solutions of } \\sin^2 x = 1/2 \\text{ in } [0, 2\\pi]?",
+      "answer": 4,
+      "tolerance": 0.001,
+      "hints": [
+        "$\\sin x = \\pm 1/\\sqrt{2}$.",
+        "Each value gives 2 solutions in $[0, 2\\pi]$. Total: 4."
+      ],
+      "explanation": "$\\sin x = 1/\\sqrt{2}$: 2 solutions ($\\pi/4, 3\\pi/4$). $\\sin x = -1/\\sqrt{2}$: 2 solutions ($5\\pi/4, 7\\pi/4$). Total: 4.",
+      "steps": [
+        {
+          "text": "**Take square root** (remember $\\pm$):"
+        },
+        {
+          "math": "\\sin^2 x = \\dfrac{1}{2} \\;\\Longrightarrow\\; \\sin x = \\pm \\dfrac{1}{\\sqrt{2}}"
+        },
+        {
+          "text": "**Case $\\sin x = 1/\\sqrt{2}$:** $x = \\pi/4$ or $3\\pi/4$ in $[0, 2\\pi]$."
+        },
+        {
+          "text": "**Case $\\sin x = -1/\\sqrt{2}$:** $x = 5\\pi/4$ or $7\\pi/4$."
+        },
+        {
+          "text": "**Total: 4 solutions.**"
+        }
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

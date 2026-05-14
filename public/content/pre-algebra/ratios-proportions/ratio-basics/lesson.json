@@ -1,0 +1,83 @@
+{
+  "title": "Ratio Basics",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "A **ratio** compares two quantities. If a recipe calls for 2 cups of flour and 3 cups of sugar, the ratio of flour to sugar is **2 to 3**."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Three ways to write the same ratio",
+        "All three of these mean the same thing:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "2 : 3 \\quad = \\quad 2 \\text{ to } 3 \\quad = \\quad \\dfrac{2}{3}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Ratios look just like fractions — and that's fine, because they obey the same simplification rules."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Equivalent ratios",
+        "Multiply or divide *both* parts of a ratio by the same nonzero number, and you get an equivalent ratio. The visualization below shows two ratios as bars — try adjusting the second one until both bars look the same."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "fraction-bars",
+      "config": {
+        "mode": "compare-fractions",
+        "n1": 2,
+        "d1": 3,
+        "n2": 4,
+        "d2": 6,
+        "maxDen": 12
+      }
+    },
+    {
+      "type": "math",
+      "tex": "2 : 3 \\;\\equiv\\; 4 : 6 \\;\\equiv\\; 6 : 9 \\;\\equiv\\; 10 : 15"
+    },
+    {
+      "type": "text",
+      "md": [
+        "All of these describe the same proportion. Just like $\\dfrac{2}{3} = \\dfrac{4}{6} = \\dfrac{6}{9}$ as fractions."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Simplifying a ratio",
+      "body": "Divide both parts by their greatest common divisor. $12 : 8$? $\\gcd(12, 8) = 4$, so $12 : 8 = 3 : 2$ in simplest form."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Real-world examples",
+        "**Mix.** A pancake batter uses a $1 : 2$ ratio of flour to milk. If you use $3$ cups of flour, you need $6$ cups of milk.",
+        "**Map scale.** A map's scale is $1 : 50000$. Each centimeter on the map is $50000$ centimeters in the real world (i.e., $500$ meters).",
+        "**Class.** A class has $10$ girls and $15$ boys. Girls : boys is $10 : 15 = 2 : 3$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Part-to-part vs. part-to-whole",
+        "The ratio $2 : 3$ (girls to boys) is **part-to-part**. The total number of students is $2 + 3 = 5$ parts. So $\\tfrac{2}{5}$ of the class is girls (a **part-to-whole** ratio). Both are useful, but they're different things."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "A ratio compares two quantities. Three ways to write it: $a : b$, '$a$ to $b$', $\\tfrac{a}{b}$. Multiply or divide both parts by the same number for equivalent ratios. Simplify by dividing by the GCD. Watch the difference between part-to-part and part-to-whole."
+    }
+  ]
+}

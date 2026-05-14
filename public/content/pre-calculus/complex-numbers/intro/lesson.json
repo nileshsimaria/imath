@@ -1,0 +1,90 @@
+{
+  "title": "Complex Numbers — Introduction",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### The number $\\sqrt{-1}$",
+        "Negative numbers can't have square roots — among real numbers, that is. So we invent a new symbol $i$ defined by",
+        "$i^2 = -1$ \\quad (equivalently, $i = \\sqrt{-1}$).",
+        "A **complex number** is anything of the form $z = a + bi$ where $a, b$ are real. The number $a$ is the **real part** ($\\operatorname{Re}(z)$); $b$ is the **imaginary part** ($\\operatorname{Im}(z)$).",
+        "**Examples.** $3 + 5i$, $-2 - i$, $7 = 7 + 0i$ (real numbers are complex too), $0 + 4i = 4i$ (purely imaginary)."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Powers of $i$ cycle with period 4",
+      "body": "$i^0 = 1, \\quad i^1 = i, \\quad i^2 = -1, \\quad i^3 = -i$.\n\nThen $i^4 = i^2 \\cdot i^2 = 1$, and the cycle repeats. To compute $i^n$, divide $n$ by 4 and take the remainder:\n\n$i^{25} = i^{4 \\cdot 6 + 1} = i^1 = i$.\n$i^{102} = i^{4 \\cdot 25 + 2} = i^2 = -1$.\n$i^{-1} = ?$ Multiply top and bottom by $i$: $i^{-1} = 1/i = i/(i \\cdot i) = i/(-1) = -i$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Addition, subtraction, multiplication",
+        "Add/subtract by combining real and imaginary parts separately:",
+        "$(a + bi) + (c + di) = (a + c) + (b + d)i$",
+        "Multiply by FOIL, using $i^2 = -1$:",
+        "$(a + bi)(c + di) = ac + adi + bci + bd \\cdot i^2 = (ac - bd) + (ad + bc)i$",
+        "**Example.** $(3 + 4i)(2 - i) = 6 - 3i + 8i - 4i^2 = 6 - 3i + 8i + 4 = 10 + 5i$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Conjugate and modulus",
+      "body": "**Conjugate** of $z = a + bi$ is $\\bar z = a - bi$ (flip the sign of imaginary part).\n\n**Modulus** (absolute value) is $|z| = \\sqrt{a^2 + b^2}$ — the distance from origin to the point $(a, b)$ in the complex plane.\n\n**Key identities:**\n- $z \\cdot \\bar z = a^2 + b^2 = |z|^2$\n- $|z|^2 = z \\bar z$\n- $\\overline{z_1 + z_2} = \\bar{z_1} + \\bar{z_2}$\n- $\\overline{z_1 z_2} = \\bar{z_1} \\cdot \\bar{z_2}$\n- $|z_1 z_2| = |z_1| |z_2|$"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Division — multiply by the conjugate",
+        "To divide $z_1/z_2$, multiply top and bottom by $\\bar{z_2}$:",
+        "$\\dfrac{z_1}{z_2} = \\dfrac{z_1 \\bar{z_2}}{z_2 \\bar{z_2}} = \\dfrac{z_1 \\bar{z_2}}{|z_2|^2}$",
+        "Denominator is now real — much easier.",
+        "**Example.** $\\dfrac{3 + 2i}{1 - i}$.",
+        "$\\dfrac{(3 + 2i)(1 + i)}{(1 - i)(1 + i)} = \\dfrac{3 + 3i + 2i + 2i^2}{1 - i^2} = \\dfrac{3 + 5i - 2}{2} = \\dfrac{1 + 5i}{2} = \\dfrac{1}{2} + \\dfrac{5}{2}i$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Geometric interpretation",
+        "Each complex number $a + bi$ corresponds to a **point** $(a, b)$ in the plane — called the **complex plane** or **Argand plane**. The horizontal axis is the real axis, the vertical axis is the imaginary axis.",
+        "**Modulus** $|z|$ = distance from origin to $(a, b)$.",
+        "**Argument** (or **amplitude**) $\\arg(z) = \\theta$ where $\\theta$ is the angle from the positive real axis to the line from origin to $z$ (measured counterclockwise).",
+        "$\\tan\\theta = b/a$ — but watch which quadrant the point is in!"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Polar (trigonometric) form",
+      "body": "Every complex number can be written as\n\n$z = r(\\cos\\theta + i\\sin\\theta)$\n\nwhere $r = |z|$ and $\\theta = \\arg(z)$.\n\n**Multiplication in polar form is gorgeous:** $z_1 z_2$ has modulus $r_1 r_2$ and argument $\\theta_1 + \\theta_2$. Geometrically, multiplying by $z_2$ scales by $r_2$ and rotates by $\\theta_2$.\n\n**Euler's formula** generalizes this: $e^{i\\theta} = \\cos\\theta + i\\sin\\theta$, so $z = r e^{i\\theta}$. (You'll meet this rigorously in calculus.)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — polar form",
+        "Find polar form of $z = 1 + i$.",
+        "$|z| = \\sqrt{1^2 + 1^2} = \\sqrt{2}$.",
+        "$\\tan\\theta = 1/1 = 1$, and $z$ is in the first quadrant, so $\\theta = \\pi/4$.",
+        "$z = \\sqrt{2}(\\cos(\\pi/4) + i\\sin(\\pi/4))$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "De Moivre's Theorem",
+      "body": "For any integer $n$:\n\n$(\\cos\\theta + i\\sin\\theta)^n = \\cos(n\\theta) + i\\sin(n\\theta)$\n\nEquivalently: $(re^{i\\theta})^n = r^n e^{in\\theta}$.\n\nMakes powers of complex numbers trivial. **Example.** $(1 + i)^8 = (\\sqrt{2})^8 \\cdot (\\cos(\\pi/4) + i\\sin(\\pi/4))^8 = 16 \\cdot (\\cos 2\\pi + i\\sin 2\\pi) = 16$. ✓"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Where complex numbers come up",
+        "**Problem types you'll meet:**",
+        "- Simplifying powers of $i$ and expressions in $a + bi$",
+        "- Finding modulus and argument",
+        "- Polar form, De Moivre's theorem",
+        "- Roots of unity (solutions of $z^n = 1$)",
+        "- Locus problems (find the set of $z$ satisfying some condition)",
+        "**Engineering applications:** AC circuits, signal processing, quantum mechanics, fluid dynamics. Complex numbers aren't a curiosity — they're the natural language of 2D rotations and oscillations."
+      ]
+    }
+  ]
+}

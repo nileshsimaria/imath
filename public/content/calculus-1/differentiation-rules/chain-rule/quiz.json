@@ -1,0 +1,304 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Chain rule: } \\dfrac{d}{dx}[f(g(x))] = ?",
+      "choices": [
+        "f'(g(x)) \\cdot g'(x)",
+        "f'(g(x))",
+        "f'(x) \\cdot g'(x)",
+        "f(g'(x))"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Outer derivative (at inner) times inner derivative.",
+        "$f'(g(x)) g'(x)$."
+      ],
+      "explanation": "Chain rule: $(f \\circ g)'(x) = f'(g(x)) \\cdot g'(x)$.",
+      "steps": [
+        "**Chain rule formula:** $\\dfrac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)$.",
+        "**Mantra: 'derivative of the outer (leaving the inner intact) times derivative of the inner'.**",
+        "**When you use it.** Any time you see a function INSIDE another — like $\\sin(x^2)$, $e^{3x}$, $(2x+1)^5$, $\\sqrt{x^2+1}$. These are COMPOSITIONS and the chain rule unwraps them.",
+        "**The hardest part is identifying outer vs inner.** Outer = what you'd compute LAST if calculating the function value. Inner = what you'd compute FIRST. For $\\sin(x^2)$: square first, then take sine — so $\\sin$ is the outer.",
+        "**Why the formula has this shape.** Differentiating a composition propagates the chain of changes: a small change in $x$ becomes a small change in $g(x)$ (rate $g'$), which becomes a small change in $f(g(x))$ (rate $f'$ at that point). Multiply rates."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{d}{dx}((2x + 1)^3) = ?",
+      "choices": [
+        "6(2x + 1)^2",
+        "3(2x + 1)^2",
+        "(2x + 1)^2",
+        "2(2x + 1)^3"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Outer $u^3 \\to 3u^2$. Inner $2x + 1 \\to 2$.",
+        "$3(2x+1)^2 \\cdot 2 = 6(2x+1)^2$."
+      ],
+      "explanation": "$3(2x+1)^2 \\cdot 2 = 6(2x+1)^2$.",
+      "steps": [
+        "**Identify outer and inner.** Outer: $u^3$ (the cube). Inner: $u = 2x + 1$ (what's being cubed).",
+        "**Differentiate the OUTER, leaving inner intact.** $\\dfrac{d}{du}(u^3) = 3u^2$. Plug $u = 2x + 1$ back: $3(2x+1)^2$.",
+        "**Differentiate the INNER.** $\\dfrac{d}{dx}(2x + 1) = 2$.",
+        "**Multiply.** $3(2x+1)^2 \\cdot 2 = 6(2x+1)^2$.",
+        "**Compare with expanding first.** $(2x+1)^3 = 8x^3 + 12x^2 + 6x + 1$, derivative $= 24x^2 + 24x + 6 = 6(4x^2 + 4x + 1) = 6(2x+1)^2$. ✓ Same answer. Chain rule was faster."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{d}{dx}(\\sin(3x)) = ?",
+      "choices": [
+        "3 \\cos(3x)",
+        "\\cos(3x)",
+        "\\sin(3)",
+        "\\cos(3) x"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Outer $\\sin u \\to \\cos u$. Inner $3x \\to 3$.",
+        "$\\cos(3x) \\cdot 3 = 3\\cos(3x)$."
+      ],
+      "explanation": "$\\cos(3x) \\cdot 3 = 3\\cos(3x)$.",
+      "steps": [
+        "**Outer: $\\sin u$. Inner: $u = 3x$.**",
+        "**Differentiate outer.** $\\dfrac{d}{du}(\\sin u) = \\cos u$. Plug $u = 3x$ back: $\\cos(3x)$.",
+        "**Differentiate inner.** $\\dfrac{d}{dx}(3x) = 3$.",
+        "**Multiply.** $\\cos(3x) \\cdot 3 = 3 \\cos(3x)$.",
+        "**Pattern shortcut.** $\\dfrac{d}{dx}\\sin(kx) = k \\cos(kx)$ for any constant $k$. Worth memorizing — the chain-rule factor $k$ pops out cleanly."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{d}{dx}(e^{x^2}) = ?",
+      "choices": [
+        "2x e^{x^2}",
+        "e^{x^2}",
+        "e^{2x}",
+        "x^2 e^{x^2}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Outer $e^u \\to e^u$. Inner $x^2 \\to 2x$.",
+        "$e^{x^2} \\cdot 2x$."
+      ],
+      "explanation": "$e^{x^2} \\cdot 2x = 2x e^{x^2}$.",
+      "steps": [
+        "**Outer: $e^u$. Inner: $u = x^2$.**",
+        "**Outer derivative.** $\\dfrac{d}{du}(e^u) = e^u$ (self-derivative). Plug $u = x^2$: $e^{x^2}$.",
+        "**Inner derivative.** $\\dfrac{d}{dx}(x^2) = 2x$.",
+        "**Multiply.** $e^{x^2} \\cdot 2x = 2x e^{x^2}$.",
+        "**Universal pattern.** $\\dfrac{d}{dx}(e^{(\\text{anything})}) = e^{(\\text{anything})} \\cdot \\dfrac{d}{dx}(\\text{anything})$. The 'anything' stays intact in the $e$-factor; its derivative becomes the multiplier."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{d}{dx}(\\sqrt{x^2 + 1}) = ?",
+      "choices": [
+        "\\dfrac{x}{\\sqrt{x^2 + 1}}",
+        "\\dfrac{1}{2\\sqrt{x^2 + 1}}",
+        "\\dfrac{2x}{\\sqrt{x^2 + 1}}",
+        "\\dfrac{x^2}{\\sqrt{x^2 + 1}}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Outer $u^{1/2}$ → $\\frac{1}{2} u^{-1/2}$. Inner $x^2 + 1$ → $2x$.",
+        "$\\frac{1}{2}(x^2+1)^{-1/2} \\cdot 2x = x/\\sqrt{x^2+1}$."
+      ],
+      "explanation": "$\\dfrac{1}{2}(x^2+1)^{-1/2} \\cdot 2x = \\dfrac{x}{\\sqrt{x^2+1}}$.",
+      "steps": [
+        "**Rewrite root as a power.** $\\sqrt{x^2 + 1} = (x^2 + 1)^{1/2}$. Outer: $u^{1/2}$. Inner: $u = x^2 + 1$.",
+        "**Outer derivative.** $\\dfrac{d}{du}(u^{1/2}) = \\tfrac{1}{2} u^{-1/2}$. Plug $u$: $\\dfrac{1}{2 \\sqrt{x^2 + 1}}$.",
+        "**Inner derivative.** $\\dfrac{d}{dx}(x^2 + 1) = 2x$.",
+        "**Multiply.** $\\dfrac{1}{2\\sqrt{x^2 + 1}} \\cdot 2x = \\dfrac{x}{\\sqrt{x^2 + 1}}$. The 2's cancel — clean."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{d}{dx}(\\cos(x^2)) = ?",
+      "choices": [
+        "-2x \\sin(x^2)",
+        "-\\sin(x^2)",
+        "2x \\cos(x^2)",
+        "-2x \\cos(x^2)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Outer $\\cos u \\to -\\sin u$. Inner $x^2 \\to 2x$.",
+        "$-\\sin(x^2) \\cdot 2x = -2x \\sin(x^2)$."
+      ],
+      "explanation": "$-\\sin(x^2) \\cdot 2x = -2x \\sin(x^2)$.",
+      "steps": [
+        "**Outer: $\\cos u$. Inner: $u = x^2$.**",
+        "**Outer derivative.** $\\cos' = -\\sin$ (don't forget the minus!). Plug $u = x^2$: $-\\sin(x^2)$.",
+        "**Inner derivative.** $(x^2)' = 2x$.",
+        "**Multiply.** $-\\sin(x^2) \\cdot 2x = -2x \\sin(x^2)$.",
+        "**Pitfall watch.** The minus sign from $\\cos' = -\\sin$ is the #1 source of errors in these problems. Always write it down explicitly."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{d}{dx}(\\ln(3x + 2)) = ?",
+      "choices": [
+        "\\dfrac{3}{3x + 2}",
+        "\\dfrac{1}{3x + 2}",
+        "\\dfrac{1}{3x}",
+        "3 \\ln(3x + 2)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Outer $\\ln u \\to 1/u$. Inner $3x + 2 \\to 3$.",
+        "$\\dfrac{1}{3x+2} \\cdot 3 = \\dfrac{3}{3x+2}$."
+      ],
+      "explanation": "$\\dfrac{1}{3x+2} \\cdot 3 = \\dfrac{3}{3x+2}$.",
+      "steps": [
+        "**Outer: $\\ln u$. Inner: $u = 3x + 2$.**",
+        "**Outer derivative.** $\\dfrac{d}{du}(\\ln u) = \\dfrac{1}{u}$. Plug $u = 3x + 2$: $\\dfrac{1}{3x + 2}$.",
+        "**Inner derivative.** $(3x + 2)' = 3$.",
+        "**Multiply.** $\\dfrac{1}{3x + 2} \\cdot 3 = \\dfrac{3}{3x + 2}$.",
+        "**Universal $\\ln$ chain-rule pattern.** $\\dfrac{d}{dx}\\ln(g(x)) = \\dfrac{g'(x)}{g(x)}$ — 'derivative of the inside, divided by the inside'. Memorize this — comes up constantly."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{Find } f'(0) \\text{ for } f(x) = (x^2 + 4)^3.",
+      "answer": 0,
+      "tolerance": 0,
+      "hints": [
+        "$f'(x) = 3(x^2+4)^2 \\cdot 2x = 6x(x^2+4)^2$.",
+        "At $x=0$: $6 \\cdot 0 \\cdot \\text{stuff} = 0$."
+      ],
+      "explanation": "$f'(x) = 6x(x^2+4)^2$. At $x = 0$: $0$.",
+      "steps": [
+        "**Apply chain rule.** Outer $u^3 \\to 3u^2$. Inner $u = x^2 + 4$, $u' = 2x$.",
+        "**Multiply.** $f'(x) = 3(x^2 + 4)^2 \\cdot 2x = 6x(x^2 + 4)^2$.",
+        "**Evaluate at $x = 0$.** $6 \\cdot 0 \\cdot (4)^2 = 0$.",
+        "**Why the answer is 0 — geometric intuition.** $f(x) = (x^2 + 4)^3$ has a minimum at $x = 0$ (since $x^2 \\geq 0$, $f$ is smallest there). At a min, the slope is zero — consistent with $f'(0) = 0$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{d}{dx}((x^3 - 1)^4) = ?",
+      "choices": [
+        "12 x^2 (x^3 - 1)^3",
+        "4 (x^3 - 1)^3",
+        "12 x^2",
+        "4 x^3 (x^3 - 1)^3"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Outer $u^4 \\to 4u^3$. Inner $x^3 - 1 \\to 3x^2$.",
+        "$4(x^3-1)^3 \\cdot 3x^2 = 12x^2(x^3-1)^3$."
+      ],
+      "explanation": "$4(x^3-1)^3 \\cdot 3x^2 = 12x^2(x^3-1)^3$.",
+      "steps": [
+        "**Outer: $u^4$. Inner: $u = x^3 - 1$.**",
+        "**Outer derivative.** $4 u^3$ at $u = x^3 - 1$: $4(x^3 - 1)^3$.",
+        "**Inner derivative.** $(x^3 - 1)' = 3x^2$.",
+        "**Multiply.** $4(x^3 - 1)^3 \\cdot 3x^2 = 12 x^2 (x^3 - 1)^3$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Compute: } \\dfrac{d}{dx}(\\sin^2(x)). \\\\ \\text{(Note: } \\sin^2(x) = (\\sin x)^2.)",
+      "choices": [
+        "2 \\sin(x) \\cos(x)",
+        "2 \\sin(x)",
+        "\\cos^2(x)",
+        "\\sin(2x)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Outer $u^2 \\to 2u$. Inner $\\sin x \\to \\cos x$.",
+        "$2\\sin(x) \\cdot \\cos(x)$. Also equals $\\sin(2x)$ by double angle."
+      ],
+      "explanation": "$2\\sin(x) \\cdot \\cos(x) = 2\\sin(x)\\cos(x) = \\sin(2x)$.",
+      "steps": [
+        "**Decode the notation.** $\\sin^2(x)$ means $(\\sin x)^2$ — the SINE squared. (Confusingly: it does NOT mean $\\sin(\\sin x)$ or $\\sin(x^2)$.)",
+        "**Outer: $u^2$. Inner: $u = \\sin x$.**",
+        "**Outer derivative.** $2u$ at $u = \\sin x$: $2 \\sin x$.",
+        "**Inner derivative.** $(\\sin x)' = \\cos x$.",
+        "**Multiply.** $2 \\sin x \\cdot \\cos x$.",
+        "**Equivalent form.** By the double-angle identity, $2 \\sin x \\cos x = \\sin(2x)$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{d}{dx}(e^{\\sin x}) = ?",
+      "choices": [
+        "e^{\\sin x} \\cos x",
+        "e^{\\cos x}",
+        "\\cos x",
+        "e^{\\sin x}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Outer $e^u \\to e^u$. Inner $\\sin x \\to \\cos x$.",
+        "$e^{\\sin x} \\cdot \\cos x$."
+      ],
+      "explanation": "$e^{\\sin x} \\cdot \\cos x = e^{\\sin x} \\cos x$.",
+      "steps": [
+        "**Outer: $e^u$. Inner: $u = \\sin x$.**",
+        "**Outer derivative.** $e^u$ (self-derivative) at $u = \\sin x$: $e^{\\sin x}$.",
+        "**Inner derivative.** $(\\sin x)' = \\cos x$.",
+        "**Multiply.** $e^{\\sin x} \\cdot \\cos x$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{d}{dx}(\\sin(x^3)) \\text{ vs } \\dfrac{d}{dx}((\\sin x)^3): \\text{ are they the same?}",
+      "choices": [
+        "Yes, identical",
+        "No — different functions, different derivatives"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$\\sin(x^3)$ and $\\sin^3(x) = (\\sin x)^3$ are completely different functions.",
+        "Different derivatives: $3x^2 \\cos(x^3)$ vs $3\\sin^2 x \\cdot \\cos x$."
+      ],
+      "explanation": "Different functions, different derivatives. $\\sin(x^3)$ has $x^3$ inside sine; $(\\sin x)^3$ has sine cubed. Their derivatives are $3x^2 \\cos(x^3)$ and $3\\sin^2 x \\cos x$.",
+      "steps": [
+        "**Two superficially-similar functions, but COMPLETELY different.** Parse the notation carefully.",
+        "**$\\sin(x^3)$**: sine of (x cubed). OUTER is $\\sin$; INNER is $x^3$. Chain rule: $\\cos(x^3) \\cdot 3x^2 = 3x^2 \\cos(x^3)$.",
+        "**$(\\sin x)^3$**: the CUBE of sine x. OUTER is $u^3$; INNER is $\\sin x$. Chain rule: $3(\\sin x)^2 \\cdot \\cos x = 3 \\sin^2 x \\cos x$.",
+        "**Different outer functions, different inner functions, different derivatives.**",
+        "**Lesson: when in doubt, mentally compute the function's value at $x = 2$ to disambiguate.** $\\sin(2^3) = \\sin(8) \\approx 0.989$. $(\\sin 2)^3 \\approx (0.909)^3 \\approx 0.751$. Very different. Always be precise about what's the outer and what's the inner."
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "title": "Statistics for Grouped Data",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### When data is too big to list one by one",
+        "When you have 30 students' marks you can list them and find the mean by adding and dividing. When you have **30,000** students' marks, you can't. So you **group** the data into intervals (called **classes**), record the **frequency** in each, and compute summary statistics from the table.",
+        "Example data (marks of 100 students):",
+        "| Marks | Frequency $f_i$ |",
+        "|---|---|",
+        "| 0 – 10 | 7 |",
+        "| 10 – 20 | 10 |",
+        "| 20 – 30 | 23 |",
+        "| 30 – 40 | 51 |",
+        "| 40 – 50 | 6 |",
+        "| 50 – 60 | 3 |",
+        "Each row is a **class** (interval). The numbers tell us how many students scored in each range — not their exact scores. The challenge: compute mean, median, and mode from this summary."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The three measures we'll compute",
+      "body": "**Mean** ($\\bar{x}$) — the 'average', total marks / number of students.\n\n**Median** — the middle value when data is ordered.\n\n**Mode** — the most frequently occurring value (or class).\n\nFor grouped data, each measure has its own formula because we don't know individual values."
+    },
+    {
+      "type": "text",
+      "md": [
+        "Before the formulas, build the picture. The histogram widget below takes raw data and shows the frequency in each bin — exactly the structure of the table above. Slide **bins** higher or lower and watch what happens to the **modal class** (highlighted red) and the **mean from class marks**:"
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "histogram",
+      "config": {
+        "preset": "test-scores",
+        "bins": 6
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Computing the mean — three methods",
+        "Every class has a **class mark** $x_i$ = midpoint of the interval (e.g., $0$–$10$ has class mark $5$). We assume every observation in that class equals its class mark — a reasonable approximation when intervals aren't too wide."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Method 1: Direct method",
+      "body": "$\\bar{x} = \\dfrac{\\sum f_i x_i}{\\sum f_i}$\n\nwhere $x_i$ is the class mark and $f_i$ is the frequency.\n\n**Procedure:** for each row, multiply $f_i \\cdot x_i$. Sum these products. Divide by total frequency.\n\nUse this when numbers are small. Gets tedious when class marks are large."
+    },
+    {
+      "type": "callout",
+      "title": "Method 2: Assumed-mean method",
+      "body": "Pick a convenient class mark $a$ (the 'assumed mean'). Compute deviations $d_i = x_i - a$.\n\n$\\bar{x} = a + \\dfrac{\\sum f_i d_i}{\\sum f_i}$\n\nThe $d_i$ are smaller numbers — easier arithmetic. Pick $a$ near the middle of the data."
+    },
+    {
+      "type": "callout",
+      "title": "Method 3: Step-deviation method",
+      "body": "If all classes have equal width $h$, define $u_i = (x_i - a)/h$. Then\n\n$\\bar{x} = a + h \\cdot \\dfrac{\\sum f_i u_i}{\\sum f_i}$.\n\nNow $u_i$ are small integers — much easier arithmetic. This is the fastest method when class widths are equal (which is the typical setup)."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — mean",
+        "Marks data from the table above. Class width $h = 10$. Pick assumed mean $a = 35$ (class mark of $30$–$40$, the modal-looking class).",
+        "Class marks $x_i$: 5, 15, 25, 35, 45, 55.",
+        "$u_i = (x_i - 35)/10$: $-3, -2, -1, 0, 1, 2$.",
+        "$f_i \\cdot u_i$: $-21, -20, -23, 0, 6, 6 \\Rightarrow \\sum f_i u_i = -52$.",
+        "$\\sum f_i = 100$.",
+        "$\\bar{x} = 35 + 10 \\cdot \\dfrac{-52}{100} = 35 - 5.2 = 29.8$ marks."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Computing the median",
+        "**1. Build a cumulative frequency (cf) column** — running total of $f_i$.",
+        "**2. Find $N/2$**, where $N = \\sum f_i$.",
+        "**3. Identify the median class** — the first class whose $cf$ reaches or exceeds $N/2$.",
+        "**4. Apply the formula:**"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\boxed{\\;\\text{Median} = l + \\dfrac{(N/2) - cf}{f} \\cdot h\\;}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "where",
+        "$l$ = lower limit of median class",
+        "$cf$ = cumulative frequency **of the class BEFORE the median class**",
+        "$f$ = frequency of the median class",
+        "$h$ = class width",
+        "Notice: $cf$ here is the cf of the *preceding* class, not the median class itself. Get this right or your answer will be off."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Median worked example",
+      "body": "Use the marks table. Compute cf:\n\n| Marks | $f$ | cf |\n|---|---|---|\n| 0–10 | 7 | 7 |\n| 10–20 | 10 | 17 |\n| 20–30 | 23 | 40 |\n| 30–40 | 51 | 91 |\n| 40–50 | 6 | 97 |\n| 50–60 | 3 | 100 |\n\n$N/2 = 50$. The first cf ≥ 50 is 91 (in class 30–40). So **median class = 30–40**.\n\n$l = 30$, $cf$ (of previous class) $= 40$, $f = 51$, $h = 10$.\n\n$\\text{Median} = 30 + \\dfrac{50 - 40}{51} \\cdot 10 = 30 + \\dfrac{100}{51} \\approx 31.96$ marks."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Computing the mode",
+        "**Modal class** = class with the highest frequency.",
+        "Then apply the modal formula:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\boxed{\\;\\text{Mode} = l + \\dfrac{f_1 - f_0}{2f_1 - f_0 - f_2} \\cdot h\\;}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "where",
+        "$l$ = lower limit of modal class",
+        "$f_1$ = frequency of modal class",
+        "$f_0$ = frequency of class BEFORE modal",
+        "$f_2$ = frequency of class AFTER modal",
+        "$h$ = class width"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Mode worked example",
+      "body": "Modal class for our table is **30–40** (highest frequency, $f_1 = 51$).\n\n$f_0 = 23$ (frequency of 20–30), $f_2 = 6$ (frequency of 40–50), $l = 30$, $h = 10$.\n\n$\\text{Mode} = 30 + \\dfrac{51 - 23}{2(51) - 23 - 6} \\cdot 10$\n\n$= 30 + \\dfrac{28}{73} \\cdot 10 \\approx 30 + 3.84 = 33.84$ marks."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The empirical relationship",
+        "For most real-world distributions:",
+        "$\\text{Mode} \\approx 3 \\cdot \\text{Median} - 2 \\cdot \\text{Mean}$",
+        "**Check our example:** Mean ≈ 29.8, Median ≈ 31.96.",
+        "RHS = $3(31.96) - 2(29.8) = 95.88 - 59.6 = 36.28$. Computed mode was 33.84. Close — empirical means *approximately*, not exact."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Ogive — the cumulative-frequency curve",
+      "body": "An **ogive** is a graph of cumulative frequency vs. upper class boundary (less-than ogive) or vs. lower class boundary (more-than ogive).\n\nThe **less-than ogive** plots points $(\\text{upper limit}, \\text{cf})$ and joins them with a smooth curve. It rises from 0 on the left to $N$ on the right.\n\n**To find median graphically:** find the y-value $N/2$ on the less-than ogive, drop a perpendicular to the x-axis. That x-value is the median.\n\nWhen both ogives are drawn together, they intersect at the median."
+    }
+  ]
+}

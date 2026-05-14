@@ -1,0 +1,67 @@
+{
+  "title": "Types of Angles",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "An **angle** is what you get when two rays share a common endpoint — the **vertex**. The two rays are the **sides** of the angle. Angles are measured in **degrees**: a complete revolution is 360°."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The five named types",
+        "**Acute**: less than 90°.",
+        "**Right**: exactly 90°. We mark right angles with a small square.",
+        "**Obtuse**: between 90° and 180°.",
+        "**Straight**: exactly 180° — the two rays form a single straight line.",
+        "**Reflex**: greater than 180° (and less than 360°)."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Drag the slider below — watch the type label change as you cross 90°, 180°, 270°."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "angle",
+      "config": {
+        "initialAngle": 60
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Pairs of related angles",
+        "**Complementary angles** sum to **90°**. If two angles are complementary, each one is the *complement* of the other. Example: 35° and 55° are complementary.",
+        "**Supplementary angles** sum to **180°**. Each is the *supplement* of the other. Example: 70° and 110° are supplementary.",
+        "**Vertical angles** are formed when two lines cross — the two pairs of *opposite* angles are always equal."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\text{If } \\alpha + \\beta = 90°, \\text{ they are complementary.} \\\\ \\text{If } \\alpha + \\beta = 180°, \\text{ they are supplementary.}"
+    },
+    {
+      "type": "callout",
+      "title": "Memory hooks",
+      "body": "**C**omplementary → **C**orner (90° corner). **S**upplementary → **S**traight line (180°). Look at the first letter of each."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked examples",
+        "**Find the complement of 27°.** $90 - 27 = 63°$.",
+        "**Find the supplement of 145°.** $180 - 145 = 35°$.",
+        "**Two angles are vertical and one measures 71°.** Vertical angles are equal — the other is also 71°."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "Five types: acute (<90°), right (=90°), obtuse (90°–180°), straight (=180°), reflex (>180°). Complementary pairs sum to 90°; supplementary pairs sum to 180°. Vertical angles (formed by intersecting lines) are always equal."
+    }
+  ]
+}

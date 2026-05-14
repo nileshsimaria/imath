@@ -1,0 +1,59 @@
+{
+  "title": "The Galton Board: Where Bell Curves Come From",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Drop a single marble through a triangular field of pegs. At each peg, it bounces left or right with equal probability. After many pegs, it lands in one of the bins at the bottom — but *which* bin is anyone's guess.",
+        "Now drop a thousand marbles. The bins fill in a way that is *not* anyone's guess."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "galton-board",
+      "config": {
+        "rows": 12
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "Try **Drop 1** a few times — you can predict almost nothing about where any single marble lands. Now **Drop 1000**. A bell-shaped histogram appears. **Order from chaos.**",
+        "What you're seeing has two layered names in mathematics:"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Two famous theorems in one widget",
+      "body": "**Law of Large Numbers** — as the number of marbles grows, the histogram's *shape* settles down (each bin's fraction converges to a fixed probability). Random in the small; predictable in the large.\n\n**Central Limit Theorem** — that limiting shape isn't arbitrary. The sum of many independent ± choices, each small, approaches a **normal distribution** (the bell curve). This is why bell curves appear everywhere in nature."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why a bell, not (say) a square?",
+        "Each marble's bin number is the **count of right-bounces** out of $n$ pegs. To land in the leftmost bin (0 rights), you need ALL $n$ bounces to go left — probability $(1/2)^n$. To land in the rightmost bin (all rights), same tiny probability. But to land in the middle bin (about $n/2$ rights), there are $\\binom{n}{n/2}$ different ways to do it — and that count is HUGE compared to the corners. **The middle bins are favored not because each marble aims there, but because there are many more paths leading there.**",
+        "Mathematically, $P(\\text{bin } k) = \\dbinom{n}{k}\\,(1/2)^n$. This is the binomial distribution. As $n$ grows, it approaches the normal distribution centered at $n/2$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### What the green dashed curve shows",
+        "Toggle the \"show theoretical bell curve\" checkbox. The dashed green line is what the bins *should* converge to — the binomial probabilities scaled to your total number of drops. After 10 drops the histogram looks ragged; after 100 it's mostly there; after 1000 your bars hug the curve almost perfectly. **That's the Law of Large Numbers, made visible.**"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Why this matters",
+      "body": "Anywhere many small independent random effects add up, you get a bell curve:\n\n- **Heights of people** — sum of many small genetic and environmental contributions.\n- **Measurement errors** — many tiny independent error sources.\n- **Test scores, IQ** — sum of many small ability contributions.\n- **Asset returns** (approximately, with caveats) — sum of many small market influences.\n\nThe Galton board is the cleanest possible demonstration of *why* the normal distribution is the 'default' distribution in nature and science."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Try this",
+        "**Compare drops:** drop 10 marbles, then reset and drop 1000. Notice how the shape stabilizes only in the long run. Single drops are unpredictable; large samples are highly predictable. That's the whole point of statistics.",
+        "**Read the stats:** the header shows the running **mean** (where the marbles center) and the **standard deviation** $\\sigma$ (how spread out they are). For a 12-row board, the mean settles around 6 (half the pegs went right on average) and $\\sigma \\approx \\sqrt{n/4} = \\sqrt{3} \\approx 1.73$. Compare to your widget's reading after 1000 drops."
+      ]
+    }
+  ]
+}

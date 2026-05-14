@@ -1,0 +1,99 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{For } \\sqrt{1+\\sin x} + \\sqrt{1-\\sin x} = \\sqrt{b}, \\text{ what range of } b \\text{ gives real solutions?}",
+      "choices": [
+        "b \\in [0, 2]",
+        "b \\in [2, 4]",
+        "b \\in [\\sqrt{2}, 2]",
+        "b \\in [0, 4]"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "The LHS oscillates between $\\sqrt{2}$ and $2$. So $\\sqrt{b}$ must lie in that band.",
+        "Square the bounds: $\\sqrt{b} \\in [\\sqrt{2}, 2]$ ⇒ $b \\in [\\,?, \\,?]$."
+      ],
+      "explanation": "$\\sqrt{b} \\in [\\sqrt{2}, 2]$ squares to $b \\in [2, 4]$. Outside that interval the line $y = \\sqrt{b}$ misses the LHS curve entirely.",
+      "steps": [
+        "Square both sides: $(1 + \\sin x) + 2\\sqrt{(1+\\sin x)(1-\\sin x)} + (1-\\sin x) = b$.",
+        "Simplify: $2 + 2\\sqrt{1 - \\sin^2 x} = b$, i.e. $2 + 2|\\cos x| = b$.",
+        "Isolate: $|\\cos x| = \\dfrac{b - 2}{2}$.",
+        "For a real $x$, we need $0 \\le |\\cos x| \\le 1$, which forces $0 \\le \\dfrac{b-2}{2} \\le 1$.",
+        "Solve: $2 \\le b \\le 4$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the maximum value of } \\sqrt{1+\\sin x} + \\sqrt{1-\\sin x}?",
+      "choices": [
+        "1",
+        "\\sqrt{2}",
+        "2",
+        "2\\sqrt{2}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "Try $x = 0$. Then $\\sin x = 0$, so each radical becomes $\\sqrt{1}$.",
+        "$1 + 1 = ?$"
+      ],
+      "explanation": "At $\\sin x = 0$, the expression is $\\sqrt{1} + \\sqrt{1} = 2$. This is the maximum; anywhere else, one term shrinks faster than the other grows.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The identity } 1 - \\sin^2 x = \\cos^2 x \\text{ lets you simplify } \\sqrt{(1+\\sin x)(1-\\sin x)} \\text{ to:}",
+      "choices": [
+        "\\cos x",
+        "|\\cos x|",
+        "\\cos^2 x",
+        "\\sin x \\cos x"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "$(1+\\sin x)(1-\\sin x) = 1 - \\sin^2 x = \\cos^2 x$.",
+        "$\\sqrt{\\cos^2 x}$ is NOT $\\cos x$ — recall the square-root rule."
+      ],
+      "explanation": "$\\sqrt{u^2} = |u|$, not $u$, for any real number. So $\\sqrt{\\cos^2 x} = |\\cos x|$. This matters because $\\cos x$ is sometimes negative, but the square root is always non-negative.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "prompt": "Why is squaring both sides safe in this problem?",
+      "choices": [
+        "Squaring is always reversible.",
+        "Both sides are non-negative (the LHS is a sum of square roots, the RHS is a square root), so squaring preserves equality.",
+        "Because the equation is periodic.",
+        "Because the equation has finitely many solutions."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Squaring $a = b$ gives $a^2 = b^2$, but $a^2 = b^2$ also includes $a = -b$.",
+        "If both $a$ and $b$ are $\\geq 0$, then $a = -b$ forces $a = b = 0$ — no spurious solutions."
+      ],
+      "explanation": "Squaring is reversible *only* when both sides are non-negative. Otherwise it can introduce extraneous solutions (the $a = -b$ branch). Here LHS is a sum of square roots ($\\geq 0$) and RHS is $\\sqrt{b}$ ($\\geq 0$), so squaring is fine.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{For } b = 4, \\text{ at what } x \\in [0, 2\\pi] \\text{ does the equation hold (smallest non-negative)?}",
+      "answer": 0,
+      "tolerance": 0.01,
+      "hints": [
+        "At $b = 4$, we need $|\\cos x| = 1$, i.e. $\\cos x = \\pm 1$.",
+        "$\\cos x = 1$ at $x = 0$. $\\cos x = -1$ at $x = \\pi$."
+      ],
+      "explanation": "$|\\cos x| = 1$ when $\\cos x = \\pm 1$, which happens at $x = 0, \\pi, 2\\pi$. The smallest non-negative is $x = 0$.",
+      "difficulty": "medium"
+    }
+  ]
+}

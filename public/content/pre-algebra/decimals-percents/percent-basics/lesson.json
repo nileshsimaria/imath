@@ -1,0 +1,74 @@
+{
+  "title": "Percent Basics",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "A **percent** is just a fraction with denominator $100$. The word *percent* literally means 'per hundred' (Latin: *per centum*). So $25\\%$ means $\\tfrac{25}{100}$, $7\\%$ means $\\tfrac{7}{100}$, and $100\\%$ means $\\tfrac{100}{100} = 1$ — the whole thing."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### See it as a grid",
+        "The visualization below has 100 cells — that's the whole, or $100\\%$. Drag the slider to see what any percent looks like. Each cell is $1\\%$."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "percent-grid",
+      "config": {
+        "initial": 25
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Percent ↔ fraction ↔ decimal",
+        "These three forms all say the same thing:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "25\\% = \\dfrac{25}{100} = \\dfrac{1}{4} = 0.25"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Percent → decimal**: divide by $100$ (move the decimal point two places left). $37\\% = 0.37$.",
+        "**Decimal → percent**: multiply by $100$ (move the decimal point two places right). $0.6 = 60\\%$.",
+        "**Percent → fraction**: write the percent over $100$ and simplify. $40\\% = \\tfrac{40}{100} = \\tfrac{2}{5}$.",
+        "**Fraction → percent**: convert to denominator $100$, or convert to a decimal then to a percent."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Common percents to memorize",
+      "body": "$10\\% = \\tfrac{1}{10}$, $20\\% = \\tfrac{1}{5}$, $25\\% = \\tfrac{1}{4}$, $50\\% = \\tfrac{1}{2}$, $75\\% = \\tfrac{3}{4}$, $100\\% = 1$. Knowing these by heart speeds up almost every percent calculation."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Finding a percent of a number",
+        "Convert the percent to a decimal (or fraction), then multiply.",
+        "**$20\\%$ of $50$.** $0.20 \\times 50 = 10$. Or: $\\tfrac{1}{5} \\times 50 = 10$.",
+        "**$15\\%$ of $200$.** $0.15 \\times 200 = 30$.",
+        "**$150\\%$ of $80$.** $1.5 \\times 80 = 120$. Yes — percents *can* be more than 100%."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### What percent is one number of another?",
+        "Divide, then multiply by $100$.",
+        "**What percent is $30$ of $40$?** $30 \\div 40 = 0.75 = 75\\%$.",
+        "**What percent is $7$ of $50$?** $7 \\div 50 = 0.14 = 14\\%$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "Percent = parts per hundred. Convert percent ↔ decimal by sliding the decimal point two places. Convert percent ↔ fraction by writing over $100$ and simplifying. To find a percent of a number, multiply by the decimal form. To find what percent one number is of another, divide and multiply by $100$."
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "title": "Permutations & Combinations — Advanced Problems",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### The two questions",
+        "**Permutations:** how many ways can $n$ items be arranged when **order matters**? $P(n, r) = n!/(n-r)!$.",
+        "**Combinations:** how many ways to choose $r$ items from $n$ when **order doesn't matter**? $C(n, r) = \\binom{n}{r} = n!/(r!(n-r)!)$.",
+        "Advanced problems often require where you must carefully *think* about which one applies, often with extra restrictions: 'no two boys sit together', 'a specific person never gets a particular role', 'word starts with a vowel', etc."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The fundamental counting principle",
+      "body": "If task 1 can be done in $m$ ways and task 2 in $n$ ways (independently), they can both be done in $m \\cdot n$ ways. **For OR (mutually exclusive choices)**: add. **For AND (sequential choices)**: multiply.\n\nAlmost every counting problem reduces to this principle plus careful bookkeeping."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Distinguishing arrangement and selection",
+        "**'How many ways can 5 books be arranged on a shelf?'** Order matters → permutation. $5! = 120$.",
+        "**'How many ways can 5 books be chosen from 10?'** Order doesn't matter → combination. $\\binom{10}{5} = 252$.",
+        "**'How many committees of 3 can be formed from 7 people?'** Combination. $\\binom{7}{3} = 35$.",
+        "**'How many words can be formed from the letters of MATHS?'** Permutation. $5! = 120$.",
+        "**'How many words from MISSISSIPPI?'** Permutation with repetition: $\\dfrac{11!}{4! \\cdot 4! \\cdot 2!}$ (dividing by counts of identical letters)."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Classic example — arrangement under constraints",
+      "body": "**'No two boys sit together.'** Place girls first (creating gaps), then place boys in the gaps.\n\nExample: 5 girls and 3 boys around a row. Place 5 girls: $5!$ ways. This creates 6 gaps (4 between adjacent girls, 2 at the ends). Place 3 boys in 3 of these 6 gaps: $\\binom{6}{3} \\cdot 3!$ ways.\n\n**Total:** $5! \\cdot \\binom{6}{3} \\cdot 3! = 120 \\cdot 20 \\cdot 6 = 14400$ arrangements.\n\n**Variations:**\n- 'No two girls sit together' (girls in gaps left by boys) — same technique, swap roles.\n- 'All vowels together' — treat the vowels as a single block. Inside the block, vowels rearrange.\n- 'A and B always together' — treat them as a single block. Sometimes multiply by 2 for AB vs BA."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Circular permutations",
+        "$n$ distinct objects arranged in a **circle** (so rotations are considered the same): $(n - 1)!$ arrangements.",
+        "**Why?** A circular arrangement has no fixed first position — rotating it gives the same arrangement. So we 'fix' one person, and arrange the rest in $(n - 1)!$ ways.",
+        "**Necklaces / reflections also identified:** $(n - 1)!/2$ arrangements (we further divide by 2 for the mirror-image equivalence)."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Worked example — circular arrangement",
+      "body": "**How many ways can 6 people sit around a circular table?**\n\n$(6 - 1)! = 5! = 120$ ways.\n\n**How many if two particular people, A and B, sit next to each other?**\n\nTreat AB as a single block, giving 5 'people' to arrange circularly: $(5 - 1)! = 24$. AB can be in two orders inside the block: $\\times 2$. Total: $48$.\n\n**How many if A and B are NOT next to each other?**\n\nTotal − together = $120 - 48 = 72$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Words from letters with repetition",
+        "For a word with $n$ letters where some letters repeat (say letter A appears $a$ times, B appears $b$ times, etc.):",
+        "Total arrangements = $\\dfrac{n!}{a! \\cdot b! \\cdot \\ldots}$.",
+        "**MISSISSIPPI:** 11 letters, with M(1), I(4), S(4), P(2). Total arrangements: $\\dfrac{11!}{1! \\cdot 4! \\cdot 4! \\cdot 2!} = 34650$.",
+        "**Arrangements where all I's are together:** treat IIII as a single block, so we have $M, IIII, S, S, S, S, P, P$ = 8 objects with 4 S's and 2 P's. Count: $\\dfrac{8!}{1! \\cdot 1! \\cdot 4! \\cdot 2!} = 840$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Combinations with restrictions",
+        "**Choose a committee of 5 from 7 men and 4 women with at least 2 women.**",
+        "Add up valid cases:",
+        "Exactly 2 women: $\\binom{4}{2}\\binom{7}{3} = 6 \\cdot 35 = 210$.",
+        "Exactly 3 women: $\\binom{4}{3}\\binom{7}{2} = 4 \\cdot 21 = 84$.",
+        "Exactly 4 women: $\\binom{4}{4}\\binom{7}{1} = 1 \\cdot 7 = 7$.",
+        "**Total:** $210 + 84 + 7 = 301$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Complementary counting",
+      "body": "When 'at least' or 'at most' problems blow up into many cases, count the complement instead.\n\n**'How many 5-card hands from a 52-card deck have AT LEAST one ace?'**\n\nTotal hands: $\\binom{52}{5} = 2,598,960$.\nHands with NO ace: $\\binom{48}{5} = 1,712,304$.\nHands with at least one ace: $2,598,960 - 1,712,304 = 886,656$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Common traps to avoid",
+        "**1. Overcounting due to similar items.** If items are identical, divide by the factorials.",
+        "**2. Double-counting due to permutation when it should be combination.** Order matters or doesn't — always ask.",
+        "**3. Forgetting the empty selection.** 'How many subsets?' answers $2^n$, including the empty set.",
+        "**4. Mixing AND vs OR.** Multiplication is AND (both happen); addition is OR (only mutually-exclusive cases).",
+        "**5. Missing the inside-the-block arrangement.** When you treat $k$ people as a block, remember they can be arranged among themselves in $k!$ ways."
+      ]
+    }
+  ]
+}

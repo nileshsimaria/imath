@@ -1,0 +1,150 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Identify } a \\text{ and } b \\text{ for } \\dfrac{x^2}{36} + \\dfrac{y^2}{16} = 1.",
+      "choices": [
+        "a = 6, b = 4",
+        "a = 36, b = 16",
+        "a = 4, b = 6",
+        "a = 12, b = 4"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Take square roots of denominators.",
+        "$a = \\sqrt{36} = 6$, $b = \\sqrt{16} = 4$."
+      ],
+      "explanation": "$a^2 = 36, b^2 = 16$, so $a = 6, b = 4$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{Find } c \\text{ (focal distance) for } \\dfrac{x^2}{25} + \\dfrac{y^2}{9} = 1.",
+      "answer": 4,
+      "tolerance": 0.001,
+      "hints": [
+        "$c^2 = a^2 - b^2$.",
+        "$25 - 9 = 16$, so $c = 4$."
+      ],
+      "explanation": "$c^2 = 25 - 9 = 16$, $c = 4$. Foci at $(\\pm 4, 0)$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{For an ellipse, the sum of distances from a point to the two foci equals:}",
+      "choices": [
+        "c",
+        "2c",
+        "a",
+        "2a"
+      ],
+      "answerIndex": 3,
+      "hints": [
+        "Pick a vertex on the major axis. Distance to each focus is $a - c$ and $a + c$.",
+        "Sum = $2a$."
+      ],
+      "explanation": "$2a$, the length of the major axis.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Eccentricity of an ellipse with } a = 5, c = 3?",
+      "answer": 0.6,
+      "tolerance": 0.001,
+      "hints": [
+        "$e = c/a$.",
+        "$3/5 = 0.6$."
+      ],
+      "explanation": "$e = c/a = 3/5 = 0.6$.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{Area of an ellipse with } a = 4, b = 3?",
+      "answer": 37.7,
+      "tolerance": 0.5,
+      "hints": [
+        "$A = \\pi a b$.",
+        "$\\pi \\cdot 12 \\approx 37.70$."
+      ],
+      "explanation": "$A = \\pi \\cdot 4 \\cdot 3 = 12\\pi \\approx 37.70$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** $A = \\pi a b$."
+        },
+        {
+          "text": "$\\pi \\cdot 12 \\approx 37.70$."
+        },
+        {
+          "text": "**Solution.** $A = \\pi \\cdot 4 \\cdot 3 = 12\\pi \\approx 37.70$."
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "prompt": "If an ellipse has eccentricity 0, what is it?",
+      "choices": [
+        "A line segment",
+        "A circle",
+        "A parabola",
+        "A point"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$e = c/a = 0 \\Rightarrow c = 0$. Foci coincide.",
+        "Both foci at center → circle."
+      ],
+      "explanation": "$e = 0$ means the two foci coincide at the center: the ellipse becomes a circle.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "prompt": "Earth's orbit around the Sun is an ellipse with the Sun at one focus. The orbit's eccentricity is approximately 0.017. This means:",
+      "choices": [
+        "The orbit is nearly circular but slightly elongated.",
+        "The orbit is highly elongated.",
+        "Earth has two suns.",
+        "Earth orbits in a straight line."
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Small $e$ ⇒ close to circular.",
+        "$e = 0$ is exactly circular. $e = 0.017$ is barely off."
+      ],
+      "explanation": "Eccentricity near zero means the ellipse is almost a circle. Earth's orbit is very close to circular; only highly precise measurements reveal it's not.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{An ellipse has } a = 10, b = 6. \\text{ Find the eccentricity (round to 3 decimals).}",
+      "answer": 0.8,
+      "tolerance": 0.005,
+      "hints": [
+        "$c^2 = a^2 - b^2 = 100 - 36 = 64 \\Rightarrow c = 8$.",
+        "$e = c/a = 8/10$."
+      ],
+      "explanation": "$c = 8$ (since $c^2 = 64$). $e = 8/10 = 0.8$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** $c^2 = a^2 - b^2 = 100 - 36 = 64 \\Rightarrow c = 8$."
+        },
+        {
+          "text": "$e = c/a = 8/10$."
+        },
+        {
+          "text": "**Solution.** $c = 8$ (since $c^2 = 64$). $e = 8/10 = 0.8$."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "title": "Recursive Sequences & Sequence Patterns",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Arithmetic and geometric sequences are special — they fit very tight rules. But sequences in the wild come in many flavors. This lesson zooms out: what *is* a sequence, what are the most natural ways to describe one, and what's the relationship between sequences and functions?"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. What Is a Sequence, Really?",
+        "A **sequence** is just an ordered list of numbers (or other objects). Each entry has a position number $n$ — the index — and a value $a_n$ — the term.",
+        "**Three ways to specify a sequence:**",
+        "**1. List the terms.** $1, 4, 9, 16, 25, \\ldots$ (the squares).",
+        "**2. Explicit formula.** $a_n = n^2$. Plug in any $n$, get the term.",
+        "**3. Recursive rule.** Specify the first term(s), then a rule for getting the next from the previous: $a_1 = 1$, $a_n = a_{n-1} + (2n - 1)$.",
+        "All three describe the *same* sequence — but each form serves a different purpose."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Investigating an unknown sequence",
+        "Given a list of terms, three questions worth asking:",
+        "**1.** Are the consecutive **differences** constant? (If so → arithmetic, $d$ = common difference.)",
+        "**2.** Are the consecutive **ratios** constant? (If so → geometric, $r$ = common ratio.)",
+        "**3.** If neither — what *is* the pattern? Try second differences (quadratic?), the ratio of consecutive differences (mixed?), or relate to known sequences (squares, Fibonacci, factorial)."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Worked example.** Investigate $2, 5, 10, 17, 26, \\ldots$",
+        "**Differences:** $3, 5, 7, 9$. Not constant — *not* arithmetic.",
+        "**Second differences:** $2, 2, 2$. Constant! That's the signature of a **quadratic** sequence.",
+        "Indeed: $a_n = n^2 + 1$. Check: $1+1, 4+1, 9+1, 16+1, 25+1 = 2, 5, 10, 17, 26$ ✓."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "First differences and the type of growth",
+      "body": "**Constant first differences → arithmetic** (linear). **Constant second differences → quadratic.** **Constant ratios → geometric** (exponential). Higher-degree polynomial sequences need higher-order differences to settle into a constant. Recognizing this pattern is a powerful first move."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. Recursive Sequences in Depth",
+        "A **recursive definition** has two parts:",
+        "**Initial condition(s)**: starting value(s).",
+        "**Recurrence relation**: a rule for $a_n$ in terms of earlier terms.",
+        "Recursive thinking is *the* fundamental tool of computer science (and a lot of mathematics). It's also how nature often \"computes\" — a population at year $n$ depends on the population at year $n - 1$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Familiar examples",
+        "**Arithmetic** ($d = 5$, $a_1 = 2$): $a_n = a_{n-1} + 5$. Each term is the previous plus a constant.",
+        "**Geometric** ($r = 3$, $a_1 = 2$): $a_n = 3 \\cdot a_{n-1}$. Each term is the previous times a constant.",
+        "Both of these only need the **single previous** term to define the next. The next examples use *two* previous terms — that's a step up in complexity."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The Fibonacci sequence",
+        "Maybe the most famous recursive sequence in mathematics:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "F_1 = 1, \\quad F_2 = 1, \\quad F_n = F_{n-1} + F_{n-2}\\ \\text{for}\\ n \\geq 3"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Each term is the sum of the two before it. The first dozen terms:",
+        "$$1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, \\ldots$$",
+        "Fibonacci numbers show up everywhere in nature: the spiral of a sunflower, the branching of a tree, the family tree of bee drones. A surprising result: the **ratio of consecutive Fibonacci numbers** approaches the **golden ratio** $\\varphi = \\dfrac{1 + \\sqrt{5}}{2} \\approx 1.618$ as $n$ grows."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Factorials",
+        "The factorial sequence $0!, 1!, 2!, 3!, \\ldots = 1, 1, 2, 6, 24, 120, \\ldots$ is also recursive:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "0! = 1, \\quad n! = n \\cdot (n - 1)!\\ \\text{for}\\ n \\geq 1"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Each term is $n$ times the previous one. Factorials grow *much* faster than exponentials — they're often the boundary between 'feasible' and 'impossible' in counting problems."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### A practical example — Tower of Hanoi",
+        "The Tower of Hanoi puzzle asks: how many moves are needed to transfer a stack of $n$ disks from one peg to another, moving one disk at a time and never placing a larger disk on a smaller one? Let $T_n$ be the answer.",
+        "**Initial:** $T_1 = 1$ (one disk, one move).",
+        "**Recurrence:** to move $n$ disks, first move the top $n - 1$ to a spare peg ($T_{n-1}$ moves), then move the bottom disk (1 move), then move the $n - 1$ on top of it ($T_{n-1}$ more moves):",
+        "$$T_n = 2 T_{n-1} + 1$$",
+        "First few terms: $T_1 = 1$, $T_2 = 3$, $T_3 = 7$, $T_4 = 15$, $T_5 = 31$, …",
+        "Recognize the pattern? $T_n = 2^n - 1$. The recursion has a clean closed form."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recursive vs explicit — when to choose which",
+      "body": "**Recursive** is great when the problem itself has self-similar structure (like the Tower of Hanoi). **Explicit** is great when you need to jump to a far-out term without computing all the ones in between. For some recursions you can *derive* a closed form; for others (like Fibonacci) it exists but is non-obvious. (Fibonacci has the closed form $F_n = \\dfrac{\\varphi^n - \\psi^n}{\\sqrt{5}}$ where $\\psi = \\dfrac{1 - \\sqrt{5}}{2}$ — pretty wild.)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. Patterns in Tables and Graphs",
+        "Plotting a sequence shows the type of growth at a glance.",
+        "**Arithmetic** plots as a **straight line** of dots — $a_n$ is *linear* in $n$.",
+        "**Geometric (with $r > 1$)** plots as a fast-growing **curve** — $a_n$ is *exponential* in $n$.",
+        "**Geometric with $0 < r < 1$** is a **decay** curve — points approach zero from above.",
+        "**Quadratic ($a_n = n^2$)** sits in between: faster than linear, slower than exponential.",
+        "Try the widget below — switch between arithmetic and geometric to feel the difference visually."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "sequence",
+      "config": {
+        "mode": "arithmetic",
+        "a1": 1,
+        "d": 2,
+        "n": 10,
+        "showModeTabs": true
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### A side-by-side table",
+        "Consider two sequences both starting at $1$:",
+        "**Arithmetic** ($d = 2$): $1, 3, 5, 7, 9, 11, 13, 15, \\ldots$",
+        "**Geometric** ($r = 2$): $1, 2, 4, 8, 16, 32, 64, 128, \\ldots$",
+        "After a few terms they're comparable, but by $n = 10$ the arithmetic is at $19$ while the geometric is at $512$. Exponential growth always wins eventually — that's why people say things like 'an extra 1% per year, compounded, adds up.'"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. Sequences ARE Functions",
+        "Here's the unifying idea: a **sequence is just a function whose domain is the positive integers** (or sometimes the non-negative integers, depending on whether we start at $a_0$ or $a_1$).",
+        "$$a:\\ \\mathbb{N} \\to \\mathbb{R}, \\quad n \\mapsto a_n$$",
+        "When you write $a_n$, that's exactly the same as writing $a(n)$. Sequence notation just emphasizes the discreteness of the input."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The correspondence",
+        "**Arithmetic sequence** $\\Leftrightarrow$ **linear function**.",
+        "$a_n = a_1 + (n - 1)d$ ↔ $f(x) = mx + b$, with slope $m = d$ and intercept $b = a_1 - d$.",
+        "**Geometric sequence** $\\Leftrightarrow$ **exponential function**.",
+        "$a_n = a_1 \\cdot r^{\\,n-1}$ ↔ $f(x) = a \\cdot b^x$ with $b = r$ and $a = a_1 / r$.",
+        "**Quadratic sequence** $\\Leftrightarrow$ **quadratic function**.",
+        "$a_n = An^2 + Bn + C$ corresponds to $f(x) = Ax^2 + Bx + C$.",
+        "Same algebra, just sampled at integer inputs."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Discrete vs continuous",
+      "body": "A function $f(x) = 2x + 3$ is defined for *every* real $x$ — including $x = 1.5$ or $x = -\\pi$. The corresponding arithmetic sequence $a_n = 2n + 3$ only lives at $n = 1, 2, 3, \\ldots$. Same algebraic shape, different domain. Functions are continuous lines (or curves); sequences are discrete dots."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why the connection matters",
+        "**Tools transfer.** Anything you know about linear functions (slope, intercept, graphing) immediately applies to arithmetic sequences. Anything about exponentials applies to geometric.",
+        "**Calculus generalizes.** When you take calculus, you'll learn how to take derivatives of continuous functions. The corresponding operation for sequences is finding **differences** — $\\Delta a_n = a_{n+1} - a_n$ — which is the discrete analog of a derivative.",
+        "**Modeling.** Real systems often have discrete time-steps (years, months, generations). The natural model is a sequence — but you can plot it as a (sampled) function and apply continuous tools when convenient."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "Three ways to describe a sequence: list, explicit formula, recursive rule. **Investigate** an unknown sequence by checking differences and ratios. **Recursive sequences** like Fibonacci ($F_n = F_{n-1} + F_{n-2}$) and factorials ($n! = n \\cdot (n-1)!$) generalize beyond the simple arithmetic/geometric forms. **Sequences are functions** with integer-only inputs — arithmetic ↔ linear, geometric ↔ exponential."
+    }
+  ]
+}

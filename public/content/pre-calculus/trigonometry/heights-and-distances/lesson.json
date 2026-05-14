@@ -1,0 +1,105 @@
+{
+  "title": "Heights & Distances",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### Looking up, looking down",
+        "Most real-world applications of right-triangle trigonometry are some form of: **observer looks at an object** and measures an angle, then we use sine, cosine, or tangent to compute an unknown height or distance.",
+        "Two essential terms to master:",
+        "**Angle of elevation** — angle measured **upward** from the horizontal. ('Looking up at the top of a building.')",
+        "**Angle of depression** — angle measured **downward** from the horizontal. ('Looking down from a tower at a person on the ground.')",
+        "**These two angles are equal in magnitude** when measured between the same two points — by alternate interior angles between parallel horizontal lines."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Drawing the diagram first",
+      "body": "The hardest part of heights-and-distances problems is translating the words into the right triangle. Practice this:\n\n**1.** Mark the observer and the object.\n**2.** Draw horizontal line from the observer's eye (or feet, depending on setup).\n**3.** Draw the line of sight to the object.\n**4.** The angle between the horizontal and line of sight is the elevation or depression angle.\n**5.** Drop perpendiculars to make a right triangle.\n**6.** Label known and unknown sides; pick the right trig ratio.\n\nWith a clean diagram, the algebra is mechanical."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The three special angles (memorize these)",
+        "Almost every textbook problem uses one of $30°, 45°, 60°$. Their trig values:",
+        "| $\\theta$ | $\\sin\\theta$ | $\\cos\\theta$ | $\\tan\\theta$ |",
+        "|---|---|---|---|",
+        "| $30°$ | $1/2$ | $\\sqrt{3}/2$ | $1/\\sqrt{3}$ |",
+        "| $45°$ | $1/\\sqrt{2}$ | $1/\\sqrt{2}$ | $1$ |",
+        "| $60°$ | $\\sqrt{3}/2$ | $1/2$ | $\\sqrt{3}$ |",
+        "These come from the 30-60-90 and 45-45-90 special right triangles. Refer back to those lessons if needed."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Single-observer template",
+        "**Setup.** An observer at point $P$ on level ground views the top of a tower of height $h$ at angle of elevation $\\theta$. Distance from observer to base of tower is $d$.",
+        "**Right triangle.** Horizontal leg $d$, vertical leg $h$, angle at $P$ is $\\theta$.",
+        "**Use tangent** (opposite over adjacent):",
+        "$\\tan\\theta = \\dfrac{h}{d}$.",
+        "Given any two of $\\{h, d, \\theta\\}$, solve for the third."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "right-triangle",
+      "config": {
+        "initialAngle": 30,
+        "hypotenuse": 10
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 1",
+        "The angle of elevation of the top of a 50 m tower from a point on the ground is $30°$. Find the distance from the point to the base.",
+        "**Setup.** $h = 50, \\theta = 30°, d = ?$",
+        "$\\tan 30° = 50/d \\Rightarrow 1/\\sqrt{3} = 50/d \\Rightarrow d = 50\\sqrt{3} \\approx 86.6$ m."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Two-observer setup",
+        "**Setup.** Two observers on the same horizontal line view the top of a tower. The closer one sees angle $\\alpha$, the farther one sees angle $\\beta$ (so $\\alpha > \\beta$). Distance between observers is $D$.",
+        "Let tower height $= h$, distance from closer observer to base $= x$. Then:",
+        "$\\tan\\alpha = h/x \\Rightarrow x = h \\cot\\alpha = h/\\tan\\alpha$.",
+        "$\\tan\\beta = h/(x + D) \\Rightarrow x + D = h/\\tan\\beta = h\\cot\\beta$.",
+        "Subtract: $D = h(\\cot\\beta - \\cot\\alpha)$.",
+        "So $h = \\dfrac{D}{\\cot\\beta - \\cot\\alpha}$, and then $x$ follows."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Worked example 2 — two-observer",
+      "body": "From a point on the ground, the angle of elevation of the top of a tower is $30°$. From a point closer by 30 m, the angle is $60°$. Find the tower's height.\n\n**Setup.** Closer angle $\\alpha = 60°$, farther angle $\\beta = 30°$, $D = 30$ m between observers.\n\n$\\cot 30° = \\sqrt{3}$, $\\cot 60° = 1/\\sqrt{3}$.\n\n$h = \\dfrac{30}{\\cot 30° - \\cot 60°} = \\dfrac{30}{\\sqrt{3} - 1/\\sqrt{3}} = \\dfrac{30}{2/\\sqrt{3}} = \\dfrac{30\\sqrt{3}}{2} = 15\\sqrt{3} \\approx 25.98$ m."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Angle of depression — view from the tower",
+        "**Setup.** From the top of an $h$ meter tower, the angle of depression of a point on the ground is $\\theta$. Find the distance from the base to the point.",
+        "**Key observation:** the angle of depression measured from the tower equals the angle of elevation measured from the point (alternate interior angles between parallel horizontal lines).",
+        "$\\tan\\theta = h/d \\Rightarrow d = h/\\tan\\theta$.",
+        "**Example.** From the top of a $60$ m lighthouse, the angle of depression of a boat is $45°$. Distance from base of lighthouse = $60/\\tan 45° = 60$ m."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Worked example 3 — depression from a moving aircraft",
+      "body": "An aeroplane is flying at altitude 1500 m. At a certain instant the angle of depression of a town on the ground is $60°$. After 15 seconds of horizontal flight, the angle of depression becomes $30°$. Find the speed of the aeroplane (in m/s).\n\n**Setup.** Let the plane be at point $A$ initially and $B$ after 15 s; the town is at point $C$ on the ground; the foot of perpendicular from $A$ is $A'$ and from $B$ is $B'$.\n\nFrom $A$: $\\tan 60° = 1500/A'C \\Rightarrow A'C = 1500/\\sqrt{3} = 500\\sqrt{3}$ m.\n\nFrom $B$: $\\tan 30° = 1500/B'C \\Rightarrow B'C = 1500\\sqrt{3}$ m.\n\nDistance covered: $A'B' = B'C - A'C = 1500\\sqrt{3} - 500\\sqrt{3} = 1000\\sqrt{3}$ m.\n\nIn 15 s. Speed $= 1000\\sqrt{3}/15 \\approx 115.5$ m/s ≈ $415.7$ km/h."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Tips for tricky problems",
+        "**1. Always draw the figure first.** Label everything clearly.",
+        "**2. Identify the right triangle(s).** Sometimes there are multiple (different elevation angles to the same point).",
+        "**3. Be careful with the question.** Sometimes asked for the *distance between the tower and observer*, sometimes *distance between two observers*, sometimes *height of tower*. Don't confuse them.",
+        "**4. Use the elevation-equals-depression rule** to convert tower-top views into ground-level views.",
+        "**5. When in doubt, use tangent.** It's almost always the right ratio because most problems involve only the vertical and horizontal sides — opposite and adjacent to the angle."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{The Koch snowflake starts as an equilateral triangle. At each step, } \\\\ \\text{ each segment is replaced by ? new segments.}",
+      "answer": 4,
+      "tolerance": 0.001,
+      "hints": [
+        "1 segment → middle third becomes a bump = 2 new + 2 original outer parts.",
+        "4 total."
+      ],
+      "explanation": "Each segment splits into 4 new (shorter) segments at every iteration.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{If the starting triangle has perimeter } 3, \\text{ what's the perimeter after 3 iterations?}",
+      "answer": 7.111,
+      "tolerance": 0.05,
+      "hints": [
+        "Perimeter multiplies by $4/3$ each iteration.",
+        "$3 \\cdot (4/3)^3 = 3 \\cdot 64/27 = 64/9 \\approx 7.111$."
+      ],
+      "explanation": "$3 \\cdot (4/3)^3 = 3 \\cdot 64/27 = 64/9 \\approx 7.111$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** Perimeter multiplies by $4/3$ each iteration."
+        },
+        {
+          "text": "$3 \\cdot (4/3)^3 = 3 \\cdot 64/27 = 64/9 \\approx 7.111$."
+        },
+        {
+          "text": "**Solution.** $3 \\cdot (4/3)^3 = 3 \\cdot 64/27 = 64/9 \\approx 7.111$."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "As iterations → ∞, the Koch snowflake's perimeter:",
+      "choices": [
+        "Converges to a finite value",
+        "Approaches zero",
+        "Grows without bound (infinite)",
+        "Stays constant"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Each step multiplies perimeter by 4/3 > 1.",
+        "$(4/3)^n \\to \\infty$."
+      ],
+      "explanation": "Perimeter multiplies by $4/3$ every step. Infinite limit.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "prompt": "What about the snowflake's AREA as iterations → ∞?",
+      "choices": [
+        "Approaches infinity",
+        "Approaches a finite value (specifically 8/5 of the original triangle's area)",
+        "Approaches zero",
+        "Oscillates"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Bumps add area; the added amounts form a geometric series with ratio < 1.",
+        "Sum converges."
+      ],
+      "explanation": "The added areas at each iteration form a convergent geometric series. Total area is finite — specifically $8/5$ of the original triangle's area.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{Fractal dimension of the Koch curve: } \\log 4 / \\log 3. \\\\ \\text{Round to 3 decimals.}",
+      "answer": 1.262,
+      "tolerance": 0.005,
+      "hints": [
+        "$\\log 4 \\approx 1.386$, $\\log 3 \\approx 1.099$.",
+        "$1.386 / 1.099 \\approx 1.262$."
+      ],
+      "explanation": "$\\log 4 / \\log 3 \\approx 1.262$ — between a 1D line and 2D plane.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** $\\log 4 \\approx 1.386$, $\\log 3 \\approx 1.099$."
+        },
+        {
+          "text": "$1.386 / 1.099 \\approx 1.262$."
+        },
+        {
+          "text": "**Solution.** $\\log 4 / \\log 3 \\approx 1.262$ — between a 1D line and 2D plane."
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "prompt": "The 'coastline paradox' refers to:",
+      "choices": [
+        "Coastlines being shorter from space.",
+        "The fact that coastline length depends on the measuring ruler — finer rulers give longer lengths, with no upper limit.",
+        "Coastlines being exactly circular.",
+        "The disagreement between maps."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Smaller ruler → captures more bays → longer measurement.",
+        "Like the Koch snowflake's perimeter."
+      ],
+      "explanation": "Real coastlines have detail at all scales — finer measuring sticks reveal more zigzags and yield longer total lengths. This is a real-world analog of the Koch snowflake's infinite perimeter.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "prompt": "Why was the Koch snowflake considered a 'monster' by early-20th-century mathematicians?",
+      "choices": [
+        "It looked scary.",
+        "It is a continuous curve with no tangent line anywhere — defies the smooth-curve calculus that was the math of the day.",
+        "It was impossible to compute.",
+        "It violated the laws of physics."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Calculus relies on smooth, differentiable curves.",
+        "The Koch curve has corners everywhere — no tangent line."
+      ],
+      "explanation": "Classical analysis presumed curves were smooth (had tangent lines). The Koch curve is continuous but has corners everywhere — defying that assumption.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "prompt": "If you reverse the Koch process — pushing bumps INWARD instead of outward — you get:",
+      "choices": [
+        "Nothing changes",
+        "The 'anti-snowflake', which loses area each iteration",
+        "A circle",
+        "A Sierpinski triangle"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Bumps push inward → bumps subtract area instead of adding.",
+        "It still has fractal dimension."
+      ],
+      "explanation": "Pushing inward gives the 'anti-snowflake'. Each step removes triangles instead of adding them. Still has fractal structure, just inverted.",
+      "difficulty": "medium"
+    }
+  ]
+}

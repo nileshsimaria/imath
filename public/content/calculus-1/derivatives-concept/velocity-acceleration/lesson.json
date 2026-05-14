@@ -1,0 +1,111 @@
+{
+  "title": "When Time Varies — Velocity & Acceleration",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "In *Calculus Made Easy*, Silvanus Thompson devotes a whole chapter to the simplest, sneakiest idea in calculus:",
+        "> *\"If a thing is going to change, then it must change with respect to something. Usually that something is time.\"*",
+        "We already met one rate of change: **speed = distance per little bit of time**, $\\dfrac{ds}{dt} = v$. That was the speedometer lesson.",
+        "This lesson is about doing the **same trick a second time**. If you differentiate position once, you get velocity. If you differentiate velocity once *more*, you get something brand new — **acceleration**."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The whole lesson in one sentence",
+      "body": "Differentiate $s(t)$ once → velocity $v(t)$. Differentiate $v(t)$ once → acceleration $a(t)$. The *same operation* — \"a little bit of, per little bit of time\" — used **twice in a row**."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. Toss a ball straight up",
+        "Throw a ball upward at $25\\text{ m/s}$ from a window $20\\text{ m}$ above the ground. Physics says its height is",
+        "$s(t) = 20 + 25\\,t - 4.9\\,t^2$",
+        "(The $-4.9\\,t^2$ is Earth's gravity: $\\tfrac{1}{2}g$ with $g = 9.8\\text{ m/s}^2$.)",
+        "Now apply the power rule one term at a time:",
+        "$\\dfrac{ds}{dt} = 25 - 9.8\\,t \\ = \\ v(t)$ — **the velocity at time $t$**.",
+        "At $t = 0$: $v = 25$ (the throw). At $t \\approx 2.55\\text{ s}$: $v = 0$ (top of the arc — the ball is momentarily not moving). After that, $v$ goes negative — the ball is falling.",
+        "**Differentiate again:**",
+        "$\\dfrac{dv}{dt} = -9.8 \\ = \\ a(t)$ — **the acceleration**.",
+        "It's a constant: $-9.8\\text{ m/s}^2$. Gravity isn't picky about whether the ball is going up or down — it tugs at the same rate the entire flight."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "time-derivatives",
+      "config": { "profile": "ball-thrown-up" }
+    },
+    {
+      "type": "callout",
+      "title": "Read the three plots together",
+      "body": "**Top — height $s(t)$:** parabola. Up, peak, down.\n\n**Middle — velocity $v(t)$:** straight line, sloping down. Positive while rising, **zero at the peak**, negative on the way down.\n\n**Bottom — acceleration $a(t)$:** flat line at $-9.8$. The same constant the whole flight.\n\nMove the time slider. Watch the cursor cross the three plots together. **At the peak of the height curve, the velocity is zero but the acceleration is NOT zero** — gravity is still pulling. That's why the ball doesn't hover."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. The notation grows by one tick each time",
+        "There are three ways mathematicians write \"differentiated twice with respect to $t$\":",
+        "$a(t) = \\dfrac{d^2 s}{dt^2} = \\ddot{s} = s''(t)$",
+        "$\\dfrac{d^2 s}{dt^2}$ — \"a little bit of (a little bit of $s$), per (little bit of $t$) squared\". Built straight out of the symbols.",
+        "$\\ddot{s}$ — two dots over $s$. Newton's notation. Used mostly in physics.",
+        "$s''(t)$ — two primes. Used everywhere in pure math.",
+        "All three mean **rate of change of the rate of change**."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Stacking primes",
+      "body": "$s$ — position\n\n$s'$ — velocity\n\n$s''$ — acceleration\n\n$s'''$ — *jerk* (rate of change of acceleration). When an elevator starts smoothly, designers worry about jerk: $s''$ rising slowly feels good; $s''$ jumping suddenly feels like a kick.\n\n$s''''$ — sometimes called *snap*. Yes really. Mostly used in fancy vibration analysis."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. Three motions, three personalities",
+        "Switch the **motion** dropdown in the widget. Three profiles, three different *shapes* of $s, v, a$.",
+        "### A. Ball thrown up (already done)",
+        "Parabolic $s$, linear $v$, **constant** $a$. The thing producing the motion is a *constant force* (gravity).",
+        "### B. Drag race — constant acceleration from rest",
+        "$s(t) = t^2$, so $v = 2t$, $a = 2$. Same family as the thrown ball, except $a > 0$ — you're speeding up. **Each differentiation strips one power of $t$:** $t^2 \\to 2t \\to 2 \\to 0$.",
+        "### C. Spring oscillation — the killer example",
+        "$s(t) = 2\\sin t$. Apply the rule for differentiating $\\sin$:",
+        "$v(t) = \\dfrac{ds}{dt} = 2\\cos t$",
+        "$a(t) = \\dfrac{dv}{dt} = -2\\sin t = -s(t)$",
+        "Look at that. **Acceleration is the negative of position.** Switch to \"oscillation\" in the widget — the red and blue curves are mirror images across the $t$-axis."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "$\\boxed{\\;a = -\\omega^2 s\\;}$ — the law of every oscillator",
+      "body": "Springs, pendulums, AC current, sound waves, light waves, the strings of a guitar — *anything* that oscillates obeys $a = -\\omega^2 s$, with $\\omega$ called the angular frequency. The further from equilibrium ($s = 0$), the harder it's pulled back. We discovered this just by differentiating $\\sin$ twice. No physics required."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. Why a moving object \"feels\" acceleration, not velocity",
+        "When a plane is cruising at $250\\text{ m/s}$, you don't feel a thing — drinks sit still, you can walk down the aisle. Velocity itself is invisible to your body.",
+        "But the moment the plane accelerates for takeoff, you're shoved back into your seat. **Acceleration is what bodies feel** — because Newton's $F = m\\,a$ is the force on you, and force is what you notice.",
+        "So when you sit in a car, your stomach is a tiny acceleration-meter: it reports $\\ddot{s}$, not $\\dot{s}$. Calculus's second derivative is the only one with a physical name (\"g-force\") that everyone uses, even people who hate math."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "How to read a position graph in one glance",
+      "body": "Don't squint at numbers — just look at the SHAPE.\n\n**Straight line, going up** → constant positive velocity, zero acceleration. \"Cruise.\"\n\n**Curve bending up (concave up)** → velocity is increasing → positive acceleration. \"Speeding up.\"\n\n**Curve bending down (concave down)** → velocity is decreasing → negative acceleration. \"Braking\" or \"falling back.\"\n\nThe second derivative is exactly what concavity *means*. Open up the widget and watch the height curve: the moment it stops bending up and starts bending down, that's the moment acceleration goes from positive to negative. (For a tossed ball, gravity is always negative — so the height curve bends down the whole time.)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 5. The pattern",
+        "Anywhere a quantity changes, **its rate of change is a quantity too** — and *that* one has its own rate of change. You can keep going.",
+        "| symbol | what it measures | felt how? |",
+        "|---|---|---|",
+        "| $s(t)$ | position | seen |",
+        "| $s'(t)$ | velocity | speedometer |",
+        "| $s''(t)$ | acceleration | shove in the back |",
+        "| $s'''(t)$ | jerk | sudden \"kick\" — bad ride |",
+        "Calculus didn't invent these — you've always known them. It just gave them one shared name (*the derivative*) and one shared way to compute them (*differentiate the previous one*). Same trick, repeated.",
+        "**That is Thompson's whole point in Chapter 8.** If you can differentiate once, you can differentiate twice. Calculus does not get harder when you do it again — it just gives you new physical quantities to talk about."
+      ]
+    }
+  ]
+}

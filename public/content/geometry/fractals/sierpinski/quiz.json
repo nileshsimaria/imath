@@ -1,0 +1,144 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{After } n = 3 \\text{ iterations of the Sierpinski triangle, how many small triangles are drawn?}",
+      "answer": 27,
+      "tolerance": 0.001,
+      "hints": [
+        "Each iteration multiplies the count by 3.",
+        "$3^3 = 27$."
+      ],
+      "explanation": "After $n$ iterations, $3^n$ triangles remain. $3^3 = 27$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "prompt": "What happens to the total AREA of the Sierpinski triangle as iterations → ∞?",
+      "choices": [
+        "Stays constant",
+        "Doubles each step",
+        "Approaches zero",
+        "Approaches infinity"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Each step keeps 3/4 of the previous area.",
+        "$(3/4)^n \\to 0$."
+      ],
+      "explanation": "Each iteration multiplies area by $3/4$. So area $= (3/4)^n \\cdot A_0 \\to 0$ as $n \\to \\infty$.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "What happens to the total PERIMETER as iterations → ∞?",
+      "choices": [
+        "Stays constant",
+        "Doubles each step",
+        "Approaches zero",
+        "Grows without bound"
+      ],
+      "answerIndex": 3,
+      "hints": [
+        "Each iteration multiplies the perimeter by $3/2$.",
+        "$(3/2)^n \\to \\infty$."
+      ],
+      "explanation": "Perimeter scales by $3/2$ each step (3 times as many sides, each at half length). Infinite in the limit.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{The fractal dimension of the Sierpinski triangle is } \\log 3 / \\log 2. \\\\ \\text{Round to 3 decimals.}",
+      "answer": 1.585,
+      "tolerance": 0.005,
+      "hints": [
+        "$\\log 3 \\approx 1.0986$, $\\log 2 \\approx 0.6931$.",
+        "$1.0986 / 0.6931 \\approx 1.585$."
+      ],
+      "explanation": "$\\log 3 / \\log 2 = \\log_2 3 \\approx 1.585$ — a fractional dimension.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** $\\log 3 \\approx 1.0986$, $\\log 2 \\approx 0.6931$."
+        },
+        {
+          "text": "$1.0986 / 0.6931 \\approx 1.585$."
+        },
+        {
+          "text": "**Solution.** $\\log 3 / \\log 2 = \\log_2 3 \\approx 1.585$ — a fractional dimension."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "prompt": "If you color Pascal's triangle so odd entries are BLACK and even entries are WHITE, what pattern emerges?",
+      "choices": [
+        "A solid triangle",
+        "A Sierpinski triangle",
+        "A checkerboard",
+        "Random noise"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "The parity of $\\binom{n}{k}$ has fractal structure.",
+        "Look up 'Pascal's triangle mod 2'."
+      ],
+      "explanation": "Coloring Pascal's triangle by the parity of its entries gives a Sierpinski-triangle pattern.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{At iteration } 5, \\text{ how many small triangles are in the Sierpinski triangle?}",
+      "answer": 243,
+      "tolerance": 0.001,
+      "hints": [
+        "$3^5 = ?$",
+        "$3^5 = 243$."
+      ],
+      "explanation": "$3^5 = 243$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "prompt": "The 'chaos game': start at a random point, repeatedly move halfway toward a random vertex of an equilateral triangle. What emerges?",
+      "choices": [
+        "Nothing — random noise.",
+        "A line segment.",
+        "A Sierpinski triangle.",
+        "A circle."
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Random procedure → deterministic shape.",
+        "The dots converge to the Sierpinski triangle."
+      ],
+      "explanation": "Surprisingly, after thousands of iterations, the random points fill out the Sierpinski triangle exactly. This is the simplest example of an 'iterated function system'.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "prompt": "Fractals like the Sierpinski triangle are described as having:",
+      "choices": [
+        "Smooth boundaries.",
+        "Self-similarity at every scale.",
+        "Always integer dimension.",
+        "A finite number of points."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Zoom in on any piece of a Sierpinski triangle — what do you see?",
+        "A smaller copy of the whole thing."
+      ],
+      "explanation": "Self-similarity: each part is a smaller copy of the whole. That's the defining feature of fractals.",
+      "difficulty": "medium"
+    }
+  ]
+}

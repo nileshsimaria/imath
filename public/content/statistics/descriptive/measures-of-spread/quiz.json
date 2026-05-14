@@ -1,0 +1,419 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{Find the range of: } 8, 12, 15, 4, 19, 7.",
+      "answer": 15,
+      "tolerance": 0,
+      "hints": [
+        "Range = max − min.",
+        "Max=19, min=4. $19-4 = 15$."
+      ],
+      "explanation": "$\\max - \\min = 19 - 4 = 15$.",
+      "steps": [
+        "Find max: 19. Find min: 4.",
+        "Range = $19 - 4 = 15$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{Find the IQR of: } 4, 6, 7, 8, 10, 12, 15, 18, 22.",
+      "answer": 10,
+      "tolerance": 0,
+      "hints": [
+        "Median = 10. Lower half: 4,6,7,8. Upper half: 12,15,18,22.",
+        "Q1 = (6+7)/2 = 6.5. Q3 = (15+18)/2 = 16.5. IQR = 10."
+      ],
+      "explanation": "Q1 = 6.5, Q3 = 16.5. IQR = $16.5 - 6.5 = 10$.",
+      "steps": [
+        "Sort (already sorted), 9 values. Median = 5th value = 10.",
+        "Lower half (below median): $4, 6, 7, 8$. Median of these (Q1) = $(6+7)/2 = 6.5$.",
+        "Upper half: $12, 15, 18, 22$. Median (Q3) = $(15+18)/2 = 16.5$.",
+        "IQR = Q3 − Q1 = $16.5 - 6.5 = 10$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{Find the variance of } 2, 4, 4, 4, 5, 5, 7, 9 \\text{ (use n in denominator).}",
+      "answer": 4,
+      "tolerance": 0,
+      "hints": [
+        "Mean = 5. Squared deviations: 9,1,1,1,0,0,4,16.",
+        "Sum/n = 32/8 = 4."
+      ],
+      "explanation": "$\\sigma^2 = 32/8 = 4$.",
+      "steps": [
+        "Mean $= (2+4+4+4+5+5+7+9)/8 = 40/8 = 5$.",
+        "Squared deviations: $9, 1, 1, 1, 0, 0, 4, 16$. Sum: $32$.",
+        "Variance: $32/8 = 4$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Find the std deviation of } 2, 4, 4, 4, 5, 5, 7, 9.",
+      "answer": 2,
+      "tolerance": 0,
+      "hints": [
+        "Variance = 4 (from prior).",
+        "$\\sigma = \\sqrt{4} = 2$."
+      ],
+      "explanation": "$\\sigma = \\sqrt{\\sigma^2} = \\sqrt{4} = 2$.",
+      "steps": [
+        "Std dev = $\\sqrt{\\text{variance}} = \\sqrt{4} = 2$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which spread measure is most resistant to outliers?}",
+      "choices": [
+        "Range",
+        "IQR",
+        "Variance",
+        "Standard deviation"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Outliers fall in the outermost 25% — IQR ignores them.",
+        "Range, variance, and std dev all use extreme values."
+      ],
+      "explanation": "IQR uses only the middle 50% — outliers in the tails don't affect it.",
+      "steps": [
+        "**Range:** uses max and min — outliers dominate.",
+        "**Variance/std dev:** large $(x_i - \\bar{x})^2$ for outliers — strong effect.",
+        "**IQR:** uses Q1 and Q3 — ignores the outermost 25% on each side.",
+        "**IQR is the most resistant.**"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{Two datasets both have mean 50. A: } 48, 50, 52. \\text{ B: } 30, 50, 70. \\\\ \\text{Compute std dev of B (use n).}",
+      "answer": 16.33,
+      "tolerance": 0.1,
+      "hints": [
+        "Squared deviations: $(30-50)^2, (50-50)^2, (70-50)^2 = 400, 0, 400$.",
+        "Sum/n = 800/3 ≈ 266.67. $\\sqrt{266.67} \\approx 16.33$."
+      ],
+      "explanation": "$\\sigma = \\sqrt{800/3} \\approx 16.33$. (Vs A: $\\sigma_A = \\sqrt{8/3} \\approx 1.63$ — much tighter.)",
+      "steps": [
+        "Mean = 50.",
+        "Squared deviations: $400, 0, 400$. Sum = 800.",
+        "Variance = $800/3 \\approx 266.67$.",
+        "Std dev = $\\sqrt{266.67} \\approx 16.33$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the relationship between variance and standard deviation?}",
+      "choices": [
+        "$\\sigma = \\sigma^2$",
+        "$\\sigma = \\sqrt{\\sigma^2}$ (std dev = square root of variance)",
+        "$\\sigma$ is half of $\\sigma^2$",
+        "They're the same number"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Std dev is the SQUARE ROOT of variance.",
+        "$\\sigma^2$ is variance; $\\sigma$ is std dev."
+      ],
+      "explanation": "Standard deviation = √(variance). Variance is in 'squared units' (e.g., m²); std dev is in original units (m).",
+      "steps": [
+        "Variance: $\\sigma^2 = $ average of squared deviations.",
+        "Standard deviation: $\\sigma = \\sqrt{\\sigma^2}$.",
+        "(Std dev brings the units back to the original scale.)"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{Find Q1 of: } 3, 5, 7, 9, 11, 13, 15, 17.",
+      "answer": 6,
+      "tolerance": 0,
+      "hints": [
+        "8 values → median between 4th and 5th = 10. Lower half is first 4 values.",
+        "Q1 = median of $3, 5, 7, 9$ = $(5+7)/2 = 6$."
+      ],
+      "explanation": "Lower half: $3, 5, 7, 9$. Q1 = $(5+7)/2 = 6$.",
+      "steps": [
+        "Sorted: $3, 5, 7, 9, 11, 13, 15, 17$. (8 values, even.)",
+        "Median = avg of 4th and 5th = $(9+11)/2 = 10$.",
+        "Lower half (first 4): $3, 5, 7, 9$.",
+        "Q1 = median of lower half = $(5+7)/2 = 6$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{For the data } 5, 8, 10, 12, 15, \\text{ find the standard deviation (use n).} \\\\ \\text{(Round to 2 decimals.)}",
+      "answer": 3.41,
+      "tolerance": 0.05,
+      "hints": [
+        "Mean = 10. Squared deviations: 25, 4, 0, 4, 25.",
+        "Sum/n = 58/5 = 11.6. $\\sqrt{11.6} \\approx 3.41$."
+      ],
+      "explanation": "$\\sigma = \\sqrt{58/5} \\approx 3.41$.",
+      "steps": [
+        "Mean: $(5+8+10+12+15)/5 = 50/5 = 10$.",
+        "Squared deviations: $25, 4, 0, 4, 25$. Sum = $58$.",
+        "Variance = $58/5 = 11.6$.",
+        "Std dev = $\\sqrt{11.6} \\approx 3.41$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{If every value in a dataset increases by 5, what happens to the std deviation?} \\\\ \\text{(Enter the new std dev as a multiplier of the original.)}",
+      "answer": 1,
+      "tolerance": 0,
+      "hints": [
+        "Adding a constant shifts everything but doesn't change spread.",
+        "Std dev is unchanged."
+      ],
+      "explanation": "Adding a constant doesn't change spread. Std dev unchanged (multiplier 1).",
+      "steps": [
+        "If $x \\to x + c$, every deviation $x_i - \\bar{x}$ stays the same (both shift equally).",
+        "Squared deviations same → variance same → std dev same.",
+        "**Std dev unchanged** (the new is 1× the old)."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{If every value is multiplied by 3, what happens to std dev?} \\\\ \\text{(Multiplier?)}",
+      "answer": 3,
+      "tolerance": 0,
+      "hints": [
+        "Std dev scales linearly with the data.",
+        "Multiplied by 3."
+      ],
+      "explanation": "Multiplying every value by 3 multiplies the std dev by 3 (variance by 9).",
+      "steps": [
+        "If $x \\to 3x$, deviations also scale: $(3x_i - 3\\bar{x}) = 3(x_i - \\bar{x})$.",
+        "Squared deviations multiplied by $9$ → variance × $9$.",
+        "Std dev = $\\sqrt{}$ → multiplied by $3$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The five-number summary of a dataset is } (12, 18, 22, 27, 35). \\\\ \\text{What is the IQR?}",
+      "choices": [
+        "9",
+        "23",
+        "5",
+        "13"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "IQR = Q3 - Q1.",
+        "Q3 = 27, Q1 = 18 → IQR = 9."
+      ],
+      "explanation": "IQR = Q3 - Q1 = 27 - 18 = 9.",
+      "steps": [
+        "Five-number summary order: min, Q1, median, Q3, max.",
+        "So Q1 = 18, Q3 = 27.",
+        "IQR = $27 - 18 = 9$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q13",
+      "type": "multiple-choice",
+      "prompt": "What is the difference between SAMPLE variance and POPULATION variance?",
+      "choices": [
+        "They use different data points",
+        "Population variance divides by N; sample variance divides by n − 1 (Bessel's correction)",
+        "Sample variance is always larger",
+        "There is no difference"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "When you use a sample's mean to estimate variance, you lose one degree of freedom.",
+        "Dividing by $n-1$ instead of $n$ corrects the bias."
+      ],
+      "explanation": "Population variance: $\\sigma^2 = \\frac{1}{N}\\sum (x_i - \\mu)^2$ — divides by $N$. Sample variance: $s^2 = \\frac{1}{n-1}\\sum (x_i - \\bar{x})^2$ — divides by $n-1$ (*Bessel's correction*). Why? When you use the sample mean $\\bar{x}$ (instead of the unknown true mean $\\mu$), deviations from $\\bar{x}$ are systematically smaller than from $\\mu$. Dividing by $n-1$ corrects this bias and gives an *unbiased* estimator of the population variance.",
+      "steps": [
+        "**Two flavors of variance.** Population: when you have *every* member of the population. Sample: when you're estimating population variance from a sample.",
+        "**Formulas.** Population: $\\sigma^2 = \\frac{1}{N}\\sum (x_i - \\mu)^2$. Sample: $s^2 = \\frac{1}{n-1}\\sum (x_i - \\bar{x})^2$.",
+        "**Why $n - 1$?** When you estimate $\\sigma$ from a sample, the *mean* $\\bar{x}$ used in the deviations is itself estimated from the same data — using up one 'degree of freedom'. The deviations from $\\bar{x}$ are systematically a bit smaller than from the true $\\mu$. Dividing by $n - 1$ instead of $n$ compensates.",
+        "**Effect.** For $n = 10$, dividing by 9 instead of 10 inflates the result by $10/9 \\approx 11\\%$. The smaller the sample, the bigger the correction.",
+        "**Pattern lesson — when each applies.** Use $n$ when your data IS the population (e.g., 'mean grade of MY class'). Use $n - 1$ when your data is a sample meant to estimate a larger population. Most statistical software defaults to $n - 1$. Calculators often have a switch: $\\sigma$ vs $s$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q14",
+      "type": "numeric",
+      "promptTex": "\\text{Compute the Mean Absolute Deviation (MAD) of: } 4, 8, 6, 10, 12. \\\\ \\text{Round to 2 decimals.}",
+      "answer": 2.4,
+      "tolerance": 0.05,
+      "hints": [
+        "MAD = $\\frac{1}{n} \\sum |x_i - \\bar{x}|$ (mean of absolute deviations).",
+        "Mean = 8. Absolute deviations: 4, 0, 2, 2, 4. Sum = 12.",
+        "MAD = $12/5 = 2.4$."
+      ],
+      "explanation": "Mean = $(4+8+6+10+12)/5 = 8$. Absolute deviations: $|4-8|=4, 0, 2, 2, 4$. Sum: 12. MAD = $12/5 = 2.4$. (Compare with SD: $\\sqrt{40/5} = 2.83$ — slightly larger because squaring penalizes outliers more.)",
+      "steps": [
+        "**Recognize the type — Mean Absolute Deviation.** A robust alternative to standard deviation that uses absolute (not squared) deviations.",
+        "**Find the mean.** $\\bar{x} = (4+8+6+10+12)/5 = 40/5 = 8$.",
+        "**Compute absolute deviations.** $|4-8|=4, |8-8|=0, |6-8|=2, |10-8|=2, |12-8|=4$.",
+        "**Average them.** $(4 + 0 + 2 + 2 + 4)/5 = 12/5 = 2.4$.",
+        "**Why MAD vs SD?** Both measure spread, but MAD is more robust to outliers (absolute values don't penalize as harshly as squares). SD is more mathematically convenient (smooth, integrates with normal theory). Real-world data analysis often reports MAD or *median* absolute deviation alongside SD."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q15",
+      "type": "numeric",
+      "promptTex": "\\text{Data set has mean } 50 \\text{ and standard deviation } 10. \\\\ \\text{Find the coefficient of variation (CV) as a percentage.}",
+      "answer": 20,
+      "tolerance": 0.5,
+      "hints": [
+        "CV $= \\sigma / \\bar{x}$ (typically expressed as a percentage).",
+        "CV $= 10/50 = 0.20 = 20\\%$."
+      ],
+      "explanation": "Coefficient of variation: $\\text{CV} = \\sigma / \\bar{x} = 10/50 = 0.20 = 20\\%$. CV measures *relative* spread — useful when comparing variability across data sets with very different means.",
+      "steps": [
+        "**Recognize the type — relative spread.** Standard deviation gives absolute spread, but '$\\sigma = 10$' means very different things for data centered at $50$ vs $5000$.",
+        "**Apply the CV formula.** $\\text{CV} = \\sigma / \\bar{x}$.",
+        "**Plug in.** $\\text{CV} = 10/50 = 0.20 = 20\\%$.",
+        "**When to use CV.** Compare 'is income more variable than test scores?'. Mean incomes are huge, mean scores are tens — SD alone can't compare. CV normalizes by the mean.",
+        "**Caveats.** CV is meaningless when $\\bar{x}$ is near 0 (denominator blows up). And it requires data on a ratio scale (with a meaningful zero), so it's a no-go for temperatures in Celsius (where '0' is arbitrary)."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q16",
+      "type": "multiple-choice",
+      "prompt": "From a box plot, you can read off all of the following EXCEPT:",
+      "choices": [
+        "Median, Q1, Q3, min, max (the five-number summary)",
+        "The IQR",
+        "Whether the distribution is skewed",
+        "The mean"
+      ],
+      "answerIndex": 3,
+      "hints": [
+        "A box plot shows the 5-number summary — median, quartiles, and extremes.",
+        "Skewness shows up in the relative box lengths and whisker lengths.",
+        "Mean is NOT directly readable from a box plot (unless explicitly marked)."
+      ],
+      "explanation": "Box plots show the five-number summary (min, Q1, median, Q3, max), the IQR (box width), and visual cues to skewness (one side of the box longer than the other → skew). The mean is *not* directly visible — it's not one of the marks. Some plots add it as a dot or asterisk, but conceptually it's separate from the box-plot construction.",
+      "steps": [
+        "**Anatomy of a box plot.** A line for the *median* inside a box. Box ends at Q1 (bottom) and Q3 (top). Whiskers extend to min and max (or to the outermost non-outliers).",
+        { "svg": "<svg viewBox=\"0 0 320 180\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"30\" y1=\"120\" x2=\"290\" y2=\"120\" stroke=\"#475569\" stroke-width=\"1\"/><line x1=\"60\" y1=\"110\" x2=\"60\" y2=\"130\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><line x1=\"100\" y1=\"100\" x2=\"100\" y2=\"140\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><rect x=\"100\" y=\"100\" width=\"120\" height=\"40\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><line x1=\"160\" y1=\"100\" x2=\"160\" y2=\"140\" stroke=\"#dc2626\" stroke-width=\"2\"/><line x1=\"220\" y1=\"100\" x2=\"220\" y2=\"140\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><line x1=\"260\" y1=\"110\" x2=\"260\" y2=\"130\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"120\" x2=\"100\" y2=\"120\" stroke=\"#1e293b\" stroke-width=\"1\"/><line x1=\"220\" y1=\"120\" x2=\"260\" y2=\"120\" stroke=\"#1e293b\" stroke-width=\"1\"/><text x=\"60\" y=\"160\" font-size=\"11\" fill=\"#475569\" text-anchor=\"middle\">min</text><text x=\"100\" y=\"160\" font-size=\"11\" fill=\"#475569\" text-anchor=\"middle\">Q1</text><text x=\"160\" y=\"160\" font-size=\"11\" font-weight=\"700\" fill=\"#dc2626\" text-anchor=\"middle\">median</text><text x=\"220\" y=\"160\" font-size=\"11\" fill=\"#475569\" text-anchor=\"middle\">Q3</text><text x=\"260\" y=\"160\" font-size=\"11\" fill=\"#475569\" text-anchor=\"middle\">max</text><text x=\"160\" y=\"30\" font-size=\"12\" fill=\"#475569\" font-style=\"italic\" text-anchor=\"middle\">Box plot: shows 5-number summary, IQR, and skew cues</text><text x=\"160\" y=\"55\" font-size=\"11\" fill=\"#dc2626\" font-style=\"italic\" text-anchor=\"middle\">does NOT directly show the mean</text></svg>" },
+        "**Skewness cues.** If the median sits closer to Q1 than to Q3, the data is right-skewed (long upper whisker). If Q1 to median is bigger than median to Q3, it's left-skewed.",
+        "**IQR is the box width.** Q3 − Q1 = the middle 50%.",
+        "**Mean isn't there.** A box plot is built entirely from order statistics (quartiles). The mean involves an arithmetic operation that's not encoded in the box's geometry."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q17",
+      "type": "numeric",
+      "promptTex": "\\text{A dataset has Q1 = 20 and Q3 = 40. Using the 1.5 × IQR rule,} \\\\ \\text{values above what threshold are considered outliers?}",
+      "answer": 70,
+      "tolerance": 0,
+      "hints": [
+        "IQR = Q3 - Q1 = $40 - 20 = 20$.",
+        "Upper outlier threshold: Q3 + 1.5·IQR = $40 + 1.5(20) = 40 + 30 = 70$."
+      ],
+      "explanation": "$\\text{IQR} = 40 - 20 = 20$. Upper-outlier cutoff: $\\text{Q3} + 1.5 \\cdot \\text{IQR} = 40 + 30 = 70$. (And lower cutoff: $\\text{Q1} - 1.5 \\cdot \\text{IQR} = 20 - 30 = -10$.)",
+      "steps": [
+        "**Recognize the type — Tukey's 1.5×IQR outlier rule.** A common, distribution-free way to flag potential outliers.",
+        "**Compute the IQR.** $\\text{IQR} = \\text{Q3} - \\text{Q1} = 40 - 20 = 20$.",
+        "**Compute the upper threshold.** Upper fence = $\\text{Q3} + 1.5 \\cdot \\text{IQR} = 40 + 1.5 \\cdot 20 = 40 + 30 = 70$.",
+        "**(Symmetric lower threshold.)** Lower fence = $\\text{Q1} - 1.5 \\cdot \\text{IQR} = 20 - 30 = -10$.",
+        "**Why 1.5?** Arbitrary but standard (Tukey, 1977). It catches values that are 'unusually far' from the bulk while not flagging too aggressively in well-behaved data. For a normal distribution, about $0.7\\%$ of values fall outside the 1.5×IQR fences — rare but real.",
+        "**Use in box plots.** In *modified* box plots, whiskers extend only to the most extreme value WITHIN the fences, and points beyond are drawn separately as outlier dots."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q18",
+      "type": "multiple-choice",
+      "prompt": "Two basketball teams average 80 points per game. Team A has SD = 5; Team B has SD = 15. What does this say about the teams?",
+      "choices": [
+        "Team A scores higher on average",
+        "Team A is more consistent / predictable; Team B has more game-to-game variability",
+        "Team B is the better team",
+        "Nothing — same average means same performance"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Same mean, different SDs. Smaller SD = tighter spread = more consistent.",
+        "Team A: rarely strays far from 80. Team B: bigger highs AND bigger lows."
+      ],
+      "explanation": "Both teams average 80, but with different volatility. Team A (SD = 5) plays consistently near 80 — typical games span $\\sim 75 - 85$. Team B (SD = 15) is unpredictable — typical games span $\\sim 65 - 95$. Same average, very different game-to-game experiences.",
+      "steps": [
+        "**Same mean, different spread.** When two distributions share a mean, the smaller-SD one is more concentrated near it; the larger-SD one has wider tails.",
+        "**Numbers via the 68% rule** (assuming roughly normal). Team A: 68% of games between $75$ and $85$. Team B: 68% of games between $65$ and $95$.",
+        "**What this means.** Team B will have more high-scoring blowouts AND more low-scoring duds. Team A is the metronome.",
+        "**Real-world relevance.** In investing, 'expected return' is the mean, 'volatility' is the SD. Two investments with the same expected return but different volatilities are very different risk profiles. Statistics like Sharpe ratio = mean / SD (a kind of inverse CV) measure 'return per unit of risk'.",
+        "**Pattern lesson.** Always report mean AND spread. The mean alone tells half the story."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q19",
+      "type": "numeric",
+      "promptTex": "\\text{For the data set } 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 \\\\ \\text{(already sorted, n = 10), find the 90th percentile using the simple position formula.} \\\\ \\text{Round to the nearest whole value.}",
+      "answer": 90,
+      "tolerance": 5,
+      "hints": [
+        "Position of 90th percentile: $0.9 \\cdot (n + 1) = 0.9 \\cdot 11 = 9.9$.",
+        "Value at position 9 = 90, position 10 = 100. Interpolate: $90 + 0.9 \\cdot (100-90) = 99$.",
+        "(Different software uses slightly different conventions; the simplest answer ≈ 90 or 99 are both acceptable.)"
+      ],
+      "explanation": "Position $= 0.9 \\cdot (10 + 1) = 9.9$. Between positions 9 (value 90) and 10 (value 100). Interpolate: $90 + 0.9 \\cdot 10 \\approx 99$. Some textbooks would simply report the value at the 9th position (= 90) — both methods are common. (The 90th percentile is the value above which only 10% of the data lies.)",
+      "steps": [
+        "**Recognize the type — percentile from sorted data.** The 90th percentile is the value $V$ such that $90\\%$ of the data is at or below $V$.",
+        "**Simple position formula.** $\\text{position} = 0.9 \\cdot (n+1) = 0.9 \\cdot 11 = 9.9$.",
+        "**Interpolate.** Between position 9 (value 90) and position 10 (value 100). Take 0.9 of the way: $90 + 0.9 \\cdot (100 - 90) = 99$.",
+        "**Alternative — no interpolation.** Some texts just round position to 9, giving value 90.",
+        "**Caveat — percentile conventions vary.** There are several legitimate ways to compute percentiles (linear interpolation, nearest rank, etc.), and software packages disagree by a few values for small $n$. For large data sets, the differences become negligible. The CONCEPT (X% of data at or below) is unambiguous."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q20",
+      "type": "multiple-choice",
+      "prompt": "You're analyzing a small dataset that includes a couple of suspiciously extreme values. Which spread measure should you prefer?",
+      "choices": [
+        "Standard deviation — the most informative",
+        "Range — captures the full extent",
+        "Interquartile range (IQR) — ignores the extremes",
+        "Variance — has nice mathematical properties"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Standard deviation, range, and variance all amplify outliers (sometimes squared!).",
+        "IQR uses only the middle 50%, so extremes don't affect it."
+      ],
+      "explanation": "IQR is *robust* — it depends only on Q1 and Q3, ignoring the outermost 25% on each side. SD, range, and variance all use the extreme values and get inflated by outliers. For exploratory analysis of data with extremes, the IQR is the safer summary.",
+      "steps": [
+        "**Sensitivity to extremes — ranked from most to least.**\n\n• *Range*: max − min, fully extreme-driven.\n• *Variance / SD*: extreme values get squared → outsized contribution.\n• *MAD*: extreme values contribute linearly (less amplified than SD).\n• *IQR*: outermost $25\\%$ of values can't shift Q1 or Q3.",
+        "**Practical recipe.** Report BOTH a robust and a non-robust spread measure for exploration. Big gap between SD and IQR → suspect outliers or heavy tails.",
+        "**Pattern lesson — match the measure to the data.** For clean, symmetric data (e.g., normally distributed measurement errors), SD is informative. For real-world data with occasional outliers (incomes, response times, scientific measurements), IQR is safer."
+      ],
+      "difficulty": "easy"
+    }
+  ]
+}

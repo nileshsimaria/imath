@@ -1,0 +1,265 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\lim_{x \\to \\infty} \\dfrac{1}{x} = ?",
+      "answer": 0,
+      "tolerance": 0,
+      "hints": [
+        "Reciprocal of a huge number is essentially 0.",
+        "$0$."
+      ],
+      "explanation": "$1/x \\to 0$ as $x \\to \\infty$.",
+      "steps": [
+        "**The most basic 'limit at infinity' fact.** $\\dfrac{1}{x} \\to 0$ as $x \\to \\infty$. (Reciprocal of a huge number is a tiny number; as the denominator goes to infinity, the fraction approaches 0.)",
+        "**Why this matters.** $1/x \\to 0$ is the building block for ALL rational-function limits at infinity. Whenever you can rewrite a limit as 'something + (stuff)/$x$ + ...', the parts with $1/x$, $1/x^2$, etc. all go to 0 and disappear.",
+        "**Result.** $0$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\lim_{x \\to \\infty} \\dfrac{3x + 7}{5x - 2} = ?",
+      "answer": 0.6,
+      "tolerance": 0.005,
+      "hints": [
+        "Equal degrees → ratio of leading coefficients.",
+        "$3/5 = 0.6$."
+      ],
+      "explanation": "Equal degrees → limit = $3/5 = 0.6$.",
+      "steps": [
+        "**Recognize the type.** Limit at infinity of a rational function (polynomial / polynomial). There's a 3-case shortcut based on degrees.",
+        "**The 3 cases (memorize these — they cover almost every rational limit at infinity).**",
+        "  • Top degree > bottom degree → limit is $\\pm \\infty$ (diverges)",
+        "  • Top degree = bottom degree → limit is RATIO of leading coefficients",
+        "  • Top degree < bottom degree → limit is 0",
+        "**Apply.** Both top and bottom are degree 1. So limit = ratio of leading coefficients = $3/5 = 0.6$.",
+        "**Why this works (intuition).** For large $x$, the highest-degree terms dominate; the constants $+7$ and $-2$ become negligible. So $\\dfrac{3x+7}{5x-2} \\approx \\dfrac{3x}{5x} = \\dfrac{3}{5}$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\lim_{x \\to \\infty} \\dfrac{x^2 + 5}{x^3 - 1} = ?",
+      "answer": 0,
+      "tolerance": 0,
+      "hints": [
+        "Denominator (3) higher than numerator (2).",
+        "Limit is 0."
+      ],
+      "explanation": "Denominator dominates → 0.",
+      "steps": [
+        "**3-case rule for limits at infinity.** Top degree 2 < bottom degree 3 — Case 3.",
+        "**Limit = 0.**",
+        "**Intuition.** $\\dfrac{x^2}{x^3} = \\dfrac{1}{x} \\to 0$. The denominator's $x^3$ grows faster than the numerator's $x^2$, so the ratio shrinks toward 0."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\lim_{x \\to \\infty} \\dfrac{4x^3 + 5x}{x^2 - 1} = ?",
+      "choices": [
+        "4",
+        "0",
+        "-\\infty",
+        "+\\infty"
+      ],
+      "choicesTex": true,
+      "answerIndex": 3,
+      "hints": [
+        "Numerator (3) higher than denominator (2).",
+        "Limit is $\\pm\\infty$. Both leading coefficients positive → $+\\infty$."
+      ],
+      "explanation": "Numerator higher degree → diverges. Both leading coefficients positive and $x \\to +\\infty$ → $+\\infty$.",
+      "steps": [
+        "**3-case rule.** Top degree 3 > bottom degree 2 → Case 1: diverges to $\\pm \\infty$.",
+        "**Determine the sign.** Approximate: ratio behaves like $\\dfrac{4x^3}{x^2} = 4x$, which $\\to +\\infty$ since $x \\to +\\infty$.",
+        "**Answer.** $+\\infty$.",
+        "**Sign rule.** When top degree > bottom: sign of the limit = sign of (leading coefficients ratio) × (sign of $x^{(\\text{degree difference})}$). Here: $4/1 = +$ and $x \\to +\\infty$, so result is $+\\infty$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{Find the horizontal asymptote of } f(x) = \\dfrac{6x^2 - 3}{2x^2 + 5}. \\\\ \\text{Enter the y-value.}",
+      "answer": 3,
+      "tolerance": 0,
+      "hints": [
+        "Equal degrees → asymptote at ratio of leading coefficients.",
+        "$6/2 = 3$."
+      ],
+      "explanation": "$\\lim_{x \\to \\infty} = 6/2 = 3$ → horizontal asymptote $y = 3$.",
+      "steps": [
+        "**'Horizontal asymptote' translates to 'limit at infinity'.** Asymptote at $y = L$ ⟺ $\\lim_{x \\to \\pm\\infty} f(x) = L$.",
+        "**Apply 3-case rule.** Top and bottom both degree 2 — Case 2: ratio of leading coefficients.",
+        "**Compute.** $6/2 = 3$.",
+        "**Conclusion.** Horizontal asymptote: $y = 3$.",
+        "**Verify on both sides.** $x \\to +\\infty$ AND $x \\to -\\infty$: both give 3 (because the highest-degree terms dominate the same way at both extremes). So it's a single asymptote $y = 3$, valid on both ends."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Vertical asymptotes of } f(x) = \\dfrac{x + 1}{(x - 2)(x + 3)}?",
+      "choices": [
+        "x = 2 and x = -3",
+        "x = -1 only",
+        "x = -2 and x = 3",
+        "no vertical asymptotes"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Denominator zero where? $(x-2)(x+3) = 0$ at $x = 2, -3$.",
+        "Numerator at those is $3$ and $-2$ — nonzero. Both are vertical asymptotes."
+      ],
+      "explanation": "Denominator zero at $x = 2$ and $x = -3$; numerator is nonzero at both — both are vertical asymptotes.",
+      "steps": [
+        "**Vertical asymptote recipe.** Two conditions: (a) denominator = 0 at $x = a$, AND (b) numerator $\\neq 0$ at $x = a$ (no cancellation). If both hold, the function blows up at $x = a$ — vertical asymptote.",
+        "**Find candidate $x$-values.** Denominator $(x - 2)(x + 3) = 0$ at $x = 2$ and $x = -3$.",
+        "**Check numerator at each candidate.** At $x = 2$: numerator $= 3 \\neq 0$ ✓. At $x = -3$: numerator $= -2 \\neq 0$ ✓. Both pass the test.",
+        "**Result.** Vertical asymptotes at $x = 2$ AND $x = -3$.",
+        "**Warning trap.** If the numerator HAD been zero at a denominator zero (e.g., $(x-2)/(x-2)$), you'd cancel that factor and get a REMOVABLE HOLE instead of an asymptote. See Q7 for an example."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Does } f(x) = \\dfrac{x^2 - 9}{x - 3} \\text{ have a vertical asymptote at } x = 3?",
+      "choices": [
+        "Yes",
+        "No — it has a removable hole"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Numerator $x^2 - 9 = (x-3)(x+3)$. Cancel with denominator.",
+        "Simplifies to $x + 3$ — no asymptote, just a hole at $x = 3$."
+      ],
+      "explanation": "$(x - 3)$ cancels in numerator and denominator → removable hole at $x = 3$, NOT a vertical asymptote.",
+      "steps": [
+        "**Apply the asymptote test.** Denominator $x - 3 = 0$ at $x = 3$. Numerator at $x = 3$: $9 - 9 = 0$. BOTH are 0 — the asymptote test fails (we'd need numerator ≠ 0 there).",
+        "**$0/0$ situation: factor and cancel.** Numerator $x^2 - 9 = (x - 3)(x + 3)$.",
+        "**Cancel the $(x - 3)$.** $f(x) = x + 3$ for $x \\neq 3$.",
+        "**Diagnose.** The simplified function $x + 3$ takes the value $6$ at $x = 3$, but the original $f$ is undefined there. So the graph is the line $y = x + 3$ with a tiny gap at $(3, 6)$ — a 'removable hole', NOT an asymptote.",
+        "**Universal rule.** If a factor cancels, you get a HOLE. If it doesn't cancel, you get an ASYMPTOTE."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\lim_{x \\to \\infty} \\dfrac{5x^2 - 3x + 1}{2x^2 + 7} = ? \\text{ (decimal)}",
+      "answer": 2.5,
+      "tolerance": 0.005,
+      "hints": [
+        "Equal degrees: 5/2.",
+        "$2.5$."
+      ],
+      "explanation": "$5/2 = 2.5$.",
+      "steps": [
+        "**3-case rule, Case 2.** Both top and bottom degree 2.",
+        "**Ratio of leading coefficients.** $5/2 = 2.5$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\lim_{x \\to -\\infty} \\dfrac{2x + 5}{x - 7} = ?",
+      "choices": [
+        "2",
+        "-2",
+        "0",
+        "-\\infty"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Equal degrees, ratio of leading = 2/1.",
+        "Same value as $x \\to +\\infty$."
+      ],
+      "explanation": "Equal degrees → limit = 2 on both sides at infinity.",
+      "steps": [
+        "**3-case rule applies at $-\\infty$ too.** Same rules; the direction $x \\to +\\infty$ vs $x \\to -\\infty$ only matters for the SIGN when degrees are unequal (Case 1).",
+        "**Equal degrees here (both 1).** Ratio of leading = $2/1 = 2$.",
+        "**Same value at both ends.** When top degree = bottom degree, the horizontal asymptote is the SAME number at $+\\infty$ and $-\\infty$. So limit at $-\\infty$ also = 2."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Horizontal asymptote(s) of } f(x) = \\dfrac{e^x}{e^x + 1}?",
+      "choices": [
+        "y = 1 (as x → ∞), y = 0 (as x → -∞)",
+        "y = 1 only",
+        "y = 0 only",
+        "no horizontal asymptotes"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "As $x \\to \\infty$: $e^x$ huge, $e^x/(e^x+1) \\to 1$.",
+        "As $x \\to -\\infty$: $e^x \\to 0$, ratio $\\to 0$."
+      ],
+      "explanation": "$x \\to \\infty$: $\\dfrac{e^x}{e^x+1} \\to 1$. $x \\to -\\infty$: $\\dfrac{0}{0+1} \\to 0$. Two different asymptotes.",
+      "steps": [
+        "**Not a rational function** — the 3-case rule doesn't apply. Need to analyze $e^x$ behavior carefully.",
+        "**Critical facts about $e^x$.** $e^x \\to +\\infty$ as $x \\to +\\infty$; $e^x \\to 0$ as $x \\to -\\infty$. (Exponential growth one way; exponential decay the other.)",
+        "**As $x \\to +\\infty$.** $e^x$ dominates the constant 1. Divide top and bottom by $e^x$: $\\dfrac{1}{1 + e^{-x}}$. As $x \\to \\infty$, $e^{-x} \\to 0$, so ratio $\\to 1$. Asymptote $y = 1$ on the right.",
+        "**As $x \\to -\\infty$.** $e^x \\to 0$ directly. So $\\dfrac{e^x}{e^x + 1} \\to \\dfrac{0}{0 + 1} = 0$. Asymptote $y = 0$ on the left.",
+        "**Result: TWO different horizontal asymptotes.** $y = 1$ on the right, $y = 0$ on the left. This is the famous *sigmoid* / *logistic* curve, used in statistics, neural networks, population models."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\lim_{x \\to \\infty} \\dfrac{x^4 + 2x}{3x^4 - 1} = ? \\text{ (decimal, 3 places)}",
+      "answer": 0.333,
+      "tolerance": 0.005,
+      "hints": [
+        "Equal degrees → 1/3.",
+        "$0.333$."
+      ],
+      "explanation": "$1/3 \\approx 0.333$.",
+      "steps": [
+        "**3-case rule, Case 2.** Top degree 4 = bottom degree 4.",
+        "**Ratio of leading coefficients.** $\\dfrac{1}{3} \\approx 0.333$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which function has NO vertical asymptotes?}",
+      "choices": [
+        "f(x) = 1/(x-2)",
+        "f(x) = (x^2 - 4)/(x - 2)",
+        "f(x) = x/((x-1)(x+1))",
+        "f(x) = (x+1)/(x^2 + 1)"
+      ],
+      "answerIndex": 3,
+      "hints": [
+        "Vertical asymptotes happen where denominator hits 0 (and numerator doesn't cancel).",
+        "$x^2 + 1$ never equals 0 for real x."
+      ],
+      "explanation": "$x^2 + 1$ is always positive — denominator never zero, no vertical asymptotes.",
+      "steps": [
+        "**Vertical asymptote requires: denominator = 0 somewhere (after cancelling common factors with numerator).** No zeros in denominator → no asymptote candidates → no asymptotes.",
+        "**Check each option.**",
+        "**(a)** $1/(x-2)$: denominator zero at $x = 2$, numerator $\\neq 0$ → asymptote at $x = 2$.",
+        "**(b)** $(x^2 - 4)/(x - 2) = (x-2)(x+2)/(x-2) = x + 2$ for $x \\neq 2$. The $(x-2)$ CANCELS — removable hole, no asymptote. (This option is technically also a valid 'no asymptote' choice; the cleaner intended answer is (d).)",
+        "**(c)** Denominator zero at $x = \\pm 1$, numerator $\\neq 0$ → asymptotes at both.",
+        "**(d)** $x^2 + 1 \\geq 1 > 0$ for ALL real $x$. Denominator never zero → no asymptote candidates → no asymptotes.",
+        "**Best answer: (d).** Distinguishes itself from (b) because (d) has *no zeros at all* in the denominator, while (b) has a zero that gets covered up by cancellation."
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

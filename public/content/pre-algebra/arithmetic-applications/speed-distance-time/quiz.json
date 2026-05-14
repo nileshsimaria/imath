@@ -1,0 +1,345 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{Speed} = 60 \\text{ km/h}. \\text{ Time} = 4 \\text{ h}. \\text{ Distance (km)?}",
+      "answer": 240,
+      "tolerance": 0.001,
+      "hints": [
+        "$D = S \\times T$.",
+        "$60 \\times 4 = 240$."
+      ],
+      "explanation": "$D = 60 \\times 4 = 240$ km.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{Convert } 72 \\text{ km/h to m/s.}",
+      "answer": 20,
+      "tolerance": 0.001,
+      "hints": [
+        "Multiply by $5/18$.",
+        "$72 \\times 5/18 = 20$."
+      ],
+      "explanation": "$72 \\times 5/18 = 20$ m/s.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{Convert } 15 \\text{ m/s to km/h.}",
+      "answer": 54,
+      "tolerance": 0.001,
+      "hints": [
+        "Multiply by $18/5$.",
+        "$15 \\times 18/5 = 54$."
+      ],
+      "explanation": "$15 \\times 18/5 = 54$ km/h.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Travel } 120 \\text{ km at } 40 \\text{ km/h, return at } 60 \\text{ km/h. Average speed (km/h)?}",
+      "answer": 48,
+      "tolerance": 0.5,
+      "hints": [
+        "Use harmonic mean: $\\dfrac{2uv}{u+v}$.",
+        "$\\dfrac{2 \\cdot 40 \\cdot 60}{100} = 48$."
+      ],
+      "explanation": "$\\dfrac{2(40)(60)}{40 + 60} = \\dfrac{4800}{100} = 48$ km/h.",
+      "steps": [
+        {
+          "text": "**Equal distances → harmonic mean of speeds:**"
+        },
+        {
+          "math": "\\text{Avg} = \\dfrac{2uv}{u + v} = \\dfrac{2 \\cdot 40 \\cdot 60}{40 + 60} = \\dfrac{4800}{100} = 48 \\text{ km/h}"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{A 200 m train at } 72 \\text{ km/h crosses a pole. Time (s)?}",
+      "answer": 10,
+      "tolerance": 0.05,
+      "hints": [
+        "Convert speed: $72 \\times 5/18 = 20$ m/s.",
+        "Time = $200/20 = 10$ s."
+      ],
+      "explanation": "Speed 20 m/s. Time = $200/20 = 10$ s.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{A 150 m train at } 54 \\text{ km/h crosses a } 250 \\text{ m platform. Time (s)?}",
+      "answer": 26.67,
+      "tolerance": 0.1,
+      "hints": [
+        "Convert: $54 \\times 5/18 = 15$ m/s.",
+        "Total distance: $150 + 250 = 400$ m. Time = $400/15 \\approx 26.67$ s."
+      ],
+      "explanation": "Speed 15 m/s. Distance 400 m. Time = $400/15 = 80/3 \\approx 26.67$ s.",
+      "steps": [
+        {
+          "text": "**Convert speed:** $54 \\times 5/18 = 15$ m/s."
+        },
+        {
+          "text": "**Distance to cover** = train length + platform length = $150 + 250 = 400$ m."
+        },
+        {
+          "math": "T = \\dfrac{400}{15} = \\dfrac{80}{3} \\approx 26.67 \\text{ s}"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{Two trains, } 120 \\text{ m and } 80 \\text{ m, run in opposite directions at } 36 \\text{ and } 54 \\text{ km/h.} \\\\ \\text{Time to cross each other (s)?}",
+      "answer": 8,
+      "tolerance": 0.1,
+      "hints": [
+        "Relative speed (opposite directions): $36 + 54 = 90$ km/h $= 25$ m/s.",
+        "Distance = $120 + 80 = 200$ m. Time = $200/25 = 8$ s."
+      ],
+      "explanation": "Relative speed: $90$ km/h $= 25$ m/s. Distance: $200$ m. Time: $8$ s.",
+      "steps": [
+        {
+          "text": "**Opposite-direction relative speed:** $36 + 54 = 90$ km/h $= 25$ m/s."
+        },
+        {
+          "text": "**Total length to cover:** $120 + 80 = 200$ m."
+        },
+        {
+          "math": "T = \\dfrac{200}{25} = 8 \\text{ s}"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{Boat covers } 24 \\text{ km downstream in } 2 \\text{ h and upstream in } 3 \\text{ h.} \\\\ \\text{Speed of stream (km/h)?}",
+      "answer": 2,
+      "tolerance": 0.05,
+      "hints": [
+        "Down: $24/2 = 12$ km/h. Up: $24/3 = 8$ km/h.",
+        "Stream speed = $(12 - 8)/2 = 2$ km/h."
+      ],
+      "explanation": "Down 12, Up 8. Stream = (12 − 8)/2 = 2 km/h.",
+      "steps": [
+        {
+          "text": "**Downstream speed** = $24/2 = 12$ km/h."
+        },
+        {
+          "text": "**Upstream speed** = $24/3 = 8$ km/h."
+        },
+        {
+          "text": "**Speed of stream:**"
+        },
+        {
+          "math": "\\dfrac{\\text{Down} - \\text{Up}}{2} = \\dfrac{12 - 8}{2} = 2 \\text{ km/h}"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{Two cars start } 240 \\text{ km apart and approach each other at } 50 \\text{ and } 70 \\text{ km/h.} \\\\ \\text{When do they meet (hours)?}",
+      "answer": 2,
+      "tolerance": 0.05,
+      "hints": [
+        "Relative speed = $120$ km/h.",
+        "Time = $240/120 = 2$ h."
+      ],
+      "explanation": "Closing speed $= 50 + 70 = 120$ km/h. $T = 240/120 = 2$ h.",
+      "steps": [
+        {
+          "text": "**Approaching each other** → relative speed = sum of speeds:"
+        },
+        {
+          "math": "v_{\\text{rel}} = 50 + 70 = 120 \\text{ km/h}"
+        },
+        {
+          "text": "**Time to close 240 km gap:**"
+        },
+        {
+          "math": "T = \\dfrac{240}{120} = 2 \\text{ h}"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{A walks at } 5 \\text{ km/h, B at } 7 \\text{ km/h. A starts } 2 \\text{ h before B from the same point} \\\\ \\text{going the same way. When does B catch A (hours after B starts)?}",
+      "answer": 5,
+      "tolerance": 0.05,
+      "hints": [
+        "A's head start: $5 \\times 2 = 10$ km.",
+        "Relative speed: $7 - 5 = 2$ km/h. Catch-up time: $10/2 = 5$ h."
+      ],
+      "explanation": "Head start: 10 km. Closing rate: 2 km/h. Catch-up: $10/2 = 5$ h.",
+      "steps": [
+        {
+          "text": "**A's head start** (distance covered in 2 hours before B starts):"
+        },
+        {
+          "math": "5 \\text{ km/h} \\times 2 \\text{ h} = 10 \\text{ km}"
+        },
+        {
+          "text": "**Same direction → relative speed = difference:**"
+        },
+        {
+          "math": "v_{\\text{rel}} = 7 - 5 = 2 \\text{ km/h}"
+        },
+        {
+          "text": "**Catch-up time:**"
+        },
+        {
+          "math": "T = \\dfrac{10}{2} = 5 \\text{ h}"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{Average speed for } 60 \\text{ km at } 30 \\text{ km/h, then } 90 \\text{ km at } 45 \\text{ km/h?}",
+      "answer": 37.5,
+      "tolerance": 0.05,
+      "hints": [
+        "Time$_1 = 60/30 = 2$ h. Time$_2 = 90/45 = 2$ h. Total time = 4 h.",
+        "Total distance = 150 km. Avg = $150/4 = 37.5$."
+      ],
+      "explanation": "Total: 150 km in 4 h. Avg: $37.5$ km/h.",
+      "steps": [
+        {
+          "text": "**Compute time per segment:**"
+        },
+        {
+          "math": "t_1 = 60/30 = 2 \\text{ h}, \\quad t_2 = 90/45 = 2 \\text{ h}"
+        },
+        {
+          "text": "**Average speed = total distance / total time:**"
+        },
+        {
+          "math": "\\text{Avg} = \\dfrac{60 + 90}{2 + 2} = \\dfrac{150}{4} = 37.5 \\text{ km/h}"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\text{Two trains } 150 \\text{ m and } 120 \\text{ m run in same direction at } 90 \\text{ and } 72 \\text{ km/h.} \\\\ \\text{Time for faster to cross slower (s)?}",
+      "answer": 54,
+      "tolerance": 0.5,
+      "hints": [
+        "Same direction relative speed: $90 - 72 = 18$ km/h $= 5$ m/s.",
+        "Distance: $150 + 120 = 270$ m. Time: $270/5 = 54$ s."
+      ],
+      "explanation": "Relative speed: 18 km/h = 5 m/s. Distance: 270 m. Time: 54 s.",
+      "steps": [
+        {
+          "text": "**Same direction → relative speed = difference:**"
+        },
+        {
+          "math": "v_{\\text{rel}} = 90 - 72 = 18 \\text{ km/h}"
+        },
+        {
+          "text": "**Convert to m/s** (multiply by $5/18$):"
+        },
+        {
+          "math": "18 \\times \\dfrac{5}{18} = 5 \\text{ m/s}"
+        },
+        {
+          "text": "**Crossing distance = sum of train lengths:**"
+        },
+        {
+          "math": "150 + 120 = 270 \\text{ m}"
+        },
+        {
+          "math": "T = \\dfrac{270}{5} = 54 \\text{ s}"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q13",
+      "type": "numeric",
+      "promptTex": "\\text{Walking } 4 \\text{ km/h saves } 30 \\text{ min compared to walking } 3 \\text{ km/h on same path.} \\\\ \\text{Distance (km)?}",
+      "answer": 6,
+      "tolerance": 0.05,
+      "hints": [
+        "Let distance = $d$. $d/3 - d/4 = 1/2$ (hours).",
+        "$d/12 = 1/2 \\Rightarrow d = 6$."
+      ],
+      "explanation": "$d/3 - d/4 = 1/2 \\Rightarrow d/12 = 1/2 \\Rightarrow d = 6$ km.",
+      "steps": [
+        {
+          "text": "**Let distance = $d$ km.** Time at 3 km/h: $d/3$ h. Time at 4 km/h: $d/4$ h."
+        },
+        {
+          "text": "**The 4 km/h trip saves 30 min** ($= 1/2$ h):"
+        },
+        {
+          "math": "\\dfrac{d}{3} - \\dfrac{d}{4} = \\dfrac{1}{2}"
+        },
+        {
+          "math": "\\dfrac{4d - 3d}{12} = \\dfrac{1}{2}"
+        },
+        {
+          "math": "\\dfrac{d}{12} = \\dfrac{1}{2} \\;\\Longrightarrow\\; d = 6 \\text{ km}"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q14",
+      "type": "numeric",
+      "promptTex": "\\text{Train covers } 600 \\text{ km in } 8 \\text{ h. New speed needed to cover same distance in} \\\\ 5 \\text{ h (km/h)?}",
+      "answer": 120,
+      "tolerance": 0.5,
+      "hints": [
+        "Required speed = $600/5 = 120$ km/h.",
+        "Or: time ratio $8:5$ → speed must increase by $8/5$. New speed = $75 \\times 8/5 = 120$."
+      ],
+      "explanation": "New speed = $600/5 = 120$ km/h.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q15",
+      "type": "numeric",
+      "promptTex": "\\text{A boat can travel } 30 \\text{ km in still water in 5 hours. In a river flowing at } 2 \\text{ km/h,} \\\\ \\text{how long does it take downstream (hours)?}",
+      "answer": 3.75,
+      "tolerance": 0.05,
+      "hints": [
+        "Boat speed in still water: $30/5 = 6$ km/h.",
+        "Downstream: $6 + 2 = 8$ km/h. Time: $30/8 = 3.75$ h."
+      ],
+      "explanation": "Still water: 6 km/h. Downstream: 8 km/h. Time: $30/8 = 3.75$ h.",
+      "steps": [
+        {
+          "text": "**Boat's still-water speed:** $30 \\text{ km} / 5 \\text{ h} = 6$ km/h."
+        },
+        {
+          "text": "**Downstream speed:** $6 + 2 = 8$ km/h."
+        },
+        {
+          "text": "**Time downstream:**"
+        },
+        {
+          "math": "T = \\dfrac{30}{8} = 3.75 \\text{ h}"
+        }
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

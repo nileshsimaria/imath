@@ -1,0 +1,89 @@
+{
+  "title": "Slope",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "**Slope** is just a fancy word for *how slanted a line is*. A nearly-flat line has a small slope; a nearly-vertical line has a huge one. Slope captures both **how steep** the line is and **which way it tilts**."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Rise over run",
+        "To measure slope, walk along the line one step at a time. Each step has two parts:",
+        "the **run** (how far you move horizontally) and the **rise** (how far you move vertically)."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "m = \\dfrac{\\text{rise}}{\\text{run}} = \\dfrac{\\Delta y}{\\Delta x}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Drag the two points below to make a line. The dotted triangle shows the rise and run between them. Try to predict the slope before reading the answer."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "coordinate-plane",
+      "config": {
+        "mode": "two-points",
+        "showRiseRun": true,
+        "pointA": [
+          -2,
+          -1
+        ],
+        "pointB": [
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Slope from two points",
+        "If a line passes through points $(x_1, y_1)$ and $(x_2, y_2)$, the slope formula gives the answer directly:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "m = \\dfrac{y_2 - y_1}{x_2 - x_1}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "It doesn't matter which point you call $1$ and which you call $2$ — as long as you're consistent in numerator and denominator."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Worked example",
+      "body": "A line passes through $(1, 2)$ and $(4, 11)$. Then $m = \\dfrac{11 - 2}{4 - 1} = \\dfrac{9}{3} = 3$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### What does the sign tell you?",
+        "**Positive slope** ($m > 0$) — the line goes *up* as you read left to right.",
+        "**Negative slope** ($m < 0$) — the line goes *down* as you read left to right.",
+        "**Zero slope** ($m = 0$) — the line is *horizontal*, no rise.",
+        "**Undefined slope** — the line is *vertical*, no run, you'd be dividing by zero."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The bigger the |m|, the steeper the line",
+      "body": "$m = 5$ is steeper than $m = 2$. $m = -10$ is steeper than $m = 1$. Sign tells you direction; magnitude tells you steepness."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why slope matters",
+        "Slope is what makes a line a *line*. Once you know one point on a line and its slope, the entire line is determined. That's the seed idea behind every form of a linear equation — slope-intercept, point-slope, and standard form all encode the same two pieces of information in different ways."
+      ]
+    }
+  ]
+}

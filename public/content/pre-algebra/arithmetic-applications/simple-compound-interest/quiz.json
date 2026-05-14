@@ -1,0 +1,346 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{Find the Simple Interest (SI) on a Principal of } \\$5000 \\text{ at a rate of } 8\\% \\text{ per annum} \\\\ \\text{for } 3 \\text{ years. Answer in dollars.}",
+      "answer": 1200,
+      "tolerance": 0.5,
+      "hints": [
+        "**Simple Interest formula:** $SI = \\dfrac{P \\cdot R \\cdot T}{100}$, where $P$ = Principal, $R$ = Rate %, $T$ = Time in years.",
+        "$SI = (5000 \\times 8 \\times 3)/100$.",
+        "$= 120000/100 = \\$1200$."
+      ],
+      "explanation": "$SI = (P \\times R \\times T)/100 = (5000 \\times 8 \\times 3)/100 = \\$1200$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{Principal (P) = } \\$6000, \\text{ Rate (R) = } 10\\% \\text{ per annum, Time (T) = } 4 \\text{ years.} \\\\ \\text{What is the total Amount (A) after Simple Interest? (in dollars)}",
+      "answer": 8400,
+      "tolerance": 1,
+      "hints": [
+        "**First find SI**, then add it to the Principal to get the Amount.",
+        "$SI = (6000 \\times 10 \\times 4)/100 = \\$2400$.",
+        "$A = P + SI = 6000 + 2400 = \\$8400$."
+      ],
+      "explanation": "$SI = \\$2400$. Total Amount $A = P + SI = 6000 + 2400 = \\$8400$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{What Principal (P) earns } \\$720 \\text{ as Simple Interest at a rate of } 6\\% \\text{ per annum} \\\\ \\text{over } 4 \\text{ years? Answer in dollars.}",
+      "answer": 3000,
+      "tolerance": 1,
+      "hints": [
+        "**Rearrange** $SI = PRT/100$ to solve for $P$: $P = \\dfrac{100 \\cdot SI}{R \\cdot T}$.",
+        "$P = (100 \\cdot 720) / (6 \\cdot 4) = 72{,}000 / 24$.",
+        "$= \\$3000$."
+      ],
+      "explanation": "$P = (100 \\times 720)/(6 \\times 4) = \\$3000$.",
+      "steps": [
+        {
+          "text": "**Start from the SI formula and isolate $P$:**"
+        },
+        {
+          "math": "SI = \\dfrac{P \\cdot R \\cdot T}{100} \\;\\Longrightarrow\\; P = \\dfrac{100 \\cdot SI}{R \\cdot T}"
+        },
+        {
+          "math": "P = \\dfrac{100 \\cdot 720}{6 \\cdot 4} = \\dfrac{72{,}000}{24} = \\$3000"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Find the Compound Interest (CI) on } \\$10{,}000 \\text{ at } 10\\% \\text{ per annum} \\\\ \\text{for } 2 \\text{ years, compounded annually. Answer in dollars.}",
+      "answer": 2100,
+      "tolerance": 1,
+      "hints": [
+        "**Compound Interest formula:** $A = P(1 + R/100)^T$, then $CI = A - P$.",
+        "$A = 10{,}000 \\cdot (1.10)^2 = 10{,}000 \\cdot 1.21 = \\$12{,}100$.",
+        "$CI = 12{,}100 - 10{,}000 = \\$2100$."
+      ],
+      "explanation": "$A = 10{,}000 \\times 1.21 = \\$12{,}100$. $CI = A - P = \\$2100$.",
+      "steps": [
+        {
+          "text": "**Apply the CI formula:**"
+        },
+        {
+          "math": "A = P\\left(1 + \\dfrac{R}{100}\\right)^T = 10{,}000 \\cdot (1.10)^2"
+        },
+        {
+          "math": "= 10{,}000 \\cdot 1.21 = \\$12{,}100"
+        },
+        {
+          "math": "CI = A - P = 12{,}100 - 10{,}000 = \\$2100"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{For Principal = } \\$5000, \\text{ Rate = } 10\\%, \\text{ Time = } 2 \\text{ years,} \\\\ \\text{find the difference: Compound Interest } - \\text{ Simple Interest. (in dollars)}",
+      "answer": 50,
+      "tolerance": 0.5,
+      "hints": [
+        "**Useful 2-year shortcut:** $CI - SI = P \\left(\\dfrac{R}{100}\\right)^2$.",
+        "$5000 \\times (10/100)^2 = 5000 \\times 0.01 = \\$50$.",
+        "Why? CI in year 2 earns extra interest on the year-1 SI. That extra equals $R\\%$ of year-1's $SI = P \\cdot (R/100)^2$ for a 2-year period."
+      ],
+      "explanation": "$CI - SI = P(R/100)^2 = 5000 \\times 0.01 = \\$50$.",
+      "steps": [
+        {
+          "text": "**Use the 2-year CI−SI shortcut:**"
+        },
+        {
+          "math": "CI - SI = P \\left(\\dfrac{R}{100}\\right)^2 = 5000 \\cdot (0.1)^2 = 5000 \\cdot 0.01 = \\$50"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{Find the Amount (A) for Principal } \\$16{,}000 \\text{ at } 12.5\\% \\text{ per annum,} \\\\ \\text{compounded annually, after } 2 \\text{ years. Answer in dollars.}",
+      "answer": 20250,
+      "tolerance": 1,
+      "hints": [
+        "$A = P(1 + R/100)^T$.",
+        "$A = 16{,}000 \\cdot (1.125)^2$.",
+        "$(1.125)^2 = 1.265625$, so $A = 16{,}000 \\cdot 1.265625 = \\$20{,}250$."
+      ],
+      "explanation": "$A = 16{,}000 \\times (1.125)^2 = 16{,}000 \\times 1.265625 = \\$20{,}250$.",
+      "steps": [
+        {
+          "text": "**Apply the CI formula** with $R = 12.5\\%, T = 2$:"
+        },
+        {
+          "math": "A = P\\left(1 + \\dfrac{R}{100}\\right)^T = 16{,}000 \\cdot (1.125)^2"
+        },
+        {
+          "math": "(1.125)^2 = 1.265625"
+        },
+        {
+          "math": "A = 16{,}000 \\cdot 1.265625 = \\$20{,}250"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{Find the CI on } \\$4000 \\text{ at } 10\\% \\text{ per annum compounded half-yearly} \\\\ \\text{for } 1 \\text{ year. Answer in dollars.}",
+      "answer": 410,
+      "tolerance": 1,
+      "hints": [
+        "**Half-yearly compounding:** halve the rate, double the periods. New rate = 5%, new periods = 2.",
+        "$A = 4000 \\cdot (1.05)^2 = 4000 \\cdot 1.1025 = \\$4410$.",
+        "$CI = A - P = \\$410$."
+      ],
+      "explanation": "$A = 4000 \\times (1.05)^2 = 4000 \\times 1.1025 = \\$4410$. $CI = \\$410$.",
+      "steps": [
+        {
+          "text": "**For half-yearly compounding**: rate per period = $10\\%/2 = 5\\%$. Number of periods in 1 year: $2$."
+        },
+        {
+          "math": "A = 4000 \\cdot (1 + 5/100)^2 = 4000 \\cdot 1.1025 = \\$4410"
+        },
+        {
+          "math": "CI = A - P = \\$410"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{Using the Rule of 72: at what compound rate (\\%) does money DOUBLE in } 6 \\text{ years?} \\\\ \\text{(Round to nearest integer.)}",
+      "answer": 12,
+      "tolerance": 0.5,
+      "hints": [
+        "**Rule of 72 (mental shortcut for CI):** Doubling time $T \\approx 72/R$, so $R \\approx 72/T$.",
+        "$R \\approx 72/6 = 12\\%$.",
+        "Exact answer (using logs): $\\sqrt[6]{2} - 1 \\approx 12.25\\%$ — close to 12."
+      ],
+      "explanation": "Rule of 72: $R \\approx 72/T = 72/6 = 12\\%$.",
+      "steps": [
+        {
+          "text": "**Rule of 72** (a famous mental approximation for compound growth): doubling time satisfies $T \\cdot R \\approx 72$."
+        },
+        {
+          "math": "R \\approx \\dfrac{72}{T} = \\dfrac{72}{6} = 12\\%"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{A Principal of } \\$5000 \\text{ grows to } \\$6050 \\text{ in } 2 \\text{ years under compound interest.} \\\\ \\text{Find the annual rate of interest } R \\text{ in percent.}",
+      "answer": 10,
+      "tolerance": 0.001,
+      "hints": [
+        "$A = P(1 + R/100)^2 \\Rightarrow (1 + R/100)^2 = A/P = 6050/5000 = 1.21$.",
+        "Take square root: $1 + R/100 = \\sqrt{1.21} = 1.1$.",
+        "So $R = 10\\%$."
+      ],
+      "explanation": "$(1 + R/100)^2 = 1.21 \\Rightarrow 1 + R/100 = 1.1 \\Rightarrow R = 10\\%$.",
+      "steps": [
+        {
+          "text": "**Set up the CI equation and isolate the growth factor:**"
+        },
+        {
+          "math": "5000 \\cdot \\left(1 + \\dfrac{R}{100}\\right)^2 = 6050"
+        },
+        {
+          "math": "\\left(1 + \\dfrac{R}{100}\\right)^2 = \\dfrac{6050}{5000} = 1.21"
+        },
+        {
+          "text": "**Take square root:**"
+        },
+        {
+          "math": "1 + \\dfrac{R}{100} = \\sqrt{1.21} = 1.1 \\;\\Longrightarrow\\; R = 10\\%"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{Find the SI on } \\$3000 \\text{ at } 6\\% \\text{ per annum for } 5 \\text{ years. Answer in dollars.}",
+      "answer": 900,
+      "tolerance": 0.5,
+      "hints": [
+        "$SI = (P \\times R \\times T)/100$.",
+        "$= (3000 \\times 6 \\times 5)/100 = \\$900$."
+      ],
+      "explanation": "$SI = (3000 \\times 6 \\times 5)/100 = \\$900$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{Money doubles in } 8 \\text{ years under Simple Interest.} \\\\ \\text{Find the rate of interest (in \\%).}",
+      "answer": 12.5,
+      "tolerance": 0.05,
+      "hints": [
+        "**Doubling means** the total Amount = $2P$, so the SI earned = $P$ (one extra principal worth).",
+        "Set up: $P = (P \\cdot R \\cdot 8)/100$, then cancel $P$ and solve for $R$.",
+        "$R = 100/8 = 12.5\\%$."
+      ],
+      "explanation": "$P = (P)(R)(8)/100 \\Rightarrow R = 100/8 = 12.5\\%$.",
+      "steps": [
+        {
+          "text": "**Doubling means $SI = P$** (you earn one full Principal worth as interest)."
+        },
+        {
+          "math": "P = \\dfrac{P \\cdot R \\cdot 8}{100}"
+        },
+        {
+          "text": "**Cancel $P$ and solve:**"
+        },
+        {
+          "math": "100 = 8R \\;\\Longrightarrow\\; R = 12.5\\%"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\text{Find the CI on } \\$8000 \\text{ at } 5\\% \\text{ per annum compounded \\emph{quarterly}} \\\\ \\text{for } 1 \\text{ year. Answer in dollars (round to 2 decimals).}",
+      "answer": 407.51,
+      "tolerance": 1,
+      "hints": [
+        "**Quarterly compounding:** divide rate by 4, multiply periods by 4. Rate per quarter = $5\\%/4 = 1.25\\%$. Periods = 4.",
+        "$A = 8000 \\times (1.0125)^4 \\approx 8000 \\times 1.05094 \\approx \\$8407.51$.",
+        "$CI = A - P \\approx \\$407.51$."
+      ],
+      "explanation": "$A = 8000 \\times (1.0125)^4 \\approx \\$8407.51$. $CI \\approx \\$407.51$.",
+      "steps": [
+        {
+          "text": "**Quarterly compounding:** rate per quarter $= 5\\%/4 = 1.25\\%$. Periods in 1 year $= 4$."
+        },
+        {
+          "math": "A = 8000 \\cdot (1 + 1.25/100)^4 = 8000 \\cdot (1.0125)^4"
+        },
+        {
+          "math": "(1.0125)^4 \\approx 1.05094"
+        },
+        {
+          "math": "A \\approx 8000 \\cdot 1.05094 \\approx \\$8407.51"
+        },
+        {
+          "math": "CI = A - P \\approx \\$407.51"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q13",
+      "type": "numeric",
+      "promptTex": "\\text{At what annual rate of Simple Interest will } \\$500 \\\\ \\text{grow to } \\$575 \\text{ in } 5 \\text{ years? Answer in percent.}",
+      "answer": 3,
+      "tolerance": 0.05,
+      "hints": [
+        "Find SI first: $SI = A - P = 575 - 500 = \\$75$.",
+        "Rearrange $SI = PRT/100$ for $R$: $R = (SI \\times 100)/(P \\times T)$.",
+        "$R = (75 \\times 100)/(500 \\times 5) = 7500/2500 = 3\\%$."
+      ],
+      "explanation": "$SI = \\$75$. $R = (75 \\times 100)/(500 \\times 5) = 3\\%$.",
+      "steps": [
+        {
+          "text": "**Compute SI:** $SI = A - P = 575 - 500 = \\$75$."
+        },
+        {
+          "text": "**Solve for $R$** from $SI = PRT/100$:"
+        },
+        {
+          "math": "R = \\dfrac{SI \\cdot 100}{P \\cdot T} = \\dfrac{75 \\cdot 100}{500 \\cdot 5} = \\dfrac{7500}{2500} = 3\\%"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q14",
+      "type": "numeric",
+      "promptTex": "\\text{Investment of } \\$20{,}000 \\text{ at } 10\\% \\text{ per annum compound interest.} \\\\ \\text{Find the Amount after } 3 \\text{ years (in dollars).}",
+      "answer": 26620,
+      "tolerance": 1,
+      "hints": [
+        "$A = P(1 + R/100)^T = 20{,}000 \\times (1.1)^3$.",
+        "$(1.1)^3 = 1.331$.",
+        "$A = 20{,}000 \\times 1.331 = \\$26{,}620$."
+      ],
+      "explanation": "$A = 20{,}000 \\times (1.1)^3 = \\$26{,}620$.",
+      "steps": [
+        {
+          "text": "**Apply the CI formula:**"
+        },
+        {
+          "math": "A = 20{,}000 \\cdot (1.10)^3 = 20{,}000 \\cdot 1.331 = \\$26{,}620"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q15",
+      "type": "numeric",
+      "promptTex": "\\text{If SI for } 3 \\text{ years on a given Principal and Rate is } \\$1800, \\\\ \\text{what is the SI for } 5 \\text{ years on the same Principal and Rate? Answer in dollars.}",
+      "answer": 3000,
+      "tolerance": 0.5,
+      "hints": [
+        "**Key idea:** Simple Interest is directly proportional to Time (for fixed $P$ and $R$).",
+        "So $\\dfrac{SI_5}{SI_3} = \\dfrac{5}{3}$.",
+        "$SI_5 = 1800 \\times (5/3) = \\$3000$."
+      ],
+      "explanation": "$SI$ is proportional to $T$: $SI_5 = 1800 \\times 5/3 = \\$3000$.",
+      "difficulty": "easy"
+    }
+  ]
+}

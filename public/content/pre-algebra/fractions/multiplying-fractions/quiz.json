@@ -1,0 +1,303 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{2}{3} \\times \\dfrac{1}{4} = ?",
+      "choices": [
+        "\\dfrac{3}{12}",
+        "\\dfrac{2}{12}",
+        "\\dfrac{1}{6}",
+        "\\dfrac{1}{7}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "Multiply numerators, multiply denominators.",
+        "$\\dfrac{2}{12}$ — now simplify."
+      ],
+      "explanation": "$\\dfrac{2}{3} \\times \\dfrac{1}{4} = \\dfrac{2 \\times 1}{3 \\times 4} = \\dfrac{2}{12} = \\dfrac{1}{6}$ (dividing top and bottom by $2$).",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{3}{5} \\times \\dfrac{2}{7} = ?",
+      "choices": [
+        "\\dfrac{5}{12}",
+        "\\dfrac{6}{35}",
+        "\\dfrac{6}{12}",
+        "\\dfrac{1}{6}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "$\\dfrac{a}{b} \\times \\dfrac{c}{d} = \\dfrac{ac}{bd}$.",
+        "Numerator: $3 \\times 2 = 6$. Denominator: $5 \\times 7 = 35$."
+      ],
+      "explanation": "$\\dfrac{3}{5} \\times \\dfrac{2}{7} = \\dfrac{6}{35}$. Already simplified ($\\gcd(6, 35) = 1$).",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{2}{3} \\times 6 = ?",
+      "choices": [
+        "4",
+        "6",
+        "8",
+        "12"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Treat $6$ as $\\dfrac{6}{1}$.",
+        "$\\dfrac{2 \\times 6}{3 \\times 1} = \\dfrac{12}{3}$."
+      ],
+      "explanation": "$\\dfrac{2}{3} \\times 6 = \\dfrac{2}{3} \\times \\dfrac{6}{1} = \\dfrac{12}{3} = 4$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{1}{2} \\times \\dfrac{1}{2} = ?",
+      "choices": [
+        "\\dfrac{1}{2}",
+        "\\dfrac{1}{4}",
+        "1",
+        "\\dfrac{2}{4}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Half of a half.",
+        "$\\dfrac{1 \\times 1}{2 \\times 2}$."
+      ],
+      "explanation": "$\\dfrac{1}{2} \\times \\dfrac{1}{2} = \\dfrac{1}{4}$. Half of a half is a quarter — visualize a square split in half horizontally and again vertically.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{4}{5} \\times \\dfrac{5}{8} = ? \\\\ \\text{(Give the simplified form.)}",
+      "choices": [
+        "\\dfrac{20}{40}",
+        "\\dfrac{1}{2}",
+        "\\dfrac{4}{8}",
+        "\\dfrac{9}{13}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Multiply: $\\dfrac{4 \\times 5}{5 \\times 8} = \\dfrac{20}{40}$.",
+        "Now simplify $\\dfrac{20}{40}$."
+      ],
+      "explanation": "$\\dfrac{4 \\times 5}{5 \\times 8} = \\dfrac{20}{40} = \\dfrac{1}{2}$. Notice you could also cancel the $5$s before multiplying: $\\dfrac{4}{1} \\times \\dfrac{1}{8} = \\dfrac{4}{8} = \\dfrac{1}{2}$.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{3}{4} \\cdot \\dfrac{8}{15} = ?",
+      "choices": [
+        "\\dfrac{24}{60}",
+        "\\dfrac{2}{5}",
+        "\\dfrac{11}{19}",
+        "\\dfrac{24}{19}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Cross-cancel: $\\dfrac{3}{15} = \\dfrac{1}{5}$ (cancel a 3) and $\\dfrac{8}{4} = 2$ (cancel a 4).",
+        "Then $\\dfrac{1}{1} \\cdot \\dfrac{2}{5} = \\dfrac{2}{5}$."
+      ],
+      "explanation": "Cross-cancel before multiplying: $\\dfrac{3}{4} \\cdot \\dfrac{8}{15} = \\dfrac{1}{1} \\cdot \\dfrac{2}{5} = \\dfrac{2}{5}$.",
+      "steps": [
+        "**Pro tip: cross-cancel BEFORE multiplying.** Smaller numbers → easier arithmetic AND smaller simplification at the end.",
+        "**Look for common factors diagonally.** Numerator of one fraction with denominator of the other.",
+        "**Cancellation 1.** Top-left 3 and bottom-right 15 share a factor of 3: $\\dfrac{3}{15} \\to \\dfrac{1}{5}$.",
+        "**Cancellation 2.** Bottom-left 4 and top-right 8 share a factor of 4: $\\dfrac{8}{4} \\to \\dfrac{2}{1}$.",
+        "**Multiply the simplified fractions.** $\\dfrac{1}{1} \\cdot \\dfrac{2}{5} = \\dfrac{2}{5}$.",
+        "**Alternative (no cross-cancel).** Multiply directly: $\\dfrac{24}{60}$. Reduce by 12: $\\dfrac{2}{5}$. Same answer, more work."
+      ],
+      "id": "q6",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{2}{3} \\cdot \\dfrac{3}{4} \\cdot \\dfrac{4}{5} = ?",
+      "choices": [
+        "\\dfrac{24}{60}",
+        "\\dfrac{2}{5}",
+        "\\dfrac{1}{4}",
+        "\\dfrac{9}{12}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Look for cancellations across all three fractions.",
+        "The 3 in numerator cancels with the 3 in denominator. The 4 cancels too. Left with $\\dfrac{2}{5}$."
+      ],
+      "explanation": "Cancel like terms: $\\dfrac{2}{\\cancel{3}} \\cdot \\dfrac{\\cancel{3}}{\\cancel{4}} \\cdot \\dfrac{\\cancel{4}}{5} = \\dfrac{2}{5}$.",
+      "steps": [
+        "**Spot the TELESCOPING pattern.** Each fraction's denominator matches the next fraction's numerator — most factors will cancel.",
+        "**Cross-cancel.** $3$ in the bottom of the first cancels with $3$ in the top of the second. $4$ in the bottom of the second cancels with $4$ in the top of the third.",
+        "**What's left.** $\\dfrac{2}{\\cancel{3}} \\cdot \\dfrac{\\cancel{3}}{\\cancel{4}} \\cdot \\dfrac{\\cancel{4}}{5} = \\dfrac{2}{5}$.",
+        "**Brute-force check.** $\\dfrac{2 \\cdot 3 \\cdot 4}{3 \\cdot 4 \\cdot 5} = \\dfrac{24}{60} = \\dfrac{2}{5}$ ✓.",
+        "**Pattern lesson.** A telescoping product $\\dfrac{a_1}{a_2} \\cdot \\dfrac{a_2}{a_3} \\cdots \\dfrac{a_{n-1}}{a_n} = \\dfrac{a_1}{a_n}$ — first numerator over last denominator. Comes up in sequences and partial fractions."
+      ],
+      "id": "q7",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "2\\dfrac{1}{2} \\cdot 1\\dfrac{2}{5} = ?",
+      "choices": [
+        "3\\dfrac{1}{2}",
+        "2\\dfrac{2}{10}",
+        "2\\dfrac{1}{2}",
+        "3"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Convert mixed numbers to improper first.",
+        "$2\\dfrac{1}{2} = \\dfrac{5}{2}$ and $1\\dfrac{2}{5} = \\dfrac{7}{5}$. Multiply: $\\dfrac{35}{10} = \\dfrac{7}{2} = 3\\dfrac{1}{2}$."
+      ],
+      "explanation": "$\\dfrac{5}{2} \\cdot \\dfrac{7}{5} = \\dfrac{35}{10} = \\dfrac{7}{2} = 3\\dfrac{1}{2}$.",
+      "steps": [
+        "**For multiplying mixed numbers, ALWAYS convert to improper fractions first.** Cannot just multiply whole parts and fractional parts separately (that gives the wrong answer).",
+        "**Convert.** $2\\dfrac{1}{2} = \\dfrac{5}{2}$. $1\\dfrac{2}{5} = \\dfrac{7}{5}$.",
+        "**Cross-cancel.** The $5$ in numerator and denominator: $\\dfrac{\\cancel{5}}{2} \\cdot \\dfrac{7}{\\cancel{5}} = \\dfrac{7}{2}$.",
+        "**Convert back to mixed.** $\\dfrac{7}{2} = 3\\dfrac{1}{2}$.",
+        "**Trap to avoid.** $2 \\cdot 1 + \\dfrac{1}{2} \\cdot \\dfrac{2}{5}$ gives $2 + \\dfrac{1}{5} \\neq 3\\dfrac{1}{2}$. WRONG approach — multiplication doesn't distribute that way."
+      ],
+      "id": "q8",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is } \\dfrac{2}{3} \\text{ of } 24?",
+      "choices": [
+        "8",
+        "12",
+        "16",
+        "18"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "'Of' means multiply: $\\dfrac{2}{3} \\cdot 24$.",
+        "$\\dfrac{2 \\cdot 24}{3} = \\dfrac{48}{3} = 16$."
+      ],
+      "explanation": "$\\dfrac{2}{3} \\cdot 24 = \\dfrac{48}{3} = 16$.",
+      "steps": [
+        "**Translation: 'of' = multiply.** $\\dfrac{2}{3}$ OF $24$ = $\\dfrac{2}{3} \\times 24$.",
+        "**Efficient calculation.** Divide by denominator first (smaller numbers): $24 / 3 = 8$. Then multiply by numerator: $8 \\cdot 2 = 16$.",
+        "**Alternative.** $\\dfrac{2 \\cdot 24}{3} = \\dfrac{48}{3} = 16$. Same answer, slightly bigger intermediate number.",
+        "**Why 'divide first' is often cleaner.** Keeps numbers small throughout — less risk of arithmetic mistakes."
+      ],
+      "id": "q9",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{3}{5} \\div \\dfrac{2}{7} = ?",
+      "choices": [
+        "\\dfrac{6}{35}",
+        "\\dfrac{21}{10}",
+        "\\dfrac{5}{12}",
+        "\\dfrac{2}{5}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Division by a fraction = multiplication by its reciprocal.",
+        "$\\dfrac{3}{5} \\div \\dfrac{2}{7} = \\dfrac{3}{5} \\cdot \\dfrac{7}{2}$."
+      ],
+      "explanation": "$\\dfrac{3}{5} \\cdot \\dfrac{7}{2} = \\dfrac{21}{10}$.",
+      "steps": [
+        "**THE rule for fraction division: 'Keep, Change, Flip'.** Keep the first fraction; change ÷ to ×; flip the second (reciprocal).",
+        "**Apply.** $\\dfrac{3}{5} \\div \\dfrac{2}{7} = \\dfrac{3}{5} \\cdot \\dfrac{7}{2}$.",
+        "**Multiply.** $\\dfrac{3 \\cdot 7}{5 \\cdot 2} = \\dfrac{21}{10}$.",
+        "**Simplify.** $\\gcd(21, 10) = 1$ → lowest terms.",
+        "**Why 'flip the second' works.** Dividing by a fraction $\\dfrac{a}{b}$ is the same as multiplying by $\\dfrac{b}{a}$ because $\\dfrac{a}{b} \\cdot \\dfrac{b}{a} = 1$. The reciprocal undoes the original."
+      ],
+      "id": "q10",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{A recipe calls for } \\dfrac{3}{4} \\text{ cup of flour. You want to make} \\\\ \\dfrac{2}{3} \\text{ of the recipe. How much flour do you need?}",
+      "choices": [
+        "\\dfrac{1}{2} \\text{ cup}",
+        "\\dfrac{1}{4} \\text{ cup}",
+        "\\dfrac{6}{12} \\text{ cup}",
+        "\\dfrac{5}{7} \\text{ cup}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "$\\dfrac{2}{3}$ 'of' $\\dfrac{3}{4}$ — multiply.",
+        "$\\dfrac{2}{3} \\cdot \\dfrac{3}{4} = \\dfrac{6}{12} = \\dfrac{1}{2}$."
+      ],
+      "explanation": "$\\dfrac{2}{3} \\cdot \\dfrac{3}{4} = \\dfrac{6}{12} = \\dfrac{1}{2}$ cup.",
+      "steps": [
+        "**Word-problem translation.** '$\\dfrac{2}{3}$ of $\\dfrac{3}{4}$ cup' = $\\dfrac{2}{3} \\cdot \\dfrac{3}{4}$.",
+        "**Cross-cancel the 3's** (top of one matches bottom of other).",
+        "$\\dfrac{2}{\\cancel{3}} \\cdot \\dfrac{\\cancel{3}}{4} = \\dfrac{2}{4} = \\dfrac{1}{2}$ cup.",
+        "**Sanity check.** Half a cup of flour is reasonable for two-thirds of a recipe needing three-quarters of a cup. ✓"
+      ],
+      "id": "q11",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve for } x \\text{: } \\dfrac{2}{3} x = \\dfrac{8}{9}.",
+      "choices": [
+        "x = \\dfrac{4}{3}",
+        "x = \\dfrac{16}{27}",
+        "x = \\dfrac{3}{4}",
+        "x = \\dfrac{8}{6}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Multiply both sides by the reciprocal $\\dfrac{3}{2}$.",
+        "$x = \\dfrac{8}{9} \\cdot \\dfrac{3}{2}$. Cancel."
+      ],
+      "explanation": "$x = \\dfrac{8}{9} \\cdot \\dfrac{3}{2} = \\dfrac{24}{18} = \\dfrac{4}{3}$.",
+      "steps": [
+        "**Goal: isolate $x$.** $x$ is multiplied by $\\dfrac{2}{3}$ — undo by multiplying by the RECIPROCAL $\\dfrac{3}{2}$.",
+        "**Apply to both sides.** $\\dfrac{3}{2} \\cdot \\dfrac{2}{3} x = \\dfrac{3}{2} \\cdot \\dfrac{8}{9} \\Rightarrow x = \\dfrac{8}{9} \\cdot \\dfrac{3}{2}$.",
+        "**Cross-cancel.** $\\dfrac{8}{2} = 4$ and $\\dfrac{3}{9} = \\dfrac{1}{3}$. So $\\dfrac{4}{3 \\cdot 1} \\cdot \\dfrac{1}{1} = \\dfrac{4}{3}$.",
+        "**Check.** $\\dfrac{2}{3} \\cdot \\dfrac{4}{3} = \\dfrac{8}{9}$ ✓."
+      ],
+      "id": "q12",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{5}{6} \\cdot \\left(-\\dfrac{3}{10}\\right) = ?",
+      "choices": [
+        "\\dfrac{1}{4}",
+        "-\\dfrac{1}{4}",
+        "-\\dfrac{15}{60}",
+        "-\\dfrac{15}{16}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Negative times positive = negative.",
+        "Cross-cancel: 3/6 = 1/2 (cancel 3) and 5/10 = 1/2 (cancel 5). Result: $\\dfrac{1}{2 \\cdot 2} = \\dfrac{1}{4}$, with a negative sign."
+      ],
+      "explanation": "$\\dfrac{5}{6} \\cdot \\dfrac{3}{10} = \\dfrac{15}{60} = \\dfrac{1}{4}$. With the negative sign: $-\\dfrac{1}{4}$.",
+      "steps": [
+        "**Handle SIGN and MAGNITUDE separately.**",
+        "**Sign.** Positive × negative = NEGATIVE.",
+        "**Magnitude: cross-cancel before multiplying.** $\\dfrac{5}{10} = \\dfrac{1}{2}$ (cancel 5). $\\dfrac{3}{6} = \\dfrac{1}{2}$ (cancel 3).",
+        "**Multiply.** $\\dfrac{1}{2} \\cdot \\dfrac{1}{2} = \\dfrac{1}{4}$.",
+        "**Combine.** $-\\dfrac{1}{4}$."
+      ],
+      "id": "q13",
+      "difficulty": "medium"
+    }
+  ]
+}

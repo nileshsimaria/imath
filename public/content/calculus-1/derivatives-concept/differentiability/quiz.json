@@ -1,0 +1,304 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If } f \\text{ is differentiable at } a, \\text{ then } f \\text{ is:}",
+      "choices": [
+        "continuous at } a",
+        "increasing at } a",
+        "polynomial",
+        "negative"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Differentiable implies continuous (the famous one-way implication).",
+        "Continuous at $a$."
+      ],
+      "explanation": "**Differentiability ⇒ continuity** (but NOT vice versa).",
+      "steps": [
+        "**Key theorem:** Differentiability ⇒ Continuity. (One-way arrow only — the converse is false.)",
+        "**Why one-way?** If $f'(a)$ exists, the difference quotient $\\dfrac{f(a+h) - f(a)}{h}$ approaches a finite limit. For the QUOTIENT to be finite while the DENOMINATOR $\\to 0$, the numerator MUST also $\\to 0$ — meaning $f(a+h) \\to f(a)$. That's exactly continuity.",
+        "**Why NOT vice versa.** A function can be continuous but have a sharp corner (like $|x|$ at 0), where the left and right slopes disagree. Continuous but not differentiable.",
+        "**Hierarchy.** Differentiable ⊂ Continuous. Differentiability is STRONGER — it implies continuity plus 'smoothness'."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Is } f(x) = |x| \\text{ differentiable at } x = 0?",
+      "choices": [
+        "Yes — slope is 0",
+        "No — corner with different left/right slopes",
+        "Yes — slope is undefined",
+        "No — discontinuous"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$f$ is continuous (no jump), but has a corner.",
+        "Left slope -1, right slope +1 — no single derivative."
+      ],
+      "explanation": "$|x|$ is continuous at 0 but has a corner. Left derivative -1, right derivative +1 — no single value → **not differentiable**.",
+      "steps": [
+        "**Recognize the classic example.** $|x|$ at $x = 0$ is THE textbook example of 'continuous but not differentiable'. Worth memorizing.",
+        "**Check left and right derivatives separately.**",
+        "  For $x > 0$: $|x| = x$, so slope is $+1$.",
+        "  For $x < 0$: $|x| = -x$, so slope is $-1$.",
+        "**Compare.** Left derivative ($-1$) ≠ right derivative ($+1$). The slope doesn't have a single value at 0.",
+        "**Picture.** The graph makes a sharp 'V' at the origin — no smooth tangent line can fit, so no derivative exists.",
+        "**Diagnosis.** Continuous at 0 (the two pieces meet) but NOT differentiable at 0 (the slopes disagree). This is a CORNER."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The converse 'continuous ⇒ differentiable' is:}",
+      "choices": [
+        "true",
+        "false (counterexample: |x| at 0)",
+        "only true for polynomials",
+        "always true"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$|x|$ is continuous but not differentiable at 0.",
+        "Counterexample shows the converse is false."
+      ],
+      "explanation": "False. $|x|$ at 0 is continuous but not differentiable (corner).",
+      "steps": [
+        "**To disprove a statement, find ONE counterexample.** That's how mathematicians refute claims.",
+        "**The statement to test.** 'If $f$ is continuous at $a$, then $f$ is differentiable at $a$.'",
+        "**The classic counterexample.** $f(x) = |x|$ is continuous at $x = 0$ (no jump, no hole) BUT not differentiable at 0 (corner — Q2).",
+        "**So the converse is FALSE.** Continuity does not guarantee differentiability.",
+        "**Stronger counterexamples exist.** Weierstrass's nowhere-differentiable function is continuous EVERYWHERE but differentiable NOWHERE — pure pathology. Continuity is a very weak property; differentiability much stricter."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If } f \\text{ has a jump discontinuity at } a, \\text{ then } f:",
+      "choices": [
+        "is differentiable at a",
+        "is not differentiable at a",
+        "could be either",
+        "has a vertical tangent at a"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Differentiability requires continuity. Jump → not continuous → not differentiable.",
+        "Not differentiable."
+      ],
+      "explanation": "Jump = not continuous. Continuity is required for differentiability. So **not differentiable**.",
+      "steps": [
+        "**Use the contrapositive of 'differentiable ⇒ continuous'.**",
+        "**Contrapositive.** 'NOT continuous ⇒ NOT differentiable.' (Same logical content as the original, restated.)",
+        "**Apply.** Jump discontinuity means NOT continuous. By the contrapositive, $f$ is NOT differentiable at $a$.",
+        "**Logical reminder.** If A ⇒ B, then (not B) ⇒ (not A). The contrapositive is always logically equivalent to the original. Useful tool — sometimes the contrapositive is easier to apply."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The function } f(x) = x^{1/3} \\text{ at } x = 0 \\text{ has:}",
+      "choices": [
+        "a corner",
+        "a cusp",
+        "a vertical tangent",
+        "a jump"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "$x^{1/3}$ is continuous and smooth at 0, but its tangent is vertical.",
+        "Vertical tangent."
+      ],
+      "explanation": "$x^{1/3}$ passes smoothly through 0 but has a tangent line that's vertical (infinite slope) → not differentiable.",
+      "steps": [
+        "**Investigate the derivative near $x = 0$.**",
+        "**Derivative.** $f(x) = x^{1/3} \\Rightarrow f'(x) = \\tfrac{1}{3} x^{-2/3} = \\dfrac{1}{3 x^{2/3}}$.",
+        "**Behavior as $x \\to 0$.** $x^{2/3} \\to 0$ from above (always positive, since squared). So $f'(x) \\to +\\infty$.",
+        "**Diagnosis.** The slope blows up — the tangent line becomes VERTICAL. No finite-slope tangent exists → not differentiable. But the function itself is continuous (no jump).",
+        "**Distinguish from a 'corner'.** A corner has DIFFERENT finite left/right slopes (like $|x|$). A vertical tangent has SAME infinite slope on both sides. A cusp has different INFINITE slopes (e.g., $|x|^{2/3}$ at 0)."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Where is } f(x) = |x - 5| \\text{ NOT differentiable?}",
+      "choices": [
+        "x = 0",
+        "x = 5",
+        "x = -5",
+        "\\text{everywhere}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Corner is where the inside of the absolute value is 0.",
+        "$x - 5 = 0$ at $x = 5$."
+      ],
+      "explanation": "$|x - 5|$ has a corner at $x = 5$ (where $x - 5 = 0$). Differentiable everywhere else.",
+      "steps": [
+        "**General rule for $|g(x)|$.** Absolute value creates a CORNER at points where $g(x) = 0$ (the inside switches sign). Elsewhere, $|g|$ is smooth.",
+        "**Apply to $|x - 5|$.** $x - 5 = 0$ at $x = 5$. That's where the corner is.",
+        "**At all other $x$:** the function is just $\\pm(x - 5)$ (a linear function), differentiable.",
+        "**Quick check by translation.** $|x - 5|$ is the graph of $|x|$ shifted right by 5 units. The corner that was at $x = 0$ is now at $x = 5$. Geometric intuition matches the algebra."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Three reasons a function fails to be differentiable at a point:}",
+      "choices": [
+        "discontinuity, corner, vertical tangent",
+        "polynomial, even, odd",
+        "increasing, decreasing, constant",
+        "only discontinuity"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Three classic failures.",
+        "Discontinuity, corner/cusp, vertical tangent."
+      ],
+      "explanation": "Three ways differentiability fails: discontinuity, corner/cusp, vertical tangent.",
+      "steps": [
+        "**The 3 classic ways differentiability fails — memorize this trio.**",
+        "**1. Discontinuity.** Any kind (jump, hole, infinite) — no continuity → no differentiability.",
+        "**2. Corner or cusp.** Continuous but left slope ≠ right slope. Cleanest example: $|x|$ at 0 (a corner).",
+        "**3. Vertical tangent.** Continuous, smooth in shape, but slope blows up. Example: $x^{1/3}$ at 0.",
+        "**Reverse usage.** When asked 'is $f$ differentiable at $a$?', check these three failures. If NONE apply and $f$ is built from differentiable pieces, $f$ is differentiable at $a$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A function is differentiable at } a. \\text{ Zooming in at } (a, f(a)) \\text{ would show:}",
+      "choices": [
+        "essentially a straight line (the tangent)",
+        "a sharp corner",
+        "a vertical line",
+        "a discontinuity"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Differentiable functions look locally linear when you zoom in.",
+        "Tangent line emerges."
+      ],
+      "explanation": "A differentiable function is **locally linear** at $a$ — zoom in enough and it looks like a straight line, namely the tangent.",
+      "steps": [
+        "**Intuitive definition.** Differentiability at $a$ MEANS 'looks like a straight line up close'. Mathematicians say: 'locally linear'.",
+        "**Zooming experiment.** Imagine repeatedly halving the window around $(a, f(a))$. A smooth curve will appear straighter and straighter — eventually indistinguishable from its tangent line.",
+        "**Failed cases — zoom in and they STILL look weird.** A corner ($|x|$ at 0) still looks like a V no matter how far you zoom. A vertical tangent ($x^{1/3}$ at 0) still looks vertical. A discontinuity still has a gap.",
+        "**This is the SECRET behind calculus.** All of calculus rests on the fact that smooth functions are locally linear. Linear approximation, Taylor series, Newton's method — all riff on this idea."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which is differentiable everywhere?}",
+      "choices": [
+        "f(x) = |x|",
+        "f(x) = 1/x",
+        "f(x) = x^2 + 3x - 1",
+        "f(x) = \\sqrt{x}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "Polynomials are differentiable everywhere.",
+        "Other choices have problems somewhere."
+      ],
+      "explanation": "Polynomials are differentiable everywhere. The others have a corner ($|x|$ at 0), discontinuity (1/x at 0), or domain issue + vertical tangent ($\\sqrt{x}$ at 0).",
+      "steps": [
+        "**Differentiability catalog — memorize:**",
+        "  Polynomials → differentiable everywhere.",
+        "  $\\sin x, \\cos x, e^x$ → differentiable everywhere.",
+        "  $|x|, |x - c|$ → corner; not differentiable at $c$.",
+        "  $1/x$ → not even defined at 0; vertical asymptote.",
+        "  $\\sqrt{x}, x^{1/3}$ → vertical tangent at 0.",
+        "  $\\tan x$ → vertical asymptotes at odd multiples of $\\pi/2$.",
+        "**Apply.** (a) corner at 0. (b) undefined at 0. (c) polynomial — differentiable everywhere ✓. (d) vertical tangent at 0.",
+        "**Answer: (c).**"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q10",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If } f'(a) = 5, \\text{ what is the slope of the tangent line at } a?",
+      "choices": [
+        "5",
+        "1/5",
+        "0",
+        "depends on } f"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Derivative at a point = slope of tangent.",
+        "$f'(a) = 5$ means slope is 5."
+      ],
+      "explanation": "$f'(a)$ IS the slope of the tangent at $x = a$. So slope = 5.",
+      "steps": [
+        "**By DEFINITION, $f'(a)$ is the slope of the tangent line to $f$ at $x = a$.** This is the geometric meaning of the derivative.",
+        "**Apply.** $f'(a) = 5$ ⟹ slope of tangent at $a$ = 5.",
+        "**No additional info needed.** The derivative's VALUE IS the slope. Doesn't depend on the function's form, position, sign, etc."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The function } f(x) = \\begin{cases} x^2 & x \\leq 1 \\\\ 2x - 1 & x > 1 \\end{cases} \\text{ is at } x = 1:",
+      "choices": [
+        "continuous and differentiable",
+        "continuous but not differentiable",
+        "not continuous",
+        "infinite discontinuity"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Check continuity: both pieces give 1 at x = 1. Check derivatives: $2x$ gives 2 from left; $2$ constant from right — same!",
+        "Continuous AND differentiable at x = 1."
+      ],
+      "explanation": "$f(1) = 1$ from both pieces (continuous). Derivatives: $2x|_{x=1} = 2$ from left, derivative of $2x-1$ is $2$ from right — match! Differentiable.",
+      "steps": [
+        "**Piecewise function — check continuity AND differentiability separately at the boundary.**",
+        "**Check 1: Continuity at $x = 1$.** Left piece value: $1^2 = 1$. Right piece value: $2(1) - 1 = 1$. Match ✓. Continuous.",
+        "**Check 2: Differentiability at $x = 1$.** Left derivative: $\\dfrac{d}{dx}(x^2) = 2x \\to 2$ at $x = 1$. Right derivative: $\\dfrac{d}{dx}(2x - 1) = 2$. Match ✓. Differentiable.",
+        "**Both checks pass — continuous AND differentiable.** The pieces meet seamlessly with matching SLOPES, not just matching VALUES.",
+        "**Lesson.** A piecewise function can be perfectly smooth at a boundary if (a) values match (continuous) AND (b) derivatives match (differentiable). When only (a) holds, you get a CORNER."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If } f \\text{ is differentiable on } [a, b], \\text{ then } f \\text{ is also:}",
+      "choices": [
+        "continuous on [a, b]",
+        "monotonic",
+        "polynomial",
+        "always increasing"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Differentiable on the interval ⇒ continuous on the interval.",
+        "Continuity comes free."
+      ],
+      "explanation": "Differentiability implies continuity at every point — so on a whole interval too.",
+      "steps": [
+        "**Extend the pointwise result to intervals.** 'Differentiable at every point of $[a, b]$' ⇒ 'continuous at every point of $[a, b]$' ⇒ 'continuous on $[a, b]$'.",
+        "**Why options b, c, d are wrong.** Differentiability says nothing about WHICH WAY the function moves. $f$ could be increasing, decreasing, oscillating, polynomial or not — none of that follows from differentiability alone.",
+        "**Continuity is the ONLY thing that necessarily follows.**"
+      ],
+      "difficulty": "easy"
+    }
+  ]
+}

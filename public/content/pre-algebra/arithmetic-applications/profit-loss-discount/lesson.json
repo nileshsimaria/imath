@@ -1,0 +1,80 @@
+{
+  "title": "Profit, Loss & Discount",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### The four prices",
+        "Every commercial transaction has up to four prices floating around. Get these straight and the formulas almost write themselves.",
+        "**Cost Price (CP)** — what the seller paid for the item.",
+        "**Selling Price (SP)** — what the buyer paid (= what the seller received).",
+        "**Marked Price (MP)** — the price tag (the 'list price' before any discount).",
+        "**Discount** — the reduction from MP to SP."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The five core formulas",
+      "body": "**1. Profit** = SP − CP   (when SP > CP)\n\n**2. Loss** = CP − SP   (when SP < CP)\n\n**3. Profit %** = $\\dfrac{\\text{Profit}}{\\text{CP}} \\times 100$\n\n**4. Loss %** = $\\dfrac{\\text{Loss}}{\\text{CP}} \\times 100$\n\n**5. Discount** = MP − SP, and **Discount %** = $\\dfrac{\\text{Discount}}{\\text{MP}} \\times 100$\n\n**Always.** Profit/Loss percentages are computed **on the CP**. Discount percentage is computed **on the MP**. Mix these up and answers go wildly wrong."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Forward and reverse",
+        "If you know CP and Profit%, you can find SP:",
+        "$SP = CP \\times \\left(1 + \\dfrac{P\\%}{100}\\right)$",
+        "If you know SP and Profit%, you can find CP:",
+        "$CP = \\dfrac{SP}{1 + \\dfrac{P\\%}{100}}$",
+        "**Common student mistake:** to find CP from SP at 20% profit, students subtract 20%. That's WRONG. The 20% is *of CP*, not SP. Use the formula."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Worked example 1",
+      "body": "A shopkeeper buys a bag at \\$400 and sells it at \\$500. Find profit% and SP if she had wanted 25% profit instead.\n\n**Profit = \\$100.** Profit% = $\\dfrac{100}{400} \\times 100 = 25\\%$ (actually exactly the right amount). \n\n**For 25% target:** SP = $400 \\times 1.25 = \\$500$ — same! So she's hit her target.\n\nIf she'd wanted **40% profit:** SP = $400 \\times 1.40 = \\$560$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Discount",
+        "**Marked Price** is the visible tag. **Selling Price** is what you actually pay after the discount.",
+        "$SP = MP \\times \\left(1 - \\dfrac{D\\%}{100}\\right)$",
+        "Where $D\\%$ is the discount percentage.",
+        "**Example.** MRP is \\$2000. Discount 15%. SP = $2000 \\times 0.85 = \\$1700$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Discount + profit combined",
+      "body": "A retailer's chain of logic:\n\n**CP → MP** (markup, often a lot) **→ SP** (after discount; less than MP).\n\nIf the retailer wants 20% profit after offering a 25% discount, the markup on CP must be higher than 25%. Compute carefully:\n\nIf $CP$ → markup by $m\\%$ → $MP$. Then discount $25\\%$ → $SP$. Want $SP = 1.20 \\cdot CP$.\n\n$SP = MP \\cdot 0.75 = CP \\cdot (1 + m/100) \\cdot 0.75 = 1.20 \\cdot CP.$\n\n$(1 + m/100) = \\dfrac{1.20}{0.75} = 1.6.$ So $m = 60\\%$. The MP must be 60% above CP to yield 20% profit after a 25% discount."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Successive discounts",
+        "Two discounts of $a\\%$ and $b\\%$ applied successively do **NOT** equal a single $(a+b)\\%$ discount.",
+        "If MP is \\$100, first discount 20% → \\$80. Second discount 10% on \\$80 → \\$72.",
+        "Single equivalent: $28\\%$ off (because $100 - 72 = 28$).",
+        "**Formula:** equivalent single discount = $a + b - \\dfrac{ab}{100}$.",
+        "$20 + 10 - \\dfrac{200}{100} = 28\\%$. ✓",
+        "Stores use this trick to make discounts sound bigger than they are."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Worked example 2",
+      "body": "A book is marked at \\$500. It is sold at successive discounts of 10% and 5%. Find SP.\n\n**Method 1 (direct):** $500 \\times 0.90 \\times 0.95 = \\$427.50$.\n\n**Method 2 (single equivalent):** Equivalent single discount = $10 + 5 - \\dfrac{50}{100} = 14.5\\%$. So SP = $500 \\times 0.855 = \\$427.50$. ✓"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Multiple items, partial-loss scenarios",
+        "**Example.** A trader sells two TVs for \\$15000 each. On one he gains 25% and on the other he loses 25%. What's the net result?",
+        "First TV: SP = 15000, profit 25% → CP = $\\dfrac{15000}{1.25} = 12000$.",
+        "Second TV: SP = 15000, loss 25% → CP = $\\dfrac{15000}{0.75} = 20000$.",
+        "Total CP = \\$32000, total SP = \\$30000. **Net loss = \\$2000.**",
+        "**Lesson:** equal-and-opposite percentage profit/loss does NOT cancel out, because the percentages are taken on different CPs. Always **work with the underlying rupees**, not the percentages."
+      ]
+    }
+  ]
+}

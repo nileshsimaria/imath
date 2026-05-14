@@ -1,0 +1,106 @@
+{
+  "title": "Where Does e Come From? Compound Interest & the Self-Derivative",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Every textbook hands you the number",
+        "$e = 2.71828\\,18284\\,59045\\dots$",
+        "and tells you it's the natural base for logarithms and exponentials. **But where does this strange number come from?** And why does it earn the title \"natural\"?",
+        "Thompson's *Calculus Made Easy* gives the cleanest answer there is — using **money**. We follow it here, then connect it to calculus."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. The compounding story",
+        "Suppose you put \\$100 in a bank that pays **10% interest per year**. After 1 year, you have \\$110. After 10 years — how much?",
+        "**Case (a): Simple interest.** Each year you withdraw your \\$10 of interest and put it under your mattress. After 10 years: $100 + 10 \\cdot 10 = 200$. Doubled in 10 years.",
+        "**Case (b): Compound interest, once a year.** Leave the interest in the account; let it earn interest too. After 1 year: \\$110. After 2: \\$121. After 3: \\$133.10. After 10 years:",
+        "$100 \\cdot (1.1)^{10} \\approx 259.37$",
+        "More! Because the interest itself starts earning interest."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "What if we compound more often?",
+      "body": "The bank could be **even more generous**: pay 5% every half-year instead of 10% once a year. After 10 years that's 20 compounding periods of 5%:\n\n$100 \\cdot (1.05)^{20} \\approx \\$265.33$\n\nMore generous still — quarterly (40 periods of 2.5%): $100 \\cdot (1.025)^{40} \\approx \\$268.51$.\n\nMonthly (120 periods of 5/6%): $100 \\cdot (1 + 0.1/12)^{120} \\approx \\$270.70$.\n\nDaily (3650 periods): about \\$271.79.\n\nEvery second? Continuously? **Where does this end?**"
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. The limit is $e$",
+        "Splitting the 10% interest into $n$ equal periods, applied $n$ times per year, for 10 years gives:",
+        "$\\text{Final} = 100 \\cdot \\!\\left(1 + \\dfrac{0.1}{n}\\right)^{10n}$",
+        "Setting $m = 10n$ (so $n = m/10$):",
+        "$= 100 \\cdot \\!\\left(1 + \\dfrac{1}{m}\\right)^{m}$",
+        "And the limit as $m \\to \\infty$ is *exactly the number $e$*:",
+        "$e = \\lim_{m \\to \\infty}\\!\\left(1 + \\dfrac{1}{m}\\right)^{m} = 2.71828\\dots$",
+        "**So:** \\$100 compounded continuously at 10% per year for 10 years becomes $100 \\cdot e \\approx \\$271.83$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The defining property of e",
+      "body": "Forget the 10%. The general statement: $e$ is the multiplier you get when **a quantity grows by its full size after one unit of time, but pays you back continuously** — every infinitesimal moment its growth-rate is proportional to its current size.\n\nThompson calls this the **law of organic growth**: growth where the **increment is proportional to the current magnitude**. Bacteria multiplying, radioactive decay, money compounding, populations exploding, hot tea cooling — anywhere growth rate scales with current size, $e$ shows up."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. $e^x$ has a magical property",
+        "Define $e^x$ as the value of \\$1 grown continuously at 100% per unit time for $x$ units of time. Then:",
+        "$e^x = \\lim_{n \\to \\infty}\\!\\left(1 + \\dfrac{x}{n}\\right)^n$",
+        "Expanding with the binomial theorem and letting $n \\to \\infty$ gives Thompson's beautiful series:",
+        "$\\boxed{\\;e^x = 1 + x + \\dfrac{x^2}{2!} + \\dfrac{x^3}{3!} + \\dfrac{x^4}{4!} + \\cdots\\;}$",
+        "Now **differentiate this series term-by-term** using the power rule:",
+        "$\\dfrac{d(e^x)}{dx} = 0 + 1 + \\dfrac{2x}{2!} + \\dfrac{3x^2}{3!} + \\dfrac{4x^3}{4!} + \\cdots = 1 + x + \\dfrac{x^2}{2!} + \\dfrac{x^3}{3!} + \\cdots$",
+        "That's the **same series**. So:"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The most-loved fact in calculus",
+      "body": "$\\dfrac{d(e^x)}{dx} = e^x$\n\nThe function $e^x$ is its **own** derivative. It is the *only* function (up to a constant multiplier) with this property. That's what makes $e$ uniquely 'the' base — every other exponential has a derivative that's $e^x \\cdot$ (some constant)."
+    },
+    {
+      "type": "text",
+      "md": [
+        "Here is the same fact stated in plain growth language: **at every instant, $e^x$ is increasing at a rate exactly equal to its current value**. The bigger it gets, the faster it grows — proportional to itself. That's organic growth, and $e^x$ is its mathematical embodiment."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. Why $\\dfrac{d}{dx}(\\ln x) = \\dfrac{1}{x}$",
+        "**Natural log** $\\ln x$ is the inverse of $e^x$. If $y = \\ln x$, then $e^y = x$.",
+        "Differentiate both sides of $e^y = x$ with respect to $x$. The left side needs the chain rule:",
+        "$e^y \\cdot \\dfrac{dy}{dx} = 1$",
+        "Since $e^y = x$, this is",
+        "$x \\cdot \\dfrac{dy}{dx} = 1 \\;\\Rightarrow\\; \\dfrac{dy}{dx} = \\dfrac{1}{x}$",
+        "$\\boxed{\\;\\dfrac{d(\\ln x)}{dx} = \\dfrac{1}{x}\\;}$"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The 'curious' result",
+      "body": "Thompson points out a beautiful oddity: $\\dfrac{1}{x} = x^{-1}$ is the **one power of $x$** that the power rule's antiderivative recipe can't handle. The rule $\\int x^n \\, dx = \\dfrac{x^{n+1}}{n+1} + C$ explodes when $n = -1$ (you'd divide by zero).\n\nSo the answer to \"what function has derivative $\\dfrac{1}{x}$?\" had to come from a DIFFERENT direction — from the natural log. That's $\\int \\dfrac{1}{x}\\, dx = \\ln|x| + C$.\n\nIt's a beautiful symmetry: the one place the power rule fails is exactly where the logarithm steps in to fill the gap."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 5. The full picture, in one table",
+        "$\\dfrac{d}{dx}(e^x) = e^x$",
+        "$\\dfrac{d}{dx}(e^{kx}) = k\\,e^{kx}$",
+        "$\\dfrac{d}{dx}(\\ln x) = \\dfrac{1}{x}$",
+        "$\\dfrac{d}{dx}(a^x) = a^x \\ln a$",
+        "$\\dfrac{d}{dx}(\\log_a x) = \\dfrac{1}{x \\ln a}$",
+        "The last two formulas have $\\ln a$ poking out because any other base $a$ is \"unnatural\" — it carries an extra conversion factor compared to base $e$. That's the meaning of \"natural\" in *natural log*: the only base for which the derivatives are clean."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Why this matters — outside the textbook",
+      "body": "Anywhere a quantity changes at a rate proportional to its current size, $e^x$ governs the math:\n\n- **Compound interest** (the original example)\n- **Population growth** — small bacterial colonies double on a clock, governed by $N(t) = N_0 e^{kt}$\n- **Radioactive decay** — atoms decay at a rate proportional to how many are left\n- **Cooling/heating** (Newton's law of cooling)\n- **Charging/discharging a capacitor** — RC circuits\n- **Drug elimination** from the bloodstream\n- **Inflation, depreciation** in economics\n\nAll of these are *the same equation*, just dressed up: $\\dfrac{dy}{dt} = k\\,y$, solved by $y = y_0 e^{kt}$. That equation is so common it has its own name: the **differential equation of exponential growth and decay**, the simplest non-trivial differential equation in the world."
+    }
+  ]
+}

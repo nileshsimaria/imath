@@ -1,0 +1,83 @@
+{
+  "title": "Simplifying Rational Expressions",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "A **rational expression** is just a fraction whose numerator and denominator are polynomials. They look just like ordinary fractions:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{x^2 - 9}{x^2 - 4x + 3}, \\qquad \\dfrac{2x + 6}{x^2 - 9}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Simplifying a rational expression is also like simplifying a numerical fraction: **factor everything, then cancel matching factors** between numerator and denominator."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The recipe",
+        "**1.** Factor the numerator completely.",
+        "**2.** Factor the denominator completely.",
+        "**3.** Cancel any common factors.",
+        "**4.** State the **restrictions** — values of $x$ that would have made the *original* denominator zero. Those values are still excluded from the domain even after cancellation."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 1",
+        "Simplify $\\dfrac{x^2 - 9}{x^2 - 4x + 3}$.",
+        "**Factor numerator.** $x^2 - 9 = (x - 3)(x + 3)$. (Difference of squares.)",
+        "**Factor denominator.** $x^2 - 4x + 3 = (x - 1)(x - 3)$.",
+        "**Cancel the common $(x - 3)$:**"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{(x - 3)(x + 3)}{(x - 1)(x - 3)} = \\dfrac{x + 3}{x - 1}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Restrictions.** Original denominator is zero when $x = 1$ or $x = 3$. Both are excluded from the domain — even though the simplified form $\\dfrac{x + 3}{x - 1}$ is defined at $x = 3$. The original wasn't, so neither is the simplified."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The restriction trap",
+      "body": "**Always state restrictions from the *original* expression.** Cancellation can hide a 'hole' in the graph — the value where the canceled factor was zero. The simplified form looks innocent there, but the original was undefined."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 2 — pulling out a common factor first",
+        "Simplify $\\dfrac{2x + 6}{x^2 - 9}$.",
+        "**Numerator.** $2x + 6 = 2(x + 3)$.",
+        "**Denominator.** $x^2 - 9 = (x - 3)(x + 3)$.",
+        "**Cancel $(x + 3)$:**"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{2(x + 3)}{(x - 3)(x + 3)} = \\dfrac{2}{x - 3} \\quad (x \\neq -3, x \\neq 3)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why factoring is essential",
+        "You can only cancel **factors**, never **terms**. A common student error:",
+        "$\\dfrac{x + 5}{x + 3}$ — you can't 'cancel the $x$' to get $\\dfrac{5}{3}$. The $x$ is a *term* added to other things, not a factor multiplying everything. Cancellation requires *multiplied* common pieces."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "**Factor numerator and denominator, cancel common factors.** Always state the restrictions from the *original* denominator — they don't go away when you simplify. And remember: you cancel **factors**, never terms."
+    }
+  ]
+}

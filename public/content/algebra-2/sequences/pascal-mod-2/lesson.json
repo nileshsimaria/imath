@@ -1,0 +1,62 @@
+{
+  "title": "Pascal Mod 2: Sierpinski Hidden Inside",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### A surprising visualization",
+        "Take Pascal's triangle and color each cell **black** if its value is *odd*, **white** if *even*. Don't draw the actual numbers — just the colors.",
+        "Then squint."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The Sierpinski triangle appears!",
+      "body": "The pattern of black cells (odd entries) in Pascal's triangle is **the Sierpinski triangle**. As you draw more and more rows, the black-cell pattern is exactly the Sierpinski fractal at progressively finer scales.\n\nHere's a hand-rendered example — black = odd, white = even, first 16 rows:"
+    },
+    {
+      "type": "widget",
+      "kind": "pascals-triangle",
+      "config": {
+        "rows": 12
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "Click around in the widget above to see actual values. Then mentally mark each entry as **even** or **odd**. The odds form a Sierpinski pattern."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why does this happen?",
+        "Pascal's rule says $\\binom{n}{k} = \\binom{n-1}{k-1} + \\binom{n-1}{k}$.",
+        "**Mod 2**, this becomes $\\binom{n}{k} \\equiv \\binom{n-1}{k-1} + \\binom{n-1}{k} \\pmod 2$, i.e., XOR (exclusive or).",
+        "Build the triangle by XOR — and you're running a very simple cellular automaton (called **Rule 60** if you're a CA fan). The output of this cellular automaton, when you start from a single 1, is exactly the Sierpinski triangle."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Kummer's theorem (formal proof)",
+      "body": "There's a beautiful number-theoretic theorem that explains exactly when $\\binom{n}{k}$ is odd:\n\n**$\\binom{n}{k}$ is odd if and only if, in the binary representation of $n$, every digit that is 1 is also 1 in the corresponding position of $k$ (binary $k$ is a 'submask' of binary $n$).**\n\nFor instance, $\\binom{5}{2}$: $5 = 101_2$, $2 = 010_2$. The 1-bit of $2$ is in a position where $5$ has a $0$, so the bits don't fit — $\\binom{5}{2}$ should be EVEN. Check: $\\binom{5}{2} = 10$, even. ✓\n\n$\\binom{5}{1}$: $5 = 101_2$, $1 = 001_2$. The 1-bit of $1$ matches a 1-bit of $5$. ODD. Check: $\\binom{5}{1} = 5$. ✓\n\nThis is **Lucas's theorem mod 2**, also known as Kummer's theorem. It's the algebraic reason for the Sierpinski connection."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Generalize: mod 3, mod 5, ...",
+        "Color cells by their value **mod $p$** for any prime $p$:",
+        "**Mod 2:** Sierpinski triangle (3 copies at half scale).",
+        "**Mod 3:** A different fractal with 6 self-similar copies — same shape concept, different look.",
+        "**Mod 5:** Yet another self-similar fractal.",
+        "**In general:** Pascal's triangle mod $p$ produces a fractal at every scale, with $\\binom{p+1}{2}$ active sub-triangles.",
+        "Each prime gives a distinct, beautiful fractal. The pattern is deep — connected to how addition works in modular arithmetic with carries."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Where the surprise comes from",
+      "body": "The construction of the Sierpinski triangle (recursively remove the middle of an equilateral triangle) feels VERY different from the construction of Pascal's triangle (add the two above).\n\nThey turn out to be the same object — at least when you look only at parity.\n\nThis is a recurring theme in math: definitions that look unrelated can turn out to describe the same structure. The harder version of this is encoding objects with totally different definitions and discovering they're isomorphic. Discovering such connections is most of what advanced math is about."
+    }
+  ]
+}

@@ -1,0 +1,275 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "(3x^2 + 5x - 2) + (x^2 - 3x + 4) = ?",
+      "choices": [
+        "4x^2 + 2x + 2",
+        "4x^2 + 8x - 6",
+        "3x^4 + 2x + 2",
+        "4x^2 + 2x + 6"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Combine like terms.",
+        "$x^2$ terms: $3 + 1 = 4$. $x$ terms: $5 - 3 = 2$. Constants: $-2 + 4 = 2$."
+      ],
+      "explanation": "$x^2$ terms: $3x^2 + x^2 = 4x^2$. $x$ terms: $5x - 3x = 2x$. Constants: $-2 + 4 = 2$. Total: $4x^2 + 2x + 2$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "(x + 5)(x + 3) = ?",
+      "choices": [
+        "x^2 + 15",
+        "x^2 + 8x + 15",
+        "2x + 8",
+        "x^2 + 8x + 8"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "FOIL: First, Outer, Inner, Last.",
+        "First: $x \\cdot x = x^2$. Outer + Inner: $3x + 5x = 8x$. Last: $5 \\cdot 3 = 15$."
+      ],
+      "explanation": "$(x + 5)(x + 3) = x^2 + 3x + 5x + 15 = x^2 + 8x + 15$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "(x + 4)(x - 4) = ?",
+      "choices": [
+        "x^2 - 16",
+        "x^2 + 16",
+        "x^2 - 8x + 16",
+        "x^2 + 8x - 16"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Outer + Inner: $-4x + 4x = 0$.",
+        "Difference of squares pattern: $(a+b)(a-b) = a^2 - b^2$."
+      ],
+      "explanation": "The middle terms cancel: $-4x + 4x = 0$. Result: $x^2 - 16$. This is the *difference of squares* pattern.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "2x(3x^2 - 5x + 1) = ?",
+      "choices": [
+        "6x^3 - 10x^2 + 2x",
+        "6x^3 - 5x + 1",
+        "6x^2 - 10x + 2",
+        "6x^3 + 10x^2 + 2x"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Distribute $2x$ across each term.",
+        "Multiply coefficients, add exponents."
+      ],
+      "explanation": "$2x \\cdot 3x^2 = 6x^3$. $2x \\cdot (-5x) = -10x^2$. $2x \\cdot 1 = 2x$. Result: $6x^3 - 10x^2 + 2x$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the degree of } 4x^3 - 7x^5 + 2x?",
+      "choices": [
+        "3",
+        "4",
+        "5",
+        "10"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Degree = highest power of $x$.",
+        "Look at all the exponents: $3, 5, 1$."
+      ],
+      "explanation": "The degree is the **highest** power of $x$. Exponents are $3, 5, 1$ — the highest is $5$. Degree = $5$.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Simplify: } (3x^2 - 5x + 2) + (x^2 + 4x - 7).",
+      "choices": [
+        "4x^2 - x - 5",
+        "4x^2 + 9x - 5",
+        "2x^2 - x - 5",
+        "4x^2 - x + 9"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Combine like terms: $x^2$ with $x^2$, $x$ with $x$, constants with constants.",
+        "$(3+1)x^2 + (-5+4)x + (2-7)$."
+      ],
+      "explanation": "$4x^2 - x - 5$.",
+      "steps": [
+        "Combine like terms.",
+        "$x^2$: $3 + 1 = 4$.",
+        "$x$: $-5 + 4 = -1$.",
+        "Constant: $2 - 7 = -5$.",
+        "**Result: $4x^2 - x - 5$.**"
+      ],
+      "id": "q6",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Simplify: } (5x^2 + 3x - 4) - (2x^2 - x + 6).",
+      "choices": [
+        "3x^2 + 4x - 10",
+        "3x^2 + 2x + 2",
+        "7x^2 + 2x - 10",
+        "3x^2 + 4x + 2"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Distribute the negative: $-(2x^2 - x + 6) = -2x^2 + x - 6$.",
+        "Then combine: $(5-2)x^2 + (3+1)x + (-4-6)$."
+      ],
+      "explanation": "$(5-2)x^2 + (3-(-1))x + (-4-6) = 3x^2 + 4x - 10$.",
+      "steps": [
+        "Distribute the subtraction: $(5x^2 + 3x - 4) + (-2x^2 + x - 6)$.",
+        "Combine like terms: $x^2$: $3$; $x$: $4$; constant: $-10$.",
+        "**Result: $3x^2 + 4x - 10$.**"
+      ],
+      "id": "q7",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Multiply: } (x + 3)(x - 5).",
+      "choices": [
+        "x^2 - 2x - 15",
+        "x^2 - 15",
+        "x^2 + 8x - 15",
+        "x^2 + 2x - 15"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "FOIL: $(x \\cdot x) + (x \\cdot -5) + (3 \\cdot x) + (3 \\cdot -5)$.",
+        "$x^2 - 5x + 3x - 15 = x^2 - 2x - 15$."
+      ],
+      "explanation": "FOIL: $x^2 - 5x + 3x - 15 = x^2 - 2x - 15$.",
+      "steps": [
+        "FOIL: First, Outer, Inner, Last.",
+        "First: $x \\cdot x = x^2$.",
+        "Outer: $x \\cdot (-5) = -5x$.",
+        "Inner: $3 \\cdot x = 3x$.",
+        "Last: $3 \\cdot (-5) = -15$.",
+        "Combine: $x^2 - 5x + 3x - 15 = x^2 - 2x - 15$."
+      ],
+      "id": "q8",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Expand: } (2x - 3)^2.",
+      "choices": [
+        "4x^2 - 12x + 9",
+        "4x^2 + 9",
+        "4x^2 - 9",
+        "4x^2 + 12x + 9"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "$(a - b)^2 = a^2 - 2ab + b^2$.",
+        "$a = 2x$, $b = 3$: $4x^2 - 2(2x)(3) + 9 = 4x^2 - 12x + 9$."
+      ],
+      "explanation": "$(2x - 3)^2 = (2x)^2 - 2(2x)(3) + 3^2 = 4x^2 - 12x + 9$.",
+      "steps": [
+        "Use the perfect-square identity: $(a - b)^2 = a^2 - 2ab + b^2$.",
+        "$a = 2x$, $b = 3$.",
+        "$a^2 = 4x^2$, $2ab = 2(2x)(3) = 12x$, $b^2 = 9$.",
+        "Combine: $4x^2 - 12x + 9$.",
+        "**Common mistake:** $(2x - 3)^2 \\neq 4x^2 - 9$ or $4x^2 + 9$. The middle term is essential."
+      ],
+      "id": "q9",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Multiply: } 3x(2x^2 - 4x + 5).",
+      "choices": [
+        "6x^3 - 12x^2 + 15x",
+        "6x^2 - 12x + 15",
+        "6x^3 - 12x^2 + 15",
+        "5x^3 - 7x^2 + 8x"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Distribute $3x$ to each term inside.",
+        "$3x \\cdot 2x^2 = 6x^3$, $3x \\cdot (-4x) = -12x^2$, $3x \\cdot 5 = 15x$."
+      ],
+      "explanation": "$3x \\cdot 2x^2 - 3x \\cdot 4x + 3x \\cdot 5 = 6x^3 - 12x^2 + 15x$.",
+      "steps": [
+        "Distribute $3x$ to each term: $3x \\cdot 2x^2 + 3x \\cdot (-4x) + 3x \\cdot 5$.",
+        "Multiply: $6x^3 + (-12x^2) + 15x$.",
+        "$= 6x^3 - 12x^2 + 15x$."
+      ],
+      "id": "q10",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Expand: } (x + 4)(x - 4).",
+      "choices": [
+        "x^2 - 16",
+        "x^2 + 16",
+        "x^2 - 8x - 16",
+        "x^2 - 8x + 16"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Difference of squares: $(a + b)(a - b) = a^2 - b^2$.",
+        "$x^2 - 16$."
+      ],
+      "explanation": "Difference of squares: $(x+4)(x-4) = x^2 - 16$.",
+      "steps": [
+        "Recognize the form $(a + b)(a - b)$ — difference of squares pattern.",
+        "$(a + b)(a - b) = a^2 - b^2$.",
+        "Here $a = x$, $b = 4$: $x^2 - 16$.",
+        "(FOIL gives the same: $x^2 - 4x + 4x - 16 = x^2 - 16$ — middle terms cancel.)"
+      ],
+      "id": "q11",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Multiply: } (x + 1)(x^2 + 2x + 3).",
+      "choices": [
+        "x^3 + 3x^2 + 5x + 3",
+        "x^3 + 2x^2 + 3x + 3",
+        "x^3 + x^2 + 5x + 3",
+        "x^3 + 3x^2 + 3x + 3"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Distribute: $x(x^2 + 2x + 3) + 1(x^2 + 2x + 3)$.",
+        "$x^3 + 2x^2 + 3x + x^2 + 2x + 3$. Combine."
+      ],
+      "explanation": "$x^3 + 2x^2 + 3x + x^2 + 2x + 3 = x^3 + 3x^2 + 5x + 3$.",
+      "steps": [
+        "Distribute the binomial across the trinomial.",
+        "$x(x^2 + 2x + 3) = x^3 + 2x^2 + 3x$.",
+        "$1(x^2 + 2x + 3) = x^2 + 2x + 3$.",
+        "Add: $x^3 + (2x^2 + x^2) + (3x + 2x) + 3 = x^3 + 3x^2 + 5x + 3$."
+      ],
+      "id": "q12",
+      "difficulty": "hard"
+    }
+  ]
+}

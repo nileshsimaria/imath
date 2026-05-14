@@ -1,0 +1,160 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The parabola } x^2 = 8y \\text{ has focus at:}",
+      "choices": [
+        "(0, 2)",
+        "(2, 0)",
+        "(0, -2)",
+        "(0, 8)"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Compare to $x^2 = 4py$: $4p = 8$, so $p = 2$.",
+        "Focus at $(0, p) = (0, 2)$."
+      ],
+      "explanation": "From $x^2 = 4py$, $4p = 8 \\Rightarrow p = 2$. Focus is $(0, p) = (0, 2)$.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Directrix of the parabola in q1?}",
+      "choices": [
+        "y = 2",
+        "y = -2",
+        "x = 2",
+        "y = 0"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Directrix is opposite the focus, same distance from vertex.",
+        "$y = -p = -2$."
+      ],
+      "explanation": "Directrix: $y = -p = -2$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Vertex of } (x - 5)^2 = 12(y + 2)?",
+      "choices": [
+        "(5, -2)",
+        "(-5, 2)",
+        "(5, 2)",
+        "(-5, -2)"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Compare to $(x - h)^2 = 4p(y - k)$.",
+        "$h = 5$, $k = -2$."
+      ],
+      "explanation": "Vertex $(h, k) = (5, -2)$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{For } y = \\tfrac{1}{4}(x - 1)^2 + 3, \\text{ find } p \\text{ (vertex-to-focus distance).}",
+      "answer": 1,
+      "tolerance": 0.001,
+      "hints": [
+        "Compare with $y = a(x - h)^2 + k$: $a = 1/4$.",
+        "$a = 1/(4p)$, so $p = 1/(4a) = 1/1 = 1$."
+      ],
+      "explanation": "$a = 1/4$ ⇒ $p = 1/(4a) = 1$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** Compare with $y = a(x - h)^2 + k$: $a = 1/4$."
+        },
+        {
+          "text": "$a = 1/(4p)$, so $p = 1/(4a) = 1/1 = 1$."
+        },
+        {
+          "text": "**Solution.** $a = 1/4$ ⇒ $p = 1/(4a) = 1$."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The parabola opens which direction: } (y + 1)^2 = -4(x - 3)?",
+      "choices": [
+        "Up",
+        "Down",
+        "Right",
+        "Left"
+      ],
+      "answerIndex": 3,
+      "hints": [
+        "$(y - k)^2 = 4p(x - h)$ form, with $p < 0$.",
+        "Sideways with $p$ negative ⇒ opens left."
+      ],
+      "explanation": "$(y - k)^2 = 4p(x - h)$ opens sideways. Here $4p = -4$, so $p = -1 < 0$: opens to the LEFT.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "prompt": "Why are satellite dishes parabolic?",
+      "choices": [
+        "Because parabolic dishes are easier to manufacture.",
+        "Because incoming parallel signals reflect through the focus, so a receiver at the focus collects all incoming signal.",
+        "Because parabolas have the smallest possible perimeter.",
+        "Because gravity makes the dish curve into a parabola naturally."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "The 'reflection property' of parabolas.",
+        "Parallel rays in → all pass through the focus."
+      ],
+      "explanation": "Parabolas have a reflection property: parallel incoming rays reflect through the focus. Place a receiver at the focus and you collect all incoming signal — that's exactly what a dish does.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{If } y = ax^2 \\text{ has focus at } (0, 1/16), \\text{ what is } a?",
+      "answer": 4,
+      "tolerance": 0.001,
+      "hints": [
+        "Focus at $(0, p)$, so $p = 1/16$.",
+        "$a = 1/(4p) = 1/(1/4) = 4$."
+      ],
+      "explanation": "$p = 1/16$ ⇒ $a = 1/(4 \\cdot 1/16) = 16/4 = 4$.",
+      "difficulty": "hard",
+      "steps": [
+        {
+          "text": "**Approach.** Focus at $(0, p)$, so $p = 1/16$."
+        },
+        {
+          "text": "$a = 1/(4p) = 1/(1/4) = 4$."
+        },
+        {
+          "text": "**Solution.** $p = 1/16$ ⇒ $a = 1/(4 \\cdot 1/16) = 16/4 = 4$."
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "prompt": "A ball is thrown into the air. Ignoring air resistance, its trajectory is:",
+      "choices": [
+        "A circle",
+        "A straight line then curve",
+        "A parabola",
+        "An ellipse"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Constant gravitational acceleration + initial velocity = quadratic in time.",
+        "Height is quadratic in horizontal distance."
+      ],
+      "explanation": "Constant downward acceleration produces a parabolic trajectory. This is why every textbook physics-of-baseball problem uses parabolas.",
+      "difficulty": "medium"
+    }
+  ]
+}

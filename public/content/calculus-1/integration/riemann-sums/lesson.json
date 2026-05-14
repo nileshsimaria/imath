@@ -1,0 +1,136 @@
+{
+  "title": "Riemann Sums & Definite Integrals",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Antiderivatives are useful, but the more revolutionary side of integration is **finding areas**. The **definite integral** captures 'the area under the curve' precisely. The bridge from area to antiderivatives is the Fundamental Theorem of Calculus (next lesson)."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. Approximating Area with Rectangles"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Want the area under $f(x)$ from $a$ to $b$. The simplest idea: divide $[a, b]$ into $n$ equal subintervals, build rectangles whose heights come from the function, and sum their areas.",
+        "**Width of each rectangle:** $\\Delta x = (b - a) / n$.",
+        "**Heights** depend on where in each subinterval you sample $f$:",
+        "**Left Riemann sum:** sample at the left endpoint of each subinterval.",
+        "**Right Riemann sum:** sample at the right endpoint.",
+        "**Midpoint sum:** sample at the middle of each subinterval — usually most accurate.",
+        "Try the widget below. Slide $n$ from 1 to 60 and watch the rectangle sum converge to the true area."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "riemann-sum",
+      "config": {
+        "func": "parabola",
+        "n": 4,
+        "type": "left"
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. The Riemann Sum Formula"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "S_n = \\sum_{i=1}^{n} f(x_i^*)\\,\\Delta x"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Where $x_i^*$ is the sample point in the $i$-th subinterval. Different choices (left, right, mid) give slightly different approximations, but they all converge as $n \\to \\infty$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. The Definite Integral"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Definite Integral",
+      "body": "$\\displaystyle\\int_a^b f(x)\\,dx = \\lim_{n \\to \\infty} \\sum_{i=1}^{n} f(x_i^*)\\,\\Delta x$"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**The exact area under the curve.** The limit of Riemann sums as the rectangles get arbitrarily thin.",
+        "**Notation:** $a$ = lower limit, $b$ = upper limit, $f(x)$ = integrand, $dx$ = the differential (a hint of width).",
+        "**Sign convention:** if $f$ is positive on $[a, b]$, the integral is the (positive) area between the curve and the x-axis. If $f$ is negative, the integral is the **negative** of the area below the x-axis."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — area below the x-axis",
+        "$\\int_0^1 (2x - 3)\\,dx$.",
+        "$(2x - 3)$ at $x = 0$ is $-3$, at $x = 1$ is $-1$. Whole integrand negative on $[0, 1]$.",
+        "We'd compute later: $\\int_0^1 (2x - 3)\\,dx = [x^2 - 3x]_0^1 = 1 - 3 = -2$.",
+        "**Negative integral** means area is below the x-axis (signed area)."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. Properties of Definite Integrals"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\int_a^a f(x)\\,dx = 0"
+    },
+    {
+      "type": "math",
+      "tex": "\\int_a^b f(x)\\,dx = -\\int_b^a f(x)\\,dx"
+    },
+    {
+      "type": "math",
+      "tex": "\\int_a^b [f(x) + g(x)]\\,dx = \\int_a^b f(x)\\,dx + \\int_a^b g(x)\\,dx"
+    },
+    {
+      "type": "math",
+      "tex": "\\int_a^b c\\cdot f(x)\\,dx = c \\int_a^b f(x)\\,dx"
+    },
+    {
+      "type": "math",
+      "tex": "\\int_a^b f(x)\\,dx = \\int_a^c f(x)\\,dx + \\int_c^b f(x)\\,dx"
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 5. Geometric Approach to Easy Integrals"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Some integrals are areas of shapes you already know — no calculus needed.",
+        "**$\\int_0^4 5\\,dx$:** rectangle, base 4, height 5. Area $= 20$.",
+        "**$\\int_0^3 2x\\,dx$:** triangle from origin, base 3, height $2(3) = 6$. Area $= \\dfrac{1}{2}(3)(6) = 9$.",
+        "**$\\int_{-2}^2 \\sqrt{4 - x^2}\\,dx$:** semicircle of radius 2. Area $= \\dfrac{1}{2}\\pi(2)^2 = 2\\pi$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — Riemann sum by hand",
+        "Approximate $\\int_0^2 x^2\\,dx$ using a left Riemann sum with $n = 4$.",
+        "$\\Delta x = 2/4 = 0.5$. Left endpoints: $0, 0.5, 1, 1.5$.",
+        "$f$ at these: $0, 0.25, 1, 2.25$.",
+        "Sum: $(0 + 0.25 + 1 + 2.25) \\cdot 0.5 = 3.5 \\cdot 0.5 = 1.75$.",
+        "**Compare:** true value $\\int_0^2 x^2 dx = 8/3 \\approx 2.667$. Left sum underestimates here because $x^2$ is increasing.",
+        "**With $n = 60$ in the widget:** sum is very close to 8/3."
+      ]
+    }
+  ]
+}

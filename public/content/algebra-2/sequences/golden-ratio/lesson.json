@@ -1,0 +1,74 @@
+{
+  "title": "The Golden Ratio φ",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### One special number",
+        "Take a line segment and divide it into two pieces, one longer and one shorter, so that:",
+        "$\\dfrac{\\text{long}}{\\text{short}} = \\dfrac{\\text{whole}}{\\text{long}}.$",
+        "There is exactly one ratio that works, called the **golden ratio**:",
+        "$\\phi = \\dfrac{1 + \\sqrt{5}}{2} \\approx 1.6180339887\\ldots$",
+        "The Greek letter $\\phi$ ('phi') is pronounced 'fee' or 'fye' depending on whom you ask."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\boxed{\\;\\phi = \\dfrac{1 + \\sqrt{5}}{2} \\approx 1.618\\,033\\,988\\ldots\\;}"
+    },
+    {
+      "type": "callout",
+      "title": "Solving for φ",
+      "body": "Let the short piece have length 1 and the long piece have length $\\phi$.\n\nFrom $\\dfrac{\\text{long}}{\\text{short}} = \\dfrac{\\text{whole}}{\\text{long}}$:\n\n$\\dfrac{\\phi}{1} = \\dfrac{\\phi + 1}{\\phi}$\n\n$\\phi^2 = \\phi + 1$\n\n$\\phi^2 - \\phi - 1 = 0$\n\nQuadratic formula: $\\phi = \\dfrac{1 \\pm \\sqrt{5}}{2}$. Take the positive root.\n\n**Bonus equation:** $\\phi^2 = \\phi + 1$, equivalently $\\phi = 1 + 1/\\phi$. Very useful identity."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Connection to Fibonacci",
+        "The ratio of consecutive Fibonacci numbers approaches $\\phi$:",
+        "$\\dfrac{F_{n+1}}{F_n} \\to \\phi \\quad \\text{as } n \\to \\infty.$",
+        "Computed examples: $1/1 = 1, 2/1 = 2, 3/2 = 1.5, 5/3 \\approx 1.667, 8/5 = 1.6, 13/8 = 1.625, 21/13 \\approx 1.615, 34/21 \\approx 1.619, 55/34 \\approx 1.6176, \\ldots$",
+        "The ratio oscillates above and below $\\phi$, getting closer and closer."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "fibonacci-spiral",
+      "config": {
+        "n": 10,
+        "show": "ratio"
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "The widget plots $F_{n+1}/F_n$ for each $n$. The dashed green line is $\\phi$. The points dance above and below the line, converging rapidly."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The 'golden rectangle' and the spiral",
+      "body": "A rectangle with side ratio $\\phi : 1$ is called a **golden rectangle**. It has a magical property: cut off a square from one end and the remaining rectangle is also a golden rectangle (with the same proportions but rotated 90°).\n\nRepeat indefinitely → you get a spiral of nested squares. The smooth curve through the corners is the **golden spiral**, which closely approximates the Fibonacci spiral."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Where φ appears",
+        "**Pentagrams.** Inside a regular five-pointed star, every ratio of line lengths is some power of $\\phi$. The star is a fountain of golden ratios.",
+        "**Plant phyllotaxis.** Leaves and seeds arrange themselves around a stem at the **golden angle** ($\\approx 137.5°$, derived from $\\phi$). This angle packs leaves most efficiently — no two leaves shadow each other directly, no matter how many you stack.",
+        "**Art and architecture.** The Parthenon, Da Vinci's *Vitruvian Man*, the proportions of the human body — claimed (sometimes overclaimed) to feature $\\phi$. The aesthetic appeal of $\\phi$-proportioned rectangles is debated, but the math is real.",
+        "**Continued fractions.** $\\phi = 1 + \\cfrac{1}{1 + \\cfrac{1}{1 + \\cfrac{1}{1 + \\cdots}}}$. This is the 'most irrational' number: hardest to approximate by rationals, which is why it's the ideal angle for packing leaves (no rational fraction of a turn lines them up)."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Numerical features",
+        "**Reciprocal:** $1/\\phi = \\phi - 1 \\approx 0.618$. (Notice: same decimal expansion as $\\phi$ minus 1.)",
+        "**Square:** $\\phi^2 = \\phi + 1 \\approx 2.618$.",
+        "**Powers:** $\\phi^n = F_n \\phi + F_{n-1}$ — a fact that makes computations with $\\phi$ surprisingly clean.",
+        "**Famous near-equality:** $\\phi^5 \\approx 11.09$, very close to $11$. Useful approximation: $\\phi^{15} \\approx 1364$, almost exactly $F_{15} = 610$ times $\\phi$. Anyway, $\\phi$ is one of the most studied irrational numbers in all of math."
+      ]
+    }
+  ]
+}

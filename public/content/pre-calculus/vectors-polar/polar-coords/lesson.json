@@ -1,0 +1,83 @@
+{
+  "title": "Polar Coordinates",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "You've spent years describing points by *Cartesian* coordinates: $(x, y)$ — go right $x$, then up $y$. **Polar coordinates** describe points a different way: by **distance from the origin** and the **angle** from the positive x-axis."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Polar coordinates",
+      "body": "**$(r, \\theta)$**: $r$ is the distance from the origin, $\\theta$ is the angle measured counterclockwise from the positive x-axis (in degrees or radians)."
+    },
+    {
+      "type": "widget",
+      "kind": "polar-point",
+      "config": {
+        "initialR": 4,
+        "initialTheta": 60
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "Drag the sliders. Watch the point sweep around concentric circles for changing $\\theta$, and outward for changing $r$. The Cartesian readout shows the same point in $(x, y)$ form."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Conversion: polar → Cartesian",
+        "If you know $(r, \\theta)$, the Cartesian coordinates come from basic right-triangle trig:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "x = r\\cos\\theta, \\quad y = r\\sin\\theta"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Example.** $(r, \\theta) = (4, 60°)$. Then $x = 4\\cos(60°) = 2$ and $y = 4\\sin(60°) = 2\\sqrt{3} \\approx 3.46$. So the point is $(2, 3.46)$ in Cartesian."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Conversion: Cartesian → polar",
+        "If you know $(x, y)$, recover $(r, \\theta)$ by:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "r = \\sqrt{x^2 + y^2}, \\quad \\theta = \\arctan\\left(\\dfrac{y}{x}\\right)"
+    },
+    {
+      "type": "callout",
+      "title": "Watch the quadrant",
+      "body": "$\\arctan(y / x)$ alone can't distinguish $(1, 1)$ from $(-1, -1)$ — both give $\\arctan(1) = 45°$, but they're in different quadrants. Always check the signs of $x$ and $y$ and adjust $\\theta$ accordingly. (Many calculators have an `atan2(y, x)` function that handles this for you.)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — converting both directions",
+        "**Polar to Cartesian.** $(r, \\theta) = (5, 90°)$. $x = 5\\cos(90°) = 0$. $y = 5\\sin(90°) = 5$. Point: $(0, 5)$.",
+        "**Cartesian to polar.** $(x, y) = (3, -4)$. $r = \\sqrt{9 + 16} = 5$. $\\theta = \\arctan(-4/3) \\approx -53°$ (in the fourth quadrant). Polar form: $(5, -53°)$ or equivalently $(5, 307°)$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why bother with polar?",
+        "Some problems are *much* easier in polar coordinates — anything involving rotational symmetry, circles, spirals, or angles. The equation of a circle of radius 3 centered at the origin? In Cartesian: $x^2 + y^2 = 9$. In polar: $r = 3$. Done. Polar coordinates are also the natural setup for navigation, radar, planetary orbits, and a lot of physics."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "Polar coordinates: $(r, \\theta)$ — distance and angle. Convert with $x = r\\cos\\theta$, $y = r\\sin\\theta$ (polar → Cartesian), and $r = \\sqrt{x^2 + y^2}$, $\\theta = \\arctan(y/x)$ (Cartesian → polar, with quadrant care). Useful any time the problem has rotational symmetry."
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "title": "Basic Probability",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "**Probability** is the math of chance — the language we use to talk about uncertainty. From coin flips to weather forecasts to medical decisions, probability tells us how likely something is."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. The Basic Definition"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "For an experiment with **equally likely** outcomes:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "P(E) = \\dfrac{\\text{number of favorable outcomes}}{\\text{total number of outcomes}}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Example.** Flip a fair coin. Outcomes: $\\{H, T\\}$ — both equally likely.",
+        "$P(\\text{heads}) = \\dfrac{1}{2}$.",
+        "**Example.** Roll a fair die. Outcomes: $\\{1, 2, 3, 4, 5, 6\\}$.",
+        "$P(\\text{rolling a } 4) = \\dfrac{1}{6}$.",
+        "$P(\\text{even}) = \\dfrac{3}{6} = \\dfrac{1}{2}$ (favorable: 2, 4, 6)."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Key facts",
+      "body": "**Probability is between 0 and 1.** $P = 0$: impossible. $P = 1$: certain. **All outcomes' probabilities sum to 1.**"
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. Sample Space and Events"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Sample space** $S$: the set of *all* possible outcomes. **Event**: a subset of the sample space (the outcomes we care about).",
+        "**Coin flip:** $S = \\{H, T\\}$. Event 'heads' = $\\{H\\}$.",
+        "**Two coin flips:** $S = \\{HH, HT, TH, TT\\}$. Event 'at least one head' = $\\{HH, HT, TH\\}$.",
+        "$P(\\text{at least one head}) = 3/4$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. The Complement"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "The **complement** of an event $A$ — written $A^c$ or $\\bar{A}$ — is everything *not* in $A$. It's the 'opposite' event."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "P(A^c) = 1 - P(A)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Use the complement when computing 'at least one' is easier as 'NOT none'.**",
+        "**Example.** Probability of getting at least one 6 in 4 rolls of a die.",
+        "Direct count is messy (1, 2, 3, or 4 sixes). Easier: $P(\\text{at least one 6}) = 1 - P(\\text{no 6 in 4 rolls})$.",
+        "$P(\\text{no 6 in one roll}) = 5/6$. So $P(\\text{no 6 in 4}) = (5/6)^4 \\approx 0.482$.",
+        "$P(\\text{at least one 6}) \\approx 1 - 0.482 = 0.518$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. Empirical vs Theoretical Probability"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Theoretical:** computed from the model — assumes equally likely outcomes. $P(\\text{heads}) = 0.5$ for a fair coin.",
+        "**Empirical:** observed from actual experiments. Flip a coin 100 times, count heads. The empirical probability = (count of heads) / 100.",
+        "**Law of Large Numbers:** as the number of trials grows, the empirical probability gets closer to the theoretical (for a true random process).",
+        "Try the simulator below — flip a coin a few times and watch the empirical probability bounce around. Then run 1000 trials and watch it settle toward 0.5."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "probability-sim",
+      "config": {
+        "mode": "coin"
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "Now try a die — six outcomes, theoretical probability 1/6 ≈ 0.167 each. Run 6000 trials and you should see roughly 1000 of each outcome."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "probability-sim",
+      "config": {
+        "mode": "die"
+      }
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "Probability $P(E) = \\dfrac{\\text{favorable}}{\\text{total}}$ for equally likely outcomes. Always in $[0, 1]$. Use the **complement** $P(A^c) = 1 - P(A)$ for 'at least one' problems. Empirical (from data) approaches theoretical (from the model) as trials grow."
+    }
+  ]
+}

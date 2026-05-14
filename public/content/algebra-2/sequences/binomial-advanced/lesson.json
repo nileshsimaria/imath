@@ -1,0 +1,77 @@
+{
+  "title": "Binomial Theorem — Advanced Problems",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### The binomial theorem (recap)",
+        "$(x + y)^n = \\sum_{k=0}^{n} \\binom{n}{k} x^{n-k} y^k$",
+        "= $\\binom{n}{0} x^n + \\binom{n}{1} x^{n-1} y + \\binom{n}{2} x^{n-2} y^2 + \\ldots + \\binom{n}{n} y^n$",
+        "Each term has the form $\\binom{n}{k} x^{n-k} y^k$. The full lesson on Pascal's triangle covers why."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The general term — a's favorite tool",
+      "body": "$T_{k+1} = \\binom{n}{k} x^{n-k} y^k$\n\n($T_{k+1}$ is the $(k+1)$-th term, because $k$ starts at 0.)\n\nWith this formula you can extract **any specific** term. Most advanced problems on binomial theorem are some variation of: 'find the term containing $x^7$', 'find the term independent of $x$', 'find the coefficient of $x^5$'."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Finding a specific power",
+        "**Example.** Find the coefficient of $x^{10}$ in $(2x + 1/x)^{16}$.",
+        "**Setup.** General term: $T_{k+1} = \\binom{16}{k} (2x)^{16-k} (1/x)^k = \\binom{16}{k} 2^{16-k} x^{16-2k}$.",
+        "**Set exponent equal to target:** $16 - 2k = 10 \\Rightarrow k = 3$.",
+        "**Coefficient:** $\\binom{16}{3} \\cdot 2^{13} = 560 \\cdot 8192 = 4,587,520$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Middle term",
+      "body": "If $n$ is even, $(x + y)^n$ has $n + 1$ terms — odd count — so there's **one middle term**: $T_{n/2 + 1}$.\n\nIf $n$ is odd, $(x + y)^n$ has $n + 1$ terms — even count — so there are **two middle terms**: $T_{(n+1)/2}$ and $T_{(n+1)/2 + 1}$.\n\n**Example.** Middle term of $(2x + 1/x)^8$:\n\n$n = 8$ even, middle term is $T_5$ (i.e., $k = 4$).\n\n$T_5 = \\binom{8}{4}(2x)^4 (1/x)^4 = 70 \\cdot 16 \\cdot x^4 \\cdot x^{-4} = 70 \\cdot 16 = 1120$.\n\n*(Notice the middle term is constant here — that's because the exponents balance.)*"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Term independent of $x$",
+        "Set the exponent of $x$ to **zero** in the general term, solve for $k$.",
+        "**Example.** Find term independent of $x$ in $(x^2 - 1/x^3)^{10}$.",
+        "General term: $T_{k+1} = \\binom{10}{k} (x^2)^{10-k} (-1/x^3)^k = \\binom{10}{k} (-1)^k x^{20-2k-3k} = \\binom{10}{k} (-1)^k x^{20-5k}$.",
+        "$20 - 5k = 0 \\Rightarrow k = 4$.",
+        "Term independent of $x$: $\\binom{10}{4} (-1)^4 = 210$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Sum of all binomial coefficients",
+      "body": "$\\sum_{k=0}^{n} \\binom{n}{k} = 2^n$\n\n**Why?** Set $x = y = 1$ in the binomial theorem: $(1 + 1)^n = 2^n = \\sum_k \\binom{n}{k}$.\n\n**Sum of even-indexed coefficients = Sum of odd-indexed:** both equal $2^{n-1}$.\n\nThis comes from $(1 - 1)^n = 0 = \\sum_k \\binom{n}{k} (-1)^k$ — so the alternating sum is zero. Hence even-sum = odd-sum, and they each equal half of $2^n$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Common advanced patterns",
+        "**1. Coefficient of $x^r$.** Use general term, set exponent equal to $r$, solve for $k$.",
+        "**2. Ratio of coefficients.** Set up $T_{k+1}/T_k$ = required ratio, solve.",
+        "**3. Equal terms.** Two terms equal in magnitude → equate them, often gives a polynomial in $k$.",
+        "**4. Greatest term.** $T_{k+1}/T_k > 1$ for small $k$, $< 1$ for large. Find where $T_{k+1}/T_k = 1$ or crosses.",
+        "**5. Sum identities.** $\\sum k \\binom{n}{k}$, $\\sum k^2 \\binom{n}{k}$, $\\sum (-1)^k \\binom{n}{k}$, etc. Each derivable from $(1+x)^n$ by differentiating or evaluating at $x = -1$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Two derived identities you should know",
+        "$\\sum_{k=0}^{n} k \\binom{n}{k} = n \\cdot 2^{n-1}$",
+        "(Differentiate $(1+x)^n = \\sum \\binom{n}{k} x^k$ and set $x = 1$.)",
+        "$\\sum_{k=0}^{n} \\binom{n}{k}^2 = \\binom{2n}{n}$",
+        "(Vandermonde's identity: comes from comparing coefficients of $x^n$ in $(1+x)^n (1+x)^n = (1+x)^{2n}$.)",
+        "Both pop up in advanced problems regularly."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Algorithm for any 'find the term' problem",
+      "body": "1. Write the general term $T_{k+1} = \\binom{n}{k} \\cdot (\\text{first factor})^{n-k} \\cdot (\\text{second factor})^k$.\n2. Simplify the powers of variables.\n3. **Set the variable's exponent to the target value** (zero for 'independent of $x$', specific number for 'coefficient of $x^r$').\n4. Solve for $k$.\n5. If $k$ is a valid non-negative integer in $[0, n]$, plug back into $T_{k+1}$. If not, the term doesn't exist.\n\nFollow this algorithm; you'll get the answer every time."
+    }
+  ]
+}

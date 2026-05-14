@@ -1,0 +1,258 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the geometric meaning of a solution to a system of two linear equations?}",
+      "choices": [
+        "The midpoint of the two lines",
+        "The intersection point of the two lines",
+        "The slope of either line",
+        "The y-intercept of one line"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "A solution must satisfy *both* equations.",
+        "What's true about a point on both lines?"
+      ],
+      "explanation": "A solution must satisfy both equations, which geometrically means it's a point on *both* lines — i.e., where they intersect.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If two lines have the same slope but different y-intercepts, the system has:}",
+      "choices": [
+        "Exactly one solution",
+        "No solution",
+        "Infinitely many solutions",
+        "Exactly two solutions"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Same slope means parallel lines.",
+        "Parallel lines never cross."
+      ],
+      "explanation": "Same slope, different y-intercepts → parallel lines that never meet → **no solution**.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If two equations describe the exact same line, the system has:}",
+      "choices": [
+        "Exactly one solution",
+        "No solution",
+        "Infinitely many solutions",
+        "Two solutions"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Same slope AND same y-intercept means same line.",
+        "Every point on the line satisfies both equations."
+      ],
+      "explanation": "If the two equations describe the same line, every point on that line satisfies both — **infinitely many solutions**.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve graphically:} \\\\ y = x \\\\ y = -x + 4. \\\\ \\text{The intersection is:}",
+      "choices": [
+        "(0, 0)",
+        "(2, 2)",
+        "(4, 0)",
+        "(0, 4)"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Set them equal: $x = -x + 4$.",
+        "$2x = 4$, so $x = 2$. Find $y$ from either equation."
+      ],
+      "explanation": "Setting $x = -x + 4$ gives $2x = 4$, so $x = 2$. Then $y = x = 2$. Solution: $(2, 2)$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is one weakness of solving systems by graphing?}",
+      "choices": [
+        "It only works for some systems",
+        "It can be imprecise for non-integer solutions",
+        "It can't tell you if there's no solution",
+        "It always requires a calculator"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Imagine reading $(2.7, -1.3)$ off a hand-drawn graph.",
+        "Integer points are easy; decimals or fractions less so."
+      ],
+      "explanation": "Graphs can be hard to read precisely when the intersection is at non-integer coordinates. Substitution and elimination give exact algebraic answers — that's why we'll learn those next.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Two lines have slopes } 2 \\text{ and } 2. \\text{ The system has:}",
+      "choices": [
+        "exactly one solution",
+        "no solution",
+        "infinitely many solutions",
+        "depends on y-intercepts"
+      ],
+      "answerIndex": 3,
+      "hints": [
+        "Same slopes → either parallel (no solution) or same line (infinite).",
+        "Need to check the y-intercepts to decide which."
+      ],
+      "explanation": "Same slope: if y-intercepts differ → parallel, no solution. If y-intercepts same → same line, infinite solutions. Need more info.",
+      "steps": [
+        "Same slope means the lines are either **parallel** (no solution) or **identical** (infinite solutions).",
+        "We can't tell which without checking y-intercepts.",
+        "**Depends on y-intercepts.**"
+      ],
+      "id": "q6",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Two lines have slopes } 3 \\text{ and } -2. \\text{ The system has:}",
+      "choices": [
+        "exactly one solution",
+        "no solution",
+        "infinitely many solutions",
+        "cannot be determined"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Different slopes → lines intersect at exactly one point.",
+        "One solution."
+      ],
+      "explanation": "Different slopes → lines must intersect at exactly one point → one solution.",
+      "steps": [
+        "Different slopes ($3 \\neq -2$) → the lines are not parallel.",
+        "Two non-parallel lines in a plane meet at exactly **one point**.",
+        "**Exactly one solution.**"
+      ],
+      "id": "q7",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve by graphing/inspection:} \\\\ y = x + 1 \\\\ y = -x + 5",
+      "choices": [
+        "(2, 3)",
+        "(3, 2)",
+        "(1, 4)",
+        "(4, 1)"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Set the right sides equal: $x + 1 = -x + 5$.",
+        "$2x = 4 \\Rightarrow x = 2$. Then $y = 2 + 1 = 3$."
+      ],
+      "explanation": "$x + 1 = -x + 5 \\Rightarrow 2x = 4 \\Rightarrow x = 2$, $y = 3$.",
+      "steps": [
+        "Set the two expressions for $y$ equal: $x + 1 = -x + 5$.",
+        "Add $x$: $2x + 1 = 5$. Subtract 1: $2x = 4$. $x = 2$.",
+        "$y = 2 + 1 = 3$.",
+        "**Solution: $(2, 3)$**."
+      ],
+      "id": "q8",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{The system } y = 3x + 1 \\text{ and } y = 3x - 4 \\text{ has:}",
+      "choices": [
+        "one solution",
+        "no solution",
+        "infinitely many",
+        "exactly two solutions"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Same slope (3), different y-intercepts ($1$ vs $-4$).",
+        "Distinct parallel lines → never intersect → no solution."
+      ],
+      "explanation": "Same slope, different intercepts → parallel and distinct → no intersection → **no solution**.",
+      "steps": [
+        "Both have slope 3 → parallel.",
+        "Different y-intercepts ($1$ vs $-4$) → distinct lines.",
+        "Distinct parallel lines never intersect → **no solution**."
+      ],
+      "id": "q9",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{The system } 2x - y = 4 \\text{ and } 4x - 2y = 8 \\text{ has:}",
+      "choices": [
+        "one solution",
+        "no solution",
+        "infinitely many",
+        "depends on y-intercepts"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Multiply first equation by 2: $4x - 2y = 8$. Same as second!",
+        "Same line → infinite solutions."
+      ],
+      "explanation": "Second equation is just $2 \\times$ first → they're the same line → infinitely many solutions.",
+      "steps": [
+        "Convert each to slope-intercept (or compare directly).",
+        "$2x - y = 4 \\Rightarrow y = 2x - 4$.",
+        "$4x - 2y = 8 \\Rightarrow 2y = 4x - 8 \\Rightarrow y = 2x - 4$.",
+        "Same line → every point on it is a solution → **infinitely many**."
+      ],
+      "id": "q10",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the solution to } y = -x + 6 \\text{ and } y = 2x?",
+      "choices": [
+        "(2, 4)",
+        "(3, 3)",
+        "(0, 6)",
+        "(2, 6)"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "$2x = -x + 6 \\Rightarrow 3x = 6 \\Rightarrow x = 2$.",
+        "$y = 2(2) = 4$."
+      ],
+      "explanation": "Substitute: $2x = -x + 6 \\Rightarrow x = 2$, $y = 4$.",
+      "steps": [
+        "Set the two expressions for $y$ equal: $2x = -x + 6$.",
+        "Add $x$: $3x = 6 \\Rightarrow x = 2$.",
+        "$y = 2(2) = 4$.",
+        "**Solution: $(2, 4)$**."
+      ],
+      "id": "q11",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{If two lines coincide (are the same line), the solution set is:}",
+      "choices": [
+        "empty",
+        "exactly one point",
+        "all points on the line",
+        "the entire plane"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Same line → every point on it satisfies both equations.",
+        "Solution set = the line itself."
+      ],
+      "explanation": "Coincident lines = same equation. Every point on the line satisfies both → solution = all points on the line (infinitely many).",
+      "steps": [
+        "Coincident lines have the same equation.",
+        "Any point that satisfies one equation satisfies the other.",
+        "**Solution set:** every point on the line — infinitely many."
+      ],
+      "id": "q12",
+      "difficulty": "easy"
+    }
+  ]
+}

@@ -1,0 +1,340 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{How many solutions does } \\sin x = \\dfrac{1}{2} \\text{ have in } [0, 2\\pi)?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "infinitely many"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "$\\sin x = c$ for $-1 < c < 1$ has 2 solutions per period $2\\pi$.",
+        "On $[0, 2\\pi)$ — exactly one full period — that's 2."
+      ],
+      "explanation": "$\\sin x = c$ with $|c| < 1$ has 2 solutions per period of $2\\pi$. On $[0, 2\\pi)$: 2 solutions ($\\pi/6$ and $5\\pi/6$).",
+      "steps": [
+        "$\\sin x = c$ with $-1 < c < 1$ has exactly **2** solutions in any interval of length $2\\pi$.",
+        "$[0, 2\\pi)$ is exactly one period, so it contains **2** solutions.",
+        "(They are $x = \\pi/6$ and $x = 5\\pi/6$.)"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve } \\sin x = \\dfrac{\\sqrt{3}}{2} \\text{ for } x \\in [0, 2\\pi).",
+      "choices": [
+        "x = \\dfrac{\\pi}{3}, \\dfrac{2\\pi}{3}",
+        "x = \\dfrac{\\pi}{6}, \\dfrac{5\\pi}{6}",
+        "x = \\dfrac{\\pi}{4}, \\dfrac{3\\pi}{4}",
+        "x = \\dfrac{\\pi}{3}, \\dfrac{5\\pi}{3}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Reference angle: $\\sin\\theta = \\sqrt{3}/2$ at $\\theta = \\pi/3$.",
+        "Sine positive in Q I, Q II. Q I: $\\pi/3$. Q II: $\\pi - \\pi/3 = 2\\pi/3$."
+      ],
+      "explanation": "Reference angle $\\pi/3$. Q I: $\\pi/3$. Q II: $\\pi - \\pi/3 = 2\\pi/3$.",
+      "steps": [
+        "**Reference angle:** $\\sin\\theta = \\dfrac{\\sqrt{3}}{2}$ at $\\theta = \\dfrac{\\pi}{3}$ (special angle, 60°).",
+        "**Sign:** positive. Sine is positive in Q I and Q II.",
+        "**Q I solution:** $x = \\dfrac{\\pi}{3}$.",
+        "**Q II solution:** $x = \\pi - \\dfrac{\\pi}{3} = \\dfrac{2\\pi}{3}$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve } \\cos x = -\\dfrac{1}{2} \\text{ for } x \\in [0, 2\\pi).",
+      "choices": [
+        "x = \\dfrac{\\pi}{3}, \\dfrac{5\\pi}{3}",
+        "x = \\dfrac{2\\pi}{3}, \\dfrac{4\\pi}{3}",
+        "x = \\dfrac{\\pi}{6}, \\dfrac{11\\pi}{6}",
+        "x = \\dfrac{5\\pi}{6}, \\dfrac{7\\pi}{6}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Reference angle: $\\cos\\theta = 1/2$ at $\\theta = \\pi/3$.",
+        "Sign negative → Q II, Q III. Q II: $\\pi - \\pi/3 = 2\\pi/3$. Q III: $\\pi + \\pi/3 = 4\\pi/3$."
+      ],
+      "explanation": "Reference angle $\\pi/3$. Cos negative in Q II and Q III. Solutions: $2\\pi/3$ and $4\\pi/3$.",
+      "steps": [
+        "**Reference angle:** $\\cos\\theta = \\dfrac{1}{2}$ at $\\theta = \\dfrac{\\pi}{3}$.",
+        "**Sign:** $\\cos x = -\\dfrac{1}{2}$, so cosine is **negative** → Q II and Q III.",
+        "**Q II:** $x = \\pi - \\dfrac{\\pi}{3} = \\dfrac{2\\pi}{3}$.",
+        "**Q III:** $x = \\pi + \\dfrac{\\pi}{3} = \\dfrac{4\\pi}{3}$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve } \\tan x = 1 \\text{ for } x \\in [0, 2\\pi).",
+      "choices": [
+        "x = \\dfrac{\\pi}{4}",
+        "x = \\dfrac{\\pi}{4}, \\dfrac{3\\pi}{4}",
+        "x = \\dfrac{\\pi}{4}, \\dfrac{5\\pi}{4}",
+        "x = \\dfrac{\\pi}{4}, \\dfrac{7\\pi}{4}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "Tan has period $\\pi$, so two solutions in $[0, 2\\pi)$ — one per half-period.",
+        "Reference angle $\\pi/4$. Tan positive in Q I and Q III."
+      ],
+      "explanation": "Tan is positive in Q I and Q III. Reference angle $\\pi/4$ → solutions $\\pi/4$ (Q I) and $\\pi + \\pi/4 = 5\\pi/4$ (Q III).",
+      "steps": [
+        "**Reference angle:** $\\tan\\theta = 1$ at $\\theta = \\pi/4$.",
+        "**Sign:** $\\tan x = 1 > 0$. Tan positive in **Q I** and **Q III** (ASTC).",
+        "**Q I:** $x = \\dfrac{\\pi}{4}$.",
+        "**Q III:** $x = \\pi + \\dfrac{\\pi}{4} = \\dfrac{5\\pi}{4}$.",
+        "(Note tan has period $\\pi$, so these solutions are separated by exactly $\\pi$.)"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The general solution of } \\tan x = 1 \\text{ is:}",
+      "choices": [
+        "x = \\dfrac{\\pi}{4} + 2\\pi k",
+        "x = \\dfrac{\\pi}{4} + \\pi k",
+        "x = \\dfrac{\\pi}{4} + \\dfrac{\\pi}{2} k",
+        "x = \\dfrac{\\pi}{4}, \\dfrac{5\\pi}{4}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Tangent has period $\\pi$ — add multiples of $\\pi$ to extend.",
+        "Starting from $x = \\pi/4$: every $\\pi$ later is also a solution."
+      ],
+      "explanation": "$\\tan x = 1$ has $x = \\pi/4 + \\pi k$ for any integer $k$. Period is $\\pi$, not $2\\pi$.",
+      "steps": [
+        "Tangent has period $\\pi$ — solutions repeat every $\\pi$ units.",
+        "Find one solution: $x_0 = \\pi/4$.",
+        "**General solution:** $$x = \\dfrac{\\pi}{4} + \\pi k, \\quad k \\in \\mathbb{Z}$$",
+        "(For $k = 0$: $\\pi/4$. For $k = 1$: $5\\pi/4$. For $k = -1$: $-3\\pi/4$. All correct.)"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The general solution of } \\sin x = \\dfrac{1}{2} \\text{ is:}",
+      "choices": [
+        "x = \\dfrac{\\pi}{6} + 2\\pi k",
+        "x = \\dfrac{\\pi}{6} + 2\\pi k \\text{ or } x = \\dfrac{5\\pi}{6} + 2\\pi k",
+        "x = \\dfrac{\\pi}{6} + \\pi k",
+        "x = \\dfrac{\\pi}{6}, \\dfrac{5\\pi}{6}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Sine has period $2\\pi$, but two distinct solutions per period.",
+        "Need to capture both branches: $\\pi/6 + 2\\pi k$ AND $5\\pi/6 + 2\\pi k$."
+      ],
+      "explanation": "Two solutions per period → general form is the union of two arithmetic sequences: $x = \\pi/6 + 2\\pi k$ or $x = 5\\pi/6 + 2\\pi k$.",
+      "steps": [
+        "Two solutions in $[0, 2\\pi)$: $x_1 = \\pi/6$ and $x_2 = 5\\pi/6$.",
+        "Sine has period $2\\pi$, so both branches extend by adding $2\\pi k$.",
+        "**General solution:** $$x = \\dfrac{\\pi}{6} + 2\\pi k \\quad\\text{OR}\\quad x = \\dfrac{5\\pi}{6} + 2\\pi k$$",
+        "for any integer $k$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the } \\textbf{range} \\text{ of } \\sin^{-1}(x)?",
+      "choices": [
+        "(-\\infty, \\infty)",
+        "[-1, 1]",
+        "[-\\pi/2, \\pi/2]",
+        "[0, \\pi]"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "$\\sin^{-1}$ is the inverse function — for it to be a function, sine had to be restricted.",
+        "Standard restriction: $[-\\pi/2, \\pi/2]$ (where sine is one-to-one and increasing)."
+      ],
+      "explanation": "$\\sin^{-1}: [-1, 1] \\to [-\\pi/2, \\pi/2]$. The range $[-\\pi/2, \\pi/2]$ is the restricted domain of sine where it's invertible.",
+      "steps": [
+        "$\\sin x$ over $\\mathbb{R}$ is not one-to-one (the same $y$ value happens at infinitely many $x$).",
+        "To define an inverse function, we **restrict** sine to a piece where it's monotonic.",
+        "Standard choice: $[-\\pi/2, \\pi/2]$ (sine increases monotonically from $-1$ to $1$).",
+        "So $\\sin^{-1}: [-1, 1] \\to [-\\pi/2, \\pi/2]$ — its **range** is $[-\\pi/2, \\pi/2]$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the range of } \\cos^{-1}(x)?",
+      "choices": [
+        "(-\\infty, \\infty)",
+        "[-\\pi/2, \\pi/2]",
+        "[0, \\pi]",
+        "[0, 2\\pi]"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "Different from $\\sin^{-1}$. Cosine's restricted-and-invertible piece is different.",
+        "$\\cos$ is monotonic on $[0, \\pi]$ (decreasing from 1 to -1)."
+      ],
+      "explanation": "$\\cos^{-1}: [-1, 1] \\to [0, \\pi]$. Cosine is monotonically decreasing on $[0, \\pi]$, which is where the inverse is defined.",
+      "steps": [
+        "$\\cos x$ is one-to-one on $[0, \\pi]$ — that's the standard restricted domain.",
+        "On that interval cosine decreases from $\\cos 0 = 1$ down to $\\cos \\pi = -1$.",
+        "So $\\cos^{-1}: [-1, 1] \\to [0, \\pi]$ — its range is $[0, \\pi]$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{Evaluate } \\sin^{-1}(1) \\text{ in radians.}",
+      "answer": 1.5708,
+      "tolerance": 0.001,
+      "hints": [
+        "What angle in $[-\\pi/2, \\pi/2]$ has sine equal to 1?",
+        "$\\sin(\\pi/2) = 1$, so $\\sin^{-1}(1) = \\pi/2$."
+      ],
+      "explanation": "$\\sin(\\pi/2) = 1$, and $\\pi/2$ is in the range $[-\\pi/2, \\pi/2]$, so $\\sin^{-1}(1) = \\pi/2 \\approx 1.5708$.",
+      "steps": [
+        "$\\sin^{-1}(1)$ asks: what angle has sine $= 1$?",
+        "On the unit circle, sine is $1$ at the top: $\\theta = \\pi/2$.",
+        "Check that $\\pi/2 \\in [-\\pi/2, \\pi/2]$ (the range of $\\sin^{-1}$). ✓",
+        "$\\sin^{-1}(1) = \\dfrac{\\pi}{2} \\approx 1.5708$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Why does } \\sin^{-1}(\\sin(2\\pi)) = 0, \\text{ not } 2\\pi?",
+      "choices": [
+        "Because $\\sin^{-1}$ has range $[-\\pi/2, \\pi/2]$ — it returns the principal value",
+        "Because $\\sin(2\\pi) \\neq 0$",
+        "Because $2\\pi$ is greater than the period of sine",
+        "Because $\\sin^{-1}$ is undefined at $2\\pi$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "$\\sin(2\\pi) = 0$, so we want $\\sin^{-1}(0)$.",
+        "$\\sin^{-1}(0) = 0$ (the principal value), not $2\\pi$."
+      ],
+      "explanation": "$\\sin(2\\pi) = 0$, so $\\sin^{-1}(\\sin(2\\pi)) = \\sin^{-1}(0) = 0$. The inverse only returns values in its restricted range $[-\\pi/2, \\pi/2]$ — the principal value.",
+      "steps": [
+        "Step 1: $\\sin(2\\pi) = 0$ (the value, not the angle).",
+        "Step 2: $\\sin^{-1}(0) = ?$ — what angle in $[-\\pi/2, \\pi/2]$ has sine $0$?",
+        "Answer: $0$ itself (since $\\sin 0 = 0$ and $0 \\in [-\\pi/2, \\pi/2]$).",
+        "So $\\sin^{-1}(\\sin(2\\pi)) = \\sin^{-1}(0) = 0$ — **not** $2\\pi$.",
+        "**Lesson:** $\\sin^{-1}(\\sin x) = x$ only when $x$ is already in $[-\\pi/2, \\pi/2]$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q11",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve } \\sec x = 2 \\text{ for } x \\in [0, 2\\pi).",
+      "choices": [
+        "x = \\dfrac{\\pi}{6}, \\dfrac{11\\pi}{6}",
+        "x = \\dfrac{\\pi}{3}, \\dfrac{5\\pi}{3}",
+        "x = \\dfrac{\\pi}{4}, \\dfrac{7\\pi}{4}",
+        "x = \\dfrac{2\\pi}{3}, \\dfrac{4\\pi}{3}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Flip to cosine: $\\sec x = 2 \\Leftrightarrow \\cos x = 1/2$.",
+        "Cosine = 1/2 at $\\pi/3$ (Q I) and $2\\pi - \\pi/3 = 5\\pi/3$ (Q IV)."
+      ],
+      "explanation": "$\\sec x = 2 \\Leftrightarrow \\cos x = 1/2$. Solutions in Q I ($\\pi/3$) and Q IV ($5\\pi/3$).",
+      "steps": [
+        "Flip to cosine using the reciprocal identity: $$\\sec x = 2 \\;\\Leftrightarrow\\; \\cos x = \\dfrac{1}{2}$$",
+        "Reference angle: $\\cos\\theta = 1/2$ at $\\theta = \\pi/3$.",
+        "Cosine positive in Q I and Q IV.",
+        "**Q I:** $x = \\pi/3$.",
+        "**Q IV:** $x = 2\\pi - \\pi/3 = 5\\pi/3$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve } 2\\cos x + 1 = 0 \\text{ for } x \\in [0, 2\\pi).",
+      "choices": [
+        "x = \\dfrac{\\pi}{3}, \\dfrac{5\\pi}{3}",
+        "x = \\dfrac{2\\pi}{3}, \\dfrac{4\\pi}{3}",
+        "x = \\dfrac{\\pi}{6}, \\dfrac{11\\pi}{6}",
+        "x = \\dfrac{5\\pi}{6}, \\dfrac{7\\pi}{6}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Isolate cos first: $2\\cos x = -1 \\Rightarrow \\cos x = -1/2$.",
+        "Reference angle $\\pi/3$. Cos negative in Q II ($2\\pi/3$) and Q III ($4\\pi/3$)."
+      ],
+      "explanation": "Algebra first: $\\cos x = -1/2$. Solutions in Q II ($2\\pi/3$) and Q III ($4\\pi/3$).",
+      "steps": [
+        "Isolate the trig function (algebra first): $$2\\cos x = -1 \\Rightarrow \\cos x = -\\dfrac{1}{2}$$",
+        "Reference angle: $\\cos\\theta = 1/2$ at $\\pi/3$.",
+        "Sign negative → Q II and Q III.",
+        "**Q II:** $x = \\pi - \\pi/3 = 2\\pi/3$.",
+        "**Q III:** $x = \\pi + \\pi/3 = 4\\pi/3$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q13",
+      "type": "numeric",
+      "promptTex": "\\text{Solve } \\sin x = 0.6 \\text{ for } x \\text{ in } [0, 2\\pi). \\\\ \\text{Enter the } \\textbf{smaller} \\text{ solution in radians (round to 4 places).}",
+      "answer": 0.6435,
+      "tolerance": 0.001,
+      "hints": [
+        "Take principal value: $\\sin^{-1}(0.6) \\approx 0.6435$.",
+        "That's the Q I solution. The Q II solution would be $\\pi - 0.6435 \\approx 2.4981$."
+      ],
+      "explanation": "$x_1 = \\sin^{-1}(0.6) \\approx 0.6435$ rad.",
+      "steps": [
+        "$0.6$ isn't a special-angle value, so use the inverse function.",
+        "Principal value: $$x_1 = \\sin^{-1}(0.6) \\approx 0.6435 \\text{ rad}$$",
+        "(The Q II solution is $x_2 = \\pi - 0.6435 \\approx 2.4981$. Smaller of the two: $0.6435$.)"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q14",
+      "type": "multiple-choice",
+      "promptTex": "\\text{How many solutions does } \\sin^2 x = \\dfrac{1}{4} \\text{ have in } [0, 2\\pi)?",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answerIndex": 3,
+      "hints": [
+        "Take square root: $\\sin x = \\pm 1/2$.",
+        "Each of $\\sin x = 1/2$ and $\\sin x = -1/2$ has 2 solutions. Total: 4."
+      ],
+      "explanation": "$\\sin x = \\pm 1/2$ → two cases, each with 2 solutions in $[0, 2\\pi)$. Total: $4$ ($\\pi/6, 5\\pi/6, 7\\pi/6, 11\\pi/6$).",
+      "steps": [
+        "Take square root of both sides (don't forget $\\pm$): $$\\sin x = \\pm \\dfrac{1}{2}$$",
+        "**Case 1:** $\\sin x = 1/2$ → $x = \\pi/6, 5\\pi/6$ (2 solutions).",
+        "**Case 2:** $\\sin x = -1/2$ → $x = 7\\pi/6, 11\\pi/6$ (2 solutions).",
+        "**Total: 4 solutions** in $[0, 2\\pi)$."
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

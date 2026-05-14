@@ -1,0 +1,95 @@
+{
+  "title": "Point-Slope Form",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Sometimes you don't know a line's y-intercept, but you *do* know one specific point it passes through, plus its slope. **Point-slope form** is built exactly for that situation."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "y - y_1 = m(x - x_1)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Here $(x_1, y_1)$ is *any one point* on the line and $m$ is the slope. Drop in those three numbers and you've got the equation.",
+        "Drag the green point below to choose $(x_1, y_1)$ and use the slider to set the slope. The point-slope equation updates as you go."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "coordinate-plane",
+      "config": {
+        "mode": "point-slope",
+        "anchor": [
+          2,
+          3
+        ],
+        "initialM": 1,
+        "mRange": [
+          -3,
+          3
+        ],
+        "mStep": 0.5
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Where does this form come from?",
+        "Straight from the slope formula. If $(x, y)$ is *any* point on the line and $(x_1, y_1)$ is the point we know, the slope between them must equal $m$:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "m = \\dfrac{y - y_1}{x - x_1}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Multiply both sides by $(x - x_1)$ and you get the point-slope form. Same fact, rearranged."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example",
+        "A line has slope $m = 2$ and passes through $(3, 5)$. Plug in:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "y - 5 = 2(x - 3)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Done — that's the equation. If a problem asks for slope-intercept form instead, just distribute and simplify:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "y - 5 = 2x - 6 \\;\\Longrightarrow\\; y = 2x - 1"
+    },
+    {
+      "type": "callout",
+      "title": "Any point on the line works",
+      "body": "If a line passes through both $(3, 5)$ and $(0, -1)$, you can write either $y - 5 = 2(x - 3)$ or $y + 1 = 2(x - 0)$. They look different but describe the same line — try simplifying both!"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### From two points",
+        "If you're given two points instead of a point and a slope, just compute the slope first, then plug into point-slope using either point.",
+        "**Example.** Line through $(1, 2)$ and $(4, 8)$. Slope: $m = \\dfrac{8 - 2}{4 - 1} = 2$. Pick a point, say $(1, 2)$. Equation: $y - 2 = 2(x - 1)$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "When to use which form?",
+      "body": "**Point-slope** when you have a point and a slope (or two points). **Slope-intercept** when you want to graph quickly or read off the y-intercept. They're equivalent — pick the form that matches the info you already have."
+    }
+  ]
+}

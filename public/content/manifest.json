@@ -1,0 +1,2471 @@
+{
+  "version": 1,
+  "courses": [
+    {
+      "id": "pre-algebra",
+      "title": "Pre-Algebra",
+      "icon": "+",
+      "description": "Integers, fractions, decimals, ratios — the building blocks before algebra.",
+      "topics": [
+        {
+          "id": "integers",
+          "title": "Integers & Operations",
+          "subtopics": [
+            {
+              "id": "integer-add-sub",
+              "title": "Adding & Subtracting Integers",
+              "path": "pre-algebra/integers/integer-add-sub",
+              "keywords": [
+                "negative numbers",
+                "number line",
+                "sign rules"
+              ]
+            },
+            {
+              "id": "integer-mul-div",
+              "title": "Multiplying & Dividing Integers",
+              "path": "pre-algebra/integers/integer-mul-div",
+              "keywords": [
+                "sign rules",
+                "negative times negative",
+                "two negatives"
+              ]
+            },
+            {
+              "id": "order-of-operations",
+              "title": "Order of Operations",
+              "path": "pre-algebra/integers/order-of-operations",
+              "keywords": [
+                "PEMDAS",
+                "BODMAS",
+                "parentheses",
+                "evaluate expression"
+              ]
+            },
+            {
+              "id": "factors-multiples",
+              "title": "Factors, Multiples, GCD & LCM",
+              "path": "pre-algebra/integers/factors-multiples",
+              "keywords": [
+                "GCD",
+                "GCF",
+                "LCM",
+                "least common multiple",
+                "greatest common divisor",
+                "prime factorization",
+                "factor tree",
+                "divisibility rules",
+                "prime numbers"
+              ]
+            },
+            {
+              "id": "modular-intro",
+              "title": "Clock Arithmetic (Modular Numbers)",
+              "path": "pre-algebra/integers/modular-intro",
+              "keywords": [
+                "modular arithmetic",
+                "mod n",
+                "clock arithmetic",
+                "remainder",
+                "congruent mod n",
+                "divisibility rules",
+                "9 + 7 mod 12"
+              ]
+            },
+            {
+              "id": "modular-day-of-week",
+              "title": "Days of the Week & Calendar Tricks",
+              "path": "pre-algebra/integers/modular-day-of-week",
+              "keywords": [
+                "day of the week",
+                "mod 7",
+                "calendar arithmetic",
+                "Zeller",
+                "leap year shift",
+                "365 mod 7"
+              ]
+            },
+            {
+              "id": "caesar-cipher",
+              "title": "Caesar Cipher: Modular Arithmetic Encrypts",
+              "path": "pre-algebra/integers/caesar-cipher",
+              "keywords": [
+                "Caesar cipher",
+                "ROT13",
+                "shift cipher",
+                "mod 26 alphabet",
+                "encryption",
+                "decrypt",
+                "frequency analysis"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "fractions",
+          "title": "Fractions",
+          "subtopics": [
+            {
+              "id": "adding-fractions",
+              "title": "Adding Fractions",
+              "path": "pre-algebra/fractions/adding-fractions",
+              "keywords": [
+                "common denominator",
+                "LCD",
+                "least common denominator",
+                "1/2 + 1/3"
+              ]
+            },
+            {
+              "id": "multiplying-fractions",
+              "title": "Multiplying Fractions",
+              "path": "pre-algebra/fractions/multiplying-fractions",
+              "keywords": [
+                "fraction multiplication",
+                "area model",
+                "1/2 × 1/3"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "decimals-percents",
+          "title": "Decimals & Percents",
+          "subtopics": [
+            {
+              "id": "decimal-fraction",
+              "title": "Decimal–Fraction Conversions",
+              "path": "pre-algebra/decimals-percents/decimal-fraction",
+              "keywords": [
+                "decimal to fraction",
+                "tenths hundredths",
+                "0.25 = 1/4"
+              ]
+            },
+            {
+              "id": "percent-basics",
+              "title": "Percent Basics",
+              "path": "pre-algebra/decimals-percents/percent-basics",
+              "keywords": [
+                "percent",
+                "per hundred",
+                "%",
+                "percent of a number"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ratios-proportions",
+          "title": "Ratios & Proportions",
+          "subtopics": [
+            {
+              "id": "ratio-basics",
+              "title": "Ratio Basics",
+              "path": "pre-algebra/ratios-proportions/ratio-basics",
+              "keywords": [
+                "ratio",
+                "a:b",
+                "equivalent ratios"
+              ]
+            },
+            {
+              "id": "proportions",
+              "title": "Proportions",
+              "path": "pre-algebra/ratios-proportions/proportions",
+              "keywords": [
+                "proportion",
+                "cross-multiplication",
+                "ad = bc",
+                "scale"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "numbers",
+          "title": "Number Operations",
+          "subtopics": [
+            {
+              "id": "square-roots-surds",
+              "title": "Square Roots, Cube Roots & Surds",
+              "path": "pre-algebra/numbers/square-roots-surds",
+              "keywords": [
+                "square root",
+                "cube root",
+                "surd",
+                "long division method square root",
+                "prime factorization square root cube root",
+                "rationalize denominator",
+                "conjugate",
+                "simplify surds",
+                "perfect square cube"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "arithmetic-applications",
+          "title": "Arithmetic Applications",
+          "subtopics": [
+            {
+              "id": "profit-loss-discount",
+              "title": "Profit, Loss & Discount",
+              "path": "pre-algebra/arithmetic-applications/profit-loss-discount",
+              "keywords": [
+                "profit",
+                "loss",
+                "discount",
+                "marked price",
+                "cost price selling price",
+                "profit percent loss percent",
+                "successive discounts",
+                "markup",
+                "CP SP MP"
+              ]
+            },
+            {
+              "id": "simple-compound-interest",
+              "title": "Simple & Compound Interest",
+              "path": "pre-algebra/arithmetic-applications/simple-compound-interest",
+              "keywords": [
+                "simple interest SI PRT/100",
+                "compound interest CI",
+                "principal rate time",
+                "rule of 72",
+                "half-yearly quarterly compounding",
+                "CI - SI 2 year shortcut"
+              ]
+            },
+            {
+              "id": "speed-distance-time",
+              "title": "Time, Speed & Distance",
+              "path": "pre-algebra/arithmetic-applications/speed-distance-time",
+              "keywords": [
+                "speed distance time",
+                "km/hr m/s conversion 5/18",
+                "average speed harmonic mean",
+                "relative speed",
+                "trains crossing platform pole",
+                "boats streams downstream upstream"
+              ]
+            },
+            {
+              "id": "time-and-work",
+              "title": "Time & Work",
+              "path": "pre-algebra/arithmetic-applications/time-and-work",
+              "keywords": [
+                "time and work",
+                "work rate per day 1/n",
+                "LCM trick total work in units",
+                "pipes and cisterns",
+                "inlet outlet",
+                "person-days",
+                "efficiency"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "coordinate-plane",
+          "title": "Coordinate Plane",
+          "subtopics": [
+            {
+              "id": "plotting-points",
+              "title": "Plotting Points",
+              "path": "pre-algebra/coordinate-plane/plotting-points",
+              "keywords": [
+                "coordinate plane",
+                "(x, y)",
+                "x-axis",
+                "y-axis",
+                "origin"
+              ]
+            },
+            {
+              "id": "quadrants",
+              "title": "Quadrants",
+              "path": "pre-algebra/coordinate-plane/quadrants",
+              "keywords": [
+                "four quadrants",
+                "quadrant I II III IV",
+                "sign of coordinates"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "algebra-1",
+      "title": "Algebra I",
+      "icon": "x",
+      "description": "Variables, equations, inequalities, and the geometry of straight lines.",
+      "topics": [
+        {
+          "id": "linear-equations",
+          "title": "Linear Equations",
+          "subtopics": [
+            {
+              "id": "balance-method",
+              "title": "Solving Equations: The Balance Method",
+              "path": "algebra-1/linear-equations/balance-method",
+              "keywords": [
+                "solve equation",
+                "isolate variable",
+                "balance scale",
+                "do same to both sides",
+                "linear equation",
+                "transposition",
+                "subtract from both sides",
+                "pan balance"
+              ]
+            },
+            {
+              "id": "slope",
+              "title": "Slope",
+              "path": "algebra-1/linear-equations/slope",
+              "keywords": [
+                "rise over run",
+                "gradient",
+                "steepness",
+                "delta y over delta x"
+              ]
+            },
+            {
+              "id": "slope-intercept-form",
+              "title": "Slope-Intercept Form",
+              "path": "algebra-1/linear-equations/slope-intercept-form",
+              "keywords": [
+                "y = mx + b",
+                "linear equation",
+                "line equation"
+              ]
+            },
+            {
+              "id": "point-slope-form",
+              "title": "Point-Slope Form",
+              "path": "algebra-1/linear-equations/point-slope-form",
+              "keywords": [
+                "y - y1 = m(x - x1)",
+                "line through point"
+              ]
+            },
+            {
+              "id": "standard-form",
+              "title": "Standard Form",
+              "path": "algebra-1/linear-equations/standard-form",
+              "keywords": [
+                "Ax + By = C",
+                "general form"
+              ]
+            },
+            {
+              "id": "parallel-perpendicular",
+              "title": "Parallel & Perpendicular Lines",
+              "path": "algebra-1/linear-equations/parallel-perpendicular",
+              "keywords": [
+                "negative reciprocal",
+                "right angle",
+                "parallel",
+                "perpendicular"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "inequalities",
+          "title": "Inequalities",
+          "subtopics": [
+            {
+              "id": "solving-inequalities",
+              "title": "Solving Linear Inequalities",
+              "path": "algebra-1/inequalities/solving-inequalities",
+              "keywords": [
+                "inequality",
+                "less than",
+                "greater than",
+                "flip the sign",
+                "negative reciprocal flip"
+              ]
+            },
+            {
+              "id": "graphing-inequalities",
+              "title": "Graphing Inequalities",
+              "path": "algebra-1/inequalities/graphing-inequalities",
+              "keywords": [
+                "half-plane",
+                "shaded region",
+                "dashed line",
+                "test point",
+                "y > mx + b"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "systems",
+          "title": "Systems of Equations",
+          "subtopics": [
+            {
+              "id": "graphing-systems",
+              "title": "Solving by Graphing",
+              "path": "algebra-1/systems/graphing-systems",
+              "keywords": [
+                "intersection",
+                "system of equations",
+                "two lines",
+                "no solution",
+                "infinitely many"
+              ]
+            },
+            {
+              "id": "substitution",
+              "title": "Solving by Substitution",
+              "path": "algebra-1/systems/substitution",
+              "keywords": [
+                "substitute",
+                "isolate variable",
+                "system of equations"
+              ]
+            },
+            {
+              "id": "elimination",
+              "title": "Solving by Elimination",
+              "path": "algebra-1/systems/elimination",
+              "keywords": [
+                "add equations",
+                "cancel variable",
+                "linear combination",
+                "system of equations"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "polynomials",
+          "title": "Polynomials",
+          "subtopics": [
+            {
+              "id": "poly-add-multiply",
+              "title": "Adding & Multiplying Polynomials",
+              "path": "algebra-1/polynomials/poly-add-multiply",
+              "keywords": [
+                "FOIL",
+                "distribute",
+                "like terms",
+                "binomial",
+                "area model"
+              ]
+            },
+            {
+              "id": "factoring",
+              "title": "Factoring",
+              "path": "algebra-1/polynomials/factoring",
+              "keywords": [
+                "GCF",
+                "trinomial",
+                "difference of squares",
+                "factor quadratic",
+                "(x+a)(x+b)"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "identities-factoring",
+          "title": "Identities, Factoring & Word Problems",
+          "subtopics": [
+            {
+              "id": "algebraic-identities",
+              "title": "Algebraic Identities — The Big Eight",
+              "path": "algebra-1/identities-factoring/algebraic-identities",
+              "keywords": [
+                "(a+b)^2 = a^2 + 2ab + b^2",
+                "(a-b)^2",
+                "a^2 - b^2 = (a+b)(a-b)",
+                "(a+b)^3",
+                "a^3 + b^3 sum of cubes",
+                "a^3 - b^3 difference of cubes",
+                "(a+b+c)^2 three variable identity",
+                "a^3 + b^3 + c^3 - 3abc",
+                "mental multiplication 97 squared 102 times 98"
+              ]
+            },
+            {
+              "id": "factorization-techniques",
+              "title": "Factorization — Five Indispensable Techniques",
+              "path": "algebra-1/identities-factoring/factorization-techniques",
+              "keywords": [
+                "factorization",
+                "common factor",
+                "grouping in pairs",
+                "splitting the middle term",
+                "factor theorem",
+                "rational root test cubic",
+                "perfect square trinomial",
+                "sum difference of cubes",
+                "x^2 + 7x + 12 factor"
+              ]
+            },
+            {
+              "id": "linear-word-problems",
+              "title": "Linear Equation Word Problems",
+              "path": "algebra-1/identities-factoring/linear-word-problems",
+              "keywords": [
+                "age problems",
+                "two-digit number puzzles",
+                "consecutive integers",
+                "fraction word problems",
+                "money coins ratio age",
+                "word problem translation phrasebook"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "quadratics",
+          "title": "Quadratics",
+          "subtopics": [
+            {
+              "id": "solve-by-factoring",
+              "title": "Solving by Factoring",
+              "path": "algebra-1/quadratics/solve-by-factoring",
+              "keywords": [
+                "quadratic equation",
+                "zero product",
+                "roots",
+                "x-intercepts"
+              ]
+            },
+            {
+              "id": "quadratic-formula",
+              "title": "The Quadratic Formula",
+              "path": "algebra-1/quadratics/quadratic-formula",
+              "keywords": [
+                "quadratic",
+                "discriminant",
+                "b^2 - 4ac",
+                "x = (-b ± √(b² - 4ac)) / 2a",
+                "irrational roots"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "algebra-2",
+      "title": "Algebra II",
+      "icon": "x²",
+      "description": "Polynomials, rationals, exponentials, logarithms — and the functions behind them.",
+      "topics": [
+        {
+          "id": "quadratic-functions",
+          "title": "Quadratic Functions",
+          "subtopics": [
+            {
+              "id": "vertex-form",
+              "title": "Vertex Form & Graphs",
+              "path": "algebra-2/quadratic-functions/vertex-form",
+              "keywords": [
+                "quadratic",
+                "parabola",
+                "y = a(x - h)² + k",
+                "axis of symmetry",
+                "completing the square"
+              ]
+            },
+            {
+              "id": "discriminant",
+              "title": "The Discriminant",
+              "path": "algebra-2/quadratic-functions/discriminant",
+              "keywords": [
+                "quadratic",
+                "b^2 - 4ac",
+                "real roots",
+                "nature of roots"
+              ]
+            },
+            {
+              "id": "sum-product-roots",
+              "title": "Sum & Product of Roots (Vieta's)",
+              "path": "algebra-2/quadratic-functions/sum-product-roots",
+              "keywords": [
+                "quadratic",
+                "Vieta's formulas",
+                "sum of roots",
+                "product of roots",
+                "-b/a",
+                "c/a",
+                "build a quadratic"
+              ]
+            },
+            {
+              "id": "advanced-roots",
+              "title": "Working with Sum & Product of Roots",
+              "path": "algebra-2/quadratic-functions/advanced-roots",
+              "keywords": [
+                "advanced quadratic equations",
+                "alpha beta roots",
+                "alpha^2 + beta^2 identity",
+                "common roots two quadratics",
+                "transformation of roots",
+                "1/alpha + 1/beta",
+                "alpha^3 + beta^3",
+                "nature of roots discriminant",
+                "roots in AP GP",
+                "Vieta tricks"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "polynomials-deep",
+          "title": "Polynomial Functions",
+          "subtopics": [
+            {
+              "id": "higher-degree",
+              "title": "Higher-Degree Polynomials",
+              "path": "algebra-2/polynomials-deep/higher-degree",
+              "keywords": [
+                "cubic",
+                "quartic",
+                "degree",
+                "end behavior",
+                "leading term",
+                "turning points"
+              ]
+            },
+            {
+              "id": "roots-factoring",
+              "title": "Roots & Factoring",
+              "path": "algebra-2/polynomials-deep/roots-factoring",
+              "keywords": [
+                "factor theorem",
+                "rational root theorem",
+                "multiplicity",
+                "synthetic division"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rationals",
+          "title": "Rational Expressions",
+          "subtopics": [
+            {
+              "id": "simplify-rationals",
+              "title": "Simplifying Rationals",
+              "path": "algebra-2/rationals/simplify-rationals",
+              "keywords": [
+                "rational expression",
+                "factor and cancel",
+                "domain restrictions",
+                "P(x)/Q(x)"
+              ]
+            },
+            {
+              "id": "solve-rationals",
+              "title": "Solving Rational Equations",
+              "path": "algebra-2/rationals/solve-rationals",
+              "keywords": [
+                "multiply by LCD",
+                "extraneous solution",
+                "rational equation"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "exp-log",
+          "title": "Exponential & Logarithmic",
+          "subtopics": [
+            {
+              "id": "exp-growth-decay",
+              "title": "Exponential Growth & Decay",
+              "path": "algebra-2/exp-log/exp-growth-decay",
+              "keywords": [
+                "compound interest",
+                "half-life",
+                "e^x",
+                "y = a*b^x",
+                "exponential"
+              ]
+            },
+            {
+              "id": "log-rules",
+              "title": "Logarithm Rules",
+              "path": "algebra-2/exp-log/log-rules",
+              "keywords": [
+                "logarithm",
+                "ln",
+                "log_b",
+                "product rule",
+                "change of base"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sequences",
+          "title": "Sequences & Series",
+          "subtopics": [
+            {
+              "id": "arithmetic-sequences",
+              "title": "Arithmetic Sequences & Series",
+              "path": "algebra-2/sequences/arithmetic-sequences",
+              "keywords": [
+                "arithmetic sequence",
+                "arithmetic series",
+                "common difference",
+                "a_n = a_1 + (n-1)d",
+                "Gauss sum",
+                "sum formula",
+                "S_n",
+                "summation notation",
+                "sigma",
+                "linearity of summation",
+                "closed form"
+              ]
+            },
+            {
+              "id": "geometric-sequences",
+              "title": "Geometric Sequences & Series",
+              "path": "algebra-2/sequences/geometric-sequences",
+              "keywords": [
+                "geometric sequence",
+                "geometric series",
+                "common ratio",
+                "a_n = a_1 * r^(n-1)",
+                "S_n",
+                "infinite series",
+                "convergence",
+                "divergence",
+                "repeating decimal",
+                "Zeno",
+                "annuity",
+                "present value",
+                "compound interest"
+              ]
+            },
+            {
+              "id": "binomial-and-e",
+              "title": "Pascal's Triangle, Binomial Theorem & e",
+              "path": "algebra-2/sequences/binomial-and-e",
+              "keywords": [
+                "Pascal's triangle",
+                "binomial coefficient",
+                "n choose k",
+                "binomial theorem",
+                "(a+b)^n",
+                "factorial",
+                "Euler's number",
+                "e",
+                "2.71828",
+                "(1 + 1/n)^n",
+                "compound interest limit",
+                "1/k! series"
+              ]
+            },
+            {
+              "id": "binomial-advanced",
+              "title": "Binomial Theorem — Advanced Problems",
+              "path": "algebra-2/sequences/binomial-advanced",
+              "keywords": [
+                "binomial theorem advanced",
+                "general term T_{k+1}",
+                "middle term",
+                "term independent of x",
+                "coefficient of x^r in (1+x)^n",
+                "Vandermonde identity",
+                "sum k binom n k = n 2^(n-1)"
+              ]
+            },
+            {
+              "id": "recursive-and-patterns",
+              "title": "Recursive Sequences & Sequence Patterns",
+              "path": "algebra-2/sequences/recursive-and-patterns",
+              "keywords": [
+                "recursive sequence",
+                "Fibonacci",
+                "factorial recursion",
+                "Tower of Hanoi",
+                "first differences",
+                "second differences",
+                "quadratic sequence",
+                "patterns of growth",
+                "tables and graphs",
+                "sequences as functions",
+                "discrete vs continuous",
+                "linear vs exponential growth",
+                "growth comparison",
+                "investigating sequences"
+              ]
+            },
+            {
+              "id": "fibonacci",
+              "title": "The Fibonacci Sequence",
+              "path": "algebra-2/sequences/fibonacci",
+              "keywords": [
+                "Fibonacci",
+                "F_n = F_{n-1} + F_{n-2}",
+                "1 1 2 3 5 8 13",
+                "rabbits puzzle",
+                "Fibonacci identities",
+                "Binet formula"
+              ]
+            },
+            {
+              "id": "golden-ratio",
+              "title": "The Golden Ratio φ",
+              "path": "algebra-2/sequences/golden-ratio",
+              "keywords": [
+                "golden ratio",
+                "phi",
+                "(1+√5)/2",
+                "φ² = φ + 1",
+                "golden rectangle",
+                "continued fraction",
+                "most irrational number"
+              ]
+            },
+            {
+              "id": "spirals-nature",
+              "title": "Spirals & Nature",
+              "path": "algebra-2/sequences/spirals-nature",
+              "keywords": [
+                "Fibonacci spiral",
+                "golden spiral",
+                "phyllotaxis golden angle 137.5",
+                "sunflower spirals",
+                "honeybee ancestry",
+                "logarithmic spiral",
+                "nautilus galaxy"
+              ]
+            },
+            {
+              "id": "pascal-hidden-patterns",
+              "title": "Hidden Patterns in Pascal's Triangle",
+              "path": "algebra-2/sequences/pascal-hidden-patterns",
+              "keywords": [
+                "Pascal's triangle patterns",
+                "row sums powers of 2",
+                "Fibonacci on diagonals",
+                "powers of 11",
+                "hockey stick identity",
+                "triangular numbers tetrahedral numbers",
+                "symmetry of binomial coefficients"
+              ]
+            },
+            {
+              "id": "pascal-mod-2",
+              "title": "Pascal Mod 2: Sierpinski Hidden Inside",
+              "path": "algebra-2/sequences/pascal-mod-2",
+              "keywords": [
+                "Pascal mod 2",
+                "Sierpinski from Pascal",
+                "binomial parity",
+                "Lucas theorem",
+                "Kummer theorem",
+                "cellular automaton Rule 60"
+              ]
+            },
+            {
+              "id": "pascal-counting",
+              "title": "Pascal & Counting: Paths and Choices",
+              "path": "algebra-2/sequences/pascal-counting",
+              "keywords": [
+                "Pascal counting",
+                "lattice paths",
+                "handshakes",
+                "subsets",
+                "binomial theorem",
+                "(x+y)^n expansion",
+                "binomial distribution"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "conics",
+          "title": "Conic Sections",
+          "subtopics": [
+            {
+              "id": "circle",
+              "title": "Circles (Conic Section)",
+              "path": "algebra-2/conics/circle",
+              "keywords": [
+                "circle equation",
+                "(x-h)^2 + (y-k)^2 = r^2",
+                "center and radius from equation",
+                "complete the square circle"
+              ]
+            },
+            {
+              "id": "parabola",
+              "title": "Parabolas (Conic Section)",
+              "path": "algebra-2/conics/parabola",
+              "keywords": [
+                "parabola conic",
+                "focus directrix",
+                "x^2 = 4py",
+                "vertex form parabola",
+                "reflection property",
+                "projectile motion"
+              ]
+            },
+            {
+              "id": "ellipse",
+              "title": "Ellipses",
+              "path": "algebra-2/conics/ellipse",
+              "keywords": [
+                "ellipse equation",
+                "x^2/a^2 + y^2/b^2 = 1",
+                "foci",
+                "eccentricity",
+                "semi-major semi-minor",
+                "Kepler orbit",
+                "whispering gallery"
+              ]
+            },
+            {
+              "id": "hyperbola",
+              "title": "Hyperbolas",
+              "path": "algebra-2/conics/hyperbola",
+              "keywords": [
+                "hyperbola equation",
+                "x^2/a^2 - y^2/b^2 = 1",
+                "asymptotes y = ± (b/a)x",
+                "c^2 = a^2 + b^2",
+                "eccentricity > 1",
+                "cooling tower",
+                "LORAN navigation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "geometry",
+      "title": "Geometry",
+      "icon": "△",
+      "description": "Shapes, angles, transformations, and the tools to reason about space.",
+      "topics": [
+        {
+          "id": "lines-angles",
+          "title": "Lines & Angles",
+          "subtopics": [
+            {
+              "id": "angle-types",
+              "title": "Types of Angles",
+              "path": "geometry/lines-angles/angle-types",
+              "keywords": [
+                "acute",
+                "obtuse",
+                "right angle",
+                "complementary",
+                "supplementary",
+                "vertical angles"
+              ]
+            },
+            {
+              "id": "parallel-transversals",
+              "title": "Parallel Lines & Transversals",
+              "path": "geometry/lines-angles/parallel-transversals",
+              "keywords": [
+                "corresponding angles",
+                "alternate interior",
+                "co-interior",
+                "transversal"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "triangles",
+          "title": "Triangles",
+          "subtopics": [
+            {
+              "id": "triangle-properties",
+              "title": "Triangle Properties",
+              "path": "geometry/triangles/triangle-properties",
+              "keywords": [
+                "angle sum 180",
+                "equilateral",
+                "isosceles",
+                "scalene",
+                "triangle inequality"
+              ]
+            },
+            {
+              "id": "isosceles",
+              "title": "Isosceles Triangles",
+              "path": "geometry/triangles/isosceles",
+              "keywords": [
+                "isosceles triangle",
+                "two equal sides",
+                "two equal legs",
+                "base angle",
+                "vertex angle",
+                "apex angle",
+                "Base Angles Theorem",
+                "converse of Base Angles Theorem",
+                "axis of symmetry",
+                "altitude from apex",
+                "altitude median perpendicular bisector angle bisector coincide",
+                "isosceles right triangle",
+                "45-45-90"
+              ]
+            },
+            {
+              "id": "equilateral",
+              "title": "Equilateral Triangles",
+              "path": "geometry/triangles/equilateral",
+              "keywords": [
+                "equilateral triangle",
+                "all sides equal",
+                "all angles 60 degrees",
+                "equiangular triangle",
+                "altitude formula s sqrt 3 over 2",
+                "equilateral area formula sqrt 3 over 4 s squared",
+                "30-60-90 connection",
+                "equilateral inradius circumradius",
+                "regular hexagon building block",
+                "all centers coincide",
+                "three axes of symmetry",
+                "3-fold rotational symmetry"
+              ]
+            },
+            {
+              "id": "pythagorean",
+              "title": "The Pythagorean Theorem",
+              "path": "geometry/triangles/pythagorean",
+              "keywords": [
+                "a^2 + b^2 = c^2",
+                "right triangle",
+                "hypotenuse",
+                "3-4-5",
+                "5-12-13"
+              ]
+            },
+            {
+              "id": "circumcenter",
+              "title": "Circumcenter & Circumcircle",
+              "path": "geometry/triangles/circumcenter",
+              "keywords": [
+                "circumcenter",
+                "circumcircle",
+                "circumscribed circle",
+                "circumradius",
+                "perpendicular bisectors concur",
+                "equidistant from vertices",
+                "Extended Law of Sines",
+                "circumcenter of right triangle midpoint of hypotenuse"
+              ]
+            },
+            {
+              "id": "centroid",
+              "title": "Centroid & Medians",
+              "path": "geometry/triangles/centroid",
+              "keywords": [
+                "centroid",
+                "medians",
+                "center of mass triangle",
+                "median 2 to 1 ratio",
+                "average of vertices",
+                "balance point",
+                "G = (A + B + C) / 3"
+              ]
+            },
+            {
+              "id": "orthocenter",
+              "title": "Orthocenter & Altitudes",
+              "path": "geometry/triangles/orthocenter",
+              "keywords": [
+                "orthocenter",
+                "altitudes concur",
+                "orthocenter location right triangle obtuse",
+                "orthocentric system",
+                "H = 3G - 2O"
+              ]
+            },
+            {
+              "id": "euler-line",
+              "title": "The Euler Line",
+              "path": "geometry/triangles/euler-line",
+              "keywords": [
+                "Euler line",
+                "Euler 1765",
+                "centroid circumcenter orthocenter collinear",
+                "OG GH 1 to 2 ratio",
+                "nine-point center",
+                "OH = 3 OG"
+              ]
+            },
+            {
+              "id": "incircle-incenter",
+              "title": "Incenter, Incircle & Inradius",
+              "path": "geometry/triangles/incircle-incenter",
+              "keywords": [
+                "incenter",
+                "incircle",
+                "inradius",
+                "inscribed circle",
+                "angle bisectors",
+                "point of concurrency",
+                "r = A/s",
+                "r = area over semiperimeter",
+                "tangent lengths from a vertex",
+                "s - a tangent length",
+                "right triangle inradius shortcut",
+                "(a+b-c)/2",
+                "equilateral triangle inradius",
+                "a√3/6",
+                "Heron's formula inradius",
+                "weighted incenter coordinates"
+              ]
+            },
+            {
+              "id": "congruence-similarity",
+              "title": "Congruence & Similarity",
+              "path": "geometry/triangles/congruence-similarity",
+              "keywords": [
+                "SSS",
+                "SAS",
+                "ASA",
+                "AAS",
+                "AA similarity",
+                "CPCTC",
+                "scale factor"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "quadrilaterals",
+          "title": "Quadrilaterals & Polygons",
+          "subtopics": [
+            {
+              "id": "quad-properties",
+              "title": "Properties of Quadrilaterals",
+              "path": "geometry/quadrilaterals/quad-properties",
+              "keywords": [
+                "parallelogram",
+                "rectangle",
+                "rhombus",
+                "square",
+                "trapezoid",
+                "diagonals"
+              ]
+            },
+            {
+              "id": "polygon-angles",
+              "title": "Polygon Angle Sums",
+              "path": "geometry/quadrilaterals/polygon-angles",
+              "keywords": [
+                "(n-2)*180",
+                "interior angles",
+                "exterior angles",
+                "regular polygon",
+                "hexagon"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "circles",
+          "title": "Circles",
+          "subtopics": [
+            {
+              "id": "circle-vocabulary",
+              "title": "Circle Vocabulary",
+              "path": "geometry/circles/circle-vocabulary",
+              "keywords": [
+                "radius",
+                "diameter",
+                "chord",
+                "circumference",
+                "pi",
+                "C = 2πr",
+                "A = πr²"
+              ]
+            },
+            {
+              "id": "arc-sector",
+              "title": "Arcs & Sectors",
+              "path": "geometry/circles/arc-sector",
+              "keywords": [
+                "arc length",
+                "sector area",
+                "central angle",
+                "pie slice"
+              ]
+            },
+            {
+              "id": "inscribed-angle",
+              "title": "The Inscribed Angle Theorem",
+              "path": "geometry/circles/inscribed-angle",
+              "keywords": [
+                "inscribed angle theorem",
+                "central angle",
+                "inscribed angle = half central angle",
+                "same segment angles equal",
+                "arc subtended by chord"
+              ]
+            },
+            {
+              "id": "thales",
+              "title": "Thales' Theorem",
+              "path": "geometry/circles/thales",
+              "keywords": [
+                "Thales' theorem",
+                "diameter subtends right angle",
+                "Thales circle",
+                "inscribed in semicircle 90 degrees",
+                "right triangle hypotenuse is diameter of circumcircle"
+              ]
+            },
+            {
+              "id": "tangent-radius",
+              "title": "Tangent ⊥ Radius",
+              "path": "geometry/circles/tangent-radius",
+              "keywords": [
+                "tangent line to circle",
+                "tangent perpendicular to radius",
+                "tangent length from external point",
+                "two tangents equal length",
+                "tangent secant angle"
+              ]
+            },
+            {
+              "id": "cyclic-quadrilateral",
+              "title": "Cyclic Quadrilaterals",
+              "path": "geometry/circles/cyclic-quadrilateral",
+              "keywords": [
+                "cyclic quadrilateral",
+                "inscribed in circle",
+                "opposite angles supplementary",
+                "Ptolemy's theorem (mention)",
+                "concyclic points"
+              ]
+            },
+            {
+              "id": "power-of-point",
+              "title": "Power of a Point",
+              "path": "geometry/circles/power-of-point",
+              "keywords": [
+                "power of a point",
+                "two chords product equal",
+                "tangent secant rule",
+                "two secant rule",
+                "PA times PB equals PC times PD",
+                "PT squared equals PA times PB"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "transformations",
+          "title": "Transformations",
+          "subtopics": [
+            {
+              "id": "translations",
+              "title": "Translations",
+              "path": "geometry/transformations/translations",
+              "keywords": [
+                "translation",
+                "translation vector",
+                "(x + dx, y + dy)",
+                "slide shape",
+                "rigid motion isometry",
+                "translation preserves orientation"
+              ]
+            },
+            {
+              "id": "reflections",
+              "title": "Reflections",
+              "path": "geometry/transformations/reflections",
+              "keywords": [
+                "reflection",
+                "mirror line",
+                "line of reflection",
+                "(-x, y) reflect y-axis",
+                "(x, -y) reflect x-axis",
+                "y = x reflection swap coordinates",
+                "orientation reversal isometry"
+              ]
+            },
+            {
+              "id": "rotations",
+              "title": "Rotations",
+              "path": "geometry/transformations/rotations",
+              "keywords": [
+                "rotation",
+                "center of rotation",
+                "rotational symmetry",
+                "90 degree rotation (-y, x)",
+                "180 rotation (-x, -y)",
+                "rotate by angle",
+                "preserves orientation"
+              ]
+            },
+            {
+              "id": "dilations",
+              "title": "Dilations",
+              "path": "geometry/transformations/dilations",
+              "keywords": [
+                "dilation",
+                "scale factor",
+                "similar figures",
+                "lengths scale by k",
+                "areas scale by k squared",
+                "volumes scale by k cubed",
+                "negative scale factor 180 rotation"
+              ]
+            },
+            {
+              "id": "composition-symmetry",
+              "title": "Composition & Symmetry",
+              "path": "geometry/transformations/composition-symmetry",
+              "keywords": [
+                "composition of transformations",
+                "order matters",
+                "two reflections equal rotation or translation",
+                "glide reflection",
+                "dihedral group symmetry",
+                "rotational symmetry of polygon",
+                "axes of reflection"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "fractals",
+          "title": "Fractals",
+          "subtopics": [
+            {
+              "id": "sierpinski",
+              "title": "The Sierpinski Triangle",
+              "path": "geometry/fractals/sierpinski",
+              "keywords": [
+                "Sierpinski triangle",
+                "fractal",
+                "self-similar",
+                "removed middle triangle",
+                "chaos game",
+                "fractal dimension log 3 / log 2"
+              ]
+            },
+            {
+              "id": "koch-snowflake",
+              "title": "The Koch Snowflake",
+              "path": "geometry/fractals/koch-snowflake",
+              "keywords": [
+                "Koch snowflake",
+                "Koch curve",
+                "infinite perimeter finite area",
+                "coastline paradox",
+                "log 4 / log 3 dimension"
+              ]
+            },
+            {
+              "id": "self-similarity",
+              "title": "Self-Similarity & Fractal Dimension",
+              "path": "geometry/fractals/self-similarity",
+              "keywords": [
+                "self-similarity",
+                "fractal dimension",
+                "Sierpinski carpet",
+                "Pythagoras tree",
+                "Menger sponge",
+                "Mandelbrot"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "area-volume",
+          "title": "Area & Volume",
+          "subtopics": [
+            {
+              "id": "area-formulas",
+              "title": "2D Area Formulas",
+              "path": "geometry/area-volume/area-formulas",
+              "keywords": [
+                "square",
+                "rectangle",
+                "triangle",
+                "parallelogram",
+                "trapezoid",
+                "circle area"
+              ]
+            },
+            {
+              "id": "volume-formulas",
+              "title": "3D Volume Formulas",
+              "path": "geometry/area-volume/volume-formulas",
+              "keywords": [
+                "cube",
+                "rectangular prism",
+                "cylinder",
+                "cone",
+                "sphere",
+                "pyramid"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pre-calculus",
+      "title": "Pre-Calculus",
+      "icon": "ƒ",
+      "description": "Functions, trigonometry, and the bridge to calculus.",
+      "topics": [
+        {
+          "id": "functions",
+          "title": "Functions",
+          "subtopics": [
+            {
+              "id": "big-picture",
+              "title": "Functions: The Big Picture",
+              "path": "pre-calculus/functions/big-picture",
+              "keywords": [
+                "what is a function",
+                "input output",
+                "independent variable",
+                "dependent variable",
+                "mapping",
+                "rule",
+                "trail",
+                "hiking",
+                "elevation",
+                "variables and dependency"
+              ]
+            },
+            {
+              "id": "domain-range",
+              "title": "Domain & Range",
+              "path": "pre-calculus/functions/domain-range",
+              "keywords": [
+                "function domain",
+                "valid inputs",
+                "interval notation",
+                "square root",
+                "denominator zero"
+              ]
+            },
+            {
+              "id": "injective-surjective",
+              "title": "Injective, Surjective, Bijective",
+              "path": "pre-calculus/functions/injective-surjective",
+              "keywords": [
+                "injective",
+                "surjective",
+                "bijective",
+                "one-to-one",
+                "onto",
+                "horizontal line test",
+                "invertible function",
+                "codomain",
+                "image"
+              ]
+            },
+            {
+              "id": "composition-inverses",
+              "title": "Composition & Inverses",
+              "path": "pre-calculus/functions/composition-inverses",
+              "keywords": [
+                "f of g",
+                "f(g(x))",
+                "inverse function",
+                "f-inverse",
+                "one-to-one",
+                "reflection y = x"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "trigonometry",
+          "title": "Trigonometry",
+          "subtopics": [
+            {
+              "id": "right-angle-triangle",
+              "title": "Right Angle Triangle",
+              "subtopics": [
+                {
+                  "id": "right-triangle-ratios",
+                  "title": "Right-Triangle Ratios (SOHCAHTOA)",
+                  "path": "pre-calculus/trigonometry/right-triangle-ratios",
+                  "keywords": [
+                    "SOHCAHTOA",
+                    "sine",
+                    "cosine",
+                    "tangent",
+                    "trigonometry",
+                    "opposite adjacent hypotenuse",
+                    "sin",
+                    "cos",
+                    "tan",
+                    "find side",
+                    "find angle",
+                    "arcsin",
+                    "arccos",
+                    "arctan",
+                    "inverse sine",
+                    "inverse cosine",
+                    "inverse tangent",
+                    "choose ratio",
+                    "mixed problems",
+                    "which trig ratio"
+                  ]
+                },
+                {
+                  "id": "special-right-triangles",
+                  "title": "Special Right Triangles",
+                  "path": "pre-calculus/trigonometry/special-right-triangles",
+                  "keywords": [
+                    "45-45-90",
+                    "isosceles right triangle",
+                    "1:1:sqrt(2)",
+                    "diagonal of square",
+                    "30-60-90",
+                    "1:sqrt(3):2",
+                    "equilateral triangle height",
+                    "special triangle",
+                    "exact values"
+                  ]
+                },
+                {
+                  "id": "right-triangle-word-problems",
+                  "title": "Right-Triangle Word Problems",
+                  "path": "pre-calculus/trigonometry/right-triangle-word-problems",
+                  "keywords": [
+                    "ladder",
+                    "leaning ladder",
+                    "wall",
+                    "guy wire",
+                    "antenna",
+                    "tower",
+                    "cable",
+                    "anchor",
+                    "angle of elevation",
+                    "angle of depression",
+                    "shadow",
+                    "lighthouse",
+                    "airplane altitude",
+                    "line of sight",
+                    "right triangle word problem",
+                    "trig word problems",
+                    "bearing",
+                    "bearings",
+                    "compass direction",
+                    "navigation",
+                    "three-figure bearing",
+                    "N 30 E",
+                    "S 45 W",
+                    "due north",
+                    "due east",
+                    "due south",
+                    "due west"
+                  ]
+                },
+                {
+                  "id": "heights-and-distances",
+                  "title": "Heights & Distances",
+                  "path": "pre-calculus/trigonometry/heights-and-distances",
+                  "keywords": [
+                    "heights and distances",
+                    "angle of elevation",
+                    "angle of depression",
+                    "tower problems",
+                    "lighthouse",
+                    "aircraft observer",
+                    "two observer angles 30 60",
+                    "elevation equals depression alternate interior angles",
+                    "trigonometry word problems",
+                    "tan 30 tan 45 tan 60",
+                    "h = D / (cot beta - cot alpha)"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "unit-circle",
+              "title": "The Unit Circle",
+              "path": "pre-calculus/trigonometry/unit-circle",
+              "keywords": [
+                "sin cos tan",
+                "trigonometry",
+                "Pythagorean identity",
+                "quadrants",
+                "standard position",
+                "initial side",
+                "terminal side",
+                "coterminal angles",
+                "reference angle",
+                "ASTC",
+                "All Students Take Calculus",
+                "exact value of trig ratios",
+                "special angles",
+                "trig ratios in radians"
+              ]
+            },
+            {
+              "id": "sine-cosine-graphs",
+              "title": "Trigonometric Function Graphs",
+              "path": "pre-calculus/trigonometry/sine-cosine-graphs",
+              "keywords": [
+                "wave",
+                "sinusoidal",
+                "period",
+                "amplitude",
+                "y = sin x",
+                "y = cos x",
+                "y = tan x",
+                "cotangent graph",
+                "secant graph",
+                "cosecant graph",
+                "y = cot x",
+                "y = sec x",
+                "y = csc x",
+                "graphing trigonometric functions",
+                "transformations of trig functions",
+                "amplitude period phase shift vertical shift",
+                "midline",
+                "vertical asymptote",
+                "reciprocal trig",
+                "identify function from graph"
+              ]
+            },
+            {
+              "id": "radians-degrees",
+              "title": "Radians and Degrees",
+              "path": "pre-calculus/trigonometry/radians-degrees",
+              "keywords": [
+                "radians",
+                "degrees",
+                "arc length",
+                "pi",
+                "convert",
+                "2π",
+                "s = r theta",
+                "arc length formula",
+                "convert between degrees and radians"
+              ]
+            },
+            {
+              "id": "trig-identities",
+              "title": "Trig Identities",
+              "path": "pre-calculus/trigonometry/trig-identities",
+              "keywords": [
+                "Pythagorean identity",
+                "sin² + cos²",
+                "double angle identities",
+                "half-angle identities",
+                "angle sum identities",
+                "angle difference identities",
+                "quotient identity",
+                "reciprocal identity",
+                "even odd identity",
+                "proving trig identities",
+                "product to sum"
+              ]
+            },
+            {
+              "id": "solving-trig-equations",
+              "title": "Solving Trig Equations & Inverse Functions",
+              "path": "pre-calculus/trigonometry/solving-trig-equations",
+              "keywords": [
+                "solve trig equations",
+                "trigonometric equations",
+                "general solutions",
+                "principal value",
+                "inverse trig functions",
+                "arcsin",
+                "arccos",
+                "arctan",
+                "inverse sine",
+                "inverse cosine",
+                "inverse tangent",
+                "sin inverse",
+                "cos inverse",
+                "tan inverse",
+                "restricted domain",
+                "reciprocal trig functions",
+                "csc sec cot equations"
+              ]
+            },
+            {
+              "id": "law-of-sines-cosines",
+              "title": "Law of Sines & Cosines",
+              "path": "pre-calculus/trigonometry/law-of-sines-cosines",
+              "keywords": [
+                "law of sines",
+                "law of cosines",
+                "oblique triangle",
+                "non-right triangle",
+                "sin A / a = sin B / b",
+                "c^2 = a^2 + b^2 - 2ab cos C",
+                "AAS",
+                "ASA",
+                "SSA",
+                "SAS",
+                "SSS",
+                "ambiguous case",
+                "triangulation",
+                "navigation",
+                "bearings",
+                "applications of sine law",
+                "applications of cosine law"
+              ]
+            },
+            {
+              "id": "trig-equations-advanced",
+              "title": "Trigonometric Equations — Advanced Problems",
+              "path": "pre-calculus/trigonometry/trig-equations-advanced",
+              "keywords": [
+                "advanced trig equations general solution",
+                "sin x = sin alpha n pi + (-1)^n alpha",
+                "cos x = cos alpha 2n pi pm alpha",
+                "tan x = tan alpha n pi + alpha",
+                "a sin x + b cos x = c",
+                "quadratic in sin x",
+                "trig equations interval [0, 2pi]"
+              ]
+            },
+            {
+              "id": "sine-from-rotation",
+              "title": "Where Sine Comes From",
+              "path": "pre-calculus/trigonometry/sine-from-rotation",
+              "keywords": [
+                "ferris wheel",
+                "rotating point",
+                "circular motion",
+                "sine wave",
+                "cosine wave",
+                "why sine is a wave",
+                "rotation produces sine",
+                "phase shift",
+                "amplitude frequency rotational speed"
+              ]
+            },
+            {
+              "id": "parametric-challenge",
+              "title": "A Parametric Trig Challenge",
+              "path": "pre-calculus/trigonometry/parametric-challenge",
+              "keywords": [
+                "parametric equation",
+                "graphical method",
+                "sqrt(1 + sin x)",
+                "sqrt(1 - sin x)",
+                "for which b does equation have solutions",
+                "trig and algebra combined",
+                "language of calculus",
+                "horizontal line test for solutions"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "complex-numbers",
+          "title": "Complex Numbers",
+          "subtopics": [
+            {
+              "id": "intro",
+              "title": "Complex Numbers — Introduction",
+              "path": "pre-calculus/complex-numbers/intro",
+              "keywords": [
+                "complex numbers",
+                "i = sqrt(-1)",
+                "i^2 = -1",
+                "real part imaginary part",
+                "a + bi",
+                "modulus |z|",
+                "conjugate z-bar",
+                "polar form",
+                "argument arg(z)",
+                "De Moivre's theorem",
+                "Argand plane",
+                "powers of i cycle"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "vectors-polar",
+          "title": "Vectors & Polar",
+          "subtopics": [
+            {
+              "id": "vector-basics",
+              "title": "Vector Basics",
+              "path": "pre-calculus/vectors-polar/vector-basics",
+              "keywords": [
+                "vector magnitude",
+                "vector addition",
+                "components",
+                "scalar multiplication",
+                "unit vector"
+              ]
+            },
+            {
+              "id": "polar-coords",
+              "title": "Polar Coordinates",
+              "path": "pre-calculus/vectors-polar/polar-coords",
+              "keywords": [
+                "(r, θ)",
+                "r and theta",
+                "x = r cos θ",
+                "polar to cartesian"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "limits",
+          "title": "Limits Intro",
+          "subtopics": [
+            {
+              "id": "limits-intuitively",
+              "title": "Limits Intuitively",
+              "path": "pre-calculus/limits/limits-intuitively",
+              "keywords": [
+                "limit",
+                "lim x to a",
+                "0/0 indeterminate",
+                "one-sided limit",
+                "continuity"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "calculus-1",
+      "title": "Calculus I",
+      "icon": "∫",
+      "description": "Limits, derivatives, integrals — the language of change. From slopes and rates to areas and accumulation, the two big ideas that built modern science.",
+      "topics": [
+        {
+          "id": "limits-continuity",
+          "title": "Limits & Continuity",
+          "subtopics": [
+            {
+              "id": "limits-algebraically",
+              "title": "Limits — Algebraic Techniques",
+              "path": "calculus-1/limits-continuity/limits-algebraically",
+              "keywords": [
+                "limit",
+                "factoring",
+                "rationalize",
+                "indeterminate",
+                "0/0",
+                "direct substitution"
+              ]
+            },
+            {
+              "id": "limits-at-infinity",
+              "title": "Limits at Infinity & Asymptotes",
+              "path": "calculus-1/limits-continuity/limits-at-infinity",
+              "keywords": [
+                "limit at infinity",
+                "horizontal asymptote",
+                "vertical asymptote",
+                "end behavior",
+                "rational function"
+              ]
+            },
+            {
+              "id": "continuity",
+              "title": "Continuity",
+              "path": "calculus-1/limits-continuity/continuity",
+              "keywords": [
+                "continuous function",
+                "removable discontinuity",
+                "jump",
+                "infinite discontinuity",
+                "intermediate value theorem"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "derivatives-concept",
+          "title": "The Derivative",
+          "subtopics": [
+            {
+              "id": "speed-distance-ftc",
+              "title": "Speed, Distance, and the FTC",
+              "path": "calculus-1/derivatives-concept/speed-distance-ftc",
+              "keywords": [
+                "speedometer",
+                "odometer",
+                "fundamental theorem of calculus",
+                "FTC",
+                "rate and accumulation",
+                "derivative and integral",
+                "area under speed curve equals distance",
+                "slope of distance equals speed"
+              ]
+            },
+            {
+              "id": "velocity-acceleration",
+              "title": "When Time Varies — Velocity & Acceleration",
+              "path": "calculus-1/derivatives-concept/velocity-acceleration",
+              "keywords": [
+                "Calculus Made Easy",
+                "Silvanus Thompson",
+                "when time varies",
+                "second derivative",
+                "velocity",
+                "acceleration",
+                "jerk",
+                "d^2 s / dt^2",
+                "s prime prime",
+                "ball thrown up",
+                "gravity -9.8",
+                "free fall",
+                "concavity and acceleration",
+                "simple harmonic motion",
+                "a = -omega squared s",
+                "F = ma",
+                "g-force"
+              ]
+            },
+            {
+              "id": "growing-square",
+              "title": "The Growing Square — Where 2x Comes From",
+              "path": "calculus-1/derivatives-concept/growing-square",
+              "keywords": [
+                "Calculus Made Easy",
+                "Silvanus Thompson",
+                "growing square",
+                "geometric derivation",
+                "d/dx of x^2",
+                "different degrees of smallness",
+                "intuition for derivative",
+                "power rule discovery",
+                "what is dx",
+                "what is integral sign",
+                "dy/dx meaning"
+              ]
+            },
+            {
+              "id": "definition-and-tangent",
+              "title": "Definition & Tangent Lines",
+              "path": "calculus-1/derivatives-concept/definition-and-tangent",
+              "keywords": [
+                "derivative",
+                "limit definition",
+                "f'(x)",
+                "tangent line",
+                "instantaneous rate of change",
+                "secant"
+              ]
+            },
+            {
+              "id": "differentiability",
+              "title": "Differentiability",
+              "path": "calculus-1/derivatives-concept/differentiability",
+              "keywords": [
+                "differentiable",
+                "continuous vs differentiable",
+                "corner",
+                "cusp",
+                "vertical tangent"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "differentiation-rules",
+          "title": "Differentiation Rules",
+          "subtopics": [
+            {
+              "id": "power-sum-rules",
+              "title": "Power, Sum & Constant Rules",
+              "path": "calculus-1/differentiation-rules/power-sum-rules",
+              "keywords": [
+                "power rule",
+                "sum rule",
+                "constant rule",
+                "polynomial derivative"
+              ]
+            },
+            {
+              "id": "product-quotient-rules",
+              "title": "Product & Quotient Rules",
+              "path": "calculus-1/differentiation-rules/product-quotient-rules",
+              "keywords": [
+                "product rule",
+                "quotient rule"
+              ]
+            },
+            {
+              "id": "chain-rule",
+              "title": "The Chain Rule",
+              "path": "calculus-1/differentiation-rules/chain-rule",
+              "keywords": [
+                "chain rule",
+                "composite function",
+                "outside inside derivative"
+              ]
+            },
+            {
+              "id": "trig-exp-log-derivatives",
+              "title": "Derivatives of Trig, Exp & Log",
+              "path": "calculus-1/differentiation-rules/trig-exp-log-derivatives",
+              "keywords": [
+                "derivative of sin cos tan",
+                "derivative of e^x",
+                "derivative of ln x",
+                "exponential",
+                "logarithmic"
+              ]
+            },
+            {
+              "id": "where-e-comes-from",
+              "title": "Where e Comes From — Compound Interest & the Self-Derivative",
+              "path": "calculus-1/differentiation-rules/where-e-comes-from",
+              "keywords": [
+                "Euler number e",
+                "compound interest",
+                "continuous compounding",
+                "organic growth",
+                "exponential growth",
+                "self derivative",
+                "d/dx of e^x = e^x",
+                "natural logarithm",
+                "d/dx of ln x = 1/x",
+                "law of exponential decay",
+                "half life",
+                "Calculus Made Easy"
+              ]
+            },
+            {
+              "id": "sine-derivative-and-waves",
+              "title": "Sine's Derivative — and the Equation That Makes Waves",
+              "path": "calculus-1/differentiation-rules/sine-derivative-and-waves",
+              "keywords": [
+                "derivative of sin",
+                "derivative of cos",
+                "geometric derivation",
+                "sum to product identity",
+                "small angle approximation",
+                "simple harmonic motion",
+                "SHM",
+                "wave equation",
+                "y'' = -y",
+                "oscillation",
+                "Calculus Made Easy",
+                "Thompson sine"
+              ]
+            },
+            {
+              "id": "implicit-differentiation",
+              "title": "Implicit Differentiation",
+              "path": "calculus-1/differentiation-rules/implicit-differentiation",
+              "keywords": [
+                "implicit differentiation",
+                "dy/dx",
+                "circle slope",
+                "implicit function"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "applications-derivatives",
+          "title": "Applications of Derivatives",
+          "subtopics": [
+            {
+              "id": "related-rates",
+              "title": "Related Rates",
+              "path": "calculus-1/applications-derivatives/related-rates",
+              "keywords": [
+                "related rates",
+                "rate of change",
+                "balloon",
+                "ladder",
+                "shadow"
+              ]
+            },
+            {
+              "id": "extrema-concavity",
+              "title": "Extrema, Concavity & Curve Sketching",
+              "path": "calculus-1/applications-derivatives/extrema-concavity",
+              "keywords": [
+                "critical points",
+                "first derivative test",
+                "second derivative test",
+                "concave up down",
+                "inflection point",
+                "increasing decreasing"
+              ]
+            },
+            {
+              "id": "curvature",
+              "title": "Curvature — How Bent is a Curve?",
+              "path": "calculus-1/applications-derivatives/curvature",
+              "keywords": [
+                "Calculus Made Easy",
+                "Silvanus Thompson",
+                "curvature",
+                "osculating circle",
+                "kissing circle",
+                "radius of curvature",
+                "kappa",
+                "1 over R",
+                "(1 + f'^2)^(3/2)",
+                "second derivative geometric meaning",
+                "inflection point R infinity",
+                "centripetal acceleration v squared over R",
+                "circle sanity check"
+              ]
+            },
+            {
+              "id": "equating-to-zero",
+              "title": "Equating to Zero — Finding Maxima & Minima",
+              "path": "calculus-1/applications-derivatives/equating-to-zero",
+              "keywords": [
+                "maxima and minima",
+                "Thompson",
+                "equating to zero",
+                "set derivative to zero",
+                "horizontal tangent at extremum",
+                "cut number into two parts product max",
+                "AM-GM",
+                "open-top box",
+                "rectangle inscribed in circle",
+                "intuitive optimization"
+              ]
+            },
+            {
+              "id": "optimization",
+              "title": "Optimization",
+              "path": "calculus-1/applications-derivatives/optimization",
+              "keywords": [
+                "optimization",
+                "maximum minimum",
+                "applied max min",
+                "fence",
+                "box",
+                "constraint"
+              ]
+            },
+            {
+              "id": "mvt-lhopital",
+              "title": "Mean Value Theorem & L'Hôpital's Rule",
+              "path": "calculus-1/applications-derivatives/mvt-lhopital",
+              "keywords": [
+                "mean value theorem",
+                "Rolle's theorem",
+                "L'Hôpital",
+                "0/0",
+                "infinity over infinity"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "integration",
+          "title": "Integration",
+          "subtopics": [
+            {
+              "id": "stacking-triangles",
+              "title": "Stacking Triangles — Rebuilding a Curve from Its Slope",
+              "path": "calculus-1/integration/stacking-triangles",
+              "keywords": [
+                "integration intuition",
+                "geometric integration",
+                "sum of",
+                "long S",
+                "constant of integration",
+                "+ C",
+                "initial condition",
+                "reverse power rule",
+                "reading integrals as English",
+                "Calculus Made Easy",
+                "Thompson"
+              ]
+            },
+            {
+              "id": "antiderivatives",
+              "title": "Antiderivatives & Indefinite Integrals",
+              "path": "calculus-1/integration/antiderivatives",
+              "keywords": [
+                "antiderivative",
+                "indefinite integral",
+                "+ C",
+                "reverse derivative"
+              ]
+            },
+            {
+              "id": "riemann-sums",
+              "title": "Riemann Sums & Definite Integrals",
+              "path": "calculus-1/integration/riemann-sums",
+              "keywords": [
+                "Riemann sum",
+                "definite integral",
+                "area under curve",
+                "left right midpoint sum"
+              ]
+            },
+            {
+              "id": "ftc-substitution",
+              "title": "Fundamental Theorem & Substitution",
+              "path": "calculus-1/integration/ftc-substitution",
+              "keywords": [
+                "fundamental theorem of calculus",
+                "FTC",
+                "u-substitution",
+                "evaluate definite integral"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "statistics",
+      "title": "Statistics & Probability",
+      "icon": "σ",
+      "description": "Data, chance, and inference. Make sense of variability — from describing a dataset to drawing conclusions about the world.",
+      "topics": [
+        {
+          "id": "descriptive",
+          "title": "Descriptive Statistics",
+          "subtopics": [
+            {
+              "id": "measures-of-center",
+              "title": "Measures of Center",
+              "path": "statistics/descriptive/measures-of-center",
+              "keywords": [
+                "mean",
+                "median",
+                "mode",
+                "average",
+                "outlier",
+                "weighted mean"
+              ]
+            },
+            {
+              "id": "measures-of-spread",
+              "title": "Measures of Spread",
+              "path": "statistics/descriptive/measures-of-spread",
+              "keywords": [
+                "range",
+                "IQR",
+                "interquartile",
+                "standard deviation",
+                "variance",
+                "five-number summary"
+              ]
+            },
+            {
+              "id": "data-displays",
+              "title": "Data Displays",
+              "path": "statistics/descriptive/data-displays",
+              "keywords": [
+                "histogram",
+                "box plot",
+                "dot plot",
+                "stem-and-leaf",
+                "shape",
+                "skew",
+                "distribution"
+              ]
+            },
+            {
+              "id": "grouped-data",
+              "title": "Statistics for Grouped Data",
+              "path": "statistics/descriptive/grouped-data",
+              "keywords": [
+                "grouped data mean",
+                "step-deviation method",
+                "assumed mean method",
+                "direct method",
+                "median grouped data cumulative frequency",
+                "mode formula modal class",
+                "ogive cumulative frequency curve",
+                "class intervals",
+                "class mark midpoint"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "probability",
+          "title": "Probability",
+          "subtopics": [
+            {
+              "id": "basic-probability",
+              "title": "Basic Probability",
+              "path": "statistics/probability/basic-probability",
+              "keywords": [
+                "probability",
+                "sample space",
+                "event",
+                "complement",
+                "equally likely"
+              ]
+            },
+            {
+              "id": "compound-events",
+              "title": "Compound Events",
+              "path": "statistics/probability/compound-events",
+              "keywords": [
+                "AND OR",
+                "independent dependent",
+                "with without replacement",
+                "tree diagram",
+                "mutually exclusive"
+              ]
+            },
+            {
+              "id": "conditional-probability",
+              "title": "Conditional Probability",
+              "path": "statistics/probability/conditional-probability",
+              "keywords": [
+                "P(A|B)",
+                "given that",
+                "two-way table",
+                "Bayes intuition",
+                "independence test"
+              ]
+            },
+            {
+              "id": "galton-board-clt",
+              "title": "The Galton Board: Where Bell Curves Come From",
+              "path": "statistics/probability/galton-board-clt",
+              "keywords": [
+                "Galton board",
+                "bean machine",
+                "binomial distribution",
+                "normal distribution",
+                "bell curve",
+                "central limit theorem",
+                "CLT",
+                "law of large numbers",
+                "LLN",
+                "Bernoulli",
+                "random walk"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "counting",
+          "title": "Counting Methods",
+          "subtopics": [
+            {
+              "id": "counting-principles",
+              "title": "Counting Principles",
+              "path": "statistics/counting/counting-principles",
+              "keywords": [
+                "fundamental counting principle",
+                "multiplication principle",
+                "addition principle",
+                "tree diagram"
+              ]
+            },
+            {
+              "id": "permutations-combinations",
+              "title": "Permutations & Combinations",
+              "path": "statistics/counting/permutations-combinations",
+              "keywords": [
+                "permutation",
+                "combination",
+                "nPr",
+                "nCr",
+                "factorial",
+                "n choose k",
+                "order matters"
+              ]
+            },
+            {
+              "id": "advanced-permutations",
+              "title": "Permutations & Combinations — Advanced Problems",
+              "path": "statistics/counting/advanced-permutations",
+              "keywords": [
+                "advanced permutations combinations",
+                "no two girls adjacent",
+                "circular permutations (n-1)!",
+                "arrangements with repetition MISSISSIPPI",
+                "committees with constraint",
+                "5-card poker hand at least one ace",
+                "complementary counting"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "distributions",
+          "title": "Distributions",
+          "subtopics": [
+            {
+              "id": "discrete-random-variables",
+              "title": "Discrete Random Variables",
+              "path": "statistics/distributions/discrete-random-variables",
+              "keywords": [
+                "random variable",
+                "expected value",
+                "binomial",
+                "probability distribution",
+                "variance"
+              ]
+            },
+            {
+              "id": "normal-distribution",
+              "title": "The Normal Distribution",
+              "path": "statistics/distributions/normal-distribution",
+              "keywords": [
+                "normal distribution",
+                "bell curve",
+                "z-score",
+                "68-95-99.7",
+                "empirical rule",
+                "standard normal"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sampling",
+          "title": "Sampling & Inference",
+          "subtopics": [
+            {
+              "id": "sampling-and-bias",
+              "title": "Sampling & Bias",
+              "path": "statistics/sampling/sampling-and-bias",
+              "keywords": [
+                "sample",
+                "population",
+                "random sampling",
+                "bias",
+                "convenience sample",
+                "stratified"
+              ]
+            },
+            {
+              "id": "sampling-distributions",
+              "title": "Sampling Distributions",
+              "path": "statistics/sampling/sampling-distributions",
+              "keywords": [
+                "sampling distribution",
+                "standard error",
+                "central limit theorem",
+                "margin of error"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{Compute: } 47 \\bmod 6.",
+      "answer": 5,
+      "tolerance": 0.001,
+      "hints": [
+        "Divide 47 by 6: quotient 7, remainder ?",
+        "$47 = 7 \\cdot 6 + 5$."
+      ],
+      "explanation": "$47 = 7 \\cdot 6 + 5$, so $47 \\bmod 6 = 5$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{Compute: } (8 + 15) \\bmod 7.",
+      "answer": 2,
+      "tolerance": 0.001,
+      "hints": [
+        "$8 + 15 = 23$.",
+        "$23 \\bmod 7 = 23 - 21 = 2$."
+      ],
+      "explanation": "$23 = 3 \\cdot 7 + 2$, so $(8 + 15) \\bmod 7 = 2$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{At 10:00, what time is it 17 hours later (on a 12-hour clock)?}",
+      "answer": 3,
+      "tolerance": 0.001,
+      "hints": [
+        "$10 + 17 = 27$.",
+        "$27 \\bmod 12 = 27 - 24 = 3$."
+      ],
+      "explanation": "$10 + 17 \\equiv 27 \\equiv 3 \\pmod{12}$. So it's 3 o'clock.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Compute: } (5 \\cdot 9) \\bmod 11.",
+      "answer": 1,
+      "tolerance": 0.001,
+      "hints": [
+        "$5 \\cdot 9 = 45$.",
+        "$45 = 4 \\cdot 11 + 1$."
+      ],
+      "explanation": "$45 \\bmod 11 = 45 - 44 = 1$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{What is } 100 \\bmod 7?",
+      "answer": 2,
+      "tolerance": 0.001,
+      "hints": [
+        "$98 = 14 \\cdot 7$.",
+        "$100 - 98 = 2$."
+      ],
+      "explanation": "$100 = 14 \\cdot 7 + 2$, so $100 \\bmod 7 = 2$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Strategy: find the LARGEST multiple of 7 that fits in 100.** Then $100 \\bmod 7$ is what's left over."
+        },
+        {
+          "text": "**Find the multiple.** $14 \\cdot 7 = 98$. (Next one is $15 \\cdot 7 = 105$ — too big.)"
+        },
+        {
+          "text": "**Subtract.** $100 - 98 = 2$."
+        },
+        {
+          "text": "**Result.** $100 \\bmod 7 = 2$. (The 'remainder' meaning: after fitting 14 sevens into 100, you have 2 left over.)"
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{Compute: } (-5) \\bmod 8 \\text{ (positive remainder convention).}",
+      "answer": 3,
+      "tolerance": 0.001,
+      "hints": [
+        "Add 8 until non-negative.",
+        "$-5 + 8 = 3$."
+      ],
+      "explanation": "$-5 + 8 = 3$, so $-5 \\bmod 8 = 3$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Strategy for negative mod: ADD the modulus until non-negative.** This gives the standard positive remainder."
+        },
+        {
+          "text": "**Apply.** $-5 + 8 = 3$. 3 is in the valid range $[0, 7]$ — stop."
+        },
+        {
+          "text": "**Result.** $-5 \\bmod 8 = 3$."
+        },
+        {
+          "text": "**Why this works.** Modular arithmetic identifies any two numbers differing by a multiple of $n$. $-5$ and $3$ differ by $8 = 1 \\cdot 8$, so they're 'the same' mod 8."
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which is NOT congruent to 4 mod 6?}",
+      "choices": [
+        "10",
+        "16",
+        "22",
+        "27"
+      ],
+      "answerIndex": 3,
+      "hints": [
+        "A number is congruent to 4 mod 6 if it equals $4 + 6k$ for some integer $k$.",
+        "$27 = 4 + 6 \\cdot 3.83\\ldots$ — not an integer multiple."
+      ],
+      "explanation": "$10 = 4 + 6$. $16 = 4 + 12$. $22 = 4 + 18$. But $27 - 4 = 23$ is not a multiple of 6 (it's $6 \\cdot 3 + 5$). So $27 \\equiv 3 \\pmod 6$, not 4.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{Use the divisibility-by-9 rule: is } 4527 \\text{ divisible by 9? (1 = yes, 0 = no)}",
+      "answer": 1,
+      "tolerance": 0.001,
+      "hints": [
+        "Digit sum: $4 + 5 + 2 + 7 = 18$.",
+        "$18$ is divisible by $9$ (it's $2 \\cdot 9$). So yes."
+      ],
+      "explanation": "Digit sum $4+5+2+7 = 18$, which IS divisible by 9. So $4527$ is divisible by 9. Verify: $4527 / 9 = 503$. ✓",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Divisibility-by-9 rule.** A number is divisible by 9 IFF the SUM OF ITS DIGITS is divisible by 9. (Same trick for 3.)"
+        },
+        {
+          "text": "**Apply.** Digit sum of 4527: $4 + 5 + 2 + 7 = 18$."
+        },
+        {
+          "text": "**Check.** $18 = 2 \\cdot 9$ ✓ — divisible by 9. So 4527 IS divisible by 9."
+        },
+        {
+          "text": "**Verify with division.** $4527 / 9 = 503$ exactly ✓."
+        },
+        {
+          "text": "**Why the digit-sum trick works.** Each power of 10 satisfies $10^k \\equiv 1 \\pmod 9$. So any number written in base 10 is congruent to its digit sum mod 9. Neat consequence of modular arithmetic."
+        }
+      ]
+    }
+  ]
+}

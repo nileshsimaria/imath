@@ -1,0 +1,68 @@
+{
+  "title": "The Euler Line",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### One line connects three centers",
+        "We've met three classical centers of a triangle: the **circumcenter** $O$ (perpendicular bisectors), the **centroid** $G$ (medians), the **orthocenter** $H$ (altitudes). Together with the **incenter** $I$, these are four distinct named centers of a triangle.",
+        "Here is a stunning fact, discovered by Leonhard Euler in 1765: in any non-equilateral triangle, **the centers $O$, $G$, and $H$ are collinear** — they all lie on a single line. That line is called the **Euler line** of the triangle.",
+        "More: the centroid $G$ sits **exactly one-third of the way from $O$ to $H$**. So $OG : GH = 1 : 2$ — every time, for every triangle."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "triangle-centers",
+      "config": {
+        "showCentroid": true,
+        "showCircumcenter": true,
+        "showOrthocenter": true,
+        "showEulerLine": true
+      }
+    },
+    {
+      "type": "callout",
+      "title": "The Euler relation",
+      "body": "$\\boxed{\\;\\vec{OH} = 3\\,\\vec{OG}\\;}$\n\nEquivalently: $H = 3G - 2O$, or $G = O + \\tfrac{1}{3}(H - O)$.\n\nDrag any vertex in the widget above. The three colored centers move (red $O$, green $G$, purple $H$), but they stay on the dashed cyan **Euler line**, and the $1:2$ ratio is preserved."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why the line exists — proof sketch",
+        "Use the centroid formula $G = (A + B + C)/3$ and the *orthocenter formula* (which can be derived) $H = A + B + C - 2O$. Then:",
+        "$H - O = (A + B + C) - 3O = 3 \\cdot ((A + B + C)/3 - O) = 3(G - O).$",
+        "So $H - O$ is exactly $3$ times $G - O$. This means $O$, $G$, $H$ are collinear (all along the direction $G - O$), and the distances satisfy $|OH| = 3 |OG|$ — i.e., $G$ is one-third of the way from $O$ to $H$, leaving $GH$ as two-thirds. So $OG : GH = 1 : 2$. ∎"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### When the Euler line collapses",
+        "**Equilateral triangle.** All four centers coincide at the same point. The Euler 'line' is just a point — degenerate. (Or you can say it's *every* line through that point, depending on your aesthetics.)",
+        "**No other case.** In any non-equilateral triangle, $O$, $G$, $H$ are distinct collinear points, and the Euler line is a genuine line."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Who else lives on the Euler line?",
+      "body": "It's getting crowded.\n\n**The nine-point center** $N$ — the center of the **nine-point circle**, which passes through nine special points: three midpoints of sides, three feet of altitudes, three midpoints of segments from each vertex to $H$. The nine-point center sits at the midpoint of $OH$.\n\nSo on the Euler line, in order: $O$, then $N$ (midpoint of $OH$), then $G$ (one-third from $O$), then $H$. With ratios:\n\n$O : N : G : H = 0 : 3 : 2 : 6$\n\n(measuring distances from $O$ along the line).\n\n*Not* on the Euler line in general: the **incenter** $I$. The incenter sits on the Euler line only when the triangle is **isosceles**."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example",
+        "Triangle with vertices $A(0, 0)$, $B(6, 0)$, $C(0, 8)$ (a 6-8-10 right triangle).",
+        "**Centroid** $G = ((0+6+0)/3, (0+0+8)/3) = (2, 8/3)$.",
+        "**Right triangle ⇒ circumcenter is midpoint of hypotenuse $BC$.** $O = (3, 4)$.",
+        "**Right triangle ⇒ orthocenter at the right-angle vertex.** $H = A = (0, 0)$.",
+        "**Verify Euler relation:** $H - O = (-3, -4)$. $G - O = (-1, -4/3)$. Is $(H - O) = 3 (G - O)$? Yes: $3 \\cdot (-1, -4/3) = (-3, -4)$. ✓",
+        "All three centers lie on the line through $O(3, 4)$ in direction $(-3, -4)$ — i.e., the line from $(3, 4)$ to $(0, 0)$. That's the Euler line of this triangle."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Why this is one of math's most quietly beautiful theorems",
+      "body": "Three completely different constructions — perpendicular bisectors, medians, altitudes — give three completely different points. Generically you'd expect three random points to form a triangle. But they don't. They lie on a line, with a fixed ratio. This kind of unexpected structure is what makes geometry rewarding."
+    }
+  ]
+}

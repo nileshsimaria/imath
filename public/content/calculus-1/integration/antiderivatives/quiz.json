@@ -1,0 +1,305 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\int x^2 \\, dx = ?",
+      "choices": [
+        "x^3 + C",
+        "\\dfrac{x^3}{3} + C",
+        "2x + C",
+        "\\dfrac{x^3}{2} + C"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Power rule reverse: add 1 to exponent, divide by new.",
+        "$x^3/3 + C$. Don't forget the $+C$!"
+      ],
+      "explanation": "$\\int x^2 \\,dx = \\dfrac{x^3}{3} + C$.",
+      "steps": [
+        "**Reverse power rule pattern:** $\\int x^n \\, dx = \\dfrac{x^{n+1}}{n+1} + C$ — raise exponent by 1, divide by new exponent.",
+        "**Apply with $n = 2$.** $\\int x^2 \\, dx = \\dfrac{x^3}{3} + C$.",
+        "**Always include the $+C$.** Any constant added still differentiates to 0, so the antiderivative is a FAMILY of functions — write $+C$ to denote the whole family.",
+        "**Verify by differentiating.** $\\dfrac{d}{dx}\\left(\\dfrac{x^3}{3} + C\\right) = x^2$ ✓. Confirms the antiderivative."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\int (3x^2 + 5x) \\, dx = ?",
+      "choices": [
+        "x^3 + \\dfrac{5x^2}{2} + C",
+        "x^3 + 5x^2 + C",
+        "6x + 5 + C",
+        "3x^3 + 5x^2 + C"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Integrate term by term: $\\int 3x^2 = x^3$; $\\int 5x = \\frac{5x^2}{2}$.",
+        "Add $+C$ at end."
+      ],
+      "explanation": "$x^3 + \\frac{5x^2}{2} + C$.",
+      "steps": [
+        "**Polynomial → linearity → integrate term-by-term.**",
+        "**Term 1.** $\\int 3x^2 \\, dx = 3 \\cdot \\dfrac{x^3}{3} = x^3$.",
+        "**Term 2.** $\\int 5x \\, dx = 5 \\cdot \\dfrac{x^2}{2} = \\dfrac{5x^2}{2}$.",
+        "**Combine.** $x^3 + \\dfrac{5x^2}{2} + C$.",
+        "**One $+C$ for the whole answer.** Even though each term technically has its own constant of integration, they all collapse into a single $+C$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\int \\dfrac{1}{x} \\, dx = ?",
+      "choices": [
+        "\\ln|x| + C",
+        "x^{-1} + C",
+        "1/(2x^2) + C",
+        "-1/x^2 + C"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Special case of power rule (where $n = -1$ fails).",
+        "$\\ln|x| + C$. Note absolute value."
+      ],
+      "explanation": "$\\int 1/x \\, dx = \\ln|x| + C$ (absolute value because log only defined for positive).",
+      "steps": [
+        "**The exceptional case in integration.** The reverse power-rule formula $\\int x^n \\, dx = \\dfrac{x^{n+1}}{n+1}$ would give $\\dfrac{x^0}{0}$ at $n = -1$ — UNDEFINED. So $1/x$ needs a different antiderivative.",
+        "**The replacement.** $\\int \\dfrac{1}{x} \\, dx = \\ln|x| + C$.",
+        "**Why absolute value?** $\\ln x$ is defined only for $x > 0$. But $\\dfrac{1}{x}$ is defined for all $x \\neq 0$ (including negative). Using $\\ln|x|$ extends the antiderivative to negative $x$ as well.",
+        "**Verify.** For $x > 0$: $\\dfrac{d}{dx}\\ln(x) = 1/x$ ✓. For $x < 0$: $\\dfrac{d}{dx}\\ln(-x) = \\dfrac{-1}{-x} = 1/x$ ✓. So $\\ln|x|$ works on both sides."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\int \\cos x \\, dx = ?",
+      "choices": [
+        "\\sin x + C",
+        "-\\sin x + C",
+        "-\\cos x + C",
+        "\\cos x + C"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Antiderivative of cosine is sine.",
+        "$\\sin x + C$."
+      ],
+      "explanation": "$\\int \\cos x \\, dx = \\sin x + C$. (Verify: derivative of $\\sin x$ is $\\cos x$ ✓.)",
+      "steps": [
+        "**Antiderivative = REVERSE of derivative.** Find a function whose derivative is $\\cos x$.",
+        "**Recall.** $(\\sin x)' = \\cos x$. So $\\sin x$ is an antiderivative.",
+        "**Add $+C$.** $\\int \\cos x \\, dx = \\sin x + C$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\int \\sin x \\, dx = ?",
+      "choices": [
+        "-\\cos x + C",
+        "\\cos x + C",
+        "\\sin x + C",
+        "-\\sin x + C"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Antiderivative of sine is NEGATIVE cosine.",
+        "$-\\cos x + C$."
+      ],
+      "explanation": "$\\int \\sin x \\, dx = -\\cos x + C$. (Check: $(-\\cos x)' = \\sin x$ ✓.)",
+      "steps": [
+        "**Find a function whose derivative is $\\sin x$.**",
+        "**Try $\\cos x$ first.** $(\\cos x)' = -\\sin x$ — wrong sign.",
+        "**Try $-\\cos x$.** $(-\\cos x)' = -(-\\sin x) = \\sin x$ ✓.",
+        "**Result.** $\\int \\sin x \\, dx = -\\cos x + C$. The minus sign is crucial — easy to forget."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\int e^x \\, dx = ?",
+      "choices": [
+        "e^x + C",
+        "x e^{x-1} + C",
+        "(e^x)/x + C",
+        "\\ln(e^x) + C"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "$e^x$ is its own derivative AND its own antiderivative.",
+        "$e^x + C$."
+      ],
+      "explanation": "$\\int e^x \\, dx = e^x + C$.",
+      "steps": [
+        "**$e^x$ is its OWN derivative.** So it's also its own antiderivative (up to the $+C$).",
+        "**Result.** $\\int e^x \\, dx = e^x + C$.",
+        "**Beautiful symmetry.** Among all elementary functions, $e^x$ is uniquely 'fixed' by both differentiation and integration."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "promptTex": "\\int \\sqrt{x} \\, dx = ?",
+      "choices": [
+        "\\dfrac{2}{3} x^{3/2} + C",
+        "\\dfrac{1}{2\\sqrt{x}} + C",
+        "x^{3/2} + C",
+        "\\dfrac{x^{3/2}}{2} + C"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "$\\sqrt{x} = x^{1/2}$. Power rule: $x^{3/2}/(3/2) = (2/3) x^{3/2}$.",
+        "$+C$."
+      ],
+      "explanation": "$\\int x^{1/2} \\, dx = \\dfrac{x^{3/2}}{3/2} + C = \\dfrac{2}{3} x^{3/2} + C$.",
+      "steps": [
+        "**Rewrite root as power.** $\\sqrt{x} = x^{1/2}$.",
+        "**Reverse power rule with $n = 1/2$.** New exponent: $1/2 + 1 = 3/2$. Divide by new exponent: $\\dfrac{x^{3/2}}{3/2} = \\dfrac{2}{3} x^{3/2}$.",
+        "**Result.** $\\dfrac{2}{3} x^{3/2} + C$.",
+        "**Verify.** $\\dfrac{d}{dx}\\left(\\dfrac{2}{3} x^{3/2}\\right) = \\dfrac{2}{3} \\cdot \\dfrac{3}{2} x^{1/2} = x^{1/2} = \\sqrt{x}$ ✓."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Find } f(x) \\text{ given } f'(x) = 2x + 3 \\text{ and } f(0) = 5.",
+      "choices": [
+        "x^2 + 3x + 5",
+        "x^2 + 3x",
+        "x^2 + 5x + 3",
+        "2x^2 + 3x + 5"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "$f(x) = x^2 + 3x + C$. Use $f(0) = 5$: $C = 5$.",
+        "$x^2 + 3x + 5$."
+      ],
+      "explanation": "Antideriv: $x^2 + 3x + C$. $f(0) = C = 5$. So $f(x) = x^2 + 3x + 5$.",
+      "steps": [
+        "**Initial value problem.** Standard 3-step recipe: integrate → use initial value → write specific answer.",
+        "**Step 1: Integrate.** $f(x) = \\int (2x + 3) \\, dx = x^2 + 3x + C$.",
+        "**Step 2: Use the initial condition $f(0) = 5$.** Plug $x = 0$: $f(0) = 0 + 0 + C = C = 5$. So $C = 5$.",
+        "**Step 3: Write the specific solution.** $f(x) = x^2 + 3x + 5$.",
+        "**Lesson.** The constant $C$ is the 'missing initial height' that the slope alone can't tell us. The initial condition pins it down."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\int (4x^3 - 6x + 2) \\, dx = ?",
+      "choices": [
+        "x^4 - 3x^2 + 2x + C",
+        "4x^4/4 - 6x^2/2 + 2x + C",
+        "12x^2 - 6 + C",
+        "x^4 - 3x^2 + 2 + C"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Integrate term by term.",
+        "$x^4 - 3x^2 + 2x + C$."
+      ],
+      "explanation": "Term by term: $\\int 4x^3 = x^4$, $\\int -6x = -3x^2$, $\\int 2 = 2x$. Sum + C.",
+      "steps": [
+        "**Polynomial integration — term by term.**",
+        "**$\\int 4x^3 \\, dx$.** $= 4 \\cdot \\dfrac{x^4}{4} = x^4$.",
+        "**$\\int -6x \\, dx$.** $= -6 \\cdot \\dfrac{x^2}{2} = -3x^2$.",
+        "**$\\int 2 \\, dx$.** $= 2x$.",
+        "**Combine.** $x^4 - 3x^2 + 2x + C$.",
+        "**Note: option (b) is the same answer, unsimplified.** Always simplify by cancelling: $4/4 = 1$, $6/2 = 3$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "multiple-choice",
+      "promptTex": "\\int \\sec^2 x \\, dx = ?",
+      "choices": [
+        "\\tan x + C",
+        "\\sec x + C",
+        "\\ln|\\cos x| + C",
+        "-\\tan x + C"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Antiderivative of $\\sec^2 x$ is $\\tan x$.",
+        "$(\\tan x)' = \\sec^2 x$."
+      ],
+      "explanation": "$(\\tan x)' = \\sec^2 x$, so $\\int \\sec^2 x \\, dx = \\tan x + C$.",
+      "steps": [
+        "**Reverse a known derivative.** $\\dfrac{d}{dx}(\\tan x) = \\sec^2 x$.",
+        "**Reverse.** $\\int \\sec^2 x \\, dx = \\tan x + C$.",
+        "**Memorize alongside the trig derivative table.** Every derivative you know yields an antiderivative for free — just read the table backward."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Why is } + C \\text{ included in indefinite integrals?}",
+      "choices": [
+        "Because the derivative of any constant is 0",
+        "By convention, no real reason",
+        "To make integrals look fancy",
+        "It's wrong — should not be included"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Many functions have the same derivative, differing by a constant.",
+        "$+C$ captures the family of all antiderivatives."
+      ],
+      "explanation": "Adding any constant to an antiderivative gives another antiderivative ($(F + C)' = F' = f$). So we write $+C$ to include all of them.",
+      "steps": [
+        "**The $+C$ captures the AMBIGUITY in the antiderivative.** Slope alone can't tell you vertical position.",
+        "**Argument.** If $F'(x) = f(x)$, then for any constant $C$: $(F(x) + C)' = F'(x) + 0 = f(x)$. So $F + C$ is ALSO an antiderivative — for every $C$.",
+        "**Family of antiderivatives.** A function $f$ has INFINITELY many antiderivatives, all differing by a constant. The notation $F(x) + C$ captures the whole family in one symbol.",
+        "**Without an initial condition, $C$ stays unspecified.** With an initial condition (like 'pass through this point'), you can pin it down to a specific value."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Acceleration } a(t) = -32. \\text{ Initial velocity } v(0) = 50 \\text{ ft/sec.} \\\\ \\text{Find } v(t).",
+      "choices": [
+        "v(t) = -32t + 50",
+        "v(t) = -32t",
+        "v(t) = -16t^2 + 50",
+        "v(t) = 50t - 32"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "$v(t) = \\int a(t) dt = -32t + C$. Use $v(0) = 50$: $C = 50$.",
+        "$v(t) = -32t + 50$."
+      ],
+      "explanation": "$v(t) = \\int -32 \\, dt = -32t + C$. $v(0) = C = 50$, so $v(t) = -32t + 50$.",
+      "steps": [
+        "**Physics translation.** Velocity = antiderivative of acceleration. (Acceleration is $\\dfrac{dv}{dt}$, so integrating recovers $v$.)",
+        "**Step 1: Integrate.** $v(t) = \\int -32 \\, dt = -32t + C$.",
+        "**Step 2: Use the initial condition.** $v(0) = 50 \\Rightarrow -32(0) + C = 50 \\Rightarrow C = 50$.",
+        "**Step 3: Specific solution.** $v(t) = -32t + 50$ ft/sec.",
+        "**Real-world interpretation.** Ball thrown up at $50$ ft/sec; gravity $-32$ ft/s² pulls it back. Velocity hits zero at $t = 50/32 \\approx 1.56$ s (the peak). After that, velocity is negative — falling."
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

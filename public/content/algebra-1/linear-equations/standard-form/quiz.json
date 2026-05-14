@@ -1,0 +1,250 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{Find the x-intercept of } 3x + 4y = 24.",
+      "answer": 8,
+      "tolerance": 0.001,
+      "hints": [
+        "At the x-intercept, $y = 0$.",
+        "Substitute $y = 0$: $3x = 24$."
+      ],
+      "explanation": "Set $y = 0$: $3x = 24 \\Rightarrow x = 8$. The x-intercept is $(8, 0)$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{Find the y-intercept of } 5x - 2y = 10.",
+      "answer": -5,
+      "tolerance": 0.001,
+      "hints": [
+        "At the y-intercept, $x = 0$.",
+        "Substitute $x = 0$: $-2y = 10$."
+      ],
+      "explanation": "Set $x = 0$: $-2y = 10 \\Rightarrow y = -5$. The y-intercept is $(0, -5)$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Convert } 2x + 5y = 20 \\text{ to slope-intercept form.}",
+      "choices": [
+        "y = -\\dfrac{2}{5}x + 4",
+        "y = \\dfrac{2}{5}x + 4",
+        "y = -2x + 4",
+        "y = -\\dfrac{2}{5}x - 4"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Solve for $y$: subtract $2x$ from both sides, then divide everything by $5$.",
+        "$5y = -2x + 20$, then divide by $5$."
+      ],
+      "explanation": "$5y = -2x + 20 \\Rightarrow y = -\\tfrac{2}{5}x + 4$. So $m = -\\tfrac{2}{5}$ and $b = 4$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Goal: standard form ($Ax + By = C$) → slope-intercept form ($y = mx + b$). Just isolate $y$.**"
+        },
+        {
+          "text": "**Move $2x$ to the right.** $5y = -2x + 20$."
+        },
+        {
+          "text": "**Divide every term by 5** (the coefficient of $y$). $y = -\\tfrac{2}{5}x + 4$."
+        },
+        {
+          "text": "**Read off slope and intercept.** $m = -\\tfrac{2}{5}$, $b = 4$."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{What is the slope of the line } 6x - 3y = 9?",
+      "answer": 2,
+      "tolerance": 0.001,
+      "hints": [
+        "In standard form $Ax + By = C$, the slope is $m = -\\dfrac{A}{B}$.",
+        "Here $A = 6$ and $B = -3$, so $m = -\\dfrac{6}{-3}$."
+      ],
+      "explanation": "$m = -\\dfrac{A}{B} = -\\dfrac{6}{-3} = 2$. (Verify by converting: $-3y = -6x + 9 \\Rightarrow y = 2x - 3$.)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which equation describes a vertical line through } (4, 0)?",
+      "choices": [
+        "y = 4",
+        "x = 4",
+        "x + y = 4",
+        "4x + y = 0"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Vertical lines have the form $x = c$ for some constant $c$.",
+        "In standard form, that's $Ax + 0 \\cdot y = C$, with $A = 1$ and $C = 4$."
+      ],
+      "explanation": "A vertical line through $(4, 0)$ has every point with $x = 4$. In standard form: $1 \\cdot x + 0 \\cdot y = 4$.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Convert } y = 2x + 5 \\text{ to standard form } Ax + By = C.",
+      "choices": [
+        "2x - y = -5",
+        "-2x + y = 5",
+        "y - 2x = 5",
+        "2x + y = 5"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Move $2x$ to the left: $-2x + y = 5$.",
+        "Multiply by $-1$ to get $A > 0$: $2x - y = -5$."
+      ],
+      "explanation": "$y = 2x + 5 \\Rightarrow -2x + y = 5 \\Rightarrow 2x - y = -5$ (multiply by $-1$ for positive $A$).",
+      "steps": [
+        "**Slope-intercept → standard form. Move all variables to the left side, constants on the right.**",
+        "**Move $2x$ left.** $-2x + y = 5$.",
+        "**Standard convention: $A > 0$.** Multiply both sides by $-1$ to flip signs: $2x - y = -5$.",
+        "**Why this convention.** A positive leading coefficient is the conventional 'canonical' form. Makes equations comparable. (You can equally write $-2x + y = 5$ — same line, different sign.)"
+      ],
+      "id": "q6",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Find the } x\\text{-intercept of } 3x + 5y = 30.",
+      "answer": 10,
+      "tolerance": 0,
+      "hints": [
+        "Set $y = 0$: $3x = 30$.",
+        "$x = 10$."
+      ],
+      "explanation": "Set $y = 0$: $3x = 30 \\Rightarrow x = 10$.",
+      "steps": [
+        "**Universal intercept recipe.** x-intercept: set $y = 0$. y-intercept: set $x = 0$.",
+        "**Apply.** $3x + 5(0) = 30 \\Rightarrow 3x = 30 \\Rightarrow x = 10$.",
+        "**Standard form makes intercepts FAST.** Just zero out the OTHER variable and divide. (In slope-intercept form $y = mx + b$, finding the x-intercept requires more algebra.)"
+      ],
+      "id": "q7",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Find the } y\\text{-intercept of } 4x - 7y = 28.",
+      "answer": -4,
+      "tolerance": 0,
+      "hints": [
+        "Set $x = 0$: $-7y = 28$.",
+        "$y = -4$."
+      ],
+      "explanation": "Set $x = 0$: $-7y = 28 \\Rightarrow y = -4$.",
+      "steps": [
+        "**y-intercept: set $x = 0$.**",
+        "**Apply.** $4(0) - 7y = 28 \\Rightarrow -7y = 28 \\Rightarrow y = -4$.",
+        "**Sign care.** $-7y = 28$ gives $y = -4$ (different signs), not $+4$. Always double-check signs when dividing."
+      ],
+      "id": "q8",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the slope of } 6x + 2y = 14?",
+      "choices": [
+        "3",
+        "-3",
+        "1/3",
+        "7"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Solve for $y$: $2y = -6x + 14$, then $y = -3x + 7$.",
+        "Slope = $-3$."
+      ],
+      "explanation": "$y = -3x + 7$, so slope $= -3$. (Or use the formula $m = -A/B = -6/2 = -3$.)",
+      "steps": [
+        "**Universal slope formula from standard form.** For $Ax + By = C$: slope $m = -\\dfrac{A}{B}$.",
+        "**Apply.** $A = 6$, $B = 2$. $m = -\\dfrac{6}{2} = -3$.",
+        "**Verify by converting to slope-intercept.** $2y = -6x + 14 \\Rightarrow y = -3x + 7$ → slope $-3$ ✓.",
+        "**Why $-A/B$ works.** From $Ax + By = C$, solving for $y$ gives $y = -\\dfrac{A}{B}x + \\dfrac{C}{B}$. Match to $y = mx + b$."
+      ],
+      "id": "q9",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Write the line through } (4, 0) \\text{ and } (0, -6) \\text{ in standard form.}",
+      "choices": [
+        "3x - 2y = 12",
+        "6x - 4y = 24",
+        "3x + 2y = 12",
+        "x - y = 4"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "The intercepts are 4 and -6. Use intercept form: $\\dfrac{x}{4} + \\dfrac{y}{-6} = 1$.",
+        "Multiply through by 12 to clear fractions."
+      ],
+      "explanation": "Intercept form: $\\dfrac{x}{4} - \\dfrac{y}{6} = 1$. Multiply by 12: $3x - 2y = 12$.",
+      "steps": [
+        "**Spot the intercepts in the given points.** $(4, 0)$ = x-intercept (a = 4). $(0, -6)$ = y-intercept (b = -6).",
+        "**Use the INTERCEPT FORM shortcut.** $\\dfrac{x}{a} + \\dfrac{y}{b} = 1$ where $a, b$ are x- and y-intercepts.",
+        "**Plug in.** $\\dfrac{x}{4} + \\dfrac{y}{-6} = 1$, i.e., $\\dfrac{x}{4} - \\dfrac{y}{6} = 1$.",
+        "**Clear fractions.** Multiply both sides by $\\text{lcm}(4, 6) = 12$: $3x - 2y = 12$.",
+        "**When intercept form shines.** Any time both intercepts are given (or easy to find), this avoids computing the slope first."
+      ],
+      "id": "q10",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Convert } y - 2 = 3(x + 1) \\text{ to standard form.}",
+      "choices": [
+        "3x - y = -5",
+        "3x + y = 5",
+        "3x - y = 5",
+        "y - 3x = 5"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Distribute: $y - 2 = 3x + 3 \\Rightarrow y = 3x + 5$.",
+        "Move x: $-3x + y = 5 \\Rightarrow 3x - y = -5$."
+      ],
+      "explanation": "$y = 3x + 5 \\Rightarrow -3x + y = 5 \\Rightarrow 3x - y = -5$.",
+      "steps": [
+        "**Convert in stages: point-slope → slope-intercept → standard.**",
+        "**Distribute and simplify.** $y - 2 = 3x + 3 \\Rightarrow y = 3x + 5$.",
+        "**Move $3x$ to the left.** $-3x + y = 5$.",
+        "**Standard convention: $A > 0$.** Multiply by $-1$: $3x - y = -5$."
+      ],
+      "id": "q11",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{The line } 5x - 3y = 15 \\text{ passes through } (a, 5). \\text{ Find } a.",
+      "answer": 6,
+      "tolerance": 0,
+      "hints": [
+        "Substitute $y = 5$: $5a - 15 = 15$.",
+        "$5a = 30 \\Rightarrow a = 6$."
+      ],
+      "explanation": "$5a - 3(5) = 15 \\Rightarrow 5a - 15 = 15 \\Rightarrow a = 6$.",
+      "steps": [
+        "**'Point $(a, 5)$ on the line' means SUBSTITUTE $x = a$ and $y = 5$ into the equation.**",
+        "**Plug in.** $5a - 3(5) = 15 \\Rightarrow 5a - 15 = 15$.",
+        "**Solve.** $5a = 30 \\Rightarrow a = 6$.",
+        "**Verify.** $5(6) - 3(5) = 30 - 15 = 15$ ✓."
+      ],
+      "id": "q12",
+      "difficulty": "easy"
+    }
+  ]
+}

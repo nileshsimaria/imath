@@ -1,0 +1,84 @@
+{
+  "title": "2D Area Formulas",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "**Area** is the amount of 2D space inside a closed shape, measured in *square units*. Each common shape has its own formula. Memorize the formulas, but understand *why* they work — the 'why' often comes from rearranging the shape into a rectangle, where area is just length × width."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Square and Rectangle",
+        "**Square** (side $s$): $A = s^2$.",
+        "**Rectangle** (length $l$, width $w$): $A = l \\cdot w$.",
+        "These are the foundations: area = length × width."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Parallelogram",
+        "**Parallelogram** (base $b$, height $h$): $A = b \\cdot h$.",
+        "Same as a rectangle! The trick: cut a triangle off one end of the parallelogram and slide it to the other end. You get a rectangle with the same base and height. So the area is the same."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "A_{\\text{parallelogram}} = b \\cdot h"
+    },
+    {
+      "type": "callout",
+      "title": "Watch the height",
+      "body": "The height in $bh$ is **perpendicular to the base** — not the slanted side. For a parallelogram or triangle, you measure the height *straight up* from the base, not along the side."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Triangle",
+        "**Triangle** (base $b$, height $h$): $A = \\dfrac{1}{2} \\cdot b \\cdot h$.",
+        "Why the half? Take any triangle and copy it, rotated 180°. The two together form a parallelogram with the same base and height. So one triangle has half the parallelogram's area."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "A_{\\text{triangle}} = \\dfrac{1}{2} \\cdot b \\cdot h"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Trapezoid",
+        "**Trapezoid** (parallel sides $b_1$ and $b_2$, height $h$): $A = \\dfrac{1}{2}(b_1 + b_2) \\cdot h$.",
+        "Think of it as the average of the two bases times the height — the trapezoid's area equals a *rectangle's area* with the same height and width equal to the average of the two bases."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Circle",
+        "**Circle** (radius $r$): $A = \\pi r^2$.",
+        "(See the Circle Vocabulary subtopic for why $\\pi$ shows up.)"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Quick reference",
+      "body": "**Square**: $s^2$. **Rectangle**: $lw$. **Parallelogram**: $bh$. **Triangle**: $\\frac{1}{2}bh$. **Trapezoid**: $\\frac{1}{2}(b_1 + b_2)h$. **Circle**: $\\pi r^2$. Always use the *perpendicular* height (not slant)."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked examples",
+        "**Triangle** with base 12 and height 5. $A = \\frac{1}{2}(12)(5) = 30$.",
+        "**Trapezoid** with parallel sides 8 and 14, height 6. $A = \\frac{1}{2}(8 + 14)(6) = \\frac{1}{2}(22)(6) = 66$.",
+        "**Circle** with radius 7. $A = \\pi(49) = 49\\pi \\approx 153.94$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "Six formulas for the most common shapes. Almost all derive from the rectangle's $l \\cdot w$ — by rearranging or pairing. The key skill is identifying which length is the perpendicular **height**, especially for parallelograms, triangles, and trapezoids."
+    }
+  ]
+}

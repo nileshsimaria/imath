@@ -1,0 +1,227 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Two parallel lines cut by a transversal. Corresponding angles are:}",
+      "choices": [
+        "equal",
+        "supplementary",
+        "complementary",
+        "neither"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Corresponding angles are in the same position at each intersection.",
+        "When the lines are parallel they match up exactly."
+      ],
+      "explanation": "Corresponding angles (same position relative to each intersection) are **equal** when the two cut lines are parallel.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Co-interior angles (same-side interior) are:}",
+      "choices": [
+        "equal",
+        "supplementary",
+        "complementary",
+        "vertical"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "They're on the same side of the transversal, between the two parallel lines.",
+        "They sum to 180°."
+      ],
+      "explanation": "Co-interior angles are **supplementary** — they sum to 180°.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{One angle in a parallel-lines + transversal setup is } 70°. \\\\ \\text{What is the measure of its co-interior angle?}",
+      "answer": 110,
+      "tolerance": 0,
+      "hints": [
+        "Co-interior pairs are supplementary.",
+        "$180 - 70$."
+      ],
+      "explanation": "Co-interior angles sum to 180°. $180 - 70 = 110°$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Two lines are parallel; a transversal makes alternate interior angles of} \\\\ 4x + 10 \\text{ and } 6x - 30. \\text{ Find } x.",
+      "answer": 20,
+      "tolerance": 0,
+      "hints": [
+        "Alternate interior angles are equal when lines are parallel.",
+        "Set $4x + 10 = 6x - 30$ and solve."
+      ],
+      "explanation": "Alternate interior angles are equal: $4x + 10 = 6x - 30 \\Rightarrow 40 = 2x \\Rightarrow x = 20$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** Alternate interior angles are equal when lines are parallel."
+        },
+        {
+          "text": "Set $4x + 10 = 6x - 30$ and solve."
+        },
+        {
+          "text": "**Solution.** Alternate interior angles are equal: $4x + 10 = 6x - 30 \\Rightarrow 40 = 2x \\Rightarrow x = 20$."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If two lines are cut by a transversal and a pair of corresponding angles are equal, then the lines are:}",
+      "choices": [
+        "perpendicular",
+        "parallel",
+        "skew",
+        "concurrent"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "This is the converse of the corresponding-angle rule.",
+        "Equal corresponding angles ↔ parallel lines."
+      ],
+      "explanation": "If corresponding angles are equal, the two lines must be **parallel**. This converse is how we *prove* lines parallel from angle measurements.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Two parallel lines are cut by a transversal.} \\\\ \\text{One pair of corresponding angles is } 65° \\text{ and } x°. \\\\ \\text{Find } x.",
+      "answer": 65,
+      "tolerance": 0,
+      "hints": [
+        "Corresponding angles are equal when lines are parallel.",
+        "$x = 65$."
+      ],
+      "explanation": "Corresponding angles are equal: $x = 65°$.",
+      "steps": [
+        "When two parallel lines are cut by a transversal, **corresponding angles** are equal.",
+        "$x = 65°$."
+      ],
+      "id": "q6",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Parallel lines cut by a transversal: alternate interior angles are} \\\\ (3x - 10)° \\text{ and } (x + 50)°. \\text{ Find } x.",
+      "answer": 30,
+      "tolerance": 0,
+      "hints": [
+        "Alternate interior angles are equal.",
+        "$3x - 10 = x + 50$."
+      ],
+      "explanation": "$3x - 10 = x + 50 \\Rightarrow 2x = 60 \\Rightarrow x = 30$.",
+      "steps": [
+        "Alternate interior angles are **equal** when the lines are parallel.",
+        "$$3x - 10 = x + 50$$",
+        "Subtract $x$ and add $10$: $$2x = 60 \\Rightarrow x = 30$$"
+      ],
+      "id": "q7",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Parallel lines + transversal: co-interior (same-side interior) angles} \\\\ \\text{are } (2x + 20)° \\text{ and } 70°. \\text{ Find } x.",
+      "answer": 45,
+      "tolerance": 0,
+      "hints": [
+        "Co-interior angles are SUPPLEMENTARY (sum to 180°).",
+        "$(2x + 20) + 70 = 180$."
+      ],
+      "explanation": "$(2x + 20) + 70 = 180 \\Rightarrow 2x = 90 \\Rightarrow x = 45$.",
+      "steps": [
+        "Co-interior (same-side interior) angles are **supplementary** when lines are parallel.",
+        "$$(2x + 20) + 70 = 180$$",
+        "$$2x + 90 = 180 \\Rightarrow 2x = 90 \\Rightarrow x = 45$$"
+      ],
+      "id": "q8",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Two parallel lines are cut by a transversal. One acute angle formed} \\\\ \\text{is } 40°. \\text{ How many of the 8 angles formed equal } 40°?",
+      "answer": 4,
+      "tolerance": 0,
+      "hints": [
+        "Each transversal-cut creates 4 angles, two of $40°$ and two of $140°$.",
+        "Both intersections produce the same set, so 4 angles are $40°$ and 4 are $140°$."
+      ],
+      "explanation": "When parallel lines are cut by a transversal, half the 8 angles are equal to the original $40°$, the other half are $140°$.",
+      "steps": [
+        "A transversal cuts each parallel line at 4 angles: 2 of $40°$ and 2 of $140°$.",
+        "Because the lines are parallel, both cuts produce the same angle set.",
+        "Total: 4 angles of $40°$, 4 angles of $140°$."
+      ],
+      "id": "q9",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Two parallel lines cut by a transversal. The angle on one side is } (4x - 5)°. \\\\ \\text{The corresponding angle on the other parallel is } (3x + 20)°. \\\\ \\text{Find the angle (in degrees).}",
+      "answer": 95,
+      "tolerance": 0,
+      "hints": [
+        "Corresponding angles equal: $4x - 5 = 3x + 20$. Find $x$.",
+        "Plug back to get the angle."
+      ],
+      "explanation": "$x = 25$. Angle $= 4(25) - 5 = 95°$.",
+      "steps": [
+        "Corresponding angles are equal: $$4x - 5 = 3x + 20$$",
+        "Solve: $x = 25$.",
+        "Plug back to find the angle: $4(25) - 5 = 100 - 5 = 95°$."
+      ],
+      "id": "q10",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which pair of angles is NOT necessarily congruent when} \\\\ \\text{two parallel lines are cut by a transversal?}",
+      "choices": [
+        "Corresponding",
+        "Alternate interior",
+        "Alternate exterior",
+        "Co-interior"
+      ],
+      "answerIndex": 3,
+      "hints": [
+        "Co-interior angles are supplementary (sum to 180°), not equal.",
+        "The other three are equal."
+      ],
+      "explanation": "Co-interior (same-side interior) angles are supplementary, not equal — they only happen to be equal when both are $90°$.",
+      "steps": [
+        "**Corresponding** angles: equal ✓",
+        "**Alternate interior** angles: equal ✓",
+        "**Alternate exterior** angles: equal ✓",
+        "**Co-interior** angles: supplementary (sum to $180°$), **not** generally equal.",
+        "(They'd only be equal if both happened to be $90°$.)"
+      ],
+      "id": "q11",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Three parallel lines } \\ell_1, \\ell_2, \\ell_3 \\text{ are cut by a transversal.} \\\\ \\text{Angle at } \\ell_1 \\text{ is } 75°. \\text{ The corresponding angle at } \\ell_3 \\text{ is what?}",
+      "answer": 75,
+      "tolerance": 0,
+      "hints": [
+        "All three lines are parallel — corresponding angles all equal.",
+        "$75°$."
+      ],
+      "explanation": "Corresponding angles between any pair of parallel lines are equal. So all three intersection points have the corresponding angle = $75°$.",
+      "steps": [
+        "Parallel lines cut by a transversal create equal corresponding angles at every intersection.",
+        "If $\\ell_1$ and $\\ell_3$ are parallel (both parallel to $\\ell_2$), the corresponding angles at $\\ell_1$ and $\\ell_3$ are equal.",
+        "Same as the original: $75°$."
+      ],
+      "id": "q12",
+      "difficulty": "easy"
+    }
+  ]
+}

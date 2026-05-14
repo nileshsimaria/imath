@@ -1,0 +1,124 @@
+{
+  "title": "Limits — Algebraic Techniques",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "A **limit** describes what value a function 'approaches' as the input gets close to some target — even if the function isn't actually defined there. The Pre-Calc Limits lesson introduced the idea graphically. Here we develop the algebraic toolkit for computing limits exactly."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. Direct Substitution — Always Try First"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "If $f$ is **continuous** at $a$, then $\\lim_{x \\to a} f(x) = f(a)$ — just plug in. Polynomials, exponentials, sines, cosines, and any composition of these are continuous everywhere they're defined.",
+        "**Example.** $\\lim_{x \\to 3} (x^2 - 5x + 7) = 9 - 15 + 7 = 1$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "When direct substitution fails",
+      "body": "If substitution gives an **indeterminate form** like $0/0$, $\\infty - \\infty$, $\\infty/\\infty$, or $0 \\cdot \\infty$, you need to do algebra first. The most common: $0/0$ from a removable hole."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. Factor and Cancel"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "When $0/0$ comes from a factor in both numerator and denominator, factor and cancel.",
+        "**Example.** $\\displaystyle\\lim_{x \\to 2} \\dfrac{x^2 - 4}{x - 2}$.",
+        "Direct sub: $0/0$ — indeterminate.",
+        "Factor: $\\dfrac{(x - 2)(x + 2)}{x - 2} = x + 2$ (for $x \\neq 2$).",
+        "Now substitute: $\\lim_{x \\to 2} (x + 2) = 4$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Example.** $\\displaystyle\\lim_{x \\to 1} \\dfrac{x^2 - 1}{x^2 + x - 2}$.",
+        "Direct sub: $0/0$.",
+        "Factor: $\\dfrac{(x-1)(x+1)}{(x-1)(x+2)} = \\dfrac{x + 1}{x + 2}$.",
+        "Substitute: $\\dfrac{2}{3}$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. Rationalize"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "When you have a difference of square roots, multiply by the **conjugate** to clear them.",
+        "**Example.** $\\displaystyle\\lim_{x \\to 0} \\dfrac{\\sqrt{x + 4} - 2}{x}$.",
+        "Direct sub: $0/0$.",
+        "Multiply top and bottom by the conjugate $\\sqrt{x + 4} + 2$:",
+        "$$\\dfrac{(\\sqrt{x + 4} - 2)(\\sqrt{x + 4} + 2)}{x(\\sqrt{x + 4} + 2)} = \\dfrac{(x + 4) - 4}{x(\\sqrt{x + 4} + 2)} = \\dfrac{x}{x(\\sqrt{x + 4} + 2)} = \\dfrac{1}{\\sqrt{x + 4} + 2}$$",
+        "Substitute: $\\dfrac{1}{\\sqrt{4} + 2} = \\dfrac{1}{4}$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. Combine Fractions"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "When you see $\\dfrac{a}{b} - \\dfrac{c}{d}$ inside a limit, combine into one fraction.",
+        "**Example.** $\\displaystyle\\lim_{h \\to 0} \\dfrac{\\dfrac{1}{x + h} - \\dfrac{1}{x}}{h}$.",
+        "Combine the top: $\\dfrac{1}{x + h} - \\dfrac{1}{x} = \\dfrac{x - (x + h)}{x(x + h)} = \\dfrac{-h}{x(x + h)}$.",
+        "Now: $\\dfrac{-h / (x(x+h))}{h} = \\dfrac{-1}{x(x + h)}$.",
+        "Take limit: $\\dfrac{-1}{x \\cdot x} = -\\dfrac{1}{x^2}$.",
+        "(This is the derivative of $1/x$ — we'll see this exact computation in the next chapter!)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 5. Limit Laws"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "If $\\lim_{x \\to a} f(x) = L$ and $\\lim_{x \\to a} g(x) = M$, then:",
+        "$\\lim (f + g) = L + M$ — sum of limits",
+        "$\\lim (f \\cdot g) = L \\cdot M$ — product of limits",
+        "$\\lim (f / g) = L / M$ if $M \\neq 0$ — quotient of limits",
+        "$\\lim (c \\cdot f) = c \\cdot L$ — constant multiple",
+        "$\\lim f^n = L^n$ — power of limits",
+        "These laws say: limits 'go through' arithmetic. Whenever both pieces have limits, you can break the problem apart."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Indeterminate doesn't mean 'no answer'",
+      "body": "$0/0$ doesn't mean 'undefined' — it means 'we need more work to figure out the answer'. The limit might be 0, 1, ∞, or anything in between. Indeterminate means: substitution failed, but the limit might still exist."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — pulling it together",
+        "Compute $\\displaystyle\\lim_{x \\to 3} \\dfrac{x^2 - 9}{\\sqrt{x + 1} - 2}$.",
+        "Direct sub: $0/0$.",
+        "**Factor numerator:** $(x - 3)(x + 3)$.",
+        "**Rationalize denominator** by conjugate $\\sqrt{x + 1} + 2$:",
+        "$$\\dfrac{(x - 3)(x + 3)(\\sqrt{x + 1} + 2)}{(x + 1) - 4} = \\dfrac{(x - 3)(x + 3)(\\sqrt{x + 1} + 2)}{x - 3}$$",
+        "Cancel $(x - 3)$: $(x + 3)(\\sqrt{x + 1} + 2)$.",
+        "Substitute: $6 \\cdot 4 = 24$."
+      ]
+    }
+  ]
+}

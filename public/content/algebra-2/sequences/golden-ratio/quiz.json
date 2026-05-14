@@ -1,0 +1,140 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{What is } \\phi \\text{ approximately (round to 3 decimals)?}",
+      "answer": 1.618,
+      "tolerance": 0.005,
+      "hints": [
+        "$\\phi = (1 + \\sqrt{5})/2$.",
+        "$\\sqrt{5} \\approx 2.236$, so $\\phi \\approx 3.236/2 \\approx 1.618$."
+      ],
+      "explanation": "$\\phi = (1 + \\sqrt{5})/2 \\approx 1.618$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{Compute } 1/\\phi \\text{ (round to 3 decimals).}",
+      "answer": 0.618,
+      "tolerance": 0.005,
+      "hints": [
+        "$1/\\phi = \\phi - 1$ (one of φ's identity tricks).",
+        "$1.618 - 1 = 0.618$."
+      ],
+      "explanation": "$1/\\phi = \\phi - 1 \\approx 0.618$. A clean fact: the decimal expansion of $1/\\phi$ matches $\\phi$'s after the first digit.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "Which equation does $\\phi$ satisfy?",
+      "choices": [
+        "$\\phi^2 = \\phi + 1$",
+        "$\\phi^2 = 2\\phi$",
+        "$\\phi^2 = \\phi - 1$",
+        "$\\phi = -1/\\phi$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Plug in $\\phi \\approx 1.618$ and check.",
+        "$1.618^2 \\approx 2.618 = 1.618 + 1$. ✓"
+      ],
+      "explanation": "$\\phi^2 = \\phi + 1$ is the defining quadratic for $\\phi$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Compute } \\phi^2 \\text{ (round to 3 decimals).}",
+      "answer": 2.618,
+      "tolerance": 0.01,
+      "hints": [
+        "$\\phi^2 = \\phi + 1$.",
+        "$1.618 + 1 = 2.618$."
+      ],
+      "explanation": "$\\phi^2 = \\phi + 1 \\approx 1.618 + 1 = 2.618$.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{Compute the ratio } F_{10}/F_9 \\text{ (where } F_{10} = 55, F_9 = 34). \\\\ \\text{ Round to 4 decimals.}",
+      "answer": 1.6176,
+      "tolerance": 0.001,
+      "hints": [
+        "Just divide.",
+        "$55/34 \\approx 1.6176$."
+      ],
+      "explanation": "$55/34 \\approx 1.6176$ — extremely close to $\\phi \\approx 1.6180$.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "prompt": "What's the limit of $F_{n+1}/F_n$ as $n \\to \\infty$?",
+      "choices": [
+        "1",
+        "2",
+        "\\phi",
+        "\\sqrt{5}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "The ratio of consecutive Fibonacci numbers converges.",
+        "$\\phi$, the golden ratio."
+      ],
+      "explanation": "$F_{n+1}/F_n \\to \\phi$ — a key connection between Fibonacci and $\\phi$.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "prompt": "What is a 'golden rectangle'?",
+      "choices": [
+        "A rectangle with side ratio $\\phi : 1$.",
+        "A square with side $\\phi$.",
+        "A rectangle made of gold.",
+        "A rectangle inscribed in a circle."
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Long side / short side = $\\phi$.",
+        "Cutting a square off one end yields another golden rectangle."
+      ],
+      "explanation": "A rectangle with long/short ratio $\\phi$. Self-similar under cutting off a square.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "prompt": "Why does $\\phi$ arise in plant leaf arrangements (phyllotaxis)?",
+      "choices": [
+        "Because plants like fancy numbers.",
+        "Because rotating each new leaf by an angle proportional to $\\phi$ (the 'golden angle') produces the most efficient packing — no two leaves overshadow each other.",
+        "Because $\\phi$ is the maximum sunlight angle.",
+        "Coincidence — $\\phi$ doesn't really appear in plants."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$\\phi$ is the 'most irrational' number — best for avoiding lined-up leaves.",
+        "Plants evolved this for sunlight efficiency."
+      ],
+      "explanation": "$\\phi$ is the most irrational number (hardest to approximate by rationals). Rotating each leaf by $\\phi$ of a turn avoids any periodic overlap, maximizing sunlight exposure for all leaves.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** $\\phi$ is the 'most irrational' number — best for avoiding lined-up leaves."
+        },
+        {
+          "text": "Plants evolved this for sunlight efficiency."
+        },
+        {
+          "text": "**Solution.** $\\phi$ is the most irrational number (hardest to approximate by rationals). Rotating each leaf by $\\phi$ of a turn avoids any periodic overlap, maximizing sunlight exposure for all leaves."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "title": "Parallel Lines & Transversals",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "When a third line crosses two parallel lines, it creates a beautiful pattern of related angles. Knowing the names — and the rules — lets you fill in any unknown angle once one is known.",
+        "The crossing line is called a **transversal**. The two parallel lines stay parallel, and the transversal makes 8 angles where it crosses them (4 at each intersection)."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The setup",
+      "body": "Picture two horizontal parallel lines $\\ell_1$ and $\\ell_2$, with a slanted transversal $t$ crossing both. The 8 angles are numbered 1–8 (or labeled). Same-position angles at the two intersections turn out to be equal — that's where the magic comes from."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The four angle pairs you must know",
+        "**Corresponding angles** — same position relative to each intersection (e.g., both upper-right). **They're equal.**",
+        "**Alternate interior angles** — between the parallel lines, on opposite sides of the transversal. **Equal.**",
+        "**Alternate exterior angles** — outside the parallel lines, on opposite sides of the transversal. **Equal.**",
+        "**Co-interior angles** (same-side interior) — between the parallel lines, on the *same* side of the transversal. **Supplementary** (sum to 180°)."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Plus the rules from the angle-types lesson:",
+        "**Vertical angles** at each intersection (across from each other) are equal.",
+        "**Linear pair** angles (next to each other on a straight line) are supplementary."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The key insight",
+      "body": "Once you know **one** angle in this configuration, **every other angle is determined**. They're either equal to it (same value) or supplementary to it (180° minus it). That's it — there are only two values among the 8 angles."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 1",
+        "Two parallel lines are crossed by a transversal. One of the angles measures 65°. What are the other 7?",
+        "Half the angles equal **65°** (corresponding, alternate, vertical to the first one). The other half equal $180° - 65° = $ **115°** (linear pair, co-interior). That's it."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 2 — using the relationships",
+        "Lines $\\ell_1 \\parallel \\ell_2$. Angle 3 (alternate interior with angle 6) is $4x + 10$. Angle 6 is $6x - 30$. Find $x$.",
+        "Alternate interior angles are equal: $4x + 10 = 6x - 30 \\Rightarrow 40 = 2x \\Rightarrow x = 20$.",
+        "(Both angles then equal $4(20) + 10 = 90°$.)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The reverse direction",
+        "These rules go both ways. **If a transversal cuts two lines and the corresponding angles are equal, then the lines are parallel.** Same for alternate interior, alternate exterior, etc. This is how we *prove* lines are parallel: show one of the matching angle pairs is equal (or co-interior pair is supplementary)."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "Transversal + parallel lines → 8 angles, only 2 distinct values. **Corresponding, alternate interior, alternate exterior, vertical** → equal. **Co-interior, linear pair** → supplementary. Knowing one angle determines all the others."
+    }
+  ]
+}

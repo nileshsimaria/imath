@@ -1,0 +1,112 @@
+{
+  "title": "Product & Quotient Rules",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "What about $\\dfrac{d}{dx}(x^2 \\sin x)$ or $\\dfrac{d}{dx}(\\dfrac{x^3}{x + 1})$? These don't fit the power rule directly. Two new rules cover products and quotients of differentiable functions."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. The Product Rule"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Product Rule",
+      "body": "$\\dfrac{d}{dx}\\bigl[f(x) \\, g(x)\\bigr] = f'(x)\\,g(x) + f(x)\\,g'(x)$"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Read it as 'first prime times second, plus first times second prime.'",
+        "**Crucial:** the derivative of a product is **NOT** the product of the derivatives. (A common rookie mistake.)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Example.** $\\dfrac{d}{dx}(x^2 \\cdot (3x + 1))$.",
+        "Let $f = x^2$ and $g = 3x + 1$. Then $f' = 2x$ and $g' = 3$.",
+        "$\\dfrac{d}{dx}(fg) = f'g + fg' = 2x(3x + 1) + x^2 \\cdot 3 = 6x^2 + 2x + 3x^2 = 9x^2 + 2x$.",
+        "**Check by expanding first:** $x^2(3x + 1) = 3x^3 + x^2$. Derivative: $9x^2 + 2x$. ✓"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "When to use the product rule",
+      "body": "When you have two factors that are each functions of $x$ — and expanding first is messy or impossible (e.g., $x^2 \\sin x$ — you can't 'multiply out')."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. The Quotient Rule"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Quotient Rule",
+      "body": "$\\dfrac{d}{dx}\\!\\left[\\dfrac{f(x)}{g(x)}\\right] = \\dfrac{f'(x)\\,g(x) - f(x)\\,g'(x)}{[g(x)]^2}$"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Read it as 'low d-high minus high d-low, all over low squared'.",
+        "**Order matters** — the minus sign is in the middle, not at the end. Putting $f'g$ FIRST is critical.",
+        "**Example.** $\\dfrac{d}{dx}\\!\\left(\\dfrac{x^2}{x + 1}\\right)$.",
+        "$f = x^2, g = x + 1$. $f' = 2x, g' = 1$.",
+        "$\\dfrac{d}{dx} = \\dfrac{2x(x + 1) - x^2 \\cdot 1}{(x + 1)^2} = \\dfrac{2x^2 + 2x - x^2}{(x + 1)^2} = \\dfrac{x^2 + 2x}{(x + 1)^2} = \\dfrac{x(x + 2)}{(x + 1)^2}$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. Memory Aids"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Mnemonics",
+      "body": "**Product rule:** 'first × derivative of second + second × derivative of first'. Or: '$d(fg) = (df)\\,g + f\\,(dg)$'. **Quotient rule:** 'low d-high minus high d-low over low squared'. Some people prefer 'd(top)bot - top·d(bot), all over bot²'."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. Mixing Rules — A Worked Example"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Find $\\dfrac{d}{dx}\\!\\left(\\dfrac{x^3 + 1}{x^2}\\right)$.**",
+        "**Method 1 — quotient rule.** $f = x^3 + 1, g = x^2$. $f' = 3x^2, g' = 2x$.",
+        "$= \\dfrac{3x^2 \\cdot x^2 - (x^3 + 1) \\cdot 2x}{x^4} = \\dfrac{3x^4 - 2x^4 - 2x}{x^4} = \\dfrac{x^4 - 2x}{x^4} = 1 - \\dfrac{2}{x^3}$.",
+        "**Method 2 — simplify first.** $\\dfrac{x^3 + 1}{x^2} = x + x^{-2}$. Differentiate: $1 - 2x^{-3} = 1 - \\dfrac{2}{x^3}$. ✓",
+        "**Lesson:** if simplifying is cleaner, do that first. Quotient rule is heavy machinery — use when needed."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — product of three terms",
+        "$\\dfrac{d}{dx}(x \\cdot (x + 1) \\cdot (x + 2))$.",
+        "**Easy way:** expand. $(x)(x+1)(x+2) = x(x^2 + 3x + 2) = x^3 + 3x^2 + 2x$. Derivative: $3x^2 + 6x + 2$.",
+        "**Hard way:** product rule applied twice. Possible but tedious.",
+        "**Lesson:** always consider whether a quick algebraic simplification beats applying the rules."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — tangent line",
+        "Find the tangent to $f(x) = (2x + 1)(x^2 - 1)$ at $x = 1$.",
+        "**$f(1)$:** $(3)(0) = 0$.",
+        "**$f'(x)$ via product rule:** $(2)(x^2 - 1) + (2x + 1)(2x) = 2x^2 - 2 + 4x^2 + 2x = 6x^2 + 2x - 2$.",
+        "$f'(1) = 6 + 2 - 2 = 6$.",
+        "**Tangent:** $y - 0 = 6(x - 1) \\Rightarrow y = 6x - 6$."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "title": "Fundamental Theorem & Substitution",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "We've defined definite integrals as limits of Riemann sums — but those are tedious to compute. The **Fundamental Theorem of Calculus** is the bridge: it lets you compute a definite integral by finding an antiderivative and plugging in.",
+        "It's perhaps the single most important theorem in all of calculus."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. The Fundamental Theorem of Calculus (FTC)"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "FTC Part 2 (Evaluation)",
+      "body": "If $f$ is continuous on $[a, b]$ and $F$ is any antiderivative of $f$ (so $F' = f$), then $\\displaystyle\\int_a^b f(x)\\,dx = F(b) - F(a)$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "**The shortcut is huge.** No more Riemann sums, no more limits. Just find an antiderivative, plug in the upper and lower limits, subtract.",
+        "**Notation:** $F(x)\\bigg|_a^b = F(b) - F(a)$. The vertical bar with limits is a common shorthand."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — using FTC",
+        "$\\displaystyle\\int_0^2 x^2\\,dx$.",
+        "**Antiderivative:** $F(x) = \\dfrac{x^3}{3}$.",
+        "**Evaluate at limits:** $F(2) - F(0) = \\dfrac{8}{3} - 0 = \\dfrac{8}{3}$.",
+        "**Done.** Compare to the Riemann sum approximation we did earlier: 1.75 with $n = 4$ — FTC gives the exact answer in one step.",
+        "**Notice** we don't include $+C$ in definite integrals — it cancels when we subtract."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — area between curves",
+        "$\\displaystyle\\int_1^4 (3x^2 - 2)\\,dx$.",
+        "**Antideriv:** $F(x) = x^3 - 2x$.",
+        "**Evaluate:** $F(4) - F(1) = (64 - 8) - (1 - 2) = 56 - (-1) = 57$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. FTC Part 1 (Differentiation)"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "FTC Part 1",
+      "body": "If $f$ is continuous on $[a, b]$, then the function $G(x) = \\displaystyle\\int_a^x f(t)\\,dt$ is differentiable, and $G'(x) = f(x)$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Translation:** the operations 'differentiate' and 'integrate' are **inverses** of each other (up to a constant).",
+        "**Example.** $\\dfrac{d}{dx}\\!\\left[\\displaystyle\\int_0^x \\sin(t^2)\\,dt\\right] = \\sin(x^2)$.",
+        "Even though the integrand has no clean antiderivative, the derivative of the integral is just the integrand evaluated at $x$. Magic."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. u-Substitution — the Reverse Chain Rule"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "Many integrals don't fit basic patterns directly, but a **substitution** can transform them into something simpler. **u-substitution** is integration's version of the chain rule, run in reverse.",
+        "**The strategy:**",
+        "**1.** Identify a 'function inside' the integrand — call it $u$.",
+        "**2.** Compute $du = u'\\,dx$.",
+        "**3.** Rewrite the integral entirely in terms of $u$ and $du$.",
+        "**4.** Integrate.",
+        "**5.** Substitute back to $x$ (for indefinite integrals) — or change the bounds (for definite integrals)."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 1 — basic u-sub",
+        "$\\displaystyle\\int 2x \\cdot e^{x^2}\\,dx$.",
+        "**Spot the inner function:** $u = x^2$, then $du = 2x\\,dx$.",
+        "**Substitute:** $\\int 2x \\cdot e^{x^2}\\,dx = \\int e^u\\,du = e^u + C = e^{x^2} + C$.",
+        "(Verify by differentiating: chain rule gives $2x e^{x^2}$ ✓.)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 2 — when you need to scale",
+        "$\\displaystyle\\int x \\cdot \\cos(x^2)\\,dx$.",
+        "**$u = x^2$**, $du = 2x\\,dx$, so $x\\,dx = \\dfrac{1}{2} du$.",
+        "**Substitute:** $\\int \\cos u \\cdot \\dfrac{1}{2}\\,du = \\dfrac{1}{2}\\sin u + C = \\dfrac{1}{2}\\sin(x^2) + C$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 3 — definite integral with substitution",
+        "$\\displaystyle\\int_0^1 (3x + 1)^4\\,dx$.",
+        "**$u = 3x + 1$**, $du = 3\\,dx$, so $dx = \\dfrac{1}{3}du$.",
+        "**Bounds change too:** $x = 0 \\to u = 1$. $x = 1 \\to u = 4$.",
+        "**Integral:** $\\int_1^4 u^4 \\cdot \\dfrac{1}{3}\\,du = \\dfrac{1}{3} \\cdot \\dfrac{u^5}{5}\\bigg|_1^4 = \\dfrac{1}{15}(4^5 - 1) = \\dfrac{1023}{15} = 68.2$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Substitution checklist",
+      "body": "**Pick u** to be the 'inner' function (the messy expression that's been wrapped in something). Look for $u'$ (or a constant multiple of it) elsewhere in the integrand — that's a sign substitution will work. **Convert everything** to $u$ and $du$ — no $x$'s left in the substituted integral. **For definite integrals**, either change the bounds (cleaner) or substitute back to $x$ at the end."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 4 — substitution + log",
+        "$\\displaystyle\\int \\dfrac{2x}{x^2 + 1}\\,dx$.",
+        "**$u = x^2 + 1$**, $du = 2x\\,dx$.",
+        "$\\int \\dfrac{1}{u}\\,du = \\ln|u| + C = \\ln(x^2 + 1) + C$.",
+        "(Absolute value not needed since $x^2 + 1 > 0$ always.)"
+      ]
+    }
+  ]
+}

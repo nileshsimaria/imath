@@ -1,0 +1,76 @@
+{
+  "title": "Solving Equations: The Balance Method",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "What does \"solve for $x$\" really mean? You're handed an equation like $3x + 2 = x + 8$, and somehow you're supposed to turn it into $x = 3$. The textbook says \"do the same thing to both sides\" — but *why*?",
+        "Picture an old-fashioned pan balance. The equals sign means the two pans currently weigh the same. Each $x$ is a mystery block whose weight you don't know, and each $1$ is a known unit weight."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "balance-scale",
+      "config": {
+        "start": {
+          "Lx": 3,
+          "L1": 2,
+          "Rx": 1,
+          "R1": 8
+        }
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Goal:** end up with exactly one $x$-block on one pan, and only $1$-weights on the other. Then you can read $x$ directly.",
+        "**Rule:** to keep the balance level, every operation must be applied to *both* pans identically. If you remove one $1$-weight from only the left pan, the right pan would drop and the equation would no longer be true."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "A clean strategy",
+      "body": "1. Remove $1$-weights from both sides until one pan has no $1$s.\n2. Remove $x$-blocks from both sides until one pan has no $x$s.\n3. If you have multiple $x$-blocks left on one side, divide both pans by that count.\n\nYou'll be left with $x$ alone on one side and a single number on the other."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Walk through the example",
+        "Starting state: $3x + 2 = x + 8$.",
+        "**Step 1: −1 both sides, twice.** Now $3x = x + 6$.",
+        "**Step 2: −x both sides.** Now $2x = 6$.",
+        "**Step 3: ÷ 2 both sides.** Now $x = 3$. ✓",
+        "At every step the balance was level — and the level balance *is* the equation. Try a different starting equation below."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "balance-scale",
+      "config": {
+        "start": {
+          "Lx": 4,
+          "L1": 1,
+          "Rx": 1,
+          "R1": 10
+        }
+      }
+    },
+    {
+      "type": "callout",
+      "title": "What if I had to do something with no button?",
+      "body": "Real equations need more than these four operations — you'll multiply by negatives, divide by 3, add 5 to both sides, distribute, factor. The **principle** stays the same in every case: anything that preserves balance is allowed; anything that doesn't, isn't.\n\nThis is why $3x + 2 = x + 8$ and $x = 3$ are the SAME equation in disguise — they're connected by a chain of balance-preserving moves."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Symbolic version",
+        "Once the balance is intuitive, the symbolic shorthand makes sense:",
+        "$3x + 2 = x + 8$",
+        "$\\quad\\Rightarrow\\quad 3x = x + 6 \\quad$ *(subtract 2 from both sides)*",
+        "$\\quad\\Rightarrow\\quad 2x = 6 \\quad$ *(subtract $x$ from both sides)*",
+        "$\\quad\\Rightarrow\\quad x = 3 \\quad$ *(divide both sides by 2)*",
+        "Three lines of symbols, three button-presses on the balance. Same operations, different notation."
+      ]
+    }
+  ]
+}

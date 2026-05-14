@@ -1,0 +1,165 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{If } AB \\text{ is a diameter of a circle and } P \\text{ is on the circle (not at } A \\text{ or } B), \\\\ \\text{what is } \\angle APB \\text{?}",
+      "answer": 90,
+      "tolerance": 0.001,
+      "hints": [
+        "Thales' Theorem.",
+        "Always 90° regardless of where P is."
+      ],
+      "explanation": "$\\angle APB = 90°$ — Thales' Theorem.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{A circle has diameter } AB = 26. \\, P \\text{ is on the circle with } AP = 10. \\\\ \\text{Find } BP.",
+      "answer": 24,
+      "tolerance": 0.001,
+      "hints": [
+        "Thales: $\\triangle APB$ is right-angled at $P$.",
+        "Pythagoras: $AP^2 + BP^2 = AB^2$, so $100 + BP^2 = 676$. (Recognize 10-24-26 = 2× the 5-12-13 triple.)"
+      ],
+      "explanation": "By Thales, $\\angle APB = 90°$. Pythagoras: $BP = \\sqrt{26^2 - 10^2} = \\sqrt{676 - 100} = \\sqrt{576} = 24$. (10-24-26 is a Pythagorean triple.)",
+      "steps": [
+        {
+          "text": "**Thales' Theorem:** since $AB$ is a diameter, $\\angle APB = 90°$. So $\\triangle APB$ is right-angled at $P$."
+        },
+        {
+          "text": "**Pythagoras** with hypotenuse $AB$:"
+        },
+        {
+          "math": "AP^2 + BP^2 = AB^2 \\;\\Longrightarrow\\; 100 + BP^2 = 676"
+        },
+        {
+          "math": "BP^2 = 576 \\;\\Longrightarrow\\; BP = 24"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "The converse of Thales' Theorem says:",
+      "choices": [
+        "If $\\angle APB = 90°$, then $P$ lies on a circle with $AB$ as diameter.",
+        "If $\\angle APB = 90°$, then $AB$ is a side of a square.",
+        "If $\\angle APB = 90°$, then $P = A$ or $P = B$.",
+        "If $P$ is on a circle, then $\\angle APB = 90°$ for all chords $AB$."
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "The converse swaps the if/then.",
+        "Right angle viewing of $AB$ ⇒ $P$ sits on the Thales circle of $AB$."
+      ],
+      "explanation": "The converse: the locus of points $P$ with $\\angle APB = 90°$ is the circle with $AB$ as diameter (the Thales circle).",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{A right triangle has its hypotenuse as the diameter of a circumscribed circle.} \\\\ \\text{If the hypotenuse is 16, what is the radius of the circle?}",
+      "answer": 8,
+      "tolerance": 0.001,
+      "hints": [
+        "The hypotenuse IS the diameter.",
+        "Radius = diameter / 2."
+      ],
+      "explanation": "By Thales (and its converse), the hypotenuse of a right triangle is the diameter of its circumscribed circle. Radius = $16/2 = 8$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{Point } P \\text{ is on a semicircle with diameter } AB = 20. \\\\ \\text{If } AP = 12, \\text{ find the area of } \\triangle APB.",
+      "answer": 96,
+      "tolerance": 0.01,
+      "hints": [
+        "Thales: right angle at $P$, so $AP$ and $BP$ are the legs.",
+        "$BP = \\sqrt{20^2 - 12^2} = \\sqrt{400 - 144} = \\sqrt{256} = 16$. Area $= \\tfrac{1}{2}(12)(16)$."
+      ],
+      "explanation": "Right triangle with legs 12 and 16 (since $\\sqrt{400 - 144} = 16$). Area $= \\tfrac{1}{2}(12)(16) = 96$.",
+      "steps": [
+        {
+          "text": "**By Thales,** $\\angle APB = 90°$. So $AP$ and $BP$ are the legs of a right triangle with hypotenuse $AB$."
+        },
+        {
+          "text": "**Find $BP$ via Pythagoras:**"
+        },
+        {
+          "math": "BP = \\sqrt{20^2 - 12^2} = \\sqrt{400 - 144} = \\sqrt{256} = 16"
+        },
+        {
+          "text": "**Area of right triangle:** $\\tfrac{1}{2} \\cdot \\text{leg}_1 \\cdot \\text{leg}_2$:"
+        },
+        {
+          "math": "A = \\tfrac{1}{2}(12)(16) = 96"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "prompt": "In which of these triangles is the circumcenter located on a side of the triangle?",
+      "choices": [
+        "Acute triangles",
+        "Right triangles (on the hypotenuse, specifically at its midpoint)",
+        "Obtuse triangles",
+        "Equilateral triangles"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Thales tells us the right angle vertex sees the hypotenuse as a diameter.",
+        "So the hypotenuse is the diameter of the circumcircle."
+      ],
+      "explanation": "By the converse of Thales: a right triangle's hypotenuse is the diameter of its circumscribed circle. So the circumcenter is the midpoint of the hypotenuse — on the triangle itself. Acute triangles have circumcenter inside; obtuse have it outside.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{A right triangle is inscribed in a circle of radius } r = 6.5. \\\\ \\text{If one leg is 5, find the other leg.}",
+      "answer": 12,
+      "tolerance": 0.01,
+      "hints": [
+        "Hypotenuse = diameter = $2r = 13$.",
+        "Pythagoras: $5^2 + \\text{leg}^2 = 13^2$. (5-12-13 triple.)"
+      ],
+      "explanation": "Hypotenuse = diameter = 13. Other leg = $\\sqrt{169 - 25} = \\sqrt{144} = 12$. Classic 5-12-13.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** Hypotenuse = diameter = $2r = 13$."
+        },
+        {
+          "text": "Pythagoras: $5^2 + \\text{leg}^2 = 13^2$. (5-12-13 triple.)"
+        },
+        {
+          "text": "**Solution.** Hypotenuse = diameter = 13. Other leg = $\\sqrt{169 - 25} = \\sqrt{144} = 12$. Classic 5-12-13."
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "prompt": "Three points A, B, C lie on a circle. ∠ACB = 90°. What is true about segment AB?",
+      "choices": [
+        "AB is a diameter of the circle.",
+        "AB equals the radius.",
+        "AB is perpendicular to the radius at C.",
+        "AB is parallel to OC."
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Use the converse of Thales.",
+        "An inscribed angle of 90° ⇒ subtended chord is a diameter."
+      ],
+      "explanation": "By the converse of Thales, if an inscribed angle is 90°, the chord it subtends is a diameter.",
+      "difficulty": "medium"
+    }
+  ]
+}

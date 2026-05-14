@@ -1,0 +1,235 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{Solve for } x: \\;\\; \\dfrac{x}{15} = \\dfrac{2}{5}",
+      "answer": 6,
+      "tolerance": 0,
+      "hints": [
+        "Cross-multiply: $5x = 15 \\cdot 2$.",
+        "$5x = 30$, divide by $5$."
+      ],
+      "explanation": "Cross-multiply: $5x = 2 \\cdot 15 = 30$, so $x = 6$. Check: $\\dfrac{6}{15} = \\dfrac{2}{5}$. ✓",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{Solve for } y: \\;\\; \\dfrac{8}{12} = \\dfrac{y}{15}",
+      "answer": 10,
+      "tolerance": 0,
+      "hints": [
+        "Cross-multiply: $8 \\cdot 15 = 12y$.",
+        "$120 = 12y$, divide by $12$."
+      ],
+      "explanation": "$8 \\cdot 15 = 12y \\Rightarrow 120 = 12y \\Rightarrow y = 10$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which proportion correctly models the problem?} \\\\ \\text{`5 apples cost \\$2. How much do 8 apples cost?'}",
+      "choices": [
+        "\\dfrac{5}{2} = \\dfrac{x}{8}",
+        "\\dfrac{5}{2} = \\dfrac{8}{x}",
+        "\\dfrac{2}{5} = \\dfrac{x}{8}",
+        "\\dfrac{5}{8} = \\dfrac{2}{x}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Keep like quantities on top: apples over dollars on both sides.",
+        "Apples on top, dollars on bottom — both sides."
+      ],
+      "explanation": "Apples on top, dollars on bottom, both sides: $\\dfrac{5 \\text{ apples}}{2 \\text{ dollars}} = \\dfrac{8 \\text{ apples}}{x \\text{ dollars}}$, i.e., $\\dfrac{5}{2} = \\dfrac{8}{x}$. Cross-multiplying gives $5x = 16$, so $x = \\$3.20$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{If } \\dfrac{3}{x} = \\dfrac{6}{14}, \\text{ what is } x?",
+      "answer": 7,
+      "tolerance": 0,
+      "hints": [
+        "Cross-multiply: $3 \\cdot 14 = 6x$.",
+        "$42 = 6x$."
+      ],
+      "explanation": "$3 \\cdot 14 = 6x \\Rightarrow 42 = 6x \\Rightarrow x = 7$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Cross-multiplying } \\dfrac{a}{b} = \\dfrac{c}{d} \\text{ gives:}",
+      "choices": [
+        "a + d = b + c",
+        "ab = cd",
+        "ad = bc",
+        "a - b = c - d"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "Multiply both sides by $bd$.",
+        "$\\dfrac{a}{b} \\cdot bd = ad$, $\\dfrac{c}{d} \\cdot bd = cb$."
+      ],
+      "explanation": "Multiply both sides by $bd$ to clear fractions: $ad = bc$. The diagonals of the proportion multiply equally.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve for } x \\text{: } \\dfrac{3}{4} = \\dfrac{x}{20}.",
+      "choices": [
+        "x = 5",
+        "x = 12",
+        "x = 15",
+        "x = 60"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Cross-multiply: $3 \\cdot 20 = 4x$, so $4x = 60$.",
+        "Solve: $x = 15$."
+      ],
+      "explanation": "Cross-multiply: $4x = 60 \\Rightarrow x = 15$.",
+      "steps": [
+        "**Universal recipe for solving a proportion: CROSS-MULTIPLY, then isolate the unknown.**",
+        "**Cross-multiply.** $3 \\cdot 20 = 4 \\cdot x$, so $60 = 4x$.",
+        "**Solve.** $x = 60 / 4 = 15$.",
+        "**Sanity check.** $\\dfrac{15}{20} = \\dfrac{3}{4}$ ✓ (both reduce by 5)."
+      ],
+      "id": "q6",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{If } 5 \\text{ pencils cost } \\$2.00, \\text{ how much do } 12 \\text{ pencils cost?}",
+      "choices": [
+        "\\$2.40",
+        "\\$4.80",
+        "\\$24.00",
+        "\\$5.00"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Set up: $\\dfrac{5}{2} = \\dfrac{12}{x}$.",
+        "Cross-multiply: $5x = 24$, so $x = 4.80$."
+      ],
+      "explanation": "Cross-multiply: $5x = 24 \\Rightarrow x = \\$4.80$.",
+      "steps": [
+        "**Setup rule for word problems: same units in the same position.** Pencils on top, dollars on bottom — on BOTH sides of the equals sign. This keeps the proportion meaningful.",
+        "**Proportion.** $\\dfrac{5 \\text{ pencils}}{2 \\text{ dollars}} = \\dfrac{12 \\text{ pencils}}{x \\text{ dollars}}$.",
+        "**Cross-multiply.** $5 \\cdot x = 2 \\cdot 12 = 24$.",
+        "**Solve.** $x = 24/5 = \\$4.80$.",
+        "**Sanity check.** 12 pencils is roughly 2.4× as many as 5, so cost should be 2.4× as much: $2 \\cdot 2.4 = \\$4.80$ ✓."
+      ],
+      "id": "q7",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A map's scale is } 1 \\text{ in : } 25 \\text{ mi.} \\\\ \\text{Two cities are } 4.5 \\text{ inches apart on the map.} \\\\ \\text{How many miles apart are they in reality?}",
+      "answer": 112.5,
+      "tolerance": 0.1,
+      "hints": [
+        "Set up: $\\dfrac{1}{25} = \\dfrac{4.5}{x}$.",
+        "$x = 4.5 \\cdot 25$."
+      ],
+      "explanation": "$x = 4.5 \\cdot 25 = 112.5$ miles.",
+      "steps": [
+        "**Map-scale problems are pure proportions.** Inches-on-map / miles-in-reality is a CONSTANT.",
+        "**Setup.** $\\dfrac{1 \\text{ in}}{25 \\text{ mi}} = \\dfrac{4.5 \\text{ in}}{x \\text{ mi}}$.",
+        "**Cross-multiply.** $1 \\cdot x = 4.5 \\cdot 25 = 112.5$.",
+        "**Real-world distance: 112.5 miles.**"
+      ],
+      "id": "q8",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{If } 3 \\text{ workers can paint a wall in } 8 \\text{ hours,} \\\\ \\text{how long will it take } 4 \\text{ workers (assuming same rate)?}",
+      "answer": 6,
+      "tolerance": 0.1,
+      "hints": [
+        "**Inverse** proportion: more workers → less time. Total work = workers × time = constant.",
+        "$3 \\cdot 8 = 24$ worker-hours. Then $24 / 4 = ?$"
+      ],
+      "explanation": "Total work is 24 worker-hours. With 4 workers: $24 / 4 = 6$ hours.",
+      "steps": [
+        "**Warning: this is INVERSE proportion, not direct.** More workers → LESS time (not more). The product is constant, not the ratio.",
+        "**The invariant: total work.** Workers × Time = constant total (in 'worker-hours' units).",
+        "**Compute the total.** $3 \\text{ workers} \\cdot 8 \\text{ hours} = 24$ worker-hours.",
+        "**Apply to new scenario.** $4 \\text{ workers} \\cdot t = 24 \\Rightarrow t = 6$ hours.",
+        "**Distinguishing direct vs inverse.** Direct: more X → more Y (more apples cost more). Inverse: more X → LESS Y (more workers take less time). Always check the relationship type first."
+      ],
+      "id": "q9",
+      "difficulty": "hard"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A rectangle has length-to-width ratio } 5:3. \\\\ \\text{If the perimeter is } 64 \\text{ cm, find the length.}",
+      "answer": 20,
+      "tolerance": 0,
+      "hints": [
+        "Let length $= 5k$ and width $= 3k$. Perimeter = $2(5k + 3k) = 16k$.",
+        "$16k = 64 \\Rightarrow k = 4$. Length $= 5 \\cdot 4 = 20$."
+      ],
+      "explanation": "Length $= 5k$, width $= 3k$. Perimeter $= 16k = 64 \\Rightarrow k = 4$. Length $= 20$ cm.",
+      "steps": [
+        "**Use a SCALE FACTOR variable.** When given a ratio, introduce $k$ so the two quantities are $5k$ and $3k$ (in ratio $5:3$). This reduces to ONE unknown.",
+        "**Express in terms of $k$.** Length = $5k$, width = $3k$.",
+        "**Write the perimeter equation.** $P = 2(L + W) = 2(5k + 3k) = 16k$.",
+        "**Solve.** $16k = 64 \\Rightarrow k = 4$.",
+        "**Compute the length.** $5k = 20$ cm. (Width = 12, perimeter = 64 ✓.)",
+        "**General trick.** For 'ratio $a:b$' + 'sum/perimeter/total = $S$', use scale factor $k$ — turns the problem into one equation in one unknown."
+      ],
+      "id": "q10",
+      "difficulty": "hard"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which proportion is true?}",
+      "choices": [
+        "\\dfrac{2}{3} = \\dfrac{6}{8}",
+        "\\dfrac{4}{5} = \\dfrac{12}{15}",
+        "\\dfrac{3}{7} = \\dfrac{6}{15}",
+        "\\dfrac{1}{2} = \\dfrac{3}{4}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Cross-multiply each. The proportion is true iff the cross-products are equal.",
+        "$\\dfrac{4}{5} = \\dfrac{12}{15}$: cross-products $4 \\cdot 15 = 60$ and $5 \\cdot 12 = 60$ ✓."
+      ],
+      "explanation": "$\\dfrac{4}{5} = \\dfrac{12}{15}$ because $4 \\cdot 15 = 60 = 5 \\cdot 12$. (Multiply top and bottom of $\\dfrac{4}{5}$ by 3 → $\\dfrac{12}{15}$.)",
+      "steps": [
+        "**Test for a true proportion: cross-products must be equal.** $\\dfrac{a}{b} = \\dfrac{c}{d}$ ⟺ $ad = bc$.",
+        "**Check each option.** $2 \\cdot 8 = 16$ vs $3 \\cdot 6 = 18$. ✗ $4 \\cdot 15 = 60$ vs $5 \\cdot 12 = 60$. ✓ $3 \\cdot 15 = 45$ vs $7 \\cdot 6 = 42$. ✗ $1 \\cdot 4 = 4$ vs $2 \\cdot 3 = 6$. ✗",
+        "**Answer: option 2.**"
+      ],
+      "id": "q11",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Convert: } 60 \\text{ km/h to m/s (round to 2 decimals).}",
+      "answer": 16.67,
+      "tolerance": 0.1,
+      "hints": [
+        "1 km = 1000 m and 1 hour = 3600 s. Multiply by $\\dfrac{1000}{3600}$.",
+        "$60 \\cdot \\dfrac{1000}{3600} = \\dfrac{60{,}000}{3600}$."
+      ],
+      "explanation": "$60 \\cdot \\dfrac{1000}{3600} = \\dfrac{60000}{3600} = 16.67$ m/s.",
+      "steps": [
+        "**Dimensional analysis: multiply by conversion factors that CANCEL the unwanted units.**",
+        "**Conversion factors.** $\\dfrac{1000 \\text{ m}}{1 \\text{ km}}$ (converts km → m). $\\dfrac{1 \\text{ h}}{3600 \\text{ s}}$ (converts h → 1/s).",
+        "**Chain them.** $\\dfrac{60 \\text{ km}}{1 \\text{ h}} \\cdot \\dfrac{1000 \\text{ m}}{1 \\text{ km}} \\cdot \\dfrac{1 \\text{ h}}{3600 \\text{ s}}$.",
+        "**Cancel units.** km cancels with km, h cancels with h, leaving m/s.",
+        "**Compute.** $\\dfrac{60 \\cdot 1000}{3600} = \\dfrac{60{,}000}{3600} \\approx 16.67$ m/s.",
+        "**Mental shortcut.** km/h ÷ 3.6 ≈ m/s. $60 / 3.6 = 16.67$. ✓ (Useful for driving-speed conversions!)"
+      ],
+      "id": "q12",
+      "difficulty": "hard"
+    }
+  ]
+}

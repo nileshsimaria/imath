@@ -1,0 +1,530 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{What is the value of } \\binom{6}{2}?",
+      "answer": 15,
+      "tolerance": 0,
+      "hints": [
+        "$\\binom{n}{k} = \\dfrac{n!}{k!(n-k)!}$.",
+        "$\\binom{6}{2} = \\dfrac{6!}{2! \\cdot 4!} = \\dfrac{720}{2 \\cdot 24}$."
+      ],
+      "explanation": "$\\binom{6}{2} = \\dfrac{6 \\cdot 5}{2!} = \\dfrac{30}{2} = 15$.",
+      "steps": [
+        "Apply the formula: $$\\binom{n}{k} = \\dfrac{n!}{k!(n-k)!}$$",
+        "Substitute $n = 6$, $k = 2$: $$\\binom{6}{2} = \\dfrac{6!}{2! \\cdot 4!}$$",
+        "Cancel $4!$ from numerator and denominator: $$\\binom{6}{2} = \\dfrac{6 \\cdot 5}{2!} = \\dfrac{30}{2} = 15$$",
+        "(Quicker shortcut: $\\binom{n}{2} = \\dfrac{n(n-1)}{2}$.)"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which row of Pascal's Triangle is } 1, 4, 6, 4, 1?",
+      "choices": [
+        "row 3",
+        "row 4",
+        "row 5",
+        "row 6"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Rows are numbered starting from 0 (the top, single 1).",
+        "Row $n$ has $n + 1$ entries. Five entries → row 4."
+      ],
+      "explanation": "$1, 4, 6, 4, 1$ has 5 entries → row 4. (Rows: row 0 = 1; row 1 = 1, 1; row 2 = 1, 2, 1; …)",
+      "steps": [
+        "Pascal's Triangle is indexed starting from row 0 (just '1' at the top).",
+        "Row $n$ has $n + 1$ entries.",
+        "Count the entries in $1, 4, 6, 4, 1$: that's 5 entries.",
+        "$n + 1 = 5 \\Rightarrow n = 4$. So this is **row 4**.",
+        "(The entries are $\\binom{4}{0}, \\binom{4}{1}, \\binom{4}{2}, \\binom{4}{3}, \\binom{4}{4} = 1, 4, 6, 4, 1$.)"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{What is the value of } \\binom{10}{0}?",
+      "answer": 1,
+      "tolerance": 0,
+      "hints": [
+        "$\\binom{n}{0}$ is always... 1.",
+        "There's exactly one way to choose 0 items from any set."
+      ],
+      "explanation": "$\\binom{n}{0} = 1$ for all $n$. (The empty subset.)",
+      "steps": [
+        "From the formula: $\\binom{10}{0} = \\dfrac{10!}{0! \\cdot 10!} = \\dfrac{1}{0!} = \\dfrac{1}{1} = 1$.",
+        "(Recall the convention $0! = 1$.)",
+        "Conceptual reason: there's exactly **one** way to choose nothing — the empty set."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\binom{10}{7} = ?",
+      "choices": [
+        "120",
+        "720",
+        "210",
+        "30"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Use the symmetry $\\binom{n}{k} = \\binom{n}{n - k}$.",
+        "$\\binom{10}{7} = \\binom{10}{3} = \\dfrac{10 \\cdot 9 \\cdot 8}{3!}$."
+      ],
+      "explanation": "$\\binom{10}{7} = \\binom{10}{3} = \\dfrac{10 \\cdot 9 \\cdot 8}{6} = \\dfrac{720}{6} = 120$.",
+      "steps": [
+        "Use symmetry: $\\binom{10}{7} = \\binom{10}{10 - 7} = \\binom{10}{3}$. (Easier to compute the smaller one.)",
+        "Apply the formula: $$\\binom{10}{3} = \\dfrac{10!}{3! \\cdot 7!} = \\dfrac{10 \\cdot 9 \\cdot 8}{3!}$$",
+        "$$= \\dfrac{720}{6} = 120$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "(x + y)^3 \\text{ expands to:}",
+      "choices": [
+        "x^3 + 3x^2y + 3xy^2 + y^3",
+        "x^3 + y^3",
+        "x^3 + x^2y + xy^2 + y^3",
+        "x^3 + 3xy + y^3"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Use Pascal's row 3: $1, 3, 3, 1$.",
+        "Powers of $x$ count down ($3, 2, 1, 0$); powers of $y$ count up ($0, 1, 2, 3$)."
+      ],
+      "explanation": "$(x + y)^3 = x^3 + 3x^2 y + 3xy^2 + y^3$.",
+      "steps": [
+        "Pascal's row 3: $1, 3, 3, 1$.",
+        "Pattern: powers of $x$ go $3, 2, 1, 0$; powers of $y$ go $0, 1, 2, 3$. Sum of powers in each term = $3$.",
+        "$$(x + y)^3 = 1 \\cdot x^3 + 3 \\cdot x^2 y + 3 \\cdot xy^2 + 1 \\cdot y^3$$",
+        "$$= x^3 + 3x^2 y + 3xy^2 + y^3$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "(2x + 1)^4 \\text{ expands to:}",
+      "choices": [
+        "16x^4 + 32x^3 + 24x^2 + 8x + 1",
+        "16x^4 + 8x^3 + 4x^2 + 2x + 1",
+        "16x^4 + 4x^3 + 6x^2 + 4x + 1",
+        "8x^4 + 32x^3 + 24x^2 + 8x + 1"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Treat as $(a + b)^4$ with $a = 2x$, $b = 1$. Pascal's row 4: $1, 4, 6, 4, 1$.",
+        "Each term: $\\binom{4}{k} (2x)^{4-k} \\cdot 1^k$."
+      ],
+      "explanation": "$(2x + 1)^4 = 16x^4 + 4 \\cdot 8x^3 + 6 \\cdot 4x^2 + 4 \\cdot 2x + 1 = 16x^4 + 32x^3 + 24x^2 + 8x + 1$.",
+      "steps": [
+        "Identify $a = 2x$, $b = 1$, $n = 4$. Pascal's row 4: $1, 4, 6, 4, 1$.",
+        "Apply the binomial theorem term-by-term: $$1 \\cdot (2x)^4 \\;+\\; 4 \\cdot (2x)^3 \\cdot 1 \\;+\\; 6 \\cdot (2x)^2 \\cdot 1 \\;+\\; 4 \\cdot (2x) \\cdot 1 \\;+\\; 1 \\cdot 1$$",
+        "Simplify each: $$16x^4 + 4 \\cdot 8x^3 + 6 \\cdot 4x^2 + 8x + 1$$",
+        "$$= 16x^4 + 32x^3 + 24x^2 + 8x + 1$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{What is the coefficient of } x^4 \\text{ in } (x + 3)^7?",
+      "answer": 945,
+      "tolerance": 0,
+      "hints": [
+        "Term: $\\binom{7}{k} x^{7-k} \\cdot 3^k$. Need $7 - k = 4$, so $k = 3$.",
+        "Coefficient: $\\binom{7}{3} \\cdot 3^3 = 35 \\cdot 27$."
+      ],
+      "explanation": "Coefficient = $\\binom{7}{3} \\cdot 3^3 = 35 \\cdot 27 = 945$.",
+      "steps": [
+        "General term in $(x + 3)^7$: $\\binom{7}{k} x^{7-k} \\cdot 3^k$.",
+        "We want the coefficient of $x^4$. Set $7 - k = 4$, so $k = 3$.",
+        "Compute the coefficient: $$\\binom{7}{3} \\cdot 3^3 = 35 \\cdot 27 = 945$$",
+        "(Verification: $\\binom{7}{3} = \\dfrac{7 \\cdot 6 \\cdot 5}{3!} = \\dfrac{210}{6} = 35$. And $3^3 = 27$.)"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "promptTex": "(2x - y)^3 \\text{ expands to:}",
+      "choices": [
+        "8x^3 - 12x^2y + 6xy^2 - y^3",
+        "8x^3 + 12x^2y + 6xy^2 + y^3",
+        "8x^3 - 6x^2y + 12xy^2 - y^3",
+        "8x^3 - 4x^2y + 4xy^2 - y^3"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Use $(a + b)^3$ with $a = 2x$, $b = -y$. Row 3: $1, 3, 3, 1$.",
+        "Powers of $-y$ alternate sign: $1, -y, y^2, -y^3$."
+      ],
+      "explanation": "$(2x)^3 + 3(2x)^2(-y) + 3(2x)(-y)^2 + (-y)^3 = 8x^3 - 12x^2y + 6xy^2 - y^3$.",
+      "steps": [
+        "Treat as $(a + b)^3$ with $a = 2x$, $b = -y$. Row 3: $1, 3, 3, 1$.",
+        "Build the four terms: $$1 \\cdot (2x)^3 + 3(2x)^2(-y) + 3(2x)(-y)^2 + 1 \\cdot (-y)^3$$",
+        "Simplify each: $$8x^3 + 3 \\cdot 4x^2 \\cdot (-y) + 3 \\cdot 2x \\cdot y^2 + (-y^3)$$",
+        "$$= 8x^3 - 12x^2 y + 6xy^2 - y^3$$",
+        "Note the **alternating signs** from the powers of $-y$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{Compute the sum of row } 8 \\text{ of Pascal's Triangle.}",
+      "answer": 256,
+      "tolerance": 0,
+      "hints": [
+        "Setting $a = b = 1$ in the binomial theorem gives $\\sum_k \\binom{n}{k} = 2^n$.",
+        "Row $n$ sums to $2^n$. Row 8: $2^8 = ?$"
+      ],
+      "explanation": "Sum of row $n$ = $2^n$. Row 8: $2^8 = 256$.",
+      "steps": [
+        "Plug $a = b = 1$ into the binomial theorem: $$(1 + 1)^n = \\sum_{k=0}^{n} \\binom{n}{k} \\cdot 1^{n-k} \\cdot 1^k = \\sum_{k=0}^n \\binom{n}{k}$$",
+        "So the sum of any row of Pascal's Triangle equals $2^n$.",
+        "Row 8: $$\\sum = 2^8 = 256$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which is a correct definition of } e?",
+      "choices": [
+        "e = \\sum_{k=0}^{\\infty} \\dfrac{1}{k!}",
+        "e = \\lim_{n \\to \\infty}(1 + 1/n)^n",
+        "Both definitions are equivalent",
+        "\\text{Neither — } e \\text{ is just a calculator value}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "Both formulas independently equal $e \\approx 2.71828$.",
+        "They're two paths to the same constant."
+      ],
+      "explanation": "Both formulas evaluate to $e \\approx 2.71828$. The first is the factorial-series definition; the second is the compound-interest limit.",
+      "steps": [
+        "Both formulas are valid definitions of $e$, established independently.",
+        "Factorial series: $\\sum_{k=0}^\\infty \\dfrac{1}{k!} = 1 + 1 + \\tfrac{1}{2} + \\tfrac{1}{6} + \\cdots \\approx 2.71828$.",
+        "Compound-interest limit: $(1 + 1/n)^n \\to 2.71828$ as $n \\to \\infty$.",
+        "These are the same number — Euler's $e$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{Compute the partial sum } \\displaystyle\\sum_{k=0}^{4} \\dfrac{1}{k!} \\\\ \\text{(round to 4 decimals).}",
+      "answer": 2.7083,
+      "tolerance": 0.001,
+      "hints": [
+        "Compute $\\dfrac{1}{0!} + \\dfrac{1}{1!} + \\dfrac{1}{2!} + \\dfrac{1}{3!} + \\dfrac{1}{4!}$.",
+        "$1 + 1 + 0.5 + 0.16\\overline{6} + 0.041\\overline{6}$."
+      ],
+      "explanation": "$1 + 1 + 0.5 + 0.1\\overline{6} + 0.041\\overline{6} = 2.708\\overline{3}$.",
+      "steps": [
+        "$\\dfrac{1}{0!} = 1$ (since $0! = 1$).",
+        "$\\dfrac{1}{1!} = 1$.",
+        "$\\dfrac{1}{2!} = \\dfrac{1}{2} = 0.5$.",
+        "$\\dfrac{1}{3!} = \\dfrac{1}{6} \\approx 0.1667$.",
+        "$\\dfrac{1}{4!} = \\dfrac{1}{24} \\approx 0.0417$.",
+        "Sum: $1 + 1 + 0.5 + 0.1667 + 0.0417 \\approx 2.7083$. Compare to $e \\approx 2.7183$ — already very close after just 5 terms."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\text{Compute } (1 + 1/n)^n \\text{ for } n = 100. \\\\ \\text{(Round to 4 decimals.)}",
+      "answer": 2.7048,
+      "tolerance": 0.005,
+      "hints": [
+        "$(1.01)^{100}$.",
+        "Using log/exp: $100 \\ln 1.01 \\approx 100 \\cdot 0.00995 \\approx 0.995$, then $e^{0.995} \\approx 2.7048$."
+      ],
+      "explanation": "$(1.01)^{100} \\approx 2.7048$. Compare to $e \\approx 2.7183$ — closer than $n = 1$ (which gave 2), but not yet there. Larger $n$ → closer to $e$.",
+      "steps": [
+        "Compute $(1 + 1/100)^{100} = (1.01)^{100}$.",
+        "Direct calculation gives $(1.01)^{100} \\approx 2.7048$.",
+        "Compare to $e \\approx 2.7183$. The limit definition says these get arbitrarily close as $n \\to \\infty$.",
+        "(Cumulative deviation table: $n = 1$ → 2; $n = 10$ → 2.5937; $n = 100$ → 2.7048; $n = 1000$ → 2.7169; $n \\to \\infty$ → $e \\approx 2.71828$.)"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q13",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Approximately what is } e \\text{ to 5 decimal places?}",
+      "choices": [
+        "2.71828",
+        "2.78128",
+        "3.14159",
+        "1.41421"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "It's between 2 and 3, closer to 2.7.",
+        "Pneumonic: '2.7-Andrew Jackson-Andrew Jackson' (he was elected in 1828)."
+      ],
+      "explanation": "$e \\approx 2.71828$. (3.14159 is $\\pi$; 1.41421 is $\\sqrt{2}$.)",
+      "steps": [
+        "$e \\approx 2.71828\\ldots$ (irrational, transcendental).",
+        "Compare with other famous constants: $\\pi \\approx 3.14159$, $\\sqrt{2} \\approx 1.41421$, $\\varphi \\approx 1.61803$.",
+        "Memory aid: $e \\approx 2.7$, then 'Andrew Jackson' twice (he was elected in 1828) — gives $2.71828$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the 5th term of the expansion of } (2x + y)^8? \\\\ \\text{(The expansion is indexed from } k = 0, \\text{ so the 5th term has } k = 4.)",
+      "choices": [
+        "$1120 x^4 y^4$",
+        "$70 x^4 y^4$",
+        "$1792 x^5 y^3$",
+        "$140 x^4 y^4$"
+      ],
+      "choicesTex": false,
+      "answerIndex": 0,
+      "hints": [
+        "The $r$-th term ($r$ counting from 1) corresponds to $k = r - 1$. So the 5th term uses $k = 4$.",
+        "Term $= \\binom{8}{4}(2x)^4 y^4$. Don't forget to expand $(2x)^4 = 16 x^4$."
+      ],
+      "explanation": "Term $= \\binom{8}{4} (2x)^{8-4} y^4 = 70 \\cdot 16 \\cdot x^4 y^4 = 1120 x^4 y^4$. (Common mistakes: forgetting the $2^4 = 16$, or using $k = 5$ instead of $k = 4$.)",
+      "steps": [
+        "The general term in $(a + b)^n$: $\\binom{n}{k} a^{n-k} b^k$.",
+        "5th term ⇒ $k = 4$.",
+        "Term = $\\binom{8}{4} (2x)^4 y^4 = 70 \\cdot 16 x^4 \\cdot y^4 = 1120 x^4 y^4$."
+      ],
+      "id": "q14",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{What is } \\binom{10}{0} + \\binom{10}{1} + \\binom{10}{2} + \\cdots + \\binom{10}{10}?",
+      "answer": 1024,
+      "tolerance": 0,
+      "hints": [
+        "Try setting $x = y = 1$ in $(x + y)^{10}$.",
+        "$(1+1)^{10} = 2^{10}$."
+      ],
+      "explanation": "Set $x = y = 1$ in the binomial theorem $(x+y)^{10} = \\sum_{k=0}^{10} \\binom{10}{k} x^{10-k} y^k$. The right side becomes $\\sum \\binom{10}{k}$, the left side is $2^{10} = 1024$. (Each row of Pascal's Triangle sums to a power of 2.)",
+      "steps": [
+        "Apply the binomial theorem with $x = y = 1$: $(1+1)^n = \\sum_{k=0}^n \\binom{n}{k}$.",
+        "For $n = 10$: $2^{10} = \\sum_{k=0}^{10} \\binom{10}{k}$.",
+        "$2^{10} = 1024$."
+      ],
+      "id": "q15",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Compute } \\binom{8}{0} - \\binom{8}{1} + \\binom{8}{2} - \\binom{8}{3} + \\cdots + \\binom{8}{8}.",
+      "answer": 0,
+      "tolerance": 0,
+      "hints": [
+        "Try setting $x = 1$ and $y = -1$ in $(x + y)^8$.",
+        "$(1 + (-1))^8 = 0^8 = 0$."
+      ],
+      "explanation": "Set $x = 1$, $y = -1$ in $(x + y)^8 = \\sum \\binom{8}{k} x^{8-k} y^k$. Right side is $\\sum (-1)^k \\binom{8}{k}$ — exactly the alternating sum. Left side: $0^8 = 0$. So the sum is $0$ (true for any $n \\geq 1$).",
+      "steps": [
+        "Apply binomial theorem with $x = 1$, $y = -1$: $(1 + (-1))^n = \\sum (-1)^k \\binom{n}{k}$.",
+        "Left side: $0^n = 0$ (for $n \\geq 1$).",
+        "So the alternating sum is $0$ for $n = 8$."
+      ],
+      "id": "q16",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{What is the constant term in the expansion of } \\left(x + \\dfrac{1}{x}\\right)^{10}?",
+      "answer": 252,
+      "tolerance": 0,
+      "hints": [
+        "General term: $\\binom{10}{k} x^{10-k} \\cdot x^{-k} = \\binom{10}{k} x^{10 - 2k}$.",
+        "Constant term: set $10 - 2k = 0$, so $k = 5$."
+      ],
+      "explanation": "General term: $\\binom{10}{k} x^{10-k} (1/x)^k = \\binom{10}{k} x^{10-2k}$. The exponent of $x$ is $10 - 2k$, which equals $0$ when $k = 5$. The constant term is $\\binom{10}{5} = 252$.",
+      "steps": [
+        "Write the general term: $\\binom{10}{k} x^{10-k} (x^{-1})^k = \\binom{10}{k} x^{10-2k}$.",
+        "For the constant term, the power of $x$ must be $0$: $10 - 2k = 0 \\Rightarrow k = 5$.",
+        "Constant term = $\\binom{10}{5} = 252$."
+      ],
+      "id": "q17",
+      "difficulty": "hard"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{A pizza shop offers } 7 \\text{ optional toppings.} \\\\ \\text{How many distinct topping combinations are possible (including 'no toppings')?}",
+      "answer": 128,
+      "tolerance": 0,
+      "hints": [
+        "Each topping: independently in or out. Multiplication principle: $2 \\cdot 2 \\cdot 2 \\cdots$.",
+        "$2^7 = 128$."
+      ],
+      "explanation": "Each of the 7 toppings is either included or not — $2$ independent choices each — so $2^7 = 128$ combinations. (Equivalently $\\sum_{k=0}^{7} \\binom{7}{k} = 2^7$: choose $k$ toppings out of 7, summed over all $k$.)",
+      "steps": [
+        "For each topping: 2 independent choices (yes/no).",
+        "By the multiplication principle: $2^7$ total combinations.",
+        "$2^7 = 128$."
+      ],
+      "id": "q18",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\$1 \\text{ is invested at } 100\\% \\text{ annual interest, compounded } n \\text{ times per year.} \\\\ \\text{As } n \\to \\infty, \\text{ the year-end value approaches what number? (Round to 4 decimals.)}",
+      "answer": 2.7183,
+      "tolerance": 0.0001,
+      "hints": [
+        "Year-end value is $\\left(1 + \\dfrac{1}{n}\\right)^n$. As $n \\to \\infty$ this tends to a famous constant.",
+        "It's $e$, Euler's number."
+      ],
+      "explanation": "$\\left(1 + \\dfrac{1}{n}\\right)^n \\to e \\approx 2.71828\\ldots$ as $n \\to \\infty$. This IS the definition of $e$ — the limit of continuously-compounded growth at $100\\%$ interest. To 4 decimals, $e \\approx 2.7183$.",
+      "steps": [
+        "Compounded $n$ times per year at $100\\%$, year-end balance: $\\left(1 + \\dfrac{1}{n}\\right)^n$.",
+        "Take the limit as $n \\to \\infty$: this defines $e$.",
+        "$e \\approx 2.71828 \\ldots$, which rounds to $2.7183$."
+      ],
+      "id": "q19",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{What is the coefficient of } x^3 \\text{ in } (1 - 2x)^6?",
+      "answer": -160,
+      "tolerance": 0,
+      "hints": [
+        "General term: $\\binom{6}{k} (1)^{6-k} (-2x)^k$. For $x^3$: $k = 3$.",
+        "$(-2)^3 = -8$ (sign matters!), and $\\binom{6}{3} = 20$."
+      ],
+      "explanation": "Term with $x^3$: $\\binom{6}{3} (1)^3 (-2x)^3 = 20 \\cdot (-8) x^3 = -160 x^3$. So coefficient is $-160$. (Two common mistakes: forgetting the negative sign on $(-2)^3$, and forgetting to cube the $2$.)",
+      "steps": [
+        "General term: $\\binom{6}{k} (-2x)^k$.",
+        "For $x^3$: $k = 3$. Coefficient = $\\binom{6}{3} \\cdot (-2)^3 = 20 \\cdot (-8) = -160$.",
+        "Watch the sign: $(-2)^3 = -8$, not $-6$ or $+8$."
+      ],
+      "id": "q20",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q21",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Find the 4th term in the expansion of } (a - 3b)^5.",
+      "choices": [
+        "$-270 a^2 b^3$",
+        "$270 a^2 b^3$",
+        "$10 a^2 b^3$",
+        "$-90 a^3 b^2$"
+      ],
+      "choicesTex": false,
+      "answerIndex": 0,
+      "hints": [
+        "The $r$-th term ($r$ counting from 1) corresponds to $k = r - 1$. So the 4th term uses $k = 3$.",
+        "Term $= \\binom{5}{3} a^{5-3} (-3b)^3 = 10 \\cdot a^2 \\cdot (-27 b^3)$."
+      ],
+      "explanation": "4th term ⇒ $k = 3$. Term $= \\binom{5}{3} a^{5-3} (-3b)^3 = 10 \\cdot a^2 \\cdot (-27 b^3) = -270 a^2 b^3$. (Two common mistakes: using $k=4$ instead of $k=3$, or forgetting $(-3)^3 = -27$ — both sign and magnitude.)",
+      "steps": [
+        "General term in $(a + B)^n$: $\\binom{n}{k} a^{n-k} B^k$ where $B = -3b$.",
+        "4th term means $k = 3$.",
+        "$\\binom{5}{3} = 10$, $a^{5-3} = a^2$, $(-3b)^3 = -27 b^3$.",
+        "Combine: $10 \\cdot a^2 \\cdot (-27 b^3) = -270 a^2 b^3$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q22",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Find the 2nd term in the expansion of } (2x - 1)^6.",
+      "choices": [
+        "$192 x^5$",
+        "$-192 x^5$",
+        "$-12 x^5$",
+        "$-32 x^6$"
+      ],
+      "choicesTex": false,
+      "answerIndex": 1,
+      "hints": [
+        "2nd term ⇒ $k = 1$.",
+        "Term $= \\binom{6}{1} (2x)^5 (-1)^1 = 6 \\cdot 32 x^5 \\cdot (-1)$."
+      ],
+      "explanation": "2nd term ⇒ $k = 1$. Term $= \\binom{6}{1} (2x)^{6-1} (-1)^1 = 6 \\cdot 32 x^5 \\cdot (-1) = -192 x^5$.",
+      "steps": [
+        "General term in $(A + B)^n$: $\\binom{n}{k} A^{n-k} B^k$ with $A = 2x$, $B = -1$, $n = 6$.",
+        "2nd term ⇒ $k = 1$.",
+        "$\\binom{6}{1} = 6$, $(2x)^5 = 32 x^5$, $(-1)^1 = -1$.",
+        "Combine: $6 \\cdot 32 x^5 \\cdot (-1) = -192 x^5$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q23",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Expand completely: } (3y - 1)^4.",
+      "choices": [
+        "$81y^4 - 108y^3 + 54y^2 - 12y + 1$",
+        "$81y^4 + 108y^3 + 54y^2 + 12y + 1$",
+        "$81y^4 - 12y^3 + 54y^2 - 108y + 1$",
+        "$3y^4 - 12y^3 + 54y^2 - 108y + 1$"
+      ],
+      "choicesTex": false,
+      "answerIndex": 0,
+      "hints": [
+        "Use $\\binom{4}{k} (3y)^{4-k} (-1)^k$ for $k = 0, 1, 2, 3, 4$.",
+        "Coefficients from row 4 of Pascal: $1, 4, 6, 4, 1$. Then sign alternates because of $-1$."
+      ],
+      "explanation": "$\\binom{4}{k} (3y)^{4-k} (-1)^k$ for each $k$:\n- $k=0$: $81y^4$\n- $k=1$: $4 \\cdot 27y^3 \\cdot (-1) = -108y^3$\n- $k=2$: $6 \\cdot 9y^2 \\cdot 1 = 54y^2$\n- $k=3$: $4 \\cdot 3y \\cdot (-1) = -12y$\n- $k=4$: $1$\n\n$(3y - 1)^4 = 81y^4 - 108y^3 + 54y^2 - 12y + 1$. Signs alternate because of $(-1)^k$.",
+      "steps": [
+        "Row 4 of Pascal: $1, 4, 6, 4, 1$.",
+        "Compute each term $\\binom{4}{k} (3y)^{4-k} (-1)^k$.",
+        "$k=0$: $1 \\cdot 81y^4 \\cdot 1 = 81y^4$.",
+        "$k=1$: $4 \\cdot 27y^3 \\cdot (-1) = -108y^3$.",
+        "$k=2$: $6 \\cdot 9y^2 \\cdot 1 = 54y^2$.",
+        "$k=3$: $4 \\cdot 3y \\cdot (-1) = -12y$.",
+        "$k=4$: $1 \\cdot 1 \\cdot 1 = 1$.",
+        "Sum: $81y^4 - 108y^3 + 54y^2 - 12y + 1$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q24",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Expand completely: } (u + 4v)^4.",
+      "choices": [
+        "$u^4 + 4u^3 v + 6u^2 v^2 + 4u v^3 + v^4$",
+        "$u^4 + 16u^3 v + 96u^2 v^2 + 256 u v^3 + 256 v^4$",
+        "$u^4 + 16u^3 v + 24u^2 v^2 + 16 u v^3 + 256 v^4$",
+        "$u^4 + 4u^3 v + 16u^2 v^2 + 64 u v^3 + 256 v^4$"
+      ],
+      "choicesTex": false,
+      "answerIndex": 1,
+      "hints": [
+        "Use $\\binom{4}{k} u^{4-k} (4v)^k$.",
+        "Watch the powers of $4$: $(4v)^k = 4^k v^k$ — they grow quickly: $1, 4, 16, 64, 256$."
+      ],
+      "explanation": "$\\binom{4}{k} u^{4-k} (4v)^k$ for each $k$:\n- $k=0$: $u^4$\n- $k=1$: $4 \\cdot u^3 \\cdot 4v = 16 u^3 v$\n- $k=2$: $6 \\cdot u^2 \\cdot 16 v^2 = 96 u^2 v^2$\n- $k=3$: $4 \\cdot u \\cdot 64 v^3 = 256 u v^3$\n- $k=4$: $1 \\cdot 256 v^4 = 256 v^4$\n\n$(u + 4v)^4 = u^4 + 16 u^3 v + 96 u^2 v^2 + 256 u v^3 + 256 v^4$. Common error: forgetting to raise the $4$ in $4v$ to the $k$-th power.",
+      "steps": [
+        "Row 4 of Pascal: $1, 4, 6, 4, 1$.",
+        "Powers of $4v$: $(4v)^k = 4^k v^k$ — values $1, 4, 16, 64, 256$.",
+        "$k=0$: $u^4$.",
+        "$k=1$: $4 \\cdot u^3 \\cdot 4v = 16 u^3 v$.",
+        "$k=2$: $6 \\cdot u^2 \\cdot 16 v^2 = 96 u^2 v^2$.",
+        "$k=3$: $4 \\cdot u \\cdot 64 v^3 = 256 u v^3$.",
+        "$k=4$: $1 \\cdot 256 v^4 = 256 v^4$.",
+        "Sum: $u^4 + 16 u^3 v + 96 u^2 v^2 + 256 u v^3 + 256 v^4$."
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

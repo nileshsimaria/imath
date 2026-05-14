@@ -1,0 +1,81 @@
+{
+  "title": "Triangle Properties",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "A **triangle** is a three-sided polygon — three sides, three angles. Triangles are the simplest polygon, and they're rigid: once you fix the lengths of the three sides, the shape is completely determined. That makes them the building block for nearly all geometry."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The angle-sum theorem",
+      "body": "**The three angles of any triangle sum to exactly 180°.** No exceptions, regardless of size or shape."
+    },
+    {
+      "type": "math",
+      "tex": "\\angle A + \\angle B + \\angle C = 180°"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Drag the vertices below and watch the three angles. The values change, but their sum stays at 180° — exactly."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "triangle-explorer",
+      "config": {
+        "vertexA": [
+          -3,
+          -1
+        ],
+        "vertexB": [
+          3,
+          -1
+        ],
+        "vertexC": [
+          0,
+          3
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Classifying triangles by angles",
+        "**Acute**: all three angles less than 90°.",
+        "**Right**: exactly one angle equals 90°.",
+        "**Obtuse**: exactly one angle greater than 90°.",
+        "(There can be only one right or obtuse angle — if there were two, their sum would already be ≥ 180°, leaving nothing for the third.)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Classifying triangles by sides",
+        "**Equilateral**: all three sides equal length. (Then all three angles equal 60°.)",
+        "**Isosceles**: at least two sides equal. (The angles opposite the equal sides are equal too.)",
+        "**Scalene**: all three sides different lengths. (All angles different too.)"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The triangle inequality",
+      "body": "For any triangle with sides $a$, $b$, $c$: **the sum of any two sides must be greater than the third**. $a + b > c$, $b + c > a$, $a + c > b$. If those don't all hold, you can't form a triangle from those side lengths."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example",
+        "Two angles of a triangle measure 35° and 65°. What's the third angle?",
+        "Angle sum: $35 + 65 + x = 180 \\Rightarrow x = 80°$. Since none of the three angles exceeds 90°, this is an **acute** triangle."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "Three sides, three angles, **angles sum to 180°**. Classify by angles (acute/right/obtuse) and by sides (equilateral/isosceles/scalene). Triangle inequality: each side is less than the sum of the other two. These rules constrain everything else in geometry."
+    }
+  ]
+}

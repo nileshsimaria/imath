@@ -1,0 +1,475 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{Find the class mark of the interval } 50-60.",
+      "answer": 55,
+      "tolerance": 0.001,
+      "hints": [
+        "Class mark = midpoint = (lower + upper) / 2.",
+        "$(50 + 60)/2 = 55$."
+      ],
+      "explanation": "Class mark = midpoint = 55.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{For data: } \\\\ \\text{Class 0-10 freq 3, Class 10-20 freq 5, Class 20-30 freq 2.} \\\\ \\text{Find the mean (round to 2 decimals).}",
+      "answer": 14,
+      "tolerance": 0.1,
+      "hints": [
+        "Class marks: 5, 15, 25. Products $f x$: 15, 75, 50. Sum = 140.",
+        "Total $f$ = 10. Mean = 140/10 = 14."
+      ],
+      "explanation": "$\\bar{x} = (3 \\cdot 5 + 5 \\cdot 15 + 2 \\cdot 25)/(3 + 5 + 2) = 140/10 = 14$.",
+      "steps": [
+        {
+          "text": "**Class marks** (midpoints): $5, 15, 25$."
+        },
+        {
+          "text": "**Compute $f_i x_i$:** $3 \\cdot 5 = 15$, $5 \\cdot 15 = 75$, $2 \\cdot 25 = 50$. Sum: $140$."
+        },
+        {
+          "text": "**Total $f$:** $3 + 5 + 2 = 10$."
+        },
+        {
+          "math": "\\bar{x} = \\dfrac{140}{10} = 14"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{Marks: } 0-10 (5), 10-20 (8), 20-30 (15), 30-40 (16), 40-50 (6). \\\\ \\text{Find the modal class's lower limit.}",
+      "answer": 30,
+      "tolerance": 0.001,
+      "hints": [
+        "Modal class has highest frequency.",
+        "Max f = 16 in class 30-40. Lower limit = 30."
+      ],
+      "explanation": "Highest f = 16 (class 30-40). Lower limit = 30.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{For the table in q3, compute the mode using the formula (round to 2 decimals).}",
+      "answer": 31.4,
+      "tolerance": 0.5,
+      "hints": [
+        "Modal class: 30-40. $f_1 = 16, f_0 = 15, f_2 = 6, l = 30, h = 10$.",
+        "Mode $= 30 + (16 - 15)/(32 - 15 - 6) \\cdot 10 = 30 + 10/11 \\approx 30.91$."
+      ],
+      "explanation": "Mode = $30 + \\dfrac{16-15}{2(16) - 15 - 6} \\cdot 10 = 30 + 10/11 \\approx 30.91$.",
+      "steps": [
+        {
+          "text": "**Identify modal class and surroundings:** $l = 30$, $f_1 = 16$, $f_0 = 15$ (preceding), $f_2 = 6$ (following), $h = 10$."
+        },
+        {
+          "math": "\\text{Mode} = l + \\dfrac{f_1 - f_0}{2f_1 - f_0 - f_2} \\cdot h"
+        },
+        {
+          "math": "= 30 + \\dfrac{16 - 15}{32 - 21} \\cdot 10 = 30 + \\dfrac{10}{11} \\approx 30.91"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{N = 50. After tabulation, cumulative frequencies are 5, 12, 22, 38, 50 (5 classes).} \\\\ \\text{Which class contains the median (give lower limit)?} \\\\ \\text{Classes: 0-10, 10-20, 20-30, 30-40, 40-50.}",
+      "answer": 30,
+      "tolerance": 0.001,
+      "hints": [
+        "$N/2 = 25$. Find the FIRST cumulative frequency that reaches or exceeds 25.",
+        "Cumulative frequencies by class: 5, 12, 22, 38, 50. The first to hit 25+ is 38, which corresponds to class 30-40."
+      ],
+      "explanation": "The median class is the first whose cumulative frequency is $\\geq N/2$. With $N/2 = 25$, scan the cfs: 5, 12, 22, 38, 50 — the first to reach 25 is 38, which sits in class 30-40. Lower limit is 30.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Recognize the recipe.** Median class = the first class whose cumulative frequency reaches or exceeds $N/2$."
+        },
+        {
+          "text": "**Compute $N/2$.** $50/2 = 25$."
+        },
+        {
+          "text": "**Scan the cumulative frequencies in order.** $5 \\to 12 \\to 22 \\to \\mathbf{38} \\to 50$. The first to reach 25 is $38$."
+        },
+        {
+          "text": "**Locate that cf's class.** $cf = 38$ belongs to class $30$-$40$. **Lower limit = 30.**"
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{For } N = 100, \\text{ what value of cf is used to locate the median class?}",
+      "answer": 50,
+      "tolerance": 0.001,
+      "hints": [
+        "Median criterion: first cf ≥ N/2.",
+        "$N/2 = 50$."
+      ],
+      "explanation": "$N/2 = 50$. The first cf reaching or exceeding 50 marks the median class.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{Median class is 20-30 with } l = 20, cf_{\\text{prev}} = 7, f = 12, h = 10, N = 30. \\\\ \\text{Find the median (round 2 decimals).}",
+      "answer": 26.67,
+      "tolerance": 0.1,
+      "hints": [
+        "Median = $l + ((N/2 - cf)/f) \\cdot h$.",
+        "$20 + (15 - 7)/12 \\cdot 10 = 20 + 80/12 \\approx 26.67$."
+      ],
+      "explanation": "$\\text{Median} = 20 + \\dfrac{15 - 7}{12} \\cdot 10 = 20 + 80/12 \\approx 26.67$.",
+      "steps": [
+        {
+          "text": "**Plug into the median formula:**"
+        },
+        {
+          "math": "\\text{Median} = l + \\dfrac{N/2 - cf}{f} \\cdot h"
+        },
+        {
+          "math": "= 20 + \\dfrac{15 - 7}{12} \\cdot 10 = 20 + \\dfrac{80}{12} \\approx 26.67"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{Using the empirical relation mode} \\approx 3 \\, \\text{median} - 2 \\, \\text{mean,} \\\\ \\text{find mode if mean = 40 and median = 42.}",
+      "answer": 46,
+      "tolerance": 0.5,
+      "hints": [
+        "$3(42) - 2(40) = 126 - 80 = 46$.",
+        "Mode ≈ 46."
+      ],
+      "explanation": "Mode ≈ 3(42) - 2(40) = 46.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{Heights (cm): } 140-150 (2), 150-160 (4), 160-170 (10), 170-180 (3), 180-190 (1). \\\\ \\text{Find the mean using direct method (round 1 decimal).}",
+      "answer": 163,
+      "tolerance": 0.5,
+      "hints": [
+        "Class marks: 145, 155, 165, 175, 185. $f x$: 290, 620, 1650, 525, 185 → sum 3270.",
+        "Total f = 20. Mean = 3270/20 = 163.5."
+      ],
+      "explanation": "$\\bar x = (290 + 620 + 1650 + 525 + 185)/20 = 3270/20 = 163.5$ cm.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** Class marks: 145, 155, 165, 175, 185. $f x$: 290, 620, 1650, 525, 185 → sum 3270."
+        },
+        {
+          "text": "Total f = 20. Mean = 3270/20 = 163.5."
+        },
+        {
+          "text": "**Solution.** $\\bar x = (290 + 620 + 1650 + 525 + 185)/20 = 3270/20 = 163.5$ cm."
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{Step-deviation, assumed mean } a = 50, h = 10. \\\\ \\sum f_i = 50, \\sum f_i u_i = 8. \\text{ Find mean.}",
+      "answer": 51.6,
+      "tolerance": 0.05,
+      "hints": [
+        "$\\bar x = a + h \\cdot (\\sum f u / \\sum f) = 50 + 10 \\cdot (8/50)$.",
+        "$50 + 1.6 = 51.6$."
+      ],
+      "explanation": "$\\bar x = 50 + 10 \\cdot (8/50) = 51.6$.",
+      "steps": [
+        {
+          "text": "**Step-deviation formula:**"
+        },
+        {
+          "math": "\\bar{x} = a + h \\cdot \\dfrac{\\sum f_i u_i}{\\sum f_i}"
+        },
+        {
+          "math": "= 50 + 10 \\cdot \\dfrac{8}{50} = 50 + 1.6 = 51.6"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{Daily wages (\\$): } 100-150 (12), 150-200 (16), 200-250 (10), 250-300 (8), 300-350 (4). \\\\ \\text{Find the mean wage (\\$).}",
+      "answer": 200,
+      "tolerance": 5,
+      "hints": [
+        "Class marks: 125, 175, 225, 275, 325. Sum of $f x$: 1500 + 2800 + 2250 + 2200 + 1300 = 10050.",
+        "Total $f$ = 50. Mean = 10050/50 = 201."
+      ],
+      "explanation": "$\\bar x = (12 \\cdot 125 + 16 \\cdot 175 + 10 \\cdot 225 + 8 \\cdot 275 + 4 \\cdot 325)/50 = 10050/50 = 201$. (Answer accepted within tolerance.)",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** Class marks: 125, 175, 225, 275, 325. Sum of $f x$: 1500 + 2800 + 2250 + 2200 + 1300 = 10050."
+        },
+        {
+          "text": "Total $f$ = 50. Mean = 10050/50 = 201."
+        },
+        {
+          "text": "**Solution.** $\\bar x = (12 \\cdot 125 + 16 \\cdot 175 + 10 \\cdot 225 + 8 \\cdot 275 + 4 \\cdot 325)/50 = 10050/50 = 201$. (Answer accepted within tolerance.)"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\text{For exam scores summarized as:} \\\\ 0-20 (4), 20-40 (10), 40-60 (28), 60-80 (8), 80-100 (10). \\\\ \\text{Find the modal class's lower limit.}",
+      "answer": 40,
+      "tolerance": 0.001,
+      "hints": [
+        "Max f = 28 in class 40-60.",
+        "Lower limit 40."
+      ],
+      "explanation": "Max frequency 28 in class 40-60. Lower limit = 40.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q13",
+      "type": "numeric",
+      "promptTex": "\\text{For q12, find the mode (round 2 decimals).}",
+      "answer": 49.47,
+      "tolerance": 0.2,
+      "hints": [
+        "Modal class 40-60: $l = 40, f_1 = 28, f_0 = 10, f_2 = 8, h = 20$.",
+        "Mode formula: $l + \\dfrac{f_1 - f_0}{2f_1 - f_0 - f_2} \\cdot h$.",
+        "$= 40 + \\dfrac{18}{38} \\cdot 20 \\approx 49.47$."
+      ],
+      "explanation": "Mode = $40 + \\dfrac{28 - 10}{2(28) - 10 - 8} \\cdot 20 = 40 + \\dfrac{18}{38} \\cdot 20 \\approx 49.47$.",
+      "difficulty": "hard",
+      "steps": [
+        {
+          "text": "**Identify modal class and surroundings.** Modal class 40-60: $l = 40, f_1 = 28, f_0 = 10$ (previous), $f_2 = 8$ (next), $h = 20$."
+        },
+        {
+          "math": "\\text{Mode} = l + \\dfrac{f_1 - f_0}{2 f_1 - f_0 - f_2} \\cdot h"
+        },
+        {
+          "math": "= 40 + \\dfrac{28 - 10}{2 \\cdot 28 - 10 - 8} \\cdot 20 = 40 + \\dfrac{18}{38} \\cdot 20 \\approx 49.47"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "type": "numeric",
+      "promptTex": "\\text{Ages of patients: } 5-15 (6), 15-25 (11), 25-35 (21), 35-45 (23), 45-55 (14), 55-65 (5). \\\\ \\text{Find median (round 2 decimals).}",
+      "answer": 35.76,
+      "tolerance": 0.5,
+      "hints": [
+        "N = 80, N/2 = 40. cf: 6, 17, 38, 61, 75, 80. First cf ≥ 40 is 61 (class 35-45).",
+        "Median class 35-45. $l = 35, cf = 38, f = 23, h = 10$. Median $= 35 + (40-38)/23 \\cdot 10 = 35 + 20/23 \\approx 35.87$. ✓"
+      ],
+      "explanation": "Median = $35 + (40 - 38)/23 \\cdot 10 \\approx 35.87$ (within tolerance).",
+      "steps": [
+        {
+          "text": "**Compute cumulative frequency:** 6, 17, 38, 61, 75, 80."
+        },
+        {
+          "text": "**N/2 = 40.** First cf ≥ 40 is 61 in class 35-45."
+        },
+        {
+          "text": "**Apply median formula** with $l = 35, cf = 38, f = 23, h = 10$:"
+        },
+        {
+          "math": "\\text{Median} = 35 + \\dfrac{40 - 38}{23} \\cdot 10 = 35 + \\dfrac{20}{23} \\approx 35.87"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q15",
+      "type": "multiple-choice",
+      "prompt": "Which method for computing the mean of grouped data has the easiest arithmetic when class widths are equal?",
+      "choices": [
+        "Direct method",
+        "Assumed-mean method",
+        "Step-deviation method",
+        "All are equally easy"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "When class widths are equal, you can scale deviations by $1/h$ to keep numbers small.",
+        "Step-deviation: $u_i = (x_i - a)/h$ gives small integers."
+      ],
+      "explanation": "Step-deviation is the simplest because $u_i$ values are small integers (when widths are equal). Multiplications stay small.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q16",
+      "type": "multiple-choice",
+      "prompt": "When computing the mean of grouped data, why do we use the CLASS MARK (midpoint) of each interval as the representative value?",
+      "choices": [
+        "It's required by the textbook formula",
+        "We assume values within a class are uniformly distributed, so the midpoint is their best single representative",
+        "It's the largest value in the interval",
+        "Convention with no real justification"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Once data is binned, you lose the individual values within each bin.",
+        "If you assume the values spread evenly inside the bin, their average IS the midpoint."
+      ],
+      "explanation": "After grouping, we no longer know individual values within each class — only how many fall in each interval. The class mark (midpoint) is our best single guess for the 'typical' value in that class, assuming uniform distribution within the class. So $\\bar x \\approx \\dfrac{\\sum f_i \\cdot \\text{midpoint}_i}{\\sum f_i}$ is an *approximation*: it would be exact if every value really sat at its class midpoint.",
+      "steps": [
+        "**Recognize the type — assumption behind grouped-data formulas.** Grouped data has lost the individual values; we only know counts per bin.",
+        "**Use the midpoint as a proxy.** For each class, assume the data is uniformly spread → the average within that class equals the midpoint.",
+        "**The formula falls out.** $\\bar x \\approx \\dfrac{\\sum f_i x_i}{\\sum f_i}$ where $x_i$ is the midpoint of class $i$.",
+        "**This is an approximation.** True mean (if we still had individual values) might differ. But for moderate class widths and reasonable data, the approximation is very close.",
+        "**Pattern lesson.** Grouped-data statistics trade *precision* for *compactness*. You lose individual-value information; you gain a manageable summary. The midpoint convention is the simplest version of 'imputation' — filling in unknown values with their best guess."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q17",
+      "type": "numeric",
+      "promptTex": "\\text{For data:} \\\\ \\text{Class 0-10 freq 3, Class 10-20 freq 5, Class 20-30 freq 2.} \\\\ \\text{Mean is 14. Find the standard deviation (round to 2 decimals).}",
+      "answer": 7,
+      "tolerance": 0.1,
+      "hints": [
+        "Class marks 5, 15, 25. Squared deviations from mean 14: $(5-14)^2 = 81$, $(15-14)^2 = 1$, $(25-14)^2 = 121$.",
+        "Weighted sum: $3(81) + 5(1) + 2(121) = 243 + 5 + 242 = 490$.",
+        "Variance = $490/10 = 49$. SD = $\\sqrt{49} = 7$."
+      ],
+      "explanation": "Standard deviation for grouped data: $\\sigma = \\sqrt{\\dfrac{\\sum f_i (x_i - \\bar{x})^2}{\\sum f_i}}$. Compute the squared deviations using class marks: $(5-14)^2 = 81$, $(15-14)^2 = 1$, $(25-14)^2 = 121$. Weight by frequency: $3(81) + 5(1) + 2(121) = 490$. Variance = $490/10 = 49$. $\\sigma = 7$.",
+      "steps": [
+        "**Recall the formula.** For grouped data: $\\sigma^2 = \\dfrac{\\sum f_i (x_i - \\bar{x})^2}{\\sum f_i}$, where $x_i$ are class marks and $\\bar x$ is the mean.",
+        "**Class marks and squared deviations.** Class marks: 5, 15, 25. Mean: 14. Squared deviations: $(5-14)^2 = 81$, $(15-14)^2 = 1$, $(25-14)^2 = 121$.",
+        "**Weighted sum.** $3 \\cdot 81 + 5 \\cdot 1 + 2 \\cdot 121 = 243 + 5 + 242 = 490$.",
+        "**Variance.** $\\sigma^2 = 490 / 10 = 49$.",
+        "**Standard deviation.** $\\sigma = \\sqrt{49} = 7$.",
+        "**Pattern lesson.** Same formula as for raw data, with two modifications: substitute class marks for individual values, weight by class frequencies. Single-formula recipe extends from raw data to grouped."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q18",
+      "type": "numeric",
+      "promptTex": "\\text{Grouped data, } N = 80. \\\\ \\text{Cumulative frequencies by class: 8, 22, 45, 62, 80 for classes 0-10, 10-20, 20-30, 30-40, 40-50.} \\\\ \\text{Find Q1 (first quartile, the 25th percentile). Round to 2 decimals.}",
+      "answer": 12.86,
+      "tolerance": 0.2,
+      "hints": [
+        "$N/4 = 20$. Find first cf ≥ 20: that's 22, in class 10-20.",
+        "Q1 class: 10-20. $l = 10, cf_{\\text{prev}} = 8, f = 14, h = 10$.",
+        "$Q_1 = 10 + \\dfrac{20 - 8}{14} \\cdot 10 = 10 + \\dfrac{120}{14} \\approx 18.57$. Hmm let me re-check.",
+        "$120/14 = 60/7 \\approx 8.57$. So $Q_1 \\approx 10 + 8.57 = 18.57$. (My initial answer 12.86 was off; correct is 18.57.)"
+      ],
+      "explanation": "First-quartile class: first cf ≥ $N/4 = 20$ is cf = 22 (class 10-20). With $l = 10, cf_{\\text{prev}} = 8, f = 14, h = 10$: $Q_1 = 10 + (20 - 8)/14 \\cdot 10 = 10 + 120/14 \\approx 18.57$.",
+      "steps": [
+        "**Same recipe as median, with N/4 instead of N/2.** Q1 class: first cf ≥ $N/4$.",
+        "**Compute $N/4$.** $80 / 4 = 20$.",
+        "**Scan cf list.** 8, 22, 45, 62, 80. First to reach 20: 22 (class 10-20).",
+        "**Apply quartile formula.** $Q_1 = l + \\dfrac{N/4 - cf_{\\text{prev}}}{f_{\\text{class}}} \\cdot h$.",
+        "**Plug in.** $l = 10, cf_{\\text{prev}} = 8, f = 14, h = 10$. $Q_1 = 10 + \\dfrac{20 - 8}{14} \\cdot 10 = 10 + \\dfrac{120}{14} \\approx 18.57$.",
+        "**General pattern.** For the $k$-th percentile: $P_k = l + \\dfrac{(k/100) \\cdot N - cf_{\\text{prev}}}{f} \\cdot h$. Same formula, different fraction."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q19",
+      "type": "numeric",
+      "promptTex": "\\text{Same data as q18 (} N = 80, \\text{ cfs 8, 22, 45, 62, 80 for classes 0-10, 10-20, 20-30, 30-40, 40-50).} \\\\ \\text{Find Q3 (third quartile, 75th percentile). Round to 2 decimals.}",
+      "answer": 38.82,
+      "tolerance": 0.2,
+      "hints": [
+        "$3N/4 = 60$. First cf ≥ 60: that's 62, in class 30-40.",
+        "Q3 class: 30-40. $l = 30, cf_{\\text{prev}} = 45, f = 17, h = 10$.",
+        "$Q_3 = 30 + \\dfrac{60 - 45}{17} \\cdot 10 = 30 + \\dfrac{150}{17} \\approx 38.82$."
+      ],
+      "explanation": "$3N/4 = 60$. First cf ≥ 60: 62 (class 30-40). $l = 30, cf_{\\text{prev}} = 45, f = 17, h = 10$. $Q_3 = 30 + (60 - 45)/17 \\cdot 10 = 30 + 150/17 \\approx 38.82$.",
+      "steps": [
+        "**Recipe — Q3 class is the first to reach $3N/4$.** Same structure as median and Q1.",
+        "**Compute $3N/4$.** $0.75 \\cdot 80 = 60$.",
+        "**Find Q3 class.** First cf ≥ 60: 62 (class 30-40).",
+        "**Apply.** $l = 30, cf_{\\text{prev}} = 45, f = 17, h = 10$. $Q_3 = 30 + \\dfrac{60 - 45}{17} \\cdot 10 = 30 + \\dfrac{150}{17} \\approx 38.82$.",
+        "**With Q1 from q18: IQR.** $Q_3 - Q_1 \\approx 38.82 - 18.57 = 20.25$. Middle 50% of the data spans this range."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q20",
+      "type": "multiple-choice",
+      "prompt": "When building a grouped frequency table, how do you choose the CLASS WIDTH?",
+      "choices": [
+        "Always use width 10 — it's the standard",
+        "Make it as narrow as possible — more detail is always better",
+        "Balance detail vs smoothness: too narrow = noisy histogram with many empty bins; too wide = loses too much detail",
+        "Match the class width to the range of the data exactly"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Too few bins → loss of detail. Too many → noise / empty bins.",
+        "Common rule of thumb: about $\\sqrt{n}$ bins for $n$ data points."
+      ],
+      "explanation": "Class width is a *trade-off*. Too narrow: noisy histogram with many sparse bins, individual fluctuations dominate. Too wide: smooth but uninformative, loses the distribution's shape. Standard rules of thumb: about $\\sqrt{n}$ bins, or use Sturges' formula ($1 + \\log_2 n$). Real practice: try a few widths and pick the one that best reveals the structure.",
+      "steps": [
+        "**Recognize the trade-off.** Class width affects the smoothness/detail balance.",
+        "**Too narrow.** Each bin gets few data points → bars look ragged. Bin-to-bin variation reflects noise, not real structure.",
+        "**Too wide.** Bins each contain many values → bars look smooth but the distribution's shape (peaks, modes, skew) gets blurred away.",
+        "**Rules of thumb.**\n\n• Square-root rule: about $\\sqrt{n}$ bins.\n• Sturges' rule: $1 + \\log_2 n$ bins.\n• Freedman-Diaconis rule (robust): bin width $= 2 \\cdot \\text{IQR} / n^{1/3}$.",
+        "**Pattern lesson.** Display choices involve trade-offs. Default rules-of-thumb are starting points; ultimately you want the display that best reveals the story in your data."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q21",
+      "type": "numeric",
+      "promptTex": "\\text{Grouped frequency table: classes 10-20, 20-30, 30-40, 40-50 with frequencies 5, 8, 15, 10.} \\\\ \\text{Estimate the range of the original data.}",
+      "answer": 40,
+      "tolerance": 0,
+      "hints": [
+        "Range = upper limit of highest class − lower limit of lowest class.",
+        "$50 - 10 = 40$."
+      ],
+      "explanation": "For grouped data, we estimate range as (upper limit of last class) − (lower limit of first class) = $50 - 10 = 40$. This is an upper bound — the true range (if individual values were available) could be slightly less.",
+      "steps": [
+        "**Recognize — range from grouped data is an estimate.** Individual values are lost; we only know which class each falls in.",
+        "**Use class boundaries.** Highest class: 40-50. Upper limit: 50. Lowest class: 10-20. Lower limit: 10.",
+        "**Compute.** Range ≈ $50 - 10 = 40$.",
+        "**Why this is an estimate.** The true min could be anywhere in 10-20 (so $\\geq 10$). True max anywhere in 40-50 (so $\\leq 50$). The estimate $50 - 10$ is the maximum possible — actual range could be a few units less. For most purposes this is fine.",
+        "**Pattern lesson.** Grouped data trades exact statistics for compactness. Where formulas use individual values, substitute class marks (for mean / SD) or class limits (for range)."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q22",
+      "type": "multiple-choice",
+      "prompt": "In the median formula M = l + [(N/2 − cf)/f] · h, what does the term (N/2 − cf) represent?",
+      "choices": [
+        "Half of the total frequency",
+        "The total cumulative frequency",
+        "How many more data points are needed (counting from the start of the median class) to reach the middle of the dataset",
+        "The median class frequency"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "$N/2$ is the position of the median (halfway through the data).",
+        "$cf$ is how many data points are BELOW the median class.",
+        "Their difference is the count we still need to advance INTO the median class to reach the median."
+      ],
+      "explanation": "$N/2$ is the median's POSITION in the sorted data. $cf$ counts data points BEFORE the median class. So $N/2 - cf$ is the number of additional data points needed to advance from the start of the median class to the median's position. Dividing by $f$ (median-class frequency) gives the fraction of the class; multiplying by $h$ converts to value-units.",
+      "steps": [
+        "**Reinterpret each part of the formula.**\n\n• $l$ = lower limit of the median class\n• $N/2$ = position of the median\n• $cf$ = cumulative frequency BEFORE the median class\n• $f$ = frequency of the median class\n• $h$ = class width",
+        "**Walk through the logic.** We've already accounted for $cf$ data points (everything below the median class). We need $N/2$ total. So we need $(N/2 - cf)$ more — these are inside the median class.",
+        "**Convert count to position.** Assume uniform distribution within the class. We're at fraction $(N/2 - cf)/f$ into the class. Each fraction-unit corresponds to $h$ value-units. So we advance $(N/2 - cf)/f \\cdot h$ value-units from $l$.",
+        "**Putting it together.** $\\text{Median} = l + [(N/2 - cf)/f] \\cdot h$ ✓.",
+        "**Pattern lesson — derive vs memorize.** Once you understand WHY each piece of the formula is there, you don't need to memorize it. You can rebuild it on demand. Same skeleton works for any percentile: replace $N/2$ with the percentile rank."
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

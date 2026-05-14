@@ -1,0 +1,273 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve: } (x - 5)(x + 2) = 0",
+      "choices": [
+        "x = 5 \\text{ or } x = 2",
+        "x = -5 \\text{ or } x = 2",
+        "x = 5 \\text{ or } x = -2",
+        "x = -5 \\text{ or } x = -2"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "Set each factor to zero.",
+        "$x - 5 = 0$ gives $x = 5$. $x + 2 = 0$ gives $x = -2$."
+      ],
+      "explanation": "Zero product: $x - 5 = 0$ or $x + 2 = 0$. So $x = 5$ or $x = -2$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve: } x^2 - 7x + 12 = 0",
+      "choices": [
+        "x = 3 \\text{ or } x = 4",
+        "x = -3 \\text{ or } x = -4",
+        "x = 6 \\text{ or } x = 2",
+        "x = 12 \\text{ or } x = -7"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Factor: find two numbers with sum $-7$ and product $12$.",
+        "Both negative: $-3$ and $-4$. So $(x - 3)(x - 4) = 0$."
+      ],
+      "explanation": "Factor: $x^2 - 7x + 12 = (x - 3)(x - 4)$. Set each to zero: $x = 3$ or $x = 4$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** Factor: find two numbers with sum $-7$ and product $12$."
+        },
+        {
+          "text": "Both negative: $-3$ and $-4$. So $(x - 3)(x - 4) = 0$."
+        },
+        {
+          "text": "**Solution.** Factor: $x^2 - 7x + 12 = (x - 3)(x - 4)$. Set each to zero: $x = 3$ or $x = 4$."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve: } x^2 = 9",
+      "choices": [
+        "x = 3",
+        "x = -3",
+        "x = 3 \\text{ or } x = -3",
+        "x = 9"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "Move everything to one side: $x^2 - 9 = 0$.",
+        "Difference of squares: $x^2 - 9 = (x + 3)(x - 3)$."
+      ],
+      "explanation": "$x^2 - 9 = 0 \\Rightarrow (x + 3)(x - 3) = 0 \\Rightarrow x = -3$ or $x = 3$. Both work — squaring either gives $9$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve: } x^2 + 5x = 0",
+      "choices": [
+        "x = 0 \\text{ or } x = -5",
+        "x = 5",
+        "x = 0",
+        "x = -5"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Factor out the GCF: $x(x + 5) = 0$.",
+        "Don't forget — $x = 0$ is a valid solution."
+      ],
+      "explanation": "$x^2 + 5x = x(x + 5) = 0$. So $x = 0$ or $x + 5 = 0$, giving $x = 0$ or $x = -5$. Both are solutions.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{What's the geometric meaning of solving } ax^2 + bx + c = 0?",
+      "choices": [
+        "Finding the y-intercept",
+        "Finding where the parabola crosses the y-axis",
+        "Finding where the parabola crosses the x-axis",
+        "Finding the vertex of the parabola"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Setting $y = 0$ means $y$-coordinate is zero.",
+        "Where on the graph does $y = 0$?"
+      ],
+      "explanation": "Setting $y = ax^2 + bx + c$ equal to zero asks: where does the parabola hit $y = 0$? That's the **x-axis**. So solving gives the **x-intercepts** (the roots).",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve: } x^2 + 5x + 6 = 0.",
+      "choices": [
+        "x = -2, -3",
+        "x = 2, 3",
+        "x = -1, -6",
+        "x = 1, 6"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Factor: two numbers that multiply to 6 and add to 5: $2, 3$.",
+        "$(x + 2)(x + 3) = 0 \\Rightarrow x = -2$ or $x = -3$."
+      ],
+      "explanation": "Factors: $(x + 2)(x + 3) = 0$. Roots: $x = -2$ or $-3$.",
+      "steps": [
+        "Factor the quadratic: two numbers with product $6$ and sum $5$ → $2, 3$.",
+        "$(x + 2)(x + 3) = 0$.",
+        "Zero product property: $x + 2 = 0$ or $x + 3 = 0$.",
+        "$x = -2$ or $x = -3$."
+      ],
+      "id": "q6",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve: } x^2 - 2x - 8 = 0.",
+      "choices": [
+        "x = 4, -2",
+        "x = -4, 2",
+        "x = 4, 2",
+        "x = -4, -2"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Two numbers with product $-8$ and sum $-2$: $-4$ and $+2$.",
+        "$(x - 4)(x + 2) = 0$. Roots: $4, -2$."
+      ],
+      "explanation": "$(x - 4)(x + 2) = 0 \\Rightarrow x = 4$ or $x = -2$.",
+      "steps": [
+        "Factor: product $-8$, sum $-2$. Numbers: $-4, 2$.",
+        "$(x - 4)(x + 2) = 0$.",
+        "Solutions: $x = 4$ or $x = -2$."
+      ],
+      "id": "q7",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve: } x^2 - 9 = 0.",
+      "choices": [
+        "x = \\pm 3",
+        "x = 9",
+        "x = -9",
+        "x = \\pm 9"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Difference of squares: $(x - 3)(x + 3) = 0$.",
+        "$x = \\pm 3$."
+      ],
+      "explanation": "$(x - 3)(x + 3) = 0 \\Rightarrow x = 3$ or $x = -3$.",
+      "steps": [
+        "Recognize difference of squares: $x^2 - 9 = (x - 3)(x + 3) = 0$.",
+        "Solutions: $x = 3$ or $x = -3$, i.e., $x = \\pm 3$.",
+        "Or directly: $x^2 = 9 \\Rightarrow x = \\pm \\sqrt{9} = \\pm 3$."
+      ],
+      "id": "q8",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve: } 2x^2 + 8x = 0.",
+      "choices": [
+        "x = 0, -4",
+        "x = 0, 4",
+        "x = -4 only",
+        "x = 4 only"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Factor out $2x$: $2x(x + 4) = 0$.",
+        "$x = 0$ or $x = -4$."
+      ],
+      "explanation": "$2x(x + 4) = 0 \\Rightarrow x = 0$ or $x = -4$.",
+      "steps": [
+        "Factor out the GCF: $2x(x + 4) = 0$.",
+        "Zero product: $2x = 0$ or $x + 4 = 0$.",
+        "$x = 0$ or $x = -4$."
+      ],
+      "id": "q9",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve: } x^2 - 6x + 9 = 0.",
+      "choices": [
+        "x = 3 (double root)",
+        "$x = \\pm 3$",
+        "x = 9",
+        "No real solutions"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Perfect square trinomial: $(x - 3)^2 = 0$.",
+        "$x = 3$ (a single repeated root)."
+      ],
+      "explanation": "$(x - 3)^2 = 0 \\Rightarrow x = 3$ (a repeated root, multiplicity 2).",
+      "steps": [
+        "Recognize perfect square: $x^2 - 6x + 9 = (x - 3)^2$.",
+        "$(x - 3)^2 = 0 \\Rightarrow x - 3 = 0 \\Rightarrow x = 3$.",
+        "**One repeated root** at $x = 3$."
+      ],
+      "id": "q10",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve: } 3x^2 - 12x = 0.",
+      "choices": [
+        "x = 0, 4",
+        "x = 0, -4",
+        "x = 4 only",
+        "$x = \\pm 2$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Factor out GCF $3x$: $3x(x - 4) = 0$.",
+        "$x = 0$ or $x = 4$."
+      ],
+      "explanation": "$3x(x - 4) = 0 \\Rightarrow x = 0$ or $x = 4$.",
+      "steps": [
+        "GCF: $3x$. $3x^2 - 12x = 3x(x - 4) = 0$.",
+        "$3x = 0 \\Rightarrow x = 0$. $x - 4 = 0 \\Rightarrow x = 4$.",
+        "**$x = 0$ or $x = 4$**."
+      ],
+      "id": "q11",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve: } x^2 + x = 12.",
+      "choices": [
+        "x = 3, -4",
+        "x = -3, 4",
+        "x = 3, 4",
+        "x = -3, -4"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "First move all terms to one side: $x^2 + x - 12 = 0$.",
+        "Factor: product $-12$, sum $1$ → $4, -3$. So $(x + 4)(x - 3) = 0$."
+      ],
+      "explanation": "$x^2 + x - 12 = 0 \\Rightarrow (x + 4)(x - 3) = 0 \\Rightarrow x = 3$ or $x = -4$.",
+      "steps": [
+        "Move 12 to LHS: $x^2 + x - 12 = 0$.",
+        "Factor: product $-12$, sum $1$. Pair: $4, -3$ (sum $1$, product $-12$ ✓).",
+        "$(x + 4)(x - 3) = 0$.",
+        "$x = -4$ or $x = 3$."
+      ],
+      "id": "q12",
+      "difficulty": "medium"
+    }
+  ]
+}

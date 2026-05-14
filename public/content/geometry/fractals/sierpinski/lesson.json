@@ -1,0 +1,70 @@
+{
+  "title": "The Sierpinski Triangle",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### A triangle that's mostly holes",
+        "Take an equilateral triangle. Find the midpoints of each side, connect them — that splits the original into four smaller triangles. Now remove the middle (upside-down) one.",
+        "Repeat with each of the three remaining triangles: split into four, remove the middle. Then repeat again. And again. And again.",
+        "Forever.",
+        "What's left is the **Sierpinski triangle**, named after the Polish mathematician Wacław Sierpinski (1882–1969). It is the prototypical **fractal** — a shape with infinite detail at every scale."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "fractal-explorer",
+      "config": {
+        "mode": "sierpinski-triangle",
+        "iterations": 4
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "Drag the **Iterations** slider. At iteration 0 you see the original solid triangle. At iteration 1, the middle has been removed. By iteration 6, the pattern is so fine that the picture looks like a delicate fabric.",
+        "Mathematically, the Sierpinski triangle is the *limit* — what you'd get if you could keep going forever."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Each iteration counts the pieces",
+      "body": "At iteration $n$:\n\n- Total triangles: $3^n$\n- Side length of each: $1/2^n$ of the original\n- Total perimeter (of remaining pieces): $3 \\cdot (3/2)^n$ — grows without bound!\n- Total area: $(3/4)^n$ of original — shrinks to zero.\n\nThe Sierpinski triangle has **infinite perimeter and zero area**. Most of the original triangle has been removed, but the boundary is fractally complicated."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Three ways to build it",
+        "**(1) Removal.** Start solid; remove middle triangles forever (what we just did).",
+        "**(2) Three corner copies.** Start with one solid triangle. Make three smaller (half-size) copies at the three corners. Repeat with each.",
+        "**(3) Chaos game.** Start at a random point. Pick a random vertex of the triangle, move halfway toward it, plot a dot. Repeat thousands of times. The dots converge to fill out the Sierpinski triangle — even though the procedure looks random!",
+        "All three give exactly the same shape. That's a clue that the fractal has deep self-consistency."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Fractal dimension",
+      "body": "The Sierpinski triangle isn't 2-dimensional like a normal triangle. It's not 1-dimensional like a line either. It has **fractional dimension**:\n\n$d = \\dfrac{\\log 3}{\\log 2} \\approx 1.585$\n\nIntuition: at each scale, 1 piece is replaced by 3 pieces, each at half the size. The dimension is the number $d$ such that $3 = 2^d$, giving $d = \\log_2 3 \\approx 1.585$.\n\nFractal dimensions are what put the 'fractal' in 'fractal' (Benoit Mandelbrot, 1975)."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### It's hiding in Pascal's triangle!",
+        "Build Pascal's triangle (where each entry is the sum of the two above). Color each cell black if its value is odd, white if even.",
+        "**You get a Sierpinski triangle pattern.**",
+        "This is no coincidence: the parity of $\\binom{n}{k}$ follows a recursive structure that exactly mirrors Sierpinski's construction. Look up 'Pascal's triangle mod 2' and prepare to be amazed."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why fractals matter",
+        "**Coastlines, mountains, clouds, lightning** — natural shapes that aren't smooth (so calculus struggles) but aren't random either (so simple statistics fail). They're fractal.",
+        "**Data compression** — fractal image compression exploits self-similarity to encode complex images compactly.",
+        "**Computer graphics** — landscape generation, plant rendering, texture synthesis. Random fractals make convincing trees, mountains, terrain.",
+        "**Mathematical physics** — phase transitions, percolation, turbulence. Many natural critical phenomena are fractal at their critical point.",
+        "Sierpinski's little triangle is a doorway into all of this."
+      ]
+    }
+  ]
+}

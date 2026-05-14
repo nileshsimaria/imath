@@ -1,0 +1,269 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The Mean Value Theorem requires } f \\text{ to be:}",
+      "choices": [
+        "differentiable everywhere",
+        "continuous on [a, b] AND differentiable on (a, b)",
+        "polynomial",
+        "increasing"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Two conditions: continuous on closed, differentiable on open.",
+        ""
+      ],
+      "explanation": "MVT: continuous on the closed interval $[a, b]$ AND differentiable on the open interval $(a, b)$.",
+      "steps": [
+        "**MVT hypotheses (both required):**",
+        "  **1. $f$ continuous on the CLOSED interval $[a, b]$** (including endpoints).",
+        "  **2. $f$ differentiable on the OPEN interval $(a, b)$** (endpoints excluded — they don't need to be differentiable).",
+        "**Why the asymmetry between closed and open.** Continuity is needed at the endpoints so they're proper boundary values. Differentiability is needed only INSIDE because that's where the 'mean value' point $c$ will live.",
+        "**Conclusion of MVT.** There exists $c \\in (a, b)$ such that $f'(c) = \\dfrac{f(b) - f(a)}{b - a}$ — i.e., some interior point where the instantaneous slope equals the average slope."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{Apply MVT to } f(x) = x^2 \\text{ on } [1, 4]. \\\\ \\text{Find } c \\text{ where } f'(c) = \\text{average rate.}",
+      "answer": 2.5,
+      "tolerance": 0.05,
+      "hints": [
+        "Average: $(16 - 1)/3 = 5$. $f'(c) = 2c = 5 \\Rightarrow c = 2.5$.",
+        "$2.5$."
+      ],
+      "explanation": "Avg rate = $5$. $f'(c) = 2c = 5 \\Rightarrow c = 2.5$.",
+      "steps": [
+        "**MVT recipe — 3 steps.**",
+        "**Step 1: compute the AVERAGE rate of change over $[a, b]$.** $\\dfrac{f(b) - f(a)}{b - a} = \\dfrac{f(4) - f(1)}{4 - 1} = \\dfrac{16 - 1}{3} = 5$.",
+        "**Step 2: set $f'(c)$ equal to that average.** $f'(c) = 2c$. So $2c = 5 \\Rightarrow c = 2.5$.",
+        "**Step 3: verify $c$ is in the OPEN interval $(a, b)$.** $2.5 \\in (1, 4)$ ✓.",
+        "**Geometric meaning.** The secant line from $(1, 1)$ to $(4, 16)$ has slope 5. There's a point on the parabola (at $x = 2.5$) where the TANGENT has the SAME slope 5 — that tangent is parallel to the secant."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\lim_{x \\to 0} \\dfrac{\\sin x}{x} = ? \\text{ (Use L'Hôpital.)}",
+      "answer": 1,
+      "tolerance": 0,
+      "hints": [
+        "$0/0$. L'Hôpital: $\\cos x / 1 \\to 1$.",
+        "$1$."
+      ],
+      "explanation": "L'Hôpital on $0/0$: $\\lim \\cos(x)/1 = 1$.",
+      "steps": [
+        "**Always try direct substitution first.** $\\dfrac{\\sin 0}{0} = \\dfrac{0}{0}$ — indeterminate. Now L'Hôpital is applicable.",
+        "**L'Hôpital's rule.** Replace the limit $\\lim \\dfrac{f(x)}{g(x)}$ (when $0/0$ or $\\infty/\\infty$) with $\\lim \\dfrac{f'(x)}{g'(x)}$. Often resolves the indeterminate form.",
+        "**Differentiate top and bottom SEPARATELY** (not the quotient rule!).",
+        "  Top: $\\dfrac{d}{dx}(\\sin x) = \\cos x$.",
+        "  Bottom: $\\dfrac{d}{dx}(x) = 1$.",
+        "**Take the new limit.** $\\lim_{x \\to 0} \\dfrac{\\cos x}{1} = \\dfrac{\\cos 0}{1} = 1$.",
+        "**Famous limit.** $\\lim_{x \\to 0} \\dfrac{\\sin x}{x} = 1$ — used everywhere. Memorable."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\lim_{x \\to \\infty} \\dfrac{\\ln x}{x} = ? \\text{ (decimal)}",
+      "answer": 0,
+      "tolerance": 0,
+      "hints": [
+        "$\\infty/\\infty$. L'Hôpital: $(1/x)/1 = 1/x \\to 0$.",
+        "$0$."
+      ],
+      "explanation": "L'Hôpital on $\\infty/\\infty$: $\\lim 1/x = 0$.",
+      "steps": [
+        "**Check the form.** As $x \\to \\infty$: $\\ln x \\to \\infty$ AND $x \\to \\infty$. So $\\infty / \\infty$ — indeterminate. L'Hôpital applies.",
+        "**Differentiate top and bottom.** Top: $(\\ln x)' = \\dfrac{1}{x}$. Bottom: $(x)' = 1$.",
+        "**New limit.** $\\lim_{x \\to \\infty} \\dfrac{1/x}{1} = \\lim_{x \\to \\infty} \\dfrac{1}{x} = 0$.",
+        "**Bigger lesson: growth-rate hierarchy.** $\\ln x$ grows MORE SLOWLY than any polynomial $x^k$ for $k > 0$. So $\\ln x / x \\to 0$. This is part of the universal ranking: $\\ln x \\ll x^k \\ll e^x$ as $x \\to \\infty$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{L'Hôpital's Rule applies when direct substitution gives:}",
+      "choices": [
+        "Any limit",
+        "$0/0$ or $\\infty/\\infty$ (indeterminate forms)",
+        "Always works",
+        "Only for polynomials"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "L'Hôpital is ONLY for indeterminate forms.",
+        "Don't apply to non-indeterminate cases."
+      ],
+      "explanation": "L'Hôpital applies only to indeterminate forms: directly $0/0$ or $\\infty/\\infty$. (Other indeterminate forms must be rewritten first.)",
+      "steps": [
+        "**L'Hôpital is ONLY valid for indeterminate forms $0/0$ or $\\infty/\\infty$ — directly.** Don't apply it otherwise.",
+        "**Other indeterminate forms** ($0 \\cdot \\infty$, $\\infty - \\infty$, $0^0$, $1^\\infty$, $\\infty^0$) need to be REWRITTEN as $0/0$ or $\\infty/\\infty$ first. Algebraic manipulation precedes the rule.",
+        "**Wrong example.** $\\lim_{x \\to 0} \\dfrac{x}{x + 1}$. Direct sub: $0/1 = 0$. This is NOT indeterminate — the answer is just 0. Applying L'Hôpital would give $\\lim \\dfrac{1}{1} = 1$ — wrong!",
+        "**Lesson.** Always CHECK the form before invoking L'Hôpital. The rule isn't a universal cure — it's specifically for indeterminate forms."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\lim_{x \\to 0} \\dfrac{e^x - 1}{x} = ?",
+      "answer": 1,
+      "tolerance": 0,
+      "hints": [
+        "$0/0$. L'Hôpital: $e^x / 1 \\to 1$.",
+        "$1$."
+      ],
+      "explanation": "L'Hôpital: $\\lim e^x / 1 = 1$.",
+      "steps": [
+        "**Check form.** $\\dfrac{e^0 - 1}{0} = \\dfrac{0}{0}$ — indeterminate. L'Hôpital applies.",
+        "**Differentiate top and bottom.** Top: $(e^x - 1)' = e^x$. Bottom: $(x)' = 1$.",
+        "**New limit.** $\\lim_{x \\to 0} \\dfrac{e^x}{1} = e^0 = 1$.",
+        "**Famous limit.** $\\lim_{x \\to 0} \\dfrac{e^x - 1}{x} = 1$ — this is what makes $e^x$ have slope 1 at the origin. Equivalent to saying $e^x \\approx 1 + x$ for small $x$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\lim_{x \\to \\infty} \\dfrac{x^2}{e^x} = ?",
+      "answer": 0,
+      "tolerance": 0,
+      "hints": [
+        "$\\infty/\\infty$. L'Hôpital: $2x/e^x$ — still $\\infty/\\infty$. Apply again: $2/e^x \\to 0$.",
+        "$0$."
+      ],
+      "explanation": "L'Hôpital twice: $\\lim 2x/e^x \\to \\lim 2/e^x = 0$.",
+      "steps": [
+        "**Check form.** $\\infty/\\infty$ as $x \\to \\infty$. L'Hôpital applies.",
+        "**First application.** Top derivative: $2x$. Bottom derivative: $e^x$. New limit: $\\lim \\dfrac{2x}{e^x}$ — STILL $\\infty/\\infty$. Need to apply again.",
+        "**Second application.** Top derivative: $2$. Bottom derivative: $e^x$. New limit: $\\lim \\dfrac{2}{e^x} = 0$ (denominator goes to $\\infty$).",
+        "**Result: 0.**",
+        "**Lesson — L'Hôpital can repeat.** If first application doesn't resolve, apply again (check it's still indeterminate). For $x^n / e^x$, you'd apply $n$ times — each pass differentiates the polynomial down by one degree until it's a constant, then the exponential clearly wins.",
+        "**Growth-rate hierarchy in action.** Exponential beats ANY polynomial as $x \\to \\infty$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\lim_{x \\to 1} \\dfrac{\\ln x}{x - 1} = ?",
+      "answer": 1,
+      "tolerance": 0,
+      "hints": [
+        "$0/0$. L'Hôpital: $(1/x)/1 = 1/x \\to 1$.",
+        "$1$."
+      ],
+      "explanation": "L'Hôpital: $\\lim 1/x = 1$.",
+      "steps": [
+        "**Check form.** $\\dfrac{\\ln 1}{1 - 1} = \\dfrac{0}{0}$ — indeterminate.",
+        "**L'Hôpital.** Top: $(\\ln x)' = 1/x$. Bottom: $(x - 1)' = 1$.",
+        "**New limit.** $\\lim_{x \\to 1} \\dfrac{1/x}{1} = \\dfrac{1}{1} = 1$.",
+        "**Insight.** This limit IS the derivative of $\\ln x$ at $x = 1$. The limit definition $f'(1) = \\lim_{x \\to 1} \\dfrac{f(x) - f(1)}{x - 1}$ with $f(x) = \\ln x$ and $f(1) = 0$ gives exactly this expression. And $\\ln'(x) = 1/x$, so $\\ln'(1) = 1$. ✓"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\text{When applying L'Hôpital, you differentiate:}",
+      "choices": [
+        "the whole quotient (using quotient rule)",
+        "the numerator and denominator separately",
+        "only the numerator",
+        "only the denominator"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Common mistake: using quotient rule on the whole thing.",
+        "L'Hôpital: differentiate top and bottom SEPARATELY."
+      ],
+      "explanation": "Differentiate numerator and denominator **separately**, then take the new ratio. (NOT the quotient rule on the whole expression!)",
+      "steps": [
+        "**THE most common L'Hôpital mistake: applying the QUOTIENT RULE instead.**",
+        "**Correct procedure.** Replace $\\lim \\dfrac{f}{g}$ with $\\lim \\dfrac{f'}{g'}$. Differentiate top and bottom separately. (Top becomes its own derivative; bottom becomes its own.)",
+        "**WRONG procedure.** Computing $\\dfrac{d}{dx}\\left(\\dfrac{f}{g}\\right)$ via the quotient rule, then taking the limit. That's a completely different operation.",
+        "**Why it matters.** L'Hôpital says these LIMITS are equal: $\\lim \\dfrac{f}{g} = \\lim \\dfrac{f'}{g'}$ (under the right conditions). It does NOT say the FUNCTIONS are equal. Quotient rule yields a different function entirely."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The MVT for } f(x) = x^3 \\text{ on } [0, 2]: \\text{ find } c \\text{ where } f'(c) = (8 - 0)/2 = 4.",
+      "choices": [
+        "c = \\sqrt{4/3}",
+        "c = 2",
+        "c = 1",
+        "c = 0.5"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "$f'(c) = 3c^2 = 4 \\Rightarrow c^2 = 4/3 \\Rightarrow c = \\sqrt{4/3} \\approx 1.155$.",
+        "$\\sqrt{4/3}$."
+      ],
+      "explanation": "$3c^2 = 4 \\Rightarrow c^2 = 4/3 \\Rightarrow c = \\sqrt{4/3} = 2/\\sqrt{3} \\approx 1.155$.",
+      "steps": [
+        "**MVT recipe applied to a cubic.**",
+        "**Compute average rate.** $\\dfrac{f(2) - f(0)}{2 - 0} = \\dfrac{8 - 0}{2} = 4$.",
+        "**Set $f'(c) = 4$.** $f'(x) = 3x^2$, so $3c^2 = 4 \\Rightarrow c^2 = 4/3 \\Rightarrow c = \\sqrt{4/3} = \\dfrac{2}{\\sqrt{3}} \\approx 1.155$.",
+        "**Reject negative root.** $c$ must be in $(0, 2)$, so take positive root. ✓",
+        "**General observation.** For $f(x) = x^n$ on $[0, b]$: MVT gives $c$ such that $n c^{n-1} = b^{n-1}$, so $c = \\dfrac{b}{n^{1/(n-1)}}$. NOT necessarily the midpoint $b/2$ — for nonlinear $f$, the 'mean value point' is generically NOT the midpoint."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\lim_{x \\to 0} \\dfrac{1 - \\cos x}{x^2} = ? \\text{ (decimal)}",
+      "answer": 0.5,
+      "tolerance": 0.005,
+      "hints": [
+        "$0/0$. L'Hôpital: $\\sin x / (2x)$ — still $0/0$. Again: $\\cos x / 2 \\to 1/2$.",
+        "$0.5$."
+      ],
+      "explanation": "L'Hôpital twice: $\\lim \\sin(x)/(2x) \\to \\lim \\cos(x)/2 = 1/2$.",
+      "steps": [
+        "**Check form.** $\\dfrac{1 - \\cos 0}{0^2} = \\dfrac{0}{0}$ — indeterminate.",
+        "**First L'Hôpital.** Top: $(1 - \\cos x)' = \\sin x$. Bottom: $(x^2)' = 2x$. New limit: $\\lim_{x \\to 0} \\dfrac{\\sin x}{2x}$.",
+        "**Still indeterminate.** $\\dfrac{\\sin 0}{0} = 0/0$. Apply L'Hôpital again.",
+        "**Second L'Hôpital.** Top: $(\\sin x)' = \\cos x$. Bottom: $(2x)' = 2$. New limit: $\\lim_{x \\to 0} \\dfrac{\\cos x}{2} = \\dfrac{1}{2}$.",
+        "**Result: $0.5$.**",
+        "**Equivalent technique — Taylor series.** Near $x = 0$, $\\cos x \\approx 1 - x^2/2 + \\ldots$. So $1 - \\cos x \\approx x^2/2$. Divide by $x^2$: ratio $\\approx 1/2$. ✓ Confirms L'Hôpital."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Rolle's theorem is the case of MVT where:}",
+      "choices": [
+        "$f$ is increasing",
+        "$f(a) = f(b)$ (and the conclusion: $f'(c) = 0$)",
+        "$a = b$",
+        "$f$ is a polynomial"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Rolle: same height at endpoints → flat tangent inside.",
+        "$f(a) = f(b) \\Rightarrow f'(c) = 0$ for some c."
+      ],
+      "explanation": "Rolle's theorem: if $f(a) = f(b)$, then MVT gives $f'(c) = (f(b) - f(a))/(b - a) = 0$.",
+      "steps": [
+        "**Rolle's theorem = MVT in a special case.**",
+        "**Rolle's hypothesis adds one thing to MVT's:** $f(a) = f(b)$ (endpoints at the same height).",
+        "**Rolle's conclusion is a sharpening of MVT's:** since the average rate is $\\dfrac{f(b) - f(a)}{b - a} = \\dfrac{0}{b-a} = 0$, MVT's conclusion 'some $c$ where $f'(c) = $ avg rate' becomes 'some $c$ where $f'(c) = 0$'.",
+        "**Geometric meaning.** A continuous, differentiable curve that starts and ends at the same height MUST have at least one horizontal tangent in between. (Imagine a hill: you went up, you came back down to the same height — somewhere you must have been at the top, where the slope is zero.)",
+        "**Historical note.** Rolle's theorem (1691) actually came BEFORE MVT — Lagrange generalized it about 100 years later."
+      ],
+      "difficulty": "easy"
+    }
+  ]
+}

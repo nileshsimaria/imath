@@ -1,0 +1,166 @@
+{
+  "title": "Equilateral Triangles",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### Definition",
+        "An **equilateral triangle** is a triangle in which **all three sides are equal**. It is the most symmetric possible triangle — it looks the same from every direction.",
+        "Because all sides are equal, every equilateral triangle is also isosceles (in fact, it's isosceles in three different ways at once). Everything you learned about isosceles triangles applies — and then some extra magic kicks in."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "iso-triangle",
+      "config": {
+        "mode": "equilateral",
+        "side": 5,
+        "showAltitude": false,
+        "showSymmetry": false,
+        "showEqualMarks": true,
+        "showAngleMarks": true
+      }
+    },
+    {
+      "type": "callout",
+      "title": "The defining facts",
+      "body": "**All three sides equal:** $a = b = c$.\n**All three angles equal:** $60°$ each (forced by the side-angle relationship in any triangle).\n**Equilateral $\\Longleftrightarrow$ equiangular** for triangles. (Not true for general polygons! A rectangle is equiangular but not equilateral, and a rhombus is equilateral but not equiangular.)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why all angles must be 60°",
+        "Apply the Base Angles Theorem **three times**. Since every pair of sides is equal, every pair of opposite angles is equal. So all three angles are equal. They sum to $180°$, so each is exactly $180/3 = 60°$.",
+        "Conversely, if all three angles are $60°$, the Base Angles converse gives all three sides equal — so equiangular implies equilateral."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\text{equilateral} \\;\\Longleftrightarrow\\; \\text{equiangular} \\;\\Longleftrightarrow\\; \\text{all angles } 60°"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Symmetry: the most symmetric triangle",
+        "An equilateral triangle has **three axes of reflection symmetry** — one through each vertex, perpendicular to the opposite side. It also has **3-fold rotational symmetry**: rotate by $120°$ around the center and it lands on itself."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "iso-triangle",
+      "config": {
+        "mode": "equilateral",
+        "side": 5,
+        "showAltitude": false,
+        "showSymmetry": true,
+        "showEqualMarks": true,
+        "showAngleMarks": true
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "The three cyan dashed lines are the axes of symmetry. Each one passes through one vertex and the midpoint of the opposite side. By the isosceles four-in-one fact, each axis is **simultaneously** a median, an altitude, a perpendicular bisector, and an angle bisector — all four roles at once.",
+        "Because all three axes are interchangeable, all four of the classical triangle centers (centroid, incenter, circumcenter, orthocenter) **collapse into a single point** at the very center. This is unique to equilateral triangles."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Four-in-one… per axis. And every axis is the same.",
+      "body": "In a generic triangle, the four classical centers — centroid, incenter, circumcenter, orthocenter — are four distinct points (collectively living on the Euler line). In an isosceles triangle, three of them line up along the axis of symmetry (but stay distinct from each other). In an equilateral triangle, **all four coincide** at one single point."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The altitude formula",
+        "If the side length is $s$, drop an altitude from any vertex to the opposite side. It hits the midpoint, splitting the equilateral triangle into two congruent **30-60-90 right triangles**.",
+        "Each sub-triangle has hypotenuse $s$ (a side of the equilateral) and one leg $s/2$ (half the opposite side). By Pythagoras:",
+        "$\\text{altitude}^2 = s^2 - (s/2)^2 = s^2 - s^2/4 = 3s^2/4$",
+        "so"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\boxed{\\,h = \\dfrac{s\\sqrt{3}}{2}\\,}"
+    },
+    {
+      "type": "widget",
+      "kind": "iso-triangle",
+      "config": {
+        "mode": "equilateral",
+        "side": 6,
+        "showAltitude": true,
+        "showSymmetry": false,
+        "showEqualMarks": true,
+        "showAngleMarks": true
+      }
+    },
+    {
+      "type": "callout",
+      "title": "Connection to 30-60-90 triangles",
+      "body": "The altitude bisects the apex angle into two $30°$ angles. So each sub-triangle has angles $30°, 60°, 90°$ — the famous 30-60-90 special right triangle with side ratios $1 : \\sqrt{3} : 2$.\n\nFor side $s$:\n- hypotenuse (= side of equilateral) = $s$ → corresponds to ratio 2\n- shorter leg (= half base) = $s/2$ → ratio 1\n- longer leg (= altitude) = $s\\sqrt{3}/2$ → ratio $\\sqrt{3}$\n\nMemorize this. It's used constantly."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The area formula",
+        "Once you have the altitude, the area is",
+        "$A = \\tfrac{1}{2} \\cdot s \\cdot h = \\tfrac{1}{2} \\cdot s \\cdot \\dfrac{s\\sqrt{3}}{2}$",
+        "which simplifies to:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\boxed{\\,A = \\dfrac{\\sqrt{3}}{4}\\, s^2\\,}"
+    },
+    {
+      "type": "callout",
+      "title": "Worked examples",
+      "body": "$s = 2$ → $h = \\sqrt{3}$, $A = \\sqrt{3} \\approx 1.73$.\n$s = 4$ → $h = 2\\sqrt{3}$, $A = 4\\sqrt{3} \\approx 6.93$.\n$s = 6$ → $h = 3\\sqrt{3}$, $A = 9\\sqrt{3} \\approx 15.59$.\n$s = 10$ → $h = 5\\sqrt{3}$, $A = 25\\sqrt{3} \\approx 43.30$.\n\n**Scaling rule:** doubling the side multiplies area by $2^2 = 4$. Tripling multiplies it by $9$. This is a general fact about area scaling, not just equilaterals."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Incircle, circumcircle, and the center",
+        "Because all four triangle centers coincide, the equilateral triangle's center sits at the centroid:",
+        "$O = \\dfrac{A + B + C}{3}$",
+        "From this center,",
+        "**Inradius** (distance to each side) $\\;r = \\dfrac{s\\sqrt{3}}{6} = \\dfrac{h}{3}$",
+        "**Circumradius** (distance to each vertex) $\\;R = \\dfrac{s\\sqrt{3}}{3} = \\dfrac{2h}{3}$",
+        "So $R = 2r$ — the circumradius is exactly twice the inradius. (Equivalently, the centroid divides each altitude in ratio $2:1$ — a fact useful in many proofs.)"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Heights, $r$, $R$ — quick table for side $s$",
+      "body": "altitude $h = \\dfrac{s\\sqrt{3}}{2}$\ninradius $r = \\dfrac{h}{3} = \\dfrac{s\\sqrt{3}}{6}$\ncircumradius $R = \\dfrac{2h}{3} = \\dfrac{s\\sqrt{3}}{3}$\narea $A = \\dfrac{\\sqrt{3}}{4} s^2$\nperimeter $P = 3s$\nincircle area $= \\pi r^2 = \\dfrac{\\pi s^2}{12}$\ncircumcircle area $= \\pi R^2 = \\dfrac{\\pi s^2}{3}$"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Coordinate setup",
+        "The cleanest coordinate placement: base on x-axis centered at origin, apex on the positive y-axis.",
+        "$A = \\left(-\\tfrac{s}{2},\\,0\\right), \\quad B = \\left(\\tfrac{s}{2},\\,0\\right), \\quad C = \\left(0,\\,\\tfrac{s\\sqrt{3}}{2}\\right)$",
+        "Centroid (and all the centers): $O = \\left(0,\\,\\tfrac{s\\sqrt{3}}{6}\\right)$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why equilateral triangles show up everywhere",
+        "Equilateral triangles are the **building block** of many regular shapes and constructions:",
+        "**Regular hexagon** — six equilateral triangles fitting around a center.",
+        "**Triangular grids and trusses** — the strongest 2D framework; that's why bridges and bicycle frames use triangles.",
+        "**Sierpiński triangle** — iterated equilaterals, a classic fractal.",
+        "**Tetrahedron** — the 3D analog: four equilateral triangle faces.",
+        "**Honeycomb / soap films** — angles meet at 60°/120° due to surface-tension minimization, mirroring equilateral angles.",
+        "Whenever you want maximum regularity in 2D with three points, the equilateral triangle is the unique answer."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Quick reference",
+      "body": "**Definition:** all three sides equal (equivalently, all three angles $60°$).\n**Altitude:** $h = s\\sqrt{3}/2$.\n**Area:** $A = (\\sqrt{3}/4)\\,s^2$.\n**Inradius:** $r = s\\sqrt{3}/6$.\n**Circumradius:** $R = s\\sqrt{3}/3 = 2r$.\n**All 4 centers coincide** at the centroid.\n**3-fold rotational symmetry, 3 axes of reflection.**\n**30-60-90 connection:** the altitude splits it into two 30-60-90 right triangles."
+    }
+  ]
+}

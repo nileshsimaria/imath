@@ -1,0 +1,327 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{An isosceles triangle has a vertex angle of } 40°. \\\\ \\text{Find the measure of each base angle.}",
+      "answer": 70,
+      "tolerance": 0.01,
+      "hints": [
+        "The two base angles are equal.",
+        "All three angles sum to 180°."
+      ],
+      "explanation": "Each base angle $= (180 - 40)/2 = 70°$.",
+      "steps": [
+        {
+          "text": "**The two base angles are equal** (Base Angles Theorem). Call each one $\\phi$. The vertex angle is $40°$."
+        },
+        {
+          "text": "**Sum of angles is 180°:**"
+        },
+        {
+          "math": "\\phi + \\phi + 40 = 180"
+        },
+        {
+          "math": "2\\phi = 140 \\;\\Longrightarrow\\; \\phi = 70°"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{An isosceles triangle has a base angle of } 55°. \\\\ \\text{Find the vertex angle.}",
+      "answer": 70,
+      "tolerance": 0.01,
+      "hints": [
+        "Both base angles equal $55°$ — that's two angles accounted for.",
+        "The third angle is $180° - 2(55°)$."
+      ],
+      "explanation": "Vertex angle $= 180 - 2 \\cdot 55 = 70°$.",
+      "steps": [
+        {
+          "text": "**Both base angles equal $55°$.** Total of the two base angles: $110°$."
+        },
+        {
+          "text": "**Vertex angle = remaining angle:**"
+        },
+        {
+          "math": "\\text{vertex} = 180 - 55 - 55 = 70°"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "In an isosceles triangle, which line from the apex is the SAME line as the altitude from the apex?",
+      "choices": [
+        "Only the median from the apex",
+        "Only the perpendicular bisector of the base",
+        "Only the angle bisector of the apex",
+        "All three: the median, the perpendicular bisector, and the angle bisector"
+      ],
+      "answerIndex": 3,
+      "hints": [
+        "Isosceles triangles have a special symmetry that collapses several distinct lines into one.",
+        "All four agree because they all sit on the axis of symmetry."
+      ],
+      "explanation": "In an isosceles triangle, the altitude from the apex coincides simultaneously with the median to the base, the perpendicular bisector of the base, and the angle bisector of the apex. They all sit on the axis of symmetry. In a scalene triangle, these would be four different lines.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Find the altitude } h \\text{ from the apex of an isosceles triangle} \\\\ \\text{with legs } 13 \\text{ and base } 10.",
+      "answer": 12,
+      "tolerance": 0.001,
+      "hints": [
+        "The altitude splits the base into two equal halves of length 5.",
+        "Pythagorean theorem on one of the resulting right triangles: $h^2 + 5^2 = 13^2$."
+      ],
+      "explanation": "$h = \\sqrt{13^2 - 5^2} = \\sqrt{144} = 12$. The two sub-triangles are 5-12-13 right triangles.",
+      "steps": [
+        {
+          "text": "**Drop the altitude.** It hits the midpoint of the base, splitting the isosceles triangle into two congruent right triangles."
+        },
+        {
+          "svg": "<svg viewBox='0 0 240 200' xmlns='http://www.w3.org/2000/svg'><polygon points='40,170 200,170 120,30' fill='#fef3c7' stroke='#1e293b' stroke-width='2'/><line x1='120' y1='30' x2='120' y2='170' stroke='#16a34a' stroke-width='1.8' stroke-dasharray='5 3'/><rect x='112' y='160' width='10' height='10' fill='none' stroke='#16a34a' stroke-width='1.2'/><text x='80' y='185' font-size='12' text-anchor='middle'>5</text><text x='160' y='185' font-size='12' text-anchor='middle'>5</text><text x='62' y='105' font-size='13' font-weight='600' transform='rotate(-60 62 105)'>13</text><text x='178' y='105' font-size='13' font-weight='600' transform='rotate(60 178 105)'>13</text><text x='128' y='100' font-size='14' fill='#16a34a' font-weight='700'>h = ?</text></svg>"
+        },
+        {
+          "text": "**Each right triangle has** hypotenuse 13, one leg 5 (half base), other leg $h$. Apply Pythagoras:"
+        },
+        {
+          "math": "h = \\sqrt{13^2 - 5^2} = \\sqrt{169 - 25} = \\sqrt{144} = 12"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{An isosceles triangle has legs of length } 13 \\text{ and base } 10. \\\\ \\text{Find its area.}",
+      "answer": 60,
+      "tolerance": 0.001,
+      "hints": [
+        "First find the altitude from the apex (q4 above did this: $h = 12$).",
+        "Area $= \\tfrac{1}{2} \\cdot \\text{base} \\cdot \\text{height}$."
+      ],
+      "explanation": "$h = 12$ (from Pythagoras). $A = (1/2)(10)(12) = 60$.",
+      "steps": [
+        {
+          "text": "**Altitude from the apex.** Half base $= 5$, leg $= 13$:"
+        },
+        {
+          "math": "h = \\sqrt{13^2 - 5^2} = \\sqrt{144} = 12"
+        },
+        {
+          "text": "**Area = $\\tfrac{1}{2}$ × base × height:**"
+        },
+        {
+          "math": "A = \\tfrac{1}{2} \\cdot 10 \\cdot 12 = 60"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{An isosceles triangle has legs of length } 25 \\text{ and base } 14. \\\\ \\text{Find its altitude from the apex.}",
+      "answer": 24,
+      "tolerance": 0.001,
+      "hints": [
+        "Half base = 7. Pythagoras: $7^2 + h^2 = 25^2$.",
+        "Notice 7-24-25 is a Pythagorean triple."
+      ],
+      "explanation": "$h = \\sqrt{25^2 - 7^2} = \\sqrt{625 - 49} = \\sqrt{576} = 24$. (7-24-25 is a Pythagorean triple — useful to recognize.)",
+      "steps": [
+        {
+          "text": "**Half the base.** $b/2 = 14/2 = 7$."
+        },
+        {
+          "text": "**Pythagoras on a sub-triangle:**"
+        },
+        {
+          "math": "h = \\sqrt{25^2 - 7^2} = \\sqrt{625 - 49} = \\sqrt{576} = 24"
+        },
+        {
+          "text": "(The sub-triangle is 7-24-25 — another classic Pythagorean triple.)"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{An isosceles triangle has perimeter 24 and base 8. Find the leg length.}",
+      "answer": 8,
+      "tolerance": 0.001,
+      "hints": [
+        "Perimeter = leg + leg + base = $2a + b$.",
+        "Solve $2a + 8 = 24$."
+      ],
+      "explanation": "$2a + 8 = 24 \\Rightarrow 2a = 16 \\Rightarrow a = 8$. The triangle has all sides equal — it's also equilateral!",
+      "steps": [
+        {
+          "text": "**Perimeter setup:**"
+        },
+        {
+          "math": "2a + b = 24, \\quad b = 8"
+        },
+        {
+          "math": "2a = 24 - 8 = 16 \\;\\Longrightarrow\\; a = 8"
+        },
+        {
+          "text": "(Notice all three sides are 8 — this isosceles triangle is also equilateral.)"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{An isosceles right triangle has hypotenuse 10. Find the leg length.} \\\\ \\text{Round to 2 decimal places.}",
+      "answer": 7.07,
+      "tolerance": 0.02,
+      "hints": [
+        "The vertex angle is 90°, so the two equal legs meet at the right angle.",
+        "Pythagoras: $a^2 + a^2 = 10^2$, so $a = 10/\\sqrt{2}$."
+      ],
+      "explanation": "$2a^2 = 100 \\Rightarrow a^2 = 50 \\Rightarrow a = \\sqrt{50} = 5\\sqrt{2} \\approx 7.07$.",
+      "steps": [
+        {
+          "text": "**Setup.** Isosceles right triangle: the two equal legs are the legs of the right angle; the base (hypotenuse) is opposite."
+        },
+        {
+          "svg": "<svg viewBox='0 0 220 180' xmlns='http://www.w3.org/2000/svg'><polygon points='40,150 180,150 40,30' fill='#fef3c7' stroke='#1e293b' stroke-width='2'/><rect x='40' y='140' width='10' height='10' fill='none' stroke='#1e293b' stroke-width='1.5'/><text x='100' y='168' font-size='14' text-anchor='middle' font-weight='700' fill='#dc2626'>a = ?</text><text x='22' y='92' font-size='14' text-anchor='middle' font-weight='700' fill='#dc2626'>a = ?</text><text x='130' y='80' font-size='13' fill='#1e3a8a' font-weight='700' transform='rotate(-40 130 80)'>10</text></svg>"
+        },
+        {
+          "text": "**Apply Pythagoras** with both legs equal to $a$:"
+        },
+        {
+          "math": "a^2 + a^2 = 10^2 \\;\\Longrightarrow\\; 2a^2 = 100"
+        },
+        {
+          "math": "a^2 = 50 \\;\\Longrightarrow\\; a = \\sqrt{50} = 5\\sqrt{2} \\approx 7.07"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If two angles of a triangle measure } 75° \\text{ and } 75°, \\\\ \\text{what can you conclude?}",
+      "choices": [
+        "The triangle is equilateral.",
+        "The triangle is right.",
+        "The triangle is isosceles (with the sides opposite those two angles equal).",
+        "Nothing — angles alone don't determine triangle type."
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Recall the converse of the Base Angles Theorem.",
+        "Equal angles → equal sides opposite them."
+      ],
+      "explanation": "Converse of the Base Angles Theorem: if two angles of a triangle are equal, the sides opposite them are equal. So the triangle is isosceles. (The third angle is $180 - 75 - 75 = 30°$, so it's not equilateral.)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{In an isosceles triangle, the vertex angle is } 4 \\text{ times each base angle.} \\\\ \\text{Find the vertex angle (in degrees).}",
+      "answer": 120,
+      "tolerance": 0.01,
+      "hints": [
+        "Let base angle $= x$. Then vertex angle $= 4x$.",
+        "Sum to 180: $x + x + 4x = 180$."
+      ],
+      "explanation": "$6x = 180 \\Rightarrow x = 30$. Vertex angle $= 4(30) = 120°$.",
+      "steps": [
+        {
+          "text": "**Let the base angle equal $x$.** Then the vertex angle equals $4x$, and the two base angles are $x$ each."
+        },
+        {
+          "math": "x + x + 4x = 180 \\;\\Longrightarrow\\; 6x = 180 \\;\\Longrightarrow\\; x = 30"
+        },
+        {
+          "text": "**Vertex angle:**"
+        },
+        {
+          "math": "4x = 4 \\cdot 30 = 120°"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q11",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Two vertices of an isosceles triangle are } A(0, 0) \\text{ and } B(8, 0). \\\\ \\text{The legs go from A and B to a third vertex } C, \\\\ \\text{with } AC = BC = 5. \\text{ What are the coordinates of } C?",
+      "choices": [
+        "(3, 4) or (3, -4)",
+        "(4, 3) or (4, -3)",
+        "(4, 5) or (4, -5)",
+        "(0, 4) or (8, 4)"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Since $AC = BC$, $C$ lies on the perpendicular bisector of $AB$ — the vertical line $x = 4$.",
+        "Then use $AC = 5$ to pin down $y$: $\\sqrt{4^2 + y^2} = 5$, so $y^2 = 9$, $y = \\pm 3$."
+      ],
+      "explanation": "The perpendicular bisector of $AB$ is $x = 4$ (the axis of symmetry). With $AC = 5$ and $A = (0,0)$: $\\sqrt{16 + y^2} = 5 \\Rightarrow y = \\pm 3$. So $C = (4, 3)$ or $(4, -3)$.",
+      "steps": [
+        {
+          "text": "**Use the axis of symmetry.** In an isosceles triangle with $AC = BC$, the apex $C$ must lie on the perpendicular bisector of $AB$."
+        },
+        {
+          "text": "**Perpendicular bisector of $AB$:** $A$ is at $(0,0)$ and $B$ at $(8,0)$, so the midpoint is $(4, 0)$, and the perpendicular bisector is the vertical line $x = 4$. So $C = (4, y)$ for some $y$."
+        },
+        {
+          "text": "**Use $AC = 5$ to find $y$:**"
+        },
+        {
+          "math": "\\sqrt{(4-0)^2 + (y - 0)^2} = 5 \\;\\Longrightarrow\\; 16 + y^2 = 25"
+        },
+        {
+          "math": "y^2 = 9 \\;\\Longrightarrow\\; y = \\pm 3"
+        },
+        {
+          "text": "**So $C = (4, 3)$ or $(4, -3)$.** Two answers — one apex above the base, one below."
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\text{In isosceles } \\triangle ABC, \\, AB = AC, \\text{ and the altitude from } A \\\\ \\text{to } BC \\text{ has length } 12. \\text{ If } BC = 10, \\text{ find the perimeter.}",
+      "answer": 36,
+      "tolerance": 0.001,
+      "hints": [
+        "The altitude from $A$ hits the midpoint $M$ of $BC$. So $BM = MC = 5$.",
+        "Right triangle $AMB$: hypotenuse $AB$, legs 12 and 5. Pythagoras gives $AB$."
+      ],
+      "explanation": "$AB = AC = \\sqrt{12^2 + 5^2} = \\sqrt{169} = 13$. Perimeter $= 13 + 13 + 10 = 36$.",
+      "steps": [
+        {
+          "text": "**Drop the altitude from $A$ to $BC$ at $M$.** Because the triangle is isosceles, $M$ is the midpoint of $BC$: $BM = MC = 5$."
+        },
+        {
+          "text": "**Right triangle $AMB$:** legs $AM = 12$ (altitude) and $BM = 5$, hypotenuse $AB$. Pythagoras:"
+        },
+        {
+          "math": "AB = \\sqrt{12^2 + 5^2} = \\sqrt{144 + 25} = \\sqrt{169} = 13"
+        },
+        {
+          "text": "By symmetry, $AC = 13$ also."
+        },
+        {
+          "text": "**Perimeter:**"
+        },
+        {
+          "math": "AB + AC + BC = 13 + 13 + 10 = 36"
+        }
+      ],
+      "difficulty": "hard"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "title": "Related Rates",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "**Related rates** problems link rates of change of two (or more) related quantities. A balloon inflates: how fast does its radius grow when the volume grows at a known rate? A ladder slides down a wall: how fast does the bottom move when the top is at a certain height?",
+        "These are calculus's classic 'word problems' — the kind that show derivatives doing real work."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. The Strategy"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Five-step recipe",
+      "body": "**1.** Draw a picture and label the variables. **2.** Write down what you know (rates and values) and what you want to find. **3.** Write an equation relating the variables. **4.** Differentiate both sides with respect to TIME (use chain rule for every variable). **5.** Plug in known values and solve for the unknown rate."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. Worked example — sliding ladder"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "*A 10-foot ladder leans against a wall. The bottom slides away from the wall at 1 ft/sec. How fast is the top sliding down when the bottom is 6 feet from the wall?*",
+        "**Step 1.** Picture: right triangle with hypotenuse 10 (ladder), horizontal leg $x$ (bottom from wall), vertical leg $y$ (top up the wall).",
+        "**Step 2.** Given: $dx/dt = 1$ ft/sec. Want: $dy/dt$ when $x = 6$.",
+        "**Step 3.** Equation (Pythagorean): $x^2 + y^2 = 10^2 = 100$.",
+        "**Step 4.** Differentiate w.r.t. $t$: $2x \\dfrac{dx}{dt} + 2y \\dfrac{dy}{dt} = 0$.",
+        "**Step 5.** Find $y$ when $x = 6$: $y^2 = 100 - 36 = 64$, so $y = 8$. Plug everything in:",
+        "$2(6)(1) + 2(8) \\dfrac{dy}{dt} = 0 \\Rightarrow 16 \\dfrac{dy}{dt} = -12 \\Rightarrow \\dfrac{dy}{dt} = -\\dfrac{3}{4}$ ft/sec.",
+        "**Top is sliding down at 3/4 ft per second.** The negative sign confirms 'down'."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. Worked example — inflating balloon"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "*A spherical balloon is being inflated at $20$ cubic centimeters per second. How fast is the radius growing when $r = 5$ cm?*",
+        "**Equation:** $V = \\dfrac{4}{3}\\pi r^3$.",
+        "**Differentiate** w.r.t. $t$: $\\dfrac{dV}{dt} = 4\\pi r^2 \\dfrac{dr}{dt}$.",
+        "**Plug in:** $20 = 4\\pi (25) \\dfrac{dr}{dt} \\Rightarrow \\dfrac{dr}{dt} = \\dfrac{20}{100\\pi} = \\dfrac{1}{5\\pi} \\approx 0.064$ cm/sec.",
+        "**Insight:** as $r$ grows, $dr/dt$ shrinks — same volume rate, much more surface area to spread it across."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. Worked example — shadow length"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "*A 6-ft person walks away from a 20-ft lamppost at 3 ft/sec. How fast is the tip of their shadow moving?*",
+        "**Setup.** Let $x$ = distance from person to lamppost, $s$ = length of shadow. By similar triangles:",
+        "$\\dfrac{20}{x + s} = \\dfrac{6}{s} \\Rightarrow 20s = 6(x + s) \\Rightarrow 20s - 6s = 6x \\Rightarrow s = \\dfrac{3x}{7}$.",
+        "**Tip of shadow** is at distance $x + s = x + 3x/7 = 10x/7$ from lamppost. Differentiate:",
+        "$\\dfrac{d(\\text{tip})}{dt} = \\dfrac{10}{7} \\dfrac{dx}{dt} = \\dfrac{10}{7}(3) = \\dfrac{30}{7} \\approx 4.29$ ft/sec."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Common pitfall",
+      "body": "**Plug in numerical values AFTER differentiating, not before.** If you fix $x = 6$ before differentiating, you've made $x$ a constant and lost the variable. Differentiate the general equation first, then substitute."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — water draining from a cone",
+        "*A conical tank (point down) has height 10 m and base radius 4 m. Water drains at $2 m^3/\\text{min}$. How fast is the water level dropping when depth is 5 m?*",
+        "**Cone volume:** $V = \\dfrac{1}{3}\\pi r^2 h$.",
+        "**Constraint** (similar triangles): $\\dfrac{r}{h} = \\dfrac{4}{10} = \\dfrac{2}{5}$, so $r = \\dfrac{2h}{5}$.",
+        "**Substitute:** $V = \\dfrac{1}{3}\\pi \\left(\\dfrac{2h}{5}\\right)^2 h = \\dfrac{4\\pi}{75} h^3$.",
+        "**Differentiate:** $\\dfrac{dV}{dt} = \\dfrac{12\\pi}{75} h^2 \\dfrac{dh}{dt} = \\dfrac{4\\pi}{25} h^2 \\dfrac{dh}{dt}$.",
+        "**Plug in:** $-2 = \\dfrac{4\\pi}{25}(25) \\dfrac{dh}{dt} = 4\\pi \\dfrac{dh}{dt} \\Rightarrow \\dfrac{dh}{dt} = -\\dfrac{1}{2\\pi} \\approx -0.159$ m/min."
+      ]
+    }
+  ]
+}

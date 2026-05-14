@@ -1,0 +1,247 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the slope of } y = 3x - 2\\,?",
+      "choices": [
+        "-2",
+        "2",
+        "3",
+        "-3"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "In the form $y = mx + b$, the slope is the coefficient of $x$.",
+        "The number multiplying $x$ in $3x - 2$ is $3$."
+      ],
+      "explanation": "In slope-intercept form, the slope is whatever multiplies $x$. Here that's $3$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the y-intercept of } y = -x + 5\\,?",
+      "choices": [
+        "-1",
+        "1",
+        "-5",
+        "5"
+      ],
+      "answerIndex": 3,
+      "hints": [
+        "The y-intercept is the constant term — the part with no $x$.",
+        "It's also the value of $y$ when $x = 0$."
+      ],
+      "explanation": "The y-intercept is $b$ in $y = mx + b$. Here $b = 5$, so the line crosses the y-axis at $(0, 5)$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{Find the slope of the line through } (1, 2) \\text{ and } (4, 8).",
+      "answer": 2,
+      "tolerance": 0.001,
+      "hints": [
+        "Use the formula $m = \\dfrac{y_2 - y_1}{x_2 - x_1}$.",
+        "$m = \\dfrac{8 - 2}{4 - 1} = \\dfrac{6}{3}$."
+      ],
+      "explanation": "$m = \\dfrac{8-2}{4-1} = \\dfrac{6}{3} = 2$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which line is the steepest?}",
+      "choices": [
+        "y = 2x + 1",
+        "y = 0.5x - 3",
+        "y = -4x + 2",
+        "y = x"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Steepness depends on the *absolute value* of the slope, not its sign.",
+        "Compare $|2|, |0.5|, |-4|, |1|$ — pick the largest."
+      ],
+      "explanation": "Steepness = $|m|$. The slopes have absolute values $2, 0.5, 4, 1$. The largest is $4$, so $y = -4x + 2$ is steepest. The negative sign just means it tilts downward.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{A line has slope } m = 3 \\text{ and passes through } (2, 7).\\\\\\text{What is its y-intercept } b\\,?",
+      "answer": 1,
+      "tolerance": 0.001,
+      "hints": [
+        "Plug the point and slope into $y = mx + b$ and solve for $b$.",
+        "$7 = 3(2) + b \\Rightarrow 7 = 6 + b$."
+      ],
+      "explanation": "Substitute: $7 = 3(2) + b$, so $b = 7 - 6 = 1$. The line is $y = 3x + 1$.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the } y\\text{-intercept of } y = -2x + 7?",
+      "choices": [
+        "-2",
+        "7",
+        "-7",
+        "0"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "In $y = mx + b$, $b$ is the y-intercept.",
+        "Here $b = 7$."
+      ],
+      "explanation": "$y$-intercept is the constant: $b = 7$. The line crosses the y-axis at $(0, 7)$.",
+      "steps": [
+        "**Slope-intercept form reading guide.** $y = mx + b$ has TWO parts: slope $m$ (coefficient of $x$) and y-intercept $b$ (constant term).",
+        "**For $y = -2x + 7$:** $m = -2$ (slope), $b = 7$ (y-intercept).",
+        "**Geometric meaning of $b$.** Set $x = 0$ in the equation: $y = b$. So the line crosses the y-axis at height $b$."
+      ],
+      "id": "q6",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Write } 3x + 2y = 12 \\text{ in slope-intercept form.}",
+      "choices": [
+        "y = -\\dfrac{3}{2}x + 6",
+        "y = \\dfrac{3}{2}x + 6",
+        "y = -3x + 12",
+        "y = 6x + \\dfrac{3}{2}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Solve for $y$: $2y = -3x + 12$, then divide by 2.",
+        "$y = -\\dfrac{3}{2}x + 6$."
+      ],
+      "explanation": "$2y = -3x + 12 \\Rightarrow y = -\\dfrac{3}{2}x + 6$.",
+      "steps": [
+        "**Goal: convert standard form ($Ax + By = C$) to slope-intercept form ($y = mx + b$).** Isolate $y$ — that's the whole procedure.",
+        "**Move $3x$ to the right side** (subtract from both sides): $2y = -3x + 12$.",
+        "**Divide every term by 2** (the coefficient of $y$): $y = -\\dfrac{3}{2}x + 6$.",
+        "**Read off slope and intercept.** $m = -\\dfrac{3}{2}$, $b = 6$."
+      ],
+      "id": "q7",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Write the equation of a line with slope } -3 \\text{ passing through } (2, 4).",
+      "choices": [
+        "y = -3x + 10",
+        "y = -3x - 10",
+        "y = -3x + 2",
+        "y = -3x + 4"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Use $y - y_1 = m(x - x_1)$: $y - 4 = -3(x - 2)$.",
+        "Distribute and solve for $y$: $y = -3x + 6 + 4 = -3x + 10$."
+      ],
+      "explanation": "$y - 4 = -3(x - 2) \\Rightarrow y = -3x + 6 + 4 = -3x + 10$.",
+      "steps": [
+        "**Use point-slope form first, then convert.** When you have a point and a slope, point-slope $y - y_1 = m(x - x_1)$ is the most direct setup.",
+        "**Plug in.** $(x_1, y_1) = (2, 4)$, $m = -3$. $y - 4 = -3(x - 2)$.",
+        "**Distribute the $-3$.** $y - 4 = -3x + 6$.",
+        "**Add 4 to isolate $y$.** $y = -3x + 10$.",
+        "**Verify.** At $x = 2$: $y = -6 + 10 = 4$ ✓ (matches the given point)."
+      ],
+      "id": "q8",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Write the equation of the line through } (1, 3) \\text{ and } (4, 9).",
+      "choices": [
+        "y = 2x + 1",
+        "y = 2x - 1",
+        "y = 3x + 1",
+        "y = 6x - 3"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Slope: $(9 - 3)/(4 - 1) = 6/3 = 2$.",
+        "Use $y - 3 = 2(x - 1)$, then simplify."
+      ],
+      "explanation": "Slope $= 2$. $y - 3 = 2(x - 1) \\Rightarrow y = 2x + 1$.",
+      "steps": [
+        "**Two-point template: SLOPE first, then point-slope form.**",
+        "**Step 1: compute slope.** $m = \\dfrac{9 - 3}{4 - 1} = \\dfrac{6}{3} = 2$.",
+        "**Step 2: pick either point, write point-slope.** Using $(1, 3)$: $y - 3 = 2(x - 1)$.",
+        "**Step 3: simplify to slope-intercept.** $y - 3 = 2x - 2 \\Rightarrow y = 2x + 1$.",
+        "**Verify with the OTHER point.** At $x = 4$: $y = 8 + 1 = 9$ ✓."
+      ],
+      "id": "q9",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{What is the } x\\text{-intercept of } y = \\dfrac{3}{4}x - 6?",
+      "answer": 8,
+      "tolerance": 0,
+      "hints": [
+        "x-intercept is where $y = 0$.",
+        "$0 = \\dfrac{3}{4}x - 6 \\Rightarrow x = 8$."
+      ],
+      "explanation": "Set $y = 0$: $\\dfrac{3}{4}x = 6 \\Rightarrow x = 8$.",
+      "steps": [
+        "**Definition of x-intercept: the $x$-value where the line crosses the x-axis (so $y = 0$).**",
+        "**Set $y = 0$ in the equation.** $0 = \\dfrac{3}{4}x - 6$.",
+        "**Solve for $x$.** Add 6: $6 = \\dfrac{3}{4}x$. Multiply by $\\dfrac{4}{3}$: $x = 8$.",
+        "**Compare with y-intercept.** y-intercept is the $y$-value where $x = 0$ (here: $-6$). x-intercept is the $x$-value where $y = 0$ (here: $8$). The two intercepts pin down the line."
+      ],
+      "id": "q10",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{A car rental costs } \\$30 \\text{ per day plus } \\$0.20 \\text{ per mile.} \\\\ \\text{Which equation models the daily cost } y \\text{ for } x \\text{ miles?}",
+      "choices": [
+        "y = 0.20x + 30",
+        "y = 30x + 0.20",
+        "y = 30x",
+        "y = 0.20x"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Fixed daily fee = y-intercept. Per-mile rate = slope.",
+        "$y = (\\text{rate})x + (\\text{fee})$."
+      ],
+      "explanation": "Fixed: \\$30 (intercept). Per-mile: \\$0.20 (slope). $y = 0.20x + 30$.",
+      "steps": [
+        "**Translation guide for word problems:** FIXED cost (paid even at 0 miles) → y-intercept $b$. PER-UNIT rate → slope $m$.",
+        "**Identify.** Fixed daily fee = \\$30 → $b = 30$. Per-mile rate = \\$0.20 → $m = 0.20$.",
+        "**Plug into $y = mx + b$.** $y = 0.20 x + 30$.",
+        "**Sanity check.** At $x = 0$ miles: $y = \\$30$ ✓ (just the fixed fee). At $x = 100$ miles: $y = 20 + 30 = \\$50$. ✓"
+      ],
+      "id": "q11",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Line } y = -2x + 5 \\text{ passes through } (a, 11). \\text{ Find } a.",
+      "answer": -3,
+      "tolerance": 0,
+      "hints": [
+        "Substitute $y = 11$: $11 = -2a + 5$.",
+        "Solve for $a$."
+      ],
+      "explanation": "$11 = -2a + 5 \\Rightarrow 2a = -6 \\Rightarrow a = -3$.",
+      "steps": [
+        "**'Point $(a, 11)$ on the line' means the equation is SATISFIED when $x = a$ and $y = 11$.**",
+        "**Substitute.** $11 = -2a + 5$.",
+        "**Solve.** Subtract 5: $6 = -2a$. Divide by $-2$: $a = -3$.",
+        "**Verify.** At $x = -3$: $y = -2(-3) + 5 = 6 + 5 = 11$ ✓."
+      ],
+      "id": "q12",
+      "difficulty": "easy"
+    }
+  ]
+}

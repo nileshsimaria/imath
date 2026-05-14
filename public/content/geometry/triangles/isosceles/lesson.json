@@ -1,0 +1,163 @@
+{
+  "title": "Isosceles Triangles",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### Definition",
+        "An **isosceles triangle** is a triangle with at least two sides of equal length. Those two equal sides are called the **legs**, and the third side is the **base**. The angle between the two legs (the angle *opposite* the base) is the **vertex angle** or **apex angle**. The other two angles, each touching the base, are the **base angles**.",
+        "The little tick marks on the legs (∣ or ∣∣) in the diagram below are the standard convention for marking equal sides; the matching arcs at the base mark equal angles."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "iso-triangle",
+      "config": {
+        "mode": "isosceles",
+        "legLength": 5,
+        "baseLength": 6,
+        "showAltitude": false,
+        "showSymmetry": false,
+        "showEqualMarks": true,
+        "showAngleMarks": true
+      }
+    },
+    {
+      "type": "callout",
+      "title": "Vocabulary at a glance",
+      "body": "**Legs** — the two equal sides ($a = a$).\n**Base** — the third (possibly different) side ($b$).\n**Vertex / apex angle** — between the legs, opposite the base.\n**Base angles** — the two angles at the ends of the base; they sit next to the legs.\n**Axis of symmetry** — the perpendicular line through the apex bisecting the base."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The Base Angles Theorem",
+        "Here's the single most important fact about isosceles triangles:",
+        "**If two sides of a triangle are equal, then the angles opposite those sides are equal.**",
+        "Equivalently: in any isosceles triangle, the **base angles are equal**. Drag the leg slider in the widget above and watch — both base angle arcs change *together* and always match."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\text{If } a = a, \\text{ then } \\angle A = \\angle B \\quad (\\text{the two angles opposite the equal legs})."
+    },
+    {
+      "type": "callout",
+      "title": "Sketch of the proof",
+      "body": "Drop the perpendicular from the apex $C$ to the base $AB$, hitting it at $M$. Then look at the two right triangles $\\triangle ACM$ and $\\triangle BCM$:\n\n- $AC = BC$ (the two equal legs)\n- $CM = CM$ (shared side)\n- $\\angle AMC = \\angle BMC = 90°$\n\nBy the hypotenuse-leg congruence rule (or SAS), $\\triangle ACM \\cong \\triangle BCM$. Corresponding angles are equal, so $\\angle A = \\angle B$. ∎\n\nThe converse is also true: if two angles of a triangle are equal, then the sides opposite those angles are equal. So *isosceles $\\Leftrightarrow$ two equal base angles*."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Angle relationships",
+        "Since the three angles of any triangle sum to 180°, and the two base angles are equal, you can always pin everything down from a single piece of information:",
+        "If the **vertex angle** is $\\theta$, each **base angle** is $\\dfrac{180° - \\theta}{2}$.",
+        "If a **base angle** is $\\phi$, the **vertex angle** is $180° - 2\\phi$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Quick examples",
+      "body": "Vertex angle 40° → base angles each $(180-40)/2 = 70°$.\nVertex angle 90° → base angles each 45° (isosceles right triangle).\nBase angle 50° → vertex angle $180 - 100 = 80°$.\nBase angle 60° → vertex angle 60° → **equilateral**! (All three angles equal.)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Four lines that all coincide",
+        "Here is the property that makes isosceles triangles so useful for proofs and constructions. The following four lines, drawn from the apex, all coincide with one another:",
+        "**The altitude** from the apex (perpendicular to the base).",
+        "**The median** from the apex (to the midpoint of the base).",
+        "**The perpendicular bisector** of the base.",
+        "**The angle bisector** of the apex angle.",
+        "In a generic scalene triangle these four lines are four *different* lines from the apex. In an isosceles triangle they fold into a single line — the **axis of symmetry**."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "iso-triangle",
+      "config": {
+        "mode": "isosceles",
+        "legLength": 5,
+        "baseLength": 6,
+        "showAltitude": true,
+        "showSymmetry": true,
+        "showEqualMarks": true,
+        "showAngleMarks": true
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "The dashed green segment is the altitude; the dashed cyan line is the axis of symmetry. They sit on top of each other. Fold the page along this line and the triangle's left half exactly covers its right half — that's reflection symmetry."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Computing the altitude (the workhorse formula)",
+        "Once you draw the altitude from the apex to the base, you split the isosceles triangle into two congruent right triangles. Each has:",
+        "- hypotenuse = $a$ (a leg of the original)",
+        "- one leg = $b/2$ (half of the base)",
+        "- other leg = $h$ (the altitude)",
+        "By the Pythagorean theorem:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "h = \\sqrt{a^2 - \\left(\\dfrac{b}{2}\\right)^2}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Then the area is simply",
+        "$A = \\dfrac{1}{2} \\cdot b \\cdot h$.",
+        "**Worked example.** Legs $a = 13$, base $b = 10$. Half base = 5. Altitude = $\\sqrt{169 - 25} = \\sqrt{144} = 12$. (Another 5-12-13 right triangle!) Area = $(1/2)(10)(12) = 60$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Try this constraint",
+      "body": "The triangle inequality forces $b < 2a$. If $b = 2a$, the 'triangle' is degenerate (three collinear points). If $b > 2a$, no triangle exists. The widget's slider stops you from crossing this boundary."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Coordinate setup",
+        "When working in the coordinate plane, the cleanest way to place an isosceles triangle is with the base on the x-axis, centered on the origin:",
+        "$A = \\left(-\\tfrac{b}{2},\\,0\\right), \\quad B = \\left(\\tfrac{b}{2},\\,0\\right), \\quad C = \\left(0,\\,h\\right)$",
+        "where $h = \\sqrt{a^2 - (b/2)^2}$. This makes the axis of symmetry the y-axis, the altitude becomes simply the y-coordinate of $C$, and a lot of algebra becomes trivial."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The special case: the isosceles right triangle",
+        "An **isosceles right triangle** has two equal legs meeting at a 90° angle. Both base angles are 45°. If each leg has length $a$, then the hypotenuse has length $a\\sqrt{2}$ (by Pythagoras), and the area is $a^2/2$.",
+        "This is the 45-45-90 special right triangle that shows up everywhere — diagonals of squares, half of a square, isoceles paper folds, etc."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "iso-triangle",
+      "config": {
+        "mode": "isosceles",
+        "legLength": 5,
+        "baseLength": 7.07,
+        "showAltitude": true,
+        "showSymmetry": false,
+        "showEqualMarks": true,
+        "showAngleMarks": true
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "The widget above is preset to a 45-45-90 triangle (legs ≈ 5, base ≈ 7.07 = 5√2). The two base angles in the readout are 45°, and the vertex angle is 90°."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Quick reference",
+      "body": "**Definition:** triangle with $\\geq 2$ equal sides (the legs $a$).\n**Base Angles Theorem:** equal legs $\\Longleftrightarrow$ equal base angles.\n**Vertex angle** $\\theta$ + 2·(**base angle**) = 180°.\n**Four-in-one line:** altitude = median = perp bisector = angle bisector, all from the apex.\n**Altitude** $h = \\sqrt{a^2 - (b/2)^2}$.\n**Area** $A = \\tfrac{1}{2}bh$.\n**Triangle inequality:** $b < 2a$.\n**45-45-90:** if vertex = 90°, base = $a\\sqrt{2}$."
+    }
+  ]
+}

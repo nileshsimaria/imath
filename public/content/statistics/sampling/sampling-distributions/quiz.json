@@ -1,0 +1,262 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The standard error of the sample mean is:}",
+      "choices": [
+        "\\sigma / \\sqrt{n}",
+        "\\sigma \\cdot \\sqrt{n}",
+        "\\sigma / n",
+        "\\sigma + \\sqrt{n}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "SE shrinks as $\\sqrt{n}$ grows.",
+        "$\\sigma / \\sqrt{n}$."
+      ],
+      "explanation": "Standard error of the sample mean: $\\text{SE} = \\sigma / \\sqrt{n}$.",
+      "steps": [
+        "Standard error measures how much sample means vary across samples.",
+        "Formula: $\\text{SE}(\\bar{x}) = \\sigma / \\sqrt{n}$.",
+        "Larger $n$ → smaller SE → more precise estimates."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If you double the sample size, the standard error:}",
+      "choices": [
+        "doubles",
+        "halves",
+        "decreases by factor of $\\sqrt{2}$",
+        "stays the same"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "SE scales as $1/\\sqrt{n}$.",
+        "$\\sqrt{2n}$ vs $\\sqrt{n}$ → SE shrinks by $\\sqrt{2}$."
+      ],
+      "explanation": "$SE \\propto 1/\\sqrt{n}$. Double $n$: new SE = old SE / $\\sqrt{2}$.",
+      "steps": [
+        "$SE = \\sigma/\\sqrt{n}$.",
+        "If $n \\to 2n$: $SE \\to \\sigma/\\sqrt{2n} = (\\sigma/\\sqrt{n})/\\sqrt{2}$.",
+        "**SE decreases by factor of $\\sqrt{2} \\approx 1.41$.**"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{Population: } \\sigma = 20. \\text{ Sample size } n = 100. \\\\ \\text{Standard error} = ?",
+      "answer": 2,
+      "tolerance": 0,
+      "hints": [
+        "$SE = 20/\\sqrt{100} = 20/10$.",
+        "$2$."
+      ],
+      "explanation": "$SE = 20/\\sqrt{100} = 20/10 = 2$.",
+      "steps": [
+        "$SE = \\sigma/\\sqrt{n} = 20/\\sqrt{100} = 20/10 = 2$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The Central Limit Theorem says: for } \\textbf{large } n, \\\\ \\text{the sampling distribution of } \\bar{x} \\text{ is approximately:}",
+      "choices": [
+        "uniform",
+        "skewed right",
+        "normal",
+        "binomial"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "CLT: sampling distributions of means → normal.",
+        "Even if the population is not normal!"
+      ],
+      "explanation": "CLT: for sufficiently large $n$, the sampling distribution of $\\bar{x}$ is approximately **normal**, regardless of the population's shape.",
+      "steps": [
+        "**Central Limit Theorem (CLT):** for large $n$, $\\bar{x}$ is approximately normal.",
+        "Striking property: this works **even if the population is highly non-normal** (skewed, bimodal, etc.).",
+        "The normal distribution emerges naturally from averaging."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Standard rule of thumb: CLT applies well when sample size is at least:}",
+      "choices": [
+        "5",
+        "10",
+        "30",
+        "100"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "The classic threshold.",
+        "$n \\geq 30$."
+      ],
+      "explanation": "Common rule: $n \\geq 30$ usually suffices for the CLT's normal approximation to be good.",
+      "steps": [
+        "Standard textbook rule of thumb: $n \\geq 30$.",
+        "(For very skewed populations, you might want larger; for already-normal populations, much smaller works.)"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\text{To halve the standard error, you must increase the sample size by a factor of:}",
+      "choices": [
+        "2",
+        "4",
+        "8",
+        "100"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "SE goes as $1/\\sqrt{n}$. Halving SE means doubling $\\sqrt{n}$, so quadrupling $n$.",
+        "4."
+      ],
+      "explanation": "$SE \\propto 1/\\sqrt{n}$. Halving SE → doubling $\\sqrt{n}$ → quadrupling $n$. **4x.**",
+      "steps": [
+        "$SE \\propto 1/\\sqrt{n}$.",
+        "To make new SE = old SE / 2, need $\\sqrt{n_{\\text{new}}} = 2\\sqrt{n_{\\text{old}}}$, i.e., $n_{\\text{new}} = 4 n_{\\text{old}}$.",
+        "**Quadruple the sample size.**"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{Population: } \\mu = 100, \\sigma = 15. \\text{ Sample size } n = 9. \\\\ \\text{Standard error of } \\bar{x} = ?",
+      "answer": 5,
+      "tolerance": 0,
+      "hints": [
+        "$15/\\sqrt{9} = 15/3 = 5$.",
+        "$5$."
+      ],
+      "explanation": "$SE = 15/\\sqrt{9} = 5$.",
+      "steps": [
+        "$SE = \\sigma/\\sqrt{n} = 15/\\sqrt{9} = 15/3 = 5$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The mean of the sampling distribution of } \\bar{x} \\text{ is:}",
+      "choices": [
+        "the sample mean",
+        "the population mean",
+        "$\\sigma$",
+        "depends on $n$"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "The sample mean is an **unbiased** estimator of the population mean.",
+        "$E[\\bar{x}] = \\mu$."
+      ],
+      "explanation": "$E[\\bar{x}] = \\mu$. The sample mean is centered on the population mean — that's the meaning of 'unbiased estimator'.",
+      "steps": [
+        "Across many samples, the sample means cluster around the **population mean** $\\mu$.",
+        "$E[\\bar{x}] = \\mu$ regardless of $n$.",
+        "This makes $\\bar{x}$ an **unbiased estimator** of $\\mu$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{Population: } \\mu = 50, \\sigma = 10. \\text{ Sample } n = 25. \\\\ P(\\bar{x} > 53) = ? \\\\ \\text{Use the normal approximation; round to 3 dec.}",
+      "answer": 0.067,
+      "tolerance": 0.01,
+      "hints": [
+        "SE = 10/√25 = 2. Then $z = (53-50)/2 = 1.5$.",
+        "$P(Z > 1.5) \\approx 0.067$."
+      ],
+      "explanation": "$\\bar{x} \\sim N(50, 2)$. $z = 1.5$. $P(Z > 1.5) \\approx 0.067$.",
+      "steps": [
+        "Sampling distribution: $\\bar{x} \\sim N(\\mu, \\sigma/\\sqrt{n}) = N(50, 10/\\sqrt{25}) = N(50, 2)$.",
+        "Standardize: $z = (53 - 50)/2 = 1.5$.",
+        "$P(Z > 1.5) \\approx 1 - 0.9332 = 0.0668$.",
+        "About **6.7%** chance the sample mean exceeds 53."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q10",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The margin of error in a poll comes from:}",
+      "choices": [
+        "The size of the population",
+        "The standard error of the sample statistic",
+        "Random luck",
+        "The pollster's experience"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Margin of error = roughly 2 × SE for ~95% confidence.",
+        "It quantifies sampling variability."
+      ],
+      "explanation": "Margin of error reflects the standard error of the statistic — capturing typical sample-to-sample variability.",
+      "steps": [
+        "Margin of error = a measure of how much the sample statistic might differ from the true value due to chance.",
+        "It's based on the standard error: typically MoE ≈ $2 \\times SE$ for 95% confidence.",
+        "Bigger sample → smaller SE → smaller margin of error."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A poll of } 1000 \\text{ adults shows } 45\\% \\pm 3\\% \\text{ support a policy.} \\\\ \\text{To shrink the margin to } \\pm 1\\%, \\text{ you'd need approximately:}",
+      "choices": [
+        "3000 respondents",
+        "9000 respondents",
+        "100 respondents",
+        "It can't be done"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Margin scales as $1/\\sqrt{n}$. Shrinking by 3× needs 9× sample.",
+        "$1000 \\cdot 9 = 9000$."
+      ],
+      "explanation": "MoE ∝ $1/\\sqrt{n}$. Shrinking by 3× → multiply $n$ by $3^2 = 9$. $1000 \\to 9000$.",
+      "steps": [
+        "Margin of error scales as $1/\\sqrt{n}$.",
+        "To reduce margin by factor $k$, multiply $n$ by $k^2$.",
+        "From ±3% to ±1% is a factor of 3 reduction → $n \\to 3^2 \\cdot 1000 = 9000$."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If you take samples from a population with } \\sigma = 12 \\text{ and want a standard error of 2,} \\\\ \\text{what sample size do you need?}",
+      "choices": [
+        "6",
+        "12",
+        "36",
+        "144"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "$2 = 12/\\sqrt{n}$. $\\sqrt{n} = 6$. $n = 36$.",
+        "$36$."
+      ],
+      "explanation": "$2 = 12/\\sqrt{n} \\Rightarrow \\sqrt{n} = 6 \\Rightarrow n = 36$.",
+      "steps": [
+        "Set up: $SE = \\sigma/\\sqrt{n} \\Rightarrow 2 = 12/\\sqrt{n}$.",
+        "Solve: $\\sqrt{n} = 12/2 = 6$.",
+        "$n = 36$."
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "title": "Solving Trig Equations & Inverse Functions",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Up to this point we've been **evaluating** trig functions: 'find $\\sin 30°$.' Here we flip the question around. We're given a value and asked: **for which angle(s) does the trig function equal that value?** That's a **trigonometric equation**.",
+        "Two big themes:",
+        "**1. There are usually infinitely many solutions** (because trig functions are periodic).",
+        "**2. Inverse trig functions** ($\\sin^{-1}$, $\\cos^{-1}$, $\\tan^{-1}$) give us the *one* answer in a chosen range — the **principal value** — and we use the periodicity to find the rest."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. Visualizing the Equation",
+        "Solving $\\sin x = c$ means: find every $x$ where the sine curve crosses the horizontal line $y = c$. The curve is wiggly and infinite — it crosses any horizontal line in $[-1, 1]$ infinitely many times.",
+        "Drag the green line in the widget below. Every red dot is a solution. Watch how the count changes as you cross $y = 1$ or $y = -1$."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "trig-equation",
+      "config": {
+        "func": "sin",
+        "c": 0.5
+      }
+    },
+    {
+      "type": "callout",
+      "title": "Solutions per period",
+      "body": "**$\\sin x = c$ and $\\cos x = c$:** if $-1 < c < 1$, *two* solutions per period of $2\\pi$. If $c = \\pm 1$, *one* solution per period. If $|c| > 1$, *no* solutions. **$\\tan x = c$:** *one* solution per period of $\\pi$ for any $c$ (tan is unbounded)."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. Solving Trig Equations with Special Values",
+        "When $c$ is a special-angle value ($0, \\tfrac{1}{2}, \\tfrac{\\sqrt{2}}{2}, \\tfrac{\\sqrt{3}}{2}, 1$), you can find exact solutions using the unit circle and reference angles."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 1 — $\\sin x = \\tfrac{1}{2}$ in $[0, 2\\pi)$",
+        "**Find the reference angle.** $\\sin = \\tfrac{1}{2}$ at $\\theta = \\tfrac{\\pi}{6}$ (special angle).",
+        "**Find all quadrants where $\\sin > 0$.** That's Q I and Q II (ASTC: All–Sin in upper half).",
+        "**Build solutions in each quadrant** using the reference angle:",
+        "Q I: $x = \\dfrac{\\pi}{6}$",
+        "Q II: $x = \\pi - \\dfrac{\\pi}{6} = \\dfrac{5\\pi}{6}$",
+        "**Solutions in $[0, 2\\pi)$:** $x = \\dfrac{\\pi}{6}, \\dfrac{5\\pi}{6}$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 2 — $\\cos x = -\\tfrac{\\sqrt{2}}{2}$ in $[0, 2\\pi)$",
+        "**Reference angle.** $\\cos = \\tfrac{\\sqrt{2}}{2}$ at $\\tfrac{\\pi}{4}$ (special angle).",
+        "**Sign is negative**, so $\\cos < 0$ — that's Q II and Q III.",
+        "Q II: $x = \\pi - \\tfrac{\\pi}{4} = \\dfrac{3\\pi}{4}$",
+        "Q III: $x = \\pi + \\tfrac{\\pi}{4} = \\dfrac{5\\pi}{4}$",
+        "**Solutions:** $x = \\dfrac{3\\pi}{4}, \\dfrac{5\\pi}{4}$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Three-step recipe",
+      "body": "**Step 1.** Find the reference angle from $|c|$ (using a special-angle table or $\\sin^{-1}, \\cos^{-1}, \\tan^{-1}$). **Step 2.** Identify the quadrants where the trig function has the right sign (use ASTC). **Step 3.** Use the reference angle and the quadrant rules to write each solution."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. General Solutions (All Solutions)",
+        "Often the problem asks for *every* solution, not just those in $[0, 2\\pi)$. Add multiples of the period to extend.",
+        "**For $\\sin x = c$ or $\\cos x = c$**: take your two solutions in $[0, 2\\pi)$ — call them $x_1$ and $x_2$ — and write the **general solution** as:",
+        "$$x = x_1 + 2\\pi k \\quad\\text{or}\\quad x = x_2 + 2\\pi k, \\qquad k \\in \\mathbb{Z}$$",
+        "**For $\\tan x = c$**: take the one solution in $[0, \\pi)$ — call it $x_1$ — and:",
+        "$$x = x_1 + \\pi k, \\qquad k \\in \\mathbb{Z}$$",
+        "(Period of tan is $\\pi$, not $2\\pi$, because the curve repeats every $\\pi$.)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 3 — general solution for $\\sin x = \\tfrac{1}{2}$",
+        "Two solutions in $[0, 2\\pi)$: $\\tfrac{\\pi}{6}$ and $\\tfrac{5\\pi}{6}$.",
+        "**General solutions:**",
+        "$$x = \\dfrac{\\pi}{6} + 2\\pi k \\quad\\text{or}\\quad x = \\dfrac{5\\pi}{6} + 2\\pi k$$",
+        "for any integer $k$. (For $k = 0$ you recover the originals; $k = 1$ gives $\\tfrac{13\\pi}{6}$ and $\\tfrac{17\\pi}{6}$; $k = -1$ gives $-\\tfrac{11\\pi}{6}$ and $-\\tfrac{7\\pi}{6}$.)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. Inverse Trig Functions",
+        "When $c$ isn't a special-angle value (e.g., $\\sin x = 0.4$), the answer isn't a clean fraction of $\\pi$. We use the **inverse trig functions** to get a numerical approximation:",
+        "$$\\sin^{-1}(c), \\quad \\cos^{-1}(c), \\quad \\tan^{-1}(c)$$",
+        "These are the inverse functions you've already used informally — but they have one important wrinkle that makes them genuine functions: **restricted domains/ranges**."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why we need restrictions",
+        "$\\sin x$ isn't one-to-one over its full domain — many different $x$ values give the same sine. To make an inverse function (which must give *one* output per input), we restrict the domain of sine to a piece where it's monotonic. Same for the others.",
+        "**Standard restrictions:**",
+        "$\\sin^{-1}: [-1, 1] \\to [-\\tfrac{\\pi}{2}, \\tfrac{\\pi}{2}]$ — output is in Q IV or Q I.",
+        "$\\cos^{-1}: [-1, 1] \\to [0, \\pi]$ — output is in Q I or Q II.",
+        "$\\tan^{-1}: \\mathbb{R} \\to (-\\tfrac{\\pi}{2}, \\tfrac{\\pi}{2})$ — output is in Q IV or Q I."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Principal value",
+      "body": "$\\sin^{-1}(c)$ returns the **principal value** — the *one* angle in $[-\\tfrac{\\pi}{2}, \\tfrac{\\pi}{2}]$ whose sine is $c$. To find *all* angles whose sine is $c$, you start from the principal value and use the periodicity / symmetry rules. Same idea for cos and tan."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Notation note",
+        "$\\sin^{-1}(x)$ is the inverse function — same thing as $\\arcsin(x)$. **Do not** read it as $1/\\sin(x)$ — that's $\\csc(x)$ (cosecant). Same for $\\cos^{-1}$ vs $\\sec$, and $\\tan^{-1}$ vs $\\cot$.",
+        "**Notation can confuse:** $\\sin^2(x)$ does mean $(\\sin x)^2$. But $\\sin^{-1}(x)$ does *not* mean $(\\sin x)^{-1}$. The historical notation is just unfortunate."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 4 — non-special equation",
+        "Solve $\\sin x = 0.4$ for $x$ in $[0, 2\\pi)$.",
+        "**Principal value:** $x_1 = \\sin^{-1}(0.4) \\approx 0.4115$ rad ($\\approx 23.6°$).",
+        "**Other solution in $[0, 2\\pi)$:** sine is also positive in Q II.",
+        "$$x_2 = \\pi - 0.4115 \\approx 2.7301 \\text{ rad} \\approx 156.4°$$",
+        "**Solutions:** $x \\approx 0.4115$ and $x \\approx 2.7301$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 5 — using $\\cos^{-1}$",
+        "Solve $\\cos x = -0.3$ for $x$ in $[0, 2\\pi)$.",
+        "**Principal value:** $\\cos^{-1}(-0.3) \\approx 1.875$ rad ($\\approx 107.5°$). Note that $\\cos^{-1}$'s range is $[0, \\pi]$ — so this is already in Q II, where cosine is negative.",
+        "**Second solution** (cos is also negative in Q III): reflect across $\\pi$:",
+        "$$x_2 = 2\\pi - 1.875 \\approx 4.408 \\text{ rad}$$",
+        "**Solutions:** $x \\approx 1.875$ and $x \\approx 4.408$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 5. Reciprocal Trig Equations",
+        "Equations involving $\\csc$, $\\sec$, or $\\cot$ are easiest to solve by **flipping to the basic three** using the reciprocal identities."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\csc x = c \\;\\Longleftrightarrow\\; \\sin x = \\dfrac{1}{c} \\qquad \\sec x = c \\;\\Longleftrightarrow\\; \\cos x = \\dfrac{1}{c} \\qquad \\cot x = c \\;\\Longleftrightarrow\\; \\tan x = \\dfrac{1}{c}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 6 — solve $\\sec x = 2$",
+        "**Flip:** $\\cos x = \\tfrac{1}{2}$.",
+        "**Solve.** Reference angle $\\tfrac{\\pi}{3}$. Cosine positive in Q I and Q IV.",
+        "Q I: $x = \\tfrac{\\pi}{3}$. Q IV: $x = 2\\pi - \\tfrac{\\pi}{3} = \\tfrac{5\\pi}{3}$.",
+        "**Solutions in $[0, 2\\pi)$:** $\\tfrac{\\pi}{3}$ and $\\tfrac{5\\pi}{3}$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 6. Trigonometric Equations That Need Algebra First",
+        "Sometimes you have to massage the equation algebraically before applying inverse trig.",
+        "**Example.** Solve $2\\sin x - 1 = 0$ for $x \\in [0, 2\\pi)$.",
+        "$\\Rightarrow 2\\sin x = 1 \\Rightarrow \\sin x = \\tfrac{1}{2}$. Then proceed as in Worked Example 1: $x = \\tfrac{\\pi}{6}, \\tfrac{5\\pi}{6}$.",
+        "**Example.** Solve $\\sin^2 x = \\tfrac{1}{4}$.",
+        "Take square root: $\\sin x = \\pm \\tfrac{1}{2}$. Solve each case separately (each has 2 solutions in $[0, 2\\pi)$). Total: 4 solutions: $\\tfrac{\\pi}{6}, \\tfrac{5\\pi}{6}, \\tfrac{7\\pi}{6}, \\tfrac{11\\pi}{6}$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "**Solving trig equations** = finding all $x$ where $f(x) = c$. Use **reference angle + quadrant signs (ASTC)** for solutions in $[0, 2\\pi)$. Add multiples of the period for the **general solution**. **Inverse trig functions** ($\\sin^{-1}, \\cos^{-1}, \\tan^{-1}$) return the **principal value** — one angle in a restricted range. Use that as a starting point, not the final answer. **Reciprocal equations** flip to the basic three first. **Algebraic manipulation** comes before trig: isolate the trig function on one side."
+    }
+  ]
+}

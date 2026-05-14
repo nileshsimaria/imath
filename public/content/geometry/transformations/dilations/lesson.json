@@ -1,0 +1,79 @@
+{
+  "title": "Dilations",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### Scaling shapes up and down",
+        "A **dilation** changes the size of a shape without changing its shape (in the everyday sense). Every point moves toward or away from a fixed **center of dilation**, by a factor called the **scale factor** $k$.",
+        "If $k > 1$, the shape grows (enlargement). If $0 < k < 1$, it shrinks (reduction). If $k = 1$, no change. If $k < 0$, the shape flips through the center AND scales.",
+        "Dilations are the first transformation we've seen that's **not a rigid motion** — they change distances. But they preserve angles, so the image is **similar** (not congruent) to the pre-image."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "transformation",
+      "config": {
+        "mode": "dilate",
+        "k": 1.5
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "Slide the $k$ slider. Watch the shape grow from a point at the origin as $k$ increases. Set $k = -1$ and the shape pivots through the origin (which is the same as a 180° rotation). At $k = 0$ everything collapses to a point — that's degenerate."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The dilation rule",
+      "body": "**Dilation by scale factor $k$ centered at the origin:**\n\n$(x, y) \\;\\longmapsto\\; (kx,\\; ky)$\n\n**Dilation by $k$ centered at $(h, k_0)$:** (using $k_0$ to avoid confusion with the scale factor $k$)\n\n$(x, y) \\;\\longmapsto\\; (h + k(x - h),\\; k_0 + k(y - k_0))$\n\nThis is just: translate the center to origin, scale, translate back."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### What's preserved",
+        "**Preserved by dilation:**",
+        "- Angles (so shapes remain similar)",
+        "- Parallel lines stay parallel",
+        "- Ratios of lengths (the ratio of any two segments stays the same)",
+        "**Changed by dilation:**",
+        "- All actual lengths get multiplied by $|k|$.",
+        "- Areas get multiplied by $k^2$.",
+        "- Volumes (in 3D) would get multiplied by $k^3$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Scaling laws — memorize these",
+      "body": "If you dilate a shape by factor $k$:\n\n**Lengths** scale by $k$\n**Areas** scale by $k^2$\n**Volumes** scale by $k^3$\n\nDouble all sides of a square: perimeter doubles, area becomes 4× larger.\nTriple all sides of a cube: surface area becomes 9× larger, volume becomes 27× larger.\n\nThis is why a giant ant couldn't exist — area scales as length², but volume (= weight) scales as length³, so a 100× larger ant would weigh 100³ = 1,000,000× more but only have 100² = 10,000× more leg cross-section to support it."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example",
+        "Dilate $A(2, 3)$ by scale factor $k = 4$ about the origin.",
+        "Use $(x, y) \\to (kx, ky)$:",
+        "$A' = (8, 12)$.",
+        "Sanity check: distance from origin to $A$ was $\\sqrt{4 + 9} = \\sqrt{13}$. Distance from origin to $A'$ is $\\sqrt{64 + 144} = \\sqrt{208} = 4\\sqrt{13}$. Exactly 4× as far. ✓"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Negative scale factors",
+        "If $k < 0$, the dilation **flips through the center**. The image lies on the opposite side of the center from the pre-image, scaled by $|k|$.",
+        "**Example.** Dilate $(3, 1)$ by $k = -2$ about the origin: $A' = (-6, -2)$. The image is on the opposite side of the origin, twice as far.",
+        "$k = -1$ is a special case: it's exactly the same as a **180° rotation** about the center. (Try it in the widget!)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why similar triangles use dilations",
+        "Two triangles are **similar** if one is a translation/rotation/reflection of a dilation of the other. Dilation is the *only* one of the four basic transformations that creates non-congruent similar shapes.",
+        "This is why geometry textbooks teach similarity right alongside dilations — they're the same idea expressed differently. **Similar triangles = one is a scaled (and possibly rotated/reflected/translated) copy of the other.**"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Dilate } (4, -2) \\text{ by scale factor } 3 \\text{ about the origin.}",
+      "choices": [
+        "(12, -6)",
+        "(7, 1)",
+        "(4/3, -2/3)",
+        "(12, 6)"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Multiply both coordinates by 3.",
+        "$(3 \\cdot 4,\\; 3 \\cdot (-2))$"
+      ],
+      "explanation": "$(x, y) \\to (kx, ky)$, so $(4, -2) \\to (12, -6)$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Dilate } (6, 9) \\text{ by scale factor } \\tfrac{1}{3} \\text{ about the origin.}",
+      "choices": [
+        "(18, 27)",
+        "(2, 3)",
+        "(3, 6)",
+        "(6/3, 9/3)"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Multiply each coordinate by $1/3$.",
+        "$6/3 = 2$, $9/3 = 3$."
+      ],
+      "explanation": "$(6, 9) \\to (6/3, 9/3) = (2, 3)$. Shrinks toward the origin.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "Under a dilation by k = 2, what happens to area?",
+      "choices": [
+        "Doubles",
+        "Quadruples (×4)",
+        "Triples (×3)",
+        "Stays the same"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Areas scale by $k^2$.",
+        "$2^2 = 4$."
+      ],
+      "explanation": "Lengths scale by $k$, but areas scale by $k^2$. So $k = 2$ means area becomes $4×$ larger.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "prompt": "A dilation by k = -1 is the same as which transformation?",
+      "choices": [
+        "A reflection over the x-axis",
+        "A 180° rotation about the center",
+        "A translation",
+        "A 90° rotation"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Apply $(x, y) \\to (-x, -y)$.",
+        "Compare to the 180° rotation rule."
+      ],
+      "explanation": "$k = -1$ sends $(x, y) \\to (-x, -y)$, which is exactly the formula for a 180° rotation about the center.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{A square has side length 4. After a dilation by } k = 3, \\\\ \\text{what is the area of the image?}",
+      "answer": 144,
+      "tolerance": 0.001,
+      "hints": [
+        "Side length goes from 4 to $4 \\cdot 3 = 12$.",
+        "Or: original area = 16; areas scale by $k^2 = 9$. $16 \\cdot 9 = 144$."
+      ],
+      "explanation": "Sides become $4 \\cdot 3 = 12$. Area $= 12^2 = 144$. (Or: original area 16, scaled by $k^2 = 9$, gives $16 \\cdot 9 = 144$.)",
+      "steps": [
+        {
+          "text": "**Two ways to compute. First way:** find the new side length, then square it."
+        },
+        {
+          "math": "\\text{new side} = 4 \\cdot 3 = 12 \\;\\Longrightarrow\\; \\text{new area} = 12^2 = 144"
+        },
+        {
+          "text": "**Second way:** scale the area directly using $k^2$."
+        },
+        {
+          "math": "\\text{new area} = (\\text{old area}) \\cdot k^2 = 16 \\cdot 9 = 144"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Dilate } (5, 2) \\text{ by scale factor 2 centered at } (1, 0).",
+      "choices": [
+        "(9, 4)",
+        "(10, 4)",
+        "(11, 4)",
+        "(6, 4)"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Step 1: translate by $-(1, 0)$ so center is at origin. $(5, 2) - (1, 0) = (4, 2)$.",
+        "Step 2: dilate by 2: $(8, 4)$. Step 3: translate back by $(1, 0)$: $(9, 4)$."
+      ],
+      "explanation": "Translate so center is origin: $(5, 2) - (1, 0) = (4, 2)$. Dilate: $(8, 4)$. Translate back: $(9, 4)$.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{Triangle with sides 3, 4, 5 is dilated by } k = 4. \\\\ \\text{Find the perimeter of the image.}",
+      "answer": 48,
+      "tolerance": 0.001,
+      "hints": [
+        "Each side scales by $k = 4$.",
+        "New perimeter $= 4 \\cdot (3 + 4 + 5)$."
+      ],
+      "explanation": "$P' = k \\cdot P = 4 \\cdot 12 = 48$. Perimeter scales by $k$, just like any length.",
+      "steps": [
+        {
+          "text": "**Perimeter scales by $k$**, same as any length."
+        },
+        {
+          "math": "P' = k \\cdot P = 4 \\cdot (3 + 4 + 5) = 4 \\cdot 12 = 48"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A dilation maps } (6, -4) \\to (3, -2). \\text{ What is the scale factor?}",
+      "choices": [
+        "2",
+        "-1",
+        "1/2",
+        "-1/2"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "$kx = x'$, so $k = x'/x = 3/6 = 1/2$.",
+        "Verify with y: $k \\cdot (-4) = -2$ → $k = 1/2$. ✓"
+      ],
+      "explanation": "$k = 3/6 = 1/2$ (same factor must work for both coords). Image is half-sized — a reduction.",
+      "difficulty": "medium"
+    }
+  ]
+}

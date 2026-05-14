@@ -1,0 +1,177 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{Chords } AB \\text{ and } CD \\text{ meet inside a circle at } P. \\\\ PA = 6, PB = 4, PC = 3. \\text{ Find } PD.",
+      "answer": 8,
+      "tolerance": 0.001,
+      "hints": [
+        "Two-chord rule: $PA \\cdot PB = PC \\cdot PD$.",
+        "$6 \\cdot 4 = 3 \\cdot PD$, so $PD = 24/3$."
+      ],
+      "explanation": "$PA \\cdot PB = PC \\cdot PD \\Rightarrow 24 = 3 \\cdot PD \\Rightarrow PD = 8$.",
+      "steps": [
+        {
+          "text": "**Two-chord power of a point:**"
+        },
+        {
+          "math": "PA \\cdot PB = PC \\cdot PD"
+        },
+        {
+          "math": "6 \\cdot 4 = 3 \\cdot PD \\;\\Longrightarrow\\; PD = \\dfrac{24}{3} = 8"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{From external point } P, \\text{ tangent } PT = 8 \\text{ and secant hits at } A, B \\\\ \\text{ with } PA = 4. \\text{ Find } PB.",
+      "answer": 16,
+      "tolerance": 0.001,
+      "hints": [
+        "Tangent-secant rule: $PT^2 = PA \\cdot PB$.",
+        "$64 = 4 \\cdot PB$."
+      ],
+      "explanation": "$PT^2 = PA \\cdot PB \\Rightarrow 64 = 4 \\cdot PB \\Rightarrow PB = 16$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{From external } P, \\text{ two secants: } PA = 3, PB = 18; \\, PC = 6, PD = ?",
+      "answer": 9,
+      "tolerance": 0.001,
+      "hints": [
+        "Two-secant rule: $PA \\cdot PB = PC \\cdot PD$.",
+        "$3 \\cdot 18 = 6 \\cdot PD$."
+      ],
+      "explanation": "$54 = 6 \\cdot PD \\Rightarrow PD = 9$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Point } P \\text{ is inside a circle with center } O, \\text{ radius } r = 10, OP = 6. \\\\ \\text{Find the (absolute) power of } P.",
+      "answer": 64,
+      "tolerance": 0.001,
+      "hints": [
+        "$\\text{pow}(P) = |OP|^2 - r^2 = 36 - 100 = -64$.",
+        "Absolute value: 64."
+      ],
+      "explanation": "$|OP|^2 - r^2 = 36 - 100 = -64$. Absolute power: $64$. (Negative sign indicates inside.)",
+      "steps": [
+        {
+          "text": "**Power formula:**"
+        },
+        {
+          "math": "\\text{pow}(P) = |OP|^2 - r^2 = 36 - 100 = -64"
+        },
+        {
+          "text": "Negative because $P$ is inside. Absolute value: $64$."
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{From external } P, \\, OP = 13, \\text{ circle radius } 5. \\\\ \\text{Find the tangent length from } P.",
+      "answer": 12,
+      "tolerance": 0.001,
+      "hints": [
+        "$PT^2 = \\text{pow}(P) = OP^2 - r^2 = 169 - 25 = 144$.",
+        "$PT = 12$. (5-12-13 again.)"
+      ],
+      "explanation": "$PT^2 = 13^2 - 5^2 = 144 \\Rightarrow PT = 12$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** $PT^2 = \\text{pow}(P) = OP^2 - r^2 = 169 - 25 = 144$."
+        },
+        {
+          "text": "$PT = 12$. (5-12-13 again.)"
+        },
+        {
+          "text": "**Solution.** $PT^2 = 13^2 - 5^2 = 144 \\Rightarrow PT = 12$."
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{Chord } AB \\text{ of length } 10 \\text{ is bisected by chord } CD \\text{ at midpoint } M. \\\\ \\text{If } CM = 4, \\text{ find } DM.",
+      "answer": 6.25,
+      "tolerance": 0.01,
+      "hints": [
+        "$M$ bisects $AB$, so $AM = BM = 5$.",
+        "Power of $M$: $AM \\cdot BM = CM \\cdot DM$. $25 = 4 \\cdot DM$."
+      ],
+      "explanation": "$AM = BM = 5$ (bisected). $5 \\cdot 5 = 4 \\cdot DM \\Rightarrow DM = 25/4 = 6.25$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** $M$ bisects $AB$, so $AM = BM = 5$."
+        },
+        {
+          "text": "Power of $M$: $AM \\cdot BM = CM \\cdot DM$. $25 = 4 \\cdot DM$."
+        },
+        {
+          "text": "**Solution.** $AM = BM = 5$ (bisected). $5 \\cdot 5 = 4 \\cdot DM \\Rightarrow DM = 25/4 = 6.25$."
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "prompt": "The power of a point P is exactly zero. What does that tell you about P?",
+      "choices": [
+        "$P$ is the center of the circle.",
+        "$P$ is on the circle.",
+        "$P$ is at infinity.",
+        "$P$ doesn't exist."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$|OP|^2 - r^2 = 0$ means $|OP| = r$.",
+        "Distance from center = radius ⇒ on the circle."
+      ],
+      "explanation": "$|OP|^2 = r^2 \\Rightarrow |OP| = r$, so $P$ is on the circle. Any line through such a $P$ is a chord with one endpoint at $P$ itself — the product $PX \\cdot PY = 0$ trivially since one factor is zero.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{Two chords intersect inside a circle at } P. \\, PA = x, PB = x + 5. \\\\ PC = 4, PD = 9. \\, \\text{Find } x.",
+      "answer": 4,
+      "tolerance": 0.01,
+      "hints": [
+        "$PA \\cdot PB = PC \\cdot PD$.",
+        "$x(x + 5) = 36$. Solve $x^2 + 5x - 36 = 0$: $(x + 9)(x - 4) = 0$, so $x = 4$ (positive root)."
+      ],
+      "explanation": "$x(x + 5) = 36 \\Rightarrow x^2 + 5x - 36 = 0$. Factor: $(x - 4)(x + 9) = 0$. Length must be positive, so $x = 4$.",
+      "steps": [
+        {
+          "text": "**Two-chord rule:**"
+        },
+        {
+          "math": "PA \\cdot PB = PC \\cdot PD"
+        },
+        {
+          "math": "x(x + 5) = 4 \\cdot 9 = 36"
+        },
+        {
+          "math": "x^2 + 5x - 36 = 0"
+        },
+        {
+          "math": "(x - 4)(x + 9) = 0"
+        },
+        {
+          "text": "Length must be positive, so $x = 4$."
+        }
+      ],
+      "difficulty": "hard"
+    }
+  ]
+}

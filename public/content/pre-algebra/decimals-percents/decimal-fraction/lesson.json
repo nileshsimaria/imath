@@ -1,0 +1,69 @@
+{
+  "title": "Decimal–Fraction Conversions",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Decimals and fractions are two ways to write the same numbers. Knowing how to switch between them — and which forms to memorize — is a major win when you're solving problems."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Decimals are just fractions in disguise",
+        "Decimal place values are powers of ten. The first place after the decimal point is **tenths** ($\\tfrac{1}{10}$), the second is **hundredths** ($\\tfrac{1}{100}$), the third is **thousandths** ($\\tfrac{1}{1000}$), and so on."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "0.7 = \\dfrac{7}{10} \\qquad 0.25 = \\dfrac{25}{100} = \\dfrac{1}{4} \\qquad 0.125 = \\dfrac{125}{1000} = \\dfrac{1}{8}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Drag the marker below to see decimals and their fraction equivalents on the same number line. Notice that some clean decimals are clean fractions, and vice versa."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "number-line",
+      "config": {
+        "mode": "decimal-marker",
+        "min": 0,
+        "max": 1,
+        "step": 0.05,
+        "initial": 0.5
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Decimal → fraction",
+        "Read the decimal, write the digits over the matching power of ten, then simplify.",
+        "**$0.6$.** Six tenths: $\\dfrac{6}{10} = \\dfrac{3}{5}$.",
+        "**$0.45$.** Forty-five hundredths: $\\dfrac{45}{100} = \\dfrac{9}{20}$.",
+        "**$0.125$.** One hundred twenty-five thousandths: $\\dfrac{125}{1000} = \\dfrac{1}{8}$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Fraction → decimal",
+        "Divide the numerator by the denominator (long division). Sometimes it terminates, sometimes it repeats.",
+        "$\\dfrac{3}{4} = 3 \\div 4 = 0.75$.",
+        "$\\dfrac{1}{8} = 0.125$.",
+        "$\\dfrac{1}{3} = 0.333\\ldots$ (repeating)."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Memorize these",
+      "body": "$\\tfrac{1}{2} = 0.5$, $\\tfrac{1}{4} = 0.25$, $\\tfrac{3}{4} = 0.75$, $\\tfrac{1}{5} = 0.2$, $\\tfrac{1}{8} = 0.125$, $\\tfrac{1}{3} \\approx 0.333$, $\\tfrac{2}{3} \\approx 0.667$. They show up *constantly* — knowing them by heart will save you hours."
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "Decimals are fractions whose denominators are powers of $10$. Decimal → fraction: write digits over the matching power of $10$ and simplify. Fraction → decimal: divide. Memorize the common ones."
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The full group you want to study is the:}",
+      "choices": [
+        "sample",
+        "population",
+        "parameter",
+        "statistic"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "The whole group = population.",
+        "Sample is the subset."
+      ],
+      "explanation": "Population = the whole group. Sample = the subset you observe.",
+      "steps": [
+        "**Population:** entire group of interest.",
+        "**Sample:** subset actually observed."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A simple random sample (SRS) requires that:}",
+      "choices": [
+        "every member has equal chance of being chosen",
+        "the sample is large",
+        "members are chosen alphabetically",
+        "members volunteer"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "SRS = equal probability for everyone.",
+        "It's the gold standard for unbiased sampling."
+      ],
+      "explanation": "SRS: every member of the population has the same probability of being selected (and every subset of size n is equally likely).",
+      "steps": [
+        "Simple random sample: every person in the population has the same chance of selection.",
+        "(Equivalent: every possible sample of size $n$ is equally likely.)",
+        "Volunteer/convenience samples are NOT random — they self-select."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Asking only people leaving a gym about their exercise habits suffers from:}",
+      "choices": [
+        "selection bias",
+        "no bias — it's random",
+        "response bias",
+        "non-response bias"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "You're systematically excluding non-gym-goers.",
+        "Selection bias: the sample frame misses part of the population."
+      ],
+      "explanation": "**Selection bias.** Gym attendees are systematically different from non-attendees regarding exercise — your sample is not representative of the general population.",
+      "steps": [
+        "The sampling frame (gym exit) excludes non-exercisers.",
+        "Result: sample is biased toward exercisers.",
+        "This is **selection bias** — the method itself excludes part of the population."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A school has } 60\\% \\text{ underclassmen and } 40\\% \\text{ upperclassmen.} \\\\ \\text{To survey, you randomly pick 60 underclassmen and 40 upperclassmen.} \\\\ \\text{This is a:}",
+      "choices": [
+        "simple random sample",
+        "stratified sample",
+        "cluster sample",
+        "convenience sample"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "You sampled separately from groups (strata) in proportion.",
+        "Stratified."
+      ],
+      "explanation": "Sampling separately from defined subgroups (strata) → **stratified sampling**.",
+      "steps": [
+        "You divided the population into two groups (strata): underclassmen and upperclassmen.",
+        "Then sampled randomly from each, in proportion to their share.",
+        "**Stratified sampling.**"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A poll asks people their political views over the phone. Many refuse to answer.} \\\\ \\text{The respondents may differ from non-respondents. This is:}",
+      "choices": [
+        "selection bias",
+        "non-response bias",
+        "response bias",
+        "undercoverage"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "The bias comes from people choosing NOT to respond.",
+        "Non-response bias."
+      ],
+      "explanation": "**Non-response bias** — people who refuse to answer may systematically differ from those who do, distorting the result.",
+      "steps": [
+        "Even if the call list is unbiased, the people who choose to answer might differ.",
+        "(E.g., busy professionals refuse; retirees answer.)",
+        "**Non-response bias.**"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A survey asks 'Have you ever shoplifted?' Many people lie. This is:}",
+      "choices": [
+        "selection bias",
+        "non-response bias",
+        "response bias",
+        "no bias"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Sensitive questions → people give inaccurate answers.",
+        "Response bias."
+      ],
+      "explanation": "**Response bias** — people give inaccurate answers due to social pressure or sensitive topic. Common with questions about illegal/embarrassing behavior, salaries, or political views.",
+      "steps": [
+        "Respondents answer, but their answers are systematically wrong.",
+        "Cause: social desirability — people lie about embarrassing or illegal things.",
+        "**Response bias.**"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which is the BEST way to fix bias in a study?}",
+      "choices": [
+        "Take a much larger biased sample",
+        "Use random sampling from the start",
+        "Throw out outliers",
+        "Survey just one group"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Bigger biased sample is still biased!",
+        "Random sampling fixes bias at the source."
+      ],
+      "explanation": "**Random sampling from the start** is the only reliable fix. A larger biased sample is still biased — sample size doesn't cure bias.",
+      "steps": [
+        "Bias is a **systematic** error in how you collected data.",
+        "Larger sample reduces *random* error, but cannot remove *systematic* error.",
+        "Only **random sampling** ensures the sample resembles the population."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The 1936 Literary Digest poll (10M ballots, 2.4M responses) wrongly predicted Landon would beat Roosevelt. Why?}",
+      "choices": [
+        "Sample was too small",
+        "They sampled from phone books and car registries — biased toward wealthier voters",
+        "Roosevelt cheated",
+        "Random fluctuation"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "10 million is huge — but biased.",
+        "In 1936, owning a phone or car was a wealth indicator."
+      ],
+      "explanation": "Selection bias: phone and car owners in 1936 were disproportionately wealthier — and wealthier voters in 1936 favored Landon. Sample was huge but systematically off.",
+      "steps": [
+        "10 million ballots — sample was MASSIVE.",
+        "But: phone/car owners in 1936 = wealthier than average.",
+        "Wealthier voters supported Landon; the broader public supported Roosevelt.",
+        "**Selection bias** → wrong prediction despite huge sample size.",
+        "Lesson: bias matters more than size. Gallup's smaller-but-random poll got it right."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The } \\textbf{population mean} \\text{ is denoted by } \\_\\_\\_, \\text{ and the } \\textbf{sample mean} \\text{ by } \\_\\_\\_.",
+      "choices": [
+        "\\mu \\;;\\; \\bar{x}",
+        "\\bar{x} \\;;\\; \\mu",
+        "\\sigma \\;;\\; s",
+        "n \\;;\\; N"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Population: Greek letters (parameters). Sample: English letters with bars (statistics).",
+        "$\\mu$ for population, $\\bar{x}$ for sample."
+      ],
+      "explanation": "Population mean: $\\mu$ (Greek). Sample mean: $\\bar{x}$ (x-bar). Standard convention.",
+      "steps": [
+        "Population parameter: usually a Greek letter (μ for mean, σ for sd).",
+        "Sample statistic: usually English letter, often with a bar ($\\bar{x}$ for mean, $s$ for sd).",
+        "We use sample statistics to estimate population parameters."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Picking every 10th person from a sorted list is:}",
+      "choices": [
+        "random sampling",
+        "systematic sampling",
+        "stratified sampling",
+        "convenience sampling"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Picking every kth member = systematic.",
+        "Watch out: bad if the list has periodic pattern."
+      ],
+      "explanation": "**Systematic sampling.** Simple, but problematic if the list has a hidden cycle that aligns with your interval.",
+      "steps": [
+        "Picking every $k$th element from an ordered list = systematic sampling.",
+        "Easy to implement. But beware: if there's a hidden periodic pattern in the list at interval $k$, you'll get a biased sample."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "multiple-choice",
+      "promptTex": "\\text{An online poll on a news website lets visitors vote. Which best describes the sample?}",
+      "choices": [
+        "simple random sample",
+        "stratified",
+        "convenience / volunteer sample",
+        "systematic"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Anyone visiting the site and choosing to vote — self-selected.",
+        "Convenience/volunteer sample, classic source of bias."
+      ],
+      "explanation": "Visitors self-select to answer. **Convenience / volunteer sample** — heavily biased toward people with strong opinions and time to vote.",
+      "steps": [
+        "The sample is whoever (a) visits the site and (b) chooses to vote.",
+        "Both are self-selected — not random.",
+        "Convenience/volunteer samples are heavily biased toward people with strong feelings about the topic.",
+        "Online polls are notoriously unreliable for this reason."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Doubling the sample size in a randomly-collected sample:}",
+      "choices": [
+        "Decreases bias",
+        "Decreases random error (variability) by a factor of about $\\sqrt{2}$",
+        "Doesn't change anything",
+        "Doubles the bias"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Standard error scales as $1/\\sqrt{n}$.",
+        "$\\sqrt{2 \\cdot n}$ vs $\\sqrt{n}$ → factor $\\sqrt{2}$ improvement."
+      ],
+      "explanation": "Larger sample → less random variability. Standard error scales as $1/\\sqrt{n}$, so doubling $n$ improves precision by $\\sqrt{2}$. Bias unchanged.",
+      "steps": [
+        "Standard error of the mean: $\\sigma/\\sqrt{n}$.",
+        "Double $n$: new SE = $\\sigma/\\sqrt{2n} = (\\sigma/\\sqrt{n})/\\sqrt{2}$.",
+        "So precision improves by $\\sqrt{2}$ ≈ 1.41×.",
+        "(Note: bias is a property of the sampling method, not the size — doubling doesn't fix it.)"
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

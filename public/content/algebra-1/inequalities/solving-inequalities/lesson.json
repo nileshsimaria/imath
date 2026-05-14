@@ -1,0 +1,101 @@
+{
+  "title": "Solving Linear Inequalities",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "An **inequality** looks like an equation, but with a comparison symbol — $<$, $\\leq$, $>$, or $\\geq$ — instead of an equals sign. Solving one means finding *all* the values of the variable that make the statement true. The good news: the techniques are almost identical to solving equations. The catch: there's exactly one rule that's different — and forgetting it is the #1 mistake students make."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The four symbols",
+        "$x < 3$ means '$x$ is **less than** $3$'.",
+        "$x \\leq 3$ means '$x$ is **less than or equal to** $3$'.",
+        "$x > 3$ means '$x$ is **greater than** $3$'.",
+        "$x \\geq 3$ means '$x$ is **greater than or equal to** $3$'.",
+        "The first two are **strict** — the boundary is *not* included. The last two are **non-strict** — the boundary *is* included."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Graphing the solution",
+        "Every inequality solution can be drawn on a number line. Try the visualization below — change the boundary value and the comparison symbol to see how the picture changes."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "number-line",
+      "config": {
+        "mode": "inequality",
+        "op": ">",
+        "boundary": 2,
+        "min": -10,
+        "max": 10
+      }
+    },
+    {
+      "type": "callout",
+      "title": "Open vs filled circle",
+      "body": "An **open circle** (○) at the boundary means the boundary is *not* included — used for strict $<$ and $>$. A **filled circle** (●) means the boundary *is* included — used for $\\leq$ and $\\geq$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Solving inequalities — almost like equations",
+        "These three operations *preserve* the direction of the inequality:",
+        "**Adding** the same number to both sides — preserves direction.",
+        "**Subtracting** the same number from both sides — preserves direction.",
+        "**Multiplying or dividing both sides by a positive number** — preserves direction.",
+        "Example: $x + 3 > 7$. Subtract $3$ from both sides: $x > 4$. The direction stays the same."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The one rule that's different",
+      "body": "**Multiplying or dividing both sides by a NEGATIVE number FLIPS the inequality sign.** $<$ becomes $>$, $\\leq$ becomes $\\geq$, and so on. Forget this and your final answer points the wrong way."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why does it flip?",
+        "Picture two numbers: $5 > 3$. Multiply both by $-1$: you get $-5$ and $-3$. Now $-5 < -3$ — the bigger number became the smaller one. Multiplying by a negative *reverses the order* on the number line, so the inequality has to flip too."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 1",
+        "Solve $2x - 5 \\leq 9$.",
+        "Add $5$ to both sides: $2x \\leq 14$.",
+        "Divide both sides by $2$ (positive — direction stays): $x \\leq 7$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 2 — the flip in action",
+        "Solve $-3x < 12$.",
+        "Divide both sides by $-3$. Because the divisor is **negative**, flip the sign:",
+        "$x > -4$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example 3 — multi-step with a flip",
+        "Solve $5 - 2x \\geq 11$.",
+        "Subtract $5$ from both sides: $-2x \\geq 6$.",
+        "Divide both sides by $-2$ (negative — flip the sign):",
+        "$x \\leq -3$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "Solve inequalities the same way you solve equations — *except* whenever you multiply or divide both sides by a negative, **flip** the inequality. Graph the solution with an open circle for strict inequalities, filled for non-strict, and shade the ray containing the solutions."
+    }
+  ]
+}

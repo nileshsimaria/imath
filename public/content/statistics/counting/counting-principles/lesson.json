@@ -1,0 +1,107 @@
+{
+  "title": "Counting Principles",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Probability problems often boil down to **counting**: how many total outcomes are there, and how many are favorable? When counting by hand isn't practical, two simple principles do most of the heavy lifting."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. The Multiplication (Fundamental Counting) Principle"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "If a task is done in **stages**, multiply the choices at each stage.",
+        "**Example.** A menu has 4 appetizers, 6 entrees, 3 desserts. How many possible 3-course meals?",
+        "$4 \\cdot 6 \\cdot 3 = 72$ meals.",
+        "**Example.** How many 4-letter codes can be made from the 26 letters (repetition allowed)?",
+        "$26 \\cdot 26 \\cdot 26 \\cdot 26 = 26^4 = 456{,}976$ codes."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "When to multiply",
+      "body": "Use multiplication when each step is **independent** — what you choose at one step doesn't restrict the next step's options. (Or you've already accounted for restrictions.)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. Multiplication With Restrictions"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Example.** How many 4-digit codes if no digit can repeat?",
+        "First digit: 10 choices. Second: only 9 left. Third: 8 left. Fourth: 7 left.",
+        "$10 \\cdot 9 \\cdot 8 \\cdot 7 = 5040$ codes.",
+        "**Example.** How many ways to arrange 5 books on a shelf?",
+        "First spot: 5 choices. Second: 4 left. Third: 3. Fourth: 2. Fifth: 1.",
+        "$5! = 5 \\cdot 4 \\cdot 3 \\cdot 2 \\cdot 1 = 120$. (This is the 'permutation' count, see next leaf.)"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. The Addition Principle"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "If a task is done in *one of several disjoint ways*, **add** the choices.",
+        "**Example.** You can drive to work or take the bus. There are 3 driving routes and 2 bus routes. How many ways to get to work?",
+        "$3 + 2 = 5$ ways.",
+        "(Multiplying ($3 \\cdot 2 = 6$) would be wrong — you can't drive AND take the bus at the same time.)"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Multiplication vs addition — when to use which",
+      "body": "**Multiplication** ($\\times$): combining choices in **stages** (do step 1 AND step 2 AND ...). **Addition** ($+$): choosing from **alternatives** (do option A OR option B OR ...). The 'and' vs 'or' test usually decides."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. Tree Diagrams"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "A **tree diagram** branches out at each stage, showing all paths.",
+        "**Example.** A coin flip followed by a die roll. The tree has 2 branches (H, T) at first, each splitting into 6 (1–6) — total $2 \\cdot 6 = 12$ leaves.",
+        "**When to draw one:** small problems, when you want to enumerate every outcome, or when stages have different numbers of choices depending on what came before."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — license plates",
+        "A license plate has 6 characters total: 3 letters from A–Z followed by 3 digits 0–9, with repetition allowed.",
+        "**Letters (3 positions, 26 choices each):** $26 \\cdot 26 \\cdot 26 = 17{,}576$.",
+        "**Digits (3 positions, 10 choices each):** $10 \\cdot 10 \\cdot 10 = 1000$.",
+        "**Total plates:** $17{,}576 \\cdot 1000 = 17{,}576{,}000$ ≈ 17.6 million."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — passwords",
+        "How many 8-character passwords from lowercase letters and digits (36 characters), no repetition allowed?",
+        "$36 \\cdot 35 \\cdot 34 \\cdot 33 \\cdot 32 \\cdot 31 \\cdot 30 \\cdot 29 \\approx 1.22 \\cdot 10^{12}$.",
+        "Way more than enough for any practical purpose."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "**Multiplication principle:** combining stages → multiply. **Addition principle:** choosing alternatives → add. **'And'** typically means multiply; **'or'** typically means add. Tree diagrams visualize when stages have varying choice counts."
+    }
+  ]
+}

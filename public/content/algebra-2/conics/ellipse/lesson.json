@@ -1,0 +1,61 @@
+{
+  "title": "Ellipses",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### A stretched-out circle",
+        "Slice a cone at a shallow tilt (not perpendicular to the axis, not parallel to the slant) and the cross-section is an **ellipse** — an oval, looking like a stretched circle.",
+        "**Geometric definition.** An ellipse is the set of points such that the **sum of distances** to two fixed points (the **foci**) is constant. Pin a string of fixed length between two thumbtacks and trace it with a pencil pulled taut — that traces an ellipse."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "conic-section",
+      "config": {
+        "mode": "ellipse",
+        "a": 4,
+        "b": 2
+      }
+    },
+    {
+      "type": "callout",
+      "title": "Standard form (centered at origin)",
+      "body": "$$\\dfrac{x^2}{a^2} + \\dfrac{y^2}{b^2} = 1$$\n\nwhere $a$ is the **semi-major axis** and $b$ is the **semi-minor axis**. If $a > b$, the major axis is horizontal; if $b > a$, it's vertical.\n\n**Foci** sit on the major axis at distance $c$ from the center, where $c^2 = a^2 - b^2$ (assuming $a > b$).\n\n**Eccentricity** $e = c/a$ measures how 'stretched' the ellipse is. $e = 0$ is a circle (foci coincide at center); $e \\to 1$ is a very flat ellipse."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why the sum of distances is $2a$",
+        "Pick the vertex on the right end of the major axis: $(a, 0)$. Its distance to the right focus $(c, 0)$ is $a - c$. Distance to the left focus $(-c, 0)$ is $a + c$. **Sum:** $(a - c) + (a + c) = 2a$.",
+        "Because the sum is the same for every point on the ellipse, it's $2a$ for every point. So the defining property is:",
+        "$\\text{dist to } F_1 + \\text{dist to } F_2 = 2a.$"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Worked example",
+      "body": "Ellipse: $\\dfrac{x^2}{25} + \\dfrac{y^2}{9} = 1$.\n\n**Identify $a$ and $b$:** $a^2 = 25 \\Rightarrow a = 5$; $b^2 = 9 \\Rightarrow b = 3$. So $a > b$ — horizontal major axis.\n\n**Foci:** $c^2 = a^2 - b^2 = 25 - 9 = 16 \\Rightarrow c = 4$. Foci at $(\\pm 4, 0)$.\n\n**Vertices:** $(\\pm 5, 0)$ on major axis, $(0, \\pm 3)$ on minor axis.\n\n**Eccentricity:** $e = c/a = 4/5 = 0.8$ (fairly stretched)."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Real-world ellipses",
+        "**Planetary orbits.** Kepler's First Law says planets orbit the Sun in ellipses, with the Sun at *one focus*. Earth's eccentricity is about $0.017$ — almost circular. Mercury's is $0.21$ — visibly elongated.",
+        "**Whispering galleries.** A whispering gallery is an elliptical room: sound from one focus reflects off the wall and converges at the other focus. Stand at one focus, whisper, and someone at the other focus hears you clearly — even though listeners between the foci don't.",
+        "**Lithotripsy.** Medical devices use ellipsoidal reflectors to focus shockwaves: emit waves from one focus, target a kidney stone at the other focus.",
+        "**Cog gears.** Some engineering uses elliptical gears for non-uniform rotation."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Area and perimeter",
+        "**Area:** $A = \\pi a b$. A clean generalization of $\\pi r^2$ (which is the special case $a = b = r$).",
+        "**Perimeter** is *much* harder — there's no elementary closed form. A common approximation is Ramanujan's:",
+        "$P \\approx \\pi \\left( 3(a + b) - \\sqrt{(3a + b)(a + 3b)} \\right).$",
+        "For $a = b$: $P \\approx \\pi(6a - 4a) = 2\\pi a = 2\\pi r$. ✓"
+      ]
+    }
+  ]
+}

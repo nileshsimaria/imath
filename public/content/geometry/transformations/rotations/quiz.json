@@ -1,0 +1,163 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Rotate } (3, 2) \\text{ by } 90° \\text{ counterclockwise about the origin.}",
+      "choices": [
+        "(2, 3)",
+        "(-2, 3)",
+        "(2, -3)",
+        "(-3, -2)"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Rule: $(x, y) \\to (-y, x)$.",
+        "$(3, 2) \\to (-2, 3)$."
+      ],
+      "explanation": "$(x, y) \\to (-y, x)$, so $(3, 2) \\to (-2, 3)$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Rotate } (4, -5) \\text{ by } 180° \\text{ about the origin.}",
+      "choices": [
+        "(-4, 5)",
+        "(5, -4)",
+        "(-4, -5)",
+        "(4, 5)"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "180° rule: $(x, y) \\to (-x, -y)$.",
+        "Flip both signs."
+      ],
+      "explanation": "$(x, y) \\to (-x, -y)$, so $(4, -5) \\to (-4, 5)$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Rotate } (1, 6) \\text{ by } 270° \\text{ counterclockwise about the origin.}",
+      "choices": [
+        "(-6, 1)",
+        "(6, -1)",
+        "(-1, -6)",
+        "(6, 1)"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "270° CCW = 90° CW. Rule: $(x, y) \\to (y, -x)$.",
+        "$(1, 6) \\to (6, -1)$."
+      ],
+      "explanation": "$(x, y) \\to (y, -x)$, so $(1, 6) \\to (6, -1)$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "prompt": "Which order of rotational symmetry does a regular pentagon have?",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answerIndex": 3,
+      "hints": [
+        "A regular n-gon has rotational symmetry of order n.",
+        "Pentagon = 5 sides."
+      ],
+      "explanation": "A regular pentagon has rotational symmetry of order 5: rotations by 72°, 144°, 216°, 288°, 360° all map it to itself.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Rotating by } 360° \\text{ gives:}",
+      "choices": [
+        "The identity (no change)",
+        "A reflection",
+        "A 180° rotation",
+        "Cannot be determined"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "A full turn brings everything back.",
+        "After 360° you're facing the same direction you started."
+      ],
+      "explanation": "Rotation by 360° (a full turn) is the identity — every point lands exactly where it started.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Triangle vertices: } A(2, 1), B(4, 1), C(3, 4). \\\\ \\text{Rotate } 90° \\text{ CCW about the origin. Find } C'.",
+      "choices": [
+        "(-4, 3)",
+        "(4, -3)",
+        "(-3, 4)",
+        "(3, -4)"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Apply $(x, y) \\to (-y, x)$ to $C = (3, 4)$.",
+        "$(3, 4) \\to (-4, 3)$."
+      ],
+      "explanation": "$C' = (-4, 3)$ by the 90° CCW rule.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Rotate } (5, 2) \\text{ by } 90° \\text{ CCW about the center } (3, 0).",
+      "choices": [
+        "(1, 2)",
+        "(3, 2)",
+        "(1, -2)",
+        "(5, -2)"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Step 1: shift the center to the origin — subtract $(3, 0)$. $(5, 2) - (3, 0) = (2, 2)$.",
+        "Step 2: rotate $(2, 2)$ by 90° CCW about origin → $(-2, 2)$. Step 3: shift back: $(-2, 2) + (3, 0) = (1, 2)$."
+      ],
+      "explanation": "Translate so center is at origin: $(5,2) - (3,0) = (2, 2)$. Rotate 90° CCW: $(2, 2) \\to (-2, 2)$. Translate back: $(-2, 2) + (3, 0) = (1, 2)$.",
+      "steps": [
+        {
+          "text": "**Translate** so the center of rotation $(3, 0)$ moves to the origin. Subtract $(3, 0)$ from the point:"
+        },
+        {
+          "math": "(5, 2) - (3, 0) = (2, 2)"
+        },
+        {
+          "text": "**Rotate** $90°$ CCW about origin using $(x, y) \\to (-y, x)$:"
+        },
+        {
+          "math": "(2, 2) \\;\\to\\; (-2, 2)"
+        },
+        {
+          "text": "**Translate back** by adding $(3, 0)$:"
+        },
+        {
+          "math": "(-2, 2) + (3, 0) = (1, 2)"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{What rotational symmetry order does a regular hexagon have?}",
+      "answer": 6,
+      "tolerance": 0.001,
+      "hints": [
+        "6 sides.",
+        "Regular n-gon → order n."
+      ],
+      "explanation": "A regular hexagon has 6 rotations (by 60°, 120°, 180°, 240°, 300°, 360°) that map it to itself.",
+      "difficulty": "easy"
+    }
+  ]
+}

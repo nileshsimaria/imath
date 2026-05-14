@@ -1,0 +1,156 @@
+{
+  "title": "Slope-Intercept Form",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Every non-vertical line in the plane can be written using just **two numbers**: how steep it is, and where it crosses the y-axis. That's the entire idea behind **slope-intercept form**.",
+        "The equation looks like this:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "y = mx + b"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Here, $m$ is the **slope** and $b$ is the **y-intercept**. Once you know $m$ and $b$, you know the line.",
+        "The visualization below lets you change $m$ and $b$ and watch the line respond. Drag both sliders — try to get a feel for what each one controls."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "coordinate-plane",
+      "config": {
+        "mode": "slope-intercept",
+        "initialM": 1,
+        "initialB": 0,
+        "mRange": [
+          -3,
+          3
+        ],
+        "bRange": [
+          -6,
+          6
+        ],
+        "mStep": 0.5,
+        "bStep": 1
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### What does $m$ do?",
+        "Slope tells you **how steep** the line is, and **which way it tilts**. Formally, slope is *rise over run*: if you move 1 unit to the right, how many units up do you go?"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "m = \\dfrac{\\text{rise}}{\\text{run}} = \\dfrac{\\Delta y}{\\Delta x}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "If $m > 0$, the line goes **up** as you read left to right. If $m < 0$, it goes **down**. If $m = 0$, the line is **flat** (horizontal). The bigger the absolute value of $m$, the **steeper** the line."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Try it",
+      "body": "In the widget above, set $m = 2$ then $m = 0.5$. The line with $m = 2$ climbs *faster*. For every step right, it goes up twice as far."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### What does $b$ do?",
+        "The number $b$ is the **y-intercept** — the y-value where the line crosses the vertical axis. It's where the line is when $x = 0$.",
+        "Plug in $x = 0$ and you get $y = m(0) + b = b$. So the line *always* passes through the point $(0, b)$.",
+        "Changing $b$ slides the whole line up or down without changing its tilt."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Spot the y-intercept",
+      "body": "In the widget, the **blue dot** is $(0, b)$. As you drag the $b$ slider, watch that dot — and the whole line — slide up and down."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Reading a line from its equation",
+        "Given $y = mx + b$, you can read off the slope and y-intercept directly:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "y = 3x - 2 \\quad\\Longrightarrow\\quad m = 3,\\ b = -2"
+    },
+    {
+      "type": "math",
+      "tex": "y = -\\tfrac{1}{2}x + 4 \\quad\\Longrightarrow\\quad m = -\\tfrac{1}{2},\\ b = 4"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Finding slope from two points",
+        "If a line passes through two points $(x_1, y_1)$ and $(x_2, y_2)$, the slope is the change in $y$ divided by the change in $x$:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "m = \\dfrac{y_2 - y_1}{x_2 - x_1}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Drag the two points below to see this formula in action. The widget computes the slope live, then plugs it back into $y = mx + b$ to draw the line."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "coordinate-plane",
+      "config": {
+        "mode": "two-points",
+        "pointA": [
+          -3,
+          -1
+        ],
+        "pointB": [
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "type": "callout",
+      "title": "Special cases",
+      "body": "**Horizontal lines** have $m = 0$ — the equation is just $y = b$. **Vertical lines** can't be written as $y = mx + b$ at all (the slope is undefined); they're written as $x = c$ for some constant $c$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Other forms of a line",
+        "Slope-intercept is the most popular form, but two others come up often:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\text{Point-slope form:}\\quad y - y_1 = m(x - x_1)"
+    },
+    {
+      "type": "math",
+      "tex": "\\text{Standard form:}\\quad Ax + By = C"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Each form has its strengths — point-slope is convenient when you know one point and the slope; standard form is handy for finding both intercepts quickly. We'll cover those in detail in the next subtopics."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "$y = mx + b$ where $m$ is **slope** (rise over run) and $b$ is the **y-intercept**. Slope tells you the tilt; intercept tells you where the line crosses the y-axis. Together, they define a unique line."
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "title": "Logarithm Rules",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "If exponentials answer 'how big does it get?', **logarithms** answer the reverse: 'how many doublings does it take?' A logarithm is just an exponent in disguise."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Definition",
+      "body": "$\\log_b(x) = y$ means $b^y = x$. In words: 'the log base $b$ of $x$ is the exponent you raise $b$ to in order to get $x$.'"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Examples.** $\\log_2(8) = 3$ because $2^3 = 8$. $\\log_{10}(100) = 2$ because $10^2 = 100$. $\\log_{10}(1) = 0$ because $10^0 = 1$. $\\log_e(e^5) = 5$ — same idea.",
+        "Two bases get their own shorthand: **$\\log(x)$** with no subscript usually means base 10 (the **common log**), and **$\\ln(x)$** means base $e$ (the **natural log**)."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why logarithms are powerful",
+        "They turn multiplication into addition, division into subtraction, and exponents into multiplication. Three rules carry all the weight:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\log_b(xy) = \\log_b(x) + \\log_b(y)"
+    },
+    {
+      "type": "math",
+      "tex": "\\log_b\\!\\left(\\dfrac{x}{y}\\right) = \\log_b(x) - \\log_b(y)"
+    },
+    {
+      "type": "math",
+      "tex": "\\log_b(x^n) = n \\cdot \\log_b(x)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "These follow directly from how exponents work. Example for the product rule: $b^{m+n} = b^m \\cdot b^n$, so taking logs: $m + n = \\log_b(b^m \\cdot b^n)$, i.e. $\\log_b(b^m) + \\log_b(b^n) = \\log_b(b^m \\cdot b^n)$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Identities worth memorizing",
+      "body": "$\\log_b(1) = 0$ (because $b^0 = 1$). $\\log_b(b) = 1$ (because $b^1 = b$). $\\log_b(b^n) = n$ (the log and exponent cancel). $b^{\\log_b(x)} = x$ (same — they're inverse operations)."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked examples",
+        "**Combine.** $\\log(3) + \\log(5) = \\log(15)$. (Product rule.)",
+        "**Split.** $\\log_2(16/4) = \\log_2(16) - \\log_2(4) = 4 - 2 = 2$. (Quotient rule.) Check: $16/4 = 4$, $\\log_2(4) = 2$ ✓.",
+        "**Bring down an exponent.** $\\log(x^3) = 3\\log(x)$. Useful for solving equations like $x^5 = 100$: take logs of both sides to get $5 \\log(x) = \\log(100) = 2$, so $\\log(x) = 0.4$, then $x = 10^{0.4} \\approx 2.51$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Change of base",
+        "Most calculators only have $\\log$ (base 10) and $\\ln$ (base $e$). If you need a log in some other base, use:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\log_b(x) = \\dfrac{\\log(x)}{\\log(b)} = \\dfrac{\\ln(x)}{\\ln(b)}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Example.** $\\log_5(20) = \\dfrac{\\log(20)}{\\log(5)} \\approx \\dfrac{1.301}{0.699} \\approx 1.86$. Check: $5^{1.86} \\approx 20$ ✓."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "$\\log_b(x)$ is just the exponent that takes $b$ to $x$. Three rules: products turn into sums, quotients into differences, exponents into multipliers. Use $\\log$ for base 10 and $\\ln$ for base $e$. The change-of-base formula handles anything else."
+    }
+  ]
+}

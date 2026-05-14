@@ -1,0 +1,393 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{A meal has 5 entrees and 4 desserts. How many entree+dessert combos?}",
+      "answer": 20,
+      "tolerance": 0,
+      "hints": [
+        "Multiplication principle: $5 \\cdot 4$.",
+        "$20$."
+      ],
+      "explanation": "$5 \\cdot 4 = 20$.",
+      "steps": [
+        "Stages: pick entree (5), then dessert (4).",
+        "Multiply: $5 \\cdot 4 = 20$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{How many 3-letter codes can you make from the alphabet (26 letters), allowing repetition?}",
+      "answer": 17576,
+      "tolerance": 0,
+      "hints": [
+        "3 stages, 26 choices each.",
+        "$26^3$."
+      ],
+      "explanation": "$26 \\cdot 26 \\cdot 26 = 26^3 = 17{,}576$.",
+      "steps": [
+        "Each of 3 positions: 26 choices (repetition allowed).",
+        "$26^3 = 17{,}576$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{How many ways to arrange 4 different books on a shelf?}",
+      "answer": 24,
+      "tolerance": 0,
+      "hints": [
+        "First spot: 4 choices. Second: 3 left. Third: 2. Fourth: 1.",
+        "$4! = 24$."
+      ],
+      "explanation": "$4! = 4 \\cdot 3 \\cdot 2 \\cdot 1 = 24$.",
+      "steps": [
+        "1st position: 4 choices.",
+        "2nd: 3 left. 3rd: 2 left. 4th: 1 left.",
+        "$4! = 24$ arrangements."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{A quiz has 5 multiple-choice questions, each with 4 options.} \\\\ \\text{How many possible answer sheets?}",
+      "answer": 1024,
+      "tolerance": 0,
+      "hints": [
+        "5 stages, 4 choices each.",
+        "$4^5 = 1024$."
+      ],
+      "explanation": "$4^5 = 1024$.",
+      "steps": [
+        "Each of 5 questions has 4 independent answer choices.",
+        "$4^5 = 1024$ possible answer combinations."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{Each license plate has 6 characters: 3 letters (A–Z, 26 choices each)} \\\\ \\text{followed by 3 digits (0–9, 10 choices each), with repetition allowed.} \\\\ \\text{How many distinct plates are possible?}",
+      "answer": 17576000,
+      "tolerance": 0,
+      "hints": [
+        "$26^3$ for letters × $10^3$ for digits.",
+        "$17576 \\cdot 1000$."
+      ],
+      "explanation": "$26^3 \\cdot 10^3 = 17{,}576 \\cdot 1000 = 17{,}576{,}000$.",
+      "steps": [
+        "Letters: $26^3 = 17{,}576$.",
+        "Digits: $10^3 = 1000$.",
+        "Total plates: $17{,}576 \\cdot 1000 = 17{,}576{,}000$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{4-digit PIN, no repeated digits.} \\\\ \\text{How many possible PINs?}",
+      "answer": 5040,
+      "tolerance": 0,
+      "hints": [
+        "10 × 9 × 8 × 7.",
+        "$5040$."
+      ],
+      "explanation": "$10 \\cdot 9 \\cdot 8 \\cdot 7 = 5040$.",
+      "steps": [
+        "First digit: 10 choices.",
+        "Second: 9 (no repeat of first). Third: 8. Fourth: 7.",
+        "$10 \\cdot 9 \\cdot 8 \\cdot 7 = 5040$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "promptTex": "\\text{You can take the train OR drive to a meeting. There are 3 trains and 4 driving routes.} \\\\ \\text{How many ways to get there?}",
+      "choices": [
+        "7",
+        "12",
+        "3",
+        "4"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Alternatives → add: $3 + 4$.",
+        "(Multiplying would mean train AND drive simultaneously — wrong.)"
+      ],
+      "explanation": "Two alternatives: 3 trains OR 4 routes. Add: $3 + 4 = 7$.",
+      "steps": [
+        "Two mutually exclusive ways: train OR drive.",
+        "Train alone: 3 ways. Drive alone: 4 ways.",
+        "Add: $3 + 4 = 7$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{An ice cream sundae has 12 flavor choices, 3 sizes, 4 toppings (one each).} \\\\ \\text{How many distinct sundaes?}",
+      "answer": 144,
+      "tolerance": 0,
+      "hints": [
+        "3 stages: pick size (3), flavor (12), topping (4).",
+        "$3 \\cdot 12 \\cdot 4 = 144$."
+      ],
+      "explanation": "$3 \\cdot 12 \\cdot 4 = 144$.",
+      "steps": [
+        "Three independent choices: size, flavor, topping.",
+        "$3 \\cdot 12 \\cdot 4 = 144$ sundaes."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{6-letter password, lowercase only (26 letters), repetition allowed.} \\\\ \\text{Total passwords?}",
+      "answer": 308915776,
+      "tolerance": 0,
+      "hints": [
+        "6 stages, 26 each.",
+        "$26^6$."
+      ],
+      "explanation": "$26^6 = 308{,}915{,}776$.",
+      "steps": [
+        "$26^6$",
+        "$= 26 \\cdot 26 \\cdot 26 \\cdot 26 \\cdot 26 \\cdot 26$",
+        "$= 308{,}915{,}776$ ≈ 309 million."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{How many 3-digit numbers can you make from digits } \\{1, 2, 3, 4, 5\\} \\\\ \\text{with NO repeats?}",
+      "answer": 60,
+      "tolerance": 0,
+      "hints": [
+        "1st: 5 choices. 2nd: 4 left. 3rd: 3 left.",
+        "$5 \\cdot 4 \\cdot 3 = 60$."
+      ],
+      "explanation": "$5 \\cdot 4 \\cdot 3 = 60$.",
+      "steps": [
+        "First digit: 5 choices.",
+        "Second: 4 (one used). Third: 3.",
+        "$5 \\cdot 4 \\cdot 3 = 60$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{A binary string is a sequence of 0s and 1s. How many 8-bit binary strings exist?}",
+      "answer": 256,
+      "tolerance": 0,
+      "hints": [
+        "Each bit: 2 choices. 8 bits.",
+        "$2^8 = 256$."
+      ],
+      "explanation": "$2^8 = 256$. (One byte = 256 possible values.)",
+      "steps": [
+        "Each of 8 bits: 2 choices (0 or 1).",
+        "$2^8 = 256$.",
+        "(This is why a byte has 256 distinct values.)"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "promptTex": "\\text{You order a sandwich with bread (3 choices), filling (5), AND drink (4) on the side.} \\\\ \\text{Total combos?}",
+      "choices": [
+        "12",
+        "60",
+        "30",
+        "20"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "3 stages with 'and': multiply.",
+        "$3 \\cdot 5 \\cdot 4 = 60$."
+      ],
+      "explanation": "$3 \\cdot 5 \\cdot 4 = 60$. Three independent choices joined by 'and' → multiply.",
+      "steps": [
+        "Independent stages: bread, filling, drink.",
+        "$3 \\cdot 5 \\cdot 4 = 60$ combos."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q13",
+      "type": "numeric",
+      "promptTex": "\\text{Among 100 students: 60 take math, 50 take science, 30 take both.} \\\\ \\text{How many take at least one of math or science?}",
+      "answer": 80,
+      "tolerance": 0,
+      "hints": [
+        "Inclusion-exclusion: $|M \\cup S| = |M| + |S| - |M \\cap S|$.",
+        "$|M \\cup S| = 60 + 50 - 30 = 80$."
+      ],
+      "explanation": "Inclusion-exclusion for counting: $|M \\cup S| = |M| + |S| - |M \\cap S| = 60 + 50 - 30 = 80$. The 30 who take both are double-counted in 60 + 50, so subtract once.",
+      "steps": [
+        "**Pattern recognition.** 'Union' counting with overlap. Adding $|M| + |S|$ would double-count students who take both subjects.",
+        { "svg": "<svg viewBox=\"0 0 280 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"105\" cy=\"100\" r=\"60\" fill=\"rgba(37,99,235,0.22)\" stroke=\"#2563eb\" stroke-width=\"1.6\"/><circle cx=\"175\" cy=\"100\" r=\"60\" fill=\"rgba(220,38,38,0.22)\" stroke=\"#dc2626\" stroke-width=\"1.6\"/><text x=\"68\" y=\"108\" font-size=\"13\" font-weight=\"700\" fill=\"#1e3a8a\">Math</text><text x=\"178\" y=\"108\" font-size=\"13\" font-weight=\"700\" fill=\"#991b1b\">Science</text><text x=\"75\" y=\"75\" font-size=\"11\" font-weight=\"600\" fill=\"#0f172a\">30</text><text x=\"140\" y=\"75\" font-size=\"11\" font-weight=\"600\" fill=\"#0f172a\">30</text><text x=\"195\" y=\"75\" font-size=\"11\" font-weight=\"600\" fill=\"#0f172a\">20</text><text x=\"38\" y=\"180\" font-size=\"11\" fill=\"#475569\" font-style=\"italic\">only Math + both + only Science = 30 + 30 + 20 = 80</text></svg>" },
+        "**Apply inclusion-exclusion.** $|M \\cup S| = |M| + |S| - |M \\cap S| = 60 + 50 - 30 = 80$.",
+        "**Cross-check via Venn regions.** Only-Math = 60 − 30 = 30. Both = 30. Only-Science = 50 − 30 = 20. Sum: 30 + 30 + 20 = 80 ✓.",
+        "**Pattern lesson.** Inclusion-exclusion fixes overcounting. Same formula in probability: $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q14",
+      "type": "numeric",
+      "promptTex": "\\text{How many integers from 1 to 100 are divisible by 2 OR 3?}",
+      "answer": 67,
+      "tolerance": 0,
+      "hints": [
+        "Divisible by 2: $\\lfloor 100/2 \\rfloor = 50$.",
+        "Divisible by 3: $\\lfloor 100/3 \\rfloor = 33$.",
+        "Divisible by both (6): $\\lfloor 100/6 \\rfloor = 16$.",
+        "Union: $50 + 33 - 16 = 67$."
+      ],
+      "explanation": "Inclusion-exclusion. $|2| = 50$, $|3| = 33$, $|2 \\cap 3| = |6| = 16$. So $|2 \\cup 3| = 50 + 33 - 16 = 67$.",
+      "steps": [
+        "**Identify the three counts needed.** $A$ = divisible by 2, $B$ = divisible by 3, $A \\cap B$ = divisible by lcm(2,3) = 6.",
+        "**Compute each.** $|A| = \\lfloor 100/2 \\rfloor = 50$. $|B| = \\lfloor 100/3 \\rfloor = 33$. $|A \\cap B| = \\lfloor 100/6 \\rfloor = 16$.",
+        "**Apply inclusion-exclusion.** $|A \\cup B| = |A| + |B| - |A \\cap B| = 50 + 33 - 16 = 67$.",
+        "**Pattern lesson — three-set extension.** For three sets: $|A \\cup B \\cup C| = |A| + |B| + |C| - |A \\cap B| - |A \\cap C| - |B \\cap C| + |A \\cap B \\cap C|$. Add singletons, subtract pairs, add the triple. Pattern continues for more sets."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q15",
+      "type": "numeric",
+      "promptTex": "\\text{How many subsets does the set } \\{a, b, c, d, e\\} \\text{ have? (Include the empty set.)}",
+      "answer": 32,
+      "tolerance": 0,
+      "hints": [
+        "For each element, decide include or exclude — 2 choices each.",
+        "$2 \\cdot 2 \\cdot 2 \\cdot 2 \\cdot 2 = 2^5 = 32$."
+      ],
+      "explanation": "For each of the 5 elements, decide *include* or *exclude*. Independent binary choices: $2^5 = 32$ subsets (including the empty set and the full set).",
+      "steps": [
+        "**Reframe as a sequence of decisions.** Each subset corresponds to a yes/no decision for each of the 5 elements: 'is $a$ in?', 'is $b$ in?', etc.",
+        "**Multiplication principle.** $2 \\cdot 2 \\cdot 2 \\cdot 2 \\cdot 2 = 2^5 = 32$.",
+        "**Sanity via sum of binomials.** Number of subsets = $\\binom{5}{0} + \\binom{5}{1} + \\cdots + \\binom{5}{5} = 1 + 5 + 10 + 10 + 5 + 1 = 32$ ✓.",
+        "**General rule.** An $n$-element set has $2^n$ subsets. (Empty subset + the full set both counted.)"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q16",
+      "type": "numeric",
+      "promptTex": "\\text{On a grid, you can only move RIGHT or UP. Going from } (0,0) \\text{ to } (3,4): \\\\ \\text{how many distinct paths?}",
+      "answer": 35,
+      "tolerance": 0,
+      "hints": [
+        "You need 3 right-moves and 4 up-moves, in some order. Total 7 steps.",
+        "Choose which 3 of the 7 steps are right-moves: $\\binom{7}{3}$.",
+        "$\\binom{7}{3} = 35$."
+      ],
+      "explanation": "Every path from $(0,0)$ to $(3, 4)$ uses exactly 3 right-moves and 4 up-moves — 7 moves total. The number of orderings is $\\binom{7}{3} = 35$ (choose which 3 of the 7 are right).",
+      "steps": [
+        "**Setup.** From $(0, 0)$ to $(3, 4)$: net displacement $+3$ right, $+4$ up. Since we can only move right or up, exactly $3$ right-moves and $4$ up-moves are needed — 7 moves in some order.",
+        { "svg": "<svg viewBox=\"0 0 280 220\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke=\"#cbd5e1\" stroke-width=\"0.6\"><line x1=\"40\" y1=\"180\" x2=\"220\" y2=\"180\"/><line x1=\"40\" y1=\"140\" x2=\"220\" y2=\"140\"/><line x1=\"40\" y1=\"100\" x2=\"220\" y2=\"100\"/><line x1=\"40\" y1=\"60\" x2=\"220\" y2=\"60\"/><line x1=\"40\" y1=\"20\" x2=\"220\" y2=\"20\"/><line x1=\"40\" y1=\"20\" x2=\"40\" y2=\"180\"/><line x1=\"100\" y1=\"20\" x2=\"100\" y2=\"180\"/><line x1=\"160\" y1=\"20\" x2=\"160\" y2=\"180\"/><line x1=\"220\" y1=\"20\" x2=\"220\" y2=\"180\"/></g><polyline points=\"40,180 100,180 100,140 100,100 160,100 160,60 160,20 220,20\" stroke=\"#dc2626\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"40\" cy=\"180\" r=\"4\" fill=\"#1e293b\"/><circle cx=\"220\" cy=\"20\" r=\"4\" fill=\"#1e293b\"/><text x=\"30\" y=\"198\" font-size=\"11\" font-weight=\"600\" fill=\"#0f172a\">(0,0)</text><text x=\"222\" y=\"16\" font-size=\"11\" font-weight=\"600\" fill=\"#0f172a\">(3,4)</text><text x=\"60\" y=\"210\" font-size=\"11\" fill=\"#475569\" font-style=\"italic\">one of the 35 paths shown in red</text></svg>" },
+        "**Count the orderings.** A path is a sequence of 7 moves, of which 3 are R and 4 are U. The number of such sequences = $\\binom{7}{3} = \\binom{7}{4} = 35$.",
+        "**Pattern lesson.** Lattice-path counting reduces to choosing which positions hold which move-type. For general $(m, n)$ destination: number of paths = $\\binom{m+n}{m}$. Same formula gives binomial coefficients, Galton-board paths, and Pascal-triangle entries."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q17",
+      "type": "numeric",
+      "promptTex": "\\text{How many 4-digit codes (each digit 0–9) contain AT LEAST ONE 7?}",
+      "answer": 3439,
+      "tolerance": 0,
+      "hints": [
+        "Complement: count codes with NO 7s, then subtract from total.",
+        "Total codes: $10^4 = 10{,}000$. Codes with no 7: $9^4 = 6{,}561$.",
+        "At least one 7: $10000 - 6561 = 3439$."
+      ],
+      "explanation": "Complement strategy. Total codes: $10^4 = 10{,}000$. Codes with NO 7: each digit has $9$ allowed choices, so $9^4 = 6{,}561$. At-least-one-7 codes: $10000 - 6561 = 3439$.",
+      "steps": [
+        "**'At-least-one' → use complement.** Direct enumeration (exactly 1 seven, exactly 2, exactly 3, exactly 4) blows up into four cases. Counting 'no sevens' is much cleaner.",
+        "**Total codes.** Each of 4 positions has 10 choices: $10^4 = 10{,}000$.",
+        "**Codes with NO 7.** Each position has only 9 choices (everything but 7): $9^4 = 6{,}561$.",
+        "**Subtract.** At-least-one-7 = total − none = $10{,}000 - 6{,}561 = 3{,}439$.",
+        "**Pattern lesson — when to use complement.** Almost always use complement for 'at least one' problems. Inclusion-exclusion is the alternative but more bookkeeping."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q18",
+      "type": "numeric",
+      "promptTex": "\\text{A building has 4 doors. In how many ways can you enter through one door} \\\\ \\text{and exit through a DIFFERENT door?}",
+      "answer": 12,
+      "tolerance": 0,
+      "hints": [
+        "Entry: 4 choices.",
+        "Exit: 3 choices (must differ from entry).",
+        "$4 \\cdot 3 = 12$."
+      ],
+      "explanation": "Entry: 4 doors. Exit: 3 doors (excluding the entry door). $4 \\cdot 3 = 12$.",
+      "steps": [
+        "**Recognize the constraint.** Multiplication principle with a 'no-repeat' constraint between stages.",
+        "**Stage 1 — entry.** 4 choices.",
+        "**Stage 2 — exit.** 3 choices (any door except the entry door).",
+        "**Multiply.** $4 \\cdot 3 = 12$ entry-exit pairs.",
+        "**Generalize.** This is $P(4, 2) = 4!/2! = 12$ — a permutation of 2 from 4."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q19",
+      "type": "numeric",
+      "promptTex": "\\text{From 5 boys and 4 girls, how many ways to form a group of 3 that is either} \\\\ \\text{2 boys + 1 girl OR 2 girls + 1 boy?}",
+      "answer": 70,
+      "tolerance": 0,
+      "hints": [
+        "Mutually exclusive cases — ADD.",
+        "Case 1 (2B, 1G): $\\binom{5}{2} \\cdot \\binom{4}{1} = 10 \\cdot 4 = 40$.",
+        "Case 2 (2G, 1B): $\\binom{4}{2} \\cdot \\binom{5}{1} = 6 \\cdot 5 = 30$.",
+        "Total: $40 + 30 = 70$."
+      ],
+      "explanation": "Two mutually exclusive cases. Case 1 (2B + 1G): $\\binom{5}{2}\\binom{4}{1} = 40$. Case 2 (2G + 1B): $\\binom{4}{2}\\binom{5}{1} = 30$. Add: $40 + 30 = 70$.",
+      "steps": [
+        "**Recognize mixed AND/OR structure.** Within each case: choose boys AND girls → multiply. Across cases: case 1 OR case 2 → add.",
+        "**Case 1: 2 boys, 1 girl.** $\\binom{5}{2} \\cdot \\binom{4}{1} = 10 \\cdot 4 = 40$.",
+        "**Case 2: 2 girls, 1 boy.** $\\binom{4}{2} \\cdot \\binom{5}{1} = 6 \\cdot 5 = 30$.",
+        "**Add the cases.** $40 + 30 = 70$.",
+        "**Why mutually exclusive?** A group with 2 boys + 1 girl ≠ a group with 2 girls + 1 boy (different gender splits). No overlap, so simple addition works."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q20",
+      "type": "multiple-choice",
+      "prompt": "How do you decide whether to MULTIPLY or ADD counts when solving a counting problem?",
+      "choices": [
+        "Always multiply — it's the safer choice",
+        "Multiply for AND (sequential or independent stages, all happening); add for OR (mutually exclusive alternatives, exactly one happens)",
+        "Add when the numbers are small; multiply when they're large",
+        "Always add — multiplying double-counts"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "AND → multiply. OR (mutually exclusive) → add.",
+        "Test: 'do BOTH stages happen?' → multiply. 'is it stage A OR stage B (not both)?' → add."
+      ],
+      "explanation": "AND → multiply (independent or sequential stages all happen). OR (mutually exclusive) → add (only one of several disjoint cases happens). The 'and-vs-or' test in plain English decides. If cases overlap, use inclusion-exclusion to fix double-counting.",
+      "steps": [
+        "**The two rules in one sentence each.** Multiplication rule: 'stage 1 has $a$ choices AND stage 2 has $b$ choices' → $a \\cdot b$. Addition rule: '$a$ ways to do case 1 OR $b$ ways to do case 2 (disjoint)' → $a + b$.",
+        "**English test.** Read the problem aloud. If the words connect choices with 'and' or describe a sequence ('first ..., then ...'), multiply. If the words connect with 'or' or describe alternatives ('either ..., or ...'), add.",
+        "**Overlap warning.** Addition works only for MUTUALLY EXCLUSIVE cases. If cases overlap, use inclusion-exclusion: $|A \\cup B| = |A| + |B| - |A \\cap B|$ (subtract the overlap once).",
+        "**Pattern lesson.** Most counting problems mix both — multiply within each case, add across cases. The bookkeeping is half the battle."
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

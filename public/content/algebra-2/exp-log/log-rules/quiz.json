@@ -1,0 +1,545 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\log_2(32) = ?",
+      "answer": 5,
+      "tolerance": 0,
+      "hints": [
+        "$\\log_2(32)$ asks: $2$ to what power equals $32$?",
+        "$2^5 = 32$."
+      ],
+      "explanation": "$\\log_2(32) = 5$ because $2^5 = 32$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\log_{10}(1000) = ?",
+      "answer": 3,
+      "tolerance": 0,
+      "hints": [
+        "$10$ to what power equals $1000$?",
+        "$10^3 = 1000$."
+      ],
+      "explanation": "$10^3 = 1000$, so $\\log_{10}(1000) = 3$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\log(6) + \\log(5) = ?",
+      "choices": [
+        "\\log(11)",
+        "\\log(30)",
+        "\\log(1)",
+        "\\log(6/5)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Product rule: $\\log(a) + \\log(b) = \\log(ab)$.",
+        "$6 \\cdot 5 = 30$."
+      ],
+      "explanation": "By the product rule, $\\log(a) + \\log(b) = \\log(ab)$. So $\\log(6) + \\log(5) = \\log(30)$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\log(x^4) = ?",
+      "choices": [
+        "\\log(x) + 4",
+        "4 + \\log(x)",
+        "4 \\log(x)",
+        "(\\log x)^4"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "Power rule: exponents come down as multipliers.",
+        "$\\log(x^n) = n \\log(x)$."
+      ],
+      "explanation": "Power rule: $\\log(x^n) = n \\log(x)$. So $\\log(x^4) = 4\\log(x)$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\log_b(b) = ?",
+      "answer": 1,
+      "tolerance": 0,
+      "hints": [
+        "What power of $b$ gives $b$ itself?",
+        "$b^1 = b$."
+      ],
+      "explanation": "$\\log_b(b) = 1$ because $b^1 = b$ — for *any* valid base $b$.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\log_2 32 = ?",
+      "answer": 5,
+      "tolerance": 0,
+      "hints": [
+        "$2^? = 32$.",
+        "$2^5 = 32$."
+      ],
+      "explanation": "$2^5 = 32$, so $\\log_2 32 = 5$.",
+      "steps": [
+        "$\\log_2 32$ asks: what power of 2 equals 32?",
+        "$2^5 = 32$.",
+        "**$\\log_2 32 = 5$**."
+      ],
+      "id": "q6",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\log(xy) = ?",
+      "choices": [
+        "\\log x + \\log y",
+        "\\log x \\cdot \\log y",
+        "\\log x - \\log y",
+        "\\log(x + y)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Product rule: log of a product = sum of logs.",
+        "$\\log(xy) = \\log x + \\log y$."
+      ],
+      "explanation": "Product rule for logarithms: $\\log(xy) = \\log x + \\log y$.",
+      "steps": [
+        "Product rule: the log of a product is the sum of the logs.",
+        "$\\log(xy) = \\log x + \\log y$.",
+        "(This works for any base — natural log, log base 10, etc.)"
+      ],
+      "id": "q7",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\log(x^5) = ?",
+      "choices": [
+        "5 \\log x",
+        "(\\log x)^5",
+        "5 + \\log x",
+        "\\log x / 5"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Power rule: log of a power = exponent times log.",
+        "$\\log(x^5) = 5 \\log x$."
+      ],
+      "explanation": "Power rule: $\\log(x^n) = n \\log x$.",
+      "steps": [
+        "**Power rule:** the log of a power moves the exponent to the front as a multiplier.",
+        "$\\log(x^5) = 5 \\log x$.",
+        "(This is the trick that lets us use logs to solve exponential equations.)"
+      ],
+      "id": "q8",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Expand } \\log\\left(\\dfrac{x^2 y}{z}\\right).",
+      "choices": [
+        "2 \\log x + \\log y - \\log z",
+        "2 \\log x + \\log y + \\log z",
+        "\\log(x^2) + \\log y - \\log z",
+        "\\log(x^2 y) / \\log z"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Apply quotient rule: $\\log A - \\log z$. Then product rule on $A$.",
+        "Then power rule on $x^2$: $2 \\log x$."
+      ],
+      "explanation": "$\\log(x^2 y) - \\log z = \\log(x^2) + \\log y - \\log z = 2\\log x + \\log y - \\log z$.",
+      "steps": [
+        "Apply quotient rule: $\\log\\left(\\dfrac{x^2 y}{z}\\right) = \\log(x^2 y) - \\log z$.",
+        "Apply product rule: $\\log(x^2 y) = \\log(x^2) + \\log y$.",
+        "Apply power rule: $\\log(x^2) = 2\\log x$.",
+        "Combine: $2\\log x + \\log y - \\log z$."
+      ],
+      "id": "q9",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve for } x \\text{: } \\log_3 x = 4.",
+      "choices": [
+        "81",
+        "12",
+        "64",
+        "7"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Definition: $\\log_3 x = 4 \\Leftrightarrow x = 3^4$.",
+        "$3^4 = 81$."
+      ],
+      "explanation": "$\\log_3 x = 4 \\Rightarrow x = 3^4 = 81$.",
+      "steps": [
+        "Convert log to exponential form: $\\log_b a = c \\Leftrightarrow b^c = a$.",
+        "$\\log_3 x = 4 \\Leftrightarrow x = 3^4 = 81$."
+      ],
+      "id": "q10",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Solve for } x \\text{: } 2^x = 100. \\text{ (Use change of base; round to 2 dec.)}",
+      "answer": 6.64,
+      "tolerance": 0.05,
+      "hints": [
+        "Take $\\log$ of both sides: $x \\log 2 = \\log 100 = 2$.",
+        "$x = 2 / \\log 2 \\approx 2 / 0.301 \\approx 6.644$."
+      ],
+      "explanation": "$x = \\dfrac{\\log 100}{\\log 2} = \\dfrac{2}{0.301} \\approx 6.64$.",
+      "steps": [
+        "Take $\\log_{10}$ of both sides: $\\log(2^x) = \\log 100$.",
+        "Power rule: $x \\log 2 = \\log 100 = 2$.",
+        "Solve: $x = \\dfrac{2}{\\log 2}$.",
+        "$\\log 2 \\approx 0.3010$. $x \\approx \\dfrac{2}{0.3010} \\approx 6.64$.",
+        "(Or use change of base: $x = \\log_2 100 = \\dfrac{\\log 100}{\\log 2}$.)"
+      ],
+      "id": "q11",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\log_b(b^7) = ?",
+      "answer": 7,
+      "tolerance": 0,
+      "hints": [
+        "$\\log_b(b^x) = x$ — the log and exp are inverse.",
+        "Just $7$."
+      ],
+      "explanation": "$\\log_b$ and $b^x$ are inverse operations. $\\log_b(b^7) = 7$.",
+      "steps": [
+        "**Inverse property:** $\\log_b(b^x) = x$ for any $x$.",
+        "(Logs and exponentials of the same base undo each other.)",
+        "Here: $\\log_b(b^7) = 7$."
+      ],
+      "id": "q12",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Combine: } 3 \\log x + \\log y - 2 \\log z.",
+      "choices": [
+        "\\log\\left(\\dfrac{x^3 y}{z^2}\\right)",
+        "\\log\\left(\\dfrac{x^3 y^2}{z}\\right)",
+        "\\log(3xy - 2z)",
+        "\\log(x^3 + y - z^2)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Reverse the log rules: power → exponents, sum → product, difference → quotient.",
+        "$3\\log x = \\log(x^3)$. Then $\\log(x^3 y) - \\log(z^2) = \\log\\left(\\dfrac{x^3 y}{z^2}\\right)$."
+      ],
+      "explanation": "$3\\log x + \\log y - 2\\log z = \\log(x^3) + \\log y - \\log(z^2) = \\log\\left(\\dfrac{x^3 y}{z^2}\\right)$.",
+      "steps": [
+        "Apply power rule **in reverse** to coefficients: $3 \\log x = \\log(x^3)$ and $2 \\log z = \\log(z^2)$.",
+        "Now: $\\log(x^3) + \\log y - \\log(z^2)$.",
+        "Apply product rule (sum becomes product): $\\log(x^3 y) - \\log(z^2)$.",
+        "Apply quotient rule (difference becomes quotient): $\\log\\left(\\dfrac{x^3 y}{z^2}\\right)$."
+      ],
+      "id": "q13",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Solve for } x: \\quad \\log_2 x + \\log_2(x - 2) = 3.",
+      "answer": 4,
+      "tolerance": 0,
+      "hints": [
+        "Combine using the product rule: $\\log_2[x(x-2)] = 3$, then drop the log.",
+        "Quadratic gives $x = 4$ or $x = -2$ — but check the domain: $\\log_2(-2)$ is undefined."
+      ],
+      "explanation": "$\\log_2[x(x-2)] = 3 \\Rightarrow x(x-2) = 2^3 = 8 \\Rightarrow x^2 - 2x - 8 = 0 \\Rightarrow (x - 4)(x + 2) = 0$. Reject $x = -2$ because $\\log_2(-2)$ is undefined. So $x = 4$. (THE most-tested log trap — always check domain.)",
+      "steps": [
+        "Combine the two logs via product rule: $\\log_2[x(x - 2)] = 3$.",
+        "Drop the log: $x(x - 2) = 8 \\Rightarrow x^2 - 2x - 8 = 0$.",
+        "Factor: $(x - 4)(x + 2) = 0$.",
+        "Domain check: need $x > 2$ for both $\\log_2 x$ and $\\log_2(x-2)$ to exist. Reject $x = -2$.",
+        "Answer: $x = 4$."
+      ],
+      "id": "q14",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Evaluate without a calculator: } \\quad \\log_2 5 \\cdot \\log_5 8.",
+      "answer": 3,
+      "tolerance": 0,
+      "hints": [
+        "Use change-of-base: $\\log_2 5 = \\dfrac{\\ln 5}{\\ln 2}$ and $\\log_5 8 = \\dfrac{\\ln 8}{\\ln 5}$.",
+        "The $\\ln 5$ cancels — what's left is $\\dfrac{\\ln 8}{\\ln 2} = \\log_2 8$."
+      ],
+      "explanation": "Change-of-base: $\\log_2 5 \\cdot \\log_5 8 = \\dfrac{\\ln 5}{\\ln 2} \\cdot \\dfrac{\\ln 8}{\\ln 5} = \\dfrac{\\ln 8}{\\ln 2} = \\log_2 8 = 3$. (General identity: $\\log_a b \\cdot \\log_b c = \\log_a c$.)",
+      "steps": [
+        "Apply change-of-base on both: $\\dfrac{\\ln 5}{\\ln 2} \\cdot \\dfrac{\\ln 8}{\\ln 5}$.",
+        "$\\ln 5$ cancels: $\\dfrac{\\ln 8}{\\ln 2} = \\log_2 8$.",
+        "$\\log_2 8 = 3$ (since $2^3 = 8$)."
+      ],
+      "id": "q15",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which statement is TRUE for all } x, y > 0?",
+      "choices": [
+        "$\\log(x + y) = \\log x + \\log y$",
+        "$\\log(xy) = \\log x + \\log y$",
+        "$\\log(xy) = \\log x \\cdot \\log y$",
+        "$\\log(x - y) = \\log x - \\log y$"
+      ],
+      "choicesTex": false,
+      "answerIndex": 1,
+      "hints": [
+        "Logs turn multiplication into addition — not addition into addition.",
+        "Try $x = y = 10$ in each candidate to see which holds."
+      ],
+      "explanation": "Only **$\\log(xy) = \\log x + \\log y$** is the real product rule. The other three are the classic 'algebra of logs' misconceptions. ($\\log(x+y)$ has no nice rule — leave it as is.)",
+      "steps": [
+        "The TRUE log rules: $\\log(xy) = \\log x + \\log y$ (product), $\\log(x/y) = \\log x - \\log y$ (quotient), $\\log(x^k) = k \\log x$ (power).",
+        "$\\log(x+y)$ does NOT split into $\\log x + \\log y$ — there's no rule for sums.",
+        "Choice (B) is the product rule — the only correct option."
+      ],
+      "id": "q16",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Solve for } x: \\quad \\log(x + 3) + \\log(x - 1) = \\log 12.",
+      "answer": 3,
+      "tolerance": 0,
+      "hints": [
+        "Combine the left side via product rule, then drop the log.",
+        "Solve the quadratic, then reject any root that makes a log argument $\\leq 0$."
+      ],
+      "explanation": "$\\log[(x+3)(x-1)] = \\log 12 \\Rightarrow (x+3)(x-1) = 12 \\Rightarrow x^2 + 2x - 15 = 0 \\Rightarrow (x-3)(x+5) = 0$. Reject $x = -5$ (makes $\\log(-2)$). Answer: $x = 3$.",
+      "steps": [
+        "Combine: $\\log[(x+3)(x-1)] = \\log 12$.",
+        "Drop the log: $(x+3)(x-1) = 12$.",
+        "Expand and solve: $x^2 + 2x - 15 = 0 \\Rightarrow (x - 3)(x + 5) = 0$.",
+        "Domain: need $x > 1$. Reject $x = -5$.",
+        "Answer: $x = 3$."
+      ],
+      "id": "q17",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{If } \\log_b 2 = 0.43, \\text{ find } \\log_b 32.",
+      "answer": 2.15,
+      "tolerance": 0.001,
+      "hints": [
+        "Rewrite $32$ as a power of $2$.",
+        "Use the power rule $\\log_b(2^k) = k \\log_b 2$."
+      ],
+      "explanation": "$32 = 2^5$, so $\\log_b 32 = \\log_b(2^5) = 5 \\log_b 2 = 5 \\cdot 0.43 = 2.15$.",
+      "steps": [
+        "Recognize $32 = 2^5$.",
+        "Apply the power rule: $\\log_b(2^5) = 5 \\log_b 2$.",
+        "Plug in: $5 \\cdot 0.43 = 2.15$."
+      ],
+      "id": "q18",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Evaluate: } \\quad 5^{\\log_5 17}.",
+      "answer": 17,
+      "tolerance": 0,
+      "hints": [
+        "Logs and exponentials with the same base undo each other.",
+        "$b^{\\log_b x} = x$ for any $x > 0$."
+      ],
+      "explanation": "By definition, $\\log_5 17$ is the exponent that makes $5^{?} = 17$. So $5$ raised to that exponent equals $17$ directly. The identity $b^{\\log_b x} = x$ saves a lot of computation.",
+      "steps": [
+        "Identity: $b^{\\log_b x} = x$.",
+        "Plug in $b = 5$, $x = 17$.",
+        "Result: $17$."
+      ],
+      "id": "q19",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Which is larger: } 2^{100} \\text{ or } 10^{30}? \\\\ \\text{(Use } \\log_{10} 2 \\approx 0.30103.) \\text{ Enter 1 if } 2^{100} \\text{ is larger, 2 if } 10^{30} \\text{ is larger.}",
+      "answer": 1,
+      "tolerance": 0,
+      "hints": [
+        "Take $\\log_{10}$ of both numbers — whichever has the bigger log is bigger.",
+        "$\\log_{10}(2^{100}) = 100 \\cdot 0.30103 = 30.103$, while $\\log_{10}(10^{30}) = 30$."
+      ],
+      "explanation": "$\\log_{10}(2^{100}) = 100 \\log_{10} 2 = 100(0.30103) = 30.103$. $\\log_{10}(10^{30}) = 30$. Since $30.103 > 30$, we have $2^{100} > 10^{30}$. (Memorable shortcut: $2^{10} \\approx 10^3$, so $2^{100} \\approx 10^{30}$ — and slightly bigger.)",
+      "steps": [
+        "Take $\\log_{10}$ of both candidates.",
+        "$\\log_{10}(2^{100}) = 100 \\cdot 0.30103 = 30.103$.",
+        "$\\log_{10}(10^{30}) = 30$.",
+        "Compare: $30.103 > 30$, so $2^{100} > 10^{30}$. Enter $1$."
+      ],
+      "id": "q20",
+      "difficulty": "hard"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Evaluate: } \\quad \\log_4 64 + \\log_2 \\sqrt{8}.",
+      "answer": 4.5,
+      "tolerance": 0,
+      "hints": [
+        "$\\log_4 64$: what power of $4$ is $64$? Note $64 = 4^3$.",
+        "$\\sqrt{8} = 8^{1/2}$, so $\\log_2 \\sqrt{8} = \\tfrac{1}{2} \\log_2 8$."
+      ],
+      "explanation": "$\\log_4 64 = 3$ since $4^3 = 64$. $\\log_2 \\sqrt{8} = \\log_2 8^{1/2} = \\tfrac{1}{2} \\log_2 8 = \\tfrac{1}{2}(3) = \\tfrac{3}{2}$. Sum: $3 + \\tfrac{3}{2} = \\tfrac{9}{2} = 4.5$.",
+      "steps": [
+        "First term: $\\log_4 64 = 3$ (since $4^3 = 64$).",
+        "Second term: $\\sqrt{8} = 8^{1/2}$, so $\\log_2 \\sqrt{8} = \\tfrac{1}{2} \\log_2 8 = \\tfrac{1}{2}(3) = 1.5$.",
+        "Sum: $3 + 1.5 = 4.5$."
+      ],
+      "id": "q21",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Solve for } x: \\quad \\log_3(x + 5) = 2.",
+      "answer": 4,
+      "tolerance": 0,
+      "hints": [
+        "Rewrite in exponential form: $\\log_3(\\text{thing}) = 2$ means $\\text{thing} = 3^2$.",
+        "$x + 5 = 9 \\Rightarrow x = 4$."
+      ],
+      "explanation": "$\\log_3(x + 5) = 2 \\Rightarrow x + 5 = 3^2 = 9 \\Rightarrow x = 4$. (Quick check: $\\log_3 9 = 2$ ✓.)",
+      "steps": [
+        "Rewrite using the definition: $\\log_b A = c \\iff A = b^c$.",
+        "$\\log_3(x + 5) = 2 \\Rightarrow x + 5 = 3^2 = 9$.",
+        "Solve: $x = 4$."
+      ],
+      "id": "q22",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Solve for } x \\text{ (the base): } \\quad \\log_x 81 = 4.",
+      "answer": 3,
+      "tolerance": 0,
+      "hints": [
+        "Rewrite in exponential form: $x^4 = 81$.",
+        "Take the positive 4th root of $81$."
+      ],
+      "explanation": "$\\log_x 81 = 4 \\Rightarrow x^4 = 81$. Taking the positive 4th root (bases must be positive): $x = 81^{1/4} = 3$. (Check: $3^4 = 81$ ✓.)",
+      "steps": [
+        "Use $\\log_b A = c \\iff b^c = A$.",
+        "$\\log_x 81 = 4 \\Rightarrow x^4 = 81$.",
+        "Take the positive 4th root: $x = 3$ (the base of a log must be positive and not 1)."
+      ],
+      "id": "q23",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Solve for } x: \\quad \\ln(2x - 1) = 3. \\\\ \\text{(Round to 3 decimal places.)}",
+      "answer": 10.543,
+      "tolerance": 0.01,
+      "hints": [
+        "Apply $e$ to both sides: $2x - 1 = e^3$.",
+        "$e^3 \\approx 20.086$, so $2x = 21.086 \\Rightarrow x \\approx 10.543$."
+      ],
+      "explanation": "$\\ln(2x - 1) = 3 \\Rightarrow 2x - 1 = e^3 \\approx 20.086 \\Rightarrow 2x \\approx 21.086 \\Rightarrow x \\approx 10.543$.",
+      "steps": [
+        "Apply $e^{\\,\\cdot\\,}$ to both sides: $2x - 1 = e^3$.",
+        "$e^3 \\approx 20.0855$.",
+        "Solve: $2x = e^3 + 1 \\approx 21.0855 \\Rightarrow x \\approx 10.543$."
+      ],
+      "id": "q24",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{If } \\log_2 a = 3 \\text{ and } \\log_2 b = 5, \\text{ find } \\log_2(a^2 b).",
+      "answer": 11,
+      "tolerance": 0,
+      "hints": [
+        "Apply product and power rules: $\\log_2(a^2 b) = 2 \\log_2 a + \\log_2 b$.",
+        "$2(3) + 5$."
+      ],
+      "explanation": "$\\log_2(a^2 b) = \\log_2(a^2) + \\log_2 b = 2\\log_2 a + \\log_2 b = 2(3) + 5 = 11$. (No need to find $a$ and $b$ themselves.)",
+      "steps": [
+        "Split the product: $\\log_2(a^2 b) = \\log_2 a^2 + \\log_2 b$.",
+        "Pull the exponent: $= 2\\log_2 a + \\log_2 b$.",
+        "Plug in: $2(3) + 5 = 11$."
+      ],
+      "id": "q25",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Evaluate: } \\quad \\log_2 8 + \\log_3 9 - \\log_5 25.",
+      "answer": 3,
+      "tolerance": 0,
+      "hints": [
+        "Each term is a 'what power of the base?' question with a clean integer answer.",
+        "$\\log_2 8 = 3$, $\\log_3 9 = 2$, $\\log_5 25 = 2$."
+      ],
+      "explanation": "$\\log_2 8 = 3$ (since $2^3 = 8$); $\\log_3 9 = 2$ (since $3^2 = 9$); $\\log_5 25 = 2$ (since $5^2 = 25$). Sum: $3 + 2 - 2 = 3$.",
+      "steps": [
+        "$\\log_2 8 = 3$ (because $2^3 = 8$).",
+        "$\\log_3 9 = 2$ (because $3^2 = 9$).",
+        "$\\log_5 25 = 2$ (because $5^2 = 25$).",
+        "Combine: $3 + 2 - 2 = 3$."
+      ],
+      "id": "q26",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Expand into a sum/difference: } \\quad \\log\\left(\\dfrac{x^3 \\sqrt{y}}{z^2}\\right).",
+      "choices": [
+        "$3\\log x + \\tfrac{1}{2}\\log y - 2\\log z$",
+        "$3\\log x + 2\\log y - 2\\log z$",
+        "$3\\log x - \\tfrac{1}{2}\\log y - 2\\log z$",
+        "$\\log(3x) + \\log(\\sqrt{y}) - \\log(2z)$"
+      ],
+      "choicesTex": false,
+      "answerIndex": 0,
+      "hints": [
+        "Quotient rule: $\\log(A/B) = \\log A - \\log B$. Then product rule on the numerator.",
+        "$\\sqrt{y} = y^{1/2}$, so $\\log\\sqrt{y} = \\tfrac{1}{2}\\log y$."
+      ],
+      "explanation": "$\\log\\left(\\dfrac{x^3 \\sqrt{y}}{z^2}\\right) = \\log(x^3 \\sqrt{y}) - \\log(z^2) = \\log x^3 + \\log y^{1/2} - \\log z^2 = 3\\log x + \\tfrac{1}{2}\\log y - 2\\log z$.",
+      "steps": [
+        "Apply quotient rule: $\\log(\\text{num}) - \\log(\\text{den})$.",
+        "Apply product rule on numerator: $\\log x^3 + \\log\\sqrt{y}$.",
+        "Apply power rule: $3\\log x + \\tfrac{1}{2}\\log y - 2\\log z$."
+      ],
+      "id": "q27",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Solve for } x: \\quad 7^{x} = 200. \\\\ \\text{(Round to 3 decimal places.)}",
+      "answer": 2.723,
+      "tolerance": 0.01,
+      "hints": [
+        "Take $\\log$ (any base) of both sides: $x \\log 7 = \\log 200$.",
+        "$x = \\dfrac{\\log 200}{\\log 7}$."
+      ],
+      "explanation": "$7^x = 200 \\Rightarrow \\log 7^x = \\log 200 \\Rightarrow x \\log 7 = \\log 200 \\Rightarrow x = \\dfrac{\\log 200}{\\log 7} \\approx \\dfrac{2.301}{0.845} \\approx 2.723$.",
+      "steps": [
+        "Take $\\log$ of both sides: $\\log(7^x) = \\log 200$.",
+        "Apply power rule: $x \\log 7 = \\log 200$.",
+        "Solve: $x = \\dfrac{\\log 200}{\\log 7} \\approx 2.723$."
+      ],
+      "id": "q28",
+      "difficulty": "medium"
+    }
+  ]
+}

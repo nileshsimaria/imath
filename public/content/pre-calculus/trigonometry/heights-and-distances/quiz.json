@@ -1,0 +1,376 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{Angle of elevation to a tower top from a point } 30 \\text{ m away is } 45°. \\\\ \\text{Tower height (m)?}",
+      "answer": 30,
+      "tolerance": 0.1,
+      "hints": [
+        "$\\tan 45° = 1$.",
+        "Height = distance × tan = 30 × 1 = 30."
+      ],
+      "explanation": "$\\tan 45° = h/30 \\Rightarrow h = 30$ m.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{Tower height } 60 \\text{ m. Angle of elevation from a point on ground is } 60°. \\\\ \\text{Distance from base to point (round 2 decimals)?}",
+      "answer": 34.64,
+      "tolerance": 0.2,
+      "hints": [
+        "$\\tan 60° = \\sqrt{3}$.",
+        "Distance = 60 / √3 = 60√3/3 = 20√3 ≈ 34.64 m."
+      ],
+      "explanation": "$\\tan 60° = 60/d \\Rightarrow d = 60/\\sqrt{3} = 20\\sqrt{3} \\approx 34.64$ m.",
+      "steps": [
+        {
+          "text": "**Use tangent** (opposite over adjacent):"
+        },
+        {
+          "math": "\\tan 60° = \\dfrac{60}{d}"
+        },
+        {
+          "math": "\\sqrt{3} = \\dfrac{60}{d} \\;\\Longrightarrow\\; d = \\dfrac{60}{\\sqrt{3}} = 20\\sqrt{3} \\approx 34.64"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{From the top of a } 100 \\text{ m cliff, angle of depression of a boat is } 30°. \\\\ \\text{Distance from cliff base to boat (round 2 decimals)?}",
+      "answer": 173.21,
+      "tolerance": 0.5,
+      "hints": [
+        "Angle of depression from cliff = angle of elevation from boat. Both 30°.",
+        "$\\tan 30° = 100/d \\Rightarrow d = 100\\sqrt{3} \\approx 173.21$ m."
+      ],
+      "explanation": "$d = 100/\\tan 30° = 100\\sqrt{3} \\approx 173.21$ m.",
+      "steps": [
+        {
+          "text": "**Key fact:** the angle of depression from the cliff equals the angle of elevation from the boat — both $30°$ (alternate interior angles)."
+        },
+        {
+          "text": "**From the boat's viewpoint:** $\\tan 30° = \\dfrac{\\text{cliff height}}{d}$."
+        },
+        {
+          "math": "\\dfrac{1}{\\sqrt{3}} = \\dfrac{100}{d} \\;\\Longrightarrow\\; d = 100\\sqrt{3} \\approx 173.21 \\text{ m}"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{An observer } 1.6 \\text{ m tall stands } 20 \\text{ m from a building. Angle of elevation of the top is } 60°. \\\\ \\text{Height of building (m)?}",
+      "answer": 36.24,
+      "tolerance": 0.3,
+      "hints": [
+        "Height above eye level: $20 \\tan 60° = 20\\sqrt{3} \\approx 34.64$.",
+        "Add observer's eye height: $34.64 + 1.6 \\approx 36.24$ m."
+      ],
+      "explanation": "Above eye level: $20\\sqrt{3} \\approx 34.64$. Plus observer's height: $34.64 + 1.6 = 36.24$ m.",
+      "steps": [
+        {
+          "text": "**Set up triangle** with horizontal eye-level line. Height from eye to top:"
+        },
+        {
+          "math": "20 \\tan 60° = 20\\sqrt{3} \\approx 34.64 \\text{ m}"
+        },
+        {
+          "text": "**Add the observer's eye height** (since we want total height from the ground):"
+        },
+        {
+          "math": "\\text{Building height} = 34.64 + 1.6 = 36.24 \\text{ m}"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{Tower's angle of elevation from } A \\text{ is } 30°, \\text{ from } B \\text{ (30 m closer to base) is } 60°. \\\\ \\text{Tower height (round 2 decimals)?}",
+      "answer": 25.98,
+      "tolerance": 0.3,
+      "hints": [
+        "Use the formula $h = D/(\\cot\\beta - \\cot\\alpha)$ with closer $\\alpha = 60°$, farther $\\beta = 30°$, $D = 30$.",
+        "$h = 30/(\\sqrt{3} - 1/\\sqrt{3}) = 30 \\sqrt{3}/2 = 15\\sqrt{3} \\approx 25.98$."
+      ],
+      "explanation": "$h = 30/(\\cot 30° - \\cot 60°) = 30/(\\sqrt{3} - 1/\\sqrt{3}) = 15\\sqrt{3} \\approx 25.98$ m.",
+      "steps": [
+        {
+          "text": "**Use the two-observer formula:**"
+        },
+        {
+          "math": "h = \\dfrac{D}{\\cot\\beta - \\cot\\alpha}"
+        },
+        {
+          "text": "Here $\\alpha = 60°$ (closer), $\\beta = 30°$ (farther), $D = 30$ m."
+        },
+        {
+          "math": "h = \\dfrac{30}{\\sqrt{3} - 1/\\sqrt{3}} = \\dfrac{30}{2/\\sqrt{3}} = 15\\sqrt{3} \\approx 25.98 \\text{ m}"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{From the top of a } 75 \\text{ m tower, angles of depression of two cars on a straight road are } 30° \\text{ and } 45°. \\\\ \\text{Distance between cars (round 2 decimals, in m)?}",
+      "answer": 54.9,
+      "tolerance": 0.5,
+      "hints": [
+        "Near car: $\\tan 45° = 75/d_1 \\Rightarrow d_1 = 75$.",
+        "Far car: $\\tan 30° = 75/d_2 \\Rightarrow d_2 = 75\\sqrt{3} \\approx 129.9$. Distance = $d_2 - d_1 = 54.9$."
+      ],
+      "explanation": "Distances from tower base: $75$ and $75\\sqrt{3}$. Gap: $75(\\sqrt{3} - 1) \\approx 54.9$ m.",
+      "steps": [
+        {
+          "text": "**Closer car (steeper depression of $45°$):**"
+        },
+        {
+          "math": "\\tan 45° = 75/d_1 \\Rightarrow d_1 = 75 \\text{ m}"
+        },
+        {
+          "text": "**Farther car ($30°$):**"
+        },
+        {
+          "math": "\\tan 30° = 75/d_2 \\Rightarrow d_2 = 75\\sqrt{3} \\approx 129.9 \\text{ m}"
+        },
+        {
+          "text": "**Distance between cars:**"
+        },
+        {
+          "math": "d_2 - d_1 = 75(\\sqrt{3} - 1) \\approx 54.9 \\text{ m}"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{Flagpole's shadow is } 12 \\text{ m long. Sun's angle of elevation is } 60°. \\\\ \\text{Pole height (round 2 decimals, m)?}",
+      "answer": 20.78,
+      "tolerance": 0.2,
+      "hints": [
+        "$\\tan 60° = h/12 \\Rightarrow h = 12\\sqrt{3} \\approx 20.78$.",
+        "Just shadow × tan."
+      ],
+      "explanation": "$h = 12 \\tan 60° = 12\\sqrt{3} \\approx 20.78$ m.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{A ladder } 10 \\text{ m long leans on a wall making } 60° \\text{ with the ground.} \\\\ \\text{Height reached on wall (round 2 decimals)?}",
+      "answer": 8.66,
+      "tolerance": 0.05,
+      "hints": [
+        "$\\sin 60° = h/10 \\Rightarrow h = 10 \\cdot \\sqrt{3}/2 = 5\\sqrt{3}$.",
+        "$\\approx 8.66$ m."
+      ],
+      "explanation": "$h = 10 \\sin 60° = 5\\sqrt{3} \\approx 8.66$ m.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{Aircraft at } 1500 \\text{ m altitude. Angles of depression to two ships in line below are } 30° \\text{ and } 60°. \\\\ \\text{Distance between ships (round 2 decimals, m)?}",
+      "answer": 1732.05,
+      "tolerance": 5,
+      "hints": [
+        "Near ship: $\\tan 60° = 1500/d_1 \\Rightarrow d_1 = 1500/\\sqrt{3} = 500\\sqrt{3}$.",
+        "Far ship: $\\tan 30° = 1500/d_2 \\Rightarrow d_2 = 1500\\sqrt{3}$. Distance = $1500\\sqrt{3} - 500\\sqrt{3} = 1000\\sqrt{3} \\approx 1732.05$."
+      ],
+      "explanation": "Distance = $1000\\sqrt{3} \\approx 1732.05$ m.",
+      "steps": [
+        {
+          "text": "**Near ship** (steeper $60°$):"
+        },
+        {
+          "math": "\\tan 60° = \\dfrac{1500}{d_1} \\Rightarrow d_1 = \\dfrac{1500}{\\sqrt{3}} = 500\\sqrt{3} \\text{ m}"
+        },
+        {
+          "text": "**Far ship** ($30°$):"
+        },
+        {
+          "math": "\\tan 30° = \\dfrac{1500}{d_2} \\Rightarrow d_2 = 1500\\sqrt{3} \\text{ m}"
+        },
+        {
+          "text": "**Distance between ships:**"
+        },
+        {
+          "math": "d_2 - d_1 = 1500\\sqrt{3} - 500\\sqrt{3} = 1000\\sqrt{3} \\approx 1732.05 \\text{ m}"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{The angle of elevation of the top of a tower from a point at distance } 100 \\text{ m from base is } 45°. \\\\ \\text{Tower height (m)?}",
+      "answer": 100,
+      "tolerance": 0.1,
+      "hints": [
+        "$\\tan 45° = 1$.",
+        "Height = 100 × 1 = 100."
+      ],
+      "explanation": "$h = 100 \\tan 45° = 100$ m.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{Building of height } 30 \\text{ m. Observer at ground sees top at angle } 60°. \\\\ \\text{If observer walks back so angle is } 30°, \\text{ how much farther (m)?}",
+      "answer": 34.64,
+      "tolerance": 0.3,
+      "hints": [
+        "Original distance: $d_1 = 30/\\tan 60° = 30/\\sqrt{3} = 10\\sqrt{3}$.",
+        "New distance: $d_2 = 30/\\tan 30° = 30\\sqrt{3}$. Diff: $30\\sqrt{3} - 10\\sqrt{3} = 20\\sqrt{3} \\approx 34.64$."
+      ],
+      "explanation": "Diff = $30(\\sqrt{3} - 1/\\sqrt{3}) = 30 \\cdot 2/\\sqrt{3} = 20\\sqrt{3} \\approx 34.64$ m.",
+      "steps": [
+        {
+          "text": "**Original position** ($60°$):"
+        },
+        {
+          "math": "\\tan 60° = \\dfrac{30}{d_1} \\Rightarrow d_1 = \\dfrac{30}{\\sqrt{3}} = 10\\sqrt{3}"
+        },
+        {
+          "text": "**New position** ($30°$, farther back):"
+        },
+        {
+          "math": "\\tan 30° = \\dfrac{30}{d_2} \\Rightarrow d_2 = 30\\sqrt{3}"
+        },
+        {
+          "text": "**Extra distance walked back:**"
+        },
+        {
+          "math": "d_2 - d_1 = 30\\sqrt{3} - 10\\sqrt{3} = 20\\sqrt{3} \\approx 34.64 \\text{ m}"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\text{A man on a } 50 \\text{ m cliff sees a boat at an angle of depression of } 45°. \\\\ \\text{If the boat moves toward the cliff and the angle becomes } 60°, \\\\ \\text{how far has the boat moved (round 2 decimals)?}",
+      "answer": 21.13,
+      "tolerance": 0.2,
+      "hints": [
+        "Initial distance: $d_1 = 50/\\tan 45° = 50$.",
+        "Final distance: $d_2 = 50/\\tan 60° = 50/\\sqrt{3} \\approx 28.87$. Diff: $50 - 28.87 \\approx 21.13$."
+      ],
+      "explanation": "Diff = $50 - 50/\\sqrt{3} = 50(1 - 1/\\sqrt{3}) \\approx 21.13$ m.",
+      "steps": [
+        {
+          "text": "**Initial distance** (depression $45°$):"
+        },
+        {
+          "math": "\\tan 45° = 50/d_1 \\Rightarrow d_1 = 50 \\text{ m}"
+        },
+        {
+          "text": "**Final distance** (depression $60°$):"
+        },
+        {
+          "math": "\\tan 60° = 50/d_2 \\Rightarrow d_2 = 50/\\sqrt{3} \\approx 28.87 \\text{ m}"
+        },
+        {
+          "text": "**Boat moved toward cliff by:**"
+        },
+        {
+          "math": "d_1 - d_2 = 50 - 50/\\sqrt{3} \\approx 21.13 \\text{ m}"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q13",
+      "type": "numeric",
+      "promptTex": "\\text{From the top of an } 80 \\text{ m tower, angles of depression to the top and bottom of a nearby building are } 30° \\text{ and } 45°. \\\\ \\text{Height of the building (round 2 decimals, m)?}",
+      "answer": 33.81,
+      "tolerance": 0.5,
+      "hints": [
+        "Use the $45°$ depression to the building BASE to find the horizontal distance: $80/\\tan 45° = 80$ m.",
+        "Use the $30°$ depression to the building TOP to find the vertical drop from tower top to building top: $80 \\tan 30° = 80/\\sqrt{3} \\approx 46.19$ m.",
+        "Building height = tower height − that vertical drop $= 80 - 46.19 \\approx 33.81$ m."
+      ],
+      "explanation": "Horizontal distance = 80 m. Vertical from tower-top to building-top = $80 \\tan 30° = 80/\\sqrt{3} \\approx 46.19$. Building height = $80 - 46.19 \\approx 33.81$ m.",
+      "steps": [
+        {
+          "text": "**Set up.** Tower height = 80; building base on same horizontal level as tower base. From tower top, the angle of depression to building base is $45°$ and to building top is $30°$."
+        },
+        {
+          "text": "**Horizontal distance** (using $45°$ to building base):"
+        },
+        {
+          "math": "d = 80 / \\tan 45° = 80 \\text{ m}"
+        },
+        {
+          "text": "**Vertical drop from tower top to building top** (using $30°$):"
+        },
+        {
+          "math": "\\Delta h = d \\tan 30° = 80 / \\sqrt{3} \\approx 46.19 \\text{ m}"
+        },
+        {
+          "text": "**Building height = tower − drop:**"
+        },
+        {
+          "math": "80 - 46.19 \\approx 33.81 \\text{ m}"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q14",
+      "type": "numeric",
+      "promptTex": "\\text{The angle of elevation of a flag on a vertical pole at a point } P \\text{ on the ground is } 45°. \\\\ \\text{After walking 30 m towards the pole, the angle becomes } 60°. \\text{ Pole height (round 2 decimals)?}",
+      "answer": 70.98,
+      "tolerance": 0.5,
+      "hints": [
+        "$h = D/(\\cot\\beta - \\cot\\alpha) = 30/(1 - 1/\\sqrt{3}) = 30\\sqrt{3}/(\\sqrt{3} - 1)$.",
+        "Rationalize: $30\\sqrt{3}(\\sqrt{3} + 1)/2 = 15(3 + \\sqrt{3}) \\approx 70.98$."
+      ],
+      "explanation": "$h = 30/(\\cot 45° - \\cot 60°) = 30/(1 - 1/\\sqrt{3})$. Rationalize: $\\approx 70.98$ m.",
+      "steps": [
+        {
+          "text": "**Two-observer formula** with closer $\\alpha = 60°$, farther $\\beta = 45°$, $D = 30$:"
+        },
+        {
+          "math": "h = \\dfrac{D}{\\cot\\beta - \\cot\\alpha} = \\dfrac{30}{\\cot 45° - \\cot 60°} = \\dfrac{30}{1 - 1/\\sqrt{3}}"
+        },
+        {
+          "text": "**Rationalize** by multiplying top and bottom by $\\sqrt{3}$:"
+        },
+        {
+          "math": "h = \\dfrac{30\\sqrt{3}}{\\sqrt{3} - 1}"
+        },
+        {
+          "text": "**Multiply by conjugate to simplify:**"
+        },
+        {
+          "math": "h = \\dfrac{30\\sqrt{3}(\\sqrt{3} + 1)}{(\\sqrt{3} - 1)(\\sqrt{3} + 1)} = \\dfrac{30(3 + \\sqrt{3})}{2} = 15(3 + \\sqrt{3}) \\approx 70.98 \\text{ m}"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q15",
+      "type": "multiple-choice",
+      "prompt": "True or false: the angle of depression measured from a tower top equals the angle of elevation measured at ground.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Both measured between same two points but in opposite directions.",
+        "Alternate interior angles between two parallel horizontals."
+      ],
+      "explanation": "TRUE. The two horizontal lines (at tower top and at ground level) are parallel; the line of sight is a transversal. Alternate interior angles ⇒ equal.",
+      "difficulty": "medium"
+    }
+  ]
+}

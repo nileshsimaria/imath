@@ -1,0 +1,163 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Apply: reflect } (3, 2) \\text{ over the y-axis, then translate by } (1, 4).",
+      "choices": [
+        "(-2, 6)",
+        "(4, 6)",
+        "(-3, 6)",
+        "(-2, -2)"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Step 1: reflect $(3, 2)$ over y-axis → $(-3, 2)$.",
+        "Step 2: translate by $(1, 4)$ → $(-3 + 1,\\; 2 + 4)$."
+      ],
+      "explanation": "Reflect: $(3, 2) \\to (-3, 2)$. Translate: $(-3, 2) \\to (-2, 6)$.",
+      "steps": [
+        {
+          "text": "**Step 1: Reflect $(3, 2)$ over the y-axis** using $(x, y) \\to (-x, y)$:"
+        },
+        {
+          "math": "(3, 2) \\;\\to\\; (-3, 2)"
+        },
+        {
+          "text": "**Step 2: Translate by $(1, 4)$:**"
+        },
+        {
+          "math": "(-3, 2) \\;\\to\\; (-3 + 1,\\; 2 + 4) = (-2, 6)"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "prompt": "Rotating by 30° about origin, then by 70° about origin, is equivalent to:",
+      "choices": [
+        "A single rotation by 100° about origin",
+        "A single rotation by 40°",
+        "A reflection",
+        "A translation"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Two rotations about the same center compose by adding their angles.",
+        "$30° + 70° = ?$"
+      ],
+      "explanation": "Rotations about the same center compose to a single rotation by the sum of the angles: $30° + 70° = 100°$.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "Which letter has reflective symmetry across both a horizontal AND a vertical axis?",
+      "choices": [
+        "F",
+        "H",
+        "Z",
+        "Q"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Sketch each letter and try to fold it horizontally and vertically.",
+        "H folds neatly both ways."
+      ],
+      "explanation": "The letter H has a vertical axis (down the middle bar) and a horizontal axis (across the crossbar's height). F has no symmetry. Z has 180° rotational but no reflection. Q has no nontrivial symmetry.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "prompt": "How many total symmetries (reflections + rotations including identity) does a square have?",
+      "answer": 8,
+      "tolerance": 0.001,
+      "hints": [
+        "Count reflection axes: through opposite vertices (×2) and through midpoints of opposite sides (×2).",
+        "Count rotations: 90°, 180°, 270°, 360°."
+      ],
+      "explanation": "4 reflection axes + 4 rotations = 8 symmetries. This is the dihedral group $D_4$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** Count reflection axes: through opposite vertices (×2) and through midpoints of opposite sides (×2)."
+        },
+        {
+          "text": "Count rotations: 90°, 180°, 270°, 360°."
+        },
+        {
+          "text": "**Solution.** 4 reflection axes + 4 rotations = 8 symmetries. This is the dihedral group $D_4$."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "prompt": "Two reflections over parallel lines compose to give a:",
+      "choices": [
+        "Reflection",
+        "Rotation",
+        "Translation",
+        "Dilation"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "The image is shifted, not flipped — orientation is restored after two flips.",
+        "Distance moved = twice the separation between the lines."
+      ],
+      "explanation": "Two reflections compose to either a rotation (intersecting lines) or a translation (parallel lines). For parallel lines, the result is a translation perpendicular to the lines, by twice their separation.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "prompt": "Which of these is a glide reflection?",
+      "choices": [
+        "Reflection followed by a translation PARALLEL to the mirror line",
+        "Reflection followed by a rotation",
+        "Two reflections composed",
+        "A 180° rotation"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Glide = slide; the translation must be along the mirror.",
+        "Footprints in the sand follow a glide reflection."
+      ],
+      "explanation": "A glide reflection is precisely a reflection composed with a translation parallel to the mirror line. Footprints: each one is a glide-reflection of the previous one.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "prompt": "How many lines of reflection symmetry does a regular hexagon have?",
+      "answer": 6,
+      "tolerance": 0.001,
+      "hints": [
+        "Regular n-gon has n reflection axes.",
+        "Half through opposite vertices, half through midpoints of opposite sides."
+      ],
+      "explanation": "A regular hexagon has 6 reflection axes: 3 through opposite vertices, 3 through midpoints of opposite sides. (Plus 6 rotational symmetries, for 12 total.)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "prompt": "Apply translation by (2, 3), then translation by (-5, 1). Equivalent single translation?",
+      "choices": [
+        "(-3, 4)",
+        "(-3, -2)",
+        "(7, 2)",
+        "(2, 3)"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Add the two vectors.",
+        "$(2 + (-5),\\; 3 + 1)$"
+      ],
+      "explanation": "$(2, 3) + (-5, 1) = (2 - 5,\\; 3 + 1) = (-3, 4)$. Translations always commute, and they compose by vector addition.",
+      "difficulty": "medium"
+    }
+  ]
+}

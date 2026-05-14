@@ -1,0 +1,683 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Expand: } (x + 6)^2.",
+      "choices": [
+        "$x^2 + 36$",
+        "$x^2 + 12x + 36$",
+        "$x^2 + 6x + 36$",
+        "$x^2 + 12x + 12$"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$(a+b)^2 = a^2 + 2ab + b^2$.",
+        "$a = x, b = 6$: $x^2 + 2 \\cdot x \\cdot 6 + 6^2$."
+      ],
+      "explanation": "$(x + 6)^2 = x^2 + 2(6)x + 36 = x^2 + 12x + 36$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Expand: } (3y - 4)^2.",
+      "choices": [
+        "$9y^2 - 16$",
+        "$9y^2 + 12y + 16$",
+        "$9y^2 - 24y + 16$",
+        "$3y^2 - 24y + 16$"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "$(a-b)^2 = a^2 - 2ab + b^2$ with $a = 3y, b = 4$.",
+        "$(3y)^2 - 2(3y)(4) + 4^2$."
+      ],
+      "explanation": "$(3y)^2 - 2(3y)(4) + 4^2 = 9y^2 - 24y + 16$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Factor: } 49x^2 - 25.",
+      "choices": [
+        "$(7x - 5)(7x + 5)$",
+        "$(7x - 5)^2$",
+        "$(49x - 25)(x + 1)$",
+        "Cannot be factored"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Difference of squares: $a^2 - b^2 = (a+b)(a-b)$.",
+        "$a = 7x, b = 5$."
+      ],
+      "explanation": "$49x^2 = (7x)^2$, $25 = 5^2$. So $(7x)^2 - 5^2 = (7x + 5)(7x - 5)$.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Use identities to compute } 97^2 \\text{ mentally.}",
+      "answer": 9409,
+      "tolerance": 0.001,
+      "hints": [
+        "$97 = 100 - 3$. Use $(a-b)^2 = a^2 - 2ab + b^2$.",
+        "$10000 - 600 + 9$."
+      ],
+      "explanation": "$97^2 = (100 - 3)^2 = 100^2 - 2(100)(3) + 9 = 10000 - 600 + 9 = 9409$.",
+      "steps": [
+        {
+          "text": "**Choose a clever split:** $97 = 100 - 3$."
+        },
+        {
+          "text": "**Apply $(a - b)^2 = a^2 - 2ab + b^2$** with $a = 100, b = 3$:"
+        },
+        {
+          "math": "(100 - 3)^2 = 100^2 - 2 \\cdot 100 \\cdot 3 + 3^2"
+        },
+        {
+          "math": "= 10000 - 600 + 9 = 9409"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{Use identities to compute } 102 \\times 98.",
+      "answer": 9996,
+      "tolerance": 0.001,
+      "hints": [
+        "$102 \\times 98 = (100 + 2)(100 - 2)$. Difference of squares!",
+        "$100^2 - 2^2 = 10000 - 4$."
+      ],
+      "explanation": "$(100 + 2)(100 - 2) = 100^2 - 2^2 = 10000 - 4 = 9996$.",
+      "steps": [
+        {
+          "text": "**Recognize as difference of squares** $a^2 - b^2 = (a+b)(a-b)$ in reverse."
+        },
+        {
+          "math": "102 \\times 98 = (100 + 2)(100 - 2) = 100^2 - 2^2"
+        },
+        {
+          "math": "= 10000 - 4 = 9996"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{If } a + b = 7 \\text{ and } ab = 12, \\text{ find } a^2 + b^2.",
+      "answer": 25,
+      "tolerance": 0.001,
+      "hints": [
+        "$(a + b)^2 = a^2 + 2ab + b^2$. Rearrange for $a^2 + b^2$.",
+        "$a^2 + b^2 = (a+b)^2 - 2ab = 49 - 24 = 25$."
+      ],
+      "explanation": "$a^2 + b^2 = (a+b)^2 - 2ab = 49 - 24 = 25$.",
+      "steps": [
+        {
+          "text": "**Use** $(a+b)^2 = a^2 + 2ab + b^2$ — rearrange to isolate $a^2 + b^2$:"
+        },
+        {
+          "math": "a^2 + b^2 = (a + b)^2 - 2ab"
+        },
+        {
+          "math": "= 7^2 - 2(12) = 49 - 24 = 25"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{If } a - b = 4 \\text{ and } ab = 5, \\text{ find } a^2 + b^2.",
+      "answer": 26,
+      "tolerance": 0.001,
+      "hints": [
+        "$(a - b)^2 = a^2 - 2ab + b^2$, so $a^2 + b^2 = (a-b)^2 + 2ab$.",
+        "$16 + 10 = 26$."
+      ],
+      "explanation": "$a^2 + b^2 = (a-b)^2 + 2ab = 16 + 10 = 26$.",
+      "steps": [
+        {
+          "text": "**Use** $(a - b)^2 = a^2 - 2ab + b^2$ and rearrange for $a^2 + b^2$:"
+        },
+        {
+          "math": "a^2 + b^2 = (a - b)^2 + 2ab"
+        },
+        {
+          "math": "= 4^2 + 2(5) = 16 + 10 = 26"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{If } x + \\dfrac{1}{x} = 5, \\text{ find } x^2 + \\dfrac{1}{x^2}.",
+      "answer": 23,
+      "tolerance": 0.001,
+      "hints": [
+        "Square the given: $\\left(x + \\dfrac{1}{x}\\right)^2 = x^2 + 2 + \\dfrac{1}{x^2}$.",
+        "$25 = x^2 + \\dfrac{1}{x^2} + 2 \\Rightarrow x^2 + \\dfrac{1}{x^2} = 23$."
+      ],
+      "explanation": "$(x + 1/x)^2 = x^2 + 2 + 1/x^2$, so $x^2 + 1/x^2 = 25 - 2 = 23$.",
+      "steps": [
+        {
+          "text": "**Square both sides** of $x + 1/x = 5$:"
+        },
+        {
+          "math": "\\left(x + \\dfrac{1}{x}\\right)^2 = 25"
+        },
+        {
+          "math": "x^2 + 2 \\cdot x \\cdot \\dfrac{1}{x} + \\dfrac{1}{x^2} = 25"
+        },
+        {
+          "math": "x^2 + 2 + \\dfrac{1}{x^2} = 25 \\;\\Longrightarrow\\; x^2 + \\dfrac{1}{x^2} = 23"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Expand: } (x + 3)(x + 7).",
+      "choices": [
+        "$x^2 + 21$",
+        "$x^2 + 10x + 21$",
+        "$x^2 + 10x + 10$",
+        "$x^2 + 21x + 10$"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$(x + a)(x + b) = x^2 + (a+b)x + ab$.",
+        "$a + b = 10$, $ab = 21$."
+      ],
+      "explanation": "$(x+3)(x+7) = x^2 + (3+7)x + (3)(7) = x^2 + 10x + 21$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Expand: } (2x + 3)^3.",
+      "choices": [
+        "$8x^3 + 27$",
+        "$8x^3 + 36x^2 + 54x + 27$",
+        "$8x^3 + 12x^2 + 18x + 27$",
+        "$2x^3 + 9x^2 + 27x + 27$"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$(a+b)^3 = a^3 + 3a^2 b + 3ab^2 + b^3$ with $a = 2x, b = 3$.",
+        "$(2x)^3 + 3(2x)^2(3) + 3(2x)(9) + 27 = 8x^3 + 36x^2 + 54x + 27$."
+      ],
+      "explanation": "$(2x+3)^3 = (2x)^3 + 3(2x)^2(3) + 3(2x)(3)^2 + 3^3 = 8x^3 + 36x^2 + 54x + 27$.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q11",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Factor: } x^3 - 8.",
+      "choices": [
+        "$(x - 2)^3$",
+        "$(x - 2)(x^2 + 2x + 4)$",
+        "$(x + 2)(x^2 - 2x + 4)$",
+        "$(x - 2)(x^2 - 2x - 4)$"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$a^3 - b^3 = (a - b)(a^2 + ab + b^2)$ with $a = x, b = 2$.",
+        "Note: middle term sign is +."
+      ],
+      "explanation": "$x^3 - 8 = x^3 - 2^3 = (x - 2)(x^2 + 2x + 4)$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Factor: } 27a^3 + 8b^3.",
+      "choices": [
+        "$(3a + 2b)^3$",
+        "$(3a + 2b)(9a^2 - 6ab + 4b^2)$",
+        "$(3a - 2b)(9a^2 + 6ab + 4b^2)$",
+        "$(3a + 2b)(3a^2 - 6ab + 4b^2)$"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$27a^3 = (3a)^3$, $8b^3 = (2b)^3$. Sum of cubes.",
+        "$a^3 + b^3 = (a+b)(a^2 - ab + b^2)$. Here use $A = 3a, B = 2b$."
+      ],
+      "explanation": "$27a^3 + 8b^3 = (3a)^3 + (2b)^3 = (3a + 2b)((3a)^2 - (3a)(2b) + (2b)^2) = (3a + 2b)(9a^2 - 6ab + 4b^2)$.",
+      "steps": [
+        {
+          "text": "**Recognize cubes:** $27a^3 = (3a)^3$ and $8b^3 = (2b)^3$."
+        },
+        {
+          "text": "**Sum of cubes** $A^3 + B^3 = (A + B)(A^2 - AB + B^2)$ with $A = 3a, B = 2b$:"
+        },
+        {
+          "math": "(3a)^3 + (2b)^3 = (3a + 2b)\\big((3a)^2 - (3a)(2b) + (2b)^2\\big)"
+        },
+        {
+          "math": "= (3a + 2b)(9a^2 - 6ab + 4b^2)"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q13",
+      "type": "numeric",
+      "promptTex": "\\text{If } a + b + c = 10 \\text{ and } ab + bc + ca = 30, \\text{ find } a^2 + b^2 + c^2.",
+      "answer": 40,
+      "tolerance": 0.001,
+      "hints": [
+        "$(a+b+c)^2 = a^2 + b^2 + c^2 + 2(ab + bc + ca)$.",
+        "$100 = a^2 + b^2 + c^2 + 60 \\Rightarrow a^2+b^2+c^2 = 40$."
+      ],
+      "explanation": "$(a+b+c)^2 = a^2 + b^2 + c^2 + 2(ab + bc + ca) \\Rightarrow 100 = a^2 + b^2 + c^2 + 60 \\Rightarrow a^2 + b^2 + c^2 = 40$.",
+      "steps": [
+        {
+          "text": "**Use the three-variable identity:**"
+        },
+        {
+          "math": "(a + b + c)^2 = a^2 + b^2 + c^2 + 2(ab + bc + ca)"
+        },
+        {
+          "math": "10^2 = a^2 + b^2 + c^2 + 2(30)"
+        },
+        {
+          "math": "100 = a^2 + b^2 + c^2 + 60 \\;\\Longrightarrow\\; a^2 + b^2 + c^2 = 40"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q14",
+      "type": "numeric",
+      "promptTex": "\\text{If } a + b + c = 0, \\text{ find the value of } a^3 + b^3 + c^3 - 3abc.",
+      "answer": 0,
+      "tolerance": 0.001,
+      "hints": [
+        "Use $a^3 + b^3 + c^3 - 3abc = (a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca)$.",
+        "First factor is $0$, so product is $0$."
+      ],
+      "explanation": "By the identity, $a^3 + b^3 + c^3 - 3abc = (a+b+c)(\\ldots)$. If $a + b + c = 0$, this product is $0$. So $a^3 + b^3 + c^3 = 3abc$ when the sum is zero.",
+      "steps": [
+        {
+          "text": "**Apply the cubic identity:**"
+        },
+        {
+          "math": "a^3 + b^3 + c^3 - 3abc = (a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca)"
+        },
+        {
+          "text": "**Given $a + b + c = 0$:** the first factor is $0$, so the whole product is $0$."
+        },
+        {
+          "math": "a^3 + b^3 + c^3 - 3abc = 0"
+        },
+        {
+          "text": "**Corollary:** when the sum is zero, $a^3 + b^3 + c^3 = 3abc$."
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q15",
+      "type": "numeric",
+      "promptTex": "\\text{If } a + b = 6 \\text{ and } ab = 8, \\text{ find } a^3 + b^3.",
+      "answer": 72,
+      "tolerance": 0.001,
+      "hints": [
+        "Use $(a + b)^3 = a^3 + b^3 + 3ab(a + b)$.",
+        "$216 = a^3 + b^3 + 3(8)(6) \\Rightarrow a^3 + b^3 = 216 - 144 = 72$."
+      ],
+      "explanation": "$(a+b)^3 = a^3 + b^3 + 3ab(a+b) \\Rightarrow 216 = a^3 + b^3 + 144 \\Rightarrow a^3 + b^3 = 72$.",
+      "steps": [
+        {
+          "text": "**Cube the sum:**"
+        },
+        {
+          "math": "(a + b)^3 = a^3 + b^3 + 3ab(a + b)"
+        },
+        {
+          "math": "6^3 = a^3 + b^3 + 3 \\cdot 8 \\cdot 6"
+        },
+        {
+          "math": "216 = a^3 + b^3 + 144 \\;\\Longrightarrow\\; a^3 + b^3 = 72"
+        }
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q16",
+      "type": "numeric",
+      "promptTex": "\\text{If } x + \\dfrac{1}{x} = 4, \\text{ find } x^3 + \\dfrac{1}{x^3}.",
+      "answer": 52,
+      "tolerance": 0,
+      "hints": [
+        "Cube $(x + 1/x)$ and expand. A term $3(x + 1/x)$ will pop out, ready to be isolated.",
+        "$(x + 1/x)^3 = x^3 + 1/x^3 + 3(x + 1/x)$.",
+        "$x^3 + 1/x^3 = 4^3 - 3 \\cdot 4 = 64 - 12 = 52$."
+      ],
+      "explanation": "Cubing gives $(x + 1/x)^3 = x^3 + 1/x^3 + 3(x + 1/x)$. Rearrange: $x^3 + 1/x^3 = (x + 1/x)^3 - 3(x + 1/x) = 64 - 12 = 52$.",
+      "steps": [
+        "**Recognize the structure.** We're given $x + \\dfrac{1}{x}$ and asked for $x^3 + \\dfrac{1}{x^3}$. Cubing the given expression is the natural move — let's derive what comes out, not memorize a formula.",
+        "**First derive the square identity from scratch.** $(x + \\tfrac{1}{x})^2 = (x + \\tfrac{1}{x})(x + \\tfrac{1}{x}) = x^2 + x \\cdot \\tfrac{1}{x} + \\tfrac{1}{x} \\cdot x + \\tfrac{1}{x^2} = x^2 + 2 + \\tfrac{1}{x^2}$. The two cross terms each equal $x \\cdot \\tfrac{1}{x} = 1$ — that's why we get $+2$, not some mysterious constant.",
+        "**Now cube by multiplying.** $(x + \\tfrac{1}{x})^3 = (x + \\tfrac{1}{x}) \\cdot (x + \\tfrac{1}{x})^2 = (x + \\tfrac{1}{x})(x^2 + 2 + \\tfrac{1}{x^2})$.",
+        "**Multiply out term by term.** $x \\cdot x^2 + x \\cdot 2 + x \\cdot \\tfrac{1}{x^2} + \\tfrac{1}{x} \\cdot x^2 + \\tfrac{1}{x} \\cdot 2 + \\tfrac{1}{x} \\cdot \\tfrac{1}{x^2} = x^3 + 2x + \\tfrac{1}{x} + x + \\tfrac{2}{x} + \\tfrac{1}{x^3}$.",
+        "**Collect like terms.** $= x^3 + \\tfrac{1}{x^3} + 3x + \\tfrac{3}{x} = x^3 + \\tfrac{1}{x^3} + 3(x + \\tfrac{1}{x})$. The $3$ in front of $(x + 1/x)$ wasn't a formula — it arose from $2+1$ and $1+2$ in the expansion.",
+        "**Rearrange to isolate the target.** $x^3 + \\tfrac{1}{x^3} = (x + \\tfrac{1}{x})^3 - 3(x + \\tfrac{1}{x})$.",
+        "**Plug in $x + \\tfrac{1}{x} = 4$.** $x^3 + \\tfrac{1}{x^3} = 4^3 - 3(4) = 64 - 12 = 52$.",
+        "**Pattern lesson.** Whenever an expression is *symmetric* under $x \\leftrightarrow \\tfrac{1}{x}$ (like $x^n + \\tfrac{1}{x^n}$), you can express it as a polynomial in $x + \\tfrac{1}{x}$. We just derived the cubic version. (The deep fact: these are Chebyshev polynomials in disguise — but we don't need that name; the algebra alone works.)"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q17",
+      "type": "numeric",
+      "promptTex": "\\text{If } x^2 + \\dfrac{1}{x^2} = 7, \\text{ find the positive value of } x + \\dfrac{1}{x}.",
+      "answer": 3,
+      "tolerance": 0,
+      "hints": [
+        "Reverse direction. Square $(x + 1/x)$ to produce $x^2 + 1/x^2$ inside.",
+        "$(x + 1/x)^2 = x^2 + 2 + 1/x^2$. Given $x^2 + 1/x^2 = 7$, we get $(x + 1/x)^2 = 9$.",
+        "Two roots: $x + 1/x = \\pm 3$. Take the positive: $3$."
+      ],
+      "explanation": "Derive: $(x + 1/x)^2 = x^2 + 2 + 1/x^2$. Add 2 to the given: $(x + 1/x)^2 = 7 + 2 = 9$, so $x + 1/x = \\pm 3$. The positive value is $\\mathbf{3}$.",
+      "steps": [
+        "**Reverse direction — work backwards.** We're given $x^2 + \\tfrac{1}{x^2}$ and want $x + \\tfrac{1}{x}$. The squaring identity goes BOTH WAYS: if we can express one in terms of the other, we can solve either side.",
+        "**Derive the square identity from scratch.** $(x + \\tfrac{1}{x})^2 = (x + \\tfrac{1}{x})(x + \\tfrac{1}{x}) = x^2 + x \\cdot \\tfrac{1}{x} + \\tfrac{1}{x} \\cdot x + \\tfrac{1}{x^2} = x^2 + 1 + 1 + \\tfrac{1}{x^2} = x^2 + 2 + \\tfrac{1}{x^2}$. The two cross terms each equal $x \\cdot \\tfrac{1}{x} = 1$.",
+        "**Rearrange.** $x^2 + \\tfrac{1}{x^2} = (x + \\tfrac{1}{x})^2 - 2$.",
+        "**Substitute and solve.** $7 = (x + \\tfrac{1}{x})^2 - 2 \\;\\Longrightarrow\\; (x + \\tfrac{1}{x})^2 = 9 \\;\\Longrightarrow\\; x + \\tfrac{1}{x} = \\pm 3$.",
+        "**Both signs are real.** Both $x + \\tfrac{1}{x} = 3$ AND $x + \\tfrac{1}{x} = -3$ produce $x^2 + \\tfrac{1}{x^2} = 7$ — the squaring step lost the sign. The problem asks for the positive value, so the answer is $\\mathbf{3}$.",
+        "**Pattern lesson — squaring is one-way.** Going from $x + \\tfrac{1}{x}$ to $x^2 + \\tfrac{1}{x^2}$ is unique; going back recovers BOTH signs. Any time you've squared to eliminate a variable, the inverse step is two-valued. Always think about whether the problem asks for one sign or both."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q18",
+      "type": "numeric",
+      "promptTex": "\\text{If } x - \\dfrac{1}{x} = 3, \\text{ find } x^2 + \\dfrac{1}{x^2}.",
+      "answer": 11,
+      "tolerance": 0,
+      "hints": [
+        "Square the MINUS expression. The cross terms now subtract.",
+        "$(x - 1/x)^2 = x^2 - 2 + 1/x^2$.",
+        "$9 = x^2 + 1/x^2 - 2 \\Rightarrow x^2 + 1/x^2 = 11$."
+      ],
+      "explanation": "Derive: $(x - 1/x)^2 = x^2 - 2 \\cdot x \\cdot (1/x) + 1/x^2 = x^2 - 2 + 1/x^2$. Rearrange: $x^2 + 1/x^2 = (x - 1/x)^2 + 2 = 9 + 2 = 11$.",
+      "steps": [
+        "**Mirror of the plus identity.** Same multiplication, but every sign that can flip, does. Let's redo the derivation so we see exactly which sign changes — instead of trusting a memorized formula.",
+        "**Derive $(x - \\tfrac{1}{x})^2$.** $(x - \\tfrac{1}{x})(x - \\tfrac{1}{x}) = x^2 + x \\cdot (-\\tfrac{1}{x}) + (-\\tfrac{1}{x}) \\cdot x + (-\\tfrac{1}{x})(-\\tfrac{1}{x}) = x^2 - 1 - 1 + \\tfrac{1}{x^2} = x^2 - 2 + \\tfrac{1}{x^2}$. The cross terms are now negative; they SUBTRACT instead of add.",
+        "**Compare with the plus version.** $(x + \\tfrac{1}{x})^2 = x^2 + 2 + \\tfrac{1}{x^2}$. $(x - \\tfrac{1}{x})^2 = x^2 - 2 + \\tfrac{1}{x^2}$. Same squared terms, opposite middle term.",
+        "**Rearrange for $x^2 + \\tfrac{1}{x^2}$.** From the minus identity: $x^2 + \\tfrac{1}{x^2} = (x - \\tfrac{1}{x})^2 + 2$. (Vs. $(x + \\tfrac{1}{x})^2 - 2$ for the plus version.)",
+        "**Plug in $x - \\tfrac{1}{x} = 3$.** $x^2 + \\tfrac{1}{x^2} = 3^2 + 2 = 11$.",
+        "**A nice cross-check.** Add the two squarings: $(x + \\tfrac{1}{x})^2 + (x - \\tfrac{1}{x})^2 = 2(x^2 + \\tfrac{1}{x^2})$ — the $\\pm 2$ cancel. Either version is enough on its own. Subtracting gives $(x+\\tfrac{1}{x})^2 - (x-\\tfrac{1}{x})^2 = 4 = 4 \\cdot x \\cdot \\tfrac{1}{x}$ — also checks out."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q19",
+      "type": "numeric",
+      "promptTex": "\\text{If } x = 2 + \\sqrt{3}, \\text{ find } x + \\dfrac{1}{x}.",
+      "answer": 4,
+      "tolerance": 0,
+      "hints": [
+        "Compute $\\dfrac{1}{2 + \\sqrt 3}$ by rationalizing — multiply by the conjugate $2 - \\sqrt 3$.",
+        "Use $(a + b)(a - b) = a^2 - b^2$: $(2 + \\sqrt 3)(2 - \\sqrt 3) = 4 - 3 = 1$.",
+        "So $\\dfrac{1}{2 + \\sqrt 3} = 2 - \\sqrt 3$. Add: $(2 + \\sqrt 3) + (2 - \\sqrt 3) = 4$."
+      ],
+      "explanation": "Rationalize $\\tfrac{1}{2 + \\sqrt 3}$ by multiplying by the conjugate $2 - \\sqrt 3$. The denominator $(2+\\sqrt 3)(2-\\sqrt 3) = 4 - 3 = 1$. So $\\tfrac{1}{2+\\sqrt 3} = 2 - \\sqrt 3$. Add: $x + \\tfrac{1}{x} = (2 + \\sqrt 3) + (2 - \\sqrt 3) = 4$. The surds cancel.",
+      "steps": [
+        "**Recognize the obstacle.** Plugging in is easy for $x$. The challenge is $\\tfrac{1}{x} = \\tfrac{1}{2 + \\sqrt 3}$ — a fraction with a surd in the denominator. We need to remove that surd before we can add.",
+        "**The conjugate trick — derive WHY it works.** Recall the difference-of-squares identity $(a + b)(a - b) = a^2 - b^2$. If $b$ involves $\\sqrt{d}$, then $b^2 = d$ is RATIONAL — no surd left. So multiplying $(a + b\\sqrt{d})$ by its *conjugate* $(a - b\\sqrt{d})$ produces a rational number.",
+        "**Apply to our case.** Take $a = 2, b = 1, d = 3$. The conjugate of $2 + \\sqrt 3$ is $2 - \\sqrt 3$. Their product: $(2 + \\sqrt 3)(2 - \\sqrt 3) = 2^2 - (\\sqrt 3)^2 = 4 - 3 = 1$.",
+        "**Multiply top and bottom by the conjugate.** $\\dfrac{1}{2 + \\sqrt 3} = \\dfrac{1}{2 + \\sqrt 3} \\cdot \\dfrac{2 - \\sqrt 3}{2 - \\sqrt 3} = \\dfrac{2 - \\sqrt 3}{(2 + \\sqrt 3)(2 - \\sqrt 3)} = \\dfrac{2 - \\sqrt 3}{1} = 2 - \\sqrt 3$.",
+        "**Add.** $x + \\tfrac{1}{x} = (2 + \\sqrt 3) + (2 - \\sqrt 3) = 4$. The $\\sqrt 3$ terms appeared with opposite signs and cancelled exactly.",
+        "**WHY the surds had to cancel.** Notice $x \\cdot \\tfrac{1}{x} = 1$ — a rational number. Now suppose $x = a + b\\sqrt{d}$ and $\\tfrac{1}{x} = c + e\\sqrt{d}$. Their product expands to $(ac + bed) + (ae + bc)\\sqrt{d}$. For this to equal the rational number $1$, the irrational part $ae + bc$ must vanish — forcing $e = -bc/a$, which makes the surd part of $\\tfrac{1}{x}$ opposite in sign to that of $x$. The cancellation in $x + 1/x$ is automatic.",
+        "**Pattern lesson — Pell-like surds.** Whenever $x = a + b\\sqrt{d}$ satisfies $a^2 - b^2 d = \\pm 1$, $\\tfrac{1}{x} = \\pm(a - b\\sqrt{d})$ and $x + \\tfrac{1}{x}$ is a clean integer $2a$. Our case: $a=2, b=1, d=3$, $a^2 - b^2 d = 4 - 3 = 1$ ✓. So $x + \\tfrac{1}{x} = 2 \\cdot 2 = 4$ ✓."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q20",
+      "type": "numeric",
+      "promptTex": "\\text{If } x + \\dfrac{1}{x} = 3, \\text{ find } x^4 + \\dfrac{1}{x^4}.",
+      "answer": 47,
+      "tolerance": 0,
+      "hints": [
+        "Two-step ladder. First find $x^2 + 1/x^2 = (x + 1/x)^2 - 2 = 7$.",
+        "Then $x^4 + 1/x^4 = (x^2 + 1/x^2)^2 - 2 = 49 - 2 = 47$.",
+        "The same squaring identity applied twice — once to go from power 1 to 2, once from 2 to 4."
+      ],
+      "explanation": "Apply the squaring identity TWICE. First: $x^2 + 1/x^2 = (x + 1/x)^2 - 2 = 9 - 2 = 7$. Then: $x^4 + 1/x^4 = (x^2 + 1/x^2)^2 - 2 = 49 - 2 = 47$. Doubling the power costs one application of 'square minus 2'.",
+      "steps": [
+        "**Climb the power ladder by doubling.** $x + \\tfrac{1}{x} \\to x^2 + \\tfrac{1}{x^2} \\to x^4 + \\tfrac{1}{x^4}$. Each step doubles the exponent. We rise by applying the SAME identity twice — not by inventing a new one each time.",
+        "**Derive the doubling identity once, in general.** For any positive integer $n$, square $x^n + \\tfrac{1}{x^n}$ (treating $x^n$ as the variable): $(x^n + \\tfrac{1}{x^n})^2 = (x^n)^2 + 2 \\cdot x^n \\cdot \\tfrac{1}{x^n} + (\\tfrac{1}{x^n})^2 = x^{2n} + 2 + \\tfrac{1}{x^{2n}}$. Rearrange: $\\boxed{x^{2n} + \\tfrac{1}{x^{2n}} = (x^n + \\tfrac{1}{x^n})^2 - 2}$.",
+        "**First rung — power 1 to power 2.** Set $n = 1$: $x^2 + \\tfrac{1}{x^2} = (x + \\tfrac{1}{x})^2 - 2 = 3^2 - 2 = 7$.",
+        "**Second rung — power 2 to power 4.** Set $n = 2$: $x^4 + \\tfrac{1}{x^4} = (x^2 + \\tfrac{1}{x^2})^2 - 2 = 7^2 - 2 = 47$.",
+        "**The answer.** $x^4 + \\tfrac{1}{x^4} = 47$.",
+        "**Pattern lesson — exponent doubling.** Each application of 'square then subtract $2$' doubles the exponent. Starting from $x + \\tfrac{1}{x} = 3$ the sequence at powers $1, 2, 4, 8, 16, \\ldots$ is $3, 7, 47, 2207, 4870847, \\ldots$ Growth is doubly-exponential. For *non-power-of-2* exponents like $5$ or $7$, a different recipe is needed — a linear recurrence in $n$ (see the algebra-2 problems)."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q21",
+      "type": "numeric",
+      "promptTex": "\\text{The sum of a positive number and its reciprocal is } \\dfrac{17}{4}. \\\\ \\text{Find the larger possible value of the number.}",
+      "answer": 4,
+      "tolerance": 0,
+      "hints": [
+        "Let the number be $x$. $x + 1/x = 17/4$ leads to a quadratic.",
+        "Multiply both sides by $4x$: $4x^2 - 17x + 4 = 0$.",
+        "Factor: $(4x - 1)(x - 4) = 0$. Roots: $4$ and $1/4$. The larger is $4$."
+      ],
+      "explanation": "Set $x + \\tfrac{1}{x} = \\tfrac{17}{4}$. Multiply by $4x$: $4x^2 - 17x + 4 = 0$. Factor as $(4x - 1)(x - 4) = 0$, giving $x = 4$ or $x = \\tfrac{1}{4}$. The two roots are reciprocals — no accident. The larger is $\\mathbf{4}$.",
+      "steps": [
+        "**Set up the equation.** Let the number be $x > 0$. The condition: $x + \\dfrac{1}{x} = \\dfrac{17}{4}$.",
+        "**Clear fractions to get a polynomial.** Multiply both sides by $4x$ (positive, so direction preserved): $4x \\cdot x + 4x \\cdot \\dfrac{1}{x} = 4x \\cdot \\dfrac{17}{4}$, i.e., $4x^2 + 4 = 17x$, i.e., $4x^2 - 17x + 4 = 0$.",
+        "**Solve the quadratic by splitting the middle term.** Look for two integers with product $4 \\cdot 4 = 16$ and sum $17$: $16$ and $1$. Split: $4x^2 - 16x - x + 4 = 0$. Group: $4x(x - 4) - 1(x - 4) = (4x - 1)(x - 4) = 0$. Roots: $x = \\tfrac{1}{4}$ or $x = 4$.",
+        "**Notice the roots are RECIPROCALS.** $4 \\cdot \\tfrac{1}{4} = 1$. This isn't a coincidence — derive why.",
+        "**WHY reciprocal roots.** The original equation $x + \\tfrac{1}{x} = \\tfrac{17}{4}$ is *invariant* under $x \\leftrightarrow \\tfrac{1}{x}$ — swap them and the left side is the same expression. So if $x_0$ is a root, so is $\\tfrac{1}{x_0}$. Equivalently, in the quadratic $4x^2 - 17x + 4 = 0$ the leading and constant coefficients match — a *palindromic* quadratic — and by Vieta's, the product of roots equals constant/leading $= 4/4 = 1$.",
+        "**The larger root.** $4 > \\tfrac{1}{4}$, so the answer is $\\mathbf{4}$.",
+        "**Pattern lesson — three regimes for $x + 1/x = k$.** Multiplying by $x$ always gives $x^2 - kx + 1 = 0$, discriminant $k^2 - 4$. (i) $|k| > 2$: two real reciprocal roots. (ii) $|k| < 2$: complex conjugate pair, still reciprocal, on the unit circle. (iii) $|k| = 2$: double root at $x = \\pm 1$ (the next problem)."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q22",
+      "type": "numeric",
+      "promptTex": "\\text{If } x + \\dfrac{1}{x} = 2 \\text{ (with } x \\text{ real)}, \\text{ find } x^{100} + \\dfrac{1}{x^{100}}.",
+      "answer": 2,
+      "tolerance": 0,
+      "hints": [
+        "Don't reach for a recurrence. First figure out what $x$ actually IS.",
+        "Multiply by $x$: $x^2 - 2x + 1 = 0 \\Rightarrow (x-1)^2 = 0 \\Rightarrow x = 1$.",
+        "$x = 1 \\Rightarrow x^{100} + 1/x^{100} = 1 + 1 = 2$. Every power gives 2."
+      ],
+      "explanation": "The condition $x + 1/x = 2$ forces $x = 1$ (the only real solution): rearrange to $(x-1)^2 = 0$. So every power $x^n + 1/x^n = 1 + 1 = 2$, independent of $n$. The seemingly-hard problem trivializes.",
+      "steps": [
+        "**Don't reach for a formula.** With $k = 2$ we're at a special edge case. Always check the value of $x$ first — it might constrain things hard.",
+        "**Solve $x + \\tfrac{1}{x} = 2$.** Multiply by $x$: $x^2 + 1 = 2x \\;\\Longrightarrow\\; x^2 - 2x + 1 = 0 \\;\\Longrightarrow\\; (x - 1)^2 = 0$. The only real solution is $x = 1$ (a *double root*).",
+        "**Compute directly.** $x = 1 \\;\\Longrightarrow\\; x^{100} + \\tfrac{1}{x^{100}} = 1^{100} + \\tfrac{1}{1^{100}} = 1 + 1 = 2$.",
+        "**WHY $k = 2$ is special — derive the AM-GM bound.** For positive real $x$: $x + \\tfrac{1}{x} - 2 = \\dfrac{x^2 - 2x + 1}{x} = \\dfrac{(x - 1)^2}{x} \\geq 0$. So $x + \\tfrac{1}{x} \\geq 2$ always (for $x > 0$), with equality only at $x = 1$. The value $2$ is the *minimum* of $x + \\tfrac{1}{x}$ over positive reals — there's no slack for $x$ to be anything other than $1$.",
+        "**The range of $x + \\tfrac{1}{x}$ for real $x$.** As $x \\to 0^+$ or $x \\to \\infty$, the sum blows up; the minimum on positives is $2$ at $x = 1$. By symmetry $x \\leftrightarrow -x$, the maximum on negatives is $-2$ at $x = -1$. So the range is $(-\\infty, -2] \\cup [2, \\infty)$ — a *forbidden gap* $(-2, 2)$ where no real $x$ produces the sum.",
+        "**Pattern lesson — boundary values trivialize.** When $k = \\pm 2$, the constraint pins $x$ to a single value, and every $x^n + \\tfrac{1}{x^n}$ collapses to $\\pm 2$ depending on parity. The 'hard' problem with a big exponent becomes one line — by first asking what $x$ is."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q23",
+      "type": "numeric",
+      "promptTex": "\\text{If } x + \\dfrac{1}{x} = 1, \\text{ find } x^{17} + \\dfrac{1}{x^{17}}.",
+      "answer": 1,
+      "tolerance": 0,
+      "hints": [
+        "The recurrence would take 17 steps. There must be a shortcut — try to derive a single equation that pins $x$ down.",
+        "Square the given AND multiply by $x$. The two substitutions collapse to $x^3 + 1 = 0$, i.e., $x^3 = -1$.",
+        "Once $x^3 = -1$, all powers cycle: $x^6 = 1$, so $x^{18} = 1$, so $x^{17} = 1/x$ and $1/x^{17} = x$. Answer = $x + 1/x = 1$."
+      ],
+      "explanation": "From $x + 1/x = 1$, the algebra forces $x^3 = -1$ (so $x$ is a 6th root of unity). Then $x^{18} = 1$, giving $x^{17} = 1/x$ and $1/x^{17} = x$, so $x^{17} + 1/x^{17} = x + 1/x = \\mathbf{1}$.",
+      "steps": [
+        "**Don't reach for the recurrence.** A 17-step recurrence would work — but the big exponent is a hint that *something cleaner exists*. Let's hunt for a single equation that pins $x$ down so high powers cycle.",
+        "**Step 1 — derive $x^2 + \\tfrac{1}{x^2}$.** Square both sides of $x + \\tfrac{1}{x} = 1$: $(x + \\tfrac{1}{x})^2 = 1$, i.e., $x^2 + 2 + \\tfrac{1}{x^2} = 1$, so $x^2 + \\tfrac{1}{x^2} = -1$.",
+        "**Step 2 — multiply by $x$ to climb to cubic.** Multiply $x^2 + \\tfrac{1}{x^2} = -1$ on both sides by $x$: $x \\cdot x^2 + x \\cdot \\tfrac{1}{x^2} = -x$, i.e., $x^3 + \\tfrac{1}{x} = -x$.",
+        "**Step 3 — bring everything to one side.** $x^3 + x + \\tfrac{1}{x} = 0$. Notice the trailing $x + \\tfrac{1}{x}$ — and we know what THAT equals.",
+        "**Substitute $x + \\tfrac{1}{x} = 1$.** $x^3 + 1 = 0 \\;\\Longrightarrow\\; \\boxed{x^3 = -1}$. Two lines of algebra pin $x$ to a cube root of $-1$.",
+        "**Consequence — powers cycle.** $x^3 = -1 \\;\\Longrightarrow\\; x^6 = (x^3)^2 = 1$. So $x$ has *order 6* — its powers repeat with period 6. Equivalently, $x^{6n} = 1$ for every integer $n$.",
+        "**Reduce 17 mod 6.** $18 = 6 \\cdot 3$, so $x^{18} = (x^6)^3 = 1$. Divide both sides by $x$: $x^{17} = \\tfrac{1}{x}$. Same way (or by symmetry): $\\tfrac{1}{x^{17}} = x$.",
+        "**Compute the answer.** $x^{17} + \\tfrac{1}{x^{17}} = \\tfrac{1}{x} + x = x + \\tfrac{1}{x} = 1$.",
+        "**Sanity check via the factor identity.** $x + \\tfrac{1}{x} = 1$ multiplied by $x$ gives $x^2 - x + 1 = 0$. Multiply by $(x + 1)$: $(x + 1)(x^2 - x + 1) = x^3 + 1$. So $x^3 + 1 = 0 \\cdot (x+1) = 0$ ✓. Same conclusion, packaged differently.",
+        "**Pattern lesson — finite order beats recurrence.** When $k = \\pm 1$, $x$ is a *root of unity* (a number whose powers cycle). This is fundamentally faster than the recurrence: $x^{n} + \\tfrac{1}{x^{n}}$ depends only on $n \\bmod 6$, so even $x^{10^{100}} + \\tfrac{1}{x^{10^{100}}}$ is a one-liner. The recurrence still works — but for these special $k$ values, the finite-order shortcut is overwhelmingly cleaner."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q24",
+      "type": "numeric",
+      "promptTex": "\\text{If } x + \\dfrac{1}{x} = -1, \\text{ find } x^{512} + \\dfrac{1}{x^{512}}.",
+      "answer": -1,
+      "tolerance": 0,
+      "hints": [
+        "Mirror of the previous problem. Try to derive a single equation that pins $x^n$ down for some small $n$.",
+        "Square and then multiply by $x$. Substitute back to collapse to $x^3 - 1 = 0$, i.e., $x^3 = 1$.",
+        "Once $x^3 = 1$, reduce $512 \\bmod 3 = 2$. So $x^{512} = x^2$ and $1/x^{512} = 1/x^2$. The answer is $x^2 + 1/x^2$, which from squaring is $-1$."
+      ],
+      "explanation": "From $x + 1/x = -1$, derive $x^3 = 1$ (so $x$ is a primitive cube root of unity). Reduce $512 \\bmod 3 = 2$, so $x^{512} + 1/x^{512} = x^2 + 1/x^2 = (x + 1/x)^2 - 2 = 1 - 2 = \\mathbf{-1}$.",
+      "steps": [
+        "**The plus-1 mirror.** Same shape of derivation as the previous problem, with one sign flip. Hunt for a small equation that pins $x^n$ down so the huge exponent 512 cycles.",
+        "**Step 1 — derive $x^2 + \\tfrac{1}{x^2}$.** Square $x + \\tfrac{1}{x} = -1$: $(x + \\tfrac{1}{x})^2 = 1$, so $x^2 + 2 + \\tfrac{1}{x^2} = 1$, giving $x^2 + \\tfrac{1}{x^2} = -1$. (Same as before — squaring loses the sign of $k$.)",
+        "**Step 2 — multiply by $x$.** $x \\cdot x^2 + x \\cdot \\tfrac{1}{x^2} = -x$, i.e., $x^3 + \\tfrac{1}{x} = -x$.",
+        "**Step 3 — collect.** $x^3 + x + \\tfrac{1}{x} = 0$. The trailing $x + \\tfrac{1}{x} = -1$ now substitutes differently.",
+        "**Substitute $x + \\tfrac{1}{x} = -1$.** $x^3 + (-1) = 0 \\;\\Longrightarrow\\; \\boxed{x^3 = 1}$. *Sign of $k$ flipped, sign of $x^3$ flipped* — a clean parity correspondence.",
+        "**Consequence — order 3.** $x^3 = 1$ means $x$ is a (primitive) cube root of unity. Its powers cycle with period 3: $x^3 = 1, x^6 = 1, x^9 = 1, \\ldots$",
+        "**Reduce 512 mod 3.** $512 = 3 \\cdot 170 + 2$, so $x^{512} = x^{3 \\cdot 170} \\cdot x^2 = 1 \\cdot x^2 = x^2$. Same for the reciprocal: $\\tfrac{1}{x^{512}} = \\tfrac{1}{x^2}$.",
+        "**Compute the answer.** $x^{512} + \\tfrac{1}{x^{512}} = x^2 + \\tfrac{1}{x^2} = -1$ (from Step 1).",
+        "**Sanity check via the factor identity.** Multiply $x + \\tfrac{1}{x} = -1$ by $x$: $x^2 + x + 1 = 0$. Multiply by $(x - 1)$: $(x - 1)(x^2 + x + 1) = x^3 - 1$. So $x^3 - 1 = 0 \\cdot (x - 1) = 0$, i.e., $x^3 = 1$ ✓.",
+        "**Pattern lesson — the two faces of $k = \\pm 1$.** Both values make $x$ a root of unity, but of different orders: $k = +1 \\Rightarrow$ order 6 ($x^3 = -1$, $x^6 = 1$); $k = -1 \\Rightarrow$ order 3 ($x^3 = 1$). And the cases $k = \\pm 2$ (Problems q22, B3) make $x$ a *second*-order or *first*-order root: $x = \\pm 1$. So the five values $k \\in \\{-2, -1, 0, 1, 2\\}$ all make $x$ a root of unity — the only values where high powers cycle exactly. Every other $k$ requires the recurrence."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q25",
+      "type": "numeric",
+      "promptTex": "\\text{Simplify } \\sqrt{7 + 4\\sqrt{3}} \\text{ to the form } a + b\\sqrt{3} \\\\ \\text{(with positive integer } a, b\\text{). Enter } a + b.",
+      "answer": 3,
+      "tolerance": 0,
+      "hints": [
+        "Guess the form $a + b\\sqrt 3$ and square it. Match rational + irrational parts to $7 + 4\\sqrt 3$.",
+        "$(a + b\\sqrt 3)^2 = a^2 + 3b^2 + 2ab\\sqrt 3$. So $a^2 + 3b^2 = 7$ and $2ab = 4$.",
+        "$(a, b) = (2, 1)$ works: $4 + 3 = 7$ ✓ and $2(2)(1) = 4$ ✓. So $\\sqrt{7 + 4\\sqrt 3} = 2 + \\sqrt 3$ and $a + b = 3$."
+      ],
+      "explanation": "Guess $\\sqrt{7 + 4\\sqrt 3} = a + b\\sqrt 3$. Square: $a^2 + 3b^2 + 2ab\\sqrt 3 = 7 + 4\\sqrt 3$. Match rational and $\\sqrt 3$ parts: $a^2 + 3b^2 = 7$, $2ab = 4$. The integer pair $(a, b) = (2, 1)$ satisfies both, so $\\sqrt{7 + 4\\sqrt 3} = 2 + \\sqrt 3$ and $a + b = \\mathbf{3}$.",
+      "steps": [
+        "**The denesting goal.** Numbers like $\\sqrt{7 + 4\\sqrt 3}$ are *nested radicals* — square roots inside square roots. Sometimes they collapse to the simpler form $a + b\\sqrt{d}$ for small integers $a, b$. The technique: guess the form, square, match coefficients.",
+        "**Guess the form.** Since $\\sqrt 3$ appears inside, the result probably contains $\\sqrt 3$. Try $\\sqrt{7 + 4\\sqrt 3} = a + b\\sqrt 3$ with integer $a, b > 0$ (we want the positive square root).",
+        "**Square both sides.** $7 + 4\\sqrt 3 = (a + b\\sqrt 3)^2 = a^2 + 2ab\\sqrt 3 + 3b^2$.",
+        "**Match rational and irrational parts independently.** The two sides must agree term-by-term: $\\begin{cases} a^2 + 3b^2 = 7 & \\text{(rational)} \\\\ 2ab = 4 & \\text{(coefficient of } \\sqrt 3 \\text{)} \\end{cases}$",
+        "**Solve the system.** From $2ab = 4$: $ab = 2$. Integer pairs with $a, b > 0$: $(1, 2)$ or $(2, 1)$. Check the rational equation: $(1)^2 + 3(2)^2 = 1 + 12 = 13$ ✗. $(2)^2 + 3(1)^2 = 4 + 3 = 7$ ✓. So $a = 2, b = 1$.",
+        "**Conclude.** $\\sqrt{7 + 4\\sqrt 3} = 2 + \\sqrt 3$. Verify: $(2 + \\sqrt 3)^2 = 4 + 4\\sqrt 3 + 3 = 7 + 4\\sqrt 3$ ✓. Answer: $a + b = 2 + 1 = 3$.",
+        "**Why this technique works — rational/irrational separation.** Rationals and irrationals can't be combined to make one another: if $r_1 + s_1 \\sqrt d = r_2 + s_2 \\sqrt d$ with $r_i, s_i$ rational and $\\sqrt d$ irrational, then $r_1 = r_2$ AND $s_1 = s_2$. (Otherwise $\\sqrt d = (r_2 - r_1)/(s_1 - s_2)$ would be rational.) So one surd equation splits into two ordinary equations — and a system in two unknowns becomes solvable.",
+        "**Pattern lesson — when denesting works.** $\\sqrt{p + q\\sqrt{d}}$ denests to $a + b\\sqrt d$ exactly when $p^2 - q^2 d$ is a perfect square. Here $p = 7, q = 4, d = 3$: $p^2 - q^2 d = 49 - 48 = 1 = 1^2$ ✓ — guaranteed to denest. (Counter-example: $\\sqrt{5 + 2\\sqrt 3}$ has $25 - 12 = 13$, not a perfect square — no clean denesting exists.)"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q26",
+      "type": "numeric",
+      "promptTex": "\\text{Rationalize and evaluate: } \\dfrac{1}{2 + \\sqrt{3}} + \\dfrac{1}{2 - \\sqrt{3}}.",
+      "answer": 4,
+      "tolerance": 0,
+      "hints": [
+        "Either combine first, then simplify, or rationalize each fraction separately.",
+        "Combining: common denominator $(2+\\sqrt 3)(2-\\sqrt 3) = 4 - 3 = 1$. Numerator: $(2 - \\sqrt 3) + (2 + \\sqrt 3) = 4$.",
+        "$4/1 = 4$."
+      ],
+      "explanation": "Combine over the common denominator. The denominator is $(2+\\sqrt 3)(2-\\sqrt 3) = 4 - 3 = 1$ (difference of squares). The numerator is $(2 - \\sqrt 3) + (2 + \\sqrt 3) = 4$ (the surds cancel). Result: $\\mathbf{4}$.",
+      "steps": [
+        "**Two strategies — pick the cleaner one.** (A) Rationalize each fraction separately and then add. (B) Combine over a common denominator first, then simplify. With conjugates already in plain view, (B) is faster — the denominator collapses by difference-of-squares.",
+        "**Combine over the common denominator.** $\\dfrac{1}{2 + \\sqrt 3} + \\dfrac{1}{2 - \\sqrt 3} = \\dfrac{(2 - \\sqrt 3) + (2 + \\sqrt 3)}{(2 + \\sqrt 3)(2 - \\sqrt 3)}$.",
+        "**Numerator — the surds cancel.** $(2 - \\sqrt 3) + (2 + \\sqrt 3) = 4$. The $-\\sqrt 3$ and $+\\sqrt 3$ are conjugates, designed to cancel.",
+        "**Denominator — difference of squares.** $(2 + \\sqrt 3)(2 - \\sqrt 3) = 2^2 - (\\sqrt 3)^2 = 4 - 3 = 1$. The $\\sqrt 3$ vanishes because $(\\sqrt 3)^2 = 3$ is rational.",
+        "**Result.** $\\dfrac{4}{1} = 4$.",
+        "**Why this came out so clean.** Both fractions are reciprocals of *conjugate* surds. The sum of reciprocals of conjugates always rationalizes: $\\dfrac{1}{a + b\\sqrt d} + \\dfrac{1}{a - b\\sqrt d} = \\dfrac{2a}{a^2 - b^2 d}$. Here $a = 2, b = 1, d = 3$: $\\dfrac{2 \\cdot 2}{4 - 3} = 4$. The conjugate-pair structure is what made the answer rational.",
+        "**Pattern lesson — conjugate pairs in surds.** Whenever an expression involves both $a + b\\sqrt d$ and $a - b\\sqrt d$, expect the irrational parts to cancel by symmetry. Sum: surds cancel. Product: surds combine to $-(b\\sqrt d)^2 = -b^2 d$, a rational. This is why complex conjugates work the same way ($z + \\bar z$ is real, $z\\bar z$ is real) — same algebra, $\\sqrt d$ replaced by $i$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q27",
+      "type": "numeric",
+      "promptTex": "\\text{If } x = \\dfrac{1}{2 - \\sqrt{3}}, \\text{ find } x^2 - 4x + 1.",
+      "answer": 0,
+      "tolerance": 0,
+      "hints": [
+        "Rationalize: $x = (2 + \\sqrt 3)/((2 - \\sqrt 3)(2 + \\sqrt 3)) = (2 + \\sqrt 3)/1 = 2 + \\sqrt 3$.",
+        "Notice the structure: if $x = 2 + \\sqrt 3$, then $x - 2 = \\sqrt 3$, so $(x - 2)^2 = 3$, i.e., $x^2 - 4x + 4 = 3$, so $x^2 - 4x + 1 = 0$.",
+        "The given $x$ is a root of $x^2 - 4x + 1 = 0$ by construction. Answer: 0."
+      ],
+      "explanation": "Rationalize $x = 1/(2 - \\sqrt 3)$ by multiplying by $(2 + \\sqrt 3)/(2 + \\sqrt 3)$: denominator $= 4 - 3 = 1$, so $x = 2 + \\sqrt 3$. Then $(x - 2)^2 = (\\sqrt 3)^2 = 3$, expanding $x^2 - 4x + 4 = 3$, giving $x^2 - 4x + 1 = \\mathbf{0}$.",
+      "steps": [
+        "**Two-step plan.** (a) Rationalize $x$ to find a clean closed form. (b) Use the structure of $x$ to simplify $x^2 - 4x + 1$ without grinding through arithmetic.",
+        "**Rationalize.** $x = \\dfrac{1}{2 - \\sqrt 3} \\cdot \\dfrac{2 + \\sqrt 3}{2 + \\sqrt 3} = \\dfrac{2 + \\sqrt 3}{(2 - \\sqrt 3)(2 + \\sqrt 3)} = \\dfrac{2 + \\sqrt 3}{4 - 3} = 2 + \\sqrt 3$.",
+        "**The lazy student plugs in. The smart student spots a pattern.** Notice $x = 2 + \\sqrt 3$ rearranges to $x - 2 = \\sqrt 3$, a single surd isolated on one side.",
+        "**Square both sides to remove the radical.** $(x - 2)^2 = (\\sqrt 3)^2 = 3$, so $x^2 - 4x + 4 = 3$, i.e., $x^2 - 4x + 1 = 0$.",
+        "**This is exactly the target expression.** $x^2 - 4x + 1 = 0$, so the answer is $0$.",
+        "**Sanity check by plugging in.** $x^2 = (2 + \\sqrt 3)^2 = 4 + 4\\sqrt 3 + 3 = 7 + 4\\sqrt 3$. $4x = 4(2 + \\sqrt 3) = 8 + 4\\sqrt 3$. $x^2 - 4x + 1 = (7 + 4\\sqrt 3) - (8 + 4\\sqrt 3) + 1 = 0$ ✓.",
+        "**Why the answer was zero — the minimal polynomial.** Every algebraic number $\\alpha$ satisfies a unique smallest-degree monic polynomial with rational coefficients, called its *minimal polynomial*. For $\\alpha = 2 + \\sqrt 3$, the minimal polynomial is $x^2 - 4x + 1$. The problem's expression *was* that minimal polynomial — so plugging in $x = 2 + \\sqrt 3$ gives $0$ by definition, no arithmetic needed.",
+        "**Pattern lesson — recognize the minimal polynomial.** $\\alpha = a + \\sqrt d$ has minimal polynomial $x^2 - 2ax + (a^2 - d)$. Here $a = 2, d = 3$: $x^2 - 4x + (4 - 3) = x^2 - 4x + 1$. Useful trick: when a problem asks 'evaluate $P(x)$' where $P$ has the right form, the answer is just $0$ — no computation."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q28",
+      "type": "numeric",
+      "promptTex": "\\text{Compute } (\\sqrt{5} + \\sqrt{3})^2 + (\\sqrt{5} - \\sqrt{3})^2.",
+      "answer": 16,
+      "tolerance": 0,
+      "hints": [
+        "Don't expand each separately — use $(a+b)^2 + (a-b)^2 = 2(a^2 + b^2)$.",
+        "$a = \\sqrt 5$, $b = \\sqrt 3$. $a^2 + b^2 = 5 + 3 = 8$.",
+        "$2 \\cdot 8 = 16$. The cross terms in the two squarings cancelled."
+      ],
+      "explanation": "$(a + b)^2 + (a - b)^2 = (a^2 + 2ab + b^2) + (a^2 - 2ab + b^2) = 2a^2 + 2b^2 = 2(a^2 + b^2)$. The $\\pm 2ab$ middle terms cancel. With $a = \\sqrt 5, b = \\sqrt 3$: $2(5 + 3) = \\mathbf{16}$.",
+      "steps": [
+        "**Stop. Look for symmetry before grinding.** The two terms are *conjugate squarings* — same $a, b$, just opposite signs. The middle terms in each squaring will have *opposite signs* and cancel when summed.",
+        "**Derive the conjugate-sum identity.** $(a + b)^2 = a^2 + 2ab + b^2$ and $(a - b)^2 = a^2 - 2ab + b^2$. Add: $(a + b)^2 + (a - b)^2 = 2a^2 + 2b^2 = 2(a^2 + b^2)$.",
+        "**Why the $\\pm 2ab$ cancelled — and why the squared terms doubled.** The $+2ab$ from the first squaring and the $-2ab$ from the second sum to zero. Meanwhile the $a^2$ and $b^2$ appear once in each, summing to $2a^2$ and $2b^2$. Clean cancellation, clean doubling.",
+        "**Apply.** Take $a = \\sqrt 5, b = \\sqrt 3$. Then $a^2 = 5, b^2 = 3$, so the answer is $2(5 + 3) = 16$.",
+        "**Why this matters for surds.** Squaring $\\sqrt 5 + \\sqrt 3$ produces a $\\sqrt{15}$ cross term (irrational). Squaring $\\sqrt 5 - \\sqrt 3$ produces a $-\\sqrt{15}$ cross term. Adding cancels the irrationality and leaves only rational pieces. The conjugate pair *engineered* a rational answer.",
+        "**Related sibling — difference of squarings.** $(a + b)^2 - (a - b)^2 = 4ab$. With $a = \\sqrt 5, b = \\sqrt 3$: $4\\sqrt{15}$. Pure irrational this time — opposite trick, same logic.",
+        "**Pattern lesson — sum/difference duality for conjugate pairs.** Whenever you see $f(a + b) \\pm f(a - b)$ for a polynomial $f$, the even-degree terms double-up (in the sum) or cancel (in the difference); odd-degree terms do the opposite. This is the same algebra behind hyperbolic identities $\\cosh + \\sinh = e$, $\\cosh - \\sinh = e^{-1}$, and behind even/odd-function decomposition $f(x) = \\frac{f(x)+f(-x)}{2} + \\frac{f(x)-f(-x)}{2}$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q29",
+      "type": "numeric",
+      "promptTex": "\\text{Solve for } x: \\quad \\dfrac{x - 3}{2025} + \\dfrac{x - 2}{2026} + \\dfrac{x - 1}{2027} = 3.",
+      "answer": 2028,
+      "tolerance": 0,
+      "hints": [
+        "Don't multiply out — three denominators in the thousands would be ugly. Hunt for hidden structure first.",
+        "Notice: in each fraction, the numerator $+$ denominator = $2028$. ($-3 + 2025 + 3 = 2025$ etc., but more directly: $x = 2028$ makes all three numerators... wait, $2028 - 3 = 2025$ which equals the first denominator. Pattern!)",
+        "Subtract 1 from each fraction. Each becomes $(x - 2028)/(\\text{denom})$. RHS becomes $3 - 3 = 0$. Factor out $(x - 2028)$; the bracket of reciprocals is positive, so $x = 2028$."
+      ],
+      "explanation": "Subtract 1 from each fraction: $(x-3)/2025 - 1 = (x - 2028)/2025$, and similarly for the others. The RHS becomes $3 - 3 = 0$. Factor: $(x - 2028)\\big(\\tfrac{1}{2025} + \\tfrac{1}{2026} + \\tfrac{1}{2027}\\big) = 0$. The bracket is positive, so $x - 2028 = 0$, giving $\\mathbf{x = 2028}$.",
+      "steps": [
+        "**Don't reach for the calculator.** Multiplying through by $2025 \\cdot 2026 \\cdot 2027$ would give an equation with 10-digit coefficients. There has to be a cleaner way — and the very specific choice of $2025, 2026, 2027$ is a hint that the algebra is set up to be elegant.",
+        "**Hunt for hidden symmetry.** Look at each fraction's numerator and denominator together: $\\dfrac{x - 3}{2025}$, $\\dfrac{x - 2}{2026}$, $\\dfrac{x - 1}{2027}$. Notice $-3 + 2025 = 2022$, no — that's not the pattern. Look again: $\\textbf{2025 + 3 = 2028}$, $\\textbf{2026 + 2 = 2028}$, $\\textbf{2027 + 1 = 2028}$. All three sums equal $2028$.",
+        "**Translate the pattern.** This means: if $x = 2028$, every numerator becomes $2028 - 3 = 2025$, $2028 - 2 = 2026$, $2028 - 1 = 2027$ — *exactly* matching the denominators! Each fraction would equal $1$, and the sum would be $1 + 1 + 1 = 3$ ✓. So $x = 2028$ is a root. We *strongly suspect* it's the answer, but we need an algebraic proof, not just a guess.",
+        "**The trick — subtract 1 from each fraction.** Why $1$? Because each fraction equals $1$ when $x = 2028$. Subtracting $1$ rewrites each fraction in terms of its 'deviation from the special value':",
+        "**Compute the subtraction in general form.** $\\dfrac{x - 3}{2025} - 1 = \\dfrac{x - 3 - 2025}{2025} = \\dfrac{x - 2028}{2025}$. Similarly: $\\dfrac{x - 2}{2026} - 1 = \\dfrac{x - 2028}{2026}$ and $\\dfrac{x - 1}{2027} - 1 = \\dfrac{x - 2028}{2027}$. Every fraction now has the *same numerator* $(x - 2028)$.",
+        "**Balance the equation.** We subtracted $1$ from each of three fractions on the LHS — that's $-3$ total. To keep the equation balanced, subtract $3$ from the RHS as well: $3 - 3 = 0$. The equation becomes: $\\dfrac{x - 2028}{2025} + \\dfrac{x - 2028}{2026} + \\dfrac{x - 2028}{2027} = 0$.",
+        "**Factor out the common numerator.** $(x - 2028)\\left(\\dfrac{1}{2025} + \\dfrac{1}{2026} + \\dfrac{1}{2027}\\right) = 0$.",
+        "**Conclude.** The bracket is a sum of three positive reciprocals — definitely nonzero. So the other factor must be zero: $x - 2028 = 0 \\;\\Longrightarrow\\; \\boxed{x = 2028}$. No big multiplications, no common denominators — just spotting the pattern.",
+        "**Pattern lesson — \"subtract a constant to expose a shared root.\"** Whenever an equation looks complicated but the coefficients have suspicious symmetry, look for a *shared root* $x_0$ that makes every term equal a simple constant, then rewrite each piece as 'deviation from $x_0$'. Here every fraction equals $1$ at $x_0 = 2028$, so subtracting $1$ from each fraction turned the equation into $(x - 2028) \\cdot (\\text{positive stuff}) = 0$. The general form: $\\dfrac{x - a_1}{b_1} + \\dfrac{x - a_2}{b_2} + \\cdots + \\dfrac{x - a_n}{b_n} = n$ solves to $x = a_i + b_i$ whenever that sum is the *same constant* $K$ for every $i$. (Quick check on our problem: $a_i + b_i = 3 + 2025 = 2 + 2026 = 1 + 2027 = 2028$ ✓.) Look for this pattern any time you see a sum of fractions equal to a small integer matching the count of fractions."
+      ],
+      "difficulty": "hard"
+    }
+  ]
+}

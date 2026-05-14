@@ -1,0 +1,403 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "prompt": "The circumcenter of a triangle is the intersection of:",
+      "choices": [
+        "The three medians",
+        "The three altitudes",
+        "The three perpendicular bisectors of the sides",
+        "The three angle bisectors"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Perpendicular bisectors = locus of points equidistant from two endpoints.",
+        "Circumcenter is equidistant from all three vertices."
+      ],
+      "explanation": "The circumcenter is the unique point equidistant from all three vertices. This is exactly where the three perpendicular bisectors meet.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "prompt": "In a right triangle, where is the circumcenter located?",
+      "choices": [
+        "At the right-angle vertex",
+        "At the midpoint of the hypotenuse",
+        "At the centroid",
+        "Outside the triangle"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Thales' Theorem in reverse.",
+        "The hypotenuse is the diameter of the circumcircle."
+      ],
+      "explanation": "By Thales (and its converse), in a right triangle, the hypotenuse is the diameter of the circumcircle. So the circumcenter is the midpoint of the hypotenuse.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{Right triangle with legs } 3 \\text{ and } 4. \\text{ Find the circumradius.}",
+      "answer": 2.5,
+      "tolerance": 0.001,
+      "hints": [
+        "Hypotenuse = $\\sqrt{9 + 16} = 5$.",
+        "Circumradius = hypotenuse / 2 in a right triangle."
+      ],
+      "explanation": "Hypotenuse = $5$ (the 3-4-5 triple). Circumradius = $5/2 = 2.5$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "prompt": "In which type of triangle is the circumcenter OUTSIDE the triangle?",
+      "choices": [
+        "Acute",
+        "Right",
+        "Obtuse",
+        "Equilateral"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "For acute: inside. For right: on the hypotenuse. For obtuse: ?",
+        "The obtuse case pushes the circumcenter past the obtuse vertex."
+      ],
+      "explanation": "Obtuse triangles have their circumcenter outside the triangle, opposite the obtuse vertex.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{Equilateral triangle with side } 6. \\text{ Find the circumradius.} \\\\ \\text{(Round to 2 decimals if needed.)}",
+      "answer": 3.46,
+      "tolerance": 0.02,
+      "hints": [
+        "Equilateral: $R = s\\sqrt{3}/3$.",
+        "$6\\sqrt{3}/3 = 2\\sqrt{3} \\approx 3.46$."
+      ],
+      "explanation": "$R = s\\sqrt{3}/3 = 6\\sqrt{3}/3 = 2\\sqrt{3} \\approx 3.46$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** Equilateral: $R = s\\sqrt{3}/3$."
+        },
+        {
+          "text": "$6\\sqrt{3}/3 = 2\\sqrt{3} \\approx 3.46$."
+        },
+        {
+          "text": "**Solution.** $R = s\\sqrt{3}/3 = 6\\sqrt{3}/3 = 2\\sqrt{3} \\approx 3.46$."
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Triangle has vertices } A(0,0), B(4,0), C(2,3). \\text{ Find circumcenter.}",
+      "choices": [
+        "(2, 0)",
+        "(2, 7/6)",
+        "(2, 5/6)",
+        "(0, 0)"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Perpendicular bisector of $AB$ (which lies on the x-axis) is the vertical line $x = 2$. So $O = (2, y)$ for some $y$.",
+        "Set $|OA| = |OC|$: $4 + y^2 = (y - 3)^2 = y^2 - 6y + 9 \\Rightarrow 4 = 9 - 6y \\Rightarrow y = 5/6$."
+      ],
+      "explanation": "The circumcenter lies on every perpendicular bisector. $AB$ is horizontal, so its bisector is the vertical line $x = 2$. That gives $O = (2, y)$. To pin down $y$, equate distances to $A$ and $C$: $4 + y^2 = (y - 3)^2 \\Rightarrow 4 = 9 - 6y \\Rightarrow y = 5/6$. So $O = (2, 5/6)$.",
+      "difficulty": "hard",
+      "steps": [
+        {
+          "text": "**Recognize the recipe.** The circumcenter is equidistant from all three vertices. Find it by intersecting two perpendicular bisectors."
+        },
+        {
+          "text": "**Bisector of $AB$.** $AB$ lies on the x-axis from $(0,0)$ to $(4,0)$. Its perpendicular bisector is the vertical line $x = 2$. So $O = (2, y)$."
+        },
+        {
+          "text": "**Pin down $y$ with $|OA| = |OC|$.** $|OA|^2 = 2^2 + y^2 = 4 + y^2$. $|OC|^2 = (2-2)^2 + (y-3)^2 = (y - 3)^2$. Setting them equal: $4 + y^2 = y^2 - 6y + 9 \\Rightarrow 6y = 5 \\Rightarrow y = 5/6$."
+        },
+        {
+          "text": "**Sanity check.** $|OA|^2 = 4 + 25/36 = 169/36$, so $|OA| = 13/6$. $|OB|^2 = (2-4)^2 + (5/6)^2 = 4 + 25/36 = 169/36$ ✓. $|OC|^2 = 0 + (5/6 - 3)^2 = (-13/6)^2 = 169/36$ ✓. All three equal."
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{By the Extended Law of Sines: } a / \\sin A = 2R. \\\\ \\text{If } a = 10 \\text{ and } \\sin A = 1/2, \\text{ find } R.",
+      "answer": 10,
+      "tolerance": 0.001,
+      "hints": [
+        "$2R = a / \\sin A$.",
+        "$2R = 10 / (1/2) = 20$, so $R = 10$."
+      ],
+      "explanation": "$2R = 10/(1/2) = 20$, so $R = 10$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** $2R = a / \\sin A$."
+        },
+        {
+          "text": "$2R = 10 / (1/2) = 20$, so $R = 10$."
+        },
+        {
+          "text": "**Solution.** $2R = 10/(1/2) = 20$, so $R = 10$."
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "prompt": "Why is the circumcenter unique (only one such point exists for any triangle)?",
+      "choices": [
+        "Coincidence — it happens to be true for specific triangles only.",
+        "The three perpendicular bisectors always concur at exactly one point because being equidistant from two endpoints is a linear condition and three linear conditions on the plane generically intersect at one point.",
+        "It's because the circumcenter is the centroid.",
+        "It depends on the triangle's orientation."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Each bisector is a line. Two lines (generically) cross at one point.",
+        "And the third line is forced to go through that same point — by the proof in the lesson."
+      ],
+      "explanation": "Each perpendicular bisector is a line. Two of them intersect at one point $P$. Then $P$ is equidistant from all three vertices, so it lies on the third bisector too. Three lines that share a common point are concurrent — hence unique circumcenter.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "prompt": "In an ACUTE triangle (every angle less than 90°), where does the circumcenter lie?",
+      "choices": [
+        "Outside the triangle, beyond the longest side",
+        "On the longest side",
+        "Inside the triangle",
+        "At a vertex"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Recall: obtuse → outside, right → on hypotenuse. What's left for acute?",
+        "Each perpendicular bisector cuts inward through the triangle in an acute triangle, so their meeting point stays inside."
+      ],
+      "explanation": "Three positions sweep cleanly: obtuse → circumcenter OUTSIDE (opposite the obtuse vertex), right → circumcenter ON the hypotenuse (midpoint), acute → circumcenter INSIDE. The acute case is the most ordinary.",
+      "steps": [
+        "**Recall the three-way classification.** The circumcenter's position depends on the triangle's largest angle: obtuse → outside, right → on the hypotenuse, acute → inside.",
+        {
+          "svg": "<svg viewBox=\"0 0 280 200\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"140,30 50,160 230,160\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><circle cx=\"140\" cy=\"116\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"140\" cy=\"30\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"50\" cy=\"160\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"230\" cy=\"160\" r=\"3.5\" fill=\"#1e293b\"/><text x=\"135\" y=\"22\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">A</text><text x=\"36\" y=\"175\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">B</text><text x=\"236\" y=\"175\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">C</text><text x=\"148\" y=\"120\" font-size=\"11\" font-weight=\"600\" fill=\"#2563eb\">O</text><text x=\"60\" y=\"195\" font-size=\"11\" fill=\"#475569\" font-style=\"italic\">acute triangle — circumcenter O lies INSIDE</text></svg>"
+        },
+        "**Apply to acute.** All three angles are less than 90°. The circumcenter sits comfortably inside.",
+        "**Pattern lesson.** Watch what happens as one angle grows from acute through right to obtuse: the circumcenter slides from inside, crosses the opposite side at 90°, and exits on the other side as the angle becomes obtuse. The circumcenter is a sensitive 'angle meter'."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{Triangle has sides } 5, 5, 6. \\\\ \\text{Find the circumradius using the formula } R = \\dfrac{abc}{4K}, \\\\ \\text{where } K \\text{ is the triangle's area.}",
+      "answer": 3.125,
+      "tolerance": 0.005,
+      "hints": [
+        "Semi-perimeter $s = (5+5+6)/2 = 8$.",
+        "By Heron's formula: $K = \\sqrt{s(s-a)(s-b)(s-c)} = \\sqrt{8 \\cdot 3 \\cdot 3 \\cdot 2} = \\sqrt{144} = 12$.",
+        "$R = (5 \\cdot 5 \\cdot 6) / (4 \\cdot 12) = 150 / 48 = 3.125$."
+      ],
+      "explanation": "Use Heron's formula for $K$, then the classical $R = abc/(4K)$. Semi-perimeter $s = 8$, area $K = \\sqrt{8 \\cdot 3 \\cdot 3 \\cdot 2} = 12$. So $R = (5 \\cdot 5 \\cdot 6)/(4 \\cdot 12) = 150/48 = 3.125$.",
+      "steps": [
+        "**Recognize the recipe.** Need the circumradius from the three sides. The classical formula is $R = \\dfrac{abc}{4K}$, where $K$ is the triangle's area.",
+        {
+          "svg": "<svg viewBox=\"0 0 280 210\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"140\" cy=\"110\" r=\"78\" fill=\"none\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><polygon points=\"140,32 72,149 208,149\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><circle cx=\"140\" cy=\"110\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"140\" cy=\"32\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"72\" cy=\"149\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"208\" cy=\"149\" r=\"3.5\" fill=\"#1e293b\"/><text x=\"135\" y=\"25\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">A</text><text x=\"58\" y=\"162\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">B</text><text x=\"214\" y=\"162\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">C</text><text x=\"148\" y=\"114\" font-size=\"11\" font-weight=\"600\" fill=\"#2563eb\">O</text><text x=\"82\" y=\"100\" font-size=\"11\" fill=\"#0f172a\" font-style=\"italic\">b=5</text><text x=\"178\" y=\"100\" font-size=\"11\" fill=\"#0f172a\" font-style=\"italic\">c=5</text><text x=\"128\" y=\"165\" font-size=\"11\" fill=\"#0f172a\" font-style=\"italic\">a=6</text><text x=\"60\" y=\"198\" font-size=\"11\" fill=\"#475569\" font-style=\"italic\">circumradius R from sides + area</text></svg>"
+        },
+        "**Compute the semi-perimeter.** $s = (5 + 5 + 6)/2 = 8$.",
+        "**Apply Heron's formula for $K$.** $K = \\sqrt{s(s-a)(s-b)(s-c)} = \\sqrt{8 \\cdot 3 \\cdot 3 \\cdot 2} = \\sqrt{144} = 12$.",
+        "**Plug into $R = abc/(4K)$.** $R = \\dfrac{5 \\cdot 5 \\cdot 6}{4 \\cdot 12} = \\dfrac{150}{48} = \\dfrac{25}{8} = 3.125$.",
+        "**Sanity check.** The triangle is isosceles and slightly squat; an inscribed-in-circle radius around $3$ feels right. Also: $R \\geq$ longest side / 2 = 3, with equality only for right triangles. Here $R = 3.125 > 3$ → confirms the triangle is acute."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{The circumradius is } R = 5. \\text{ One side of the triangle has length } 8. \\\\ \\text{Find the perpendicular distance } d \\text{ from the circumcenter to that side.}",
+      "answer": 3,
+      "tolerance": 0.001,
+      "hints": [
+        "Drop a perpendicular from the center to the chord; it bisects the chord.",
+        "Right triangle: one leg $= a/2 = 4$, hypotenuse $= R = 5$. So $d^2 = R^2 - (a/2)^2 = 25 - 16 = 9$, $d = 3$.",
+        "Equivalently: $R^2 = d^2 + (a/2)^2$ — the chord-distance identity."
+      ],
+      "explanation": "Each side of the triangle is a chord of its circumcircle. The perpendicular from the center to a chord bisects the chord, giving the right-triangle identity $R^2 = d^2 + (a/2)^2$. With $R = 5, a = 8$: $d^2 = 25 - 16 = 9$, $d = 3$.",
+      "steps": [
+        "**Recognize the geometry.** Every side of the triangle is a chord of the circumcircle. The perpendicular from the center to a chord *bisects* it — a classical circle theorem.",
+        {
+          "svg": "<svg viewBox=\"0 0 280 210\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"140\" cy=\"110\" r=\"80\" fill=\"none\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/><line x1=\"80\" y1=\"170\" x2=\"200\" y2=\"170\" stroke=\"#1e293b\" stroke-width=\"1.8\"/><line x1=\"140\" y1=\"110\" x2=\"140\" y2=\"170\" stroke=\"#dc2626\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><line x1=\"140\" y1=\"110\" x2=\"200\" y2=\"170\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><circle cx=\"140\" cy=\"110\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"140\" cy=\"170\" r=\"3\" fill=\"#dc2626\"/><rect x=\"134\" y=\"164\" width=\"6\" height=\"6\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.2\"/><text x=\"146\" y=\"108\" font-size=\"11\" font-weight=\"600\" fill=\"#2563eb\">O</text><text x=\"148\" y=\"144\" font-size=\"12\" fill=\"#dc2626\" font-style=\"italic\">d</text><text x=\"172\" y=\"138\" font-size=\"12\" fill=\"#2563eb\" font-style=\"italic\">R</text><text x=\"125\" y=\"190\" font-size=\"12\" fill=\"#0f172a\" font-style=\"italic\">side a</text><text x=\"40\" y=\"205\" font-size=\"11\" fill=\"#475569\" font-style=\"italic\">R² = d² + (a/2)²   (perpendicular bisects the chord)</text></svg>"
+        },
+        "**Identify the right triangle.** Drop the perpendicular from $O$ to the chord. This forms a right triangle with legs $d$ (perpendicular distance) and $a/2$ (half the chord), and hypotenuse $R$.",
+        "**Apply the Pythagorean relation.** $R^2 = d^2 + (a/2)^2 \\;\\Longrightarrow\\; d^2 = R^2 - (a/2)^2$.",
+        "**Plug in.** $d^2 = 5^2 - 4^2 = 25 - 16 = 9 \\;\\Longrightarrow\\; d = 3$.",
+        "**Pattern lesson.** This $R^2 = d^2 + (a/2)^2$ identity ties together $R$, the side, and the center's distance to that side — invaluable for many circumcircle problems."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "prompt": "The DEFINING property of the circumcenter O of triangle ABC is:",
+      "choices": [
+        "$|OA| = |OB| = |OC|$ — equidistant from all three vertices",
+        "$O = (A + B + C)/3$ — the average of the vertices",
+        "$\\vec{OA} \\cdot \\vec{OB} = 0$ — perpendicular position vectors",
+        "$|OA|^2 + |OB|^2 + |OC|^2$ is minimized"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "The 'circumcenter' literally means 'center of the circumscribed circle' — the circle passing through all three vertices.",
+        "If a circle passes through three points, what must be true of its center's distance to each?"
+      ],
+      "explanation": "$O$ is the center of the *circumscribed* circle — the unique circle passing through all three vertices. So $|OA| = |OB| = |OC| = R$. This equidistance is the defining property; everything else (perpendicular bisectors, Law of Sines, etc.) follows from it.",
+      "steps": [
+        "**The name says it.** *Circum*-center = center of the *circumscribed* circle = the circle through all three vertices.",
+        "**Distance from center to circle = radius.** A circle's center is exactly the point equidistant from every point on the circle. So $|OA| = |OB| = |OC| = R$.",
+        {
+          "svg": "<svg viewBox=\"0 0 280 210\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"140\" cy=\"110\" r=\"78\" fill=\"none\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><polygon points=\"140,32 72,149 208,149\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><line x1=\"140\" y1=\"110\" x2=\"140\" y2=\"32\" stroke=\"#dc2626\" stroke-width=\"1.4\" stroke-dasharray=\"3 3\"/><line x1=\"140\" y1=\"110\" x2=\"72\" y2=\"149\" stroke=\"#dc2626\" stroke-width=\"1.4\" stroke-dasharray=\"3 3\"/><line x1=\"140\" y1=\"110\" x2=\"208\" y2=\"149\" stroke=\"#dc2626\" stroke-width=\"1.4\" stroke-dasharray=\"3 3\"/><circle cx=\"140\" cy=\"110\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"140\" cy=\"32\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"72\" cy=\"149\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"208\" cy=\"149\" r=\"3.5\" fill=\"#1e293b\"/><text x=\"135\" y=\"25\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">A</text><text x=\"58\" y=\"162\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">B</text><text x=\"214\" y=\"162\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">C</text><text x=\"146\" y=\"114\" font-size=\"11\" font-weight=\"600\" fill=\"#2563eb\">O</text><text x=\"147\" y=\"72\" font-size=\"11\" fill=\"#dc2626\" font-style=\"italic\">R</text><text x=\"94\" y=\"137\" font-size=\"11\" fill=\"#dc2626\" font-style=\"italic\">R</text><text x=\"172\" y=\"137\" font-size=\"11\" fill=\"#dc2626\" font-style=\"italic\">R</text><text x=\"70\" y=\"200\" font-size=\"11\" fill=\"#475569\" font-style=\"italic\">|OA| = |OB| = |OC| = R</text></svg>"
+        },
+        "**Why perpendicular bisectors then?** Equidistant-from-two-endpoints is the very definition of a perpendicular bisector. $O$ lies on the bisector of $AB$ (equidistant from $A, B$), and the bisector of $BC$ (equidistant from $B, C$). The intersection forces equidistance from all three. The perpendicular-bisector characterization is an EQUIVALENT property, not the defining one.",
+        "**Other answers, why wrong.** $(A+B+C)/3$ is the centroid (different center). Perpendicular position vectors is meaningless without an origin. The minimizer of squared distances is the centroid, not the circumcenter."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q13",
+      "type": "numeric",
+      "promptTex": "\\text{Right triangle with vertices } A(0,0), B(8,0), C(0,6). \\\\ \\text{Find the circumradius } R.",
+      "answer": 5,
+      "tolerance": 0.001,
+      "hints": [
+        "Right angle is at $A$. Hypotenuse is the side OPPOSITE the right angle: $BC$.",
+        "Length of $BC = \\sqrt{8^2 + 6^2} = 10$.",
+        "In a right triangle, $R = \\text{hypotenuse} / 2 = 5$."
+      ],
+      "explanation": "The right angle is at $A(0,0)$ (the legs lie on the axes). The hypotenuse is $BC$, of length $\\sqrt{64+36} = 10$. By Thales, the hypotenuse is the diameter of the circumcircle, so $R = 10/2 = 5$.",
+      "steps": [
+        "**Spot the right angle.** $A$ is at the origin and the legs $AB, AC$ lie on the axes — they're perpendicular. So $\\angle A = 90°$.",
+        {
+          "svg": "<svg viewBox=\"0 0 280 210\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"102\" cy=\"116\" r=\"90\" fill=\"none\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><polygon points=\"30,170 174,170 30,62\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><rect x=\"30\" y=\"160\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"1.2\"/><circle cx=\"102\" cy=\"116\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"30\" cy=\"170\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"174\" cy=\"170\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"30\" cy=\"62\" r=\"3.5\" fill=\"#1e293b\"/><text x=\"10\" y=\"184\" font-size=\"12\" font-weight=\"600\" fill=\"#0f172a\">A(0,0)</text><text x=\"160\" y=\"184\" font-size=\"12\" font-weight=\"600\" fill=\"#0f172a\">B(8,0)</text><text x=\"14\" y=\"58\" font-size=\"12\" font-weight=\"600\" fill=\"#0f172a\">C(0,6)</text><text x=\"108\" y=\"120\" font-size=\"11\" font-weight=\"600\" fill=\"#2563eb\">O</text><text x=\"50\" y=\"200\" font-size=\"11\" fill=\"#475569\" font-style=\"italic\">O is the midpoint of the hypotenuse BC</text></svg>"
+        },
+        "**Find the hypotenuse.** $BC$ is opposite $\\angle A$. $|BC| = \\sqrt{8^2 + 6^2} = \\sqrt{100} = 10$.",
+        "**Apply the right-triangle shortcut.** In a right triangle the circumcenter sits at the *midpoint* of the hypotenuse, and the circumradius is *half* the hypotenuse. $R = 10/2 = 5$.",
+        "**Why is this true? (Thales).** An inscribed angle subtending a diameter is a right angle. The converse is also true: a right angle inscribed in a circle must subtend a diameter. So the hypotenuse IS the diameter, and $R = $ diameter / 2."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q14",
+      "type": "numeric",
+      "promptTex": "\\text{Triangle with vertices } A(0,0), B(6,0), C(3,6). \\\\ \\text{Find the y-coordinate of the circumcenter.}",
+      "answer": 2.25,
+      "tolerance": 0.01,
+      "hints": [
+        "$AB$ is horizontal; its perpendicular bisector is the vertical line $x = 3$. So $O = (3, y)$.",
+        "Set $|OA| = |OC|$: $9 + y^2 = 0 + (y - 6)^2 = y^2 - 12y + 36$. Solve: $9 = 36 - 12y \\Rightarrow y = 27/12 = 9/4 = 2.25$.",
+        "Sanity: $|OB|^2 = 9 + 2.25^2 = 14.0625$, $|OC|^2 = 0 + (2.25-6)^2 = 14.0625$ ✓."
+      ],
+      "explanation": "$AB$ lies on the x-axis, so its perpendicular bisector is $x = 3$. The circumcenter sits at $(3, y)$. Set $|OA|^2 = |OC|^2$: $9 + y^2 = (y-6)^2 = y^2 - 12y + 36$. So $9 = 36 - 12y \\Rightarrow y = 27/12 = 9/4 = 2.25$.",
+      "steps": [
+        "**Strategy.** Intersect two perpendicular bisectors — most economical choice: the bisector of $AB$ (which is horizontal, giving a vertical line) and one other.",
+        {
+          "svg": "<svg viewBox=\"0 0 280 220\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"125\" y1=\"40\" x2=\"125\" y2=\"200\" stroke=\"#2563eb\" stroke-width=\"1\" stroke-dasharray=\"4 3\" opacity=\"0.6\"/><line x1=\"85\" y1=\"85\" x2=\"165\" y2=\"125\" stroke=\"#2563eb\" stroke-width=\"1\" stroke-dasharray=\"4 3\" opacity=\"0.6\"/><polygon points=\"50,180 200,180 125,30\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><circle cx=\"125\" cy=\"180\" r=\"3\" fill=\"#475569\"/><circle cx=\"87\" cy=\"105\" r=\"3\" fill=\"#475569\"/><circle cx=\"125\" cy=\"123.75\" r=\"4\" fill=\"#dc2626\"/><circle cx=\"50\" cy=\"180\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"200\" cy=\"180\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"125\" cy=\"30\" r=\"3.5\" fill=\"#1e293b\"/><text x=\"30\" y=\"196\" font-size=\"12\" font-weight=\"600\" fill=\"#0f172a\">A(0,0)</text><text x=\"206\" y=\"196\" font-size=\"12\" font-weight=\"600\" fill=\"#0f172a\">B(6,0)</text><text x=\"113\" y=\"22\" font-size=\"12\" font-weight=\"600\" fill=\"#0f172a\">C(3,6)</text><text x=\"132\" y=\"128\" font-size=\"11\" font-weight=\"600\" fill=\"#dc2626\">O</text><text x=\"50\" y=\"214\" font-size=\"11\" fill=\"#475569\" font-style=\"italic\">two perpendicular bisectors meet at O = (3, 2.25)</text></svg>"
+        },
+        "**Perpendicular bisector of $AB$.** $AB$ is the segment from $(0,0)$ to $(6,0)$. Midpoint $(3, 0)$; $AB$ is horizontal so the perpendicular bisector is vertical: $x = 3$. So $O = (3, y)$ for some $y$.",
+        "**Use equidistance from $A$ and $C$.** $|OA|^2 = 3^2 + y^2 = 9 + y^2$. $|OC|^2 = (3-3)^2 + (y-6)^2 = (y-6)^2$. Set equal: $9 + y^2 = y^2 - 12y + 36$.",
+        "**Solve.** $9 = -12y + 36 \\;\\Longrightarrow\\; 12y = 27 \\;\\Longrightarrow\\; y = 9/4 = 2.25$.",
+        "**Verify with the third vertex.** $|OB|^2 = (3-6)^2 + 2.25^2 = 9 + 5.0625 = 14.0625$. Matches $|OA|^2 = 9 + 5.0625$ ✓ and $|OC|^2 = 0 + 14.0625$ ✓. All three equal."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q15",
+      "type": "multiple-choice",
+      "prompt": "Why are perpendicular bisectors precisely the right tool for finding the circumcenter?",
+      "choices": [
+        "Coincidence — they happen to intersect at the circumcenter for special triangles.",
+        "Because the perpendicular bisector of segment AB is exactly the LOCUS of points equidistant from A and B — so the intersection of two such loci is the unique point equidistant from all three vertices.",
+        "Because each bisector is perpendicular to a side.",
+        "Because the perpendicular bisectors pass through the midpoints."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Think about what a perpendicular bisector IS, geometrically.",
+        "The defining property of the circumcenter is $|OA| = |OB| = |OC|$. Match that against perpendicular bisectors."
+      ],
+      "explanation": "The perpendicular bisector of $AB$ is the *locus* (set) of all points $P$ with $|PA| = |PB|$. Intersect the perpendicular bisector of $AB$ with that of $BC$: any point on both is equidistant from $A, B$ AND $B, C$ — hence equidistant from all three vertices. That single point is the circumcenter.",
+      "steps": [
+        "**The key fact about perpendicular bisectors.** A point $P$ is on the perpendicular bisector of segment $AB$ ⇔ $|PA| = |PB|$. (Pythagoras-based: if $M$ is the midpoint, $|PA|^2 = |PM|^2 + |MA|^2$ and $|PB|^2 = |PM|^2 + |MB|^2 = |PM|^2 + |MA|^2$. Equal.)",
+        "**Intersect two of them.** $P$ on bisector of $AB$ AND bisector of $BC$ ⇒ $|PA| = |PB|$ AND $|PB| = |PC|$. Combining: $|PA| = |PB| = |PC|$ — circumcenter.",
+        "**Third bisector is automatic.** Since $|PA| = |PC|$, $P$ also lies on the bisector of $AC$. So all three bisectors concur — the third is forced once two intersect.",
+        "**Pattern lesson.** Many geometry constructions reduce to 'intersect two LOCI'. Find the right locus for each defining property; the rest is intersection."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q16",
+      "type": "numeric",
+      "promptTex": "\\text{In a triangle, } R = 6 \\text{ and } \\sin A = 1/3. \\\\ \\text{Find the length of side } a \\text{ (the side opposite vertex } A\\text{).}",
+      "answer": 4,
+      "tolerance": 0.001,
+      "hints": [
+        "Extended Law of Sines: $a / \\sin A = 2R$.",
+        "$a = 2R \\sin A = 2 \\cdot 6 \\cdot (1/3) = 4$."
+      ],
+      "explanation": "Extended Law of Sines: $\\dfrac{a}{\\sin A} = 2R$, so $a = 2R \\sin A = 2 \\cdot 6 \\cdot (1/3) = 4$. This identity ties the side opposite a vertex to that vertex's sine — a clean linkage between metric (length) and angular data.",
+      "steps": [
+        "**Recall the Extended Law of Sines.** $\\dfrac{a}{\\sin A} = \\dfrac{b}{\\sin B} = \\dfrac{c}{\\sin C} = 2R$. So $a = 2R \\sin A$.",
+        "**Plug in.** $a = 2 \\cdot 6 \\cdot \\dfrac{1}{3} = 4$.",
+        "**What it means.** Bigger angle (bigger $\\sin A$) ⇒ longer opposite side, with proportionality factor $2R$. Same circumradius means the same scale for all three angle-side pairs."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q17",
+      "type": "numeric",
+      "promptTex": "\\text{In a non-equilateral triangle, the circumcenter } O, \\text{ centroid } G, \\\\ \\text{and orthocenter } H \\text{ are collinear on the } \\textit{Euler line.} \\\\ \\text{If the distance from } O \\text{ to } H \\text{ is } 12, \\text{ find the distance } OG.",
+      "answer": 4,
+      "tolerance": 0.001,
+      "hints": [
+        "The centroid $G$ divides segment $OH$ in ratio $OG : GH = 1 : 2$.",
+        "So $OG = \\dfrac{1}{3} OH = \\dfrac{1}{3} \\cdot 12 = 4$."
+      ],
+      "explanation": "On the Euler line, the centroid $G$ divides $OH$ in ratio $1 : 2$ (with $G$ closer to $O$). So $OG = \\dfrac{OH}{3} = \\dfrac{12}{3} = 4$. Equivalently, $\\vec{OH} = 3\\vec{OG}$ — the orthocenter is three times farther along the Euler line than the centroid.",
+      "steps": [
+        "**Recall the Euler-line ratio.** For any non-equilateral triangle, $O$, $G$, $H$ lie on a single line with $G$ between $O$ and $H$, and $OG : GH = 1 : 2$.",
+        {
+          "svg": "<svg viewBox=\"0 0 280 220\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"140,30 20,180 210,180\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><line x1=\"105\" y1=\"137\" x2=\"150\" y2=\"120\" stroke=\"#475569\" stroke-width=\"1.2\" stroke-dasharray=\"6 4\"/><circle cx=\"115\" cy=\"133\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"123\" cy=\"130\" r=\"4\" fill=\"#16a34a\"/><circle cx=\"140\" cy=\"124\" r=\"4\" fill=\"#dc2626\"/><circle cx=\"140\" cy=\"30\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"20\" cy=\"180\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"210\" cy=\"180\" r=\"3.5\" fill=\"#1e293b\"/><text x=\"135\" y=\"22\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">A</text><text x=\"6\" y=\"195\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">B</text><text x=\"216\" y=\"195\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">C</text><text x=\"100\" y=\"148\" font-size=\"11\" font-weight=\"600\" fill=\"#2563eb\">O</text><text x=\"127\" y=\"144\" font-size=\"11\" font-weight=\"600\" fill=\"#16a34a\">G</text><text x=\"146\" y=\"122\" font-size=\"11\" font-weight=\"600\" fill=\"#dc2626\">H</text><text x=\"30\" y=\"214\" font-size=\"11\" fill=\"#475569\" font-style=\"italic\">Euler line: O, G, H collinear, OG : GH = 1 : 2</text></svg>"
+        },
+        "**Express $OG$ in terms of $OH$.** $OG : GH = 1 : 2$ means $OG = \\dfrac{1}{3} OH$ and $GH = \\dfrac{2}{3} OH$.",
+        "**Plug in.** $OG = \\dfrac{1}{3} \\cdot 12 = 4$.",
+        "**Vector form (deeper).** $\\vec{OH} = 3 \\vec{OG}$, equivalent to $H = 3G - 2O$. This is *Euler's identity* — one of the most elegant facts in classical triangle geometry."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q18",
+      "type": "numeric",
+      "promptTex": "\\text{Right triangle with legs } 5 \\text{ and } 12. \\\\ \\text{Find the circumradius.}",
+      "answer": 6.5,
+      "tolerance": 0.001,
+      "hints": [
+        "Compute the hypotenuse from the Pythagorean theorem: $\\sqrt{25 + 144} = 13$.",
+        "$R = $ hypotenuse $/2 = 13/2 = 6.5$."
+      ],
+      "explanation": "Right-triangle shortcut: $R = $ hypotenuse $/2$. Hypotenuse $= \\sqrt{5^2 + 12^2} = 13$. So $R = 6.5$.",
+      "steps": [
+        "**Recognize the type.** Right triangle ⇒ Thales tells us the hypotenuse is the diameter of the circumcircle. So $R = $ hypotenuse $/2$.",
+        {
+          "svg": "<svg viewBox=\"0 0 280 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"115\" cy=\"110\" r=\"78\" fill=\"none\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/><polygon points=\"40,170 190,170 40,50\" fill=\"#fef3c7\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><rect x=\"40\" y=\"160\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"1.2\"/><circle cx=\"115\" cy=\"110\" r=\"4\" fill=\"#2563eb\"/><circle cx=\"40\" cy=\"170\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"190\" cy=\"170\" r=\"3.5\" fill=\"#1e293b\"/><circle cx=\"40\" cy=\"50\" r=\"3.5\" fill=\"#1e293b\"/><text x=\"30\" y=\"185\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">A</text><text x=\"196\" y=\"185\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">B</text><text x=\"30\" y=\"45\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">C</text><text x=\"122\" y=\"114\" font-size=\"11\" font-weight=\"600\" fill=\"#2563eb\">O</text><text x=\"105\" y=\"185\" font-size=\"11\" fill=\"#0f172a\" font-style=\"italic\">12</text><text x=\"20\" y=\"115\" font-size=\"11\" fill=\"#0f172a\" font-style=\"italic\">5</text><text x=\"122\" y=\"105\" font-size=\"11\" fill=\"#1e293b\" font-style=\"italic\">13</text></svg>"
+        },
+        "**Compute the hypotenuse.** $\\sqrt{5^2 + 12^2} = \\sqrt{25 + 144} = \\sqrt{169} = 13$. (The classic 5-12-13 Pythagorean triple.)",
+        "**Halve it.** $R = 13/2 = 6.5$.",
+        "**Where does O sit?** At the midpoint of the hypotenuse. In a 5-12-13 right triangle, the circumcenter sits exactly on the longest side — no calculation of perpendicular bisectors needed."
+      ],
+      "difficulty": "easy"
+    }
+  ]
+}

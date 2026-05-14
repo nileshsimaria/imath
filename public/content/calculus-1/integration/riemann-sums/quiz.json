@@ -1,0 +1,271 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The definite integral } \\int_a^b f(x) \\, dx \\text{ represents:}",
+      "choices": [
+        "the antiderivative",
+        "the (signed) area between the curve and the x-axis from a to b",
+        "the slope of the curve",
+        "$f(b) - f(a)$"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Definite integral = limit of Riemann sums = signed area.",
+        "Area below x-axis counts negative."
+      ],
+      "explanation": "The definite integral gives the (signed) area between the curve and the x-axis on $[a, b]$.",
+      "steps": [
+        "**Definite integral = LIMIT of Riemann sums = signed area.** It accumulates thin rectangles under the curve.",
+        "**Reading the symbol.** $\\int_a^b f(x) \\, dx$ = 'sum, from $x=a$ to $x=b$, of $f(x)$ times small widths $dx$' — exactly what summing rectangles does.",
+        "**'Signed' is key.** Area BELOW the $x$-axis contributes NEGATIVELY. If $f < 0$ on part of $[a, b]$, that part subtracts from the integral.",
+        "**Distinguish from INDEFINITE integral.** Indefinite ($\\int f \\, dx$) yields a function (the antiderivative family $+ C$). Definite ($\\int_a^b f \\, dx$) yields a NUMBER (the signed area)."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\int_a^a f(x) \\, dx = ?",
+      "choices": [
+        "f(a)",
+        "0",
+        "f'(a)",
+        "1"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Integrating from a to a — zero width interval.",
+        "Area = 0."
+      ],
+      "explanation": "Width is 0 (same upper and lower limit), so area is 0.",
+      "steps": [
+        "**Geometric reasoning.** The interval $[a, a]$ has zero width. Any region with zero width has zero area, regardless of the function's value.",
+        "**FTC reasoning.** $\\int_a^a f(x) \\, dx = F(a) - F(a) = 0$ for any antiderivative $F$.",
+        "**Result.** $\\int_a^a f(x) \\, dx = 0$ ALWAYS, no matter what $f$ is."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\int_a^b f(x) \\, dx = -\\int_b^a f(x) \\, dx \\\\ \\text{This says:}",
+      "choices": [
+        "Swapping limits flips the sign",
+        "Integrals are always negative",
+        "$f$ must be negative",
+        "Both integrals equal 0"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Reversing direction (b to a vs a to b) flips the sign.",
+        "Standard property of definite integrals."
+      ],
+      "explanation": "Reversing the order of integration flips the sign — like measuring a distance backward.",
+      "steps": [
+        "**Property.** Reversing the order of limits flips the sign of the integral.",
+        "**Why this works.** Think of integration as 'sweeping' from left to right. Going in the opposite direction (right to left) reverses every $dx$ to $-dx$, hence flipping every term in the sum.",
+        "**FTC argument.** $\\int_a^b f = F(b) - F(a)$. Swap: $\\int_b^a f = F(a) - F(b) = -(F(b) - F(a)) = -\\int_a^b f$. ✓",
+        "**Useful in practice.** Lets you flip integral bounds to make computations easier (e.g., to have $a < b$)."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Use a } \\textbf{left Riemann sum} \\text{ with } n = 4 \\text{ to approximate} \\\\ \\int_0^2 x^2 \\, dx.",
+      "answer": 1.75,
+      "tolerance": 0.05,
+      "hints": [
+        "From the worked example: $\\Delta x = 0.5$. Heights at $x = 0, 0.5, 1, 1.5$: $0, 0.25, 1, 2.25$. Sum × 0.5 = 1.75.",
+        "$1.75$."
+      ],
+      "explanation": "$0.5 \\cdot (0 + 0.25 + 1 + 2.25) = 0.5 \\cdot 3.5 = 1.75$.",
+      "steps": [
+        "**Riemann sum recipe — 4 steps.**",
+        "**Step 1: Compute $\\Delta x$.** $\\Delta x = \\dfrac{b - a}{n} = \\dfrac{2 - 0}{4} = 0.5$.",
+        "**Step 2: Identify the sample points.** LEFT Riemann sum uses LEFT endpoints of each subinterval: $x_0 = 0, x_1 = 0.5, x_2 = 1, x_3 = 1.5$.",
+        "**Step 3: Evaluate $f$ at each sample point.** $f(0) = 0$, $f(0.5) = 0.25$, $f(1) = 1$, $f(1.5) = 2.25$.",
+        "**Step 4: Sum and multiply by $\\Delta x$.** $(0 + 0.25 + 1 + 2.25) \\cdot 0.5 = 3.5 \\cdot 0.5 = 1.75$.",
+        "**Compare to true value.** $\\int_0^2 x^2 \\, dx = \\dfrac{8}{3} \\approx 2.67$. Our 1.75 underestimates — typical of left sum on an INCREASING function (left endpoint heights are LOWER than max heights in each subinterval)."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\int_0^4 5 \\, dx = ? \\text{ (geometric — rectangle area)}",
+      "answer": 20,
+      "tolerance": 0,
+      "hints": [
+        "Rectangle: base 4, height 5. Area = 20.",
+        "$20$."
+      ],
+      "explanation": "Rectangle area: $4 \\cdot 5 = 20$.",
+      "steps": [
+        "**Recognize: $f(x) = 5$ is a constant — region under the curve is a RECTANGLE.**",
+        "**Dimensions.** Base $= 4$ (from $x=0$ to $x=4$). Height $= 5$.",
+        "**Area.** $4 \\cdot 5 = 20$.",
+        "**FTC check.** $\\int 5 \\, dx = 5x$. So $\\int_0^4 5 \\, dx = 5(4) - 5(0) = 20$. ✓",
+        "**Lesson.** When the integrand has a simple geometric shape (constant → rectangle, linear → trapezoid, $\\sqrt{r^2 - x^2}$ → circle), use geometry — much faster than FTC."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\int_0^3 2x \\, dx = ? \\text{ (geometric — triangle)}",
+      "answer": 9,
+      "tolerance": 0,
+      "hints": [
+        "Triangle from origin to (3, 6): base 3, height 6. Area = (1/2)(3)(6) = 9.",
+        "$9$."
+      ],
+      "explanation": "Triangle: base 3, height 6 → area $\\frac{1}{2}(3)(6) = 9$.",
+      "steps": [
+        "**Recognize: $f(x) = 2x$ is linear, passing through origin — region is a TRIANGLE.**",
+        "**Visualize.** Line from $(0, 0)$ rising to $(3, 6)$. Region under it from 0 to 3 is a right triangle: base 3 (on $x$-axis), height 6 (at $x=3$).",
+        "**Area.** $\\tfrac{1}{2} \\cdot 3 \\cdot 6 = 9$.",
+        "**FTC check.** $\\int 2x \\, dx = x^2$. $\\int_0^3 2x \\, dx = 9 - 0 = 9$. ✓"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{For } f(x) > 0, \\text{ as } n \\to \\infty, \\text{ the Riemann sum approaches:}",
+      "answer": 0,
+      "tolerance": 100000,
+      "hints": [
+        "The exact area under the curve.",
+        "(Numeric placeholder; not asking for a number — see explanation.)"
+      ],
+      "explanation": "The Riemann sum approaches the **definite integral** (the exact area). (This question is conceptual; any number is accepted in the placeholder.)",
+      "steps": [
+        "**The fundamental connection.** Riemann sum = approximation. Definite integral = LIMIT of Riemann sums as $n \\to \\infty$.",
+        "**Why bigger $n$ helps.** More rectangles means thinner rectangles, which conform more closely to the curve. Errors at the top of each rectangle shrink.",
+        "**Limit interpretation.** $\\int_a^b f(x) \\, dx = \\lim_{n \\to \\infty} \\sum_{i=1}^{n} f(x_i^*) \\, \\Delta x$ where $x_i^*$ is any sample point in the $i$th subinterval.",
+        "**Existence guarantee.** If $f$ is CONTINUOUS on $[a, b]$, this limit exists and equals the same number regardless of how you choose sample points (left, right, midpoint, random)."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "promptTex": "\\text{For } f \\text{ negative on } [a, b], \\text{ what is } \\int_a^b f(x) \\, dx?",
+      "choices": [
+        "Positive",
+        "Zero",
+        "Negative",
+        "Undefined"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Area below the x-axis counts as negative.",
+        "If $f < 0$ everywhere, integral is negative."
+      ],
+      "explanation": "When $f$ is negative on the interval, the integral is the **negative** of the area between the curve and the x-axis (signed area).",
+      "steps": [
+        "**'Signed area' is the key.** Definite integrals can be positive, negative, or zero depending on whether the curve is above or below the $x$-axis.",
+        "**The sign rule.** $f > 0$ on $[a, b]$ → integral $> 0$. $f < 0$ → integral $< 0$. Mixed sign → integral could be anything.",
+        "**Why this happens.** Riemann sum: $\\sum f(x_i) \\Delta x$. If $f < 0$, each term is negative, so the sum is negative.",
+        "**Application.** $\\int_0^1 (-x) \\, dx = -\\tfrac{1}{2}$ (area below = $\\tfrac{1}{2}$, with a minus sign). If you want the GEOMETRIC area (always positive), take $|\\int|$ or split by sign."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which Riemann sum is usually MOST accurate for a smooth function?}",
+      "choices": [
+        "Left",
+        "Right",
+        "Midpoint",
+        "All equally accurate"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Midpoint partly cancels overestimation/underestimation.",
+        "Best balance."
+      ],
+      "explanation": "Midpoint sum samples in the middle, balancing over- and under-estimation. Usually more accurate than left or right at the same $n$.",
+      "steps": [
+        "**Comparison of Riemann sums on smooth $f$:**",
+        "  **Left sum.** Uses left endpoint of each subinterval. Underestimates on INCREASING $f$ (left side is lower); overestimates on DECREASING $f$.",
+        "  **Right sum.** Uses right endpoint. Opposite biases.",
+        "  **Midpoint sum.** Uses middle of each subinterval. Errors above and below the true function tend to CANCEL.",
+        "**Why midpoint wins.** On a smooth function, the secant from left to right of a subinterval passes through the midpoint, balancing positive and negative deviations.",
+        "**Quantitatively.** Midpoint error is $O(1/n^2)$ while left/right errors are $O(1/n)$. Midpoint converges faster.",
+        "**Real-world note.** Simpson's rule (uses both endpoints AND midpoint) is even better — $O(1/n^4)$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{Use a midpoint Riemann sum with } n = 2 \\text{ to approximate} \\\\ \\int_0^4 x \\, dx.",
+      "answer": 8,
+      "tolerance": 0.05,
+      "hints": [
+        "$\\Delta x = 2$. Midpoints: 1, 3. Heights: 1, 3.",
+        "Sum × $\\Delta x$: $4 \\cdot 2 = 8$."
+      ],
+      "explanation": "Midpoints 1 and 3, heights 1 and 3, $\\Delta x = 2$. Sum: $(1 + 3) \\cdot 2 = 8$.",
+      "steps": [
+        "**Setup.** $\\Delta x = (4 - 0)/2 = 2$. Two subintervals: $[0, 2]$ and $[2, 4]$.",
+        "**Midpoints.** $1$ (midpoint of $[0, 2]$) and $3$ (midpoint of $[2, 4]$).",
+        "**Heights.** $f(1) = 1$, $f(3) = 3$.",
+        "**Sum.** $(1 + 3) \\cdot 2 = 8$.",
+        "**Compare to exact value.** $\\int_0^4 x \\, dx = 8$ — MIDPOINT IS EXACT for linear functions! Because the secant of a line over any subinterval passes through the midpoint exactly, the errors above and below cancel completely.",
+        "**Useful property.** Whenever the integrand is linear (or piecewise linear), midpoint Riemann sum gives the exact answer with any $n \\geq 1$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q11",
+      "type": "multiple-choice",
+      "promptTex": "\\text{In } \\int_a^b f(x) \\, dx, \\text{ the } dx \\text{ represents:}",
+      "choices": [
+        "A small width / differential",
+        "Multiplication",
+        "The variable being integrated",
+        "Both: width AND variable"
+      ],
+      "answerIndex": 3,
+      "hints": [
+        "$dx$ tells you the variable AND symbolizes the rectangle width.",
+        "Both meanings."
+      ],
+      "explanation": "$dx$ has dual meaning: it identifies $x$ as the variable of integration AND represents the (infinitesimal) width of each rectangle.",
+      "steps": [
+        "**Two purposes of the $dx$:**",
+        "  **(a) Identifies the variable of integration.** Tells you we're integrating over $x$ (not $y$, $t$, or any other variable). Important when multiple variables appear in the integrand.",
+        "  **(b) Represents an infinitesimal WIDTH.** $dx = \\lim \\Delta x$. In the Riemann sum picture, $dx$ is the width of each thin rectangle.",
+        "**Both meanings hold simultaneously.** The notation $\\int f(x) \\, dx$ literally reads as 'sum of $f(x)$ times tiny widths $dx$' — the dual interpretation IS the notation."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\int_{-3}^{3} \\sqrt{9 - x^2} \\, dx = ? \\text{ (geometric — semicircle)}",
+      "answer": 14.137,
+      "tolerance": 0.5,
+      "hints": [
+        "Semicircle of radius 3. Area $= \\frac{1}{2}\\pi(9) = 4.5\\pi$.",
+        "$\\approx 14.14$."
+      ],
+      "explanation": "Semicircle area: $\\frac{1}{2}\\pi r^2 = \\frac{1}{2}\\pi(9) = 4.5\\pi \\approx 14.14$.",
+      "steps": [
+        "**Recognize the integrand as a circle equation.** $y = \\sqrt{9 - x^2}$ is the UPPER half of the circle $x^2 + y^2 = 9$ (radius 3, centered at origin).",
+        "**Match the interval to a complete shape.** From $x = -3$ to $x = 3$: spans the entire diameter, so the region is the FULL UPPER SEMICIRCLE.",
+        "**Use the area formula for a semicircle.** $A = \\tfrac{1}{2} \\pi r^2 = \\tfrac{1}{2} \\pi (3)^2 = \\dfrac{9\\pi}{2} \\approx 14.14$.",
+        "**Why FTC would be painful here.** $\\int \\sqrt{9 - x^2} \\, dx$ needs trig substitution to do explicitly — much more work than recognizing the geometric shape.",
+        "**Lesson.** ALWAYS look for a geometric shortcut first. Circles, ellipses, triangles, trapezoids can ALL be integrated by recognizing the area formula."
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

@@ -1,0 +1,558 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "prompt": "Why does $\\dfrac{dy}{dx} = 0$ at a local maximum or minimum of a smooth curve?",
+      "choices": [
+        "Because the function value $y$ is zero there.",
+        "Because at the peak (or bottom), the tangent line is horizontal — and horizontal lines have slope zero.",
+        "Because the function is undefined there.",
+        "Because $x$ is zero at every max or min."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Picture climbing a hill — what is the slope at the summit?",
+        "Geometrically, $dy/dx$ IS the slope of the tangent line."
+      ],
+      "explanation": "At any peak or valley of a smooth curve, the slope passes from positive (going up) through zero (flat) to negative (going down) — or vice versa for a valley. So $dy/dx = 0$ at that instant. That horizontal-tangent fact is the entire reason 'equating to zero' finds extrema.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "y = x^2 - 6x + 10.\\ \\text{What is the minimum value of }y?",
+      "answer": 1,
+      "tolerance": 0,
+      "hints": [
+        "$y' = 2x - 6 = 0$ gives $x = 3$.",
+        "Plug $x = 3$ into $y$."
+      ],
+      "explanation": "$y' = 2x - 6 = 0 \\Rightarrow x = 3$. Plug back: $y(3) = 9 - 18 + 10 = 1$. It's a minimum (parabola opens up since coefficient of $x^2$ is positive).",
+      "steps": [
+        "**Recognize the type.** A parabola (degree-2 polynomial) — it has exactly ONE extremum, at its vertex. The 'equating to zero' recipe applies in its cleanest form.",
+        "**Why 'equate the derivative to zero'?** At the vertex, the tangent line is horizontal — slope = 0 = $dy/dx$. So solving $y'(x) = 0$ locates the vertex.",
+        "**Differentiate.** $y'(x) = 2x - 6$.",
+        "**Equate to zero and solve.** $2x - 6 = 0 \\Rightarrow x = 3$. This is the candidate $x$-coordinate of the extremum.",
+        "**Plug back into ORIGINAL $y$ to get the value.** $y(3) = 9 - 18 + 10 = 1$. (Always plug into $y$, never into $y'$ — $y'$ is zero at every critical point and tells you nothing about the value.)",
+        "**Classify: max or min?** For a parabola: positive $x^2$ coefficient → opens UP → vertex is the MIN. Negative coefficient → opens DOWN → MAX. Here $+1 > 0$, so $y = 1$ is the MINIMUM."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{Split 100 into two positive parts so their product is maximum.}\\\\\\text{What is the maximum product?}",
+      "answer": 2500,
+      "tolerance": 0,
+      "hints": [
+        "Let parts be $x$ and $100 - x$. Product $P = x(100-x)$.",
+        "$P' = 100 - 2x = 0 \\Rightarrow x = 50$.",
+        "So $P = 50 \\times 50$."
+      ],
+      "explanation": "Let parts be $x$ and $100-x$. $P(x) = x(100-x) = 100x - x^2$. $P'(x) = 100 - 2x = 0 \\Rightarrow x = 50$. Both parts equal 50; max product is $50 \\cdot 50 = 2500$.",
+      "steps": [
+        "**Recognize the type.** Classic optimization with a CONSTRAINT (the parts sum to 100) and an OBJECTIVE (their product). Every optimization problem has these two pieces — your first job is to identify them.",
+        "**Introduce a variable.** Let one part be $x$; the constraint forces the other to be $100 - x$. (We've reduced two unknowns to one — the standard move.)",
+        "**Write the objective.** Product $P(x) = x(100 - x) = 100x - x^2$.",
+        "**Differentiate and equate to zero.** $P'(x) = 100 - 2x = 0 \\Rightarrow x = 50$. Why this works: at a maximum, the slope $P'$ is horizontal (= 0).",
+        "**Plug back for the answer.** Other part $= 100 - 50 = 50$. Max product $= 50 \\cdot 50 = 2500$.",
+        "**Lesson worth remembering.** For 'split into two parts with fixed sum, maximize the product', the answer is ALWAYS to split equally. This is the simplest case of the AM-GM inequality. Worth knowing as a shortcut for future problems."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "y = x^3 - 12x + 5.\\ \\text{At what positive }x\\text{ is }y\\text{ a local minimum?}",
+      "answer": 2,
+      "tolerance": 0,
+      "hints": [
+        "$y' = 3x^2 - 12 = 0$.",
+        "Solve: $x^2 = 4 \\Rightarrow x = \\pm 2$.",
+        "Which sign is the local MIN? Check the cubic's shape — for a positive leading coefficient cubic, the positive root is the minimum."
+      ],
+      "explanation": "$y' = 3x^2 - 12$. Set equal to zero: $x^2 = 4$, so $x = \\pm 2$. To classify: $y'' = 6x$. At $x = 2$, $y'' = 12 > 0$ → local min. At $x = -2$, $y'' = -12 < 0$ → local max. So the local minimum sits at $x = 2$.",
+      "steps": [
+        "**Recognize the type.** A cubic — generically has both a local max AND a local min (two critical points), unlike a parabola which has just one.",
+        "**Differentiate.** $y'(x) = 3x^2 - 12$.",
+        "**Equate to zero and solve.** $3x^2 = 12 \\Rightarrow x^2 = 4 \\Rightarrow x = \\pm 2$. Two candidates.",
+        "**WHY we must classify.** $y' = 0$ at both $x = 2$ and $x = -2$, but those are different *kinds* of point (one peak, one valley). Equating to zero only finds candidates — you still need to identify each.",
+        "**Use the second-derivative test.** $y'' = 6x$. Concave UP ($y'' > 0$) ⇒ MIN. Concave DOWN ($y'' < 0$) ⇒ MAX.",
+        "**At $x = 2$:** $y''(2) = 12 > 0$ → MIN ✓. **At $x = -2$:** $y''(-2) = -12 < 0$ → MAX.",
+        "**Answer.** The positive $x$ at which $y$ is a local min is $x = 2$.",
+        "**Pattern.** For cubics with positive leading coefficient ('up–down–up' shape), the LEFT critical point is always the local max and the RIGHT one is always the local min. Memorize the shape — it lets you skip the second-derivative test on similar problems."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "prompt": "For $y = x^3$, we get $y' = 3x^2 = 0$ at $x = 0$. What kind of point is $x = 0$?",
+      "choices": [
+        "A local maximum.",
+        "A local minimum.",
+        "Neither — it's an inflection point (the curve is momentarily flat but keeps climbing in the same direction).",
+        "An undefined point."
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Plot $y = x^3$ near 0 in your head.",
+        "Try $x = -0.1$ and $x = +0.1$. Are both $y$ values bigger than $y(0) = 0$, or both smaller, or one of each?",
+        "If one of each, neither max nor min — it's an inflection."
+      ],
+      "explanation": "$y = x^3$ at $x = 0$ has $y' = 0$, but the function keeps INCREASING through $x = 0$: $y(-0.1) = -0.001 < 0 < 0.001 = y(0.1)$. So $x = 0$ is not a peak or valley — it's a place where the slope momentarily kisses zero and then climbs again. This is an **inflection point**. Lesson: equating to zero finds *candidates*, but they're not always extrema. Always classify.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{Largest rectangle inscribed in a circle of radius }5.\\ \\text{What is its area?}",
+      "answer": 50,
+      "tolerance": 0,
+      "hints": [
+        "If one side is $x$, the other is $\\sqrt{(2R)^2 - x^2} = \\sqrt{100 - x^2}$.",
+        "Maximize $A = x\\sqrt{100 - x^2}$.",
+        "Trick: maximize $A^2 = x^2 (100 - x^2)$ instead — easier algebra, same answer.",
+        "The rectangle turns out to be a SQUARE — side $R\\sqrt{2} = 5\\sqrt{2}$."
+      ],
+      "explanation": "Diagonal = diameter = $2R = 10$. If sides are $x$ and $y$, then $x^2 + y^2 = 100$. Maximize $A = xy$. Easier: maximize $A^2 = x^2(100-x^2) = 100x^2 - x^4$. $(A^2)' = 200x - 4x^3 = 4x(50 - x^2) = 0 \\Rightarrow x^2 = 50 \\Rightarrow x = 5\\sqrt{2}$. Other side also $5\\sqrt{2}$ — it's a square. Area $= (5\\sqrt{2})^2 = 50$.",
+      "steps": [
+        "**Set up the problem.** Every optimization has two parts: an OBJECTIVE to maximize (here, area) and a CONSTRAINT linking the variables (here, the rectangle must fit inside the circle). Without the constraint we'd just make $x$ and $y$ huge and 'maximize' to infinity — finding the constraint is the FIRST move.",
+        "**Translate the geometry to algebra.** A rectangle inscribed in a circle has its corners on the circle. Its diagonal — corner to opposite corner — passes through the center and is a diameter, so diagonal $= 2R = 10$. By Pythagoras: $x^2 + y^2 = 10^2 = 100$. That's our constraint equation.",
+        "**Reduce to one variable.** The calculus trick 'set derivative to zero' only works for a function of ONE variable. So use the constraint to eliminate $y$: $y = \\sqrt{100 - x^2}$. Now $A(x) = x\\sqrt{100 - x^2}$ — a single-variable function we can attack.",
+        "**Trick — square it.** $A(x)$ has a square root, which makes differentiation messy. But $A$ is non-negative, so MAXIMIZING $A$ is the same as MAXIMIZING $A^2$ (any positive function and its square share critical points). So work with the cleaner $A^2(x) = x^2(100 - x^2) = 100x^2 - x^4$.",
+        "**Differentiate and equate to zero.** $(A^2)'(x) = 200x - 4x^3 = 4x(50 - x^2)$. Setting this $= 0$ gives $x = 0$ (a trivial minimum — zero-width rectangle, area 0) or $x^2 = 50$, so $x = 5\\sqrt{2}$.",
+        "**Find the other dimension.** $y = \\sqrt{100 - 50} = \\sqrt{50} = 5\\sqrt{2}$. So $x = y$ — the optimal rectangle is a SQUARE. (Sanity check: optimal answers are often highly symmetric — when symmetry pops out, you usually got it right.)",
+        "**Compute the answer.** $A = 5\\sqrt{2} \\cdot 5\\sqrt{2} = 25 \\cdot 2 = 50$."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{Cut squares of side }x\\text{ from corners of a }12\\text{ cm}\\times 12\\text{ cm sheet, fold up to make an open box.}\\\\\\text{What value of }x\\text{ maximizes the box's volume?}",
+      "answer": 2,
+      "tolerance": 0,
+      "hints": [
+        "After folding, base is $(12-2x) \\times (12-2x)$, height is $x$.",
+        "$V = x(12-2x)^2$.",
+        "Differentiate using the product rule, factor, set to zero."
+      ],
+      "explanation": "$V(x) = x(12-2x)^2$. Differentiate (product rule): $V' = (12-2x)^2 + x \\cdot 2(12-2x)(-2) = (12-2x)[(12-2x) - 4x] = (12-2x)(12 - 6x)$. Setting $V' = 0$: $x = 6$ (gives flat box, $V = 0$, the minimum) or $x = 2$ (the maximum). Max volume: $V(2) = 2 \\cdot 8^2 = 128$ cm³.",
+      "steps": [
+        "**Visualize the construction.** Cut a square of side $x$ from each of the 4 corners of the 12×12 sheet, then fold up the four flaps to make a box without a lid. (Drawing a quick sketch is worth 60 seconds — most of these problems become trivial once you see the picture.)",
+        "**Express the dimensions in terms of $x$.** After folding: base is $(12 - 2x) \\times (12 - 2x)$ (we removed $x$ from each side), and the height is $x$ (the fold-up flap).",
+        "**Note the domain.** $x > 0$ (must cut something) AND $x < 6$ (otherwise the base has zero or negative size). So $0 < x < 6$.",
+        "**Write the objective.** Volume $V(x) = (\\text{base}) \\times (\\text{height}) = (12-2x)^2 \\cdot x$.",
+        "**Differentiate using the product rule.** Let $u = x$, $v = (12-2x)^2$. Then $u' = 1$, $v' = 2(12-2x) \\cdot (-2) = -4(12 - 2x)$ (chain rule on the square). So $V' = u'v + uv' = (12 - 2x)^2 + x \\cdot (-4)(12 - 2x) = (12 - 2x)\\bigl[(12 - 2x) - 4x\\bigr] = (12 - 2x)(12 - 6x)$.",
+        "**Why we factored.** A factored derivative is easier to set equal to zero — a product is zero iff one factor is zero. Always look for the chance to factor.",
+        "**Solve $V' = 0$.** $12 - 2x = 0 \\Rightarrow x = 6$, OR $12 - 6x = 0 \\Rightarrow x = 2$.",
+        "**Eliminate boundary case.** At $x = 6$ the base has zero size — the 'box' is flat. That's the minimum volume (zero), not the maximum. So $x = 2$ is the maximum.",
+        "**Verify by computing the volume.** $V(2) = (12 - 4)^2 \\cdot 2 = 64 \\cdot 2 = 128$ cm³ — a real, positive box. ✓"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{Cylinder of radius }r\\text{ and height }h.\\ \\text{Fixed surface area }S = 2\\pi r^2 + 2\\pi r h = 96\\pi.\\\\\\text{What value of }r\\text{ maximizes the cylinder's volume?}",
+      "answer": 4,
+      "tolerance": 0.001,
+      "hints": [
+        "Solve the surface constraint for $h$: $h = \\dfrac{96\\pi - 2\\pi r^2}{2\\pi r} = \\dfrac{48 - r^2}{r}$.",
+        "$V = \\pi r^2 h = \\pi r(48 - r^2) = 48\\pi r - \\pi r^3$.",
+        "Differentiate, equate to zero, solve."
+      ],
+      "explanation": "Substitute the constraint to write $V$ in terms of $r$ alone. $h = (48 - r^2)/r$, so $V = \\pi r^2 \\cdot (48 - r^2)/r = \\pi r(48 - r^2)$. Differentiate: $V'(r) = \\pi(48 - 3r^2) = 0 \\Rightarrow r^2 = 16 \\Rightarrow r = 4$. (At that radius, $h = 32/4 = 8 = 2r$ — the optimal cylinder has height equal to its diameter.)",
+      "steps": [
+        "**Identify constraint and objective.** Constraint: surface area $= 96\\pi$ (fixed). Objective: volume $V = \\pi r^2 h$ (to maximize). Two unknowns $r$ and $h$ — we'll need to eliminate one using the constraint.",
+        "**Simplify the constraint.** $2\\pi r^2 + 2\\pi r h = 96\\pi$. Divide everything by $2\\pi$: $r^2 + rh = 48$.",
+        "**Solve for $h$.** $h = \\dfrac{48 - r^2}{r}$. (We're using the constraint as a *tool* to express one variable in terms of the other.)",
+        "**Substitute into volume.** $V = \\pi r^2 \\cdot h = \\pi r^2 \\cdot \\dfrac{48 - r^2}{r} = \\pi r (48 - r^2) = 48\\pi r - \\pi r^3$. Now $V$ depends on $r$ alone — ready for calculus.",
+        "**Differentiate.** $V'(r) = 48\\pi - 3\\pi r^2 = \\pi(48 - 3r^2)$.",
+        "**Equate to zero.** $48 - 3r^2 = 0 \\Rightarrow r^2 = 16 \\Rightarrow r = 4$ (positive root — radius must be positive).",
+        "**Sanity check via the classic result.** At $r = 4$, $h = (48 - 16)/4 = 8 = 2r$. The optimal cylinder has height EQUAL to its diameter — a famous, beautiful result you should recognize when it pops out. (It's why ideal cans are taller than wide is a myth — most efficient cans look 'square'.)"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "prompt": "After solving $y' = 0$ you find a single candidate $x = x_0$. To verify it's a MAXIMUM (not a min or an inflection), which one of these is NOT a valid technique?",
+      "choices": [
+        "Check $y$ at $x_0$ vs. $y$ slightly to the left and right — both should be smaller.",
+        "Compute $y''(x_0)$; if negative, it's a max.",
+        "Plot the function — does the curve come down on both sides of $x_0$?",
+        "If $y(x_0)$ is a positive number, it's automatically a maximum."
+      ],
+      "answerIndex": 3,
+      "hints": [
+        "A value being positive has nothing to do with being a maximum.",
+        "The sign of $y$ at the candidate is unrelated to whether the candidate is a peak."
+      ],
+      "explanation": "The first three are standard ways to classify a critical point. The fourth is wrong: $y$ being positive (or negative) tells you nothing about whether $x_0$ is a peak, valley, or inflection. $y = x^2$ at $x = 0$ has $y = 0$ (not positive) and is a min; $y = -x^2 + 100$ at $x = 0$ has $y = 100$ (positive) and is a max — but the *sign* of $y$ didn't matter for the classification.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "y = 4x + \\dfrac{1}{x}\\ \\text{ for }x > 0.\\ \\text{ What is the MINIMUM value of }y?",
+      "answer": 4,
+      "tolerance": 0.001,
+      "hints": [
+        "Rewrite: $y = 4x + x^{-1}$.",
+        "$y' = 4 - x^{-2} = 4 - \\dfrac{1}{x^2}$.",
+        "$y' = 0 \\Rightarrow x^2 = 1/4 \\Rightarrow x = 1/2$ (positive branch).",
+        "$y(1/2) = 2 + 2 = 4$."
+      ],
+      "explanation": "$y' = 4 - 1/x^2 = 0 \\Rightarrow x^2 = 1/4 \\Rightarrow x = 1/2$ (positive root, since the problem says $x > 0$). Plug back: $y(1/2) = 4 \\cdot \\tfrac{1}{2} + \\tfrac{1}{1/2} = 2 + 2 = 4$. This is a minimum — for very small or very large positive $x$, $y$ blows up to infinity.",
+      "steps": [
+        "**Recognize the type — 'linear + reciprocal'.** Functions of the form $y = ax + b/x$ are classic optimization problems. They blow up at both extremes ($x \\to 0^+$ pushes $b/x$ to infinity; $x \\to \\infty$ pushes $ax$ to infinity), so there must be a minimum somewhere in between.",
+        "**Rewrite the reciprocal as a power.** $y = 4x + x^{-1}$ — now the power rule applies cleanly.",
+        "**Differentiate.** $y'(x) = 4 - x^{-2} = 4 - \\dfrac{1}{x^2}$.",
+        "**Equate to zero.** $4 - \\dfrac{1}{x^2} = 0 \\Rightarrow \\dfrac{1}{x^2} = 4 \\Rightarrow x^2 = \\tfrac{1}{4} \\Rightarrow x = \\tfrac{1}{2}$ (positive branch — domain restriction).",
+        "**Plug back into the ORIGINAL $y$.** $y(1/2) = 4 \\cdot \\tfrac{1}{2} + \\dfrac{1}{1/2} = 2 + 2 = 4$.",
+        "**Confirm it's a min, not a max.** As $x \\to 0^+$ or $x \\to \\infty$, $y \\to \\infty$. So the only critical point inside the domain MUST be a minimum (a 'valley' between two unbounded sides). This kind of *domain-shape argument* is often faster than the second-derivative test for 1/$x$-type functions.",
+        "**AM-GM bonus insight.** The minimum value $4$ equals $2\\sqrt{4 \\cdot 1} = 4$ — exactly what the AM-GM inequality predicts for $ax + b/x$ at $x = \\sqrt{b/a}$. Memorize this if you can — it gives instant answers for this whole family of problems."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{Split 200 into two positive parts so their product is maximum.}\\\\\\text{What is the maximum product?}",
+      "answer": 10000,
+      "tolerance": 0,
+      "hints": [
+        "Let parts be $x$ and $200 - x$. $P(x) = x(200 - x)$.",
+        "$P'(x) = 200 - 2x = 0 \\Rightarrow x = 100$.",
+        "Max product: $100 \\cdot 100 = 10000$."
+      ],
+      "explanation": "Set up: $P(x) = x(200-x) = 200x - x^2$. $P'(x) = 200 - 2x = 0 \\Rightarrow x = 100$. Both parts equal 100; product = $100^2 = 10000$. (General rule: maximum product when both parts are equal — half the total each.)",
+      "steps": [
+        "**Apply the 'split-into-two-parts' pattern.** Same template as Q3 — only the number changed. Recognizing it lets you solve in seconds: max product when parts are equal.",
+        "**Set up.** Parts: $x$ and $200 - x$. Product: $P(x) = x(200 - x) = 200x - x^2$.",
+        "**Differentiate and equate.** $P'(x) = 200 - 2x = 0 \\Rightarrow x = 100$.",
+        "**Compute.** Other part $= 100$. Max product $= 100 \\cdot 100 = 10{,}000$.",
+        "**Shortcut for the future.** For 'split $n$ into two parts, max product': both parts $= n/2$, product $= n^2/4$. Worth memorizing."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "y = -3x^2 + 24x - 5.\\ \\text{What is the MAXIMUM value of }y?",
+      "answer": 43,
+      "tolerance": 0,
+      "hints": [
+        "$y' = -6x + 24 = 0 \\Rightarrow x = 4$.",
+        "$y(4) = -48 + 96 - 5 = 43$."
+      ],
+      "explanation": "$y' = -6x + 24$. Set $= 0$: $x = 4$. Plug back: $y(4) = -3(16) + 24(4) - 5 = -48 + 96 - 5 = 43$. (Max, not min: parabola opens downward since $-3 < 0$ on the $x^2$ term.)",
+      "steps": [
+        "**Recognize the type.** A parabola — exactly one extremum, at the vertex.",
+        "**Anticipate: max or min?** $x^2$ coefficient is $-3$ (negative) → parabola opens DOWN → vertex is a MAXIMUM. We expect the question to ask for the max, which it does. Reassuring sign that we're on track.",
+        "**Differentiate.** $y'(x) = -6x + 24$.",
+        "**Equate to zero.** $-6x + 24 = 0 \\Rightarrow x = 4$.",
+        "**Plug back.** $y(4) = -3(16) + 24(4) - 5 = -48 + 96 - 5 = 43$.",
+        "**Done.** Max is $43$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q13",
+      "type": "numeric",
+      "promptTex": "y = x + \\dfrac{4}{x}\\ \\text{ for }x > 0.\\ \\text{What is the minimum value of }y?",
+      "answer": 4,
+      "tolerance": 0.001,
+      "hints": [
+        "Rewrite: $y = x + 4 x^{-1}$.",
+        "$y' = 1 - 4/x^2 = 0 \\Rightarrow x^2 = 4 \\Rightarrow x = 2$.",
+        "$y(2) = 2 + 2 = 4$."
+      ],
+      "explanation": "$y' = 1 - \\dfrac{4}{x^2}$. Set $= 0$: $x^2 = 4 \\Rightarrow x = 2$. Plug back: $y(2) = 2 + 2 = 4$. (This is the AM-GM inequality in action: $x + \\tfrac{4}{x} \\ge 2\\sqrt{4} = 4$, with equality at $x = 2$.)",
+      "steps": [
+        "**Recognize 'linear + reciprocal' template.** Same family as Q10. The minimum will sit somewhere where the two pieces are 'balanced'.",
+        "**Differentiate.** $y'(x) = 1 - \\dfrac{4}{x^2}$.",
+        "**Equate to zero.** $1 = \\dfrac{4}{x^2} \\Rightarrow x^2 = 4 \\Rightarrow x = 2$ (positive branch).",
+        "**Plug back.** $y(2) = 2 + \\dfrac{4}{2} = 2 + 2 = 4$.",
+        "**AM-GM shortcut.** For $y = ax + b/x$ with $a, b > 0$, the minimum is $2\\sqrt{ab}$ at $x = \\sqrt{b/a}$. Here: $\\sqrt{1 \\cdot 4} = 2$ → min $= 2 \\cdot 2 = 4$. ✓ (Memorize this template — it's worth its weight in gold on exams.)"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q14",
+      "type": "numeric",
+      "promptTex": "\\text{A rectangle has perimeter 60.}\\ \\text{What is its maximum area?}",
+      "answer": 225,
+      "tolerance": 0,
+      "hints": [
+        "If sides are $L$ and $W$: $2L + 2W = 60 \\Rightarrow L + W = 30$.",
+        "Maximize $A = LW$ with $L + W = 30$.",
+        "Use the split-into-two-parts rule: max product when $L = W = 15$.",
+        "Max area: $15 \\cdot 15 = 225$."
+      ],
+      "explanation": "$L + W = 30$; maximize $A = LW = L(30-L) = 30L - L^2$. $A'(L) = 30 - 2L = 0 \\Rightarrow L = 15$. So both sides are 15 — the rectangle is a square. Max area $= 225$.",
+      "steps": [
+        "**Recognize as 'split into two parts' problem.** Constraint $2L + 2W = 60$ simplifies to $L + W = 30$ — fixed sum. Maximize $A = LW$ — product. The pattern we already know.",
+        "**Reduce to one variable.** From the constraint: $W = 30 - L$. Substitute: $A(L) = L(30 - L) = 30L - L^2$.",
+        "**Differentiate and equate.** $A'(L) = 30 - 2L = 0 \\Rightarrow L = 15$.",
+        "**Compute.** $W = 30 - 15 = 15$. The rectangle is a SQUARE.",
+        "**Max area.** $15 \\cdot 15 = 225$.",
+        "**Universal lesson.** Fixed-perimeter rectangle maximizing area → always a SQUARE. Fixed-perimeter triangle → equilateral. Fixed-perimeter $n$-gon → regular. The most symmetric shape always wins."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q15",
+      "type": "numeric",
+      "promptTex": "y = x^3 - 3x.\\ \\text{What is the LOCAL MAXIMUM value of }y?",
+      "answer": 2,
+      "tolerance": 0,
+      "hints": [
+        "$y' = 3x^2 - 3 = 0 \\Rightarrow x = \\pm 1$.",
+        "$y'' = 6x$. At $x = -1$, $y'' = -6 < 0$ → local max.",
+        "$y(-1) = -1 - (-3) = 2$."
+      ],
+      "explanation": "$y' = 3x^2 - 3 = 0 \\Rightarrow x = \\pm 1$. Classify with $y'' = 6x$: at $x = -1$, $y''(-1) = -6 < 0$ → local max; at $x = 1$, $y''(1) = 6 > 0$ → local min. Local max value: $y(-1) = (-1)^3 - 3(-1) = -1 + 3 = 2$.",
+      "steps": [
+        "**Cubic with two critical points — find both, classify both.**",
+        "**Differentiate.** $y'(x) = 3x^2 - 3$.",
+        "**Equate to zero.** $3x^2 = 3 \\Rightarrow x = \\pm 1$.",
+        "**Classify with second-derivative test.** $y''(x) = 6x$. *Negative $y''$ = concave DOWN = MAX*; *positive $y''$ = concave UP = MIN*.",
+        "**At $x = -1$:** $y''(-1) = -6 < 0$ → local MAX ✓.",
+        "**At $x = +1$:** $y''(1) = +6 > 0$ → local min.",
+        "**Compute the local max value.** Plug $x = -1$ into the ORIGINAL $y$: $y(-1) = (-1)^3 - 3(-1) = -1 + 3 = 2$.",
+        "**Shape recognition.** Positive-leading-coefficient cubics always have LEFT critical point = max, RIGHT = min. (Imagine the curve rising from $-\\infty$, peaking, dipping into a valley, then rising to $+\\infty$.)"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q16",
+      "type": "numeric",
+      "promptTex": "y = x^4 - 8x^2.\\ \\text{What is the local MAXIMUM value of }y?",
+      "answer": 0,
+      "tolerance": 0,
+      "hints": [
+        "$y' = 4x^3 - 16x = 4x(x^2 - 4) = 0$, so $x = 0$ or $x = \\pm 2$.",
+        "$y'' = 12x^2 - 16$. At $x = 0$: $y'' = -16 < 0$ → local MAX. At $x = \\pm 2$: $y'' = 32 > 0$ → local MINS.",
+        "$y(0) = 0$."
+      ],
+      "explanation": "$y' = 4x^3 - 16x = 4x(x^2 - 4) = 0 \\Rightarrow x = 0, \\pm 2$. $y'' = 12x^2 - 16$. At $x = 0$: $y'' = -16$ (local max). At $x = \\pm 2$: $y'' = 32$ (local min). Local max value: $y(0) = 0$. (The 'M' shape: two equal minima at $x = \\pm 2$ with $y = -16$, peak at $x = 0$ with $y = 0$.)",
+      "steps": [
+        "**Quartics can have up to THREE critical points** — typically a 'W' shape (two minima + one max in the middle) or an 'M' shape (the reverse).",
+        "**Differentiate.** $y'(x) = 4x^3 - 16x$.",
+        "**Factor before solving.** $4x(x^2 - 4) = 4x(x-2)(x+2) = 0$. Three roots: $x = 0, 2, -2$. (Always look for the factor that lets you read off the roots — much easier than blunt-forcing the cubic.)",
+        "**Classify with $y'' = 12x^2 - 16$.**",
+        "**At $x = 0$:** $y''(0) = -16 < 0$ → local MAX ✓.",
+        "**At $x = \\pm 2$:** $y''(\\pm 2) = 48 - 16 = 32 > 0$ → local MINS.",
+        "**Compute the local max value.** $y(0) = 0$.",
+        "**Sanity-check the shape.** $y(\\pm 2) = 16 - 32 = -16$ — two symmetric valleys. $y(0) = 0$ — a peak between them. Classic 'W' shape with the local max at $0$."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q17",
+      "type": "numeric",
+      "promptTex": "y = \\dfrac{1}{3}x^3 - 4x^2 + 12x - 3.\\ \\text{Find the LOCAL MAX value of }y.\\ \\text{(2 decimal places)}",
+      "answer": 7.67,
+      "tolerance": 0.05,
+      "hints": [
+        "$y' = x^2 - 8x + 12 = (x-2)(x-6) = 0 \\Rightarrow x = 2$ or $x = 6$.",
+        "$y'' = 2x - 8$. At $x = 2$: $y''(-4) < 0$ → max. At $x = 6$: $y''(4) > 0$ → min.",
+        "Local max value: $y(2) = 8/3 - 16 + 24 - 3 = 8/3 + 5 = 23/3 \\approx 7.67$."
+      ],
+      "explanation": "$y' = x^2 - 8x + 12 = (x-2)(x-6) = 0$. Candidates: $x = 2, 6$. $y'' = 2x - 8$. At $x = 2$: $y'' = -4 < 0$ (local max). At $x = 6$: $y'' = 4 > 0$ (local min). $y(2) = \\tfrac{8}{3} - 16 + 24 - 3 = \\tfrac{8}{3} + 5 = \\tfrac{23}{3} \\approx 7.67$.",
+      "steps": [
+        "**Cubic with positive leading coefficient → standard 'up–down–up' shape.** Expect TWO critical points: left = max, right = min.",
+        "**Differentiate.** $y'(x) = x^2 - 8x + 12$.",
+        "**Factor.** $(x - 2)(x - 6) = 0 \\Rightarrow x = 2$ or $x = 6$.",
+        "**Classify with $y'' = 2x - 8$.** At $x = 2$: $y'' = -4 < 0$ → MAX. At $x = 6$: $y'' = 4 > 0$ → MIN. (Confirms our shape expectation.)",
+        "**Plug $x = 2$ into the ORIGINAL $y$.** $y(2) = \\tfrac{1}{3}(8) - 4(4) + 12(2) - 3 = \\tfrac{8}{3} - 16 + 24 - 3 = \\tfrac{8}{3} + 5 = \\tfrac{8 + 15}{3} = \\tfrac{23}{3}$.",
+        "**Convert to decimal.** $\\tfrac{23}{3} \\approx 7.67$."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q18",
+      "type": "numeric",
+      "promptTex": "\\text{Sum of two positive numbers is 16.}\\\\\\text{Find the MIN of }x^2 + (16 - x)^2.",
+      "answer": 128,
+      "tolerance": 0,
+      "hints": [
+        "Let $S(x) = x^2 + (16-x)^2$.",
+        "$S'(x) = 2x - 2(16-x) = 4x - 32 = 0 \\Rightarrow x = 8$.",
+        "$S(8) = 64 + 64 = 128$."
+      ],
+      "explanation": "$S(x) = x^2 + (16-x)^2$. $S'(x) = 2x + 2(16-x)(-1) = 2x - 32 + 2x = 4x - 32$. Set $= 0$: $x = 8$. So both parts are 8; sum of squares $= 64 + 64 = 128$. (Sum of squares is MINIMIZED when the parts are equal, opposite to product which is maximized.)",
+      "steps": [
+        "**Recognize variant of 'split into two parts'.** Two parts summing to 16, but the objective is SUM OF SQUARES (minimize) rather than product (maximize). The pattern is similar but the answer is the same kind of symmetric split.",
+        "**Express the objective.** $S(x) = x^2 + (16 - x)^2$.",
+        "**Differentiate.** Chain rule on the second term: $S'(x) = 2x + 2(16 - x) \\cdot (-1) = 2x - 2(16 - x) = 4x - 32$.",
+        "**Equate to zero.** $4x = 32 \\Rightarrow x = 8$.",
+        "**Compute.** Other part $= 16 - 8 = 8$. $S(8) = 64 + 64 = 128$.",
+        "**Universal lesson — for two parts with fixed sum:** PRODUCT is MAXIMIZED when parts are equal. SUM OF SQUARES is MINIMIZED when parts are equal. (Both extrema favor 'equal parts' — useful pattern to remember.)"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q19",
+      "type": "multiple-choice",
+      "prompt": "A wire of fixed length $L$ is bent to enclose a rectangle. What shape maximizes the enclosed area?",
+      "choices": [
+        "A long, thin rectangle.",
+        "A square (all sides equal).",
+        "A circle.",
+        "A triangle."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Fixed perimeter → 'split into two parts' problem (length + width).",
+        "Max product of two parts with fixed sum: equal parts."
+      ],
+      "explanation": "Perimeter $2L + 2W = $ fixed, so $L + W$ is fixed. Maximize $A = LW$ with $L + W$ fixed → equal parts → $L = W$, a square. (The wire is restricted to rectangles. If you allow ANY shape, a CIRCLE maximizes the area for a given perimeter — but that's a separate result.)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q20",
+      "type": "numeric",
+      "promptTex": "\\text{Cylinder of radius }r,\\text{ height }h.\\ \\text{Fixed VOLUME }V = 1000\\text{ cm}^3.\\\\\\text{Find }r\\text{ that minimizes the TOTAL surface area }S = 2\\pi r^2 + 2\\pi r h.\\ \\text{(3 dp)}",
+      "answer": 5.419,
+      "tolerance": 0.01,
+      "hints": [
+        "From $V = \\pi r^2 h = 1000$: $h = \\dfrac{1000}{\\pi r^2}$.",
+        "Substitute: $S(r) = 2\\pi r^2 + \\dfrac{2000}{r}$.",
+        "$S'(r) = 4\\pi r - \\dfrac{2000}{r^2} = 0 \\Rightarrow r^3 = \\dfrac{500}{\\pi}$.",
+        "$r = \\sqrt[3]{500/\\pi} \\approx 5.419$ cm."
+      ],
+      "explanation": "Substitute the volume constraint into the surface area: $h = 1000/(\\pi r^2)$, so $S(r) = 2\\pi r^2 + 2\\pi r \\cdot \\dfrac{1000}{\\pi r^2} = 2\\pi r^2 + \\dfrac{2000}{r}$. $S'(r) = 4\\pi r - \\dfrac{2000}{r^2} = 0 \\Rightarrow r^3 = \\dfrac{500}{\\pi} \\approx 159.15$, so $r \\approx 5.42$ cm. (At this $r$, you can also check $h = 2r$ — the classic 'optimal cylinder has height = diameter' result.)",
+      "steps": [
+        "**Identify constraint and objective.** Constraint: $V = \\pi r^2 h = 1000$ (fixed). Objective: $S = 2\\pi r^2 + 2\\pi r h$ (minimize). Two unknowns; eliminate one using the constraint.",
+        "**Solve constraint for $h$.** $h = \\dfrac{1000}{\\pi r^2}$. (Choosing to solve for $h$ rather than $r$ is the easier path — keeps the simpler variable $r$.)",
+        "**Substitute into $S$.** $S = 2\\pi r^2 + 2\\pi r \\cdot \\dfrac{1000}{\\pi r^2} = 2\\pi r^2 + \\dfrac{2000}{r}$. Now a one-variable function — ready for calculus.",
+        "**Recognize structure.** This is $ar^2 + b/r$ — a 'quadratic + reciprocal' pattern. Like 'linear + reciprocal', the function blows up at $r \\to 0$ and $r \\to \\infty$, so the critical point inside the domain MUST be a minimum.",
+        "**Differentiate.** $S'(r) = 4\\pi r - \\dfrac{2000}{r^2}$.",
+        "**Equate to zero.** $4\\pi r = \\dfrac{2000}{r^2} \\Rightarrow 4\\pi r^3 = 2000 \\Rightarrow r^3 = \\dfrac{500}{\\pi}$.",
+        "**Compute.** $r = \\sqrt[3]{500/\\pi} \\approx \\sqrt[3]{159.15} \\approx 5.419$ cm.",
+        "**Sanity check via classic result.** $h = 1000 / (\\pi r^2) = 1000 / (\\pi \\cdot 29.37) \\approx 10.84$ — almost exactly $2r$. So height ≈ diameter. The optimal closed cylinder is *as wide as it is tall* — a beautiful universal result worth recognizing."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q21",
+      "type": "numeric",
+      "promptTex": "y = x^3 + 3x^2.\\ \\text{Find the LOCAL MAX value of }y.",
+      "answer": 4,
+      "tolerance": 0,
+      "hints": [
+        "$y' = 3x^2 + 6x = 3x(x+2) = 0 \\Rightarrow x = 0, -2$.",
+        "$y'' = 6x + 6$. At $x = -2$: $y'' = -6 < 0$ → max.",
+        "$y(-2) = -8 + 12 = 4$."
+      ],
+      "explanation": "$y' = 3x^2 + 6x = 3x(x+2) = 0 \\Rightarrow x = 0$ or $x = -2$. $y'' = 6x + 6$. At $x = -2$: $y'' = -6 < 0$ → local max. At $x = 0$: $y'' = 6 > 0$ → local min. $y(-2) = -8 + 12 = 4$.",
+      "steps": [
+        "**Cubic with two critical points** — find both, classify both.",
+        "**Differentiate and factor.** $y'(x) = 3x^2 + 6x = 3x(x + 2)$. Roots: $x = 0$ or $x = -2$. (Factoring is always worth trying — much faster than the quadratic formula on simple cases.)",
+        "**Classify with $y'' = 6x + 6$.** At $x = -2$: $y'' = -6 < 0$ → MAX ✓. At $x = 0$: $y'' = 6 > 0$ → MIN.",
+        "**Plug $x = -2$ into ORIGINAL $y$.** $y(-2) = (-2)^3 + 3(-2)^2 = -8 + 12 = 4$.",
+        "**Shape check.** Positive-leading-coefficient cubic: left critical point ($x = -2$) is the max, right ($x = 0$) is the min. ✓"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q22",
+      "type": "numeric",
+      "promptTex": "\\text{Largest possible PERIMETER of a rectangle inscribed in a circle of radius 6.}\\\\\\text{(2 decimal places)}",
+      "answer": 33.94,
+      "tolerance": 0.1,
+      "hints": [
+        "Inscribed rectangle has diagonal = 12 (diameter). So $x^2 + y^2 = 144$.",
+        "Maximize $P = 2x + 2y = 2x + 2\\sqrt{144 - x^2}$.",
+        "$P' = 2 - \\dfrac{2x}{\\sqrt{144-x^2}} = 0 \\Rightarrow x = \\sqrt{144-x^2} \\Rightarrow x = 6\\sqrt{2}$.",
+        "Both sides $6\\sqrt{2}$; perimeter $= 4 \\cdot 6\\sqrt{2} = 24\\sqrt{2} \\approx 33.94$."
+      ],
+      "explanation": "Diagonal of inscribed rectangle = diameter = 12. If sides are $x, y$: $x^2 + y^2 = 144$. Maximize perimeter $P = 2x + 2y$. Substitute $y = \\sqrt{144 - x^2}$ and differentiate: critical point at $x = y = 6\\sqrt{2}$ — again the rectangle is a square (just like for maximum area). Max perimeter $= 4 \\cdot 6\\sqrt{2} = 24\\sqrt{2} \\approx 33.94$.",
+      "steps": [
+        "**Recognize the setup.** Same rectangle-in-circle structure as Q6 — but the objective is PERIMETER, not area. Same constraint, different objective.",
+        "**Constraint.** Diagonal = diameter = $12$, so $x^2 + y^2 = 144$.",
+        "**Express the objective.** Perimeter $P = 2x + 2y$. Reduce to one variable: $y = \\sqrt{144 - x^2}$, so $P(x) = 2x + 2\\sqrt{144 - x^2}$.",
+        "**Differentiate.** Chain rule on the square root: $P'(x) = 2 + 2 \\cdot \\dfrac{-2x}{2\\sqrt{144 - x^2}} = 2 - \\dfrac{2x}{\\sqrt{144 - x^2}}$.",
+        "**Equate to zero.** $2 = \\dfrac{2x}{\\sqrt{144 - x^2}} \\Rightarrow \\sqrt{144 - x^2} = x$.",
+        "**Square both sides** (legitimate since both are positive): $144 - x^2 = x^2 \\Rightarrow 2x^2 = 144 \\Rightarrow x^2 = 72 \\Rightarrow x = 6\\sqrt{2}$.",
+        "**Find $y$.** $y = \\sqrt{144 - 72} = \\sqrt{72} = 6\\sqrt{2} = x$. Again the rectangle is a SQUARE — symmetry triumphs.",
+        "**Compute max perimeter.** $P = 2 \\cdot 6\\sqrt{2} + 2 \\cdot 6\\sqrt{2} = 24\\sqrt{2} \\approx 24 \\cdot 1.4142 \\approx 33.94$.",
+        "**Pattern.** For ANY symmetric objective (area, perimeter, $x + y$, $xy$, $x^2 + y^2$) over a circle, the answer is the SQUARE configuration. Recognize this and you save derivation time."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q23",
+      "type": "multiple-choice",
+      "prompt": "After solving $y'(x) = 0$, you find a critical point $x_0$. Which of the following CONFIRMS it is a local minimum?",
+      "choices": [
+        "$y(x_0) < 0$.",
+        "$y''(x_0) > 0$ (the second derivative is positive).",
+        "$x_0 > 0$.",
+        "$y'(x_0) > 0$ on the left of $x_0$."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Second derivative tells you concavity.",
+        "Concave up = bowl shape = local minimum."
+      ],
+      "explanation": "Second derivative test: $y''(x_0) > 0$ means concave UP (bowl-shaped) → local minimum. $y''(x_0) < 0$ means concave DOWN (frown-shaped) → local maximum. (Option (d) is wrong because if $y' > 0$ on the LEFT, the curve was INCREASING into $x_0$ — meaning $x_0$ is a local MAX, not min.)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q24",
+      "type": "numeric",
+      "promptTex": "\\text{A farmer has 100 m of fence to enclose a rectangular pen against a straight river.}\\\\\\text{(One side is the river; no fence needed there.)}\\\\\\text{What is the maximum area he can enclose (m}^2\\text{)?}",
+      "answer": 1250,
+      "tolerance": 0,
+      "hints": [
+        "Three sides of fence: one length $L$ + two widths $W$. So $L + 2W = 100$.",
+        "Area $A = LW = (100 - 2W) \\cdot W = 100W - 2W^2$.",
+        "$A' = 100 - 4W = 0 \\Rightarrow W = 25$, $L = 50$.",
+        "Max area $= 50 \\cdot 25 = 1250$ m²."
+      ],
+      "explanation": "Constraint (no fence on river side): $L + 2W = 100$, so $L = 100 - 2W$. Area: $A(W) = LW = (100-2W)W = 100W - 2W^2$. $A'(W) = 100 - 4W = 0 \\Rightarrow W = 25$. Then $L = 50$, and max area $= 50 \\cdot 25 = 1250$ m². (Note: without the river, you'd want a square — but with one free side, the long side is TWICE the short side.)",
+      "steps": [
+        "**Recognize the twist.** This is *not* the symmetric perimeter-rectangle problem. ONE side is the river — no fence is needed on that side. So the constraint isn't the full perimeter; it's only THREE sides.",
+        "**Identify which sides need fence.** Two widths ($W$) and one length ($L$) — total $L + 2W = 100$.",
+        "**Solve constraint for one variable.** $L = 100 - 2W$.",
+        "**Express objective.** $A(W) = L \\cdot W = (100 - 2W) \\cdot W = 100W - 2W^2$.",
+        "**Differentiate and equate.** $A'(W) = 100 - 4W = 0 \\Rightarrow W = 25$. Then $L = 100 - 50 = 50$.",
+        "**Compute.** Max area $= 50 \\cdot 25 = 1250$ m².",
+        "**Note the asymmetry.** $L = 2W$ — long side is TWICE the short side. (Compare to the symmetric problem with all 4 sides fenced, where $L = W$.) Removing one constraint changed the answer's shape — a useful lesson about how problems with 'free boundaries' behave differently from fully constrained ones."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q25",
+      "type": "numeric",
+      "promptTex": "\\text{Cone inscribed in a sphere of radius }R = 3.\\ \\text{Max VOLUME of cone? (2 decimal places)}",
+      "answer": 33.51,
+      "tolerance": 0.1,
+      "hints": [
+        "Let the cone's height be $h$. Its base radius $r$ satisfies $r^2 = h(2R - h) = h(6-h)$.",
+        "Volume: $V = \\tfrac{1}{3}\\pi r^2 h = \\tfrac{\\pi}{3} h^2(6 - h)$.",
+        "$V' = \\tfrac{\\pi}{3}(12h - 3h^2) = \\pi h(4 - h) = 0 \\Rightarrow h = 4$.",
+        "$V_{\\max} = \\dfrac{32\\pi}{3} \\approx 33.51$."
+      ],
+      "explanation": "Set up: cone apex at the top of the sphere; height $h$ measured downward; base parallel to the equator. Chord geometry gives base radius $r^2 = h(2R-h)$. With $R = 3$: $r^2 = h(6-h)$. Volume: $V(h) = \\tfrac{\\pi}{3} h^2 (6 - h) = \\tfrac{\\pi}{3}(6h^2 - h^3)$. $V'(h) = \\pi h(4-h) = 0 \\Rightarrow h = 4$. Plug back: $V_{\\max} = \\tfrac{\\pi}{3}(96 - 64) = \\tfrac{32\\pi}{3} \\approx 33.51$. (General fact: max cone height inside a sphere is $\\tfrac{4R}{3}$.)",
+      "steps": [
+        "**Visualize the geometry.** Set up coordinates with sphere center at origin. Place the cone's apex at the top of the sphere $(0, R)$ pointing down. The cone's base — a horizontal circle — sits somewhere inside the sphere. Quick sketch helps.",
+        "**Introduce variables.** Let $h$ = height of cone (apex to base, measured downward). $r$ = base radius.",
+        "**Find the geometric constraint.** The base circle is a horizontal cross-section of the sphere. If the base is at height $R - h$ below the apex — that is, at $y$-coordinate $R - h$ — then by Pythagoras in the sphere's vertical cross-section: $r^2 = R^2 - (R - h)^2 = R^2 - R^2 + 2Rh - h^2 = h(2R - h)$. With $R = 3$: $r^2 = h(6 - h)$.",
+        "**Express objective in one variable.** $V = \\tfrac{1}{3}\\pi r^2 h = \\tfrac{1}{3}\\pi \\cdot h(6-h) \\cdot h = \\tfrac{\\pi}{3}h^2(6 - h) = \\tfrac{\\pi}{3}(6h^2 - h^3)$.",
+        "**Differentiate.** $V'(h) = \\tfrac{\\pi}{3}(12h - 3h^2) = \\pi h (4 - h)$.",
+        "**Equate to zero.** $h = 0$ (cone flattens to a point — trivial minimum) or $h = 4$.",
+        "**Choose the meaningful solution.** $h = 4$. Find $r^2 = 4 \\cdot 2 = 8$, so $r = 2\\sqrt{2}$.",
+        "**Compute the maximum volume.** $V = \\tfrac{\\pi}{3} \\cdot 8 \\cdot 4 = \\tfrac{32\\pi}{3} \\approx 33.51$ cubic units.",
+        "**Beautiful general result.** For a sphere of radius $R$, the inscribed cone of maximum volume has height $\\tfrac{4R}{3}$ — *NOT* the diameter $2R$. The optimal cone is short and wide, not tall and thin."
+      ],
+      "difficulty": "hard"
+    }
+  ]
+}

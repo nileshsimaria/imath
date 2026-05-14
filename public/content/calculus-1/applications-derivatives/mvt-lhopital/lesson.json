@@ -1,0 +1,122 @@
+{
+  "title": "Mean Value Theorem & L'Hôpital's Rule",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Two important theorems with very different uses. The **Mean Value Theorem** is structural — it underlies many proofs in calculus. **L'Hôpital's Rule** is a practical tool — it solves indeterminate-form limits that algebraic methods can't crack."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. The Mean Value Theorem"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Mean Value Theorem (MVT)",
+      "body": "If $f$ is **continuous on $[a, b]$ and differentiable on $(a, b)$**, then there exists at least one $c$ in $(a, b)$ such that $f'(c) = \\dfrac{f(b) - f(a)}{b - a}$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Plain English:** somewhere in the interval, the instantaneous slope (tangent) equals the average slope (secant) over the whole interval.",
+        "**Driving analogy:** if you average 60 mph over a trip, your speedometer must have read exactly 60 at some moment.",
+        "**Example.** $f(x) = x^2$ on $[1, 4]$. Average rate: $(16 - 1)/3 = 5$. MVT says some $c$ in $(1, 4)$ has $f'(c) = 5$. $f'(x) = 2x$, so $2c = 5 \\Rightarrow c = 2.5$. Check: $2.5 \\in (1, 4)$ ✓."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. Rolle's Theorem (Special Case)"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Rolle's Theorem",
+      "body": "If $f$ is continuous on $[a, b]$, differentiable on $(a, b)$, AND $f(a) = f(b)$, then there exists $c$ in $(a, b)$ with $f'(c) = 0$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "Same idea: if you start and end at the same height, you must have a 'flat moment' somewhere in between.",
+        "Useful for proving roots and counting zeros."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. Why MVT Matters"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "MVT is the foundation for many calculus theorems:",
+        "**Increasing/decreasing test:** if $f' > 0$ on an interval, then $f$ is increasing there. **Why?** For any $a < b$, MVT gives $f(b) - f(a) = f'(c)(b - a)$ for some $c$. If $f' > 0$, this is positive → $f(b) > f(a)$.",
+        "**Constant-derivative theorem:** if $f' = 0$ everywhere on an interval, $f$ is constant.",
+        "**Speed-from-distance bounds:** estimate average speed from instantaneous speed bounds."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. L'Hôpital's Rule"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "L'Hôpital's Rule",
+      "body": "If $\\lim_{x \\to a} f(x)/g(x)$ has indeterminate form $0/0$ or $\\infty/\\infty$, AND $f$ and $g$ are differentiable near $a$ with $g'(x) \\neq 0$, then: $\\displaystyle\\lim_{x \\to a} \\dfrac{f(x)}{g(x)} = \\lim_{x \\to a} \\dfrac{f'(x)}{g'(x)}$ — provided the right-hand limit exists or is $\\pm\\infty$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "**The rule:** when you get $0/0$ (or $\\infty/\\infty$), differentiate the **numerator and denominator separately** (NOT using the quotient rule!) and try the limit again."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 5. Worked Examples"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Example.** $\\displaystyle\\lim_{x \\to 0} \\dfrac{\\sin x}{x}$.",
+        "Direct sub: $0/0$. Apply L'Hôpital: $\\lim_{x \\to 0} \\dfrac{\\cos x}{1} = 1$.",
+        "(This is the famous limit that powered the proof of $(\\sin x)' = \\cos x$.)",
+        "**Example.** $\\displaystyle\\lim_{x \\to \\infty} \\dfrac{\\ln x}{x}$.",
+        "Direct sub: $\\infty/\\infty$. L'Hôpital: $\\lim_{x \\to \\infty} \\dfrac{1/x}{1} = 0$.",
+        "(Shows that $\\ln x$ grows much slower than $x$.)",
+        "**Example — apply twice.** $\\displaystyle\\lim_{x \\to \\infty} \\dfrac{x^2}{e^x}$.",
+        "$\\infty/\\infty$. L'Hôpital: $\\lim \\dfrac{2x}{e^x}$ — still $\\infty/\\infty$.",
+        "Apply again: $\\lim \\dfrac{2}{e^x} = 0$.",
+        "(Polynomials lose to exponentials at infinity.)"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "L'Hôpital warning",
+      "body": "**Only use it on indeterminate forms.** If you mindlessly apply L'Hôpital to a non-indeterminate form, you'll get the wrong answer. **Always check that direct substitution gives 0/0 or ∞/∞ first.**"
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 6. Other Indeterminate Forms"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "L'Hôpital handles $0/0$ and $\\infty/\\infty$ directly. Other indeterminate forms ($0 \\cdot \\infty$, $\\infty - \\infty$, $0^0$, $\\infty^0$, $1^\\infty$) need to be **rewritten** as $0/0$ or $\\infty/\\infty$ first.",
+        "**Example — $0 \\cdot \\infty$.** $\\lim_{x \\to 0^+} x \\ln x$.",
+        "Rewrite: $x \\ln x = \\dfrac{\\ln x}{1/x}$ (now $-\\infty/\\infty$).",
+        "L'Hôpital: $\\lim \\dfrac{1/x}{-1/x^2} = \\lim (-x) = 0$.",
+        "**Example — $1^\\infty$.** $\\lim_{n \\to \\infty} (1 + 1/n)^n = e$ (this is the famous definition of $e$ from a calculus angle)."
+      ]
+    }
+  ]
+}

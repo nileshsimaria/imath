@@ -1,0 +1,145 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "prompt": "Color Pascal's triangle black for odd, white for even. What fractal pattern emerges?",
+      "choices": [
+        "Koch snowflake",
+        "Sierpinski triangle",
+        "Mandelbrot set",
+        "Random noise"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "The shapes match. Look at the upper triangle.",
+        "It's the Sierpinski triangle."
+      ],
+      "explanation": "Pascal mod 2 produces the Sierpinski triangle.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Is } \\binom{5}{2} = 10 \\text{ even or odd?}",
+      "choices": [
+        "Even",
+        "Odd"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "$\\binom{5}{2} = 10$.",
+        "$10$ is even."
+      ],
+      "explanation": "$\\binom{5}{2} = 10$, even.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Use Lucas's theorem (mod 2) on } \\binom{7}{3}. \\\\ 7 = 111_2, \\, 3 = 011_2. \\text{ Is } \\binom{7}{3} \\text{ odd or even?}",
+      "choices": [
+        "Even",
+        "Odd"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Lucas mod 2: $\\binom{n}{k}$ is odd iff every 1-bit of $k$ is matched by a 1-bit of $n$.",
+        "$3$'s bits ($011$) are all matched by $7$'s ($111$). ODD."
+      ],
+      "explanation": "$7 = 111_2$, $3 = 011_2$. Every 1-bit of $3$ is a 1-bit of $7$, so $\\binom{7}{3}$ is odd. (Check: $\\binom{7}{3} = 35$, odd. ✓)",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** Lucas mod 2: $\\binom{n}{k}$ is odd iff every 1-bit of $k$ is matched by a 1-bit of $n$."
+        },
+        {
+          "text": "$3$'s bits ($011$) are all matched by $7$'s ($111$). ODD."
+        },
+        {
+          "text": "**Solution.** $7 = 111_2$, $3 = 011_2$. Every 1-bit of $3$ is a 1-bit of $7$, so $\\binom{7}{3}$ is odd. (Check: $\\binom{7}{3} = 35$, odd. ✓)"
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{How many entries in row 4 of Pascal's triangle are ODD?} \\\\ \\text{(Row 4: } 1, 4, 6, 4, 1)",
+      "answer": 2,
+      "tolerance": 0.001,
+      "hints": [
+        "List parities: 1 (odd), 4 (even), 6 (even), 4 (even), 1 (odd).",
+        "Two odds."
+      ],
+      "explanation": "Only $1$ and $1$ are odd. Total: 2 odd entries.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{Row 4 of Pascal has 5 entries; only 2 are odd. Compute the ratio odd/total.} \\\\ \\text{Round to 2 decimals.}",
+      "answer": 0.4,
+      "tolerance": 0.01,
+      "hints": [
+        "2 odd, 5 total.",
+        "$2/5 = 0.4$."
+      ],
+      "explanation": "$2/5 = 0.4$.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "prompt": "What's the connection between Pascal's recurrence and XOR?",
+      "choices": [
+        "Pascal mod 2 has $\\binom{n}{k} \\equiv \\binom{n-1}{k-1} + \\binom{n-1}{k} \\pmod 2$, which IS XOR.",
+        "Pascal's rule doesn't use XOR.",
+        "XOR is only used for binary numbers.",
+        "Pascal's triangle has no relation to XOR."
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Mod 2 addition: 1+1=0, 0+0=0, 1+0=1, 0+1=1.",
+        "That's exactly XOR."
+      ],
+      "explanation": "Addition mod 2 IS XOR. So Pascal's triangle mod 2 = output of XOR cellular automaton starting from a single 1.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "prompt": "If you color Pascal's triangle by entries mod 3 instead of mod 2, what kind of pattern emerges?",
+      "choices": [
+        "Same as mod 2 — Sierpinski triangle.",
+        "A different fractal with self-similar structure.",
+        "Random pattern.",
+        "A solid triangle."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Mod $p$ for each prime gives a different self-similar pattern.",
+        "Still fractal, different geometry."
+      ],
+      "explanation": "Coloring by mod $p$ for any prime $p$ gives a self-similar fractal pattern. Different primes give different fractals.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "prompt": "Which best describes the deep meaning of 'Pascal mod 2 = Sierpinski'?",
+      "choices": [
+        "Just a fun visual coincidence.",
+        "Two different definitions (recursive triangle vs. coloring binomial coefficients) describe the SAME mathematical object.",
+        "It works only for the first few rows.",
+        "The Sierpinski triangle was built from Pascal's triangle historically."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Different constructions, same shape.",
+        "A unification — that's powerful."
+      ],
+      "explanation": "It's a deep example of how very different definitions can describe the same underlying object — a recurring theme in math.",
+      "difficulty": "medium"
+    }
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{Sum of interior angles of a hexagon } (n = 6).",
+      "answer": 720,
+      "tolerance": 0,
+      "hints": [
+        "$(n - 2) \\cdot 180°$.",
+        "$(6 - 2) \\cdot 180$."
+      ],
+      "explanation": "$(6 - 2) \\cdot 180 = 4 \\cdot 180 = 720°$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{Each interior angle of a regular pentagon.}",
+      "answer": 108,
+      "tolerance": 0,
+      "hints": [
+        "Interior angle sum is $(5 - 2) \\cdot 180 = 540°$.",
+        "Divide by $5$."
+      ],
+      "explanation": "Sum: $540°$. Each angle: $540 / 5 = 108°$.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** Interior angle sum is $(5 - 2) \\cdot 180 = 540°$."
+        },
+        {
+          "text": "Divide by $5$."
+        },
+        {
+          "text": "**Solution.** Sum: $540°$. Each angle: $540 / 5 = 108°$."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{The exterior angles of any convex polygon always sum to:}",
+      "answer": 360,
+      "tolerance": 0,
+      "hints": [
+        "Walking around the polygon, you turn through one full revolution.",
+        "How many degrees in a full revolution?"
+      ],
+      "explanation": "$360°$. Always — for *any* convex polygon, regardless of $n$. (Walking around the boundary once = a full turn.)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Each exterior angle of a regular nonagon } (n = 9).",
+      "answer": 40,
+      "tolerance": 0,
+      "hints": [
+        "Sum of exterior angles is 360°.",
+        "Divide by $n = 9$."
+      ],
+      "explanation": "$360 / 9 = 40°$. So each interior angle is $180 - 40 = 140°$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{A regular polygon has each interior angle measuring } 140°. \\\\ \\text{How many sides does it have?}",
+      "answer": 9,
+      "tolerance": 0,
+      "hints": [
+        "Each exterior angle is $180 - 140 = 40°$.",
+        "Number of sides = $360 / 40$."
+      ],
+      "explanation": "Each exterior angle: $180 - 140 = 40°$. Number of sides: $360 / 40 = 9$. So it's a regular **nonagon**.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** Each exterior angle is $180 - 140 = 40°$."
+        },
+        {
+          "text": "Number of sides = $360 / 40$."
+        },
+        {
+          "text": "**Solution.** Each exterior angle: $180 - 140 = 40°$. Number of sides: $360 / 40 = 9$. So it's a regular **nonagon**."
+        }
+      ]
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{What is the sum of interior angles of a hexagon (6 sides)?}",
+      "answer": 720,
+      "tolerance": 0,
+      "hints": [
+        "Sum $= (n - 2) \\cdot 180°$.",
+        "$(6 - 2) \\cdot 180 = 720$."
+      ],
+      "explanation": "$(6 - 2) \\cdot 180 = 720°$.",
+      "steps": [
+        "Polygon interior-angle sum: $(n - 2) \\cdot 180°$.",
+        "For a hexagon, $n = 6$: $(6 - 2) \\cdot 180° = 4 \\cdot 180° = 720°$."
+      ],
+      "id": "q6",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{The interior angles of a polygon sum to } 1260°. \\\\ \\text{How many sides does it have?}",
+      "answer": 9,
+      "tolerance": 0,
+      "hints": [
+        "$(n - 2) \\cdot 180 = 1260$. Solve for $n$.",
+        "$n - 2 = 7$."
+      ],
+      "explanation": "$(n - 2) \\cdot 180 = 1260 \\Rightarrow n - 2 = 7 \\Rightarrow n = 9$ (nonagon).",
+      "steps": [
+        "Set up: $(n - 2) \\cdot 180 = 1260$.",
+        "Divide both sides by 180: $n - 2 = 7$.",
+        "$n = 9$. (A nonagon.)"
+      ],
+      "id": "q7",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Find the measure of one interior angle of a regular pentagon.}",
+      "answer": 108,
+      "tolerance": 0,
+      "hints": [
+        "Sum: $(5-2) \\cdot 180 = 540$. Each = $540/5$.",
+        "$108°$."
+      ],
+      "explanation": "Sum $= 540°$. Each interior angle of a regular polygon = sum / $n$ = $540 / 5 = 108°$.",
+      "steps": [
+        "Sum of interior angles of a pentagon: $(5 - 2) \\cdot 180° = 540°$.",
+        "Regular polygon → all interior angles equal.",
+        "Each $= 540 / 5 = 108°$."
+      ],
+      "id": "q8",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Each exterior angle of a regular polygon is } 24°. \\\\ \\text{How many sides does the polygon have?}",
+      "answer": 15,
+      "tolerance": 0,
+      "hints": [
+        "Exterior angles of any polygon sum to $360°$.",
+        "$n = 360 / 24 = 15$."
+      ],
+      "explanation": "Exterior angles sum to $360°$. For a regular polygon, each $= 360/n$. So $360/24 = 15$ sides.",
+      "steps": [
+        "**Key fact:** exterior angles of any convex polygon sum to $360°$ (not $(n-2) \\cdot 180$).",
+        "Regular polygon → all exterior angles equal.",
+        "Each $= 360°/n = 24°$, so $n = 360/24 = 15$."
+      ],
+      "id": "q9",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{The interior angle of a regular polygon is } 144°. \\\\ \\text{How many sides does it have?}",
+      "answer": 10,
+      "tolerance": 0,
+      "hints": [
+        "Exterior angle = $180 - 144 = 36°$.",
+        "$n = 360 / 36 = 10$."
+      ],
+      "explanation": "Exterior $= 180 - 144 = 36°$. $n = 360/36 = 10$ sides.",
+      "steps": [
+        "Interior + exterior = $180°$ at each vertex.",
+        "Exterior angle: $180° - 144° = 36°$.",
+        "$n = 360° / 36° = 10$."
+      ],
+      "id": "q10",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Three angles of a quadrilateral are } 80°, 95°, \\text{ and } 110°. \\\\ \\text{Find the fourth.}",
+      "answer": 75,
+      "tolerance": 0,
+      "hints": [
+        "Quadrilateral interior sum: $360°$.",
+        "$360 - 80 - 95 - 110 = ?$"
+      ],
+      "explanation": "$360 - 80 - 95 - 110 = 75°$.",
+      "steps": [
+        "Quadrilateral interior-angle sum: $(4 - 2) \\cdot 180 = 360°$.",
+        "Subtract the known angles: $360° - 80° - 95° - 110° = 75°$."
+      ],
+      "id": "q11",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{What is the sum of the exterior angles of a regular dodecagon (12 sides)?}",
+      "answer": 360,
+      "tolerance": 0,
+      "hints": [
+        "Exterior angle sum is the same for all convex polygons.",
+        "$360°$."
+      ],
+      "explanation": "Exterior angles of any convex polygon sum to $360°$, regardless of $n$.",
+      "steps": [
+        "**Counterintuitive but true:** the sum of exterior angles of any convex polygon is **always $360°$**, no matter how many sides.",
+        "(Imagine walking around the polygon's boundary. You make a full $360°$ turn — that's the sum.)"
+      ],
+      "id": "q12",
+      "difficulty": "easy"
+    }
+  ]
+}

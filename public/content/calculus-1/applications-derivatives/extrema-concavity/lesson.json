@@ -1,0 +1,123 @@
+{
+  "title": "Extrema, Concavity & Curve Sketching",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Derivatives let you find where a function is **going up or down** ($f' > 0$ or $f' < 0$), where it has **peaks and valleys**, and how it's **curving**. Together these tools let you sketch any function's graph from its formula."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 1. Critical Points"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "A **critical point** of $f$ is an $x$ in $f$'s domain where either:",
+        "**$f'(x) = 0$** (horizontal tangent), or",
+        "**$f'(x)$ doesn't exist** (corner, cusp, vertical tangent).",
+        "**Why care?** Local maxima and minima can ONLY occur at critical points (or at the endpoints of a closed interval).",
+        "**Example.** $f(x) = x^3 - 3x$. $f'(x) = 3x^2 - 3 = 0 \\Rightarrow x = \\pm 1$. Critical points at $x = 1$ and $x = -1$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Critical point ≠ extremum",
+      "body": "Every local max/min IS a critical point, but not every critical point is an extremum. Example: $f(x) = x^3$ at $x = 0$. $f'(0) = 0$ (critical), but it's just a flat spot — not a max or min."
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 2. Increasing/Decreasing — First Derivative Test"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "**$f'(x) > 0$** on an interval → $f$ is **increasing** there.",
+        "**$f'(x) < 0$** on an interval → $f$ is **decreasing** there.",
+        "**At a critical point, check the sign of $f'$ on either side:**",
+        "**$+$ then $-$ (positive going to negative)** → local **maximum**.",
+        "**$-$ then $+$ (negative going to positive)** → local **minimum**.",
+        "**Same sign on both sides** → not an extremum.",
+        "**Example.** $f(x) = x^3 - 3x$, $f'(x) = 3x^2 - 3$. $f'(-2) = 9 > 0$, $f'(0) = -3 < 0$, $f'(2) = 9 > 0$.",
+        "Sign chart: $+ \\,|\\, - \\,|\\, +$ around critical points $-1, 1$.",
+        "At $x = -1$: $+$ → $-$ → **local max**.",
+        "At $x = 1$: $-$ → $+$ → **local min**."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 3. Concavity — Second Derivative"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "The **second derivative** $f''(x) = (f'(x))'$ tells you about **concavity**:",
+        "**$f''(x) > 0$** → **concave up** (cup-shaped, ∪).",
+        "**$f''(x) < 0$** → **concave down** (cap-shaped, ∩).",
+        "**Inflection point:** where concavity changes — usually where $f''(x) = 0$ AND the sign of $f''$ flips.",
+        "**Example.** $f(x) = x^3 - 3x$. $f''(x) = 6x$.",
+        "$f''(x) > 0$ for $x > 0$ → concave up.",
+        "$f''(x) < 0$ for $x < 0$ → concave down.",
+        "Inflection at $x = 0$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 4. Second Derivative Test for Extrema"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Second Derivative Test",
+      "body": "At a critical point $c$ with $f'(c) = 0$: **$f''(c) > 0$** → local minimum (concave up). **$f''(c) < 0$** → local maximum (concave down). **$f''(c) = 0$** → inconclusive; use the first derivative test."
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Example.** $f(x) = x^3 - 3x$. $f''(x) = 6x$.",
+        "At $x = -1$: $f''(-1) = -6 < 0$ → **local max**.",
+        "At $x = 1$: $f''(1) = 6 > 0$ → **local min**.",
+        "Same conclusion as the first derivative test, often quicker."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "## 5. Curve Sketching — Putting It Together"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Recipe to sketch any nice function:**",
+        "**1.** Find the domain. Note any vertical asymptotes (denominator zeros without cancellation) and horizontal asymptotes (limits at infinity).",
+        "**2.** Find x- and y-intercepts.",
+        "**3.** Compute $f'$. Find critical points. Determine increasing/decreasing intervals. Identify local maxima and minima.",
+        "**4.** Compute $f''$. Find inflection points. Determine concavity intervals.",
+        "**5.** Plot critical points, inflection points, asymptotes. Connect smoothly."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example — sketch $f(x) = x^3 - 3x^2 + 2$",
+        "**Intercepts.** $y$-int: $f(0) = 2$. (Skip x-intercepts — cubic, harder.)",
+        "**$f'(x) = 3x^2 - 6x = 3x(x - 2)$.** Zero at $x = 0, 2$.",
+        "**Sign chart:** $+ \\,|\\, - \\,|\\, +$ around 0 and 2.",
+        "$x = 0$: $+$ → $-$, local max. $f(0) = 2$.",
+        "$x = 2$: $-$ → $+$, local min. $f(2) = 8 - 12 + 2 = -2$.",
+        "**$f''(x) = 6x - 6 = 6(x - 1)$.** Zero at $x = 1$.",
+        "$f''(x) < 0$ for $x < 1$ (concave down), $> 0$ for $x > 1$ (concave up). Inflection at $x = 1$, $f(1) = 0$.",
+        "**Sketch:** rises through $(0, 2)$ (local max), falls (concave down), through inflection $(1, 0)$ (changes to concave up), continues falling to local min $(2, -2)$, rises after."
+      ]
+    }
+  ]
+}

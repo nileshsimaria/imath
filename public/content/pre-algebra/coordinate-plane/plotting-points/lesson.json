@@ -1,0 +1,80 @@
+{
+  "title": "Plotting Points",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "A **coordinate plane** is two number lines crossing at right angles. The horizontal one is the **x-axis**; the vertical one is the **y-axis**. They cross at the **origin**, which is the point $(0, 0)$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Anatomy of a coordinate",
+        "Every point on the plane has an *address* — two numbers in parentheses, like $(3, 4)$. The first number is the **x-coordinate** (how far right or left); the second is the **y-coordinate** (how far up or down)."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "(x, y) = (\\text{right/left}, \\text{up/down})"
+    },
+    {
+      "type": "callout",
+      "title": "x first, y second",
+      "body": "Always — alphabetical order, in the order you'd read it. The point $(3, 4)$ is *not* the same as $(4, 3)$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### How to plot a point",
+        "**To plot $(3, 4)$:**",
+        "Start at the origin $(0, 0)$.",
+        "Move 3 units to the **right** (positive x).",
+        "Move 4 units **up** (positive y).",
+        "Mark the spot.",
+        "**For $(-2, 3)$:** start at origin, move 2 left (x is negative), 3 up. **For $(1, -2)$:** move 1 right, 2 down. **For $(-3, -1)$:** move 3 left, 1 down."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "coordinate-plane",
+      "config": {
+        "mode": "plot-points",
+        "points": [
+          [
+            3,
+            4
+          ],
+          [
+            -2,
+            3
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            -3,
+            -1
+          ]
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "Each colored point above is plotted from its coordinates. Notice the dotted lines — they trace the path you'd take from the origin: across first, then up or down."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Points on the axes",
+      "body": "If a coordinate is $0$, the point sits on an axis. $(5, 0)$ is on the x-axis. $(0, -3)$ is on the y-axis. $(0, 0)$ is the origin itself."
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "Plot $(x, y)$ by going $x$ steps right (or left if negative), then $y$ steps up (or down if negative). x first, y second. The origin is your starting point."
+    }
+  ]
+}

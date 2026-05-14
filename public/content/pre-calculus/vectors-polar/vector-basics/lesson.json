@@ -1,0 +1,111 @@
+{
+  "title": "Vector Basics",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Some quantities have only a *size* — temperature, distance, mass. We call those **scalars**. Other quantities have a *size and a direction* — velocity, force, displacement. Those are **vectors**, and they're what physics, engineering, computer graphics, and pretty much any 2D/3D math runs on."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Notation",
+        "A 2D vector with horizontal component $a$ and vertical component $b$ is written:",
+        "**Component form**: $\\langle a, b \\rangle$.",
+        "**Bracket-free**: $a\\mathbf{i} + b\\mathbf{j}$, where $\\mathbf{i}$ and $\\mathbf{j}$ are unit vectors along the x- and y-axes.",
+        "**Bold or arrow**: $\\mathbf{v}$ or $\\vec{v}$ to distinguish from scalars."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Magnitude and direction",
+        "The **magnitude** $|\\mathbf{v}|$ is the vector's length — the Pythagorean theorem on the components:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "|\\mathbf{v}| = \\sqrt{a^2 + b^2}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "The **direction** is the angle $\\theta$ from the positive x-axis (counterclockwise):"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\theta = \\arctan\\left(\\dfrac{b}{a}\\right)"
+    },
+    {
+      "type": "callout",
+      "title": "Try the widget",
+      "body": "Drag the sliders for $u_x, u_y, v_x, v_y$ — watch the magnitudes and angles update. Set $\\mathbf{u} = \\langle 3, 4 \\rangle$ and notice $|\\mathbf{u}| = 5$ — the classic 3-4-5 triangle showing up again."
+    },
+    {
+      "type": "widget",
+      "kind": "vector-add",
+      "config": {
+        "ux": 3,
+        "uy": 1,
+        "vx": 1,
+        "vy": 3
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Adding vectors",
+        "**Component-wise.** Add the matching components:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\langle a, b \\rangle + \\langle c, d \\rangle = \\langle a + c, b + d \\rangle"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Geometrically — head to tail.** Draw $\\mathbf{u}$ from the origin. Draw $\\mathbf{v}$ from the head (tip) of $\\mathbf{u}$. The sum $\\mathbf{u} + \\mathbf{v}$ is the vector from the origin to the tip of the *translated* $\\mathbf{v}$. The widget above shows this — the dashed copy of $\\mathbf{v}$ starts where $\\mathbf{u}$ ends."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Scalar multiplication",
+        "Multiplying a vector by a scalar (just a number) scales its length and possibly flips its direction:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "k \\langle a, b \\rangle = \\langle ka, kb \\rangle"
+    },
+    {
+      "type": "text",
+      "md": [
+        "$|k\\mathbf{v}| = |k| \\cdot |\\mathbf{v}|$. If $k > 0$, direction is unchanged. If $k < 0$, direction reverses."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Unit vectors",
+      "body": "A **unit vector** has magnitude $1$. Any non-zero vector $\\mathbf{v}$ can be turned into a unit vector pointing the same direction by dividing by its magnitude: $\\hat{\\mathbf{v}} = \\dfrac{\\mathbf{v}}{|\\mathbf{v}|}$. Useful when you want just the *direction* without caring about the magnitude."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example",
+        "$\\mathbf{u} = \\langle 2, -1 \\rangle$, $\\mathbf{v} = \\langle -3, 5 \\rangle$. Find $\\mathbf{u} + \\mathbf{v}$, $|\\mathbf{u}|$, and $3\\mathbf{u}$.",
+        "$\\mathbf{u} + \\mathbf{v} = \\langle 2 + (-3), -1 + 5 \\rangle = \\langle -1, 4 \\rangle$.",
+        "$|\\mathbf{u}| = \\sqrt{4 + 1} = \\sqrt{5} \\approx 2.24$.",
+        "$3\\mathbf{u} = \\langle 6, -3 \\rangle$. Magnitude: $|3\\mathbf{u}| = \\sqrt{45} = 3\\sqrt{5}$ — exactly $3$ times the original magnitude, as expected."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "Vector = magnitude + direction. Components $\\langle a, b \\rangle$. Magnitude $\\sqrt{a^2 + b^2}$. Add component-wise (or head-to-tail geometrically). Multiply by a scalar to scale (and possibly flip). Divide by magnitude to get a unit vector."
+    }
+  ]
+}

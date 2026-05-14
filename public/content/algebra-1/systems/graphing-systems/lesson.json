@@ -1,0 +1,96 @@
+{
+  "title": "Solving Systems by Graphing",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "A **system of equations** is two or more equations sharing the same variables. A *solution* is a set of values that makes **every equation true at the same time**.",
+        "For two linear equations in two variables, the geometric picture is gorgeous: each equation is a line, and the solution is **wherever the lines cross**."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The graphing method",
+        "**1.** Graph both equations on the same coordinate plane.",
+        "**2.** Find the intersection point.",
+        "**3.** Read off its coordinates — that's the solution.",
+        "**4.** Check by plugging the values into both original equations."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Try it",
+        "Adjust the two lines below. The red dot marks where they meet — that's the system's solution. Slide one line until the dot lands on a nice integer point and watch the readout follow."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "coordinate-plane",
+      "config": {
+        "mode": "two-lines",
+        "line1": {
+          "m": 2,
+          "b": -1
+        },
+        "line2": {
+          "m": -1,
+          "b": 5
+        },
+        "mRange": [
+          -3,
+          3
+        ],
+        "bRange": [
+          -6,
+          6
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Three possible cases",
+        "Two lines in the plane can interact in only three ways:"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "One solution",
+      "body": "**Lines have different slopes.** They cross at exactly one point. The system has a single $(x, y)$ solution."
+    },
+    {
+      "type": "callout",
+      "title": "No solution",
+      "body": "**Lines are parallel** (same slope, different y-intercepts). They never meet. The system has *no values* that satisfy both."
+    },
+    {
+      "type": "callout",
+      "title": "Infinitely many solutions",
+      "body": "**The two equations describe the same line** (same slope and y-intercept). Every point on the line satisfies both equations."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked example",
+        "Solve the system:",
+        "$y = 2x - 1$",
+        "$y = -x + 5$",
+        "Both are already in slope-intercept form. The first has slope $2$ and y-intercept $-1$; the second has slope $-1$ and y-intercept $5$. Graph them — they cross at $(2, 3)$.",
+        "**Check.** Plug into the first: $y = 2(2) - 1 = 3$ ✓. Plug into the second: $y = -(2) + 5 = 3$ ✓.",
+        "**Solution: $(2, 3)$.**"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Limitations of graphing",
+      "body": "Graphing is great for *understanding* the geometry, but it's not always precise — non-integer intersections like $(2.7, -1.3)$ are hard to read off a graph. For exact answers, use **substitution** or **elimination** (the next two subtopics)."
+    },
+    {
+      "type": "callout",
+      "title": "Recap",
+      "body": "Graph both equations; the intersection is the solution. Three cases: one point (different slopes), parallel (no solution), same line (infinitely many). Always check your answer in both equations."
+    }
+  ]
+}

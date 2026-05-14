@@ -1,0 +1,150 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "prompt": "If today is Wednesday, what day is 14 days from today?",
+      "choices": [
+        "Wednesday",
+        "Thursday",
+        "Tuesday",
+        "Friday"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "$14 = 2 \\cdot 7$, so $14 \\bmod 7 = 0$.",
+        "Adding 0 days keeps the day-of-week the same."
+      ],
+      "explanation": "14 days = 2 weeks. No shift. Still Wednesday.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "prompt": "If today is Monday, what day is 100 days from today?",
+      "choices": [
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Sunday"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$100 \\bmod 7 = 2$ (since $100 = 14 \\cdot 7 + 2$).",
+        "Monday + 2 = Wednesday."
+      ],
+      "explanation": "$100 \\bmod 7 = 2$. Monday + 2 days = Wednesday.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{If } d = 4 \\text{ (Thursday) and we ask 'what day is it 60 days from now?', the answer day is } x. \\\\ \\text{Find } x \\text{ (0 = Sunday ... 6 = Saturday).}",
+      "answer": 1,
+      "tolerance": 0.001,
+      "hints": [
+        "$60 \\bmod 7 = 4$.",
+        "$4 + 4 = 8 \\bmod 7 = 1$ (Monday)."
+      ],
+      "explanation": "$60 \\bmod 7 = 4$. $4 + 4 = 8 \\equiv 1 \\pmod 7$. So the answer is 1 (Monday).",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "prompt": "How many days does a non-leap year shift the day of the week?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "7"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "365 days.",
+        "$365 \\bmod 7 = 1$."
+      ],
+      "explanation": "$365 = 52 \\cdot 7 + 1$, so $365 \\bmod 7 = 1$. Non-leap years shift the day-of-week by 1.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{If Jan 1 was a Sunday in a non-leap year, what day is Jan 1 of next year?}",
+      "answer": 1,
+      "tolerance": 0.001,
+      "hints": [
+        "Sunday = 0. Non-leap year shifts by 1.",
+        "$0 + 1 = 1$ (Monday)."
+      ],
+      "explanation": "Shift by 1 → Monday (= day 1).",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "prompt": "Today is Tuesday. The 1st of last month was 31 days ago. What day of the week was it?",
+      "choices": [
+        "Friday",
+        "Saturday",
+        "Sunday",
+        "Monday"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$31 \\bmod 7 = 3$.",
+        "Going backwards: Tuesday - 3 = Saturday."
+      ],
+      "explanation": "$31 \\bmod 7 = 3$. Tuesday - 3 days = Saturday.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{Compute: } 365 \\cdot 4 + 1 \\bmod 7\\text{. (Day-shift over 4 years with 1 leap year.)}",
+      "answer": 5,
+      "tolerance": 0.001,
+      "hints": [
+        "$365 \\cdot 4 = 1460$. Plus 1 = 1461.",
+        "$1461 = 208 \\cdot 7 + 5$. (Or: $365 \\bmod 7 = 1$, so $4 + 1 = 5$.)"
+      ],
+      "explanation": "$4 \\cdot 1 + 1 = 5$ (using $365 \\bmod 7 = 1$ and one extra day for the leap year). Verify: $1461 / 7 = 208.71...$, $1461 - 1456 = 5$. ✓",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Recognize the structure.** $365 \\cdot 4 + 1$ counts days over 4 years (with 1 leap year adding the extra day). We want this mod 7."
+        },
+        {
+          "text": "**Smarter approach: use modular arithmetic step by step instead of computing 1461 first.** Modular arithmetic respects multiplication and addition: $(a \\cdot b) \\bmod n = ((a \\bmod n) \\cdot (b \\bmod n)) \\bmod n$."
+        },
+        {
+          "text": "**Apply.** $365 \\bmod 7 = 1$ (since $365 = 52 \\cdot 7 + 1$). So $(365 \\cdot 4) \\bmod 7 \\equiv (1 \\cdot 4) = 4$. Add the leap-year extra day: $4 + 1 = 5$."
+        },
+        {
+          "text": "**Verify the brute force way.** $1461 = 208 \\cdot 7 + 5$ ✓."
+        },
+        {
+          "text": "**Lesson.** When numbers are large, don't compute the full product first — reduce mod $n$ at every step. Saves big arithmetic."
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "prompt": "Why does day-of-week arithmetic only care about the date modulo 7?",
+      "choices": [
+        "Because there are 7 letters in 'Tuesday'.",
+        "Because the calendar repeats exactly every 7 days.",
+        "Because 7 is prime.",
+        "Because of leap years."
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "A week is 7 days.",
+        "After 7 days the day-of-week loops back."
+      ],
+      "explanation": "The week is a 7-day cycle. Adding 7 days returns you to the same day-of-week. So only the remainder mod 7 matters for day-of-week shifts.",
+      "difficulty": "medium"
+    }
+  ]
+}

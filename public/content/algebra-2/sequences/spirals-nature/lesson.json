@@ -1,0 +1,74 @@
+{
+  "title": "Spirals & Nature",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### Fibonacci goes outside",
+        "Once you know to look, **Fibonacci numbers and the golden spiral appear all over the natural world.** Not because plants and animals 'know' the math, but because Fibonacci-like growth produces shapes that are efficient: efficient packing of seeds, efficient leaf placement for sunlight, efficient growth from a small starting structure.",
+        "Let's build intuition with the spiral, then survey the appearances."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "fibonacci-spiral",
+      "config": {
+        "n": 9,
+        "show": "spiral"
+      }
+    },
+    {
+      "type": "text",
+      "md": [
+        "The widget draws Fibonacci tiles (squares of side $F_n$) and traces a smooth quarter-arc through each. The result is the **Fibonacci spiral**, which closely approximates the **golden spiral** (a logarithmic spiral with growth factor $\\phi$ per quarter turn).",
+        "Different from a simple circular coil: each loop of a golden spiral is $\\phi$ times larger than the previous one. The spiral grows *self-similarly* — every section is a scaled copy of every other section."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Where the spiral shows up in nature",
+      "body": "**Nautilus shells** — the classic example. Cross-section shows beautiful logarithmic spirals (close to the golden spiral but not exactly).\n\n**Galaxy arms** — spiral galaxies like our own Milky Way have logarithmic spiral arms.\n\n**Hurricanes and cyclones** — viewed from space, they form logarithmic spirals.\n\n**Romanesco broccoli** — the bumps spiral in Fibonacci numbers (8 and 13 are common counts).\n\n**Pinecones** — count the diagonal rows of scales going clockwise and counter-clockwise. You'll typically find two consecutive Fibonacci numbers, like 8 and 13.\n\n**Sunflowers** — 21 spirals one way, 34 the other (small sunflowers). Big sunflowers might show 55 and 89, or even 89 and 144."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Phyllotaxis: leaf packing",
+        "Trees rotate each new leaf by a fixed angle around the stem. **What's the best angle?**",
+        "**Bad choice: $90°$.** Every fourth leaf is directly above the first → those leaves shadow each other.",
+        "**Bad choice: any rational fraction of a turn $\\frac{p}{q}$.** Every $q$-th leaf lines up — same shadowing problem.",
+        "**Best choice: an irrational fraction of a turn.** Then no two leaves ever line up exactly.",
+        "**Optimal: the 'most irrational' number — the golden ratio.** Each leaf rotates by $1/\\phi^2 \\approx 0.382$ of a full turn, which is the **golden angle**: $360° \\cdot 0.382 \\approx 137.5°$.",
+        "This is exactly what most plants do. It's not coincidence — plants that did this efficiently outcompeted those that didn't, over hundreds of millions of years."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Why $\\phi$ is the 'most irrational' number",
+      "body": "Every irrational number can be expressed as a continued fraction. The numbers approximated *worst* by rationals are those whose continued fraction terms are all 1s — and the only such number is $\\phi$:\n\n$\\phi = 1 + \\cfrac{1}{1 + \\cfrac{1}{1 + \\cfrac{1}{1 + \\cdots}}}$\n\nA leaf-placing plant that uses any rational angle eventually repeats. A plant using $\\phi$-related angle never repeats — leaves spread out as evenly as theoretically possible."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Honeybee ancestry",
+        "Honeybees have an unusual genetics: drones (males) develop from unfertilized eggs and have **only a mother** — no father. Workers (females) develop from fertilized eggs and have **both** parents.",
+        "Trace a drone's ancestors generation by generation:",
+        "- Generation 0: 1 drone",
+        "- Generation 1: 1 mother",
+        "- Generation 2: mother had a mother and father → 2 ancestors",
+        "- Generation 3: mother (1 parent) + father had 2 parents → 3 ancestors",
+        "- Generation 4: 5 ancestors. Generation 5: 8. Generation 6: 13. ...",
+        "The Fibonacci sequence! Pure math, hiding in bee genealogy."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Limitations and overclaiming",
+        "Fibonacci numbers and $\\phi$ are real and remarkable. But:",
+        "**Not every spiral is golden.** Many natural spirals are *logarithmic* without specifically being golden (different growth factors).",
+        "**Not every claim about $\\phi$ in art is true.** The 'Parthenon proportions are exactly golden' claim is largely a 19th-century invention — measurements don't quite match.",
+        "**Trust verifiable claims.** Sunflower seed counts: yes. Mona Lisa proportions: depends on which lines you draw. Be skeptical when $\\phi$ is invoked in design without measurement."
+      ]
+    }
+  ]
+}

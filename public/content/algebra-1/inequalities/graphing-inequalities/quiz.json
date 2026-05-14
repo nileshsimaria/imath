@@ -1,0 +1,258 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{For } y < 3x + 2, \\text{ the boundary line should be drawn:}",
+      "choices": [
+        "solid",
+        "dashed",
+        "dotted",
+        "either"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Strict inequality ($<$ or $>$) → dashed.",
+        "Non-strict ($\\leq$ or $\\geq$) → solid."
+      ],
+      "explanation": "$<$ is **strict** — the boundary line itself is NOT part of the solution. So draw it **dashed**.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{For } y \\geq -x + 1, \\text{ the boundary line should be drawn:}",
+      "choices": [
+        "solid",
+        "dashed",
+        "dotted",
+        "either"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "$\\geq$ includes the boundary.",
+        "Non-strict → solid."
+      ],
+      "explanation": "$\\geq$ is **non-strict** — points on the boundary *are* solutions. Draw the line **solid**.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Test } (0, 0) \\text{ in } y > 2x - 3.\\\\ \\text{Does the origin satisfy the inequality?}",
+      "choices": [
+        "Yes — shade the side containing (0, 0)",
+        "No — shade the other side",
+        "Can't tell from the inequality alone",
+        "Depends on the slope"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Plug in $x = 0, y = 0$.",
+        "Is $0 > 2(0) - 3 = -3$?"
+      ],
+      "explanation": "Substitute: $0 > 2(0) - 3 = -3$ is **true** ($0 > -3$). So $(0, 0)$ is a solution → shade the side containing the origin.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{To graph } y > 2x, \\text{ which side of the line should you shade?}",
+      "choices": [
+        "Above the line",
+        "Below the line",
+        "Both sides",
+        "On the line only"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "The inequality is already solved for $y$.",
+        "$y > $ something means $y$-values *above* the line."
+      ],
+      "explanation": "$y > 2x$ says the y-coordinate is *above* the line. Shade above. (Test it with $(0, 1)$: $1 > 0$ ✓.)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Why pick } (0, 0) \\text{ as a test point?}",
+      "choices": [
+        "It's the only valid test point",
+        "It's almost always the easiest to compute",
+        "It's always a solution",
+        "It's required by the test-point method"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "What happens when you plug zeros into $y \\;\\square\\; mx + b$?",
+        "Most of the algebra collapses."
+      ],
+      "explanation": "Substituting $(0, 0)$ leaves only the constant on the right side of $y = mx + b$ — easiest possible arithmetic. The only time you can't use $(0, 0)$ is when the boundary line passes through the origin (then pick something else simple, like $(1, 0)$).",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Graphing } y > 2x + 1: \\text{ the boundary line is and the shading is:}",
+      "choices": [
+        "dashed; below the line",
+        "dashed; above the line",
+        "solid; below the line",
+        "solid; above the line"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Strict inequality (>) → dashed line. $y >$ → above.",
+        "Above + dashed."
+      ],
+      "explanation": "$>$ (strict) → dashed boundary. $y > $ → shade above.",
+      "steps": [
+        "**Boundary type:** strict inequality ($<$ or $>$) → dashed; non-strict ($\\leq$ or $\\geq$) → solid.",
+        "**$>$** so the boundary is **dashed**.",
+        "**Shading:** $y > 2x + 1$ means $y$ is greater than the line — shade **above**."
+      ],
+      "id": "q6",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which point is in the solution region of } y \\leq -x + 3?",
+      "choices": [
+        "(0, 5)",
+        "(1, 4)",
+        "(2, 0)",
+        "(4, 4)"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Test each point in the inequality.",
+        "$(2, 0)$: $0 \\leq -2 + 3 = 1$ ✓."
+      ],
+      "explanation": "Substitute $(2, 0)$: $0 \\leq -2 + 3 = 1$. True ✓.",
+      "steps": [
+        "Substitute each point and check.",
+        "$(0, 5)$: $5 \\leq -0 + 3 = 3$. $5 \\leq 3$? No.",
+        "$(1, 4)$: $4 \\leq -1 + 3 = 2$. No.",
+        "$(2, 0)$: $0 \\leq -2 + 3 = 1$. **Yes** ✓",
+        "$(4, 4)$: $4 \\leq -4 + 3 = -1$. No."
+      ],
+      "id": "q7",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{The boundary line of } 2x - y < 6 \\text{ is:}",
+      "choices": [
+        "solid",
+        "dashed",
+        "dotted",
+        "depends on the shading"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Strict inequality ($<$) → dashed.",
+        "The boundary is NOT included."
+      ],
+      "explanation": "Strict inequality ($<$) → dashed boundary (boundary points not included).",
+      "steps": [
+        "Look at the inequality symbol:",
+        "$<$ or $>$ → strict → boundary **not included** → **dashed** line.",
+        "$\\leq$ or $\\geq$ → non-strict → boundary included → solid line."
+      ],
+      "id": "q8",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Use the test point } (0, 0) \\text{ to determine which side to shade for } y > 3x - 6.",
+      "choices": [
+        "Shade the side containing (0, 0)",
+        "Shade the side NOT containing (0, 0)",
+        "(0, 0) is on the line",
+        "Cannot determine"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Substitute: $0 > 3(0) - 6 \\Rightarrow 0 > -6$. True!",
+        "Shade the side that contains the test point."
+      ],
+      "explanation": "Test $(0, 0)$: $0 > -6$ ✓. Since true, shade the side containing $(0, 0)$.",
+      "steps": [
+        "Plug $(0, 0)$ into the inequality: $0 > 3(0) - 6 = -6$.",
+        "$0 > -6$? **True**.",
+        "Since the test point satisfies the inequality, shade the side **containing** $(0, 0)$."
+      ],
+      "id": "q9",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which inequality has } (3, -1) \\text{ on its boundary line?}",
+      "choices": [
+        "y \\geq 2x - 7",
+        "y \\geq 2x + 5",
+        "y > x - 1",
+        "y \\leq -x + 4"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Plug $(3, -1)$ into each: which makes the equality (boundary equation) true?",
+        "$-1 = 2(3) - 7 = -1$ ✓."
+      ],
+      "explanation": "Boundary of $y \\geq 2x - 7$ is $y = 2x - 7$. Test: $-1 = 2(3) - 7 = -1$ ✓. The point lies on this boundary.",
+      "steps": [
+        "A point is on the boundary iff it satisfies the equation form (with $=$).",
+        "$y \\geq 2x - 7$ → boundary $y = 2x - 7$. Test: $-1 = 2(3) - 7 = -1$ ✓. **On boundary**.",
+        "Other options either don't satisfy the boundary equation or correspond to strict inequalities."
+      ],
+      "id": "q10",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{The shaded region for } x \\geq 2 \\text{ is:}",
+      "choices": [
+        "to the left of x = 2",
+        "to the right of x = 2",
+        "above y = 2",
+        "the entire plane"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$x \\geq 2$ means $x$ is at least 2.",
+        "All points to the right of (or on) the vertical line $x = 2$."
+      ],
+      "explanation": "$x \\geq 2$ means $x$-coordinate is 2 or more — that's the region to the right of (and on) the vertical line $x = 2$.",
+      "steps": [
+        "$x = 2$ is a vertical line.",
+        "$x \\geq 2$ includes all points with $x$-coordinate at least 2.",
+        "That's the region **to the right of (and on) the line** $x = 2$.",
+        "Boundary is solid (because $\\geq$ includes equality)."
+      ],
+      "id": "q11",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which inequality has its solution as the entire upper half-plane (above the x-axis)?}",
+      "choices": [
+        "y > 0",
+        "y < 0",
+        "x > 0",
+        "x < 0"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Upper half-plane means $y$-values are positive.",
+        "$y > 0$."
+      ],
+      "explanation": "$y > 0$ describes all points with positive $y$-coordinate, i.e., the upper half-plane (excluding the x-axis itself, since the inequality is strict).",
+      "steps": [
+        "Upper half-plane = points where $y > 0$.",
+        "**Answer: $y > 0$.**"
+      ],
+      "id": "q12",
+      "difficulty": "easy"
+    }
+  ]
+}

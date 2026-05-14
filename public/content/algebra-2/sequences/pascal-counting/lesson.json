@@ -1,0 +1,66 @@
+{
+  "title": "Pascal & Counting: Paths and Choices",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### Pascal's triangle counts things",
+        "Every entry in Pascal's triangle is $\\binom{n}{k}$, the number of ways to choose $k$ items from a set of $n$. This is why the triangle's pattern is everywhere — anytime you're counting how to choose, $\\binom{n}{k}$ shows up.",
+        "Let's see this with a few visual scenarios."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "pascals-triangle",
+      "config": {
+        "rows": 8,
+        "highlight": {
+          "n": 5,
+          "k": 2
+        }
+      }
+    },
+    {
+      "type": "callout",
+      "title": "Scenario 1: pizza toppings",
+      "body": "A pizzeria offers 5 toppings. You're allowed to pick any subset, including 'no toppings' and 'all 5 toppings'. How many possible pizzas?\n\n**Each topping is independently in or out → $2^5 = 32$ possible pizzas.**\n\nAlternatively, count by how many toppings you pick: $\\binom{5}{0} + \\binom{5}{1} + \\binom{5}{2} + \\binom{5}{3} + \\binom{5}{4} + \\binom{5}{5} = 1 + 5 + 10 + 10 + 5 + 1 = 32$. ✓\n\nThe identity $\\sum_k \\binom{n}{k} = 2^n$ is literally counting the same thing two ways."
+    },
+    {
+      "type": "callout",
+      "title": "Scenario 2: lattice paths",
+      "body": "You're at the corner of a city grid at point $(0, 0)$ and want to walk to $(5, 3)$ — 5 blocks east and 3 blocks north. You can only move east or north, one block at a time.\n\n**How many distinct paths?**\n\nYou'll make exactly 8 moves total (5 east + 3 north). You just need to choose which 3 of the 8 moves are 'north'. That's $\\binom{8}{3} = 56$ paths.\n\nIn general, paths from $(0,0)$ to $(m,n)$ moving only east/north: $\\binom{m+n}{n}$. Look this up in Pascal's triangle to count any grid walk."
+    },
+    {
+      "type": "callout",
+      "title": "Scenario 3: handshakes",
+      "body": "At a party with 10 people, everyone shakes hands with everyone else exactly once. How many handshakes?\n\n**Each handshake is a pair of two distinct people.** Number of pairs from 10 people: $\\binom{10}{2} = 45$.\n\nMore generally, the number of pairs (edges in a complete graph $K_n$) is $\\binom{n}{2} = n(n-1)/2$. The triangular numbers strike again."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Scenario 4: binary strings",
+        "How many binary strings of length 8 have exactly three 1s?",
+        "**Answer:** $\\binom{8}{3} = 56$. (Choose 3 positions for the 1s; the rest are 0s.)",
+        "How many in total of length 8?",
+        "**Answer:** $2^8 = 256$. (Each position is 0 or 1, independently.)",
+        "Combining: $\\binom{8}{0} + \\binom{8}{1} + \\cdots + \\binom{8}{8} = 256$. Row 8 of Pascal's triangle sums to $2^8$. ✓"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Scenario 5: coin flips → binomial distribution",
+      "body": "Flip a fair coin 10 times. What's the probability of getting exactly 7 heads?\n\n- There are $2^{10} = 1024$ equally likely outcomes.\n- Exactly 7 heads can happen in $\\binom{10}{7} = 120$ ways.\n- Probability: $120 / 1024 \\approx 11.7\\%$.\n\nThis is the **binomial distribution**: $P(\\text{exactly } k \\text{ heads in } n \\text{ flips}) = \\binom{n}{k} / 2^n$ for a fair coin. Generalize to unfair coin with heads probability $p$: $P = \\binom{n}{k} p^k (1-p)^{n-k}$.\n\nBinomial probabilities live in the rows of Pascal's triangle."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The binomial theorem",
+        "Expansion of $(x + y)^n$:",
+        "$(x + y)^n = \\sum_{k=0}^{n} \\binom{n}{k} x^{n-k} y^k$",
+        "Why? Because $(x + y)^n = (x + y)(x + y) \\cdots (x + y)$ ($n$ factors). Expanding by FOIL-style distribution, each term is a sequence of choices: 'pick $x$ or $y$ from each factor'. To get a term with exactly $k$ y's, pick $y$ from $k$ of the $n$ factors — that's $\\binom{n}{k}$ ways.",
+        "**The binomial coefficients in row $n$ of Pascal's triangle are exactly the coefficients of $(x + y)^n$.**",
+        "E.g., $(x + y)^4 = x^4 + 4x^3y + 6x^2y^2 + 4xy^3 + y^4$. Coefficients $1, 4, 6, 4, 1$. ← row 4 of Pascal."
+      ]
+    }
+  ]
+}

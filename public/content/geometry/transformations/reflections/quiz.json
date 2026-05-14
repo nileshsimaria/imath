@@ -1,0 +1,165 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Reflect } (5, -3) \\text{ over the y-axis.}",
+      "choices": [
+        "(-5, -3)",
+        "(5, 3)",
+        "(-5, 3)",
+        "(3, -5)"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "y-axis reflection rule: $(x, y) \\to (-x, y)$.",
+        "Flip the sign of $x$ only."
+      ],
+      "explanation": "$(5, -3) \\to (-5, -3)$. Flip the sign of the x-coordinate, leave y alone.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Reflect } (5, -3) \\text{ over the x-axis.}",
+      "choices": [
+        "(-5, -3)",
+        "(5, 3)",
+        "(-5, 3)",
+        "(3, -5)"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "x-axis reflection: $(x, y) \\to (x, -y)$.",
+        "Flip sign of y."
+      ],
+      "explanation": "$(5, -3) \\to (5, 3)$. x stays, y flips sign.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Reflect } (4, -1) \\text{ over the line } y = x.",
+      "choices": [
+        "(-4, 1)",
+        "(1, 4)",
+        "(-1, 4)",
+        "(-1, -4)"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Rule over $y = x$: $(x, y) \\to (y, x)$.",
+        "Swap x and y."
+      ],
+      "explanation": "$(4, -1) \\to (-1, 4)$. Swap the coordinates.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "prompt": "Which property is REVERSED by a reflection?",
+      "choices": [
+        "Side lengths",
+        "Angles",
+        "Orientation (handedness)",
+        "Area"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Reflections flip something but preserve everything else.",
+        "Look at the arrow in the widget — it points the other way after reflection."
+      ],
+      "explanation": "Reflections preserve distances, angles, and area (they're isometries), but they REVERSE orientation. A clockwise polygon becomes counterclockwise after reflection.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Reflecting twice over the } same \\text{ line gives:}",
+      "choices": [
+        "A rotation",
+        "A translation",
+        "The identity (no change)",
+        "Cannot be determined"
+      ],
+      "answerIndex": 2,
+      "hints": [
+        "Once flips you over; twice flips you back.",
+        "Mirror, mirror, back to original."
+      ],
+      "explanation": "Reflecting twice over the same line returns every point to its original position. The composition is the identity transformation.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Triangle } \\triangle ABC \\text{ has vertices } A(1, 2), B(3, 2), C(2, 5). \\\\ \\text{Reflect over the x-axis. Find } C'.",
+      "choices": [
+        "(-2, 5)",
+        "(2, -5)",
+        "(5, 2)",
+        "(-2, -5)"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "x-axis: $(x, y) \\to (x, -y)$.",
+        "$C = (2, 5) \\to (2, -5)$."
+      ],
+      "explanation": "$C' = (2, -5)$. Flip the y-coordinate.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{The reflection of } P \\text{ over the y-axis is } P'(-7, 4). \\\\ \\text{What is the x-coordinate of } P?",
+      "answer": 7,
+      "tolerance": 0.001,
+      "hints": [
+        "The reflection is its own inverse — reflect P' over y-axis to get P.",
+        "Apply $(x, y) \\to (-x, y)$ to $(-7, 4)$."
+      ],
+      "explanation": "$P = (-(-7), 4) = (7, 4)$. So $P_x = 7$.",
+      "steps": [
+        {
+          "text": "**Reflection is self-inverse.** To recover $P$ from $P'$, apply the same reflection rule to $P'$:"
+        },
+        {
+          "math": "(x, y) \\to (-x, y)"
+        },
+        {
+          "math": "P' = (-7, 4) \\to (-(-7),\\; 4) = (7, 4) = P"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "prompt": "Reflecting over two parallel lines is equivalent to:",
+      "choices": [
+        "A translation (perpendicular to the lines, by twice their separation)",
+        "A rotation",
+        "The identity",
+        "Another reflection"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Try it with two vertical lines.",
+        "If the lines are $x = 1$ and $x = 4$, reflect $(0,0)$ across each in turn."
+      ],
+      "explanation": "Two reflections over parallel lines compose to a translation perpendicular to the lines, by twice the distance between them. (Try: reflect $(0,0)$ over $x=1$ → $(2,0)$, then over $x=4$ → $(6,0)$. Net translation: $+6$ in $x$, which is $2 \\times (4-1)$.)",
+      "difficulty": "hard",
+      "steps": [
+        {
+          "text": "**Approach.** Try it with two vertical lines."
+        },
+        {
+          "text": "If the lines are $x = 1$ and $x = 4$, reflect $(0,0)$ across each in turn."
+        },
+        {
+          "text": "**Solution.** Two reflections over parallel lines compose to a translation perpendicular to the lines, by twice the distance between them. (Try: reflect $(0,0)$ over $x=1$ → $(2,0)$, then over $x=4$ → $(6,0)$. Net translation: $+6$ in $x$, which is $2 \\times (4-1)$.)"
+        }
+      ]
+    }
+  ]
+}

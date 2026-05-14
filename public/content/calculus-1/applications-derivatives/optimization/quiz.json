@@ -1,0 +1,274 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{100 ft of fence, rectangular enclosure. Maximum area (sq ft)?}",
+      "answer": 625,
+      "tolerance": 0,
+      "hints": [
+        "From the worked example: square pen 25×25 gives max area 625.",
+        "$25^2 = 625$."
+      ],
+      "explanation": "Square pen 25×25, area = 625.",
+      "steps": [
+        "**Identify constraint and objective.** Constraint: $2L + 2W = 100$ (fence is fixed). Objective: maximize area $A = LW$.",
+        "**Reduce to one variable using the constraint.** $L + W = 50$, so $L = 50 - W$.",
+        "**Substitute.** $A(W) = (50 - W) W = 50W - W^2$.",
+        "**Differentiate and equate to zero.** $A'(W) = 50 - 2W = 0 \\Rightarrow W = 25$.",
+        "**Find the other dimension.** $L = 50 - 25 = 25$. So it's a SQUARE.",
+        "**Compute max area.** $25 \\times 25 = 625$ sq ft.",
+        "**Universal lesson.** Fixed-perimeter rectangle maximizing area → always a SQUARE. Symmetric extremum, classic pattern."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{Find two non-negative numbers with sum 10 whose product is maximized.} \\\\ \\text{What is the maximum product?}",
+      "answer": 25,
+      "tolerance": 0,
+      "hints": [
+        "Let numbers be $x$ and $10 - x$. Product $P = x(10 - x)$.",
+        "$P'(x) = 10 - 2x = 0 \\Rightarrow x = 5$. Product = 25."
+      ],
+      "explanation": "$P(x) = x(10 - x) = 10x - x^2$. $P'(x) = 10 - 2x = 0 \\Rightarrow x = 5$. Product = $5 \\cdot 5 = 25$.",
+      "steps": [
+        "**Classic 'split-into-two-parts' template.** Two unknowns + sum constraint → reduce to one variable.",
+        "**Let one part be $x$.** Other part: $10 - x$.",
+        "**Objective.** $P(x) = x(10 - x) = 10x - x^2$.",
+        "**Differentiate.** $P'(x) = 10 - 2x = 0 \\Rightarrow x = 5$.",
+        "**Both parts equal 5.** Max product: $25$.",
+        "**Universal pattern.** For 'split $n$ into two parts, max product': both parts $= n/2$; max product $= n^2/4$. Worth memorizing as a shortcut."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{Open-top box from 12×12 cardboard, corners cut.} \\\\ \\text{What size cut maximizes volume? (cut side, in inches)}",
+      "answer": 2,
+      "tolerance": 0,
+      "hints": [
+        "From the worked example: cut squares of side 2.",
+        "$x = 2$."
+      ],
+      "explanation": "From the worked example: $x = 2$ gives the max volume of 128.",
+      "steps": [
+        "**Visualize the construction.** Cut squares of side $x$ from each corner of a 12×12 sheet; fold up the four flaps. Result: open-top box with base $(12 - 2x) \\times (12 - 2x)$ and height $x$.",
+        "**Domain.** $0 < x < 6$ (must cut something but not too much).",
+        "**Volume function.** $V(x) = x(12 - 2x)^2$.",
+        "**Differentiate with product rule.** $V'(x) = (12 - 2x)^2 + x \\cdot 2(12 - 2x)(-2) = (12 - 2x)[(12 - 2x) - 4x] = (12 - 2x)(12 - 6x)$.",
+        "**Set to zero.** $x = 6$ (boundary — flat box, $V = 0$) or $x = 2$ (interior — the genuine max).",
+        "**Answer: cut $x = 2$ inches.** Max volume: $V(2) = 2 \\cdot 8^2 = 128$ in³."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{First step in any optimization problem:}",
+      "choices": [
+        "Take the derivative",
+        "Identify what to maximize/minimize and write it as a function",
+        "Plug in numbers",
+        "Set f(x) = 0"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "You can't optimize without knowing what function you're optimizing.",
+        "Write the objective first."
+      ],
+      "explanation": "Identify the objective (what to optimize) and express it as a function of one variable.",
+      "steps": [
+        "**The 5-step universal optimization recipe:**",
+        "  **1. Identify the OBJECTIVE** — what quantity to maximize or minimize.",
+        "  **2. Find the CONSTRAINT** linking the variables (otherwise the objective could be infinite).",
+        "  **3. Reduce to ONE variable** using the constraint.",
+        "  **4. Differentiate and set to zero**, solve for critical points.",
+        "  **5. Verify** (classify and compare with endpoints if interval is closed). Report the answer the problem actually asked for.",
+        "**Why step 1 comes first.** You can't differentiate something until you've identified WHAT you're differentiating. Without a clear objective, every other step is misguided."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{Find the } x \\text{ value that minimizes } f(x) = x^2 - 6x + 10.",
+      "answer": 3,
+      "tolerance": 0,
+      "hints": [
+        "$f'(x) = 2x - 6 = 0 \\Rightarrow x = 3$.",
+        "Parabola opens up — this is min."
+      ],
+      "explanation": "$f'(x) = 2x - 6 = 0 \\Rightarrow x = 3$. ($f''(x) = 2 > 0$ → min.)",
+      "steps": [
+        "**Pure single-variable optimization — no constraint to deal with.** Just $f'(x) = 0$.",
+        "**Differentiate.** $f'(x) = 2x - 6$.",
+        "**Equate to zero.** $x = 3$.",
+        "**Verify it's a min.** $f''(x) = 2 > 0$ everywhere → concave up → MIN. (Or: $x^2$ coefficient is positive → parabola opens up.)",
+        "**Answer the question.** Asked for the $x$ value (not the function value): $x = 3$. (FYI: min value is $f(3) = 1$.)"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{Rectangle has perimeter 40 cm. Maximize area.} \\\\ \\text{Maximum area (cm}^2)?",
+      "answer": 100,
+      "tolerance": 0,
+      "hints": [
+        "Square pen: side 10. Area 100.",
+        "Perimeter 40 → side 10."
+      ],
+      "explanation": "Square (side 10) maximizes area: $A = 100$ sq cm.",
+      "steps": [
+        "**Same pattern as Q1, just smaller numbers.** Fixed perimeter rectangle, maximize area.",
+        "**Constraint.** $2L + 2W = 40 \\Rightarrow L + W = 20$.",
+        "**Objective.** Maximize $A = LW$. Reduce: $A(W) = W(20 - W) = 20W - W^2$.",
+        "**Differentiate.** $A'(W) = 20 - 2W = 0 \\Rightarrow W = 10$. So $L = 10$ too — SQUARE.",
+        "**Max area.** $10 \\times 10 = 100$ cm².",
+        "**Reuse the universal rule.** Fixed-perimeter rectangle max area → ALWAYS a square. Internalize this pattern."
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{Find the point on } y = 2x + 1 \\text{ closest to } (0, 0). \\\\ \\text{Enter the } x\\text{-coordinate (decimal).}",
+      "answer": -0.4,
+      "tolerance": 0.01,
+      "hints": [
+        "Minimize $D^2 = x^2 + (2x+1)^2 = 5x^2 + 4x + 1$.",
+        "$10x + 4 = 0 \\Rightarrow x = -0.4$."
+      ],
+      "explanation": "$D^2 = 5x^2 + 4x + 1$. $(D^2)' = 10x + 4 = 0 \\Rightarrow x = -2/5 = -0.4$.",
+      "steps": [
+        "**Set up the objective.** A point on the line is $(x, 2x + 1)$. Distance to origin: $D(x) = \\sqrt{x^2 + (2x + 1)^2}$.",
+        "**Trick: minimize $D^2$ instead of $D$.** Distance is non-negative, so $D$ and $D^2$ achieve their minima at the SAME $x$. $D^2$ avoids the messy square root.",
+        "**Compute $D^2$.** $D^2 = x^2 + (2x + 1)^2 = x^2 + 4x^2 + 4x + 1 = 5x^2 + 4x + 1$.",
+        "**Differentiate.** $(D^2)'(x) = 10x + 4 = 0 \\Rightarrow x = -\\dfrac{4}{10} = -0.4$.",
+        "**Verify it's a min.** $(D^2)''(x) = 10 > 0$ — concave up, definitely a min.",
+        "**Sanity check.** This $x$ should correspond to the FOOT OF THE PERPENDICULAR from origin to the line. The line $y = 2x + 1$ has slope 2; the perpendicular from origin has slope $-1/2$ — that's the line $y = -x/2$. Their intersection: $2x + 1 = -x/2 \\Rightarrow 5x/2 = -1 \\Rightarrow x = -2/5 = -0.4$. ✓ Geometric meaning confirmed."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Why is it OK to minimize } D^2 \\text{ instead of } D \\text{ in distance problems?}",
+      "choices": [
+        "Squaring is faster computationally",
+        "$D \\geq 0$ and squaring preserves the order — same minimizer",
+        "$D^2$ has smaller derivatives",
+        "It doesn't matter — they give different answers"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Squaring a nonnegative function preserves min/max locations.",
+        "Same x at the minimum."
+      ],
+      "explanation": "$D \\geq 0$ and $u \\to u^2$ is increasing on $[0, \\infty)$. So minimizing $D$ and minimizing $D^2$ have the same answer.",
+      "steps": [
+        "**The 'square it' trick** for any non-negative quantity.",
+        "**Why it works.** The function $u \\mapsto u^2$ is INCREASING on $[0, \\infty)$. So 'smallest $D$' and 'smallest $D^2$' identify the same point. The CRITICAL POINTS coincide.",
+        "**Why we use it.** Differentiating $D = \\sqrt{\\ldots}$ requires the chain rule and gives ugly expressions. $D^2$ is a clean polynomial/algebraic function — much easier to handle.",
+        "**Caveat — only for non-negative quantities.** Doesn't work for signed quantities (squaring changes sign info). Distance is always $\\geq 0$, so we're safe."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{Closed cylindrical can with volume } 1000 \\text{ cm}^3. \\\\ \\text{Find the } \\textbf{radius} \\text{ that minimizes surface area} \\\\ \\text{(round to 2 decimals).}",
+      "answer": 5.42,
+      "tolerance": 0.1,
+      "hints": [
+        "$V = \\pi r^2 h = 1000 \\Rightarrow h = 1000/(\\pi r^2)$. $S = 2\\pi r^2 + 2\\pi rh = 2\\pi r^2 + 2000/r$.",
+        "$S'(r) = 4\\pi r - 2000/r^2 = 0 \\Rightarrow r^3 = 500/\\pi \\Rightarrow r \\approx 5.42$."
+      ],
+      "explanation": "$r^3 = 500/\\pi \\approx 159.15 \\Rightarrow r \\approx 5.42$ cm.",
+      "steps": [
+        "**Identify constraint and objective.** Constraint: $V = \\pi r^2 h = 1000$. Objective: minimize $S = 2\\pi r^2 + 2\\pi r h$.",
+        "**Solve constraint for $h$.** $h = \\dfrac{1000}{\\pi r^2}$.",
+        "**Substitute into the objective.** $S(r) = 2\\pi r^2 + 2\\pi r \\cdot \\dfrac{1000}{\\pi r^2} = 2\\pi r^2 + \\dfrac{2000}{r}$. (One variable now — calculus-ready.)",
+        "**Recognize the structure.** $a r^2 + b/r$ — blows up at $r \\to 0$ and $r \\to \\infty$. The critical point inside MUST be the min.",
+        "**Differentiate.** $S'(r) = 4\\pi r - \\dfrac{2000}{r^2} = 0$.",
+        "**Solve.** $4\\pi r^3 = 2000 \\Rightarrow r^3 = \\dfrac{500}{\\pi} \\approx 159.15 \\Rightarrow r \\approx 5.42$ cm.",
+        "**Beautiful classical result.** At this optimum, $h = 2r$ (verify with arithmetic). The most-efficient closed cylinder has height = diameter — width and height the same. (This is the answer to 'what's the most-efficient can shape?')"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{Maximize } f(x) = -x^2 + 8x \\text{ on the closed interval } [0, 5]. \\\\ \\text{Maximum value of } f?",
+      "answer": 16,
+      "tolerance": 0,
+      "hints": [
+        "$f'(x) = -2x + 8 = 0 \\Rightarrow x = 4 \\in [0, 5]$. $f(4) = 16$. Check endpoints: $f(0) = 0, f(5) = 15$.",
+        "Max is 16 at $x = 4$."
+      ],
+      "explanation": "Critical point: $x = 4$, $f(4) = 16$. Endpoints: $f(0) = 0, f(5) = 15$. Max = 16.",
+      "steps": [
+        "**KEY: CLOSED INTERVAL — must check endpoints too.** Absolute max/min on $[a, b]$ can occur at INTERIOR critical points OR ENDPOINTS.",
+        "**Find critical points inside the interval.** $f'(x) = -2x + 8 = 0 \\Rightarrow x = 4$. Inside $[0, 5]$ ✓.",
+        "**Evaluate $f$ at the critical point AND both endpoints.**",
+        "  $f(0) = 0$.",
+        "  $f(4) = -16 + 32 = 16$ (interior critical point).",
+        "  $f(5) = -25 + 40 = 15$.",
+        "**Compare.** $\\{0, 16, 15\\}$. MAX = 16 at $x = 4$ (interior critical point).",
+        "**Lesson — closed intervals can have BOUNDARY EXTREMA.** Imagine $f(x) = x$ on $[0, 5]$: $f'$ never zero, but $f$ does have a max — at $x = 5$ (endpoint). Always include endpoints."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{Two positive numbers with product 100. Minimize their sum.} \\\\ \\text{Minimum sum?}",
+      "answer": 20,
+      "tolerance": 0,
+      "hints": [
+        "Numbers $x$ and $100/x$. Sum: $x + 100/x$.",
+        "$1 - 100/x^2 = 0 \\Rightarrow x = 10$. Sum: $10 + 10 = 20$."
+      ],
+      "explanation": "$x + 100/x$ minimized at $x = 10$ (equals $\\sqrt{100}$). Sum = $20$.",
+      "steps": [
+        "**Opposite of 'split-into-two-parts'.** Now PRODUCT is fixed and we minimize SUM. (Q2 had fixed sum and maximized product.)",
+        "**Set up.** Let the numbers be $x$ and $y$ with $xy = 100$ and $x, y > 0$.",
+        "**Reduce.** $y = 100/x$. Sum: $S(x) = x + \\dfrac{100}{x}$.",
+        "**Differentiate.** $S'(x) = 1 - \\dfrac{100}{x^2} = 0 \\Rightarrow x^2 = 100 \\Rightarrow x = 10$ (positive branch).",
+        "**Other number.** $y = 100/10 = 10$. So both equal — symmetric again!",
+        "**Min sum.** $10 + 10 = 20$.",
+        "**Universal pattern (AM-GM in disguise).** For TWO positive numbers with FIXED PRODUCT, the SUM is MINIMIZED when the numbers are EQUAL. Both 'fixed sum / max product' and 'fixed product / min sum' lead to 'numbers equal' — symmetry triumphs."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "promptTex": "\\text{When checking critical points on a CLOSED interval, you should:}",
+      "choices": [
+        "Just look at critical points inside the interval",
+        "Also check the endpoints",
+        "Only check the endpoints",
+        "Check halfway points"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Endpoints can host extrema too.",
+        "Always include endpoints when on a closed interval."
+      ],
+      "explanation": "Always check endpoints. Absolute max/min on a closed interval can occur at critical points OR endpoints.",
+      "steps": [
+        "**The 'Closed Interval Method' for finding absolute max/min on $[a, b]$:**",
+        "  1. Find all critical points of $f$ inside $(a, b)$.",
+        "  2. Evaluate $f$ at each critical point.",
+        "  3. Evaluate $f$ at the endpoints $f(a)$ and $f(b)$.",
+        "  4. Compare ALL of these values. Largest = absolute max; smallest = absolute min.",
+        "**Why endpoints matter.** $f' = 0$ identifies HORIZONTAL TANGENTS in the interior. Endpoints are different — $f'$ might not be zero there, but the boundary still 'pins' the function. Real examples: $f(x) = x$ on $[0, 5]$ achieves its max at $x = 5$ (endpoint), not at any interior critical point."
+      ],
+      "difficulty": "easy"
+    }
+  ]
+}

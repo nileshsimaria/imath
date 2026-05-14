@@ -1,0 +1,253 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "numeric",
+      "promptTex": "\\text{Solve: } \\dfrac{2}{x} = \\dfrac{1}{3}",
+      "answer": 6,
+      "tolerance": 0,
+      "hints": [
+        "Cross-multiply: $2 \\cdot 3 = 1 \\cdot x$.",
+        "$x = 6$."
+      ],
+      "explanation": "Cross-multiplying $\\dfrac{2}{x} = \\dfrac{1}{3}$ gives $6 = x$, so $x = 6$. Check: $\\dfrac{2}{6} = \\dfrac{1}{3}$ ✓.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{What's the first step in solving } \\dfrac{1}{x} + \\dfrac{1}{2} = \\dfrac{3}{4}?",
+      "choices": [
+        "Multiply both sides by the LCD",
+        "Add 1 to both sides",
+        "Square both sides",
+        "Take the reciprocal"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Goal: get rid of fractions.",
+        "Multiply by the LCD to clear them all at once."
+      ],
+      "explanation": "Multiplying by the LCD ($4x$ here) clears every fraction in one move, leaving a polynomial equation.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Why must you check solutions in the original equation?}",
+      "choices": [
+        "It's good practice but not required",
+        "Multiplying by the LCD can introduce extraneous solutions",
+        "The math is faster the second time",
+        "It's only required for word problems"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Multiplying by an expression can add solutions.",
+        "If the LCD is zero at some value, that value might solve the cleared equation but not the original."
+      ],
+      "explanation": "Multiplying both sides by the LCD can produce solutions to the polynomial that are excluded from the rational equation's domain (where denominators were zero). These are **extraneous** — they look like solutions but aren't.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Solve: } \\dfrac{1}{x} + \\dfrac{1}{2} = \\dfrac{5}{6}",
+      "answer": 3,
+      "tolerance": 0,
+      "hints": [
+        "LCD is $6x$. Multiply every term by $6x$.",
+        "$6 + 3x = 5x$, then solve."
+      ],
+      "explanation": "Multiply by LCD $6x$: $6 + 3x = 5x \\Rightarrow 6 = 2x \\Rightarrow x = 3$. Check: $\\dfrac{1}{3} + \\dfrac{1}{2} = \\dfrac{2}{6} + \\dfrac{3}{6} = \\dfrac{5}{6}$ ✓.",
+      "difficulty": "medium",
+      "steps": [
+        {
+          "text": "**Approach.** LCD is $6x$. Multiply every term by $6x$."
+        },
+        {
+          "text": "$6 + 3x = 5x$, then solve."
+        },
+        {
+          "text": "**Solution.** Multiply by LCD $6x$: $6 + 3x = 5x \\Rightarrow 6 = 2x \\Rightarrow x = 3$. Check: $\\dfrac{1}{3} + \\dfrac{1}{2} = \\dfrac{2}{6} + \\dfrac{3}{6} = \\dfrac{5}{6}$ ✓."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If the cleared polynomial gives } x = 5 \\text{ but the original had a denominator of } x - 5, \\text{ then } x = 5 \\text{ is:}",
+      "choices": [
+        "A valid solution",
+        "An extraneous solution — must be rejected",
+        "Two solutions",
+        "Always correct"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "$x = 5$ would make the denominator $0$.",
+        "Division by zero is undefined."
+      ],
+      "explanation": "$x = 5$ makes the original denominator $x - 5 = 0$ — the original equation isn't even *defined* there. So $x = 5$ is **extraneous** and must be discarded.",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve: } \\dfrac{2}{x} = \\dfrac{6}{15}.",
+      "choices": [
+        "x = 5",
+        "x = 1/5",
+        "x = 30",
+        "x = 3"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Cross-multiply: $30 = 6x$.",
+        "$x = 5$."
+      ],
+      "explanation": "Cross-multiply: $2 \\cdot 15 = 6x \\Rightarrow x = 5$.",
+      "steps": [
+        "Cross-multiply: $2 \\cdot 15 = x \\cdot 6$.",
+        "$30 = 6x \\Rightarrow x = 5$."
+      ],
+      "id": "q6",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve: } \\dfrac{x}{x - 2} = \\dfrac{-4}{x + 3}.",
+      "choices": [
+        "x = -8 \\text{ or } 1",
+        "x = 8 \\text{ or } -1",
+        "x = 4 \\text{ or } 2",
+        "x = -4 \\text{ or } -2"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Cross-multiply: $x(x + 3) = -4(x - 2)$.",
+        "Expand and collect: $x^2 + 3x = -4x + 8 \\Rightarrow x^2 + 7x - 8 = 0$.",
+        "Factor: $(x + 8)(x - 1) = 0$."
+      ],
+      "explanation": "Cross-multiply: $x(x + 3) = -4(x - 2)$, so $x^2 + 3x = -4x + 8 \\Rightarrow x^2 + 7x - 8 = 0$. Factor: $(x + 8)(x - 1) = 0 \\Rightarrow x = -8$ or $x = 1$. Both check in the original equation and neither makes a denominator zero (denominators are $x - 2 = 0$ at $x = 2$ and $x + 3 = 0$ at $x = -3$, neither of which is a solution).",
+      "steps": [
+        "**Recognize the type.** A rational equation with a single fraction on each side — clear denominators by cross-multiplying.",
+        "**Cross-multiply.** $x(x + 3) = -4(x - 2)$.",
+        "**Expand both sides.** $x^2 + 3x = -4x + 8$.",
+        "**Rearrange to standard form.** $x^2 + 3x + 4x - 8 = 0 \\Rightarrow x^2 + 7x - 8 = 0$.",
+        "**Factor.** $(x + 8)(x - 1) = 0 \\Rightarrow x = -8$ or $x = 1$.",
+        "**Check for extraneous solutions.** Forbidden values (denominator zero): $x = 2$ and $x = -3$. Neither root hits those, so both are valid."
+      ],
+      "id": "q7",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve: } \\dfrac{1}{x} + \\dfrac{1}{2} = \\dfrac{3}{4}.",
+      "choices": [
+        "x = 4",
+        "x = 2",
+        "x = 1/4",
+        "x = 1/2"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Subtract $1/2$: $\\dfrac{1}{x} = \\dfrac{1}{4}$.",
+        "$x = 4$."
+      ],
+      "explanation": "$\\dfrac{1}{x} = \\dfrac{1}{4} \\Rightarrow x = 4$.",
+      "steps": [
+        "Subtract $\\dfrac{1}{2}$ from both sides: $\\dfrac{1}{x} = \\dfrac{3}{4} - \\dfrac{1}{2} = \\dfrac{3 - 2}{4} = \\dfrac{1}{4}$.",
+        "$\\dfrac{1}{x} = \\dfrac{1}{4} \\Rightarrow x = 4$."
+      ],
+      "id": "q8",
+      "difficulty": "easy"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{Solve: } \\dfrac{3}{x - 1} = \\dfrac{6}{x + 5}.",
+      "choices": [
+        "x = 7",
+        "x = -7",
+        "x = 4",
+        "x = -4"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Cross-multiply: $3(x + 5) = 6(x - 1)$.",
+        "$3x + 15 = 6x - 6 \\Rightarrow 21 = 3x \\Rightarrow x = 7$."
+      ],
+      "explanation": "$3(x + 5) = 6(x - 1) \\Rightarrow 3x + 15 = 6x - 6 \\Rightarrow x = 7$.",
+      "steps": [
+        "Cross-multiply: $3(x + 5) = 6(x - 1)$.",
+        "Distribute: $3x + 15 = 6x - 6$.",
+        "Move x's: $15 + 6 = 6x - 3x \\Rightarrow 21 = 3x$.",
+        "$x = 7$. Check: $\\dfrac{3}{6} = \\dfrac{6}{12}$ ✓."
+      ],
+      "id": "q9",
+      "difficulty": "medium"
+    },
+    {
+      "type": "multiple-choice",
+      "promptTex": "\\text{When solving rational equations, an } \\textbf{extraneous} \\text{ solution is one that:}",
+      "choices": [
+        "Makes a denominator equal zero in the original equation",
+        "Doesn't satisfy the simplified form",
+        "Is negative",
+        "Is irrational"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "Multiplying by the LCD can introduce solutions that don't work in the original (because they make a denominator zero).",
+        "Always check by substitution."
+      ],
+      "explanation": "Extraneous solutions appear after multiplying by the LCD but make a denominator in the original equation zero — they must be discarded.",
+      "steps": [
+        "When you multiply both sides of an equation by an expression containing variables, you can introduce solutions that satisfy the new equation but not the original.",
+        "These are **extraneous** solutions.",
+        "For rational equations, they're usually values that make a denominator in the original equation zero.",
+        "**Always check** each candidate solution in the original equation."
+      ],
+      "id": "q10",
+      "difficulty": "easy"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Solve: } \\dfrac{x}{x - 2} = 3. \\text{ (Find the value of } x.)",
+      "answer": 3,
+      "tolerance": 0,
+      "hints": [
+        "Multiply both sides by $(x - 2)$: $x = 3(x - 2)$.",
+        "$x = 3x - 6 \\Rightarrow -2x = -6 \\Rightarrow x = 3$."
+      ],
+      "explanation": "$x = 3(x - 2) \\Rightarrow x = 3x - 6 \\Rightarrow x = 3$. Check: $\\dfrac{3}{1} = 3$ ✓.",
+      "steps": [
+        "Multiply both sides by $(x - 2)$: $x = 3(x - 2)$.",
+        "Distribute: $x = 3x - 6$.",
+        "Subtract $3x$: $-2x = -6 \\Rightarrow x = 3$.",
+        "Check (denominator $\\neq 0$ at $x = 3$): $\\dfrac{3}{3 - 2} = \\dfrac{3}{1} = 3$ ✓."
+      ],
+      "id": "q11",
+      "difficulty": "medium"
+    },
+    {
+      "type": "numeric",
+      "promptTex": "\\text{Worker A finishes a job in } 4 \\text{ hours alone; worker B in } 6 \\text{ hours alone.} \\\\ \\text{Working together, how many hours to finish the job (round to 2 dec)?}",
+      "answer": 2.4,
+      "tolerance": 0.1,
+      "hints": [
+        "Rate equation: $\\dfrac{1}{4} + \\dfrac{1}{6} = \\dfrac{1}{t}$.",
+        "$\\dfrac{3 + 2}{12} = \\dfrac{5}{12} = \\dfrac{1}{t} \\Rightarrow t = 12/5 = 2.4$."
+      ],
+      "explanation": "$\\dfrac{1}{4} + \\dfrac{1}{6} = \\dfrac{5}{12} = \\dfrac{1}{t} \\Rightarrow t = 2.4$ hours.",
+      "steps": [
+        "Each worker's rate: A finishes $1/4$ of the job per hour; B finishes $1/6$ per hour.",
+        "Together: $\\dfrac{1}{4} + \\dfrac{1}{6} = \\dfrac{1}{t}$ (where $t$ is the time together).",
+        "Common denominator 12: $\\dfrac{3}{12} + \\dfrac{2}{12} = \\dfrac{5}{12} = \\dfrac{1}{t}$.",
+        "$t = \\dfrac{12}{5} = 2.4$ hours."
+      ],
+      "id": "q12",
+      "difficulty": "hard"
+    }
+  ]
+}

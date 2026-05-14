@@ -1,0 +1,291 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Product rule: } \\dfrac{d}{dx}(fg) = ?",
+      "choices": [
+        "f'g + fg'",
+        "f'g'",
+        "fg' - f'g",
+        "(fg)'"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "First × deriv of second + second × deriv of first.",
+        "$f'g + fg'$."
+      ],
+      "explanation": "Product rule: $(fg)' = f'g + fg'$.",
+      "steps": [
+        "**Product rule formula:** $(fg)' = f'g + fg'$.",
+        "**Memorable mnemonic.** 'Differentiate the FIRST, leave the SECOND; plus, leave the FIRST, differentiate the SECOND.'",
+        "**Most common mistake.** Thinking $(fg)' = f'g'$ — WRONG (a tempting shortcut that doesn't work; see Q9).",
+        "**Why the rule is symmetric.** Both $f$ and $g$ get differentiated, exactly once each, in separate terms. Neat structure."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Quotient rule: } \\dfrac{d}{dx}\\!\\left(\\dfrac{f}{g}\\right) = ?",
+      "choices": [
+        "\\dfrac{f'g - fg'}{g^2}",
+        "\\dfrac{fg' - f'g}{g^2}",
+        "\\dfrac{f'}{g'}",
+        "\\dfrac{f' g + f g'}{g^2}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Low d-high minus high d-low, over low squared.",
+        "$f'g - fg'$ on top."
+      ],
+      "explanation": "Quotient rule: $\\dfrac{d}{dx}\\frac{f}{g} = \\dfrac{f'g - fg'}{g^2}$.",
+      "steps": [
+        "**Quotient rule formula:** $\\left(\\dfrac{f}{g}\\right)' = \\dfrac{f'g - fg'}{g^2}$.",
+        "**Mnemonic.** 'LO d-HI minus HI d-LO, all over LO-LO' (where LO = denominator, HI = numerator, d = derivative).",
+        "**Sign matters!** It's $f'g - fg'$, NOT $f'g + fg'$. The minus is essential — reversing it gives the wrong sign.",
+        "**Order of subtraction matters.** $f'g$ comes first, $fg'$ second. Reversing them flips the sign of the whole derivative."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{d}{dx}(x \\cdot e^x) = ?",
+      "choices": [
+        "e^x + xe^x",
+        "x e^x",
+        "e^x",
+        "1 \\cdot e^x"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Product rule with $f = x$ and $g = e^x$.",
+        "$f' = 1$, $g' = e^x$. So $1 \\cdot e^x + x \\cdot e^x = e^x + xe^x = e^x(1 + x)$."
+      ],
+      "explanation": "$f' g + f g' = e^x + x e^x = e^x(1 + x)$.",
+      "steps": [
+        "**Identify product: two DIFFERENT functions multiplied.** Here $x$ and $e^x$.",
+        "**Apply product rule.** Let $f = x$, $g = e^x$. Compute $f' = 1$ and $g' = e^x$.",
+        "**Assemble.** $(fg)' = f'g + fg' = 1 \\cdot e^x + x \\cdot e^x$.",
+        "**Simplify (optional).** $= e^x(1 + x)$, factoring out the common $e^x$.",
+        "**When to use product rule, when to expand.** For two POLYNOMIALS, expansion is often easier (see Q6). But for $x \\cdot e^x$, $x \\cdot \\sin x$, etc., where one factor is transcendental, product rule is the only path."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{d}{dx}\\!\\left(\\dfrac{x}{x + 1}\\right) = ?",
+      "choices": [
+        "\\dfrac{1}{(x + 1)^2}",
+        "\\dfrac{1}{x + 1}",
+        "\\dfrac{x}{(x + 1)^2}",
+        "1"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Quotient rule with $f = x$, $g = x + 1$.",
+        "Numerator: $1 \\cdot (x+1) - x \\cdot 1 = 1$. Denom: $(x+1)^2$."
+      ],
+      "explanation": "$\\dfrac{1 \\cdot (x+1) - x \\cdot 1}{(x+1)^2} = \\dfrac{1}{(x+1)^2}$.",
+      "steps": [
+        "**Identify quotient.** Numerator $f = x$, denominator $g = x + 1$. Compute $f' = 1$, $g' = 1$.",
+        "**Apply quotient rule formula.** $\\dfrac{f'g - fg'}{g^2} = \\dfrac{1 \\cdot (x+1) - x \\cdot 1}{(x+1)^2}$.",
+        "**Simplify the numerator.** $(x + 1) - x = 1$.",
+        "**Result.** $\\dfrac{1}{(x+1)^2}$ — beautifully clean.",
+        "**Sanity check.** $f(x) = x/(x+1)$ approaches the horizontal asymptote $y = 1$ as $x \\to \\infty$ (the function flattens). So $f'$ should approach 0 — and indeed $1/(x+1)^2 \\to 0$. ✓"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "numeric",
+      "promptTex": "\\text{Find } f'(1) \\text{ for } f(x) = x^2 (x + 3).",
+      "answer": 9,
+      "tolerance": 0,
+      "hints": [
+        "Expand: $f(x) = x^3 + 3x^2$. $f'(x) = 3x^2 + 6x$.",
+        "$f'(1) = 3 + 6 = 9$."
+      ],
+      "explanation": "$f(x) = x^3 + 3x^2$. $f'(x) = 3x^2 + 6x$. $f'(1) = 3 + 6 = 9$.",
+      "steps": [
+        "**Two products of POLYNOMIALS — expand first, then differentiate.** Faster than the product rule.",
+        "**Expand.** $x^2 \\cdot (x + 3) = x^3 + 3x^2$.",
+        "**Differentiate.** $f'(x) = 3x^2 + 6x$.",
+        "**Evaluate at $x = 1$.** $3 + 6 = 9$.",
+        "**Verify via product rule (for practice).** $f = x^2$, $g = x + 3$; $f' = 2x$, $g' = 1$. $(fg)' = 2x(x + 3) + x^2 \\cdot 1 = 2x^2 + 6x + x^2 = 3x^2 + 6x$. ✓ Same answer."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{d}{dx}\\bigl((x^2 + 1)(x - 3)\\bigr) = ?",
+      "choices": [
+        "3x^2 - 6x + 1",
+        "(2x)(1)",
+        "2x(x - 3) + (x^2 + 1)",
+        "2x"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Easier to expand first: $x^3 - 3x^2 + x - 3$. Then differentiate.",
+        "$3x^2 - 6x + 1$."
+      ],
+      "explanation": "Expand: $x^3 - 3x^2 + x - 3$. Derivative: $3x^2 - 6x + 1$. (Or use product rule — same answer.)",
+      "steps": [
+        "**Two polynomials again — expand first.** $(x^2 + 1)(x - 3) = x^3 - 3x^2 + x - 3$.",
+        "**Differentiate term by term.** $3x^2 - 6x + 1$.",
+        "**(Alternative: product rule.)** $f = x^2 + 1$, $g = x - 3$; $f' = 2x$, $g' = 1$. $(fg)' = 2x(x-3) + (x^2+1)(1) = 2x^2 - 6x + x^2 + 1 = 3x^2 - 6x + 1$. ✓",
+        "**Lesson — when expansion is cleaner.** Two polynomials with small numbers of terms = expand first. Polynomial × transcendental (e.g., $x \\cdot \\sin x$) = product rule needed."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{d}{dx}\\!\\left(\\dfrac{x^2}{x - 1}\\right) = ?",
+      "choices": [
+        "\\dfrac{x(x - 2)}{(x - 1)^2}",
+        "\\dfrac{2x}{x - 1}",
+        "\\dfrac{x^2 - 2x}{x - 1}",
+        "\\dfrac{x^2(x - 2)}{(x - 1)^2}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Quotient rule: $f = x^2, f' = 2x$. $g = x - 1, g' = 1$.",
+        "$\\dfrac{2x(x-1) - x^2}{(x-1)^2} = \\dfrac{x^2 - 2x}{(x-1)^2} = \\dfrac{x(x-2)}{(x-1)^2}$."
+      ],
+      "explanation": "Numerator: $2x(x-1) - x^2 = 2x^2 - 2x - x^2 = x^2 - 2x = x(x-2)$.",
+      "steps": [
+        "**Identify quotient.** $f = x^2$, $g = x - 1$. Compute $f' = 2x$, $g' = 1$.",
+        "**Apply quotient rule formula.** $\\dfrac{f'g - fg'}{g^2} = \\dfrac{2x(x - 1) - x^2 \\cdot 1}{(x - 1)^2}$.",
+        "**Simplify the numerator carefully.** $2x(x - 1) - x^2 = 2x^2 - 2x - x^2 = x^2 - 2x = x(x - 2)$.",
+        "**Final.** $\\dfrac{x(x - 2)}{(x - 1)^2}$.",
+        "**Factor the numerator when possible** — makes the simplified form cleaner and easier to interpret (e.g., when finding where $f' = 0$)."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{Find } \\dfrac{d}{dx}(x \\cdot \\sqrt{x}) \\text{ at } x = 4.",
+      "answer": 3,
+      "tolerance": 0,
+      "hints": [
+        "Simplify first: $x \\cdot x^{1/2} = x^{3/2}$. Derivative: $\\frac{3}{2} x^{1/2}$. At $x=4$: $\\frac{3}{2} \\cdot 2 = 3$.",
+        "$3$."
+      ],
+      "explanation": "$x \\cdot \\sqrt{x} = x^{3/2}$. Derivative: $\\frac{3}{2}\\sqrt{x}$. At $x = 4$: $3$.",
+      "steps": [
+        "**Always simplify BEFORE differentiating if you can.** $x \\cdot \\sqrt{x} = x \\cdot x^{1/2} = x^{3/2}$ — now it's a single power, much easier.",
+        "**Apply power rule.** $\\dfrac{d}{dx}(x^{3/2}) = \\dfrac{3}{2} x^{1/2} = \\dfrac{3}{2}\\sqrt{x}$.",
+        "**Evaluate at $x = 4$.** $\\sqrt{4} = 2$, so $\\dfrac{3}{2} \\cdot 2 = 3$.",
+        "**Lesson.** Product rule is unnecessary here — simplification turns it into a simple power-rule problem. *Look for algebraic simplifications before invoking product/quotient rule.*"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\text{TRUE or FALSE: } (fg)' = f'g'.",
+      "choices": [
+        "TRUE",
+        "FALSE"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "Common mistake! The derivative of a product is NOT the product of the derivatives.",
+        "Product rule: $(fg)' = f'g + fg'$."
+      ],
+      "explanation": "FALSE. $(fg)' \\neq f'g'$. Correct rule: $(fg)' = f'g + fg'$.",
+      "steps": [
+        "**Test with a concrete example to debunk a tempting-but-wrong rule.**",
+        "**Take $f(x) = x$, $g(x) = x$.** Then $fg = x^2$, so $(fg)' = 2x$.",
+        "**Compute $f'g'$ naively.** $f' = 1$, $g' = 1$. So $f' g' = 1 \\neq 2x$.",
+        "**Conclusion.** $(fg)' \\neq f'g'$. The 'naive' rule fails dramatically — off by a factor of $2x$.",
+        "**Correct rule.** $(fg)' = f'g + fg'$ — captures the contribution from differentiating EACH factor while leaving the other intact, then summing."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{d}{dx}\\!\\left(\\dfrac{1}{x^2 + 1}\\right) = ?",
+      "choices": [
+        "\\dfrac{-2x}{(x^2 + 1)^2}",
+        "\\dfrac{2x}{(x^2 + 1)^2}",
+        "\\dfrac{-1}{(x^2 + 1)^2}",
+        "\\dfrac{2x}{x^2 + 1}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Quotient rule with $f = 1, f' = 0$. $g = x^2 + 1, g' = 2x$.",
+        "Numerator: $0 \\cdot (x^2+1) - 1 \\cdot 2x = -2x$. Denominator: $(x^2+1)^2$."
+      ],
+      "explanation": "$\\dfrac{0 \\cdot (x^2+1) - 1 \\cdot 2x}{(x^2+1)^2} = \\dfrac{-2x}{(x^2+1)^2}$.",
+      "steps": [
+        "**Apply quotient rule with $f = 1$.** $f' = 0$ (constant). $g = x^2 + 1$, $g' = 2x$.",
+        "**Plug into formula.** $\\dfrac{f'g - fg'}{g^2} = \\dfrac{0 \\cdot (x^2 + 1) - 1 \\cdot 2x}{(x^2 + 1)^2}$.",
+        "**Simplify.** Numerator = $-2x$. Denominator = $(x^2 + 1)^2$.",
+        "**Result.** $\\dfrac{-2x}{(x^2 + 1)^2}$.",
+        "**Shortcut for $1/g$.** Whenever the numerator is a constant: $\\left(\\dfrac{c}{g}\\right)' = \\dfrac{-c \\cdot g'}{g^2}$. (The $f'g$ term drops out.) Useful pattern to recognize."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{Find } f'(2) \\text{ for } f(x) = (x + 1)(x^2 - 4).",
+      "answer": 12,
+      "tolerance": 0,
+      "hints": [
+        "Expand: $f(x) = x^3 + x^2 - 4x - 4$. $f'(x) = 3x^2 + 2x - 4$.",
+        "$f'(2) = 12 + 4 - 4 = 12$."
+      ],
+      "explanation": "Expand: $f = x^3 + x^2 - 4x - 4$. $f'(x) = 3x^2 + 2x - 4$. $f'(2) = 12 + 4 - 4 = 12$.",
+      "steps": [
+        "**Two polynomials — expand first.**",
+        "**Expand.** $(x + 1)(x^2 - 4) = x^3 - 4x + x^2 - 4 = x^3 + x^2 - 4x - 4$.",
+        "**Differentiate.** $f'(x) = 3x^2 + 2x - 4$.",
+        "**Evaluate at $x = 2$.** $3(4) + 2(2) - 4 = 12 + 4 - 4 = 12$.",
+        "**Verify via product rule.** $f = x + 1$, $g = x^2 - 4$. $f' = 1$, $g' = 2x$. $(fg)' = 1 \\cdot (x^2 - 4) + (x + 1)(2x) = x^2 - 4 + 2x^2 + 2x = 3x^2 + 2x - 4$. ✓ Matches."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "promptTex": "\\text{For } y = \\dfrac{e^x}{x}, \\text{ which expression equals } y'?",
+      "choices": [
+        "\\dfrac{e^x(x - 1)}{x^2}",
+        "\\dfrac{e^x}{x^2}",
+        "\\dfrac{e^x}{x - 1}",
+        "\\dfrac{e^x x - e^x}{x}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Quotient rule: $f = e^x, g = x$. $f' = e^x, g' = 1$.",
+        "Numerator: $e^x \\cdot x - e^x \\cdot 1 = e^x(x - 1)$. Denominator: $x^2$."
+      ],
+      "explanation": "$\\dfrac{e^x \\cdot x - e^x \\cdot 1}{x^2} = \\dfrac{e^x(x - 1)}{x^2}$.",
+      "steps": [
+        "**Quotient rule with transcendental in the numerator.** $f = e^x$, $g = x$. $f' = e^x$ (self-derivative), $g' = 1$.",
+        "**Apply formula.** $\\dfrac{f'g - fg'}{g^2} = \\dfrac{e^x \\cdot x - e^x \\cdot 1}{x^2}$.",
+        "**Simplify the numerator.** Factor out $e^x$: $e^x \\cdot x - e^x = e^x(x - 1)$.",
+        "**Result.** $\\dfrac{e^x(x - 1)}{x^2}$.",
+        "**Notice the zero of $y'$ at $x = 1$.** That's a critical point — the function $y = e^x/x$ has a local minimum at $x = 1$ (computable separately). Recognizing critical points from a derivative formula is a useful skill."
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

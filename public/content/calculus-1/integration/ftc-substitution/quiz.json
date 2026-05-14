@@ -1,0 +1,285 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The Fundamental Theorem of Calculus (Part 2):}",
+      "choices": [
+        "$\\int_a^b f(x) \\, dx = F(b) - F(a)$ where $F' = f$",
+        "$\\int_a^b f(x) \\, dx = f(b) - f(a)$",
+        "Differentiation undoes integration",
+        "Riemann sums = definite integrals"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "FTC: evaluate via antiderivative.",
+        "$F(b) - F(a)$."
+      ],
+      "explanation": "$\\int_a^b f(x) dx = F(b) - F(a)$ where $F$ is any antiderivative.",
+      "steps": [
+        "**FTC Part 2 — the most useful theorem in all of calculus.** If $F$ is any antiderivative of $f$ (i.e., $F'(x) = f(x)$) and $f$ is continuous on $[a, b]$, then $\\int_a^b f(x) \\, dx = F(b) - F(a)$.",
+        "**Why it's revolutionary.** It converts a problem about SUMMATION (Riemann sums) into a problem about ANTIDIFFERENTIATION (finding $F$). Algebra replaces infinite-summation arithmetic.",
+        "**Practical procedure.** (1) Find an antiderivative $F$. (2) Compute $F(b) - F(a)$.",
+        "**Why the $+C$ doesn't matter.** $(F + C)(b) - (F + C)(a) = F(b) - F(a) + C - C = F(b) - F(a)$. The constant cancels."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\int_0^2 x^2 \\, dx = ? \\text{ (decimal)}",
+      "answer": 2.667,
+      "tolerance": 0.01,
+      "hints": [
+        "FTC: antideriv $x^3/3$. Evaluate: $8/3 - 0 = 8/3$.",
+        "$\\approx 2.667$."
+      ],
+      "explanation": "$F(x) = x^3/3$. $F(2) - F(0) = 8/3 - 0 = 8/3 \\approx 2.667$.",
+      "steps": [
+        "**Standard FTC use: 3 steps. (1) Antiderivative. (2) Evaluate at endpoints. (3) Subtract.**",
+        "**Antiderivative.** $F(x) = \\dfrac{x^3}{3}$.",
+        "**Evaluate.** $F(2) = 8/3$. $F(0) = 0$.",
+        "**Subtract.** $F(2) - F(0) = \\dfrac{8}{3} \\approx 2.667$.",
+        "**Always use brackets notation in writing.** $[F(x)]_a^b$ — makes the FTC application explicit and unambiguous."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\int_1^3 (2x + 4) \\, dx = ?",
+      "answer": 16,
+      "tolerance": 0,
+      "hints": [
+        "Antideriv: $x^2 + 4x$. $F(3) - F(1) = (9 + 12) - (1 + 4) = 21 - 5 = 16$.",
+        "$16$."
+      ],
+      "explanation": "$F(x) = x^2 + 4x$. $F(3) - F(1) = 21 - 5 = 16$.",
+      "steps": [
+        "**Antiderivative.** $\\int (2x + 4) \\, dx = x^2 + 4x$. (Term by term.)",
+        "**Evaluate at endpoints.** $F(3) = 9 + 12 = 21$. $F(1) = 1 + 4 = 5$.",
+        "**Subtract.** $F(3) - F(1) = 21 - 5 = 16$.",
+        "**Sanity check geometrically.** $y = 2x + 4$ at $x = 1$ gives $y = 6$, at $x = 3$ gives $y = 10$. Trapezoid area: $\\tfrac{1}{2}(6 + 10)(2) = 16$. ✓ Matches."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\int_0^\\pi \\sin x \\, dx = ?",
+      "answer": 2,
+      "tolerance": 0.01,
+      "hints": [
+        "Antideriv: $-\\cos x$. $F(\\pi) - F(0) = -(-1) - (-1) = 1 + 1 = 2$.",
+        "$2$."
+      ],
+      "explanation": "$F = -\\cos x$. $F(\\pi) - F(0) = 1 - (-1) = 2$.",
+      "steps": [
+        "**Antiderivative.** $\\int \\sin x \\, dx = -\\cos x + C$.",
+        "**Evaluate.** $F(\\pi) = -\\cos(\\pi) = -(-1) = 1$. $F(0) = -\\cos(0) = -1$.",
+        "**Subtract.** $F(\\pi) - F(0) = 1 - (-1) = 2$.",
+        "**Watch the double negative.** $F(0) = -1$ (negative), and we SUBTRACT it, so $-(-1) = +1$. This is the #1 source of sign errors in sine integrals.",
+        "**Memorable result.** Area under one HALF-CYCLE of sine (one 'hump') equals exactly 2. Worth knowing."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{For u-substitution, choose } u \\text{ to be:}",
+      "choices": [
+        "the outermost function",
+        "the inner function (whose derivative also appears in the integrand)",
+        "any random expression",
+        "always } x^2"
+      ],
+      "answerIndex": 1,
+      "hints": [
+        "u-sub is the chain rule reversed.",
+        "Inner function whose derivative is in the integrand."
+      ],
+      "explanation": "Pick $u$ to be the inner function — and look for its derivative ($du$) somewhere else in the integrand. That's the signature of substitution working.",
+      "steps": [
+        "**u-substitution = REVERSE CHAIN RULE.** If $\\int f(g(x)) \\cdot g'(x) \\, dx$ appears, substitute $u = g(x)$.",
+        "**How to spot the opportunity.** Look for the structure: an INNER function $g(x)$ inside another function, AND its DERIVATIVE $g'(x)$ multiplying the integrand. Both pieces must be present.",
+        "**The substitution.** Set $u = g(x)$. Then $du = g'(x) \\, dx$. The integral becomes $\\int f(u) \\, du$ — usually much simpler.",
+        "**After integrating in $u$, substitute back to $x$.** Final answer should be in terms of the original variable."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\int 2x e^{x^2} \\, dx = ?",
+      "choices": [
+        "e^{x^2} + C",
+        "x^2 e^{x^2} + C",
+        "2 e^{x^2} + C",
+        "2x e^{x^2} + C"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "$u = x^2$, $du = 2x \\, dx$. Becomes $\\int e^u \\, du = e^u + C$.",
+        "$e^{x^2} + C$."
+      ],
+      "explanation": "u-sub: $u = x^2$, $du = 2x dx$. $\\int e^u du = e^u + C = e^{x^2} + C$.",
+      "steps": [
+        "**Spot the chain-rule signature.** $e^{x^2}$ has INNER function $x^2$, and the integrand contains $2x$ — which is the derivative of $x^2$. Perfect for u-sub.",
+        "**Substitute.** Let $u = x^2$. Then $du = 2x \\, dx$.",
+        "**Rewrite the integral.** $\\int e^{x^2} \\cdot 2x \\, dx = \\int e^u \\, du$.",
+        "**Integrate in $u$.** $\\int e^u \\, du = e^u + C$.",
+        "**Substitute back.** $e^u = e^{x^2}$.",
+        "**Final.** $e^{x^2} + C$.",
+        "**Verify by differentiating.** $\\dfrac{d}{dx}(e^{x^2}) = e^{x^2} \\cdot 2x = 2x \\, e^{x^2}$ ✓. Confirms the antiderivative."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "promptTex": "\\int x \\cos(x^2) \\, dx = ?",
+      "choices": [
+        "\\dfrac{1}{2} \\sin(x^2) + C",
+        "\\sin(x^2) + C",
+        "\\cos(x^2) + C",
+        "x \\sin(x^2) + C"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "$u = x^2$, $du = 2x \\, dx$, so $x \\, dx = du/2$.",
+        "$\\int \\cos u \\cdot (1/2) du = (1/2)\\sin u + C = (1/2)\\sin(x^2) + C$."
+      ],
+      "explanation": "$u = x^2$, $du = 2x \\, dx$. Integral becomes $(1/2)\\int \\cos u \\, du = (1/2)\\sin(x^2) + C$.",
+      "steps": [
+        "**Spot the pattern.** $\\cos(x^2)$ has inner function $x^2$. The integrand has $x$ — which is HALF of $\\dfrac{d}{dx}(x^2) = 2x$. Off by a factor of 2 — still works.",
+        "**Substitute.** $u = x^2$. $du = 2x \\, dx$, so $x \\, dx = \\dfrac{1}{2} du$.",
+        "**Rewrite the integral.** $\\int \\cos(x^2) \\cdot x \\, dx = \\int \\cos(u) \\cdot \\dfrac{1}{2} du = \\dfrac{1}{2} \\int \\cos u \\, du$.",
+        "**Integrate.** $\\dfrac{1}{2} \\int \\cos u \\, du = \\dfrac{1}{2} \\sin u + C$.",
+        "**Substitute back.** $\\dfrac{1}{2} \\sin(x^2) + C$.",
+        "**Lesson — off-by-a-constant is OK.** If the integrand has $x$ but you need $2x$, pull out a $\\dfrac{1}{2}$ to balance. Constants pass through cleanly."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\int_0^1 (3x + 1)^4 \\, dx = ? \\text{ (round to 2 decimals)}",
+      "answer": 68.2,
+      "tolerance": 0.5,
+      "hints": [
+        "$u = 3x+1$. Bounds: $x=0 \\to u=1$, $x=1 \\to u=4$. $du = 3 dx$, so $dx = du/3$.",
+        "$\\int_1^4 u^4 \\cdot du/3 = (1/3)(u^5/5)|_1^4 = (1/15)(1024 - 1) = 1023/15 = 68.2$."
+      ],
+      "explanation": "u-sub gives $\\int_1^4 u^4/3 \\, du = (1/15)(1024 - 1) = 68.2$.",
+      "steps": [
+        "**Definite integral + u-sub — TRANSFORM THE BOUNDS too.** This is the cleanest approach: change bounds from $x$-values to $u$-values, integrate, evaluate — no need to substitute back.",
+        "**Substitute.** $u = 3x + 1$. $du = 3 \\, dx$, so $dx = \\dfrac{du}{3}$.",
+        "**Transform bounds.** $x = 0 \\Rightarrow u = 1$. $x = 1 \\Rightarrow u = 4$.",
+        "**Rewrite integral.** $\\int_0^1 (3x + 1)^4 \\, dx = \\int_1^4 u^4 \\cdot \\dfrac{du}{3} = \\dfrac{1}{3} \\int_1^4 u^4 \\, du$.",
+        "**Integrate.** $\\dfrac{1}{3} \\cdot \\dfrac{u^5}{5} \\bigg|_1^4 = \\dfrac{1}{15}(u^5)\\bigg|_1^4 = \\dfrac{1}{15}(1024 - 1) = \\dfrac{1023}{15} = 68.2$.",
+        "**Tip.** For DEFINITE u-sub, change the bounds and skip the back-substitution — saves a step and reduces error."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\int \\dfrac{2x}{x^2 + 1} \\, dx = ?",
+      "choices": [
+        "\\ln(x^2 + 1) + C",
+        "\\ln|x^2 + 1| + C",
+        "\\dfrac{2}{x^2 + 1} + C",
+        "x^2 + 1 + C"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "$u = x^2 + 1$, $du = 2x dx$. $\\int 1/u \\, du = \\ln|u| + C$.",
+        "Since $x^2 + 1 > 0$, no absolute value needed."
+      ],
+      "explanation": "u-sub: $u = x^2 + 1$. Becomes $\\int 1/u \\, du = \\ln|u| + C = \\ln(x^2+1) + C$.",
+      "steps": [
+        "**Spot the pattern.** Numerator $2x$ is the derivative of denominator $x^2 + 1$. This is the famous $u'/u$ form, whose antiderivative is $\\ln|u|$.",
+        "**Substitute.** $u = x^2 + 1$, $du = 2x \\, dx$.",
+        "**Rewrite.** $\\int \\dfrac{2x \\, dx}{x^2 + 1} = \\int \\dfrac{du}{u}$.",
+        "**Integrate.** $\\int \\dfrac{du}{u} = \\ln|u| + C$.",
+        "**Substitute back.** $\\ln|x^2 + 1| + C$.",
+        "**Drop the absolute value here.** $x^2 + 1 \\geq 1 > 0$ always, so $|x^2 + 1| = x^2 + 1$ — no $|\\cdot|$ needed.",
+        "**Universal pattern.** $\\int \\dfrac{u'(x)}{u(x)} \\, dx = \\ln|u(x)| + C$. Memorize — appears constantly."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q10",
+      "type": "multiple-choice",
+      "promptTex": "\\dfrac{d}{dx}\\!\\left[\\int_0^x t^2 \\, dt\\right] = ? \\\\ \\text{(FTC Part 1)}",
+      "choices": [
+        "x^2",
+        "x^3 / 3",
+        "0",
+        "2x"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "FTC Part 1: derivative of an integral with variable upper limit = integrand at that limit.",
+        "$x^2$."
+      ],
+      "explanation": "FTC Part 1: $\\frac{d}{dx} \\int_a^x f(t) dt = f(x)$. So $\\frac{d}{dx} \\int_0^x t^2 dt = x^2$.",
+      "steps": [
+        "**FTC Part 1 (the OTHER half of FTC):** $\\dfrac{d}{dx} \\int_a^x f(t) \\, dt = f(x)$.",
+        "**What this says.** If you define $A(x)$ = area-so-far function = $\\int_a^x f(t) \\, dt$, then $A'(x) = f(x)$. The DERIVATIVE of the area function is the integrand.",
+        "**Why this is profound.** It says differentiation and integration are INVERSE OPERATIONS. Integrate, then differentiate — you get back where you started.",
+        "**Apply.** $\\dfrac{d}{dx}\\left[\\int_0^x t^2 \\, dt\\right] = f(x) = x^2$. (We don't actually need to compute the integral $x^3/3$ first — FTC Part 1 jumps straight to $f(x)$.)",
+        "**Beautiful elegance.** No matter what the lower limit is (here 0, but it could be anything), the derivative of the area function is always $f(x)$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\int_1^e \\dfrac{1}{x} \\, dx = ?",
+      "answer": 1,
+      "tolerance": 0.001,
+      "hints": [
+        "Antideriv: $\\ln |x|$. $\\ln e - \\ln 1 = 1 - 0 = 1$.",
+        "$1$."
+      ],
+      "explanation": "$\\ln|x| \\big|_1^e = \\ln e - \\ln 1 = 1 - 0 = 1$.",
+      "steps": [
+        "**Antiderivative.** $\\int \\dfrac{1}{x} \\, dx = \\ln|x| + C$ (the exception to the power rule).",
+        "**Evaluate.** $\\ln(e) = 1$. $\\ln(1) = 0$.",
+        "**Subtract.** $\\ln(e) - \\ln(1) = 1$.",
+        "**The defining property of $e$.** $e$ is the unique number where the area under $y = 1/x$ from $1$ to $e$ equals exactly 1. This is one historical definition of $e$ — the integral itself defines the number."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "promptTex": "\\text{u-substitution is essentially the chain rule:}",
+      "choices": [
+        "in reverse",
+        "applied to integrals",
+        "for compositions",
+        "All of the above"
+      ],
+      "answerIndex": 3,
+      "hints": [
+        "u-sub is the integration analog of the chain rule.",
+        "All true."
+      ],
+      "explanation": "All true. u-sub is the chain rule applied in reverse to integrals — it handles compositions inside integrands.",
+      "steps": [
+        "**All three descriptions are equivalent ways to say the same thing.**",
+        "**'In reverse.'** Chain rule says $\\dfrac{d}{dx}[F(g(x))] = F'(g(x)) g'(x)$. Reversing: $\\int F'(g(x)) g'(x) \\, dx = F(g(x)) + C$. That's u-sub with $u = g(x)$.",
+        "**'Applied to integrals.'** Chain rule is for derivatives. u-sub is its analog for integrals.",
+        "**'For compositions.'** Both rules handle composite functions $F \\circ g$ — where one function is plugged into another.",
+        "**Practical lesson.** When you see a composition INSIDE an integrand, your first thought should be 'u-sub'. It's the integration tool that matches the chain rule one-to-one."
+      ],
+      "difficulty": "easy"
+    }
+  ]
+}
