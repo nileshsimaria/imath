@@ -65,3 +65,15 @@ export async function loadQuiz(path) {
   if (!res.ok) return null; // quiz is optional
   return res.json();
 }
+
+export async function loadBlogIndex() {
+  const res = await fetch(`${BASE}content/blog/index.json${V}`);
+  if (!res.ok) throw new Error(`Failed to load blog index: ${res.status}`);
+  return res.json();
+}
+
+export async function loadBlogPost(slug) {
+  const res = await fetch(`${BASE}content/blog/${slug}/lesson.json${V}`);
+  if (!res.ok) throw new Error(`Blog post not found: ${slug}`);
+  return res.json();
+}

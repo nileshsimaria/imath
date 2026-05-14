@@ -1,0 +1,86 @@
+{
+  "title": "Why √x is never negative — but x² = 9 gives ±3",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "A lot of students get tripped up by this: the square root symbol $\\sqrt{\\ }$ always returns a *non-negative* number, yet when we solve $x^2 = 9$ we write $x = \\pm 3$. So where does the $\\pm$ come from? It looks like the same operation in both directions — but it isn't. The confusion comes from mixing up two different operations."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 1. The √ symbol means the *principal* (non-negative) root",
+        "By definition, $\\sqrt{x}$ returns only the non-negative value.",
+        "- $\\sqrt{9} = 3$ ✓ (not $\\pm 3$)",
+        "- $\\sqrt{25} = 5$ ✓ (not $\\pm 5$)",
+        "- $\\sqrt{x} \\ge 0$ always, for any valid $x$",
+        "So if a problem says \"evaluate $\\sqrt{16}$\", the answer is **just 4**, never $-4$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 2. \"Solve $x^2 = 9$\" is a *different* question",
+        "Here you're asking: *which numbers, when squared, give 9?* Two numbers qualify: $3$ and $-3$."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "x^2 = 9 \\;\\;\\Longrightarrow\\;\\; x = \\pm\\sqrt{9} = \\pm 3"
+    },
+    {
+      "type": "text",
+      "md": [
+        "The $\\pm$ doesn't come *from* the square root — it comes from the fact that **squaring loses sign information**. Both $3^2 = 9$ and $(-3)^2 = 9$, so when you undo the square, you have to put both possibilities back."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 3. Why squaring both sides introduces ±",
+        "Squaring is a **many-to-one** operation: $3$ and $-3$ both map to $9$. Taking $\\sqrt{\\ }$ is **one-to-one** — it only gives back the positive one. So when you reverse a square, you have to manually restore the sign you lost:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "x^2 = k \\;\\;\\Longrightarrow\\;\\; x = \\pm\\sqrt{k}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "The $\\sqrt{k}$ itself is still positive — the $\\pm$ is a *separate* thing you add because you're solving an equation, not evaluating a root."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The punchline",
+      "body": "$\\sqrt{x^2} = |x|$, **not** $x$.\nBecause the $\\sqrt{\\ }$ must give a non-negative answer, and $x$ itself could have been negative. So $\\sqrt{(-5)^2} = \\sqrt{25} = 5$, which equals $|-5|$, not $-5$."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 4. A clean way to remember it",
+        "| Expression | Meaning | Result |",
+        "|---|---|---|",
+        "| $\\sqrt{9}$ | evaluate the principal root | $3$ (only) |",
+        "| $x^2 = 9$ | solve for $x$ | $x = 3$ **or** $x = -3$ |",
+        "| $\\sqrt{x^2}$ | evaluate | $\\lvert x \\rvert$ (always non-negative!) |"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Quick check",
+        "- $\\sqrt{(-5)^2} = \\sqrt{25} = 5$ ✓ (equals $\\lvert -5 \\rvert$, not $-5$)",
+        "- If $x^2 = 49$, then $x = \\pm 7$ ✓ (two solutions to the equation)",
+        "- $\\sqrt{49} = 7$ ✓ (one value of the expression)"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The rule, in one line",
+      "body": "$\\sqrt{\\ }$ (the symbol) is always $\\ge 0$. The $\\pm$ only appears when you're *solving* an equation where squaring erased a sign — it's bookkeeping for lost information, not part of the root itself."
+    }
+  ]
+}

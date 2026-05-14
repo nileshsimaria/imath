@@ -17,6 +17,7 @@ export function renderHeader({ courseTitle, courseId, topicTitle, subtopicTitle 
         </a>
         <nav class="app-nav" aria-label="Site sections">
           <a class="app-nav-link" href="#/widgets">Widgets</a>
+          <a class="app-nav-link" href="#/blog">Blog</a>
         </nav>
         <div class="crumbs">
           ${crumbs.length ? crumbs.join('<span class="sep">/</span>') : ''}

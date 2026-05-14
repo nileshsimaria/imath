@@ -25,6 +25,11 @@ export function renderLanding(root, catalog) {
       </section>
       <div class="section-label">Courses</div>
       <div class="course-grid">${courses}</div>
+      <a class="landing-blog-cta" href="#/blog">
+        <span class="landing-blog-cta-label">From the blog</span>
+        <span class="landing-blog-cta-title">Short, friendly explainers of the concepts students get stuck on most.</span>
+        <span class="landing-blog-cta-arrow">Read posts →</span>
+      </a>
     </main>
   `;
 

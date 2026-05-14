@@ -1,0 +1,11 @@
+{
+  "posts": [
+    {
+      "id": "sqrt-and-plus-minus",
+      "title": "Why √x is never negative — but x² = 9 gives ±3",
+      "date": "2026-05-14",
+      "summary": "The square root symbol always returns a non-negative number. So where does the ± come from when we solve x² = 9? A clean walk-through of the distinction that trips up a lot of students.",
+      "tags": ["algebra", "radicals", "common-confusion"]
+    }
+  ]
+}
