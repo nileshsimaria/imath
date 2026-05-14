@@ -1,0 +1,93 @@
+{
+  "title": "Why sin⁻¹x is not 1/sin x",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "This one trips up almost every pre-calc student, and the notation is *genuinely* confusing — it's not just you. Look at these three expressions:",
+        "- $\\sin^2 x$",
+        "- $\\sin^{-1} x$",
+        "- $(\\sin x)^{-1}$",
+        "Two of them look almost identical, and all three put a superscript on $\\sin$. But they mean three completely different things. Let's untangle why."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 1. What $^{-1}$ means on a *number*",
+        "On a plain number or value, $^{-1}$ means **reciprocal**:",
+        "- $5^{-1} = \\dfrac{1}{5}$",
+        "- $x^{-1} = \\dfrac{1}{x}$",
+        "- $(\\sin x)^{-1} = \\dfrac{1}{\\sin x} = \\csc x$",
+        "When parentheses wrap $\\sin x$ first, the function gets evaluated, you get a *number*, and then $^{-1}$ flips it. Same rule as for any number."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 2. What $^{-1}$ means on a *function*",
+        "On a function, $f^{-1}$ means the **inverse function** — the function that undoes $f$.",
+        "If $f(x) = 2x + 3$, then $f^{-1}(x) = \\dfrac{x - 3}{2}$, because $f^{-1}(f(x)) = x$.",
+        "For $\\sin$, the inverse is **arcsin**:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\sin^{-1}(x) \\;=\\; \\arcsin(x) \\;=\\; \\text{the angle whose sine is } x"
+    },
+    {
+      "type": "text",
+      "md": [
+        "So $\\sin^{-1}\\!\\left(\\tfrac{1}{2}\\right) = \\tfrac{\\pi}{6}$, because $\\sin\\!\\left(\\tfrac{\\pi}{6}\\right) = \\tfrac{1}{2}$. The $^{-1}$ here is *not* a reciprocal — it's a flag that says \"this is the inverse function.\""
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\sin\\!\\left(\\tfrac{\\pi}{6}\\right) = \\tfrac{1}{2} \\quad\\Longleftrightarrow\\quad \\sin^{-1}\\!\\left(\\tfrac{1}{2}\\right) = \\tfrac{\\pi}{6}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 3. So why does $\\sin^2 x$ mean $(\\sin x)^2$ but $\\sin^{-1} x$ doesn't mean $1/\\sin x$?",
+        "Honest answer: **historical inconsistency.** The notation is a mess, and you're right to be annoyed by it.",
+        "- $\\sin^2 x$ is shorthand for $(\\sin x)^2$ — apply the function, then square the *value*.",
+        "- $\\sin^{-1} x$ is shorthand for $\\arcsin(x)$ — apply the *inverse function*.",
+        "These two conventions clash. If we followed the $\\sin^2$ pattern strictly, $\\sin^{-1} x$ *would* mean $(\\sin x)^{-1} = 1/\\sin x$. It doesn't. Mathematicians overloaded the $^{-1}$ superscript to mean \"inverse function\" when it sits on a function name — even though that creates exactly this confusion. There's no derivation here. It's a convention you have to memorize."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The convention",
+      "body": "On a *trig function*: $\\sin^{n} x$ means $(\\sin x)^n$ for $n = 2, 3, 4, \\ldots$\n**But** $\\sin^{-1} x$ means $\\arcsin x$, not $(\\sin x)^{-1}$.\nIf you want $1/\\sin x$, write $(\\sin x)^{-1}$ or just $\\csc x$. Never write it as $\\sin^{-1} x$ — that means something else."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 4. A side-by-side that locks it in",
+        "Take $x = \\tfrac{\\pi}{6} \\approx 0.524$. Then:",
+        "| Expression | What it means | Value at $x = \\pi/6$ |",
+        "|---|---|---|",
+        "| $\\sin x$ | the sine function | $1/2$ |",
+        "| $\\sin^2 x$ | $(\\sin x)^2$ | $1/4$ |",
+        "| $(\\sin x)^{-1}$ | $1/\\sin x = \\csc x$ | $2$ |",
+        "| $\\sin^{-1} x$ | $\\arcsin x$ (inverse function) | $\\arcsin(\\pi/6) \\approx 0.551$ |",
+        "Notice the last row carefully. We're plugging the *number* $\\pi/6 \\approx 0.524$ into arcsin — asking \"what angle has sine equal to $0.524$?\" That's a totally different question from \"what is $\\sin(\\pi/6)$?\""
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 5. Quick check",
+        "- $\\sin^{-1}(1) = \\tfrac{\\pi}{2}$ ✓ (the angle whose sine is $1$). Not $1/\\sin(1) \\approx 1.188$.",
+        "- $\\left(\\sin\\!\\left(\\tfrac{\\pi}{2}\\right)\\right)^{-1} = (1)^{-1} = 1$ ✓ (reciprocate the value).",
+        "- $\\sin^2\\!\\left(\\tfrac{\\pi}{4}\\right) = \\left(\\tfrac{\\sqrt{2}}{2}\\right)^2 = \\tfrac{1}{2}$ ✓ (square the value).",
+        "- $\\sin^{-1}(2)$ is **undefined** — no real angle has a sine bigger than $1$. (Arcsin only takes inputs in $[-1, 1]$, since that's the range of $\\sin$.)"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The one-liner",
+      "body": "When $^{-1}$ sits on a **function name** ($\\sin^{-1}$, $f^{-1}$), it means *inverse function*.\nWhen $^{-1}$ sits on a **value** ($(\\sin x)^{-1}$, $5^{-1}$), it means *reciprocal*.\nSame symbol, two jobs — and the parentheses are how you tell which one."
+    }
+  ]
+}

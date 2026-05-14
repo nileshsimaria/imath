@@ -1,6 +1,13 @@
 {
   "posts": [
     {
+      "id": "sin-inverse-vs-reciprocal",
+      "title": "Why sin⁻¹x is not 1/sin x",
+      "date": "2026-05-14",
+      "summary": "sin²x means (sin x)², so it's natural to read sin⁻¹x as (sin x)⁻¹ = 1/sin x. That's wrong — and the reason untangles a notation clash that confuses almost every pre-calc student.",
+      "tags": ["pre-calculus", "trigonometry", "notation", "common-confusion"]
+    },
+    {
       "id": "sqrt-and-plus-minus",
       "title": "Why √x is never negative — but x² = 9 gives ±3",
       "date": "2026-05-14",
