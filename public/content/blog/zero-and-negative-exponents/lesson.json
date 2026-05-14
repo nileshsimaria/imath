@@ -1,0 +1,132 @@
+{
+  "title": "Why a⁰ = 1 — and what negative exponents really mean",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "You probably learned $a^0 = 1$ as a fact, and $a^{-n} = \\dfrac{1}{a^n}$ as another fact, and moved on. But both rules can be *derived* from a single exponent rule you already trust — in two lines each. After this, you won't have to memorize them, because you can rebuild them on demand."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The one rule we trust",
+        "For positive integer exponents, $a^n$ just means \"multiply $a$ by itself $n$ times\". So:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "a^3 \\cdot a^2 = (a \\cdot a \\cdot a)(a \\cdot a) = a^5"
+    },
+    {
+      "type": "text",
+      "md": [
+        "In general, $a^m \\cdot a^n = a^{m+n}$. This is *obvious* for positive integer exponents — we proved it just by counting copies of $a$.",
+        "Here's the whole game from here: **what would $a^0$ have to mean for this rule to keep working when one of the exponents is zero?**"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 1. Forcing the value of $a^0$",
+        "Pick any non-zero $a$. If the addition rule keeps working when the exponent is $0$, then:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "a^n \\cdot a^0 = a^{\\,n + 0} = a^n"
+    },
+    {
+      "type": "text",
+      "md": [
+        "So $a^n \\cdot a^0 = a^n$. Divide both sides by $a^n$ (allowed because $a^n \\ne 0$ when $a \\ne 0$):"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "a^0 = 1"
+    },
+    {
+      "type": "text",
+      "md": [
+        "That's it. We didn't define $a^0$ as \"multiply $a$ by itself zero times\" — that phrase is meaningless. We defined it as whatever value makes the exponent rule keep working. The *only* value that works is $1$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 2. Same trick gives negative exponents",
+        "We want $a^{-n}$ to obey the same addition rule:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "a^n \\cdot a^{-n} = a^{\\,n + (-n)} = a^0 = 1"
+    },
+    {
+      "type": "text",
+      "md": [
+        "So $a^n \\cdot a^{-n} = 1$, which means $a^{-n}$ has to be the reciprocal of $a^n$:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "a^{-n} = \\dfrac{1}{a^n}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Again — not a definition pulled out of a hat. It's *forced* by consistency with the rule we already had."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The principle, in one sentence",
+      "body": "Whatever a new kind of exponent means — zero, negative, fractional — its value is the *unique* one that keeps the rule $a^m \\cdot a^n = a^{m+n}$ working. Every extension of \"powers\" beyond positive integers comes from this single demand for consistency."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 3. Bonus — a hint at fractional exponents",
+        "The same idea pins down $a^{1/2}$. We want:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "a^{1/2} \\cdot a^{1/2} = a^{\\,1/2 + 1/2} = a^1 = a"
+    },
+    {
+      "type": "text",
+      "md": [
+        "So $a^{1/2}$ is whatever number, when multiplied by itself, gives $a$ — that is, $\\sqrt{a}$. (For $a \\ge 0$.) The square-root meaning of $a^{1/2}$ isn't a separate convention; it's forced by the same rule."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 4. What about $0^0$?",
+        "Our derivation needed $a \\ne 0$ — we divided by $a^n$. So $0^0$ isn't pinned down by this argument.",
+        "Two consistent answers exist, depending on context:",
+        "- In **discrete math, combinatorics, and power series**, the convention is $0^0 = 1$. It makes formulas like $\\sum_{k=0}^{n} \\binom{n}{k} x^k$ and Taylor series work cleanly at $x = 0$.",
+        "- In **limits and analysis**, $0^0$ is an *indeterminate form*. The limit of $x^y$ as $(x, y) \\to (0, 0)$ depends on the path — it can come out to $0$, $1$, or anything in between.",
+        "Most calculators report $0^0 = 1$ because they're using the first convention. Neither answer is wrong — they're answering different questions."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Quick check",
+        "- $5^0 = 1$ ✓",
+        "- $(-3)^0 = 1$ ✓ (the rule works for any non-zero $a$, positive or negative)",
+        "- $7^{-2} = \\dfrac{1}{49}$ ✓",
+        "- $(0.5)^{-1} = 2$ ✓",
+        "- $16^{1/2} = 4$ ✓"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The one-liner",
+      "body": "$a^0 = 1$ and $a^{-n} = 1/a^n$ aren't separate rules to memorize — they're the unique values that keep $a^m \\cdot a^n = a^{m+n}$ working. Earn them once, rebuild them forever."
+    }
+  ]
+}

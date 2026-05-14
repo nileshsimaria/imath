@@ -1,6 +1,13 @@
 {
   "posts": [
     {
+      "id": "zero-and-negative-exponents",
+      "title": "Why a⁰ = 1 — and what negative exponents really mean",
+      "date": "2026-05-14",
+      "summary": "You memorized that a⁰ = 1 and a⁻ⁿ = 1/aⁿ. But both rules can be derived from one exponent rule you already trust, in two lines each. Once you see the derivation, you'll never need to memorize either rule again.",
+      "tags": ["algebra", "exponents", "derive-dont-memorize"]
+    },
+    {
       "id": "sin-inverse-vs-reciprocal",
       "title": "Why sin⁻¹x is not 1/sin x",
       "date": "2026-05-14",

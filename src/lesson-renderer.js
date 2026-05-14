@@ -73,6 +73,28 @@ function renderTextLines(lines) {
       continue;
     }
 
+    // Unordered list: one or more consecutive lines starting with '- ', '* ',
+    // or '+ '. Without this, a leading '-' renders as a literal hyphen, which
+    // visually merges with adjacent math (e.g., '- $5^{-1}$' looks like one
+    // continuous expression).
+    const listMatch = line.match(/^[-*+]\s+(.+)$/);
+    if (listMatch) {
+      const items = [listMatch[1]];
+      let j = i + 1;
+      while (j < lines.length) {
+        const r = String(lines[j] || '').trim();
+        const m = r.match(/^[-*+]\s+(.+)$/);
+        if (!m) break;
+        items.push(m[1]);
+        j++;
+      }
+      out.push(
+        '<ul>' + items.map((it) => `<li>${renderInline(it)}</li>`).join('') + '</ul>',
+      );
+      i = j;
+      continue;
+    }
+
     out.push(`<p>${renderInline(line)}</p>`);
     i++;
   }
