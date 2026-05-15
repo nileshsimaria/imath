@@ -722,6 +722,16 @@ main:has(.lesson-wide) { max-width: min(1500px, calc(100vw - 32px)); }
   font-size: 18px;
   margin: 0 0 24px;
 }
+.quiz-prompt-svg {
+  display: flex;
+  justify-content: center;
+  margin: 12px 0 24px;
+}
+.quiz-prompt-svg svg {
+  max-width: 100%;
+  height: auto;
+  max-height: 260px;
+}
 .quiz-choices { display: flex; flex-direction: column; gap: 8px; margin: 0 0 16px; }
 .quiz-choice {
   display: flex;

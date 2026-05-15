@@ -16,8 +16,11 @@ function tex(s, display = false) {
 }
 
 function renderPrompt(q) {
-  if (q.promptTex) return tex(q.promptTex, true);
-  return `<div>${renderInline(q.prompt || '')}</div>`;
+  const main = q.promptTex
+    ? tex(q.promptTex, true)
+    : `<div>${renderInline(q.prompt || '')}</div>`;
+  const svg = q.promptSvg ? `<div class="quiz-prompt-svg">${q.promptSvg}</div>` : '';
+  return main + svg;
 }
 
 function checkNumeric(q, raw) {
