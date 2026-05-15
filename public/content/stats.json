@@ -4,7 +4,7 @@
     "algebra-1": 288,
     "algebra-2": 393,
     "geometry": 359,
-    "pre-calculus": 290,
+    "pre-calculus": 320,
     "calculus-1": 354,
     "statistics": 292
   },
@@ -125,6 +125,7 @@
     "pre-calculus/trigonometry/trig-equations-advanced": 15,
     "pre-calculus/trigonometry/sine-from-rotation": 5,
     "pre-calculus/trigonometry/parametric-challenge": 5,
+    "pre-calculus/trigonometry/act-trig-prep": 30,
     "pre-calculus/complex-numbers/intro": 15,
     "pre-calculus/vectors-polar/vector-basics": 12,
     "pre-calculus/vectors-polar/polar-coords": 12,
@@ -170,5 +171,5 @@
     "statistics/sampling/sampling-and-bias": 12,
     "statistics/sampling/sampling-distributions": 12
   },
-  "total": 2274
+  "total": 2304
 }

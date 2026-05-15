@@ -1,0 +1,13 @@
+{
+  // Cloudflare deploy config. `npx wrangler deploy` reads this and uploads the
+  // built static site (./dist) — no Worker script, assets only. Without this
+  // file wrangler tries to auto-detect the project and fails on vite.config.js.
+  //
+  // `name` MUST match the Cloudflare project name. Change it if your project
+  // is named something other than "imath".
+  "name": "imath",
+  "compatibility_date": "2026-05-15",
+  "assets": {
+    "directory": "./dist"
+  }
+}
