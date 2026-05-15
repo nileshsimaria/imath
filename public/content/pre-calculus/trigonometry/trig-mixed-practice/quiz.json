@@ -1,0 +1,822 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The triangle below is right-angled. Express the side } t \\text{ in terms of } \\theta.",
+      "promptSvg": "<svg viewBox='0 0 320 210' xmlns='http://www.w3.org/2000/svg'><polygon points='50,170 270,170 270,50' fill='#eef2ff' stroke='#1e293b' stroke-width='1.5'/><line x1='50' y1='170' x2='270' y2='50' stroke='#4f46e5' stroke-width='2'/><rect x='254' y='154' width='16' height='16' fill='none' stroke='#1e293b' stroke-width='1.2'/><path d='M 88 170 A 38 38 0 0 0 83 152' fill='none' stroke='#dc2626' stroke-width='1.5'/><text x='96' y='162' font-size='15' fill='#dc2626' font-weight='700' font-style='italic'>θ</text><text x='150' y='100' font-size='14' fill='#4f46e5' font-weight='700' transform='rotate(-29 150 100)'>20</text><text x='284' y='115' font-size='15' fill='#7c3aed' font-weight='700' font-style='italic'>t</text></svg>",
+      "choices": [
+        "20\\sin\\theta",
+        "20\\cos\\theta",
+        "20\\tan\\theta",
+        "\\dfrac{\\sin\\theta}{20}",
+        "\\dfrac{20}{\\sin\\theta}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Relative to $\\theta$, the side of length $20$ is the **hypotenuse** and $t$ is the **opposite** side.",
+        "Opposite and hypotenuse → use **sine**: $\\sin\\theta = \\dfrac{\\text{opp}}{\\text{hyp}}$.",
+        "Set $\\sin\\theta = \\dfrac{t}{20}$ and solve for $t$."
+      ],
+      "explanation": "From $\\theta$: opposite $= t$, hypotenuse $= 20$. So $\\sin\\theta = \\dfrac{t}{20}$, giving $t = 20\\sin\\theta$.",
+      "steps": [
+        "**Label the sides relative to $\\theta$.** The longest side, across from the right angle, is the hypotenuse — that's the side of length $20$. The side directly across from $\\theta$ is $t$, the opposite side.",
+        "**Pick the ratio.** Opposite and hypotenuse are involved, no adjacent → **sine**.",
+        "Set up: $$\\sin\\theta = \\dfrac{\\text{opp}}{\\text{hyp}} = \\dfrac{t}{20}$$",
+        "Multiply both sides by $20$: $$t = 20\\sin\\theta$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If } \\cos P = \\dfrac{5}{13} \\text{ and } \\sin P < 0, \\text{ then } \\sin P = ?",
+      "choices": [
+        "-\\dfrac{12}{13}",
+        "\\dfrac{12}{13}",
+        "-\\dfrac{5}{13}",
+        "\\dfrac{12}{5}",
+        "-\\dfrac{13}{12}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Use the Pythagorean identity $\\sin^2 P + \\cos^2 P = 1$.",
+        "$\\sin^2 P = 1 - \\left(\\tfrac{5}{13}\\right)^2 = 1 - \\tfrac{25}{169}$.",
+        "Take the square root, then choose the sign using the condition $\\sin P < 0$."
+      ],
+      "explanation": "$\\sin^2 P = 1 - \\tfrac{25}{169} = \\tfrac{144}{169}$, so $\\sin P = \\pm\\tfrac{12}{13}$. Since $\\sin P < 0$, $\\sin P = -\\tfrac{12}{13}$.",
+      "steps": [
+        "**Apply the Pythagorean identity:** $$\\sin^2 P = 1 - \\cos^2 P = 1 - \\dfrac{25}{169}$$",
+        "**Combine:** $$\\sin^2 P = \\dfrac{169 - 25}{169} = \\dfrac{144}{169}$$",
+        "**Take the square root:** $$\\sin P = \\pm\\dfrac{12}{13}$$",
+        "**Choose the sign.** The problem states $\\sin P < 0$, so we keep the negative root: $$\\sin P = -\\dfrac{12}{13}$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\csc(x)\\cdot\\tan(x) = ?",
+      "choices": [
+        "\\sec x",
+        "\\csc x",
+        "\\cot x",
+        "\\sin x",
+        "1"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Rewrite each function in terms of $\\sin x$ and $\\cos x$.",
+        "$\\csc x = \\dfrac{1}{\\sin x}$ and $\\tan x = \\dfrac{\\sin x}{\\cos x}$.",
+        "Multiply and cancel the common factor."
+      ],
+      "explanation": "$\\csc x\\cdot\\tan x = \\dfrac{1}{\\sin x}\\cdot\\dfrac{\\sin x}{\\cos x} = \\dfrac{1}{\\cos x} = \\sec x$.",
+      "steps": [
+        "**Convert to sine and cosine:** $$\\csc x = \\dfrac{1}{\\sin x}, \\qquad \\tan x = \\dfrac{\\sin x}{\\cos x}$$",
+        "**Multiply:** $$\\csc x\\cdot\\tan x = \\dfrac{1}{\\sin x}\\cdot\\dfrac{\\sin x}{\\cos x}$$",
+        "**Cancel $\\sin x$:** $$= \\dfrac{1}{\\cos x}$$",
+        "**Recognize the reciprocal:** $\\dfrac{1}{\\cos x} = \\sec x$."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A drone hovers } 60 \\text{ m directly above level ground. The angle of} \\\\ \\text{depression from the drone to a ground marker is } 40°. \\text{ How far, } d, \\\\ \\text{is the marker from the point on the ground directly below the drone?}",
+      "promptSvg": "<svg viewBox='0 0 360 210' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='170' x2='340' y2='170' stroke='#1e293b' stroke-width='1.5'/><line x1='60' y1='40' x2='60' y2='170' stroke='#10b981' stroke-width='2'/><line x1='60' y1='40' x2='300' y2='170' stroke='#4f46e5' stroke-width='2'/><line x1='60' y1='40' x2='250' y2='40' stroke='#94a3b8' stroke-width='1.2' stroke-dasharray='4 3'/><path d='M 110 40 A 50 50 0 0 0 100 64' fill='none' stroke='#dc2626' stroke-width='1.5'/><text x='114' y='60' font-size='13' fill='#dc2626' font-weight='700'>40°</text><circle cx='60' cy='40' r='3.5' fill='#1e293b'/><circle cx='300' cy='170' r='3.5' fill='#1e293b'/><text x='38' y='108' font-size='13' fill='#10b981' font-weight='700'>60 m</text><text x='180' y='190' font-size='13' text-anchor='middle' font-weight='600'>d</text><text x='60' y='30' font-size='12' text-anchor='middle'>drone</text><text x='300' y='190' font-size='12' text-anchor='middle'>marker</text></svg>",
+      "choices": [
+        "\\dfrac{60}{\\tan 40°}",
+        "60\\tan 40°",
+        "60\\sin 40°",
+        "\\dfrac{60}{\\sin 40°}",
+        "60\\cos 40°"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "The angle of depression from the drone equals the angle of **elevation** from the marker (alternate angles with the horizontal).",
+        "From the marker's $40°$ angle: the height $60$ is **opposite**, the ground distance $d$ is **adjacent**.",
+        "Opposite over adjacent → tangent: $\\tan 40° = \\dfrac{60}{d}$."
+      ],
+      "explanation": "The angle at the marker is also $40°$. There, $\\tan 40° = \\dfrac{\\text{opp}}{\\text{adj}} = \\dfrac{60}{d}$, so $d = \\dfrac{60}{\\tan 40°}$.",
+      "steps": [
+        "**Move the angle to the ground.** The $40°$ angle of depression (measured from the horizontal at the drone) equals the $40°$ angle of elevation at the marker — they are alternate interior angles across the two horizontal lines.",
+        "**Label the right triangle from the marker.** The vertical height $60$ is opposite the $40°$ angle; the ground distance $d$ is adjacent to it.",
+        "**Pick the ratio.** Opposite and adjacent → **tangent**: $$\\tan 40° = \\dfrac{60}{d}$$",
+        "**Solve for $d$:** $$d = \\dfrac{60}{\\tan 40°}$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Using } \\cos(A+B) = \\cos A\\cos B - \\sin A\\sin B \\text{ with } 75° = 45° + 30°, \\\\ \\text{find the exact value of } \\cos 75°.",
+      "choices": [
+        "\\dfrac{\\sqrt6-\\sqrt2}{4}",
+        "\\dfrac{\\sqrt6+\\sqrt2}{4}",
+        "\\dfrac{\\sqrt2-\\sqrt6}{4}",
+        "\\dfrac{\\sqrt3-1}{4}",
+        "\\dfrac{\\sqrt6-\\sqrt2}{2}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Write $\\cos 75° = \\cos(45° + 30°)$ and apply the angle-sum formula.",
+        "Use $\\cos 45° = \\sin 45° = \\tfrac{\\sqrt2}{2}$, $\\cos 30° = \\tfrac{\\sqrt3}{2}$, $\\sin 30° = \\tfrac{1}{2}$.",
+        "Combine the two products over the common denominator $4$."
+      ],
+      "explanation": "$\\cos 75° = \\cos45°\\cos30° - \\sin45°\\sin30° = \\tfrac{\\sqrt2}{2}\\cdot\\tfrac{\\sqrt3}{2} - \\tfrac{\\sqrt2}{2}\\cdot\\tfrac{1}{2} = \\tfrac{\\sqrt6}{4} - \\tfrac{\\sqrt2}{4} = \\tfrac{\\sqrt6-\\sqrt2}{4}$.",
+      "steps": [
+        "**Split the angle:** $$\\cos 75° = \\cos(45° + 30°)$$",
+        "**Apply the formula:** $$\\cos 75° = \\cos45°\\cos30° - \\sin45°\\sin30°$$",
+        "**Substitute exact values:** $$= \\dfrac{\\sqrt2}{2}\\cdot\\dfrac{\\sqrt3}{2} - \\dfrac{\\sqrt2}{2}\\cdot\\dfrac{1}{2}$$",
+        "**Multiply each term:** $$= \\dfrac{\\sqrt6}{4} - \\dfrac{\\sqrt2}{4}$$",
+        "**Combine over the common denominator:** $$\\cos 75° = \\dfrac{\\sqrt6 - \\sqrt2}{4}$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which equation best describes the periodic function shown?}",
+      "promptSvg": "<svg viewBox='0 0 470 230' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='120' x2='450' y2='120' stroke='#94a3b8' stroke-width='1'/><line x1='30' y1='50' x2='450' y2='50' stroke='#e2e8f0' stroke-width='1' stroke-dasharray='2 2'/><line x1='30' y1='190' x2='450' y2='190' stroke='#e2e8f0' stroke-width='1' stroke-dasharray='2 2'/><line x1='50' y1='30' x2='50' y2='210' stroke='#94a3b8' stroke-width='1'/><line x1='170' y1='114' x2='170' y2='126' stroke='#475569' stroke-width='1'/><line x1='290' y1='114' x2='290' y2='126' stroke='#475569' stroke-width='1'/><line x1='410' y1='114' x2='410' y2='126' stroke='#475569' stroke-width='1'/><text x='170' y='142' font-size='12' text-anchor='middle'>π</text><text x='290' y='142' font-size='12' text-anchor='middle'>2π</text><text x='410' y='142' font-size='12' text-anchor='middle'>3π</text><text x='42' y='54' font-size='11' text-anchor='end' fill='#64748b'>5</text><text x='42' y='124' font-size='11' text-anchor='end' fill='#64748b'>2</text><text x='42' y='194' font-size='11' text-anchor='end' fill='#64748b'>−1</text><path d='M 50 120 Q 80 50 110 120 Q 140 190 170 120 Q 200 50 230 120 Q 260 190 290 120 Q 320 50 350 120 Q 380 190 410 120' fill='none' stroke='#dc2626' stroke-width='2.2'/></svg>",
+      "choices": [
+        "3\\sin(2x) + 2",
+        "2\\sin(3x) + 3",
+        "3\\sin\\!\\left(\\tfrac{1}{2}x\\right) + 2",
+        "2\\sin(2x) + 3",
+        "5\\sin(2x)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "**Period** = peak-to-peak distance. The peaks here are $\\pi$ apart.",
+        "For $\\sin(Bx)$, period $= \\dfrac{2\\pi}{B}$. A period of $\\pi$ gives $B = 2$.",
+        "**Midline** $= \\dfrac{\\max + \\min}{2}$ and **amplitude** $= \\dfrac{\\max - \\min}{2}$."
+      ],
+      "explanation": "Period $= \\pi$ gives $B = 2$. The wave runs between $5$ and $-1$, so midline $= \\tfrac{5+(-1)}{2} = 2$ and amplitude $= \\tfrac{5-(-1)}{2} = 3$. The equation is $3\\sin(2x) + 2$.",
+      "steps": [
+        "**Find the period.** Reading the graph, one peak to the next is a distance of $\\pi$. So **period $= \\pi$**.",
+        "**Find $B$.** For $y = a\\sin(Bx) + k$, period $= \\dfrac{2\\pi}{B}$. Solve $\\dfrac{2\\pi}{B} = \\pi \\Rightarrow B = 2$.",
+        "**Find the midline $k$.** The curve oscillates between $y = 5$ and $y = -1$: $$k = \\dfrac{5 + (-1)}{2} = 2$$",
+        "**Find the amplitude $a$.** Distance from midline to peak: $$a = 5 - 2 = 3$$",
+        "**Assemble:** $$y = 3\\sin(2x) + 2$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which angle measure is } \\textbf{not} \\text{ coterminal with } 50°?",
+      "choices": [
+        "130°",
+        "410°",
+        "-310°",
+        "770°",
+        "-670°"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Two angles are coterminal when they differ by a whole number of full turns: $50° + 360°k$.",
+        "Test each choice: subtract $50°$ and check whether the result is a multiple of $360°$.",
+        "$410 - 50 = 360$, $-310 - 50 = -360$, $770 - 50 = 720$, $-670 - 50 = -720$ — all multiples of $360$."
+      ],
+      "explanation": "Coterminal angles have the form $50° + 360°k$. The values $410°, -310°, 770°, -670°$ all qualify. $130°$ differs from $50°$ by $80°$, which is not a multiple of $360°$ — so it is not coterminal.",
+      "steps": [
+        "**State the rule.** An angle is coterminal with $50°$ exactly when it equals $50° + 360°k$ for some integer $k$.",
+        "**Test each choice** by computing (choice $- 50°$) and checking divisibility by $360°$:",
+        "$410° - 50° = 360°$ ✓, $\\;-310° - 50° = -360°$ ✓, $\\;770° - 50° = 720°$ ✓, $\\;-670° - 50° = -720°$ ✓.",
+        "$130° - 50° = 80°$, which is **not** a multiple of $360°$.",
+        "**Conclusion:** $130°$ is the angle that is not coterminal with $50°$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "promptTex": "\\text{In triangle } PQR, \\ PQ = 7,\\ QR = 8,\\ PR = 9. \\\\ \\text{Using the Law of Cosines, } \\cos Q = ?",
+      "promptSvg": "<svg viewBox='0 0 320 220' xmlns='http://www.w3.org/2000/svg'><polygon points='80,180 240,180 120,46' fill='#eef2ff' stroke='#1e293b' stroke-width='1.6'/><text x='160' y='200' font-size='14' text-anchor='middle' font-weight='700' fill='#4f46e5'>8</text><text x='86' y='112' font-size='14' text-anchor='middle' font-weight='700' fill='#4f46e5'>7</text><text x='194' y='106' font-size='14' text-anchor='middle' font-weight='700' fill='#4f46e5'>9</text><text x='68' y='196' font-size='13' font-weight='700' fill='#dc2626'>Q</text><text x='244' y='196' font-size='13' font-weight='700'>R</text><text x='114' y='40' font-size='13' font-weight='700'>P</text></svg>",
+      "choices": [
+        "\\dfrac{2}{7}",
+        "\\dfrac{32}{63}",
+        "-\\dfrac{2}{7}",
+        "\\dfrac{9}{16}",
+        "\\dfrac{2}{9}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Angle $Q$ sits between sides $PQ = 7$ and $QR = 8$; the side opposite it is $PR = 9$.",
+        "Law of Cosines: $PR^2 = PQ^2 + QR^2 - 2\\,(PQ)(QR)\\cos Q$.",
+        "Substitute $9^2 = 7^2 + 8^2 - 2(7)(8)\\cos Q$ and solve for $\\cos Q$."
+      ],
+      "explanation": "$9^2 = 7^2 + 8^2 - 2(7)(8)\\cos Q \\Rightarrow 81 = 113 - 112\\cos Q \\Rightarrow \\cos Q = \\tfrac{32}{112} = \\tfrac{2}{7}$.",
+      "steps": [
+        "**Identify the side opposite angle $Q$.** The two sides meeting at $Q$ are $7$ and $8$; the side across from $Q$ is $PR = 9$.",
+        "**Write the Law of Cosines** for the side opposite $Q$: $$PR^2 = PQ^2 + QR^2 - 2(PQ)(QR)\\cos Q$$",
+        "**Substitute:** $$81 = 49 + 64 - 2(7)(8)\\cos Q$$",
+        "**Simplify:** $$81 = 113 - 112\\cos Q$$",
+        "**Solve:** $$112\\cos Q = 32 \\;\\Rightarrow\\; \\cos Q = \\dfrac{32}{112} = \\dfrac{2}{7}$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Angle } \\theta \\text{ is in standard position. Its terminal side passes} \\\\ \\text{through the point } (8,\\ -15). \\text{ What is } \\sin\\theta?",
+      "promptSvg": "<svg viewBox='0 0 340 240' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='110' x2='310' y2='110' stroke='#94a3b8' stroke-width='1.2'/><line x1='170' y1='20' x2='170' y2='220' stroke='#94a3b8' stroke-width='1.2'/><line x1='170' y1='110' x2='218' y2='200' stroke='#4f46e5' stroke-width='2.2'/><circle cx='218' cy='200' r='4' fill='#dc2626'/><text x='226' y='214' font-size='12' fill='#dc2626' font-weight='700'>(8, −15)</text><path d='M 200 110 A 30 30 0 0 0 184 136' fill='none' stroke='#16a34a' stroke-width='1.5'/><text x='197' y='130' font-size='13' fill='#16a34a' font-weight='700' font-style='italic'>θ</text><text x='300' y='124' font-size='11' fill='#64748b'>x</text><text x='178' y='30' font-size='11' fill='#64748b'>y</text></svg>",
+      "choices": [
+        "-\\dfrac{15}{17}",
+        "\\dfrac{15}{17}",
+        "-\\dfrac{8}{17}",
+        "-\\dfrac{15}{8}",
+        "\\dfrac{8}{17}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "For a point $(x, y)$ on the terminal side, $\\sin\\theta = \\dfrac{y}{r}$ where $r = \\sqrt{x^2 + y^2}$.",
+        "Compute $r = \\sqrt{8^2 + (-15)^2}$.",
+        "$r$ is always positive; the sign of $\\sin\\theta$ comes from $y$."
+      ],
+      "explanation": "$r = \\sqrt{8^2 + (-15)^2} = \\sqrt{64 + 225} = \\sqrt{289} = 17$. Then $\\sin\\theta = \\dfrac{y}{r} = \\dfrac{-15}{17}$.",
+      "steps": [
+        "**Find the radius $r$** (distance from the origin to the point): $$r = \\sqrt{x^2 + y^2} = \\sqrt{8^2 + (-15)^2}$$",
+        "**Compute:** $$r = \\sqrt{64 + 225} = \\sqrt{289} = 17$$",
+        "**Apply the definition:** $$\\sin\\theta = \\dfrac{y}{r}$$",
+        "**Substitute** $y = -15$, $r = 17$: $$\\sin\\theta = -\\dfrac{15}{17}$$ The point is in Quadrant IV, where sine is negative — consistent."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q10",
+      "type": "multiple-choice",
+      "promptTex": "\\text{If } \\tan x = -\\sqrt{3} \\text{ and } \\dfrac{\\pi}{2} < x < \\pi, \\text{ then } x = ?",
+      "choices": [
+        "\\dfrac{2\\pi}{3}",
+        "\\dfrac{5\\pi}{6}",
+        "\\dfrac{\\pi}{3}",
+        "\\dfrac{4\\pi}{3}",
+        "\\dfrac{5\\pi}{3}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "The interval $\\tfrac{\\pi}{2} < x < \\pi$ is Quadrant II.",
+        "The **reference angle** satisfies $\\tan(\\text{ref}) = \\sqrt{3}$, so the reference angle is $\\tfrac{\\pi}{3}$.",
+        "In Quadrant II, $x = \\pi - (\\text{reference angle})$."
+      ],
+      "explanation": "$\\tan x = -\\sqrt3$ has reference angle $\\tfrac{\\pi}{3}$. In Quadrant II, $x = \\pi - \\tfrac{\\pi}{3} = \\tfrac{2\\pi}{3}$.",
+      "steps": [
+        "**Locate the quadrant.** $\\tfrac{\\pi}{2} < x < \\pi$ places $x$ in **Quadrant II**, where tangent is negative — consistent with $\\tan x = -\\sqrt3$.",
+        "**Find the reference angle.** Ignore the sign: $\\tan(\\text{ref}) = \\sqrt3$ gives $\\text{ref} = \\dfrac{\\pi}{3}$.",
+        "**Place it in Quadrant II:** $$x = \\pi - \\dfrac{\\pi}{3} = \\dfrac{2\\pi}{3}$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q11",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which equation's graph is the graph of } y = \\cos x \\\\ \\text{reflected in the } x\\text{-axis and then shifted up } 3?",
+      "choices": [
+        "-\\cos x + 3",
+        "\\cos x + 3",
+        "-\\cos x - 3",
+        "\\cos x - 3",
+        "-\\cos(x + 3)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Reflecting $y = f(x)$ in the $x$-axis multiplies the whole function by $-1$.",
+        "Shifting a graph **up** by $3$ adds $3$ to the function.",
+        "Apply the reflection first, then the vertical shift."
+      ],
+      "explanation": "Reflecting $\\cos x$ in the $x$-axis gives $-\\cos x$. Shifting that up by $3$ adds $3$: $y = -\\cos x + 3$.",
+      "steps": [
+        "**Reflect in the $x$-axis.** This negates the output: $$y = \\cos x \\;\\longrightarrow\\; y = -\\cos x$$",
+        "**Shift up by $3$.** A vertical shift up adds a constant: $$y = -\\cos x \\;\\longrightarrow\\; y = -\\cos x + 3$$",
+        "**Note the trap:** $-\\cos(x+3)$ is a *horizontal* shift, not a vertical one — the $+3$ must be outside the cosine."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Over } 0 \\le x < 2\\pi, \\text{ how many times does the line } y = 6 \\\\ \\text{intersect the curve } y = 4\\sin x?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Intersections occur where $4\\sin x = 6$.",
+        "Solve for $\\sin x$ — what value would it need to take?",
+        "Remember that $\\sin x$ can only take values between $-1$ and $1$."
+      ],
+      "explanation": "Setting $4\\sin x = 6$ gives $\\sin x = 1.5$. Since $\\sin x$ never exceeds $1$, there is no solution — the line and curve never meet. The answer is $0$.",
+      "steps": [
+        "**Set the two expressions equal:** $$4\\sin x = 6$$",
+        "**Solve for $\\sin x$:** $$\\sin x = \\dfrac{6}{4} = 1.5$$",
+        "**Check feasibility.** The sine function only outputs values in $[-1, 1]$. A value of $1.5$ is impossible.",
+        "**Conclusion.** The curve $y = 4\\sin x$ peaks at $4$, which never reaches the line $y = 6$. There are $0$ intersections."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q13",
+      "type": "multiple-choice",
+      "promptTex": "\\sin(420°) = ?",
+      "choices": [
+        "\\dfrac{\\sqrt3}{2}",
+        "\\dfrac{1}{2}",
+        "-\\dfrac{\\sqrt3}{2}",
+        "0",
+        "1"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "$420°$ is more than one full turn. Subtract $360°$ to find a coterminal angle.",
+        "$420° - 360° = 60°$, and $\\sin(420°) = \\sin(60°)$.",
+        "Recall the exact value of $\\sin 60°$."
+      ],
+      "explanation": "$420° - 360° = 60°$, so $\\sin 420° = \\sin 60° = \\tfrac{\\sqrt3}{2}$.",
+      "steps": [
+        "**Reduce the angle.** Since $420° > 360°$, subtract a full turn: $$420° - 360° = 60°$$",
+        "**Use coterminal equality.** Coterminal angles have the same sine: $$\\sin 420° = \\sin 60°$$",
+        "**Evaluate:** $$\\sin 60° = \\dfrac{\\sqrt3}{2}$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q14",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The period of } y = 3\\cos(6\\theta - 45°) \\text{ is:}",
+      "choices": [
+        "60°",
+        "6°",
+        "45°",
+        "120°",
+        "360°"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "For $y = a\\cos(B\\theta + c)$ measured in degrees, period $= \\dfrac{360°}{B}$.",
+        "Here $B = 6$. The amplitude $3$ and the phase term $-45°$ do not affect the period.",
+        "Compute $\\dfrac{360°}{6}$."
+      ],
+      "explanation": "Period $= \\dfrac{360°}{B} = \\dfrac{360°}{6} = 60°$. The amplitude and phase shift have no effect on the period.",
+      "steps": [
+        "**Identify $B$.** In $y = 3\\cos(6\\theta - 45°)$, the coefficient of $\\theta$ is $B = 6$.",
+        "**Apply the period formula** (degrees): $$\\text{period} = \\dfrac{360°}{B}$$",
+        "**Substitute and simplify:** $$\\text{period} = \\dfrac{360°}{6} = 60°$$",
+        "The amplitude ($3$) and the $-45°$ inside only stretch and shift the wave — they leave the period unchanged."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q15",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A wheelchair ramp rises to a doorway } 1.2 \\text{ m above the ground,} \\\\ \\text{making a } 15° \\text{ angle with the ground. How long is the ramp, } L?",
+      "promptSvg": "<svg viewBox='0 0 370 220' xmlns='http://www.w3.org/2000/svg'><polygon points='40,180 320,180 320,105' fill='#eef2ff' stroke='#1e293b' stroke-width='1.5'/><line x1='40' y1='180' x2='320' y2='105' stroke='#4f46e5' stroke-width='2.4'/><rect x='304' y='164' width='16' height='16' fill='none' stroke='#1e293b' stroke-width='1.2'/><path d='M 92 180 A 52 52 0 0 0 88 165' fill='none' stroke='#dc2626' stroke-width='1.5'/><text x='102' y='174' font-size='13' fill='#dc2626' font-weight='700'>15°</text><text x='332' y='148' font-size='13' fill='#10b981' font-weight='700'>1.2 m</text><text x='168' y='128' font-size='14' fill='#4f46e5' font-weight='700' transform='rotate(-15 168 128)'>L</text></svg>",
+      "choices": [
+        "\\dfrac{1.2}{\\sin 15°}",
+        "1.2\\sin 15°",
+        "\\dfrac{1.2}{\\cos 15°}",
+        "1.2\\tan 15°",
+        "\\dfrac{1.2}{\\tan 15°}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "The ramp $L$ is the **hypotenuse** of the right triangle; the $1.2$ m rise is the side **opposite** the $15°$ angle.",
+        "Opposite and hypotenuse → sine: $\\sin 15° = \\dfrac{1.2}{L}$.",
+        "Solve the equation for $L$."
+      ],
+      "explanation": "The rise of $1.2$ is opposite the $15°$ angle and $L$ is the hypotenuse, so $\\sin 15° = \\dfrac{1.2}{L}$, giving $L = \\dfrac{1.2}{\\sin 15°}$.",
+      "steps": [
+        "**Label the triangle.** The ramp itself is the hypotenuse $L$. The vertical rise of $1.2$ m sits opposite the $15°$ angle.",
+        "**Pick the ratio.** Opposite and hypotenuse → **sine**: $$\\sin 15° = \\dfrac{\\text{opp}}{\\text{hyp}} = \\dfrac{1.2}{L}$$",
+        "**Solve for $L$.** Multiply both sides by $L$, then divide by $\\sin 15°$: $$L = \\dfrac{1.2}{\\sin 15°}$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q16",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Simplify } (1 - \\cos\\theta)(1 + \\cos\\theta).",
+      "choices": [
+        "\\sin^2\\theta",
+        "\\cos^2\\theta",
+        "1",
+        "\\tan^2\\theta",
+        "2\\sin\\theta"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "The product has the form $(a - b)(a + b)$, a difference of squares.",
+        "$(1 - \\cos\\theta)(1 + \\cos\\theta) = 1 - \\cos^2\\theta$.",
+        "Rearrange the Pythagorean identity $\\sin^2\\theta + \\cos^2\\theta = 1$."
+      ],
+      "explanation": "$(1-\\cos\\theta)(1+\\cos\\theta) = 1 - \\cos^2\\theta$. By the Pythagorean identity, $1 - \\cos^2\\theta = \\sin^2\\theta$.",
+      "steps": [
+        "**Recognize the pattern.** This is a difference of squares $(a-b)(a+b) = a^2 - b^2$ with $a = 1$, $b = \\cos\\theta$: $$(1 - \\cos\\theta)(1 + \\cos\\theta) = 1 - \\cos^2\\theta$$",
+        "**Use the Pythagorean identity.** From $\\sin^2\\theta + \\cos^2\\theta = 1$, rearrange: $$1 - \\cos^2\\theta = \\sin^2\\theta$$",
+        "**Result:** $$(1 - \\cos\\theta)(1 + \\cos\\theta) = \\sin^2\\theta$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q17",
+      "type": "multiple-choice",
+      "promptTex": "\\text{In triangle } ABC, \\ AB = 12,\\ \\angle A = 55°,\\ \\angle B = 65°. \\\\ \\text{Using the Law of Sines, the length of } BC \\text{ is:}",
+      "promptSvg": "<svg viewBox='0 0 340 215' xmlns='http://www.w3.org/2000/svg'><polygon points='80,185 280,185 200,14' fill='#eef2ff' stroke='#1e293b' stroke-width='1.6'/><text x='180' y='204' font-size='14' text-anchor='middle' font-weight='700' fill='#4f46e5'>12</text><path d='M 116 185 A 36 36 0 0 0 102 155' fill='none' stroke='#dc2626' stroke-width='1.5'/><text x='110' y='177' font-size='12' fill='#dc2626' font-weight='700'>55°</text><path d='M 244 185 A 36 36 0 0 0 256 157' fill='none' stroke='#dc2626' stroke-width='1.5'/><text x='232' y='178' font-size='12' fill='#dc2626' font-weight='700'>65°</text><text x='68' y='199' font-size='13' font-weight='700'>A</text><text x='284' y='199' font-size='13' font-weight='700'>B</text><text x='195' y='11' font-size='13' font-weight='700'>C</text></svg>",
+      "choices": [
+        "\\dfrac{12\\sin 55°}{\\sin 60°}",
+        "\\dfrac{12\\sin 60°}{\\sin 55°}",
+        "\\dfrac{12\\sin 65°}{\\sin 60°}",
+        "12\\sin 55°",
+        "\\dfrac{\\sin 55°}{12\\sin 60°}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "First find $\\angle C$: the three angles sum to $180°$.",
+        "Side $BC$ is opposite $\\angle A$; side $AB$ is opposite $\\angle C$.",
+        "Law of Sines: $\\dfrac{BC}{\\sin A} = \\dfrac{AB}{\\sin C}$."
+      ],
+      "explanation": "$\\angle C = 180° - 55° - 65° = 60°$. By the Law of Sines, $\\dfrac{BC}{\\sin A} = \\dfrac{AB}{\\sin C}$, so $BC = \\dfrac{AB\\sin A}{\\sin C} = \\dfrac{12\\sin 55°}{\\sin 60°}$.",
+      "steps": [
+        "**Find the third angle:** $$\\angle C = 180° - 55° - 65° = 60°$$",
+        "**Match sides to opposite angles.** $BC$ is opposite $\\angle A = 55°$; the known side $AB = 12$ is opposite $\\angle C = 60°$.",
+        "**Write the Law of Sines** for that pair: $$\\dfrac{BC}{\\sin A} = \\dfrac{AB}{\\sin C}$$",
+        "**Solve for $BC$:** $$BC = \\dfrac{AB\\,\\sin A}{\\sin C} = \\dfrac{12\\sin 55°}{\\sin 60°}$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q18",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The point } \\left(-\\tfrac{5}{13},\\ y\\right) \\text{ lies on the unit circle in} \\\\ \\text{Quadrant III. What is } y?",
+      "choices": [
+        "-\\dfrac{12}{13}",
+        "\\dfrac{12}{13}",
+        "-\\dfrac{5}{13}",
+        "\\dfrac{12}{5}",
+        "-\\dfrac{13}{12}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Every point on the unit circle satisfies $x^2 + y^2 = 1$.",
+        "Substitute $x = -\\tfrac{5}{13}$ and solve for $y^2$.",
+        "In Quadrant III, the $y$-coordinate is negative."
+      ],
+      "explanation": "$y^2 = 1 - \\left(-\\tfrac{5}{13}\\right)^2 = 1 - \\tfrac{25}{169} = \\tfrac{144}{169}$, so $y = \\pm\\tfrac{12}{13}$. Quadrant III means $y < 0$, so $y = -\\tfrac{12}{13}$.",
+      "steps": [
+        "**Use the unit-circle equation:** $$x^2 + y^2 = 1$$",
+        "**Substitute $x = -\\tfrac{5}{13}$:** $$\\dfrac{25}{169} + y^2 = 1 \\;\\Rightarrow\\; y^2 = \\dfrac{144}{169}$$",
+        "**Take the square root:** $$y = \\pm\\dfrac{12}{13}$$",
+        "**Choose the sign.** Quadrant III has negative $y$, so $$y = -\\dfrac{12}{13}$$"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q19",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A Ferris wheel completes } 3 \\text{ full rotations every } 12 \\text{ minutes.} \\\\ \\text{How many } \\textbf{seconds} \\text{ does one full rotation (one period) take?}",
+      "choices": [
+        "240",
+        "4",
+        "36",
+        "720",
+        "180"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "The period is the time for **one** rotation. Divide the total time by the number of rotations.",
+        "$12$ minutes $\\div\\ 3$ rotations $= 4$ minutes per rotation.",
+        "Convert minutes to seconds: multiply by $60$."
+      ],
+      "explanation": "One rotation takes $12 \\div 3 = 4$ minutes. Converting: $4 \\times 60 = 240$ seconds.",
+      "steps": [
+        "**Find minutes per rotation.** Total time divided by number of rotations: $$\\dfrac{12\\text{ min}}{3} = 4\\text{ min per rotation}$$",
+        "**Convert to seconds:** $$4\\text{ min} \\times 60 = 240\\text{ s}$$",
+        "So the period of the motion is $240$ seconds."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q20",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Two sides of a triangle measure } 10 \\text{ and } 14, \\text{ and the angle} \\\\ \\text{between them is } 30°. \\text{ What is the area of the triangle?}",
+      "promptSvg": "<svg viewBox='0 0 320 220' xmlns='http://www.w3.org/2000/svg'><polygon points='60,180 256,180 181,110' fill='#eef2ff' stroke='#1e293b' stroke-width='1.6'/><path d='M 104 180 A 44 44 0 0 0 99 159' fill='none' stroke='#dc2626' stroke-width='1.5'/><text x='112' y='174' font-size='12' fill='#dc2626' font-weight='700'>30°</text><text x='158' y='199' font-size='14' font-weight='700' fill='#4f46e5'>14</text><text x='104' y='137' font-size='14' font-weight='700' fill='#4f46e5' transform='rotate(-30 104 137)'>10</text></svg>",
+      "choices": [
+        "35",
+        "70",
+        "140",
+        "17.5",
+        "60"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "When two sides and the angle between them are known, area $= \\tfrac{1}{2}ab\\sin C$.",
+        "Here $a = 10$, $b = 14$, and $C = 30°$.",
+        "Recall $\\sin 30° = \\tfrac{1}{2}$."
+      ],
+      "explanation": "Area $= \\tfrac{1}{2}ab\\sin C = \\tfrac{1}{2}(10)(14)\\sin 30° = \\tfrac{1}{2}(140)\\left(\\tfrac{1}{2}\\right) = 35$.",
+      "steps": [
+        "**Choose the formula.** Two sides and their included angle → $$\\text{Area} = \\dfrac{1}{2}ab\\sin C$$",
+        "**Substitute** $a = 10$, $b = 14$, $C = 30°$: $$\\text{Area} = \\dfrac{1}{2}(10)(14)\\sin 30°$$",
+        "**Use $\\sin 30° = \\tfrac{1}{2}$:** $$\\text{Area} = \\dfrac{1}{2}(140)\\left(\\dfrac{1}{2}\\right)$$",
+        "**Compute:** $$\\text{Area} = 35$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q21",
+      "type": "multiple-choice",
+      "promptTex": "\\text{An angle measures } \\dfrac{23\\pi}{6} \\text{ radians. Which angle in } [0,\\ 2\\pi) \\\\ \\text{is coterminal with it?}",
+      "choices": [
+        "\\dfrac{11\\pi}{6}",
+        "\\dfrac{5\\pi}{6}",
+        "\\dfrac{\\pi}{6}",
+        "\\dfrac{23\\pi}{6}",
+        "\\dfrac{7\\pi}{6}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Coterminal angles differ by full turns of $2\\pi$. Write $2\\pi$ as $\\tfrac{12\\pi}{6}$ to match denominators.",
+        "Subtract $2\\pi$ from $\\tfrac{23\\pi}{6}$ once.",
+        "Keep subtracting $2\\pi$ until the result lands in $[0, 2\\pi)$."
+      ],
+      "explanation": "$\\dfrac{23\\pi}{6} - 2\\pi = \\dfrac{23\\pi}{6} - \\dfrac{12\\pi}{6} = \\dfrac{11\\pi}{6}$, which lies in $[0, 2\\pi)$.",
+      "steps": [
+        "**Express $2\\pi$ with denominator $6$:** $$2\\pi = \\dfrac{12\\pi}{6}$$",
+        "**Subtract one full turn:** $$\\dfrac{23\\pi}{6} - \\dfrac{12\\pi}{6} = \\dfrac{11\\pi}{6}$$",
+        "**Check the range.** $\\dfrac{11\\pi}{6} \\approx 5.76$, which is between $0$ and $2\\pi \\approx 6.28$ — so no further subtraction is needed.",
+        "The coterminal angle in $[0, 2\\pi)$ is $\\dfrac{11\\pi}{6}$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q22",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The equation } 2\\sin^2 x - \\sin x - 1 = 0, \\ 0° < x < 360°, \\\\ \\text{has three solutions. What is the } \\textbf{sum} \\text{ of those solutions?}",
+      "choices": [
+        "630°",
+        "540°",
+        "450°",
+        "720°",
+        "600°"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Let $u = \\sin x$. The equation becomes the quadratic $2u^2 - u - 1 = 0$.",
+        "Factor: $(2u + 1)(u - 1) = 0$, so $\\sin x = -\\tfrac{1}{2}$ or $\\sin x = 1$.",
+        "$\\sin x = -\\tfrac{1}{2}$ gives two angles; $\\sin x = 1$ gives one."
+      ],
+      "explanation": "Factoring gives $\\sin x = -\\tfrac{1}{2}$ (so $x = 210°, 330°$) or $\\sin x = 1$ (so $x = 90°$). Sum $= 90° + 210° + 330° = 630°$.",
+      "steps": [
+        "**Substitute** $u = \\sin x$ to get a quadratic: $$2u^2 - u - 1 = 0$$",
+        "**Factor:** $$(2u + 1)(u - 1) = 0 \\;\\Rightarrow\\; u = -\\dfrac{1}{2} \\ \\text{ or } \\ u = 1$$",
+        "**Case $\\sin x = -\\tfrac{1}{2}$.** Sine is negative in Quadrants III and IV; reference angle $30°$: $$x = 180° + 30° = 210°, \\qquad x = 360° - 30° = 330°$$",
+        "**Case $\\sin x = 1$.** Sine reaches its maximum only at $$x = 90°$$",
+        "**Add the three solutions:** $$90° + 210° + 330° = 630°$$"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q23",
+      "type": "multiple-choice",
+      "promptTex": "\\text{For the function } y = 5\\cos(2x - \\pi) - 3, \\\\ \\text{which pair gives the amplitude and the period?}",
+      "choices": [
+        "\\text{amplitude } 5,\\ \\text{period } \\pi",
+        "\\text{amplitude } 5,\\ \\text{period } 2\\pi",
+        "\\text{amplitude } 2,\\ \\text{period } \\pi",
+        "\\text{amplitude } 3,\\ \\text{period } \\pi",
+        "\\text{amplitude } 5,\\ \\text{period } 4\\pi"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "For $y = a\\cos(Bx + c) + d$, the amplitude is $|a|$.",
+        "The period is $\\dfrac{2\\pi}{B}$.",
+        "Here $a = 5$ and $B = 2$; the $-\\pi$ and $-3$ do not affect amplitude or period."
+      ],
+      "explanation": "Amplitude $= |a| = 5$. Period $= \\dfrac{2\\pi}{B} = \\dfrac{2\\pi}{2} = \\pi$.",
+      "steps": [
+        "**Read off $a$ and $B$.** In $y = 5\\cos(2x - \\pi) - 3$: $a = 5$, $B = 2$.",
+        "**Amplitude** is the absolute value of $a$: $$\\text{amplitude} = |5| = 5$$",
+        "**Period** uses $B$: $$\\text{period} = \\dfrac{2\\pi}{B} = \\dfrac{2\\pi}{2} = \\pi$$",
+        "The phase term $-\\pi$ and vertical shift $-3$ change *where* the wave sits, not its amplitude or period."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q24",
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the maximum value of } y = 4\\sin\\!\\left(2x + \\tfrac{\\pi}{3}\\right) - 5?",
+      "choices": [
+        "-1",
+        "9",
+        "-9",
+        "4",
+        "-5"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "The sine function itself has a maximum value of $1$.",
+        "Multiplying by $4$ makes the largest value of $4\\sin(\\cdots)$ equal to $4$.",
+        "Then apply the $-5$ shift."
+      ],
+      "explanation": "$\\sin(\\cdots)$ maxes out at $1$, so $4\\sin(\\cdots)$ maxes at $4$. Subtracting $5$: maximum $= 4 - 5 = -1$.",
+      "steps": [
+        "**Start from the bare sine.** $\\sin\\!\\left(2x + \\tfrac{\\pi}{3}\\right)$ has maximum value $1$.",
+        "**Apply the amplitude.** Multiplying by $4$: the maximum of $4\\sin(\\cdots)$ is $4 \\times 1 = 4$.",
+        "**Apply the vertical shift.** Subtracting $5$: $$\\text{maximum} = 4 - 5 = -1$$",
+        "The factor $2x + \\tfrac{\\pi}{3}$ inside only changes *where* the maximum occurs, not its value."
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "q25",
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the phase shift of } y = 3\\sin(4x - \\pi) + 2?",
+      "choices": [
+        "\\dfrac{\\pi}{4}\\ \\text{right}",
+        "\\pi\\ \\text{right}",
+        "\\dfrac{\\pi}{4}\\ \\text{left}",
+        "\\dfrac{\\pi}{2}\\ \\text{right}",
+        "\\pi\\ \\text{left}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Phase shift is found by factoring $B$ out of the expression inside the sine.",
+        "Rewrite $4x - \\pi$ as $4\\left(x - \\tfrac{\\pi}{4}\\right)$.",
+        "A factored form $\\sin\\big(B(x - h)\\big)$ means a shift of $h$ to the right."
+      ],
+      "explanation": "Factor: $4x - \\pi = 4\\left(x - \\tfrac{\\pi}{4}\\right)$. The form $\\sin\\big(4(x - \\tfrac{\\pi}{4})\\big)$ shows a shift of $\\tfrac{\\pi}{4}$ to the right.",
+      "steps": [
+        "**Factor $B = 4$ out of the inside:** $$4x - \\pi = 4\\left(x - \\dfrac{\\pi}{4}\\right)$$",
+        "**Rewrite the function:** $$y = 3\\sin\\!\\left(4\\left(x - \\dfrac{\\pi}{4}\\right)\\right) + 2$$",
+        "**Read the shift.** The form $x - h$ with $h = \\tfrac{\\pi}{4}$ means a shift **right** by $\\tfrac{\\pi}{4}$.",
+        "Note: dividing $-\\pi$ by $B = 4$ — not reading $-\\pi$ directly — is the key step."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q26",
+      "type": "multiple-choice",
+      "promptTex": "\\text{The graph below shows a transformed cosine wave. Which} \\\\ \\text{equation describes it?}",
+      "promptSvg": "<svg viewBox='0 0 470 230' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='120' x2='450' y2='120' stroke='#94a3b8' stroke-width='1'/><line x1='30' y1='50' x2='450' y2='50' stroke='#e2e8f0' stroke-width='1' stroke-dasharray='2 2'/><line x1='30' y1='190' x2='450' y2='190' stroke='#e2e8f0' stroke-width='1' stroke-dasharray='2 2'/><line x1='50' y1='30' x2='50' y2='210' stroke='#94a3b8' stroke-width='1'/><text x='42' y='54' font-size='11' text-anchor='end' fill='#64748b'>4</text><text x='42' y='124' font-size='11' text-anchor='end' fill='#64748b'>1</text><text x='42' y='194' font-size='11' text-anchor='end' fill='#64748b'>−2</text><line x1='170' y1='114' x2='170' y2='126' stroke='#475569' stroke-width='1'/><line x1='290' y1='114' x2='290' y2='126' stroke='#475569' stroke-width='1'/><line x1='410' y1='114' x2='410' y2='126' stroke='#475569' stroke-width='1'/><text x='170' y='142' font-size='12' text-anchor='middle'>π</text><text x='290' y='142' font-size='12' text-anchor='middle'>2π</text><text x='410' y='142' font-size='12' text-anchor='middle'>3π</text><path d='M 50 50 Q 110 50 110 120 Q 110 190 170 190 Q 230 190 230 120 Q 230 50 290 50 Q 350 50 350 120 Q 350 190 410 190' fill='none' stroke='#dc2626' stroke-width='2.2'/></svg>",
+      "choices": [
+        "3\\cos x + 1",
+        "3\\sin x + 1",
+        "3\\cos x - 1",
+        "\\cos(3x) + 1",
+        "3\\cos x + 4"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "The wave's maximum is $4$ and its minimum is $-2$. Use these to find midline and amplitude.",
+        "Midline $= \\tfrac{\\max + \\min}{2}$; amplitude $= \\tfrac{\\max - \\min}{2}$.",
+        "The curve starts at its **maximum** at $x = 0$ — that is the signature of $\\cos$, not $\\sin$."
+      ],
+      "explanation": "Midline $= \\tfrac{4 + (-2)}{2} = 1$; amplitude $= \\tfrac{4 - (-2)}{2} = 3$. The period is $2\\pi$, so $B = 1$. Since the graph starts at a maximum, it is cosine: $y = 3\\cos x + 1$.",
+      "steps": [
+        "**Midline:** $$k = \\dfrac{\\max + \\min}{2} = \\dfrac{4 + (-2)}{2} = 1$$",
+        "**Amplitude:** $$a = \\dfrac{\\max - \\min}{2} = \\dfrac{4 - (-2)}{2} = 3$$",
+        "**Period.** Peak-to-peak distance is $2\\pi$, so $B = \\dfrac{2\\pi}{2\\pi} = 1$.",
+        "**Cosine or sine?** The graph is at its maximum when $x = 0$ — that is exactly how $\\cos x$ behaves. So the equation is $$y = 3\\cos x + 1$$"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q27",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Starting from } y = \\sin x, \\text{ apply in order: } \\\\ \\text{(1) horizontal compression by a factor of } 2, \\\\ \\text{(2) shift left } \\tfrac{\\pi}{6}, \\quad \\text{(3) vertical stretch by } 3, \\quad \\text{(4) shift up } 2. \\\\ \\text{What is the resulting equation?}",
+      "choices": [
+        "3\\sin\\!\\left(2x + \\tfrac{\\pi}{3}\\right) + 2",
+        "3\\sin\\!\\left(2x + \\tfrac{\\pi}{6}\\right) + 2",
+        "3\\sin\\!\\left(2x - \\tfrac{\\pi}{3}\\right) + 2",
+        "3\\sin\\!\\left(\\tfrac{x}{2} + \\tfrac{\\pi}{3}\\right) + 2",
+        "2\\sin\\!\\left(2x + \\tfrac{\\pi}{3}\\right) + 3"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "A horizontal compression by factor $2$ replaces $x$ with $2x$: $y = \\sin(2x)$.",
+        "Shifting left by $\\tfrac{\\pi}{6}$ replaces $x$ with $x + \\tfrac{\\pi}{6}$ — inside the already-compressed function.",
+        "$\\sin\\big(2(x + \\tfrac{\\pi}{6})\\big) = \\sin(2x + \\tfrac{\\pi}{3})$ — the factor $2$ doubles the shift inside."
+      ],
+      "explanation": "Compress: $\\sin(2x)$. Shift left $\\tfrac{\\pi}{6}$: $\\sin\\big(2(x+\\tfrac{\\pi}{6})\\big) = \\sin(2x + \\tfrac{\\pi}{3})$. Stretch vertically by $3$: $3\\sin(2x + \\tfrac{\\pi}{3})$. Shift up $2$: $3\\sin(2x + \\tfrac{\\pi}{3}) + 2$.",
+      "steps": [
+        "**(1) Horizontal compression by $2$.** Replace $x$ with $2x$: $$y = \\sin(2x)$$",
+        "**(2) Shift left $\\tfrac{\\pi}{6}$.** Replace $x$ with $x + \\tfrac{\\pi}{6}$: $$y = \\sin\\!\\left(2\\left(x + \\tfrac{\\pi}{6}\\right)\\right) = \\sin\\!\\left(2x + \\tfrac{\\pi}{3}\\right)$$ The $2$ multiplies the shift — this is the step most people get wrong.",
+        "**(3) Vertical stretch by $3$.** Multiply the whole function by $3$: $$y = 3\\sin\\!\\left(2x + \\tfrac{\\pi}{3}\\right)$$",
+        "**(4) Shift up $2$.** Add $2$: $$y = 3\\sin\\!\\left(2x + \\tfrac{\\pi}{3}\\right) + 2$$"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "q28",
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is the phase shift of } y = \\cos(3x + \\pi) - 1? \\\\ \\textbf{Beware the classic trap.}",
+      "choices": [
+        "\\dfrac{\\pi}{3}\\ \\text{left}",
+        "\\pi\\ \\text{left}",
+        "\\dfrac{\\pi}{3}\\ \\text{right}",
+        "3\\pi\\ \\text{left}",
+        "\\pi\\ \\text{right}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Do not read the $+\\pi$ as the shift directly — first factor out $B = 3$.",
+        "$3x + \\pi = 3\\left(x + \\tfrac{\\pi}{3}\\right)$.",
+        "A form $\\cos\\big(B(x + h)\\big)$ means a shift of $h$ to the **left**."
+      ],
+      "explanation": "Factor: $3x + \\pi = 3\\left(x + \\tfrac{\\pi}{3}\\right)$. The form $\\cos\\big(3(x + \\tfrac{\\pi}{3})\\big)$ shows a shift of $\\tfrac{\\pi}{3}$ to the left — not $\\pi$.",
+      "steps": [
+        "**The trap.** Reading the phase shift as $\\pi$ straight from $+\\pi$ ignores the coefficient $B = 3$.",
+        "**Factor $B = 3$ out:** $$3x + \\pi = 3\\left(x + \\dfrac{\\pi}{3}\\right)$$",
+        "**Rewrite:** $$y = \\cos\\!\\left(3\\left(x + \\dfrac{\\pi}{3}\\right)\\right) - 1$$",
+        "**Read the shift.** The form $x + h$ with $h = \\tfrac{\\pi}{3}$ means a shift **left** by $\\tfrac{\\pi}{3}$."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q29",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which rewrite of } y = \\cos(6x - \\pi) \\text{ correctly factors out } B \\\\ \\text{so the phase shift can be read directly?}",
+      "choices": [
+        "\\cos\\!\\left(6\\left(x - \\tfrac{\\pi}{6}\\right)\\right)",
+        "\\cos\\!\\left(6\\left(x - \\pi\\right)\\right)",
+        "\\cos\\!\\left(6\\left(x + \\tfrac{\\pi}{6}\\right)\\right)",
+        "\\cos\\!\\left(6x - \\tfrac{\\pi}{6}\\right)",
+        "\\cos\\!\\left(\\tfrac{1}{6}\\left(x - \\pi\\right)\\right)"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Here $B = 6$. Factoring it out means writing the inside as $6(\\cdots)$.",
+        "$6x - \\pi = 6\\left(x - \\tfrac{\\pi}{6}\\right)$ — check by distributing the $6$ back in.",
+        "Distribute to verify: $6\\cdot x - 6\\cdot\\tfrac{\\pi}{6} = 6x - \\pi$."
+      ],
+      "explanation": "Factoring $6$ from $6x - \\pi$ gives $6\\left(x - \\tfrac{\\pi}{6}\\right)$, since $6\\cdot\\tfrac{\\pi}{6} = \\pi$. So $y = \\cos\\big(6(x - \\tfrac{\\pi}{6})\\big)$.",
+      "steps": [
+        "**Goal.** Write $6x - \\pi$ in the form $6(x - h)$ so the phase shift $h$ is visible.",
+        "**Factor out $6$:** $$6x - \\pi = 6\\left(x - \\dfrac{\\pi}{6}\\right)$$",
+        "**Verify by distributing:** $$6\\cdot x - 6\\cdot\\dfrac{\\pi}{6} = 6x - \\pi$$",
+        "So $y = \\cos\\!\\left(6\\left(x - \\tfrac{\\pi}{6}\\right)\\right)$, revealing a shift of $\\tfrac{\\pi}{6}$ to the right."
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "q30",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Two students find the phase shift of } y = \\sin\\!\\left(\\pi x - \\tfrac{\\pi}{2}\\right). \\\\ \\text{Ana says it shifts right by } \\tfrac{\\pi}{2}; \\text{ Ben says right by } \\tfrac{1}{2}. \\\\ \\text{Who is correct?}",
+      "choices": [
+        "\\text{Ben — shift right } \\tfrac{1}{2}",
+        "\\text{Ana — shift right } \\tfrac{\\pi}{2}",
+        "\\text{Both are correct (equivalent)}",
+        "\\text{Neither — shift left } \\tfrac{1}{2}",
+        "\\text{Ben is right, but the shift is left } \\tfrac{1}{2}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "The phase shift is not the constant inside — you must factor out $B$ first. Here $B = \\pi$.",
+        "Factor: $\\pi x - \\tfrac{\\pi}{2} = \\pi\\left(x - \\tfrac{1}{2}\\right)$.",
+        "Ana forgot to divide by $B = \\pi$; Ben divided correctly."
+      ],
+      "explanation": "Factor out $B = \\pi$: $\\pi x - \\tfrac{\\pi}{2} = \\pi\\left(x - \\tfrac{1}{2}\\right)$. The form $\\sin\\big(\\pi(x - \\tfrac{1}{2})\\big)$ shows a shift of $\\tfrac{1}{2}$ to the right. Ben is correct.",
+      "steps": [
+        "**The phase shift needs $B$ factored out.** Here $B = \\pi$.",
+        "**Factor:** $$\\pi x - \\dfrac{\\pi}{2} = \\pi\\left(x - \\dfrac{1}{2}\\right)$$ Check: $\\pi\\cdot x - \\pi\\cdot\\tfrac{1}{2} = \\pi x - \\tfrac{\\pi}{2}$.",
+        "**Read the shift.** The form $x - h$ gives $h = \\tfrac{1}{2}$ — a shift right by $\\tfrac{1}{2}$.",
+        "**Verdict.** Ben divided $\\tfrac{\\pi}{2}$ by $B = \\pi$ correctly. Ana used the raw constant $\\tfrac{\\pi}{2}$ and forgot to divide. **Ben is correct.**"
+      ],
+      "difficulty": "hard"
+    }
+  ]
+}

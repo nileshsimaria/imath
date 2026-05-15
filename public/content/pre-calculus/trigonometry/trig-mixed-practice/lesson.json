@@ -1,0 +1,45 @@
+{
+  "title": "Trigonometry — Mixed Practice",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "## What you'll practice"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "This is a mixed practice set covering the core trigonometry every high school student should be comfortable with. It's deliberately **not** organized by topic — each question pulls from somewhere across the whole trigonometry unit, so you have to recognize which idea applies before you can solve it. That recognition is exactly the skill that makes you faster and more confident, whether you're sitting a class test, a standardized exam, or just trying to genuinely understand the subject."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "How to use this set",
+      "body": "Try each question on your own first. If you get stuck, peek at one hint at a time — they're staged from a gentle nudge to a full setup. After answering, open the step-by-step solution to compare your reasoning. The goal isn't just the right letter — it's understanding *why* each step follows, so you can re-derive it next time."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Topics covered",
+        "**SOHCAHTOA & right triangles** — picking the right ratio from the sides you know.",
+        "**Unit circle & coterminal angles** — reducing angles, converting between degrees and radians, signs by quadrant.",
+        "**Trig identities** — Pythagorean ($\\sin^2 + \\cos^2 = 1$), reciprocal, quotient, and angle-sum/difference formulas.",
+        "**Graphs of trig functions** — reading amplitude, period, midline, phase shift; identifying intersections and transformations.",
+        "**Law of Sines & Law of Cosines** — angles and sides in non-right triangles, plus triangle area.",
+        "**Word problems** — angles of elevation and depression, ramps, and other real-world right triangles."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Strategy tips for trig problems",
+      "body": "1) **Always sketch.** If a question describes a triangle, draw it before reading the choices. 2) **Find the quadrant first** when signs matter — most trig errors come from a missed sign. 3) **Period before amplitude** when reading a graph — the period pins down $B$, the trickiest constant. 4) **Plug in if stuck** — substituting $\\theta = 30°$ or $x = 0$ can rule out most choices fast."
+    },
+    {
+      "type": "text",
+      "md": [
+        "Open the quiz below and work through all 30 problems. Each one is self-contained — if a problem reminds you of something rusty, jump back to that lesson for a refresher, then return."
+      ]
+    }
+  ]
+}
