@@ -1,0 +1,107 @@
+{
+  "title": "Negative Exponents",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "In the last lesson, the quotient rule combined with $a^0 = 1$ forced a value on the zero exponent. The exact same trick forces a value on negative exponents — and the answer turns out to be beautifully simple: a negative exponent just means *take the reciprocal*."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 1. Where negative exponents come from",
+        "What is $\\dfrac{a^2}{a^5}$? Write out the copies and cancel:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{a^2}{a^5} = \\dfrac{a \\cdot a}{a \\cdot a \\cdot a \\cdot a \\cdot a} = \\dfrac{1}{a \\cdot a \\cdot a} = \\dfrac{1}{a^3}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Two copies on top cancelled with two on the bottom, leaving $3$ copies of $a$ stranded in the denominator. Now compute the same expression via the quotient rule:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{a^2}{a^5} = a^{\\,2 - 5} = a^{-3}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Both must be the same value. So we're forced to define:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "a^{-n} = \\dfrac{1}{a^n} \\quad (a \\ne 0)"
+    },
+    {
+      "type": "callout",
+      "title": "The intuition in one sentence",
+      "body": "A negative exponent just means \"flip it.\" $a^{-n}$ is the reciprocal of $a^n$ — same number of copies of $a$, just down in the denominator instead of up in the numerator."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 2. Moving a factor across the fraction bar",
+        "The reciprocal rule gives a powerful shortcut for cleaning up expressions with negative exponents. If a factor has a *negative* exponent in the numerator, it can be moved to the denominator with a *positive* exponent — and vice versa."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "x^{-3} = \\dfrac{1}{x^3} \\qquad\\text{and}\\qquad \\dfrac{1}{x^{-3}} = x^3"
+    },
+    {
+      "type": "text",
+      "md": [
+        "The exponent's *sign* flips whenever its factor crosses the fraction bar. Many problems become much cleaner with this trick:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{x^{-2} \\, y^3}{z^{-4}} = \\dfrac{y^3 \\, z^4}{x^2}"
+    },
+    {
+      "type": "callout",
+      "title": "Watch out — the sign of the *factor* doesn't flip, only the exponent's",
+      "body": "$x^{-3}$ becomes $\\dfrac{1}{x^3}$, **not** $-\\dfrac{1}{x^3}$. The negative sign in $x^{-3}$ lives entirely on the *exponent*. The factor itself ($x$) keeps its original sign. So $2^{-3} = 1/8$, a positive number — not $-1/8$."
+
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 3. All seven rules in one place",
+        "Now that you've met every kind of exponent, here is the entire exponent toolkit, gathered together:",
+        "| Rule | Formula |",
+        "|---|---|",
+        "| Product of powers | $a^m \\cdot a^n = a^{m+n}$ |",
+        "| Power of a power | $(a^m)^n = a^{mn}$ |",
+        "| Power of a product | $(ab)^n = a^n b^n$ |",
+        "| Quotient of powers | $\\dfrac{a^m}{a^n} = a^{m-n}$ |",
+        "| Power of a quotient | $\\left(\\dfrac{a}{b}\\right)^n = \\dfrac{a^n}{b^n}$ |",
+        "| Zero exponent | $a^0 = 1$ |",
+        "| Negative exponent | $a^{-n} = \\dfrac{1}{a^n}$ |",
+        "Every rule comes from the same idea — count copies, then enforce consistency when the count runs out, hits zero, or goes negative."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 4. Worked examples",
+        "**Example 1 — basic.** $5^{-2} = \\dfrac{1}{5^2} = \\dfrac{1}{25}$.",
+        "**Example 2 — quotient leading to negative.** $\\dfrac{x^3}{x^7} = x^{3 - 7} = x^{-4} = \\dfrac{1}{x^4}$.",
+        "**Example 3 — flip across the bar.** $\\dfrac{1}{2^{-3}} = 2^3 = 8$. The $2$ moves from the denominator to the numerator and the exponent's sign flips.",
+        "**Example 4 — clean an expression.** $\\dfrac{4 a^{-2} b^3}{a b^{-1}}$. Move $a^{-2}$ down (becomes $a^2$ down), move $b^{-1}$ up (becomes $b^1$ up): $\\dfrac{4 b^3 \\cdot b}{a^2 \\cdot a} = \\dfrac{4 b^4}{a^3}$.",
+        "**Example 5 — power-of-power with negative.** $(x^{-2})^3 = x^{-2 \\cdot 3} = x^{-6} = \\dfrac{1}{x^6}$. The power rule works for negative exponents too."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Why this matters",
+      "body": "Negative exponents aren't just a notational curiosity — they're how scientific notation expresses tiny numbers like $3 \\times 10^{-9}$ (a few nanometers), how rational expressions are simplified in Algebra II, and how derivatives of $1/x$, $1/x^2$, etc. get unified under a single rule in Calculus. Earning the rule once pays back many times over."
+    }
+  ]
+}

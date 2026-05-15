@@ -1,0 +1,238 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Simplify } \\dfrac{x^7}{x^3}.",
+      "choices": ["x^{10}", "x^4", "x^{7/3}", "x^{21}"],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Same base, dividing — quotient rule.",
+        "Top exponent minus bottom: $7 - 3$."
+      ],
+      "explanation": "$\\dfrac{x^7}{x^3} = x^{7 - 3} = x^4$. Subtract bottom from top.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{What is } 5^0?",
+      "choices": ["0", "1", "5", "\\text{undefined}"],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Any nonzero base raised to the zero power equals what?",
+        "Forced by the quotient rule: $5^n / 5^n = 1$ and also $= 5^0$."
+      ],
+      "explanation": "$5^0 = 1$. Every nonzero base to the zero is $1$ — forced by consistency with the quotient rule.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{Evaluate } \\dfrac{2^8}{2^5}.",
+      "answer": 8,
+      "tolerance": 0,
+      "hints": [
+        "Same base ($2$), so subtract exponents.",
+        "$2^{8 - 5} = 2^3$."
+      ],
+      "explanation": "$\\dfrac{2^8}{2^5} = 2^{8 - 5} = 2^3 = 8$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Simplify } \\left(\\dfrac{x}{y}\\right)^3.",
+      "choices": [
+        "\\dfrac{x^3}{y^3}",
+        "\\dfrac{x}{y^3}",
+        "\\dfrac{3x}{3y}",
+        "\\dfrac{x^3}{y}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Power-of-a-quotient: the exponent distributes across division.",
+        "$\\left(\\dfrac{a}{b}\\right)^n = \\dfrac{a^n}{b^n}$."
+      ],
+      "explanation": "$\\left(\\dfrac{x}{y}\\right)^3 = \\dfrac{x^3}{y^3}$. The exponent applies to *both* numerator and denominator.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Simplify } \\dfrac{15 x^6}{3 x^2}.",
+      "choices": ["5x^3", "5x^4", "12x^4", "5x^8"],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Split the work into coefficients and variables.",
+        "Coefficients: $15/3 = 5$. Variables: $x^{6-2}$."
+      ],
+      "explanation": "$\\dfrac{15 x^6}{3 x^2} = \\dfrac{15}{3} \\cdot x^{6 - 2} = 5 x^4$.",
+      "difficulty": "medium",
+      "steps": [
+        "**Recognize the type.** Quotient of monomials — handle coefficients and variables separately.",
+        "**Coefficients.** $15 / 3 = 5$. Plain division.",
+        "**Variables — quotient rule.** $x^6 / x^2 = x^{6 - 2} = x^4$.",
+        "**Reassemble.** $5 x^4$.",
+        "**Sanity check.** If you ever get $12 x^4$, you accidentally *subtracted* coefficients instead of dividing — coefficients always multiply or divide, never add/subtract."
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Simplify } (7 x^4 y^2)^0.",
+      "choices": ["0", "1", "7", "7x^4 y^2"],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "The exponent $0$ applies to the *entire* expression inside the parentheses.",
+        "Any nonzero quantity to the $0$ is $1$."
+      ],
+      "explanation": "The whole expression is being raised to the zero power, so as long as it's nonzero, the result is $1$. It doesn't matter how complicated the inside is.",
+      "difficulty": "medium",
+      "steps": [
+        "**Pattern recognition.** The outer exponent is $0$, applied to *everything* inside.",
+        "**The rule.** $(\\text{any nonzero expression})^0 = 1$.",
+        "**Trap to avoid.** A common mistake is to think only the $x$ and $y$ go to $0$, leaving the $7$ behind: $7 \\cdot x^0 \\cdot y^0 = 7 \\cdot 1 \\cdot 1 = 7$. That would be true if the expression were $7 x^0 y^0$, but it isn't — the $7$ is *inside* the parentheses, so it's part of what gets raised to $0$.",
+        "**Answer.** $1$."
+      ]
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{Evaluate } \\left(\\dfrac{3}{2}\\right)^3 \\cdot 8.",
+      "answer": 27,
+      "tolerance": 0,
+      "hints": [
+        "Distribute the exponent first: $\\left(\\dfrac{3}{2}\\right)^3 = \\dfrac{3^3}{2^3}$.",
+        "$2^3 = 8$, and $8 / 8 = 1$, leaving $3^3$."
+      ],
+      "explanation": "$\\left(\\dfrac{3}{2}\\right)^3 = \\dfrac{27}{8}$. Then $\\dfrac{27}{8} \\cdot 8 = 27$. The $2^3$ in the denominator cancels the $8$ exactly.",
+      "difficulty": "medium",
+      "steps": [
+        "**Power-of-a-quotient.** $\\left(\\dfrac{3}{2}\\right)^3 = \\dfrac{3^3}{2^3} = \\dfrac{27}{8}$.",
+        "**Multiply by 8.** $\\dfrac{27}{8} \\cdot 8 = 27$.",
+        "**Sanity-check shortcut.** Notice $8 = 2^3$. So the whole thing is $\\dfrac{3^3}{2^3} \\cdot 2^3 = 3^3 = 27$. The denominator and multiplier cancel exactly. Recognizing $8 = 2^3$ saves the long arithmetic."
+      ]
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A student writes } \\dfrac{a^8}{a^2} = a^4. \\\\ \\text{What did they do wrong?}",
+      "choices": [
+        "Nothing — the answer is correct",
+        "They divided the exponents (8/2) instead of subtracting (8 - 2)",
+        "They added the exponents",
+        "They forgot to invert the fraction"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "$8 / 2 = 4$. $8 - 2 = 6$. Which one does the quotient rule say?",
+        "The correct answer should be $a^6$."
+      ],
+      "explanation": "The quotient rule is *subtract* the exponents, not divide them. The student got $a^4$ by computing $8/2$, but the rule says $a^{8 - 2} = a^6$.",
+      "difficulty": "medium",
+      "steps": [
+        "**Spot the mistake.** $\\dfrac{a^8}{a^2}$ — the bases match, so use the quotient rule.",
+        "**Recall the rule.** Quotient rule says $a^m / a^n = a^{m-n}$. The operation on the *exponents* is subtraction.",
+        "**The trap.** Because *the bases* are being divided, students sometimes also divide the exponents. But the exponents track *how many copies* — and when copies cancel, what we lose is the difference, not the ratio.",
+        "**Correct answer.** $a^{8 - 2} = a^6$.",
+        "**Pattern lesson.** Whenever bases match, the rules use *additive* operations on the exponents (add for multiplying, subtract for dividing). The multiplicative operations (multiply, divide) on exponents only happen when applying the power rule $(a^m)^n = a^{mn}$."
+      ]
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Simplify } \\dfrac{20 a^5 b^7}{4 a^2 b^7}.",
+      "choices": ["5 a^3", "5 a^3 b", "16 a^3", "5 a^3 b^0"],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Coefficients divide. Each variable follows the quotient rule independently.",
+        "$b^7 / b^7 = b^0 = 1$ — so the $b$'s disappear."
+      ],
+      "explanation": "Coefficients: $20/4 = 5$. $a^5/a^2 = a^3$. $b^7/b^7 = b^0 = 1$. So the $b$'s drop out entirely. Final: $5 a^3$. (Note: $5 a^3 b^0$ in option D is equal to $5 a^3$, but we conventionally don't leave $b^0$ written out.)",
+      "difficulty": "medium",
+      "steps": [
+        "**Recognize the type.** Quotient of monomials with two variables — apply the rule to each piece.",
+        "**Coefficients.** $20 / 4 = 5$.",
+        "**Variable $a$.** $a^5 / a^2 = a^{5 - 2} = a^3$.",
+        "**Variable $b$.** $b^7 / b^7 = b^{7 - 7} = b^0 = 1$. The $b$'s cancel completely.",
+        "**Reassemble.** $5 \\cdot a^3 \\cdot 1 = 5 a^3$.",
+        "**Convention.** We don't write $b^0$ in the final answer — we just drop it. It's the same value as $1$, and including it adds visual clutter."
+      ]
+    },
+    {
+      "id": "q10",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Simplify } \\dfrac{(x^3)^4}{x^5}.",
+      "choices": ["x^7", "x^{12}", "x^{60}", "x^{-2}"],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Apply the power rule on the numerator first, then the quotient rule.",
+        "$(x^3)^4 = x^{12}$. Then $x^{12} / x^5 = ?$"
+      ],
+      "explanation": "$(x^3)^4 = x^{3 \\cdot 4} = x^{12}$. Then $\\dfrac{x^{12}}{x^5} = x^{12 - 5} = x^7$.",
+      "difficulty": "hard",
+      "steps": [
+        "**Recognize the type.** Two rules will fire — power-of-power, then quotient. Always handle inner exponents first.",
+        "**Power rule on the numerator.** $(x^3)^4 = x^{3 \\cdot 4} = x^{12}$.",
+        "**Quotient rule.** $\\dfrac{x^{12}}{x^5} = x^{12 - 5} = x^7$.",
+        "**Common pitfalls.** (a) Multiplying $3 \\cdot 4 \\cdot 5$ → wrong, that mixes power and quotient rules. (b) Adding $3 + 4 + 5$ → also wrong. (c) Doing the quotient first → can't, because the $x^3$ isn't a free factor of the numerator until the outer power has been distributed."
+      ]
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{Evaluate } \\dfrac{6^5}{6^3 \\cdot 6}.",
+      "answer": 6,
+      "tolerance": 0,
+      "hints": [
+        "The denominator is $6^3 \\cdot 6^1 = 6^{3+1} = 6^4$.",
+        "Now apply the quotient rule: $6^5 / 6^4$."
+      ],
+      "explanation": "Combine the denominator first with the product rule: $6^3 \\cdot 6 = 6^4$. Then $6^5 / 6^4 = 6^{5 - 4} = 6^1 = 6$.",
+      "difficulty": "hard",
+      "steps": [
+        "**Recognize the type.** Mixed product *and* quotient in the same expression. Simplify the denominator into one power first, then divide.",
+        "**Product rule on the denominator.** $6^3 \\cdot 6 = 6^{3 + 1} = 6^4$. (Remember: a bare $6$ is $6^1$.)",
+        "**Quotient rule.** $\\dfrac{6^5}{6^4} = 6^{5 - 4} = 6^1 = 6$.",
+        "**Sanity check.** $6^5 = 7776$, and $6^3 \\cdot 6 = 216 \\cdot 6 = 1296$. $7776 / 1296 = 6$. ✓",
+        "**Pattern lesson.** When a problem has multiple operations on the same base, *combine everything in the numerator into one power, combine everything in the denominator into one power, then do one final subtraction.* Way faster than computing the raw values."
+      ]
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which expression is NOT equal to } 1 \\\\ \\text{(assume all variables are nonzero)?}",
+      "choices": [
+        "\\dfrac{x^7}{x^7}",
+        "(5xy)^0",
+        "\\dfrac{a^0}{1}",
+        "1^0 + 1"
+      ],
+      "choicesTex": true,
+      "answerIndex": 3,
+      "hints": [
+        "Three options simplify to $1$ via the zero-exponent rule. One is a small arithmetic trick.",
+        "$1^0 = 1$, so $1^0 + 1 = ?$"
+      ],
+      "explanation": "(A) $x^7/x^7 = x^0 = 1$. (B) $(5xy)^0 = 1$. (C) $a^0 / 1 = 1/1 = 1$. (D) $1^0 + 1 = 1 + 1 = 2$. The trap is that $1^0$ does equal $1$, but the $+ 1$ outside the exponent is a separate, ordinary addition.",
+      "difficulty": "hard",
+      "steps": [
+        "**Strategy.** Check each option independently using the zero-exponent rule.",
+        "**Option A.** $\\dfrac{x^7}{x^7}$ — anything nonzero divided by itself is $1$. (Or by quotient rule: $x^0 = 1$.) Equals $1$.",
+        "**Option B.** $(5xy)^0$ — entire expression to the zero. As long as it's nonzero, equals $1$.",
+        "**Option C.** $\\dfrac{a^0}{1} = \\dfrac{1}{1} = 1$.",
+        "**Option D — the trap.** $1^0 + 1$. The $1^0$ part is $1$, by the rule. But there's a $+ 1$ *outside* the exponent. So $1 + 1 = 2$, not $1$. The trick is noticing that the $+ 1$ is *not* part of the exponentiation.",
+        "**Pattern lesson.** When you see a zero exponent, always identify *exactly* what's inside the exponent and what's outside. The rule only collapses what's directly under the $^0$."
+      ]
+    }
+  ]
+}

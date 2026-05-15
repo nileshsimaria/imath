@@ -1,0 +1,252 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Rewrite } x^{-4} \\text{ with a positive exponent.}",
+      "choices": ["\\dfrac{1}{x^4}", "-x^4", "x^4", "\\dfrac{-1}{x^4}"],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Negative exponent means \"reciprocal of\".",
+        "$a^{-n} = \\dfrac{1}{a^n}$. The negative is on the *exponent*, not on the factor."
+      ],
+      "explanation": "$x^{-4} = \\dfrac{1}{x^4}$. The negative sign in the exponent tells you to take the reciprocal — it does *not* make the value negative.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "promptTex": "\\text{Evaluate } 2^{-3}.",
+      "answer": 0.125,
+      "tolerance": 0.0001,
+      "hints": [
+        "$2^{-3} = \\dfrac{1}{2^3}$.",
+        "$2^3 = 8$, so the answer is $\\dfrac{1}{8}$."
+      ],
+      "explanation": "$2^{-3} = \\dfrac{1}{2^3} = \\dfrac{1}{8} = 0.125$. Note the answer is positive — negative exponents produce reciprocals, not negative numbers.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Simplify } \\dfrac{1}{y^{-2}}.",
+      "choices": ["\\dfrac{1}{y^2}", "y^2", "-y^2", "-\\dfrac{1}{y^2}"],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "A negative exponent in the *denominator* flips up to a positive exponent in the *numerator*.",
+        "$\\dfrac{1}{y^{-2}} = y^2$."
+      ],
+      "explanation": "$\\dfrac{1}{y^{-2}}$. The $y^{-2}$ in the denominator flips up to become $y^2$ in the numerator. So $\\dfrac{1}{y^{-2}} = y^2$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Simplify } \\dfrac{x^3}{x^7}.",
+      "choices": ["x^{-4}", "x^4", "x^{-10}", "x^{21}"],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Quotient rule: subtract exponents.",
+        "$3 - 7 = ?$"
+      ],
+      "explanation": "$\\dfrac{x^3}{x^7} = x^{3 - 7} = x^{-4}$. (Equivalently $\\dfrac{1}{x^4}$.)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Rewrite } \\dfrac{a^{-2}}{b^{-3}} \\text{ with positive exponents only.}",
+      "choices": [
+        "\\dfrac{a^2}{b^3}",
+        "\\dfrac{b^3}{a^2}",
+        "\\dfrac{-a^2}{-b^3}",
+        "\\dfrac{1}{a^2 b^3}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Every negative-exponent factor flips across the fraction bar.",
+        "$a^{-2}$ moves down (→ $a^2$ down). $b^{-3}$ moves up (→ $b^3$ up)."
+      ],
+      "explanation": "$\\dfrac{a^{-2}}{b^{-3}}$: the $a^{-2}$ in the numerator flips down to $a^2$ in the denominator; the $b^{-3}$ in the denominator flips up to $b^3$ in the numerator. Result: $\\dfrac{b^3}{a^2}$.",
+      "difficulty": "medium",
+      "steps": [
+        "**Recognize the type.** Two negative exponents in a fraction — use the \"flip across the bar\" shortcut on each independently.",
+        "**Flip $a^{-2}$.** It's in the numerator with a negative exponent → move to denominator with positive exponent. Numerator loses an $a^{-2}$; denominator gains an $a^2$.",
+        "**Flip $b^{-3}$.** It's in the denominator with a negative exponent → move to numerator with positive exponent. Denominator loses a $b^{-3}$; numerator gains a $b^3$.",
+        "**Reassemble.** Numerator: $b^3$. Denominator: $a^2$. Result: $\\dfrac{b^3}{a^2}$.",
+        "**Pattern lesson.** \"Cross the bar, flip the sign\" applies one factor at a time. You never have to manipulate the whole expression at once."
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Simplify } (x^{-3})^2.",
+      "choices": ["x^{-6}", "x^{-1}", "x^6", "x^{-9}"],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Power rule applies even when the exponent is negative.",
+        "Multiply: $(-3) \\cdot 2 = ?$"
+      ],
+      "explanation": "$(x^{-3})^2 = x^{(-3) \\cdot 2} = x^{-6}$. (Equivalent to $\\dfrac{1}{x^6}$.)",
+      "difficulty": "medium",
+      "steps": [
+        "**Recognize the type.** Power of a power. The base exponent happens to be negative — the rule doesn't care.",
+        "**Apply the power rule.** $(x^m)^n = x^{mn}$. Here $m = -3$ and $n = 2$.",
+        "**Multiply exponents (with the sign).** $(-3) \\cdot 2 = -6$.",
+        "**Answer.** $x^{-6}$, equivalently $\\dfrac{1}{x^6}$.",
+        "**Pattern lesson.** Every rule from earlier lessons still works when exponents are negative — multiplying negatives, multiplying with negatives, etc. The arithmetic of signed exponents follows the regular rules of signed numbers."
+      ]
+    },
+    {
+      "id": "q7",
+      "type": "numeric",
+      "promptTex": "\\text{Evaluate } 3^{-2} \\cdot 3^5.",
+      "answer": 27,
+      "tolerance": 0,
+      "hints": [
+        "Same base, multiplying — product rule. $a^m \\cdot a^n = a^{m + n}$.",
+        "$(-2) + 5 = 3$, so $3^3$."
+      ],
+      "explanation": "$3^{-2} \\cdot 3^5 = 3^{-2 + 5} = 3^3 = 27$.",
+      "difficulty": "medium",
+      "steps": [
+        "**Recognize the type.** Same base, multiplying — product rule.",
+        "**Add exponents (with signs).** $-2 + 5 = 3$.",
+        "**Compute.** $3^3 = 27$.",
+        "**Sanity check via independent route.** $3^{-2} = 1/9$. $3^5 = 243$. Product: $243/9 = 27$. ✓"
+      ]
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A student writes } 4^{-2} = -16. \\\\ \\text{What's the correct value, and what was the mistake?}",
+      "choices": [
+        "-16 \\text{ — student is right}",
+        "16 \\text{ — student forgot to drop the negative sign}",
+        "\\dfrac{1}{16} \\text{ — student treated the negative as a sign on the value instead of as ``reciprocal''}",
+        "-\\dfrac{1}{16} \\text{ — student missed the reciprocal but kept the sign}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "$4^{-2}$ means *reciprocal of $4^2$*, not *negative of $4^2$*.",
+        "$4^{-2} = \\dfrac{1}{4^2} = \\dfrac{1}{16}$."
+      ],
+      "explanation": "$4^{-2} = \\dfrac{1}{4^2} = \\dfrac{1}{16}$. The student confused the meaning of the negative exponent: it indicates a *reciprocal*, never a *negative value*. This mistake is one of the most common slip-ups in early algebra.",
+      "difficulty": "medium",
+      "steps": [
+        "**Spot the mistake.** Student wrote $4^{-2} = -16$. Two errors are baked in: keeping the value positive in magnitude AND treating the minus sign as ordinary negation.",
+        "**The rule.** $a^{-n} = \\dfrac{1}{a^n}$. The negative on the exponent triggers a *reciprocal*, not a sign change on the value.",
+        "**Correct computation.** $4^{-2} = \\dfrac{1}{4^2} = \\dfrac{1}{16}$. Positive, less than 1.",
+        "**Pattern lesson.** Whenever a negative exponent appears, mentally rewrite it as $\\dfrac{1}{\\ldots}$ first. That single move forestalls every sign-mistake variation."
+      ]
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Simplify } \\dfrac{6 x^{-2} y^3}{2 x^3 y^{-1}} \\\\ \\text{using positive exponents only.}",
+      "choices": [
+        "\\dfrac{3 y^4}{x^5}",
+        "\\dfrac{3 y^2}{x^5}",
+        "\\dfrac{3 y^4}{x}",
+        "3 x^{-5} y^4"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Handle coefficients, $x$, and $y$ separately.",
+        "Coefficients: $6/2 = 3$. $x$: $x^{-2 - 3} = x^{-5}$. $y$: $y^{3 - (-1)} = y^4$."
+      ],
+      "explanation": "Coefficients: $6/2 = 3$. $x$-piece: $\\dfrac{x^{-2}}{x^3} = x^{-2 - 3} = x^{-5}$. $y$-piece: $\\dfrac{y^3}{y^{-1}} = y^{3 - (-1)} = y^4$. Combine: $\\dfrac{3 y^4}{x^5}$.",
+      "difficulty": "hard",
+      "steps": [
+        "**Recognize the type.** Quotient of monomials with negative exponents. Split into coefficient + each variable + handle signs carefully.",
+        "**Coefficients.** $6/2 = 3$.",
+        "**$x$ part.** $\\dfrac{x^{-2}}{x^3} = x^{-2 - 3} = x^{-5}$. Quotient rule means subtract — be careful, $-2 - 3 = -5$, not $-1$ or $1$.",
+        "**$y$ part.** $\\dfrac{y^3}{y^{-1}} = y^{3 - (-1)} = y^{3 + 1} = y^4$. Subtracting a negative becomes addition.",
+        "**Reassemble.** $3 x^{-5} y^4$.",
+        "**Convert to positive exponents.** $x^{-5}$ moves to the denominator as $x^5$. Final: $\\dfrac{3 y^4}{x^5}$.",
+        "**Sanity check.** $y$ ended up with exponent $4$ — bigger than the original $y^3$, because we also pulled a $y^{-1}$ from the denominator up to the numerator, which adds 1 to $y$'s exponent. That matches the answer."
+      ]
+    },
+    {
+      "id": "q10",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Simplify } (2 x^{-1} y^2)^{-2}.",
+      "choices": [
+        "\\dfrac{x^2}{4 y^4}",
+        "\\dfrac{4 y^4}{x^2}",
+        "\\dfrac{4 x^2}{y^4}",
+        "\\dfrac{x^2}{4 y^{-4}}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Distribute the outer $-2$ to every factor inside.",
+        "$2^{-2} = 1/4$, $(x^{-1})^{-2} = x^2$, $(y^2)^{-2} = y^{-4}$."
+      ],
+      "explanation": "Distribute: $(2 x^{-1} y^2)^{-2} = 2^{-2} \\cdot (x^{-1})^{-2} \\cdot (y^2)^{-2} = \\dfrac{1}{4} \\cdot x^2 \\cdot y^{-4} = \\dfrac{x^2}{4 y^4}$.",
+      "difficulty": "hard",
+      "steps": [
+        "**Recognize the type.** Power of a product, but the outer exponent is negative. The rule still applies — distribute first, then handle the negatives.",
+        "**Distribute the $-2$.** Every factor gets exponentiated by $-2$: $2^{-2} \\cdot (x^{-1})^{-2} \\cdot (y^2)^{-2}$.",
+        "**Simplify each piece.** $2^{-2} = \\dfrac{1}{4}$. $(x^{-1})^{-2} = x^{(-1)(-2)} = x^2$. $(y^2)^{-2} = y^{2 \\cdot (-2)} = y^{-4}$.",
+        "**Combine.** $\\dfrac{1}{4} \\cdot x^2 \\cdot y^{-4}$.",
+        "**Convert to positive exponents.** $y^{-4}$ moves to the denominator. Final: $\\dfrac{x^2}{4 y^4}$.",
+        "**Pattern lesson.** Two negatives in the exponent chain produce a positive, just like with signed numbers. $(x^{-1})^{-2} = x^2$ — the same arithmetic, applied to exponents."
+      ]
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{Evaluate } 2^{-3} + 2^{-2}.",
+      "answer": 0.375,
+      "tolerance": 0.0001,
+      "hints": [
+        "$2^{-3} = 1/8$ and $2^{-2} = 1/4$.",
+        "Find a common denominator and add."
+      ],
+      "explanation": "$2^{-3} + 2^{-2} = \\dfrac{1}{8} + \\dfrac{1}{4} = \\dfrac{1}{8} + \\dfrac{2}{8} = \\dfrac{3}{8} = 0.375$.",
+      "difficulty": "hard",
+      "steps": [
+        "**Pattern recognition — caution.** Even though both terms have base $2$, you can NOT just combine the exponents. The product rule applies to *multiplying*, not adding. Here we have $+$, so we must evaluate each term and then add.",
+        "**Evaluate.** $2^{-3} = \\dfrac{1}{8}$ and $2^{-2} = \\dfrac{1}{4}$.",
+        "**Common denominator.** $\\dfrac{1}{8} + \\dfrac{2}{8} = \\dfrac{3}{8}$.",
+        "**Decimal.** $\\dfrac{3}{8} = 0.375$.",
+        "**Pattern lesson.** The exponent rules are *all* about multiplication and division. Addition and subtraction of powers always require evaluating each term first."
+      ]
+    },
+    {
+      "id": "q12",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which expression equals } \\dfrac{1}{x^5}?",
+      "choices": [
+        "x^{-5}",
+        "(-x)^5",
+        "\\dfrac{x^{-2}}{x^3}",
+        "\\text{Both A and C}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 3,
+      "hints": [
+        "$x^{-5}$ is *defined* as $\\dfrac{1}{x^5}$.",
+        "$\\dfrac{x^{-2}}{x^3} = x^{-2 - 3} = x^{-5} = \\dfrac{1}{x^5}$.",
+        "$(-x)^5 = -x^5$ (odd power preserves sign), which is the *negative* of $x^5$, not the reciprocal."
+      ],
+      "explanation": "(A) $x^{-5} = \\dfrac{1}{x^5}$ by definition. (B) $(-x)^5 = -x^5$ — a *negative*, not a *reciprocal*. (C) $\\dfrac{x^{-2}}{x^3} = x^{-5} = \\dfrac{1}{x^5}$. Both A and C work.",
+      "difficulty": "hard",
+      "steps": [
+        "**Strategy.** Check each option independently.",
+        "**Option A — definition.** $x^{-5} = \\dfrac{1}{x^5}$. ✓",
+        "**Option B — sign trap.** $(-x)^5 = (-1)^5 \\cdot x^5 = -x^5$. That's the negative of $x^5$, not its reciprocal. Different operation.",
+        "**Option C — quotient rule.** $\\dfrac{x^{-2}}{x^3} = x^{-2 - 3} = x^{-5} = \\dfrac{1}{x^5}$. ✓",
+        "**Pattern lesson.** Two ways to land on a negative exponent: (a) start with one (option A), (b) end up there via a quotient where the bottom exponent is bigger than the top (option C). Both give the same value. Option B's $(-x)$ has the negative sign on the *factor*, which is an entirely different operation."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "title": "Quotient Rule & Zero Exponents",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "In the previous lesson, the product rule fell out of *counting copies* of $a$. The quotient rule comes from the same idea — except now we *cancel* matching copies. And one beautiful side effect of the quotient rule: it forces a value on $a^0$. We don't get to choose what $a^0$ means; consistency picks it for us."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 1. Quotient rule — when bases match, subtract exponents",
+        "What is $\\dfrac{a^5}{a^2}$? Write out the copies and cancel:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{a^5}{a^2} = \\dfrac{a \\cdot a \\cdot a \\cdot a \\cdot a}{a \\cdot a} = a \\cdot a \\cdot a = a^3"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Two copies cancelled on top, two on the bottom. Five copies minus two cancelled copies leaves three. In general:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{a^m}{a^n} = a^{\\,m - n} \\quad (a \\ne 0)"
+    },
+    {
+      "type": "callout",
+      "title": "Why $a \\ne 0$?",
+      "body": "Division by zero is undefined. As long as $a \\ne 0$, the cancellation is legal. Every quotient-rule problem silently assumes this."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 2. Power of a quotient — distribute the exponent",
+        "What is $\\left(\\dfrac{a}{b}\\right)^3$? Three copies of the fraction:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\left(\\dfrac{a}{b}\\right)^3 = \\dfrac{a}{b} \\cdot \\dfrac{a}{b} \\cdot \\dfrac{a}{b} = \\dfrac{a^3}{b^3}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Same logic as power-of-a-product — the exponent distributes across the division:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\left(\\dfrac{a}{b}\\right)^n = \\dfrac{a^n}{b^n} \\quad (b \\ne 0)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 3. The zero exponent — forced by consistency",
+        "Here's something genuinely surprising. What should $a^0$ mean? \"Multiply $a$ by itself zero times\" is meaningless — there are no copies. So we look at what value $a^0$ must take for the quotient rule to keep working.",
+        "Take $\\dfrac{a^n}{a^n}$. We can evaluate it two ways:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{a^n}{a^n} = 1 \\quad \\text{(anything nonzero divided by itself)}"
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{a^n}{a^n} = a^{\\,n - n} = a^0 \\quad \\text{(quotient rule)}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Both expressions must be equal, so:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "a^0 = 1 \\quad (a \\ne 0)"
+    },
+    {
+      "type": "callout",
+      "title": "Not a separate rule — a forced value",
+      "body": "$a^0 = 1$ isn't a new convention bolted on. It's the *only* value $a^0$ can take if we want the quotient rule to keep working. Every extension of \"powers\" beyond positive integers comes from this same demand for consistency. (Curious about $0^0$? It's a story for another day — see the blog post \"Why a⁰ = 1\" for the full picture.)"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Cheat sheet",
+        "| Rule | Formula | What you do |",
+        "|---|---|---|",
+        "| Quotient of powers | $\\dfrac{a^m}{a^n} = a^{m-n}$ | Subtract exponents (top − bottom) |",
+        "| Power of a quotient | $\\left(\\dfrac{a}{b}\\right)^n = \\dfrac{a^n}{b^n}$ | Distribute across division |",
+        "| Zero exponent | $a^0 = 1$ | Any nonzero base to the 0 is 1 |"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked examples",
+        "**Example 1.** $\\dfrac{x^9}{x^4} = x^{9-4} = x^5$.",
+        "**Example 2.** $\\left(\\dfrac{2}{3}\\right)^4 = \\dfrac{2^4}{3^4} = \\dfrac{16}{81}$.",
+        "**Example 3 — quotient of monomials.** $\\dfrac{12 a^7 b^3}{4 a^2 b} = \\dfrac{12}{4} \\cdot a^{7-2} \\cdot b^{3-1} = 3 a^5 b^2$.",
+        "**Example 4 — applying $a^0 = 1$.** $\\dfrac{x^5}{x^5} = x^{5-5} = x^0 = 1$. Or simply: anything (nonzero) over itself.",
+        "**Example 5 — sneaky.** $(7 x^4 y^2)^0 = 1$. The *entire* expression (as long as it's nonzero) is being raised to the zero. So the whole thing collapses to $1$, regardless of how complicated it is inside."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Watch out — order matters",
+      "body": "$\\dfrac{a^m}{a^n}$ gives $a^{m-n}$ (top exponent minus bottom). If $m < n$, the result has a *negative* exponent. We'll deal with those properly in the next lesson — for now, just note that getting $a^{-3}$ instead of $a^3$ when you reverse the order is a sign that you swapped top and bottom."
+    }
+  ]
+}

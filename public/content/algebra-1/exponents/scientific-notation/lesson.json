@@ -1,0 +1,111 @@
+{
+  "title": "Scientific Notation",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Scientific notation is the place where exponents repay their hard work. The mass of Earth is about $5{,}972{,}000{,}000{,}000{,}000{,}000{,}000{,}000$ kilograms. The radius of a hydrogen atom is about $0.0000000000529$ meters. Counting those zeros by hand is a nightmare; comparing them is worse. Scientific notation packs the same information into something you can read at a glance — and that you can multiply or divide using the exponent rules you already know."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 1. The format",
+        "A number is in **scientific notation** when it's written as:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "a \\times 10^n, \\quad \\text{where } 1 \\le |a| < 10 \\text{ and } n \\text{ is an integer.}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "The *coefficient* $a$ is a number with **exactly one nonzero digit before the decimal point**. The *exponent* $n$ tells you how many places the decimal must move to get the original number back.",
+        "Examples:",
+        "- $300 = 3 \\times 10^2$",
+        "- $45{,}000 = 4.5 \\times 10^4$",
+        "- $0.0006 = 6 \\times 10^{-4}$",
+        "- $0.00072 = 7.2 \\times 10^{-4}$"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Why $1 \\le |a| < 10$?",
+      "body": "It gives every number a *unique* scientific-notation form. Without this rule, $45{,}000$ could be written as $4.5 \\times 10^4$ or $45 \\times 10^3$ or $0.45 \\times 10^5$ — all equal, all named \"scientific notation,\" all ambiguous. Fixing the coefficient to one digit before the decimal nails down a single canonical form."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 2. Converting from standard to scientific",
+        "Move the decimal point until you have **exactly one nonzero digit** before it. Then count the moves — that count becomes the exponent.",
+        "- If you moved the decimal **left**, the exponent is **positive** (the original number was big).",
+        "- If you moved the decimal **right**, the exponent is **negative** (the original number was small).",
+        "**Example A — big number.** $84{,}500$. Decimal starts at the end: $84500.$ Move it left until one nonzero digit remains in front: $8.4500$. That's 4 moves left, so the exponent is $+4$. Drop trailing zeros: $8.45 \\times 10^4$.",
+        "**Example B — small number.** $0.00072$. Move the decimal right: $00007.2$ — that's 4 moves right, so the exponent is $-4$. Result: $7.2 \\times 10^{-4}$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 3. Converting from scientific to standard",
+        "Read the exponent and move the decimal that many places — in the *opposite* direction from the conversion above.",
+        "- **Positive exponent** $\\Rightarrow$ move the decimal **right** (number gets bigger).",
+        "- **Negative exponent** $\\Rightarrow$ move the decimal **left** (number gets smaller).",
+        "**Example C.** $6.02 \\times 10^5$. Move the decimal 5 places right, filling with zeros as needed: $602{,}000$.",
+        "**Example D.** $3.1 \\times 10^{-3}$. Move the decimal 3 places left: $0.0031$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Quick sanity check",
+      "body": "Big positive exponent → big number. Big *negative* exponent → tiny number. If you converted and got the wrong size, you moved the decimal the wrong way."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 4. Multiplying and dividing in scientific notation",
+        "This is where exponent rules earn their keep. To multiply two numbers in scientific notation, multiply the coefficients and *add the exponents* (product rule). To divide, divide the coefficients and *subtract the exponents* (quotient rule)."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "(a \\times 10^m)(b \\times 10^n) = (a \\cdot b) \\times 10^{\\,m+n}"
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{a \\times 10^m}{b \\times 10^n} = \\dfrac{a}{b} \\times 10^{\\,m-n}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Example E.** $(3 \\times 10^4)(2 \\times 10^5) = 6 \\times 10^{4 + 5} = 6 \\times 10^9$.",
+        "**Example F.** $\\dfrac{8 \\times 10^7}{2 \\times 10^3} = 4 \\times 10^{7 - 3} = 4 \\times 10^4$.",
+        "Sometimes the new coefficient lands outside the $1$-to-$10$ range. If that happens, slide a power of 10 in or out to re-normalize.",
+        "**Example G — re-normalize after multiplying.** $(5 \\times 10^3)(4 \\times 10^6) = 20 \\times 10^9$. But $20$ isn't a valid coefficient (it's $\\ge 10$). Rewrite: $20 = 2 \\times 10^1$. So $20 \\times 10^9 = 2 \\times 10^{10}$.",
+        "**Example H — re-normalize after dividing.** $\\dfrac{3 \\times 10^4}{6 \\times 10^2} = 0.5 \\times 10^2$. But $0.5$ isn't valid ($< 1$). Rewrite: $0.5 = 5 \\times 10^{-1}$. So $0.5 \\times 10^2 = 5 \\times 10^{1}$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 5. Numbers worth recognizing",
+        "| Quantity | Scientific notation |",
+        "|---|---|",
+        "| Speed of light | $3.0 \\times 10^8$ m/s |",
+        "| Mass of Earth | $5.97 \\times 10^{24}$ kg |",
+        "| Avogadro's number | $6.02 \\times 10^{23}$ |",
+        "| Distance Earth to Sun | $1.5 \\times 10^{11}$ m |",
+        "| Charge of an electron | $1.6 \\times 10^{-19}$ C |",
+        "| Mass of an electron | $9.1 \\times 10^{-31}$ kg |",
+        "| Radius of a hydrogen atom | $5.3 \\times 10^{-11}$ m |",
+        "These are the magnitudes that appear all over science. Reading them comfortably is a skill you'll use in every science class for the rest of school."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The power of scientific notation",
+      "body": "How many times larger is the Sun-Earth distance than a hydrogen atom? In standard form, it'd be an arithmetic mess. In scientific notation: $\\dfrac{1.5 \\times 10^{11}}{5.3 \\times 10^{-11}} \\approx 0.28 \\times 10^{22} \\approx 3 \\times 10^{21}$. Roughly $10^{21}$ atoms across — pretty much the whole calculation done by inspecting the exponents."
+    }
+  ]
+}

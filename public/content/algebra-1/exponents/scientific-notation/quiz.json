@@ -1,0 +1,273 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Write } 4{,}500 \\text{ in scientific notation.}",
+      "choices": [
+        "4.5 \\times 10^3",
+        "45 \\times 10^2",
+        "4.5 \\times 10^4",
+        "0.45 \\times 10^4"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Move the decimal until there's exactly one nonzero digit before it.",
+        "$4{,}500. \\to 4.500$ — that's 3 moves to the left."
+      ],
+      "explanation": "Move the decimal 3 places left: $4{,}500 \\to 4.5$ (drop trailing zeros). Three moves left means exponent $+3$. Answer: $4.5 \\times 10^3$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Write } 0.0029 \\text{ in scientific notation.}",
+      "choices": [
+        "2.9 \\times 10^{-2}",
+        "2.9 \\times 10^{-3}",
+        "29 \\times 10^{-4}",
+        "2.9 \\times 10^3"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "The number is small, so the exponent will be negative.",
+        "Count moves of the decimal: $0.0029 \\to 0.029 \\to 0.29 \\to 2.9$. Three moves right."
+      ],
+      "explanation": "Move the decimal 3 places right: $0.0029 \\to 2.9$. Three moves right means exponent $-3$. Answer: $2.9 \\times 10^{-3}$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Convert } 6.7 \\times 10^4 \\text{ to standard form.}",
+      "choices": ["6{,}700", "67{,}000", "670{,}000", "0.00067"],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Exponent is $+4$, so move the decimal 4 places to the right.",
+        "$6.7 \\to 67 \\to 670 \\to 6{,}700 \\to 67{,}000$."
+      ],
+      "explanation": "Move the decimal 4 places right: $6.7 \\to 67{,}000$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Convert } 8.1 \\times 10^{-5} \\text{ to standard form.}",
+      "choices": ["0.000081", "0.0000081", "0.00081", "810000"],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Negative exponent means the number is small — move the decimal left.",
+        "Five moves left: $8.1 \\to 0.81 \\to 0.081 \\to 0.0081 \\to 0.00081 \\to 0.000081$."
+      ],
+      "explanation": "Exponent $-5$ means move the decimal 5 places left. Result: $0.000081$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which is the correct scientific notation for } 38{,}500?",
+      "choices": [
+        "3.85 \\times 10^4",
+        "38.5 \\times 10^3",
+        "3.85 \\times 10^5",
+        "0.385 \\times 10^5"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Only the form with a coefficient $a$ satisfying $1 \\le |a| < 10$ counts as scientific notation.",
+        "$38.5$ has two digits before the decimal — not valid. $0.385$ has zero — not valid."
+      ],
+      "explanation": "All four expressions are equal in value, but only $3.85 \\times 10^4$ has a coefficient between 1 and 10. Scientific notation requires *exactly one* nonzero digit before the decimal.",
+      "difficulty": "medium",
+      "steps": [
+        "**Recognize the type.** Multiple equivalent forms shown — only one is in proper scientific notation.",
+        "**The coefficient rule.** $1 \\le |a| < 10$, exactly one nonzero digit before the decimal point.",
+        "**Check each option.**",
+        "  - $3.85 \\times 10^4$: coefficient $3.85$, one digit before decimal. ✓",
+        "  - $38.5 \\times 10^3$: coefficient $38.5$, two digits before decimal. ✗",
+        "  - $3.85 \\times 10^5$: coefficient is fine, but the value would be $385{,}000$ — wrong magnitude.",
+        "  - $0.385 \\times 10^5$: coefficient $0.385$, zero nonzero digits before decimal. ✗",
+        "**Pattern lesson.** Always double-check both the *coefficient* rule (1-to-10) and the *magnitude* (does the number come out right). Either alone can hide an error."
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Compute } (2 \\times 10^3)(4 \\times 10^5).",
+      "choices": [
+        "8 \\times 10^{15}",
+        "6 \\times 10^8",
+        "8 \\times 10^8",
+        "8 \\times 10^{2}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "Multiply coefficients, add exponents.",
+        "$2 \\cdot 4 = 8$, and $3 + 5 = 8$."
+      ],
+      "explanation": "$(2 \\times 10^3)(4 \\times 10^5) = (2 \\cdot 4) \\times 10^{3 + 5} = 8 \\times 10^8$.",
+      "difficulty": "medium",
+      "steps": [
+        "**Recognize the type.** Product of two scientific-notation values — coefficients multiply, exponents add.",
+        "**Coefficients.** $2 \\cdot 4 = 8$. Plain multiplication.",
+        "**Exponents — product rule.** $10^3 \\cdot 10^5 = 10^{3 + 5} = 10^8$.",
+        "**Reassemble.** $8 \\times 10^8$.",
+        "**Sanity check the coefficient range.** $8$ is between $1$ and $10$, so no re-normalization needed."
+      ]
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Compute } (5 \\times 10^4)(6 \\times 10^3) \\\\ \\text{and write in proper scientific notation.}",
+      "choices": [
+        "30 \\times 10^7",
+        "3 \\times 10^8",
+        "3 \\times 10^7",
+        "30 \\times 10^{12}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "First multiply: $5 \\cdot 6 = 30$, exponents $4 + 3 = 7$. So $30 \\times 10^7$.",
+        "But $30$ isn't a valid coefficient. Rewrite $30 = 3 \\times 10^1$, then combine."
+      ],
+      "explanation": "$(5 \\times 10^4)(6 \\times 10^3) = 30 \\times 10^7$. Re-normalize: $30 = 3 \\times 10^1$, so $30 \\times 10^7 = 3 \\times 10^{1 + 7} = 3 \\times 10^8$.",
+      "difficulty": "medium",
+      "steps": [
+        "**Recognize the type.** Product, then a re-normalization step at the end because the coefficient overflows.",
+        "**Multiply normally.** $5 \\cdot 6 = 30$ and $10^4 \\cdot 10^3 = 10^7$, giving $30 \\times 10^7$.",
+        "**Check the coefficient.** $30 \\ge 10$, so the answer isn't yet in proper scientific notation.",
+        "**Re-normalize.** Rewrite $30 = 3 \\times 10^1$. So $30 \\times 10^7 = 3 \\times 10^1 \\times 10^7 = 3 \\times 10^8$.",
+        "**Pattern lesson.** Whenever the coefficient lands at $10$ or more, you can always slide a $10^1$ out of it and into the exponent of $10$ — the exponent goes up by 1, the coefficient comes down by a factor of 10."
+      ]
+    },
+    {
+      "id": "q8",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Compute } \\dfrac{8 \\times 10^{10}}{4 \\times 10^4}.",
+      "choices": [
+        "2 \\times 10^{6}",
+        "2 \\times 10^{14}",
+        "4 \\times 10^6",
+        "2 \\times 10^{2.5}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 0,
+      "hints": [
+        "Divide coefficients, subtract exponents.",
+        "$8 / 4 = 2$, and $10 - 4 = 6$."
+      ],
+      "explanation": "$\\dfrac{8 \\times 10^{10}}{4 \\times 10^4} = \\dfrac{8}{4} \\times 10^{10 - 4} = 2 \\times 10^6$.",
+      "difficulty": "medium",
+      "steps": [
+        "**Recognize the type.** Quotient — coefficients divide, exponents subtract (quotient rule).",
+        "**Coefficients.** $8/4 = 2$.",
+        "**Exponents.** $10^{10}/10^4 = 10^{10 - 4} = 10^6$.",
+        "**Reassemble.** $2 \\times 10^6$.",
+        "**Sanity check.** The original numerator was $8 \\times 10^{10}$, much larger than the denominator $4 \\times 10^4$. So the quotient should be much bigger than 1 — $2 \\times 10^6$ fits."
+      ]
+    },
+    {
+      "id": "q9",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Compute } \\dfrac{3 \\times 10^5}{6 \\times 10^2} \\\\ \\text{and write in proper scientific notation.}",
+      "choices": [
+        "0.5 \\times 10^3",
+        "5 \\times 10^3",
+        "5 \\times 10^2",
+        "2 \\times 10^3"
+      ],
+      "choicesTex": true,
+      "answerIndex": 2,
+      "hints": [
+        "First: coefficients $3/6 = 0.5$, exponents $5 - 2 = 3$. So $0.5 \\times 10^3$.",
+        "But $0.5 < 1$ — not a valid coefficient. Rewrite $0.5 = 5 \\times 10^{-1}$ and re-combine."
+      ],
+      "explanation": "$\\dfrac{3 \\times 10^5}{6 \\times 10^2} = 0.5 \\times 10^3$. Re-normalize: $0.5 = 5 \\times 10^{-1}$, so $0.5 \\times 10^3 = 5 \\times 10^{-1 + 3} = 5 \\times 10^2$.",
+      "difficulty": "hard",
+      "steps": [
+        "**Recognize the type.** Quotient with re-normalization on the back end — the coefficient may slip below 1.",
+        "**Divide normally.** Coefficients: $3/6 = 0.5$. Exponents: $10^5/10^2 = 10^{5 - 2} = 10^3$. Gives $0.5 \\times 10^3$.",
+        "**Check the coefficient.** $0.5 < 1$, so we're not yet in proper scientific notation.",
+        "**Re-normalize.** Rewrite $0.5 = 5 \\times 10^{-1}$. Then $0.5 \\times 10^3 = 5 \\times 10^{-1} \\times 10^3 = 5 \\times 10^{2}$.",
+        "**Pattern lesson.** When the coefficient drops below 1, slide a $10^{-1}$ out of it and into the exponent — coefficient grows by a factor of 10, exponent drops by 1.",
+        "**Sanity check.** $0.5 \\times 10^3 = 500$. And $5 \\times 10^2 = 500$. ✓"
+      ]
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{The speed of light is about } 3 \\times 10^8 \\text{ m/s.} \\\\ \\text{The distance from the Sun to Earth is about } 1.5 \\times 10^{11} \\text{ m.} \\\\ \\text{How many seconds does sunlight take to reach Earth?}",
+      "answer": 500,
+      "tolerance": 1,
+      "hints": [
+        "Time = distance / speed.",
+        "$\\dfrac{1.5 \\times 10^{11}}{3 \\times 10^8}$ — divide coefficients, subtract exponents."
+      ],
+      "explanation": "Time = distance / speed = $\\dfrac{1.5 \\times 10^{11}}{3 \\times 10^8} = 0.5 \\times 10^3 = 5 \\times 10^2 = 500$ seconds (about 8 minutes and 20 seconds).",
+      "difficulty": "hard",
+      "steps": [
+        "**Set up.** Physics relation: $\\text{time} = \\text{distance} \\div \\text{speed}$.",
+        "**Plug in.** $t = \\dfrac{1.5 \\times 10^{11}}{3 \\times 10^8}$.",
+        "**Coefficients.** $1.5 / 3 = 0.5$.",
+        "**Exponents.** $10^{11}/10^8 = 10^{11 - 8} = 10^3$.",
+        "**Combine and re-normalize.** $0.5 \\times 10^3 = 5 \\times 10^2 = 500$ seconds.",
+        "**Sanity check via everyday intuition.** $500$ s = $8$ min $20$ s. This is the well-known \"light from the Sun takes about 8 minutes to reach us\" fact — answer matches reality. ✓"
+      ]
+    },
+    {
+      "id": "q11",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which number is largest?}",
+      "choices": [
+        "9.9 \\times 10^5",
+        "1.0 \\times 10^6",
+        "5 \\times 10^5",
+        "8.5 \\times 10^4"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "When numbers are in scientific notation, first compare the exponents.",
+        "The largest exponent wins — unless coefficients are very different and exponents are tied."
+      ],
+      "explanation": "$1.0 \\times 10^6 = 1{,}000{,}000$, the biggest. The others: $9.9 \\times 10^5 = 990{,}000$ (very close to a million but not quite), $5 \\times 10^5 = 500{,}000$, $8.5 \\times 10^4 = 85{,}000$. Once the exponent of one number is bigger than another's, it almost always wins.",
+      "difficulty": "hard",
+      "steps": [
+        "**Recognize the type.** Comparing magnitudes — use the exponent as the primary sort key.",
+        "**Group by exponent.** $10^6$: option B. $10^5$: options A and C. $10^4$: option D.",
+        "**$10^6$ group wins outright.** Even the smallest possible $10^6$ value ($1.0 \\times 10^6 = 1{,}000{,}000$) is bigger than the biggest $10^5$ value ($9.9 \\times 10^5 = 990{,}000$). One exponent higher = at least 10× bigger... almost. Worth checking the edge cases.",
+        "**The edge case.** $9.9 \\times 10^5 = 990{,}000$, very close to but still less than $1{,}000{,}000$. So $1.0 \\times 10^6$ is the largest.",
+        "**Pattern lesson.** Exponent dominates *unless* the coefficients are wildly different and the exponents are tied or off by exactly one. Always sanity-check the boundary case."
+      ]
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\text{One mole contains } 6.0 \\times 10^{23} \\text{ molecules.} \\\\ \\text{Each water molecule has mass about } 3.0 \\times 10^{-23} \\text{ grams.} \\\\ \\text{What is the mass of one mole of water in grams?}",
+      "answer": 18,
+      "tolerance": 0.5,
+      "hints": [
+        "Mass = (molecules per mole) $\\times$ (mass per molecule).",
+        "$(6.0 \\times 10^{23})(3.0 \\times 10^{-23})$ — multiply coefficients, add exponents (one is negative)."
+      ],
+      "explanation": "Mass = $(6.0 \\times 10^{23})(3.0 \\times 10^{-23}) = 18 \\times 10^{23 + (-23)} = 18 \\times 10^0 = 18$ grams. (The well-known molar mass of water is ~18 g/mol — answer matches reality.)",
+      "difficulty": "hard",
+      "steps": [
+        "**Set up.** Mass of one mole = (number of molecules) $\\times$ (mass per molecule).",
+        "**Substitute.** $m = (6.0 \\times 10^{23})(3.0 \\times 10^{-23})$.",
+        "**Coefficients.** $6.0 \\cdot 3.0 = 18$.",
+        "**Exponents — product rule, including the negative sign.** $10^{23} \\cdot 10^{-23} = 10^{23 + (-23)} = 10^0 = 1$.",
+        "**Combine.** $18 \\times 10^0 = 18 \\times 1 = 18$ grams.",
+        "**Real-world sanity check.** The molar mass of water is ~18 g/mol — a number every chemistry student memorizes. Matches. ✓",
+        "**Pattern lesson.** When a very large number multiplies a very small one, the exponents often nearly cancel, leaving an everyday-sized number. That's exactly the role chemistry asks scientific notation to play — bridging the atomic scale and the gram scale."
+      ]
+    }
+  ]
+}

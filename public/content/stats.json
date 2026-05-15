@@ -1,7 +1,7 @@
 {
   "byCourse": {
     "pre-algebra": 286,
-    "algebra-1": 240,
+    "algebra-1": 288,
     "algebra-2": 393,
     "geometry": 359,
     "pre-calculus": 290,
@@ -40,6 +40,10 @@
     "algebra-1/systems/graphing-systems": 12,
     "algebra-1/systems/substitution": 12,
     "algebra-1/systems/elimination": 12,
+    "algebra-1/exponents/product-and-power-rules": 12,
+    "algebra-1/exponents/quotient-and-zero": 12,
+    "algebra-1/exponents/negative-exponents": 12,
+    "algebra-1/exponents/scientific-notation": 12,
     "algebra-1/polynomials/poly-add-multiply": 12,
     "algebra-1/polynomials/factoring": 12,
     "algebra-1/identities-factoring/algebraic-identities": 29,
@@ -165,5 +169,5 @@
     "statistics/sampling/sampling-and-bias": 12,
     "statistics/sampling/sampling-distributions": 12
   },
-  "total": 2214
+  "total": 2262
 }

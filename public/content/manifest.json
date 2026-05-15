@@ -443,6 +443,62 @@
           ]
         },
         {
+          "id": "exponents",
+          "title": "Exponents",
+          "subtopics": [
+            {
+              "id": "product-and-power-rules",
+              "title": "Product & Power Rules",
+              "path": "algebra-1/exponents/product-and-power-rules",
+              "keywords": [
+                "product of powers",
+                "power of a power",
+                "power of a product",
+                "a^m a^n",
+                "(a^m)^n",
+                "(ab)^n"
+              ]
+            },
+            {
+              "id": "quotient-and-zero",
+              "title": "Quotient Rule & Zero Exponents",
+              "path": "algebra-1/exponents/quotient-and-zero",
+              "keywords": [
+                "quotient of powers",
+                "power of a quotient",
+                "a^0",
+                "zero exponent",
+                "a^m / a^n"
+              ]
+            },
+            {
+              "id": "negative-exponents",
+              "title": "Negative Exponents",
+              "path": "algebra-1/exponents/negative-exponents",
+              "keywords": [
+                "negative exponent",
+                "a^{-n}",
+                "reciprocal",
+                "flip across the bar",
+                "1/a^n"
+              ]
+            },
+            {
+              "id": "scientific-notation",
+              "title": "Scientific Notation",
+              "path": "algebra-1/exponents/scientific-notation",
+              "keywords": [
+                "scientific notation",
+                "standard form",
+                "a x 10^n",
+                "very large numbers",
+                "very small numbers",
+                "Avogadro"
+              ]
+            }
+          ]
+        },
+        {
           "id": "polynomials",
           "title": "Polynomials",
           "subtopics": [

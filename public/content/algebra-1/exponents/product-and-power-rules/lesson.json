@@ -1,0 +1,128 @@
+{
+  "title": "Product & Power Rules",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Exponents can look like a bag of unrelated facts you have to memorize. They're not. Three rules govern *multiplying* with exponents, and all three come from a single idea: $a^n$ just means \"multiply $a$ by itself $n$ times.\" Once you see that, the rules derive themselves."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### What $a^n$ actually means",
+        "For a positive integer $n$:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "a^n = \\underbrace{a \\cdot a \\cdot a \\cdots a}_{n \\text{ copies of } a}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "So $a^3 = a \\cdot a \\cdot a$ and $a^5 = a \\cdot a \\cdot a \\cdot a \\cdot a$. Counting copies is the whole game."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 1. Product rule — when bases match, add exponents",
+        "What is $a^3 \\cdot a^2$? Just count the copies:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "a^3 \\cdot a^2 = (a \\cdot a \\cdot a)(a \\cdot a) = a^5"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Three copies times two more copies makes five copies. In general:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "a^m \\cdot a^n = a^{\\,m+n}"
+    },
+    {
+      "type": "callout",
+      "title": "The bases must match",
+      "body": "The product rule *only* applies when the bases are the same. $a^3 \\cdot b^2$ doesn't simplify — different bases, no merging."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 2. Power rule — power of a power, multiply exponents",
+        "What is $(a^3)^2$? It means \"take $a^3$ and multiply it by itself twice\":"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "(a^3)^2 = a^3 \\cdot a^3 = a^{3 + 3} = a^6"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Notice the exponent went from $(3, 2)$ to $6 = 3 \\cdot 2$. The outer exponent counts how many copies of $a^m$ we're multiplying, and each copy contributes $m$ to the total. So we *multiply* the exponents:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "(a^m)^n = a^{\\,m \\cdot n}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### 3. Power of a product — distribute the exponent",
+        "What is $(ab)^3$? Three copies of the product $ab$:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "(ab)^3 = (ab)(ab)(ab) = a \\cdot a \\cdot a \\cdot b \\cdot b \\cdot b = a^3 b^3"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Multiplication is commutative — we can rearrange the factors and group all the $a$'s together, then all the $b$'s. In general:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "(ab)^n = a^n \\, b^n"
+    },
+    {
+      "type": "callout",
+      "title": "Pitfall — only works for products, not sums",
+      "body": "$(ab)^n = a^n b^n$ ✓\n$(a + b)^n \\ne a^n + b^n$ ✗\nTry $(1 + 2)^2$: equals $3^2 = 9$, not $1^2 + 2^2 = 5$. Distributing an exponent across a sum is one of the most common mistakes in algebra. Don't do it."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Cheat sheet",
+        "| Rule | Formula | What you do |",
+        "|---|---|---|",
+        "| Product of powers | $a^m \\cdot a^n = a^{m+n}$ | Add exponents |",
+        "| Power of a power | $(a^m)^n = a^{mn}$ | Multiply exponents |",
+        "| Power of a product | $(ab)^n = a^n b^n$ | Distribute over multiplication |",
+        "All three need the *same base* (or apply across multiplication, in rule 3). They never apply across $+$ or $-$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Worked examples",
+        "**Example 1.** $x^4 \\cdot x^7 = x^{4 + 7} = x^{11}$.",
+        "**Example 2.** $(y^2)^5 = y^{2 \\cdot 5} = y^{10}$.",
+        "**Example 3.** $(2x)^3 = 2^3 x^3 = 8 x^3$.",
+        "**Example 4 — combine all three.** $(2 x^3)^2 \\cdot x^5$. Apply rule 3: $(2 x^3)^2 = 2^2 (x^3)^2 = 4 x^6$. Multiply by $x^5$ using rule 1: $4 x^6 \\cdot x^5 = 4 x^{11}$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "One mental check",
+      "body": "Whenever you apply an exponent rule, ask: *am I counting copies correctly?* Every rule on this page is just bookkeeping for how many copies of $a$ are being multiplied together. If your answer wouldn't match the count, you applied a rule that doesn't apply."
+    }
+  ]
+}
