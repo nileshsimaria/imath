@@ -179,6 +179,20 @@
                 "ad = bc",
                 "scale"
               ]
+            },
+            {
+              "id": "unit-conversion",
+              "title": "Unit Conversion: Multiplying by 1",
+              "path": "pre-algebra/ratios-proportions/unit-conversion",
+              "keywords": [
+                "unit conversion",
+                "dimensional analysis",
+                "factor-label method",
+                "multiply by 1",
+                "cancel units",
+                "km to m",
+                "km/hr to m/s"
+              ]
             }
           ]
         },

@@ -1,6 +1,6 @@
 {
   "byCourse": {
-    "pre-algebra": 286,
+    "pre-algebra": 298,
     "algebra-1": 288,
     "algebra-2": 393,
     "geometry": 359,
@@ -22,6 +22,7 @@
     "pre-algebra/decimals-percents/percent-basics": 13,
     "pre-algebra/ratios-proportions/ratio-basics": 12,
     "pre-algebra/ratios-proportions/proportions": 12,
+    "pre-algebra/ratios-proportions/unit-conversion": 12,
     "pre-algebra/numbers/square-roots-surds": 15,
     "pre-algebra/arithmetic-applications/profit-loss-discount": 15,
     "pre-algebra/arithmetic-applications/simple-compound-interest": 15,
@@ -169,5 +170,5 @@
     "statistics/sampling/sampling-and-bias": 12,
     "statistics/sampling/sampling-distributions": 12
   },
-  "total": 2262
+  "total": 2274
 }

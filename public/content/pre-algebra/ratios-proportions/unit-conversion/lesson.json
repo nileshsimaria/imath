@@ -1,0 +1,175 @@
+{
+  "title": "Unit Conversion: Multiplying by 1",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Converting from miles to kilometers, from minutes to seconds, from km/hr to m/s — every one of these problems sounds different, and students often try to memorize a separate rule for each. There's no need. **All unit conversions are just multiplication by $1$, dressed up cleverly.** Once you see the trick, every conversion problem in the world uses the same method."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Stage 1 — Two true facts, two true fractions",
+        "Start with something you already know: $1 \\text{ day} = 24 \\text{ hours}$. That single fact can be written as two different fractions, and *both of them are equal to $1$*:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{1 \\text{ day}}{24 \\text{ hours}} = 1 \\qquad \\dfrac{24 \\text{ hours}}{1 \\text{ day}} = 1"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Why? Because the *amount* on top and the *amount* on bottom are the same — they just *describe* it in different units. $1$ day IS $24$ hours. It's no different from saying $\\dfrac{6}{6} = 1$ or $\\dfrac{5280}{5280} = 1$.",
+        "**A conversion factor is a fraction whose top and bottom describe the same amount in different units. That makes it equal to $1$.**"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Stage 2 — Multiplying by 1 doesn't change the value, only the form",
+        "If you multiply any quantity by a conversion factor (which is just $1$), the quantity stays the same — only how it's *labelled* changes."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "3 \\text{ days} \\times \\dfrac{24 \\text{ hours}}{1 \\text{ day}} = 72 \\text{ hours}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "$3$ days IS $72$ hours. We didn't *change* how much time we had — we just re-expressed it. Just like $\\dfrac{1}{2} = \\dfrac{2}{4}$: same amount, different fraction."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The big shift in thinking",
+      "body": "Most students think of unit conversion as a separate skill with its own rules. It isn't. It's just multiplication by $1$. Every conversion you'll ever do is this same move."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Stage 3 — Units cancel like algebra symbols",
+        "Here's the second insight. Treat the unit words ($\\text{days}$, $\\text{hours}$, etc.) like algebra letters that can cancel."
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "3 \\,\\cancel{\\text{days}} \\times \\dfrac{24 \\text{ hours}}{1 \\,\\cancel{\\text{day}}} = 72 \\text{ hours}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "The word \"days\" appears on top *and* on bottom — it cancels, just like $\\dfrac{3x}{x} = 3$. What's left over (\"hours\") is the unit you wanted.",
+        "This cancellation rule does all the work for you. **You don't have to remember whether to multiply or divide — the units tell you.**"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Stage 4 — The \"which way goes up?\" question answers itself",
+        "Students worry: *\"do I multiply by $24$ or divide by $24$?\"* The factor-label method makes that question disappear. Just follow this rule:",
+        "**Put the unit you HAVE on the bottom of the conversion factor (so it cancels), and the unit you WANT on the top (so it survives).**",
+        "**Example.** Convert $180$ minutes to hours. You have minutes; you want hours. So put \"minutes\" on the bottom of the conversion factor:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "180 \\,\\cancel{\\text{min}} \\times \\dfrac{1 \\text{ hr}}{60 \\,\\cancel{\\text{min}}} = \\dfrac{180}{60}\\text{ hr} = 3 \\text{ hr}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Minutes cancel, hours survive. The number $180/60 = 3$ comes out automatically. Try it the other way — put \"minutes\" on top instead:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "180 \\text{ min} \\times \\dfrac{60 \\text{ min}}{1 \\text{ hr}} = 10{,}800 \\,\\dfrac{\\text{min}^2}{\\text{hr}}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Nothing cancels, the answer comes out with units of $\\dfrac{\\text{min}^2}{\\text{hr}}$ — clearly wrong. **Wrong units = wrong setup.** That's a built-in error detector."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Your method, in one sentence",
+      "body": "Write down what you have. Multiply by conversion factors arranged so the unwanted units cancel and the wanted units survive. The arithmetic falls out automatically."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Stage 5 — Chaining: many 1's at once",
+        "What if there's no direct \"seconds to days\" conversion factor handy? No problem — just multiply by *several* $1$'s in a row, each one a step in a chain.",
+        "**Convert $180$ seconds to days.** We don't know seconds-to-days directly, but we know seconds-to-minutes, minutes-to-hours, and hours-to-days. Stack them:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "180 \\,\\cancel{\\text{sec}} \\times \\dfrac{1 \\,\\cancel{\\text{min}}}{60 \\,\\cancel{\\text{sec}}} \\times \\dfrac{1 \\,\\cancel{\\text{hr}}}{60 \\,\\cancel{\\text{min}}} \\times \\dfrac{1 \\text{ day}}{24 \\,\\cancel{\\text{hr}}}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Every middle unit (sec, min, hr) appears once on top and once on bottom — they all cancel. The only surviving unit is \"day\". The number works out to:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{180}{60 \\cdot 60 \\cdot 24} \\text{ days} \\approx 0.00208 \\text{ days}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "Same method as a single conversion — just more $1$'s strung together. As long as the units cancel cleanly all the way through, the chain is correct."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Bonus — compound units like km/hr → m/s",
+        "Conversion factors can stack to handle units that involve *both* a top and a bottom (speed, density, currency-per-time, etc.). To convert $90$ km/hr to m/s, we need to convert km → m on the top *and* hr → s on the bottom. So we use two conversion factors:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "90\\,\\dfrac{\\cancel{\\text{km}}}{\\cancel{\\text{hr}}} \\times \\dfrac{1000 \\text{ m}}{1 \\,\\cancel{\\text{km}}} \\times \\dfrac{1 \\,\\cancel{\\text{hr}}}{3600 \\text{ s}}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "$\\text{km}$ cancels (top–bottom), $\\text{hr}$ cancels (top–bottom). Left over: $\\text{m}$ on top, $\\text{s}$ on bottom — exactly what we wanted. Compute:"
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\dfrac{90 \\cdot 1000}{3600} = 25\\,\\dfrac{\\text{m}}{\\text{s}}"
+    },
+    {
+      "type": "text",
+      "md": [
+        "So $90$ km/hr $= 25$ m/s. Same method, two factors. Once you've internalized \"multiply by $1$, let units cancel,\" every conversion problem in physics, chemistry, engineering, and everyday life uses this same recipe."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Useful conversion facts to keep handy",
+      "body": "$1 \\text{ km} = 1000 \\text{ m}$. $1 \\text{ m} = 100 \\text{ cm}$. $1 \\text{ hr} = 60 \\text{ min} = 3600 \\text{ s}$. $1 \\text{ day} = 24 \\text{ hr}$. $1 \\text{ mile} \\approx 1.609 \\text{ km}$. $1 \\text{ kg} = 1000 \\text{ g}$. $1 \\text{ L} = 1000 \\text{ mL}$. Each of these gives you TWO conversion factors — one with the bigger unit on top, one with it on bottom. Pick whichever makes your units cancel."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Quick mental checklist before every problem",
+        "1. **What do I have?** Quantity and units.",
+        "2. **What do I want?** Quantity and units (or units only, for proportional problems).",
+        "3. **What's known equal?** Pick conversion facts that link the two.",
+        "4. **Set up so units cancel.** Have-units on the bottom; want-units on the top.",
+        "5. **Multiply through.** The arithmetic does the rest.",
+        "6. **Sanity check.** Did the right units survive? If yes, the answer is at least dimensionally correct."
+      ]
+    }
+  ]
+}

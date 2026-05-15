@@ -1,0 +1,227 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "promptTex": "\\text{Which of these is equal to } 1?",
+      "choices": [
+        "\\dfrac{1 \\text{ hour}}{24 \\text{ days}}",
+        "\\dfrac{1 \\text{ day}}{24 \\text{ hours}}",
+        "\\dfrac{60 \\text{ min}}{1 \\text{ day}}",
+        "\\dfrac{100 \\text{ cm}}{1 \\text{ km}}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "A conversion factor equals $1$ only when the top and bottom describe the *same amount* in different units.",
+        "Is $1$ day really equal to $24$ hours? Then that fraction is $1$."
+      ],
+      "explanation": "$1$ day $= 24$ hours describes the same length of time, so $\\dfrac{1 \\text{ day}}{24 \\text{ hours}} = 1$. The others mix up unrelated quantities (e.g., $1$ hour $\\ne 24$ days; $100$ cm $\\ne 1$ km).",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "promptTex": "\\text{To convert } 5 \\text{ hours into minutes, which factor do you multiply by?}",
+      "choices": [
+        "\\dfrac{1 \\text{ hour}}{60 \\text{ min}}",
+        "\\dfrac{60 \\text{ min}}{1 \\text{ hour}}",
+        "\\dfrac{1 \\text{ min}}{60 \\text{ hours}}",
+        "\\dfrac{1}{60}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "You HAVE hours. You WANT minutes. Set up the factor so 'hours' is on the bottom (cancels) and 'minutes' is on the top (survives).",
+        "$5 \\text{ hr} \\times \\dfrac{60 \\text{ min}}{1 \\text{ hr}}$ — hours cancel, minutes survive."
+      ],
+      "explanation": "Put the unit you have (hours) on the bottom of the conversion factor so it cancels, and the unit you want (minutes) on top so it survives. $5 \\,\\cancel{\\text{hr}} \\times \\dfrac{60 \\text{ min}}{1 \\,\\cancel{\\text{hr}}} = 300 \\text{ min}$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "numeric",
+      "promptTex": "\\text{How many minutes are in } 5 \\text{ hours?}",
+      "answer": 300,
+      "tolerance": 0,
+      "hints": [
+        "Multiply by $\\dfrac{60 \\text{ min}}{1 \\text{ hour}}$ so hours cancel.",
+        "$5 \\times 60 = ?$"
+      ],
+      "explanation": "$5 \\,\\cancel{\\text{hr}} \\times \\dfrac{60 \\text{ min}}{1 \\,\\cancel{\\text{hr}}} = 300 \\text{ min}$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "promptTex": "\\text{Convert } 1500 \\text{ grams to kilograms.}",
+      "answer": 1.5,
+      "tolerance": 0.001,
+      "hints": [
+        "$1 \\text{ kg} = 1000 \\text{ g}$, so multiply by $\\dfrac{1 \\text{ kg}}{1000 \\text{ g}}$.",
+        "$1500 / 1000 = ?$"
+      ],
+      "explanation": "$1500 \\,\\cancel{\\text{g}} \\times \\dfrac{1 \\text{ kg}}{1000 \\,\\cancel{\\text{g}}} = \\dfrac{1500}{1000} \\text{ kg} = 1.5 \\text{ kg}$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "promptTex": "\\text{A student writes:} \\\\ 4 \\text{ km} \\times \\dfrac{1 \\text{ km}}{1000 \\text{ m}} = \\dfrac{4 \\,\\text{km}^2}{1000 \\,\\text{m}} \\\\ \\text{What went wrong?}",
+      "choices": [
+        "Nothing — the answer is correct",
+        "They flipped the conversion factor; \\text{km} should be on the bottom",
+        "They forgot to convert hours",
+        "1000 \\text{ should have been } 100"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Look at the units in the answer: $\\text{km}^2 / \\text{m}$. That's nonsense — a sure sign of a wrong setup.",
+        "To convert km to m, you need km to *cancel*. So km goes on the bottom of the conversion factor."
+      ],
+      "explanation": "The student put km on the *top* of the conversion factor, so it didn't cancel — it stacked with the km from the original quantity, giving $\\text{km}^2$. Correct setup: $4 \\,\\cancel{\\text{km}} \\times \\dfrac{1000 \\text{ m}}{1 \\,\\cancel{\\text{km}}} = 4000 \\text{ m}$. **Whenever units come out weird, the setup is wrong.**",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "promptTex": "\\text{How many meters are in } 4 \\text{ km}?",
+      "answer": 4000,
+      "tolerance": 0,
+      "hints": [
+        "$1 \\text{ km} = 1000 \\text{ m}$. Put km on the bottom of the conversion factor.",
+        "$4 \\times 1000 = ?$"
+      ],
+      "explanation": "$4 \\,\\cancel{\\text{km}} \\times \\dfrac{1000 \\text{ m}}{1 \\,\\cancel{\\text{km}}} = 4000 \\text{ m}$.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "multiple-choice",
+      "promptTex": "\\text{To convert seconds to hours, which chain of factors works?}",
+      "choices": [
+        "\\times \\dfrac{60 \\text{ sec}}{1 \\text{ min}} \\times \\dfrac{60 \\text{ min}}{1 \\text{ hr}}",
+        "\\times \\dfrac{1 \\text{ min}}{60 \\text{ sec}} \\times \\dfrac{1 \\text{ hr}}{60 \\text{ min}}",
+        "\\times \\dfrac{1 \\text{ hr}}{3600 \\text{ sec}^2}",
+        "\\times \\dfrac{1 \\text{ min}}{60 \\text{ sec}} \\times \\dfrac{60 \\text{ min}}{1 \\text{ hr}}"
+      ],
+      "choicesTex": true,
+      "answerIndex": 1,
+      "hints": [
+        "Walk through the cancellations on each option. The right one ends with hours surviving and everything else cancelled.",
+        "Each factor must cancel an unwanted unit and introduce a step toward 'hours'."
+      ],
+      "explanation": "Option B works: sec on the bottom of factor 1 (cancels with sec in the original quantity) and min on the bottom of factor 2 (cancels with the min introduced by factor 1). Only hours remain. Option A doesn't cancel anything — sec and min are both on top throughout.",
+      "difficulty": "medium",
+      "steps": [
+        "**Strategy.** Walk through each option and track which units cancel.",
+        "**Option A.** $\\dfrac{60 \\text{ sec}}{1 \\text{ min}} \\times \\dfrac{60 \\text{ min}}{1 \\text{ hr}}$. Multiplied with the starting seconds, gives $\\text{sec} \\times \\dfrac{\\text{sec}}{\\text{min}} \\times \\dfrac{\\text{min}}{\\text{hr}} = \\dfrac{\\text{sec}^2}{\\text{hr}}$. Nonsense units.",
+        "**Option B.** $\\dfrac{1 \\text{ min}}{60 \\text{ sec}} \\times \\dfrac{1 \\text{ hr}}{60 \\text{ min}}$. Multiplied with the starting seconds: $\\text{sec} \\times \\dfrac{\\text{min}}{\\text{sec}} \\times \\dfrac{\\text{hr}}{\\text{min}} = \\text{hr}$. ✓",
+        "**Option C.** $\\dfrac{1 \\text{ hr}}{3600 \\text{ sec}^2}$ — the denominator has $\\text{sec}^2$, which won't cancel cleanly with $\\text{sec}$. Wrong.",
+        "**Option D.** $\\dfrac{1 \\text{ min}}{60 \\text{ sec}} \\times \\dfrac{60 \\text{ min}}{1 \\text{ hr}}$. The min cancels, but ends in $\\dfrac{\\text{min}^2}{\\text{hr}}$ — also nonsense.",
+        "**Pattern lesson.** When chaining, each factor in the chain must cancel the unit introduced by the previous factor and bring you one step closer to your target unit."
+      ]
+    },
+    {
+      "id": "q8",
+      "type": "numeric",
+      "promptTex": "\\text{How many hours are in } 7200 \\text{ seconds}?",
+      "answer": 2,
+      "tolerance": 0.001,
+      "hints": [
+        "Chain two conversion factors: $\\dfrac{1 \\text{ min}}{60 \\text{ sec}}$ and $\\dfrac{1 \\text{ hr}}{60 \\text{ min}}$.",
+        "$\\dfrac{7200}{60 \\cdot 60} = ?$"
+      ],
+      "explanation": "$7200 \\,\\cancel{\\text{sec}} \\times \\dfrac{1 \\,\\cancel{\\text{min}}}{60 \\,\\cancel{\\text{sec}}} \\times \\dfrac{1 \\text{ hr}}{60 \\,\\cancel{\\text{min}}} = \\dfrac{7200}{3600} \\text{ hr} = 2 \\text{ hr}$.",
+      "difficulty": "medium",
+      "steps": [
+        "**Set up the chain.** Have seconds, want hours. Two conversion factors will bridge it: sec → min → hr.",
+        "**Arrange so units cancel.** Each factor's denominator must match the unit that needs to disappear. First factor: $\\dfrac{1 \\text{ min}}{60 \\text{ sec}}$ (sec cancels). Second factor: $\\dfrac{1 \\text{ hr}}{60 \\text{ min}}$ (min cancels).",
+        "**Multiply through.** $7200 \\times \\dfrac{1}{60} \\times \\dfrac{1}{60} = \\dfrac{7200}{3600} = 2$.",
+        "**Sanity check.** $2$ hours $\\times$ $3600$ sec/hr $= 7200$ sec. ✓"
+      ]
+    },
+    {
+      "id": "q9",
+      "type": "numeric",
+      "promptTex": "\\text{A car travels at } 72 \\text{ km/hr.} \\\\ \\text{What is its speed in m/s?}",
+      "answer": 20,
+      "tolerance": 0.01,
+      "hints": [
+        "Two conversions: km → m on the top, hr → s on the bottom.",
+        "$72 \\times \\dfrac{1000 \\text{ m}}{1 \\text{ km}} \\times \\dfrac{1 \\text{ hr}}{3600 \\text{ s}}$."
+      ],
+      "explanation": "$72\\,\\dfrac{\\cancel{\\text{km}}}{\\cancel{\\text{hr}}} \\times \\dfrac{1000 \\text{ m}}{1 \\,\\cancel{\\text{km}}} \\times \\dfrac{1 \\,\\cancel{\\text{hr}}}{3600 \\text{ s}} = \\dfrac{72 \\cdot 1000}{3600}\\,\\dfrac{\\text{m}}{\\text{s}} = 20 \\,\\text{m/s}$.",
+      "difficulty": "medium",
+      "steps": [
+        "**Recognize the type.** Compound unit (km/hr → m/s) requires two conversion factors — one for the top, one for the bottom.",
+        "**Cancel km.** The km is in the *top* of the original. To cancel, the conversion factor for km must have km in the *denominator*. $\\dfrac{1000 \\text{ m}}{1 \\text{ km}}$ does it.",
+        "**Cancel hr.** The hr is in the *bottom* of the original. To cancel, the conversion factor for time must have hr in the *numerator*. $\\dfrac{1 \\text{ hr}}{3600 \\text{ s}}$ does it.",
+        "**Multiply.** $\\dfrac{72 \\cdot 1000}{3600} = 20$. Units: $\\dfrac{\\text{m}}{\\text{s}}$.",
+        "**Pattern lesson.** Whenever you see X/Y units, expect *two* conversion factors — one to cancel X, one to cancel Y. Each one stacks independently."
+      ]
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "promptTex": "\\text{A flight travels } 4{,}500 \\text{ km.} \\\\ \\text{If the plane flies at } 900 \\text{ km/hr,} \\\\ \\text{how many MINUTES does the flight take?}",
+      "answer": 300,
+      "tolerance": 1,
+      "hints": [
+        "First find the time in hours: $\\text{time} = \\dfrac{\\text{distance}}{\\text{speed}}$.",
+        "Then convert hours to minutes by multiplying by $\\dfrac{60 \\text{ min}}{1 \\text{ hr}}$."
+      ],
+      "explanation": "Time in hours: $\\dfrac{4500 \\,\\cancel{\\text{km}}}{900 \\,\\cancel{\\text{km}}/\\text{hr}} = 5 \\text{ hr}$. Convert to minutes: $5 \\,\\cancel{\\text{hr}} \\times \\dfrac{60 \\text{ min}}{1 \\,\\cancel{\\text{hr}}} = 300 \\text{ min}$.",
+      "difficulty": "hard",
+      "steps": [
+        "**Set up.** Two-stage problem: first find time in hours, then convert to minutes.",
+        "**Stage 1 — time from distance & speed.** $\\text{time} = \\dfrac{\\text{distance}}{\\text{speed}} = \\dfrac{4500 \\text{ km}}{900 \\text{ km/hr}}$.",
+        "**Cancel units in stage 1.** $\\dfrac{\\text{km}}{\\text{km/hr}} = \\text{km} \\times \\dfrac{\\text{hr}}{\\text{km}} = \\text{hr}$. The km cancels — left with hours.",
+        "**Compute.** $4500/900 = 5$ hours.",
+        "**Stage 2 — convert to minutes.** $5 \\,\\cancel{\\text{hr}} \\times \\dfrac{60 \\text{ min}}{1 \\,\\cancel{\\text{hr}}} = 300$ min.",
+        "**Sanity check.** $300$ min $= 5$ hr. At $900$ km/hr for $5$ hr, distance is $4500$ km. ✓"
+      ]
+    },
+    {
+      "id": "q11",
+      "type": "numeric",
+      "promptTex": "\\text{If a runner can complete } 1 \\text{ mile in } 6 \\text{ minutes,} \\\\ \\text{what is her pace in MILES PER HOUR?}",
+      "answer": 10,
+      "tolerance": 0.01,
+      "hints": [
+        "Start by writing the pace as a fraction with units: $\\dfrac{1 \\text{ mile}}{6 \\text{ min}}$.",
+        "Now convert the 'minutes' on the bottom into 'hours' by multiplying by $\\dfrac{60 \\text{ min}}{1 \\text{ hr}}$."
+      ],
+      "explanation": "$\\dfrac{1 \\text{ mile}}{6 \\,\\cancel{\\text{min}}} \\times \\dfrac{60 \\,\\cancel{\\text{min}}}{1 \\text{ hr}} = \\dfrac{60}{6} \\,\\dfrac{\\text{mi}}{\\text{hr}} = 10 \\text{ mph}$.",
+      "difficulty": "medium",
+      "steps": [
+        "**Set up.** The pace is $\\dfrac{1 \\text{ mile}}{6 \\text{ min}}$. We want $\\dfrac{\\text{mile}}{\\text{hour}}$ — so we need to convert the *denominator* from minutes to hours.",
+        "**Cancel min from the bottom.** Multiply by $\\dfrac{60 \\text{ min}}{1 \\text{ hr}}$. The min cancels (one is on the bottom-bottom of a compound fraction, one is on the top of the new factor) and hr ends up on the bottom.",
+        "**Compute.** $\\dfrac{1 \\cdot 60}{6 \\cdot 1} = 10$ mph.",
+        "**Sanity check.** $10$ mph means each mile takes $1/10$ of an hour $= 6$ minutes. ✓"
+      ]
+    },
+    {
+      "id": "q12",
+      "type": "numeric",
+      "promptTex": "\\text{A water tap fills } 3 \\text{ liters per second.} \\\\ \\text{How many LITERS does it fill in } 1 \\text{ hour}?",
+      "answer": 10800,
+      "tolerance": 0,
+      "hints": [
+        "Rate $\\times$ time $=$ amount. But the units of time must match!",
+        "Convert $1$ hr to seconds first: $1 \\text{ hr} \\times \\dfrac{3600 \\text{ s}}{1 \\text{ hr}} = 3600 \\text{ s}$. Then multiply by the rate."
+      ],
+      "explanation": "$3 \\,\\dfrac{\\text{L}}{\\cancel{\\text{s}}} \\times 1 \\,\\cancel{\\text{hr}} \\times \\dfrac{3600 \\,\\cancel{\\text{s}}}{1 \\,\\cancel{\\text{hr}}} = 3 \\cdot 3600 = 10{,}800$ L. Or: in $1$ hour there are $3600$ seconds, each filling $3$ liters, so $3600 \\cdot 3 = 10{,}800$ L.",
+      "difficulty": "hard",
+      "steps": [
+        "**Recognize the type.** Rate problem where the rate's time unit (sec) doesn't match the question's time unit (hr).",
+        "**Strategy.** Write everything as a chain of multiplications-by-$1$ that cancel into the desired units (here, just liters — no time at the end).",
+        "**Setup.** $3 \\,\\dfrac{\\text{L}}{\\text{s}} \\times 1 \\text{ hr} \\times \\dfrac{3600 \\text{ s}}{1 \\text{ hr}}$. The $1$ hr cancels with the hr in the new conversion factor; the new sec cancels with the sec in the rate's denominator.",
+        "**Surviving units.** Only L remains. Good.",
+        "**Multiply.** $3 \\times 3600 = 10{,}800$ liters.",
+        "**Pattern lesson.** Whenever a rate is given in one time unit and the question asks in another, *don't try to convert the rate first* — just chain factors so the unwanted time unit cancels. Less error-prone."
+      ]
+    }
+  ]
+}
