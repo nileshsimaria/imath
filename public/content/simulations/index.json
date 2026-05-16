@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "simulations": [
+    {
+      "id": "monte-carlo-pi",
+      "title": "Estimating π with Monte Carlo",
+      "summary": "Throw random darts at a circle and watch the number π emerge out of pure chance.",
+      "tags": ["Monte Carlo", "Probability", "Geometry"]
+    }
+  ]
+}

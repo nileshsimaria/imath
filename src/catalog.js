@@ -81,6 +81,20 @@ export async function loadProof(id) {
   return res.json();
 }
 
+// Simulations — interactive "learn by running it" experiments. Same content
+// collection pattern as proofs: an index plus simulations/<id>/simulation.json.
+export async function loadSimulationIndex() {
+  const res = await fetch(`${BASE}content/simulations/index.json${V}`);
+  if (!res.ok) throw new Error(`Failed to load simulations index: ${res.status}`);
+  return res.json();
+}
+
+export async function loadSimulation(id) {
+  const res = await fetch(`${BASE}content/simulations/${id}/simulation.json${V}`);
+  if (!res.ok) throw new Error(`Simulation not found: ${id}`);
+  return res.json();
+}
+
 export async function loadBlogIndex() {
   const res = await fetch(`${BASE}content/blog/index.json${V}`);
   if (!res.ok) throw new Error(`Failed to load blog index: ${res.status}`);

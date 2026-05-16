@@ -56,6 +56,8 @@ import { mountDigitSum } from './digit-sum.js';
 import { mountOddSquares } from './odd-squares.js';
 import { mountCompoundGrowth } from './compound-growth.js';
 import { mountExponentBlocks } from './exponent-blocks.js';
+import { mountMonteCarloPi } from './monte-carlo-pi.js';
+import { mountCircleSquareArea } from './circle-square-area.js';
 
 const registry = new Map();
 registry.set('coordinate-plane', mountCoordinatePlane);
@@ -112,6 +114,8 @@ registry.set('digit-sum', mountDigitSum);
 registry.set('odd-squares', mountOddSquares);
 registry.set('compound-growth', mountCompoundGrowth);
 registry.set('exponent-blocks', mountExponentBlocks);
+registry.set('monte-carlo-pi', mountMonteCarloPi);
+registry.set('circle-square-area', mountCircleSquareArea);
 
 // Render any $...$ math left in widget DOM. Widgets historically build HTML
 // strings with raw "$x$" tokens that never reach KaTeX. Walk every text node

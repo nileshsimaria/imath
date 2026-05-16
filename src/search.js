@@ -5,7 +5,7 @@
 // Lesson entries are built synchronously; proofs and blogs are fetched and
 // appended a moment later (non-fatal if either fails to load).
 
-import { leafSubtopics, loadProofIndex, loadBlogIndex } from './catalog.js';
+import { leafSubtopics, loadProofIndex, loadBlogIndex, loadSimulationIndex } from './catalog.js';
 
 const RESULT_LIMIT = 8;
 
@@ -64,6 +64,18 @@ function buildProofEntries(proofIndex) {
   );
 }
 
+function buildSimulationEntries(simIndex) {
+  return (simIndex.simulations || []).map((s) =>
+    makeEntry({
+      kind: 'simulation',
+      href: `#/simulations/${s.id}`,
+      title: s.title,
+      ctx: 'Simulation',
+      keywords: `${s.summary || ''} ${(s.tags || []).join(' ')} simulation`,
+    }),
+  );
+}
+
 function buildBlogEntries(blogIndex) {
   return (blogIndex.posts || []).map((post) =>
     makeEntry({
@@ -116,7 +128,7 @@ function highlight(text, query) {
   return escapeHtml(text).replace(re, '<mark>$1</mark>');
 }
 
-const KIND_LABEL = { proof: 'Proof', blog: 'Blog' };
+const KIND_LABEL = { proof: 'Proof', blog: 'Blog', simulation: 'Sim' };
 
 function renderResults(box, results, query, activeIdx) {
   if (!results.length) {
@@ -170,6 +182,9 @@ export function setupSearch(catalog) {
     .catch(() => {});
   loadBlogIndex()
     .then((bi) => index.push(...buildBlogEntries(bi)))
+    .catch(() => {});
+  loadSimulationIndex()
+    .then((si) => index.push(...buildSimulationEntries(si)))
     .catch(() => {});
 
   document.addEventListener('input', (e) => {

@@ -1,0 +1,69 @@
+{
+  "title": "Estimating π with Monte Carlo",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### What is a Monte Carlo simulation?",
+        "Some questions are hard to answer with a neat formula, but easy to answer by **trying something at random, many times, and counting what happens**. That is the whole idea of a *Monte Carlo simulation*: use a flood of random samples to estimate an answer.",
+        "It is named after the famous casino in Monaco, because it leans on chance the way a casino does. Scientists invented it in the 1940s for hard physics problems, and today it is everywhere: finance, weather forecasting, biology, game AI, and computer graphics."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The idea: estimate π by throwing darts",
+        "Picture a square dartboard with a circle drawn inside it, just touching all four sides. Now throw darts at it **completely at random**, so every spot in the square is equally likely to be hit.",
+        "Some darts land *inside* the circle; some land in the *corners outside* it. Here is the key insight: the share of darts that land inside the circle should match the share of the **area** the circle takes up."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why that gives us π",
+        "The circle fits snugly inside the square, so its radius $r$ is exactly half the square's side. That single fact is all we need. Look at the picture:"
+      ]
+    },
+    { "type": "widget", "kind": "circle-square-area" },
+    {
+      "type": "text",
+      "md": [
+        "Random darts spread evenly across the **whole square**, so the share landing inside the circle matches the circle's share of the area: about $0.785$, which is exactly $\\pi/4$.",
+        "Now turn that around. If the inside-fraction equals $\\pi/4$, then multiplying it by $4$ gives $\\pi$:"
+      ]
+    },
+    { "type": "math", "tex": "\\pi \\approx 4 \\times \\frac{\\text{darts inside the circle}}{\\text{darts thrown in total}}" },
+    {
+      "type": "callout",
+      "title": "The recipe",
+      "body": "Throw random darts. Count how many land inside the circle. Multiply that fraction by $4$. The more darts you throw, the closer the result creeps to the real $\\pi = 3.14159\\ldots$"
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Run the simulation",
+        "Time to play. The controls under the dartboard put you in charge:",
+        "- **▶ Run** turns on a continuous stream of darts; press it again to pause.",
+        "- **+1, +100, +1000** throw an exact batch, so you can step through carefully.",
+        "- **↺ Reset** clears the board and starts fresh.",
+        "- **speed** sets how many darts fly per frame while running.",
+        "Green darts landed inside the circle; rose-coloured darts missed. The chart on the right tracks your π estimate after every batch."
+      ]
+    },
+    { "type": "widget", "kind": "monte-carlo-pi" },
+    {
+      "type": "text",
+      "md": [
+        "### What to watch for",
+        "- **Start slow.** Throw darts one at a time. With only a handful down, the estimate is wild and swings far from $\\pi$.",
+        "- **Then let it run.** As thousands of darts pile up, the estimate stops jumping and homes in on $3.14159\\ldots$ This is the *law of large numbers* in action: random noise averages out.",
+        "- **Convergence is slow.** Going from $100$ to $1000$ darts helps a lot, but $1000$ to $10{,}000$ helps less. Each extra correct digit needs roughly **100 times** more darts. Monte Carlo is simple and general, but it is not fast."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Why use a slow method?",
+      "body": "If Monte Carlo is slow, why bother? Because it barely cares how hard the problem is. The same throw-and-count trick estimates the area of *any* shape, the value of *any* awkward integral, or the risk inside a financial model, places where exact formulas may not exist at all. Estimating $\\pi$ is simply the friendliest place to meet the method."
+    }
+  ]
+}
