@@ -1,0 +1,117 @@
+{
+  "title": "The Laws of Exponents",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "An exponent is shorthand for repeated multiplication: $a^3$ just means $a \\times a \\times a$, three copies of $a$ multiplied together.",
+        "Every law of exponents flows from one simple picture: draw each power as a **row of factor blocks**, where the exponent is the block count. Learn to read that picture and all four laws become things you can simply *see*, not rules to memorize."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The four laws",
+      "body": "This proof derives every one from the block picture: the **product rule**, the **power rule**, the **quotient rule**, and the meaning of **zero and negative exponents**."
+    },
+
+    { "type": "text", "md": ["## 1. The Product Rule: aᵐ · aⁿ = aᵐ⁺ⁿ"] },
+    {
+      "type": "text",
+      "md": [
+        "$a^m$ is a row of $m$ blocks; $a^n$ is a row of $n$ blocks. Slide $m$ and $n$, then push the two rows together and count."
+      ]
+    },
+    { "type": "widget", "kind": "exponent-blocks", "config": { "mode": "product", "m": 3, "n": 2 } },
+    {
+      "type": "text",
+      "md": [
+        "Writing $a^m$ next to $a^n$ gives $m$ copies of $a$ followed by $n$ more, all multiplied. Count the merged row: $m + n$ blocks."
+      ]
+    },
+    { "type": "math", "tex": "a^m \\cdot a^n = \\underbrace{(a \\cdots a)}_{m}\\,\\underbrace{(a \\cdots a)}_{n} = a^{m+n}" },
+    {
+      "type": "text",
+      "md": [
+        "The rows only merge into one because every block is the same base $a$. A mismatched base like $a^2 \\cdot b^3$ will not combine: the blocks are different things and cannot be counted as one pile."
+      ]
+    },
+
+    { "type": "text", "md": ["## 2. The Power Rule: (aᵐ)ⁿ = aᵐⁿ"] },
+    {
+      "type": "text",
+      "md": [
+        "An outer exponent counts copies of whatever is inside the brackets. So $(a^m)^n$ means $n$ copies of $a^m$ multiplied together. Each $a^m$ is a row of $m$ blocks, so stacking $n$ of those rows builds a grid."
+      ]
+    },
+    { "type": "widget", "kind": "exponent-blocks", "config": { "mode": "power", "m": 3, "n": 2 } },
+    {
+      "type": "text",
+      "md": [
+        "A grid that is $n$ rows tall and $m$ blocks wide holds $m \\times n$ blocks. Every block is a factor of $a$:"
+      ]
+    },
+    { "type": "math", "tex": "(a^m)^n = a^{\\overbrace{m + m + \\cdots + m}^{n \\text{ rows}}} = a^{m \\times n} = a^{mn}" },
+    {
+      "type": "text",
+      "md": [
+        "This is exactly why the power rule and the product rule never collide: the product rule lays blocks in **one long row** (so you *add*), while the power rule stacks them in a **grid** (so you *multiply*)."
+      ]
+    },
+
+    { "type": "text", "md": ["## 3. The Quotient Rule: aᵐ / aⁿ = aᵐ⁻ⁿ"] },
+    {
+      "type": "text",
+      "md": [
+        "If multiplying powers adds exponents, dividing them should subtract. Dividing is cancelling: put $a^m$ on top and $a^n$ on the bottom, and each pair $\\frac{a}{a} = 1$ removes one block from the top and one from the bottom."
+      ]
+    },
+    { "type": "widget", "kind": "exponent-blocks", "config": { "mode": "quotient", "m": 5, "n": 2 } },
+    {
+      "type": "text",
+      "md": [
+        "Every block on the bottom cancels a block on the top. If the top started with $m$ blocks and $n$ of them cancel, then $m - n$ blocks survive:"
+      ]
+    },
+    { "type": "math", "tex": "\\frac{a^m}{a^n} = \\frac{\\overbrace{a \\cdots a}^{m}}{\\underbrace{a \\cdots a}_{n}} = \\underbrace{a \\cdots a}_{m-n} = a^{m-n}" },
+    {
+      "type": "text",
+      "md": [
+        "So far this assumed $m > n$, leaving blocks on top. But what about $a^3 / a^3$, where everything cancels, or $a^2 / a^5$, where the bottom outlasts the top? The subtraction still runs; it just produces $a^0$ or a negative exponent. Section 4 gives those a meaning."
+      ]
+    },
+
+    { "type": "text", "md": ["## 4. Zero & Negative Exponents: a⁰ = 1 and a⁻ⁿ = 1/aⁿ"] },
+    {
+      "type": "text",
+      "md": [
+        "\"Multiply $a$ by itself **zero** times\" is a meaningless instruction, so we cannot define $a^0$ directly. Instead we let the pattern decide.",
+        "Look at the ladder of powers from the top down. Going from $a^4$ to $a^3$ removes one factor of $a$, which means **dividing by $a$**. Every step down the ladder is a division by $a$."
+      ]
+    },
+    { "type": "widget", "kind": "exponent-blocks", "config": { "mode": "pattern", "a": 2 } },
+    {
+      "type": "text",
+      "md": [
+        "Nothing makes that rule stop at $a^1$. Take one more step down:"
+      ]
+    },
+    { "type": "math", "tex": "a^0 = \\frac{a^1}{a} = \\frac{a}{a} = 1" },
+    {
+      "type": "text",
+      "md": [
+        "So $a^0 = 1$ is forced by the pattern, not chosen. Keep stepping below zero, still dividing by $a$ each time:"
+      ]
+    },
+    { "type": "math", "tex": "a^{-1} = \\frac{a^0}{a} = \\frac{1}{a}, \\qquad a^{-2} = \\frac{a^{-1}}{a} = \\frac{1}{a^2}, \\qquad a^{-n} = \\frac{1}{a^n}" },
+    {
+      "type": "callout",
+      "title": "No more exceptions",
+      "body": "With $a^0$ and negative exponents defined this way, the quotient rule works for every pair of exponents: $\\dfrac{a^2}{a^5} = a^{2-5} = a^{-3} = \\dfrac{1}{a^3}$, exactly what cancelling the blocks gives. (All of this needs $a \\neq 0$, since dividing by zero is never allowed.)"
+    },
+    {
+      "type": "callout",
+      "title": "One picture, four laws",
+      "body": "Add the exponents, multiply them, subtract them, or run the pattern past zero: every law of exponents is the same row of factor blocks, counted a different way. $\\blacksquare$"
+    }
+  ]
+}

@@ -15,6 +15,31 @@ function escapeHtml(s) {
     .replace(/"/g, '&quot;');
 }
 
+// When a proof uses `##` section headings (rendered as <h3>), add a compact
+// "in this proof" nav above the body that scrolls to each section. Proofs
+// with fewer than two such headings get no nav.
+function addSectionNav(bodyEl) {
+  const headings = [...bodyEl.querySelectorAll('h3')];
+  if (headings.length < 2) return;
+  headings.forEach((h, i) => { h.id = `proof-sec-${i}`; });
+  const nav = document.createElement('nav');
+  nav.className = 'proof-toc';
+  nav.innerHTML = `
+    <span class="proof-toc-label">In this proof</span>
+    <ol class="proof-toc-list">
+      ${headings
+        .map((h, i) => `<li><a href="#" data-sec="${i}">${escapeHtml(h.textContent)}</a></li>`)
+        .join('')}
+    </ol>`;
+  bodyEl.parentNode.insertBefore(nav, bodyEl);
+  nav.addEventListener('click', (e) => {
+    const a = e.target.closest('[data-sec]');
+    if (!a) return;
+    e.preventDefault();
+    headings[Number(a.dataset.sec)].scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+}
+
 export async function renderProof(root, id) {
   let index = null;
   try {
@@ -64,6 +89,7 @@ export async function renderProof(root, id) {
   try {
     const proof = await loadProof(id);
     renderLessonBlocks(bodyEl, proof);
+    addSectionNav(bodyEl);
   } catch (err) {
     bodyEl.innerHTML = `<div class="block-callout"><strong>Error</strong>${escapeHtml(err.message)}</div>`;
   }
