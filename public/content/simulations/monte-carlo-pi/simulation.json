@@ -6,7 +6,7 @@
       "md": [
         "### What is a Monte Carlo simulation?",
         "Some questions are hard to answer with a neat formula, but easy to answer by **trying something at random, many times, and counting what happens**. That is the whole idea of a *Monte Carlo simulation*: use a flood of random samples to estimate an answer.",
-        "It is named after the famous casino in Monaco, because it leans on chance the way a casino does. Scientists invented it in the 1940s for hard physics problems, and today it is everywhere: finance, weather forecasting, biology, game AI, and computer graphics."
+        "Scientists first leaned on this trick in the 1940s, for problems far too tangled for ordinary maths. Today it turns up everywhere: finance, weather forecasting, biology, game AI, and computer graphics. (Its playful name has a good story, which we will get to at the end.)"
       ]
     },
     {
@@ -52,18 +52,32 @@
     },
     { "type": "widget", "kind": "monte-carlo-pi" },
     {
+      "type": "callout",
+      "title": "Try this first: throw a single dart",
+      "body": "Press the +1 dart button just once and look at the π estimate. It can only be one of two things: $4$ (if that one dart landed inside the circle) or $0$ (if it missed). Both are wildly far from $3.14159$.\nThat is the whole reason Monte Carlo needs *big* numbers. One dart tells you almost nothing, the same way flipping a coin once and getting heads does not prove the coin is two-headed. The real answer only steps out of the randomness once you have thrown thousands of darts."
+    },
+    {
       "type": "text",
       "md": [
         "### What to watch for",
-        "- **Start slow.** Throw darts one at a time. With only a handful down, the estimate is wild and swings far from $\\pi$.",
-        "- **Then let it run.** As thousands of darts pile up, the estimate stops jumping and homes in on $3.14159\\ldots$ This is the *law of large numbers* in action: random noise averages out.",
+        "- **Watch it settle.** With only a few dozen darts the estimate lurches around. Press *Run* and, as thousands pile up, the line on the chart stops jumping and homes in on $3.14159\\ldots$ This steady settling has a name: the *law of large numbers*. Random noise averages out.",
         "- **Convergence is slow.** Going from $100$ to $1000$ darts helps a lot, but $1000$ to $10{,}000$ helps less. Each extra correct digit needs roughly **100 times** more darts. Monte Carlo is simple and general, but it is not fast."
       ]
     },
     {
       "type": "callout",
       "title": "Why use a slow method?",
-      "body": "If Monte Carlo is slow, why bother? Because it barely cares how hard the problem is. The same throw-and-count trick estimates the area of *any* shape, the value of *any* awkward integral, or the risk inside a financial model, places where exact formulas may not exist at all. Estimating $\\pi$ is simply the friendliest place to meet the method."
+      "body": "If Monte Carlo is slow, why bother? Because it barely cares how hard the problem is. The same throw-and-count trick estimates the area of *any* shape, the value of *any* awkward integral, or the risk inside a financial model, places where exact formulas may not exist at all.\nThere is a second reason. Real life usually gives you only *one* run: one weather season, one market, one roll of the dice. A computer can replay thousands of those random runs in seconds and show you the full range of what *could* happen. Estimating $\\pi$ is simply the friendliest place to meet the method."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Where the name comes from",
+        "The method has a surprisingly playful name. **Monte Carlo** is a district of Monaco famous for its grand casinos, and the technique borrows that name because, just like a casino, it runs entirely on chance.",
+        "The story goes back to the 1940s. A mathematician named Stanislaw Ulam was recovering from an illness and passing the time playing solitaire. He started to wonder: what are the chances a game of solitaire actually works out? Calculating it with pure maths was a nightmare. Then he had a better idea, just *deal the cards many times over and count* how often it works.",
+        "He and the famous mathematician John von Neumann soon realised this simple counting trick could crack serious physics problems that no formula could touch. They needed a secret code name for the work, and a colleague suggested *Monte Carlo*, a nod to an uncle of Ulam's who loved to gamble there.",
+        "And here is the lovely twist. A casino uses the law of large numbers to slowly and reliably take money from its customers. A Monte Carlo simulation uses the *very same* law to slowly and reliably pull the truth out of randomness. Same mathematics, opposite purpose."
+      ]
     },
     {
       "type": "callout",
