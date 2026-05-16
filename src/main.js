@@ -9,6 +9,8 @@ import { renderCourse } from './pages/course.js';
 import { renderCoursePractice } from './pages/course-practice.js';
 import { renderLesson } from './pages/lesson.js';
 import { renderWidgets } from './pages/widgets.js';
+import { renderProofsIndex } from './pages/proofs.js';
+import { renderProof } from './pages/proof.js';
 import { renderBlogIndex } from './pages/blog.js';
 import { renderBlogPost } from './pages/blog-post.js';
 import { renderNotFound } from './pages/not-found.js';
@@ -22,6 +24,8 @@ async function boot() {
   const router = createRouter({
     '/': () => renderLanding(root, catalog),
     '/widgets': () => renderWidgets(root, catalog),
+    '/proofs': () => renderProofsIndex(root),
+    '/proofs/:id': ({ id }) => renderProof(root, id),
     '/blog': () => renderBlogIndex(root),
     '/blog/:slug': ({ slug }) => renderBlogPost(root, slug),
     '/:courseId': ({ courseId }) => renderCourse(root, catalog, courseId),

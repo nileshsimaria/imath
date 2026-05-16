@@ -1,0 +1,69 @@
+{
+  "title": "Why Negative × Negative = Positive",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "\"Two negatives make a positive\" is one of the first rules students are told to just *accept*. But it isn't a decree from nowhere. It is the **only** rule that lets arithmetic stay consistent. Break it, and ordinary algebra falls apart.",
+        "Here are two ways to see *why* it must be true."
+      ]
+    },
+    { "type": "callout", "title": "The claim", "body": "For any numbers $a$ and $b$, the product $(-a)(-b)$ equals $+ab$. In particular $(-1)(-1) = +1$." },
+    {
+      "type": "text",
+      "md": [
+        "### Proof 1 — Follow the pattern",
+        "Look at what happens when we multiply $-3$ by a column of *decreasing* numbers. Each time the second factor drops by $1$, the answer climbs by $3$:"
+      ]
+    },
+    { "type": "math", "tex": "\\begin{aligned} -3 \\times 3 &= -9 \\\\ -3 \\times 2 &= -6 \\\\ -3 \\times 1 &= -3 \\\\ -3 \\times 0 &= \\phantom{+}0 \\end{aligned}" },
+    {
+      "type": "text",
+      "md": [
+        "The answers go $-9, -6, -3, 0, \\ldots$ — a steady staircase climbing by $3$. To keep that staircase unbroken, the next lines are forced:"
+      ]
+    },
+    { "type": "math", "tex": "\\begin{aligned} -3 \\times (-1) &= +3 \\\\ -3 \\times (-2) &= +6 \\end{aligned}" },
+    {
+      "type": "text",
+      "md": [
+        "If $-3 \\times (-1)$ were anything other than $+3$, the pattern would suddenly jump — and a multiplication table with a hole in it isn't a usable number system."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Proof 2 — The distributive law forces it",
+        "The pattern is convincing, but here is an airtight version. We use just two facts everyone already accepts: anything times $0$ is $0$, and the **distributive law** $x(y+z) = xy + xz$.",
+        "Start from a true statement — $(-1)$ multiplied by $0$:"
+      ]
+    },
+    { "type": "math", "tex": "(-1)\\times 0 = 0" },
+    {
+      "type": "text",
+      "md": [
+        "Now rewrite that $0$ as $(-1) + 1$, and distribute:"
+      ]
+    },
+    { "type": "math", "tex": "(-1)\\big[(-1) + 1\\big] = 0 \\;\\Longrightarrow\\; (-1)(-1) + (-1)(1) = 0" },
+    {
+      "type": "text",
+      "md": [
+        "We know $(-1)(1) = -1$. Substitute that in:"
+      ]
+    },
+    { "type": "math", "tex": "(-1)(-1) + (-1) = 0" },
+    {
+      "type": "text",
+      "md": [
+        "So $(-1)(-1)$ is the number you add to $-1$ to get $0$. That number is $+1$ — there is no other choice."
+      ]
+    },
+    { "type": "math", "tex": "(-1)(-1) = +1 \\qquad\\blacksquare" },
+    {
+      "type": "callout",
+      "title": "The general rule",
+      "body": "Since $(-a)(-b) = (-1)(a)\\,(-1)(b) = (-1)(-1)\\,(ab) = (+1)(ab)$, every negative-times-negative collapses to $+ab$. The rule isn't arbitrary — it's the price of keeping the distributive law alive."
+    }
+  ]
+}

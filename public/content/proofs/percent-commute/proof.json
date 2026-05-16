@@ -1,0 +1,52 @@
+{
+  "title": "Why x% of y Equals y% of x",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Quick — what is $18\\%$ of $50$? That looks unpleasant. But $50\\%$ of $18$ is just *half of 18*, which is $9$.",
+        "And here's the secret: those two questions have the **same answer**. $18\\%$ of $50$ *is* $9$. You're allowed to swap the numbers whenever it makes the arithmetic easier."
+      ]
+    },
+    { "type": "callout", "title": "The claim", "body": "For any two numbers, $\\;x\\%\\text{ of }y = y\\%\\text{ of }x.$" },
+    {
+      "type": "text",
+      "md": [
+        "### The proof is one line of translation",
+        "The word **\"percent\"** literally means \"per hundred,\" and the word **\"of\"** means multiply. So translate each phrase straight into arithmetic.",
+        "$x\\%$ of $y$ means: take $x$ out of every $100$, then apply it to $y$:"
+      ]
+    },
+    { "type": "math", "tex": "x\\%\\text{ of }y = \\frac{x}{100}\\times y = \\frac{xy}{100}" },
+    {
+      "type": "text",
+      "md": [
+        "Now do the same for $y\\%$ of $x$:"
+      ]
+    },
+    { "type": "math", "tex": "y\\%\\text{ of }x = \\frac{y}{100}\\times x = \\frac{yx}{100}" },
+    {
+      "type": "text",
+      "md": [
+        "Both phrases collapsed to the **same expression** — because multiplication doesn't care about order ($xy = yx$). Two things equal to $\\dfrac{xy}{100}$ are equal to each other:"
+      ]
+    },
+    { "type": "math", "tex": "x\\%\\text{ of }y \\;=\\; \\frac{xy}{100} \\;=\\; y\\%\\text{ of }x \\qquad\\blacksquare" },
+    {
+      "type": "text",
+      "md": [
+        "On a $100$-square, \"$x\\%$ of $y$\" and \"$y\\%$ of $x$\" shade the *same rectangle* — one counts it by rows, the other by columns. Same shaded area, every time."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "percent-grid",
+      "config": { "initial": 18 }
+    },
+    {
+      "type": "callout",
+      "title": "Your new mental-math superpower",
+      "body": "Whenever a percent looks ugly, flip it. $4\\%$ of $75$? Swap to $75\\%$ of $4 = 3$. $12\\%$ of $25$? That's $25\\%$ of $12 = 3$. Pick whichever order your brain finds easy — the answer is identical."
+    }
+  ]
+}

@@ -2986,3 +2986,325 @@ main:has(.lesson-wide) { max-width: min(1500px, calc(100vw - 32px)); }
 .blog-post-meta-sep { color: var(--text-faint); }
 .blog-post-tags { margin: 4px 0 20px; }
 
+/* ── Proofs Library ─────────────────────────────────── */
+.proof-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+.proof-chip {
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+.proof-chip:hover { border-color: var(--border-strong); color: var(--text); }
+.proof-chip.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.proof-section { max-width: var(--max-w); margin: 0 auto; padding: 8px 24px 16px; }
+.proof-section-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 16px 0 12px;
+  letter-spacing: -0.01em;
+}
+.proof-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+.proof-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.12s ease, border-color 0.12s ease, transform 0.12s ease;
+}
+.proof-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-strong);
+  transform: translateY(-2px);
+}
+.proof-card-link { display: block; padding: 18px; height: 100%; }
+.proof-card-link:hover { text-decoration: none; }
+.proof-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.proof-card-claim { color: var(--text-muted); font-size: 15px; }
+.proof-card-title {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+.proof-card-summary {
+  margin: 0 0 12px;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.proof-card-foot { font-size: 12px; color: var(--text-faint); }
+.proof-empty {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 24px;
+  color: var(--text-muted);
+}
+
+/* Proof-type badges — one tint per category. */
+.proof-type-badge {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+.proof-type-contradiction { background: #fee2e2; color: #b91c1c; }
+.proof-type-visual        { background: #dcfce7; color: #15803d; }
+.proof-type-algebraic     { background: #eef2ff; color: #4338ca; }
+.proof-type-pattern       { background: #fef3c7; color: #b45309; }
+.proof-type-combinatorial { background: #f3e8ff; color: #7e22ce; }
+
+/* Single proof page */
+.proof-page-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 8px;
+  font-size: 13px;
+}
+.proof-page-meta a { color: var(--accent); }
+.proof-page-meta-sep { color: var(--text-faint); }
+.proof-prereqs {
+  font-size: 13px;
+  color: var(--text-muted);
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  margin: 4px 0 20px;
+}
+.proof-page-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* Lesson page: "Proofs" tab */
+.lesson-tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--border);
+  margin: 8px 0 20px;
+}
+.lesson-tab {
+  padding: 8px 16px;
+  border: none;
+  background: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+.lesson-tab:hover { color: var(--text); }
+.lesson-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+.lesson-tab-count {
+  display: inline-block;
+  min-width: 18px;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 11px;
+  text-align: center;
+}
+.proofs-panel-intro { font-size: 14px; color: var(--text-muted); margin: 0 0 16px; }
+
+/* ── staircase-sum widget ───────────────────────────── */
+.staircase-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 640px) {
+  .staircase-wrap { grid-template-columns: 1.3fr 1fr; }
+}
+.staircase-svg { width: 100%; height: auto; display: block; }
+.staircase-controls { display: flex; flex-direction: column; gap: 12px; justify-content: center; }
+.staircase-eq {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  text-align: center;
+}
+.staircase-row { display: flex; align-items: center; gap: 12px; }
+.staircase-row label { flex: 0 0 24px; font-weight: 600; }
+.staircase-row input[type="range"] { flex: 1; }
+.staircase-row .val { flex: 0 0 28px; font-weight: 700; color: var(--accent); }
+.staircase-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.staircase-key {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  vertical-align: -2px;
+  margin-right: 4px;
+}
+.staircase-helper { font-size: 13px; color: var(--text-muted); }
+
+/* ── digit-sum widget ───────────────────────────────── */
+.digitsum-wrap { display: flex; flex-direction: column; gap: 16px; }
+.digitsum-row { display: flex; align-items: center; gap: 10px; }
+.digitsum-row input {
+  width: 130px;
+  padding: 6px 10px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  font-size: 16px;
+}
+.digitsum-digits { display: flex; gap: 8px; flex-wrap: wrap; }
+.digitsum-cell { text-align: center; }
+.digitsum-box {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 700;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: var(--radius-sm);
+}
+.digitsum-place { font-size: 11px; color: var(--text-faint); margin-top: 4px; }
+.digitsum-split {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+.digitsum-pile {
+  flex: 1;
+  min-width: 150px;
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  text-align: center;
+}
+.digitsum-pile-nines { background: var(--success-soft); }
+.digitsum-pile-sum { background: var(--accent-soft); }
+.digitsum-pile-val { font-size: 24px; font-weight: 800; }
+.digitsum-pile-label { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+.digitsum-plus { font-size: 22px; font-weight: 700; color: var(--text-faint); }
+.digitsum-eq { font-size: 16px; }
+.digitsum-verdict p { margin: 0 0 8px; font-size: 14px; }
+.digitsum-badges { display: flex; gap: 10px; flex-wrap: wrap; }
+.digitsum-badge {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.digitsum-badge.is-yes { background: var(--success-soft); color: #15803d; }
+.digitsum-badge.is-no { background: var(--error-soft); color: #b91c1c; }
+
+/* ── odd-squares widget ─────────────────────────────── */
+.oddsq-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 640px) {
+  .oddsq-wrap { grid-template-columns: 1fr 1fr; }
+}
+.oddsq-svg { width: 100%; height: auto; display: block; max-width: 360px; margin: 0 auto; }
+.oddsq-controls { display: flex; flex-direction: column; gap: 12px; justify-content: center; }
+.oddsq-eq {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  text-align: center;
+}
+.oddsq-row { display: flex; align-items: center; gap: 12px; }
+.oddsq-row label { flex: 0 0 24px; font-weight: 600; }
+.oddsq-row input[type="range"] { flex: 1; }
+.oddsq-row .val { flex: 0 0 28px; font-weight: 700; color: var(--accent); }
+.oddsq-layers { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; }
+.oddsq-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 26px;
+  height: 26px;
+  padding: 0 6px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+}
+.oddsq-plus { color: var(--text-faint); font-weight: 700; }
+.oddsq-helper { font-size: 13px; color: var(--text-muted); }
+
+/* ── compound-growth widget ─────────────────────────── */
+.cg-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 640px) {
+  .cg-wrap { grid-template-columns: 1.4fr 1fr; }
+}
+.cg-svg { width: 100%; height: auto; display: block; }
+.cg-controls { display: flex; flex-direction: column; gap: 12px; justify-content: center; }
+.cg-eq {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.cg-row { display: flex; align-items: center; gap: 12px; }
+.cg-row label { flex: 0 0 56px; font-weight: 600; }
+.cg-row input[type="range"] { flex: 1; }
+.cg-row .val { flex: 0 0 38px; font-weight: 700; color: var(--accent); }
+.cg-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.cg-key {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  vertical-align: -2px;
+  margin-right: 4px;
+}
+

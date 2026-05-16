@@ -1,0 +1,64 @@
+{
+  "title": "Which Fractions Have Terminating Decimals",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Convert some fractions to decimals and a mystery appears:",
+        "- $\\frac{1}{8} = 0.125$ — stops.",
+        "- $\\frac{1}{3} = 0.333\\ldots$ — runs forever.",
+        "- $\\frac{1}{20} = 0.05$ — stops.",
+        "- $\\frac{1}{6} = 0.1666\\ldots$ — runs forever.",
+        "What decides it? Not the size of the fraction. The answer is hidden in the **prime factors of the denominator**."
+      ]
+    },
+    { "type": "callout", "title": "The claim", "body": "A fraction in lowest terms has a **terminating** decimal exactly when its denominator's only prime factors are $2$ and $5$ — that is, $n = 2^a 5^b$." },
+    {
+      "type": "text",
+      "md": [
+        "### The one idea: a terminating decimal *is* a fraction over a power of 10",
+        "What does \"$0.125$\" really mean? It means $\\dfrac{125}{1000}$. Every terminating decimal is just a fraction whose denominator is a **power of $10$**. So the real question is:",
+        "*Which fractions can be rewritten with a denominator like $10$, $100$, $1000$, …?*"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The secret of powers of 10",
+        "Factor a power of $10$:"
+      ]
+    },
+    { "type": "math", "tex": "10^k = (2 \\times 5)^k = 2^k \\cdot 5^k" },
+    {
+      "type": "text",
+      "md": [
+        "A power of $10$ is built from **only the primes $2$ and $5$** — in equal amounts. That single fact powers both directions of the proof."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Direction 1 — if the denominator is $2^a 5^b$, the decimal terminates",
+        "Say $n = 2^a 5^b$. Whichever exponent is smaller, multiply top and bottom by enough $2$s or $5$s to even them up. Now $n$ becomes $2^k 5^k = 10^k$ — a power of $10$ — so the fraction is a terminating decimal. Try it with the factor tree below ($40 = 2^3 \\cdot 5$):"
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "factor-tree",
+      "config": { "mode": "single", "n": 40 }
+    },
+    { "type": "math", "tex": "\\frac{1}{40} = \\frac{1}{2^3 \\cdot 5} = \\frac{1 \\times 5^2}{2^3 \\cdot 5 \\times 5^2} = \\frac{25}{2^3 5^3} = \\frac{25}{1000} = 0.025" },
+    {
+      "type": "text",
+      "md": [
+        "### Direction 2 — if the decimal terminates, the denominator must be $2^a 5^b$",
+        "Suppose the fraction equals some $\\dfrac{m}{10^k}$. Then the original denominator $n$ has to divide $10^k = 2^k 5^k$. A divisor of $2^k 5^k$ can only be made of $2$s and $5$s — there is nowhere else for its prime factors to come from. So $n = 2^a 5^b$."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Mystery solved",
+      "body": "$8 = 2^3$ and $20 = 2^2 \\cdot 5$ — only $2$s and $5$s, so they terminate. But $3$ and $6 = 2 \\times 3$ smuggle in a factor of $3$, which no power of $10$ can ever match — so those decimals repeat forever. $\\blacksquare$"
+    }
+  ]
+}

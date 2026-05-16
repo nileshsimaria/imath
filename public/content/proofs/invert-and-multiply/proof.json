@@ -1,0 +1,60 @@
+{
+  "title": "Why You Flip the Second Fraction to Divide",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "To divide fractions, students learn a chant: **keep, change, flip**. Keep the first, change $\\div$ to $\\times$, flip the second.",
+        "$$\\frac{a}{b}\\div\\frac{c}{d} = \\frac{a}{b}\\times\\frac{d}{c}$$",
+        "It works — but why would *flipping* a fraction have anything to do with dividing? Here are two answers."
+      ]
+    },
+    { "type": "callout", "title": "The claim", "body": "Dividing by $\\dfrac{c}{d}$ gives the same result as multiplying by its reciprocal $\\dfrac{d}{c}$." },
+    {
+      "type": "text",
+      "md": [
+        "### Proof 1 — \"Dividing\" means \"how many fit?\"",
+        "Ask a concrete question: how many $\\frac{1}{2}$s fit inside $3$? Answer: $6$. So $3 \\div \\frac{1}{2} = 6$ — and notice $6 = 3 \\times 2$. Dividing by $\\frac{1}{2}$ *multiplied* by $2$.",
+        "Why? Each whole contains $2$ halves, so $3$ wholes contain $3 \\times 2$ of them. Dividing by $\\frac{1}{d}$ always multiplies by $d$. And dividing by $\\frac{c}{d}$ means the pieces are $c$ times bigger, so $c$ times *fewer* fit — divide by $c$. Put together: multiply by $d$, divide by $c$ — that is multiplying by $\\frac{d}{c}$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Proof 2 — Clear the denominator",
+        "Here is the airtight version. Write the division as one stacked fraction:"
+      ]
+    },
+    { "type": "math", "tex": "\\frac{a}{b}\\div\\frac{c}{d} = \\dfrac{\\;\\dfrac{a}{b}\\;}{\\;\\dfrac{c}{d}\\;}" },
+    {
+      "type": "text",
+      "md": [
+        "We're allowed to multiply the top and bottom of a fraction by the **same thing** without changing its value. Choose that thing cleverly: multiply by $\\dfrac{d}{c}$ — the reciprocal of the bottom."
+      ]
+    },
+    { "type": "math", "tex": "\\dfrac{\\;\\dfrac{a}{b}\\;}{\\;\\dfrac{c}{d}\\;} = \\dfrac{\\;\\dfrac{a}{b}\\times\\dfrac{d}{c}\\;}{\\;\\dfrac{c}{d}\\times\\dfrac{d}{c}\\;}" },
+    {
+      "type": "text",
+      "md": [
+        "The bottom was *designed* to collapse: any fraction times its reciprocal is $1$, since $\\dfrac{c}{d}\\times\\dfrac{d}{c} = \\dfrac{cd}{dc} = 1$. With a denominator of $1$, only the top survives:"
+      ]
+    },
+    { "type": "math", "tex": "\\frac{a}{b}\\div\\frac{c}{d} = \\frac{a}{b}\\times\\frac{d}{c} \\qquad\\blacksquare" },
+    {
+      "type": "text",
+      "md": [
+        "\"Flip and multiply\" is just the slickest way to make the dividing fraction turn into $1$. The widget below shows the *multiplication* this turns into — the easy part."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "fraction-area",
+      "config": { "n1": 2, "d1": 3, "n2": 4, "d2": 3 }
+    },
+    {
+      "type": "callout",
+      "title": "The takeaway",
+      "body": "The reciprocal isn't pulled from nowhere — it's the exact number that turns the divisor into $1$, and dividing by $1$ does nothing. That's the whole trick."
+    }
+  ]
+}

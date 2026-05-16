@@ -1,0 +1,61 @@
+{
+  "title": "Where the Compound Interest Formula Comes From",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Put $P$ dollars in an account that earns rate $r$ each year. After $n$ years the balance is:",
+        "$$A = P(1+r)^n$$",
+        "Why a *power*? Powers usually come from repeated multiplication — so somewhere, something must be multiplying over and over. Let's find it."
+      ]
+    },
+    { "type": "callout", "title": "The claim", "body": "With principal $P$ and interest rate $r$ compounded each period, the balance after $n$ periods is $\\;A = P(1+r)^n.$" },
+    {
+      "type": "text",
+      "md": [
+        "### Step 1 — What one period does",
+        "In one period the account earns interest $r \\times (\\text{current balance})$. Starting from $P$, the new balance is the old balance **plus** the interest:"
+      ]
+    },
+    { "type": "math", "tex": "P + Pr = P(1 + r)" },
+    {
+      "type": "text",
+      "md": [
+        "So one period doesn't *add* a fixed amount — it **multiplies the balance by $(1+r)$**. That single factor is the engine of the whole formula."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Step 2 — Do it again, and again",
+        "Here's the crucial point: in period 2, the interest is charged on the *new, larger* balance — not the original $P$. So we multiply by $(1+r)$ **again**:"
+      ]
+    },
+    { "type": "math", "tex": "\\begin{aligned} \\text{start:} \\quad & P \\\\ \\text{after 1 period:} \\quad & P(1+r) \\\\ \\text{after 2 periods:} \\quad & P(1+r)(1+r) = P(1+r)^2 \\\\ \\text{after 3 periods:} \\quad & P(1+r)^3 \\end{aligned}" },
+    {
+      "type": "text",
+      "md": [
+        "Every period stamps on one more factor of $(1+r)$. After $n$ periods, $n$ of them have piled up:"
+      ]
+    },
+    { "type": "math", "tex": "A = P(1+r)^n \\qquad\\blacksquare" },
+    {
+      "type": "text",
+      "md": [
+        "### Compound vs. simple: why the gap explodes",
+        "**Simple** interest always charges $r$ on the *original* $P$ — a fixed $Pr$ added each period. That's repeated *adding*, so it grows in a straight line: $A = P(1 + rn)$.",
+        "**Compound** interest charges $r$ on the *current* balance — repeated *multiplying* — so it curves upward. The difference is \"interest earning interest.\" Slide the controls and watch the two pull apart:"
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "compound-growth",
+      "config": { "principal": 100, "rate": 8, "periods": 12 }
+    },
+    {
+      "type": "callout",
+      "title": "The takeaway",
+      "body": "Adding a fixed amount gives a line; multiplying by a fixed factor gives a power. Compound interest is exponential growth — and that one word is why starting to save early matters so much."
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "title": "Why 0.999… Equals Exactly 1",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Almost everyone's first reaction is the same: \"$0.999\\ldots$ is *just below* $1$ — it never quite gets there.\"",
+        "It feels true. But it's wrong. The number $0.999\\ldots$ (the $9$s repeating **forever**) is not *close* to $1$ — it **is** $1$. Same number, two spellings. Here are three independent proofs."
+      ]
+    },
+    { "type": "callout", "title": "The claim", "body": "$0.\\overline{9} = 1$, where the bar means the digit $9$ repeats without end." },
+    {
+      "type": "text",
+      "md": [
+        "### Proof 1 — The algebra trick",
+        "Give the mystery number a name, $x$, and multiply it by $10$. Multiplying by $10$ just shifts the decimal point one place:"
+      ]
+    },
+    { "type": "math", "tex": "\\begin{aligned} x &= 0.9999\\ldots \\\\ 10x &= 9.9999\\ldots \\end{aligned}" },
+    {
+      "type": "text",
+      "md": [
+        "Now **subtract** the first line from the second. The infinite tail of $9$s is *identical* in both, so it cancels completely:"
+      ]
+    },
+    { "type": "math", "tex": "10x - x = 9.9999\\ldots - 0.9999\\ldots = 9" },
+    { "type": "math", "tex": "9x = 9 \\quad\\Longrightarrow\\quad x = 1" },
+    {
+      "type": "text",
+      "md": [
+        "The number we called $0.999\\ldots$ turned out to be $1$ all along."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Proof 2 — The thirds argument",
+        "You already accept this one fact from long division:"
+      ]
+    },
+    { "type": "math", "tex": "\\frac{1}{3} = 0.3333\\ldots" },
+    {
+      "type": "text",
+      "md": [
+        "Multiply both sides by $3$. The left side is easy. On the right, every $3$ becomes a $9$:"
+      ]
+    },
+    { "type": "math", "tex": "3 \\times \\frac{1}{3} = 1 \\qquad\\text{and}\\qquad 3 \\times 0.3333\\ldots = 0.9999\\ldots" },
+    {
+      "type": "text",
+      "md": [
+        "Two expressions equal to the same thing are equal to each other — so $0.999\\ldots = 1$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Proof 3 — There is no room left",
+        "If $0.999\\ldots$ and $1$ were *different* numbers, there would have to be another number strictly between them — you can always find a number between any two different numbers (their average, for one).",
+        "So ask: what number is bigger than $0.999\\ldots$ but smaller than $1$? Any candidate you write down with finitely many digits gets overtaken by the $9$s. **There is no gap to fill.** No number sits between them — because they are the same number.",
+        "Slide the marker right up against $1$ below: the decimal $0.9$, then $0.99$, then $0.999\\ldots$ — each step closes the gap, and the limit of that process *is* $1$."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "number-line",
+      "config": { "mode": "decimal-marker", "min": 0, "max": 1, "initial": 0.9, "step": 0.01 }
+    },
+    {
+      "type": "callout",
+      "title": "The takeaway",
+      "body": "$0.999\\ldots$ isn't a number *approaching* $1$ — there's no motion, no \"never quite.\" The infinite decimal is a finished object, and that object equals $1$. $\\blacksquare$"
+    }
+  ]
+}

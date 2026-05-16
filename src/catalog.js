@@ -66,6 +66,21 @@ export async function loadQuiz(path) {
   return res.json();
 }
 
+// Proofs are their own content collection (not nested under a course/subtopic)
+// so a single proof can relate to several subtopics across courses. The index
+// carries metadata; each proof's blocks live in proofs/<id>/proof.json.
+export async function loadProofIndex() {
+  const res = await fetch(`${BASE}content/proofs/index.json${V}`);
+  if (!res.ok) throw new Error(`Failed to load proofs index: ${res.status}`);
+  return res.json();
+}
+
+export async function loadProof(id) {
+  const res = await fetch(`${BASE}content/proofs/${id}/proof.json${V}`);
+  if (!res.ok) throw new Error(`Proof not found: ${id}`);
+  return res.json();
+}
+
 export async function loadBlogIndex() {
   const res = await fetch(`${BASE}content/blog/index.json${V}`);
   if (!res.ok) throw new Error(`Failed to load blog index: ${res.status}`);

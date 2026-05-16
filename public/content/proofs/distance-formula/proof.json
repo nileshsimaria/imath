@@ -1,0 +1,61 @@
+{
+  "title": "Where the Distance Formula Comes From",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "The distance between two points $(x_1, y_1)$ and $(x_2, y_2)$ has a formula that looks intimidating:",
+        "$$d = \\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$$",
+        "But there is nothing new to learn here. This formula is the **Pythagorean theorem** — $a^2 + b^2 = c^2$ — with coordinates plugged in."
+      ]
+    },
+    { "type": "callout", "title": "The claim", "body": "The straight-line distance between $(x_1,y_1)$ and $(x_2,y_2)$ is $\\;d = \\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}.$" },
+    {
+      "type": "text",
+      "md": [
+        "### Step 1 — Hide a right triangle in the picture",
+        "Drag the two points below and turn on the rise/run triangle. From any two points, drop one **horizontal** segment and one **vertical** segment. They always meet at a right angle — and the line joining your two points is the **hypotenuse**."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "coordinate-plane",
+      "config": { "mode": "two-points", "pointA": [1, 1], "pointB": [5, 4], "showRiseRun": true }
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Step 2 — Measure the two legs",
+        "How long is the **horizontal** leg? It only depends on how far apart the $x$-coordinates are:"
+      ]
+    },
+    { "type": "math", "tex": "\\text{horizontal leg} = x_2 - x_1" },
+    {
+      "type": "text",
+      "md": [
+        "And the **vertical** leg depends only on the $y$-coordinates:"
+      ]
+    },
+    { "type": "math", "tex": "\\text{vertical leg} = y_2 - y_1" },
+    {
+      "type": "text",
+      "md": [
+        "### Step 3 — Apply the Pythagorean theorem",
+        "The distance $d$ is the hypotenuse. Pythagoras says hypotenuse² = leg² + leg²:"
+      ]
+    },
+    { "type": "math", "tex": "d^2 = (x_2-x_1)^2 + (y_2-y_1)^2" },
+    {
+      "type": "text",
+      "md": [
+        "Take the square root of both sides — and since a distance can't be negative, we keep the positive root:"
+      ]
+    },
+    { "type": "math", "tex": "d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2} \\qquad\\blacksquare" },
+    {
+      "type": "callout",
+      "title": "Why the order of subtraction doesn't matter",
+      "body": "What if you compute $x_1 - x_2$ instead of $x_2 - x_1$? You'd get the opposite sign — but the formula **squares** each difference, and squaring erases the sign. $(3-7)^2 = (-4)^2 = 16 = (7-3)^2$. The leg lengths come out right either way."
+    }
+  ]
+}

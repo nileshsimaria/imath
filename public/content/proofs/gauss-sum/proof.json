@@ -1,0 +1,59 @@
+{
+  "title": "Adding 1 + 2 + 3 + … + n in One Step",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "There's a famous story: a teacher, hoping for a quiet hour, told the class to add up every number from $1$ to $100$. Within seconds a young boy — Carl Friedrich Gauss — wrote a single number on his slate: **5050**.",
+        "He hadn't added $100$ numbers. He'd spotted a pattern. Here's the pattern, and the picture that proves it."
+      ]
+    },
+    { "type": "callout", "title": "The claim", "body": "The sum of the first $n$ whole numbers is $\\;1+2+3+\\cdots+n = \\dfrac{n(n+1)}{2}.$" },
+    {
+      "type": "text",
+      "md": [
+        "### Proof 1 — Fold the list in half",
+        "Write the sum forwards, and underneath it write the *same* sum backwards. Call the sum $S$:"
+      ]
+    },
+    { "type": "math", "tex": "\\begin{aligned} S &= 1 + 2 + 3 + \\cdots + n \\\\ S &= n + (n\\!-\\!1) + (n\\!-\\!2) + \\cdots + 1 \\end{aligned}" },
+    {
+      "type": "text",
+      "md": [
+        "Now add the two rows **column by column**. The first column gives $1 + n$. The second gives $2 + (n-1) = n+1$. The third gives $3 + (n-2) = n+1$. *Every* column adds to the same total, $n+1$:"
+      ]
+    },
+    { "type": "math", "tex": "2S = \\underbrace{(n+1) + (n+1) + \\cdots + (n+1)}_{n \\text{ columns}} = n(n+1)" },
+    {
+      "type": "text",
+      "md": [
+        "So $2S = n(n+1)$, and dividing by $2$ gives the formula."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Proof 2 — The picture",
+        "Stack the numbers as a **staircase**: a column of height $1$, then $2$, then $3$, up to $n$. The number of squares in the staircase is exactly $1+2+\\cdots+n = S$.",
+        "Take a second, identical staircase, rotate it $180°$, and slot it on top. The two staircases interlock perfectly into a solid **rectangle** — $n$ wide and $(n+1)$ tall. Drag the slider and watch them fit:"
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "staircase-sum",
+      "config": { "n": 6 }
+    },
+    {
+      "type": "text",
+      "md": [
+        "The rectangle holds $n(n+1)$ squares. It's made of *two* equal staircases, so one staircase is half of it:"
+      ]
+    },
+    { "type": "math", "tex": "1 + 2 + \\cdots + n = \\frac{n(n+1)}{2} \\qquad\\blacksquare" },
+    {
+      "type": "callout",
+      "title": "Back to Gauss",
+      "body": "For $1$ to $100$: $\\;\\dfrac{100 \\times 101}{2} = \\dfrac{10100}{2} = 5050.$ One multiplication, one halving — exactly what the boy did in his head."
+    }
+  ]
+}

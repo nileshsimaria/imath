@@ -1,0 +1,67 @@
+{
+  "title": "The Digit-Sum Test for 3 and 9",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Here's a trick that looks like magic. Take any number — say $\\,738$. Add its digits: $7 + 3 + 8 = 18$. Since $18$ is divisible by $9$, so is $738$. (Check: $738 = 9 \\times 82$.)",
+        "It works every time, for $3$ as well as $9$. Try a few numbers in the explorer, then read why it can't fail."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "digit-sum",
+      "config": { "number": 738 }
+    },
+    { "type": "callout", "title": "The claim", "body": "A whole number is divisible by $9$ exactly when its **digit sum** is divisible by $9$ — and the same holds for $3$." },
+    {
+      "type": "text",
+      "md": [
+        "### The one fact that powers everything",
+        "Look at the building blocks of place value — $10$, $100$, $1000$ — and notice each is just **one more than a string of 9s**:"
+      ]
+    },
+    { "type": "math", "tex": "10 = 9 + 1, \\qquad 100 = 99 + 1, \\qquad 1000 = 999 + 1" },
+    {
+      "type": "text",
+      "md": [
+        "And $9$, $99$, $999$ are all divisible by $9$ (and by $3$). That's the whole secret."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Taking a number apart",
+        "Write a number using place value. Take $738$:"
+      ]
+    },
+    { "type": "math", "tex": "738 = 7\\times 100 + 3\\times 10 + 8\\times 1" },
+    {
+      "type": "text",
+      "md": [
+        "Now swap each power of $10$ for its \"$9$s plus $1$\" form:"
+      ]
+    },
+    { "type": "math", "tex": "738 = 7\\times(99 + 1) + 3\\times(9 + 1) + 8" },
+    {
+      "type": "text",
+      "md": [
+        "Multiply out and **sort the pieces into two piles** — the parts with $99$ or $9$ in them, and the leftover $+1$s:"
+      ]
+    },
+    { "type": "math", "tex": "738 = \\underbrace{(7\\times 99 + 3\\times 9)}_{\\text{divisible by }9} + \\underbrace{(7 + 3 + 8)}_{\\text{the digit sum}}" },
+    {
+      "type": "text",
+      "md": [
+        "The first pile is divisible by $9$ no matter what the digits are — it's built entirely from $9$s. So whether the **whole number** is divisible by $9$ depends *only* on the second pile: the digit sum.",
+        "If the digit sum is a multiple of $9$, then $738$ = (multiple of $9$) + (multiple of $9$) = a multiple of $9$. If it isn't, the leftover stops the whole number from being divisible. That's the test."
+      ]
+    },
+    { "type": "math", "tex": "9 \\mid n \\iff 9 \\mid (\\text{sum of digits of } n) \\qquad\\blacksquare" },
+    {
+      "type": "callout",
+      "title": "Why 3 comes along for free",
+      "body": "Every number in the first pile — $9$, $99$, $999$ — is also divisible by $3$. So the identical argument works with $3$ in place of $9$. That's why the digit-sum test handles **both** divisors at once. (It does *not* work for $7$ — because $10$ is not $7+1$.)"
+    }
+  ]
+}

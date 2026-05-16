@@ -1,0 +1,72 @@
+{
+  "title": "The Square Root of 2 is Irrational",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Some numbers are **rational** — they can be written as a fraction $\\frac{p}{q}$ of two whole numbers. Examples: $\\frac{3}{4}$, $7 = \\frac{7}{1}$, even $0.25 = \\frac{1}{4}$.",
+        "The ancient Greeks assumed *every* number worked this way. Then they met $\\sqrt{2}$ — the length of the diagonal of a unit square — and it broke their world. This proof shows why."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The claim",
+      "body": "There is **no** fraction $\\frac{p}{q}$ of whole numbers whose square is $2$. We say $\\sqrt{2}$ is *irrational*."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The strategy: proof by contradiction",
+        "We can't check every fraction — there are infinitely many. So instead we *assume the opposite* of what we want, and follow the logic until it collapses into something impossible. If the assumption forces a contradiction, the assumption must have been false.",
+        "**Step 1 — Assume $\\sqrt{2}$ *is* rational.** Then we can write it as a fraction. And we can always reduce a fraction to **lowest terms** — so assume $p$ and $q$ share no common factor. In particular, $p$ and $q$ are *not both even* (or we could cancel a 2)."
+      ]
+    },
+    { "type": "math", "tex": "\\sqrt{2} = \\frac{p}{q}, \\qquad p, q \\text{ share no common factor}" },
+    {
+      "type": "text",
+      "md": [
+        "**Step 2 — Square both sides** and clear the denominator:"
+      ]
+    },
+    { "type": "math", "tex": "2 = \\frac{p^2}{q^2} \\quad\\Longrightarrow\\quad p^2 = 2q^2" },
+    {
+      "type": "text",
+      "md": [
+        "**Step 3 — So $p^2$ is even.** It equals $2$ times something. But here is the key fact about even and odd numbers:",
+        "- odd × odd = odd  (e.g. $3 \\times 5 = 15$)",
+        "- so if $p$ were **odd**, then $p^2$ would be **odd**.",
+        "Since $p^2$ is even, $p$ itself must be **even**. Write $p = 2k$."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "**Step 4 — Substitute $p = 2k$** back into $p^2 = 2q^2$:"
+      ]
+    },
+    { "type": "math", "tex": "(2k)^2 = 2q^2 \\;\\Longrightarrow\\; 4k^2 = 2q^2 \\;\\Longrightarrow\\; q^2 = 2k^2" },
+    {
+      "type": "text",
+      "md": [
+        "**Step 5 — So $q^2$ is even too** — which by the same reasoning as Step 3 means **$q$ is even**."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The contradiction",
+      "body": "We just proved $p$ is even **and** $q$ is even. But in Step 1 we said they share no common factor! Both being even means both are divisible by $2$. That is impossible — the assumption has destroyed itself."
+    },
+    {
+      "type": "text",
+      "md": [
+        "Since assuming \"$\\sqrt{2}$ is rational\" leads to an impossibility, that assumption is **false**. Therefore:"
+      ]
+    },
+    { "type": "math", "tex": "\\sqrt{2}\\ \\text{is irrational.}\\qquad\\blacksquare" },
+    {
+      "type": "callout",
+      "title": "Why this proof matters",
+      "body": "The same argument works for $\\sqrt{3}$, $\\sqrt{5}$, $\\sqrt{6}$ — any whole number that isn't a perfect square. It was one of the first times humans proved something *cannot* exist, using nothing but logic."
+    }
+  ]
+}

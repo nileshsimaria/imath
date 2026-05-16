@@ -1,0 +1,62 @@
+{
+  "title": "Why GCD × LCM = the Product",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Take two numbers, say $12$ and $18$. Their greatest common divisor is $\\gcd(12,18) = 6$. Their least common multiple is $\\operatorname{lcm}(12,18) = 36$.",
+        "Now multiply those two results: $6 \\times 36 = 216$. And the two original numbers? $12 \\times 18 = 216$. **Same number.** This works for *every* pair — here's why."
+      ]
+    },
+    { "type": "callout", "title": "The claim", "body": "For any two positive whole numbers, $\\;\\gcd(a,b)\\cdot\\operatorname{lcm}(a,b) = a\\cdot b.$" },
+    {
+      "type": "text",
+      "md": [
+        "### The key idea: look at one prime at a time",
+        "Every whole number breaks into prime factors. Explore the factor trees of $12$ and $18$:"
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "factor-tree",
+      "config": { "mode": "compare", "nums": [12, 18] }
+    },
+    {
+      "type": "text",
+      "md": [
+        "Written with exponents:"
+      ]
+    },
+    { "type": "math", "tex": "12 = 2^2 \\cdot 3^1, \\qquad 18 = 2^1 \\cdot 3^2" },
+    {
+      "type": "text",
+      "md": [
+        "Here's how GCD and LCM are *built* from these — prime by prime:",
+        "- the **GCD** takes the **smaller** exponent of each prime (the most you can share),",
+        "- the **LCM** takes the **larger** exponent of each prime (the least that covers both)."
+      ]
+    },
+    { "type": "math", "tex": "\\gcd = 2^{\\min(2,1)}\\,3^{\\min(1,2)} = 2^1 3^1 = 6, \\qquad \\operatorname{lcm} = 2^{\\max(2,1)}\\,3^{\\max(1,2)} = 2^2 3^2 = 36" },
+    {
+      "type": "text",
+      "md": [
+        "### The one fact that finishes it",
+        "Look at any single prime, with exponents $x$ and $y$ in the two numbers. The GCD uses $\\min(x,y)$ and the LCM uses $\\max(x,y)$. But for *any* two numbers:"
+      ]
+    },
+    { "type": "math", "tex": "\\min(x,y) + \\max(x,y) = x + y" },
+    {
+      "type": "text",
+      "md": [
+        "(One of them is the smaller, the other the larger — together they're just the two values, in some order.)",
+        "When you **multiply** $\\gcd \\times \\operatorname{lcm}$, the exponents of each prime **add**. So each prime ends up with exponent $\\min + \\max = x + y$ — which is exactly the exponent that prime has in $a \\times b$."
+      ]
+    },
+    { "type": "math", "tex": "\\gcd(a,b)\\cdot\\operatorname{lcm}(a,b) = \\prod_{\\text{primes}} p^{\\,\\min + \\max} = \\prod_{\\text{primes}} p^{\\,x+y} = a\\cdot b \\qquad\\blacksquare" },
+    {
+      "type": "callout",
+      "title": "Why this is useful",
+      "body": "It gives a shortcut: once you know the GCD (easy to find with the Euclidean algorithm), the LCM is free — $\\operatorname{lcm}(a,b) = \\dfrac{a\\,b}{\\gcd(a,b)}$. No need to list multiples at all."
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "title": "Where the Adding-Fractions Formula Comes From",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "Many students memorize a formula for adding fractions:",
+        "$$\\frac{a}{b}+\\frac{c}{d} = \\frac{ad+bc}{bd}$$",
+        "It looks like a magic spell — multiply *this* by *that*, add, put it all over $bd$. But it isn't magic. It's the only thing that *could* happen once you insist the two fractions be cut into matching pieces."
+      ]
+    },
+    { "type": "callout", "title": "The claim", "body": "For any fractions, $\\;\\dfrac{a}{b}+\\dfrac{c}{d} = \\dfrac{ad+bc}{bd}.$" },
+    {
+      "type": "text",
+      "md": [
+        "### Step 1 — You can't add unlike pieces",
+        "$\\frac{1}{2}$ and $\\frac{1}{3}$ are pieces of **different sizes**. Adding their numerators ($1 + 1$) would be nonsense — like saying \"one slice plus one slice\" when the slices aren't the same. First, both fractions must be re-cut into pieces of *one common size*."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Step 2 — A common size that always works: $bd$",
+        "Cut every $b$-th into $d$ smaller pieces, and every $d$-th into $b$ smaller pieces. Now both are measured in **$bd$-ths**. Using equivalent fractions (multiply top and bottom by the same number — the value doesn't change):"
+      ]
+    },
+    { "type": "math", "tex": "\\frac{a}{b} = \\frac{a \\times d}{b \\times d} = \\frac{ad}{bd}, \\qquad \\frac{c}{d} = \\frac{c \\times b}{d \\times b} = \\frac{bc}{bd}" },
+    {
+      "type": "text",
+      "md": [
+        "### Step 3 — Now the pieces match, so just count them",
+        "Both fractions are now made of $bd$-ths. One contributes $ad$ of those pieces, the other contributes $bc$. Adding is now plain counting:"
+      ]
+    },
+    { "type": "math", "tex": "\\frac{a}{b}+\\frac{c}{d} = \\frac{ad}{bd}+\\frac{bc}{bd} = \\frac{ad+bc}{bd} \\qquad\\blacksquare" },
+    {
+      "type": "text",
+      "md": [
+        "The \"formula\" was never a separate rule — it's just *find a common denominator, then count*. The picture below does exactly this: it re-slices both fractions into a shared grid so the pieces line up."
+      ]
+    },
+    {
+      "type": "widget",
+      "kind": "fraction-bars",
+      "config": { "mode": "add-fractions", "n1": 1, "d1": 2, "n2": 1, "d2": 3 }
+    },
+    {
+      "type": "callout",
+      "title": "A note on the LCM",
+      "body": "$bd$ always works, but it isn't always the *smallest* common denominator. For $\\frac{1}{4}+\\frac{1}{6}$, the formula gives $24$ths, but $12$ths (the LCM) is tidier. Same answer either way — using the LCM just saves you a final simplification."
+    }
+  ]
+}

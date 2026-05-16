@@ -51,6 +51,10 @@ import { mountTimeDerivatives } from './time-derivatives.js';
 import { mountOsculatingCircle } from './osculating-circle.js';
 import { mountDatasetSummary } from './dataset-summary.js';
 import { mountHistogram } from './histogram.js';
+import { mountStaircaseSum } from './staircase-sum.js';
+import { mountDigitSum } from './digit-sum.js';
+import { mountOddSquares } from './odd-squares.js';
+import { mountCompoundGrowth } from './compound-growth.js';
 
 const registry = new Map();
 registry.set('coordinate-plane', mountCoordinatePlane);
@@ -102,6 +106,10 @@ registry.set('time-derivatives', mountTimeDerivatives);
 registry.set('osculating-circle', mountOsculatingCircle);
 registry.set('dataset-summary', mountDatasetSummary);
 registry.set('histogram', mountHistogram);
+registry.set('staircase-sum', mountStaircaseSum);
+registry.set('digit-sum', mountDigitSum);
+registry.set('odd-squares', mountOddSquares);
+registry.set('compound-growth', mountCompoundGrowth);
 
 // Render any $...$ math left in widget DOM. Widgets historically build HTML
 // strings with raw "$x$" tokens that never reach KaTeX. Walk every text node
