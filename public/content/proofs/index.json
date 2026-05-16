@@ -223,6 +223,54 @@
       "summary": "Every conversion factor secretly equals the number 1, which is why converting units never changes the amount.",
       "prerequisites": ["Ratios", "Multiplying by 1"],
       "relatedSubtopics": ["pre-algebra/ratios-proportions/unit-conversion"]
+    },
+    {
+      "id": "product-rule",
+      "title": "Why aᵐ · aⁿ = aᵐ⁺ⁿ",
+      "course": "algebra-1",
+      "courseTitle": "Algebra 1",
+      "topic": "Exponents",
+      "proofType": "visual",
+      "claim": "a^m \\cdot a^n = a^{m+n}",
+      "summary": "Multiplying powers adds the exponents. Just line up the factor blocks and count.",
+      "prerequisites": ["Exponents as repeated multiplication"],
+      "relatedSubtopics": ["algebra-1/exponents/product-and-power-rules"]
+    },
+    {
+      "id": "power-rule",
+      "title": "Why (aᵐ)ⁿ = aᵐⁿ",
+      "course": "algebra-1",
+      "courseTitle": "Algebra 1",
+      "topic": "Exponents",
+      "proofType": "visual",
+      "claim": "(a^m)^n = a^{mn}",
+      "summary": "A power of a power multiplies the exponents. Stack the factor blocks into a grid.",
+      "prerequisites": ["Exponents as repeated multiplication"],
+      "relatedSubtopics": ["algebra-1/exponents/product-and-power-rules"]
+    },
+    {
+      "id": "quotient-rule",
+      "title": "Why aᵐ / aⁿ = aᵐ⁻ⁿ",
+      "course": "algebra-1",
+      "courseTitle": "Algebra 1",
+      "topic": "Exponents",
+      "proofType": "visual",
+      "claim": "\\dfrac{a^m}{a^n} = a^{m-n}",
+      "summary": "Dividing powers subtracts the exponents, because cancelling removes factor blocks in pairs.",
+      "prerequisites": ["The product rule", "Cancelling fractions"],
+      "relatedSubtopics": ["algebra-1/exponents/quotient-and-zero"]
+    },
+    {
+      "id": "zero-and-negative-exponents",
+      "title": "Why a⁰ = 1 and a⁻ⁿ = 1/aⁿ",
+      "course": "algebra-1",
+      "courseTitle": "Algebra 1",
+      "topic": "Exponents",
+      "proofType": "pattern",
+      "claim": "a^0 = 1,\\quad a^{-n} = \\tfrac{1}{a^n}",
+      "summary": "What does a zero or negative exponent even mean? Let the ladder of powers decide.",
+      "prerequisites": ["The quotient rule"],
+      "relatedSubtopics": ["algebra-1/exponents/quotient-and-zero", "algebra-1/exponents/negative-exponents"]
     }
   ]
 }
