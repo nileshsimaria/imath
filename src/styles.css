@@ -506,6 +506,41 @@ main:has(.lesson-wide) { max-width: min(1500px, calc(100vw - 32px)); }
 .block-callout p { margin: 0 0 12px; }
 .block-callout p:last-child { margin-bottom: 0; }
 
+/* "spotlight" callout variant — for the catchy, zoom-out idea on a page.
+   Gradient background + serif font set it apart from ordinary callouts. */
+.block-callout-spotlight {
+  border: 1px solid #c7d2fe;
+  border-left: 4px solid var(--accent);
+  background: linear-gradient(135deg, #eef2ff 0%, #ecfeff 55%, #fdf4ff 100%);
+  border-radius: var(--radius-sm);
+  padding: 22px 26px;
+  margin: 28px 0;
+  font-family: var(--font-serif);
+  font-size: 16.5px;
+  line-height: 1.72;
+  color: var(--text);
+}
+/* reset inline bold inside the body (the base rule makes every strong a block) */
+.block-callout-spotlight strong {
+  display: inline;
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: inherit;
+  color: inherit;
+  font-weight: 700;
+}
+/* the title is the one strong that is a direct child of the callout */
+.block-callout-spotlight > strong {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.block-callout-spotlight p { margin: 0 0 12px; }
+.block-callout-spotlight ul { margin: 10px 0; padding-left: 22px; }
+.block-callout-spotlight li { margin: 5px 0; }
+
 /* Markdown tables in lesson text and callouts. */
 .md-table {
   border-collapse: collapse;

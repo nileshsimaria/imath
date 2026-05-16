@@ -126,7 +126,11 @@ function renderCalloutBlock(block) {
   const bodyHtml = body.includes('\n')
     ? renderTextLines(body.split('\n'))
     : renderInline(body);
-  return `<div class="block-callout">${title}${bodyHtml}</div>`;
+  // Optional `variant` (e.g. "spotlight") adds a styling class for callouts
+  // that should stand out from the ordinary ones.
+  const variant = block.variant ? String(block.variant).replace(/[^a-z-]/gi, '') : '';
+  const cls = variant ? `block-callout block-callout-${variant}` : 'block-callout';
+  return `<div class="${cls}">${title}${bodyHtml}</div>`;
 }
 
 function renderWidgetBlock(_block, idx) {

@@ -64,6 +64,12 @@
       "type": "callout",
       "title": "Why use a slow method?",
       "body": "If Monte Carlo is slow, why bother? Because it barely cares how hard the problem is. The same throw-and-count trick estimates the area of *any* shape, the value of *any* awkward integral, or the risk inside a financial model, places where exact formulas may not exist at all. Estimating $\\pi$ is simply the friendliest place to meet the method."
+    },
+    {
+      "type": "callout",
+      "variant": "spotlight",
+      "title": "🤖 The bigger picture: this same idea powers AI",
+      "body": "You just used the **big idea** behind a huge slice of modern computing: when a problem is too tangled for a neat formula, do not solve it, *sample* it. Run many random trials and let the data hand you the answer.\nMachine learning runs on the very same instinct, just pointed the other way. Monte Carlo already **knows the rules** (here, the circle equation) and simulates *forward* to estimate a number. Machine learning starts with only **examples** (say, photos labelled cat or dog) and works *backward* to discover the rule itself.\nBetter still, the two team up. Monte Carlo is one of the engines humming inside today's AI:\n- training a neural network feeds it **random batches** of data,\n- the AlphaGo program beat world champions using **Monte Carlo Tree Search**, playing out thousands of random futures,\n- AI image generators build pictures by **sampling random noise**, over and over.\nThrow enough random darts, in other words, and you can estimate π, recognise a face, or master a board game."
     }
   ]
 }
