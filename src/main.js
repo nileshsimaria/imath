@@ -11,6 +11,7 @@ import { renderLesson } from './pages/lesson.js';
 import { renderWidgets } from './pages/widgets.js';
 import { renderProofsIndex } from './pages/proofs.js';
 import { renderProof } from './pages/proof.js';
+import { renderContact } from './pages/contact.js';
 import { renderBlogIndex } from './pages/blog.js';
 import { renderBlogPost } from './pages/blog-post.js';
 import { renderNotFound } from './pages/not-found.js';
@@ -27,6 +28,7 @@ async function boot() {
     '/proofs': () => renderProofsIndex(root),
     '/proofs/:id': ({ id }) => renderProof(root, id),
     '/blog': () => renderBlogIndex(root),
+    '/contact': () => renderContact(root),
     '/blog/:slug': ({ slug }) => renderBlogPost(root, slug),
     '/:courseId': ({ courseId }) => renderCourse(root, catalog, courseId),
     '/:courseId/practice': ({ courseId }) => renderCoursePractice(root, catalog, courseId),
