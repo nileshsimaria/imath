@@ -3061,10 +3061,115 @@ main:has(.lesson-wide) { max-width: min(1500px, calc(100vw - 32px)); }
 }
 .proof-card-foot { font-size: 12px; color: var(--text-faint); }
 .proof-empty {
+  padding: 24px 0;
+  color: var(--text-muted);
+}
+
+/* Proofs Library — two-pane directory */
+.proofs-layout {
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 24px;
+  padding: 8px 24px 32px;
+  display: grid;
+  grid-template-columns: 224px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+.proofs-rail {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: sticky;
+  top: 16px;
+}
+.proofs-rail-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  background: none;
+  font-size: 14px;
   color: var(--text-muted);
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+.proofs-rail-item:hover { background: var(--bg-soft); color: var(--text); }
+.proofs-rail-item.active {
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 600;
+}
+.proofs-rail-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.proofs-rail-count {
+  flex: 0 0 auto;
+  min-width: 22px;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: var(--border);
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+}
+.proofs-rail-item.active .proofs-rail-count { background: var(--accent); color: #fff; }
+.proofs-course-head h2 {
+  margin: 0 0 14px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.proofs-course-count { color: var(--text-faint); font-weight: 500; font-size: 15px; }
+.proof-topic { margin-top: 18px; }
+.proof-topic-title {
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-faint);
+}
+.proof-rows { list-style: none; margin: 0; padding: 0; }
+.proof-row { border-bottom: 1px solid var(--border); }
+.proof-row:last-child { border-bottom: none; }
+.proof-row-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 8px;
+  border-radius: var(--radius-sm);
+}
+.proof-row-link:hover { background: var(--bg-soft); text-decoration: none; }
+.proof-row-text { flex: 1; min-width: 0; }
+.proof-row-title {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+.proof-row-summary {
+  display: block;
+  font-size: 12px;
+  color: var(--text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@media (max-width: 720px) {
+  .proofs-layout { grid-template-columns: 1fr; gap: 12px; }
+  .proofs-rail {
+    position: static;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 8px;
+    padding-bottom: 4px;
+  }
+  .proofs-rail-item { width: auto; flex: 0 0 auto; }
+  .proof-row-summary { white-space: normal; }
 }
 
 /* Proof-type badges — one tint per category. */

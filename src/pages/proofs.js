@@ -1,8 +1,7 @@
-// /proofs — the Proofs Library. Browse every proof/derivation in the site,
-// filterable by proof type. Each proof is its own destination (no quiz);
-// cards link to /proofs/:id.
+// /proofs — the Proofs Library, a two-pane directory. Left: a course rail
+// with proof counts. Right: compact proof rows for the selected course,
+// grouped by topic, with a proof-type filter. Built to scale to 150+ proofs.
 
-import katex from 'katex';
 import { renderHeader } from '../components/header.js';
 import { loadProofIndex } from '../catalog.js';
 
@@ -12,26 +11,6 @@ function escapeHtml(s) {
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
-}
-
-const tex = (s) => {
-  try { return katex.renderToString(s, { throwOnError: false }); }
-  catch { return escapeHtml(s); }
-};
-
-function proofCard(p) {
-  return `
-    <li class="proof-card" data-proof-type="${escapeHtml(p.proofType)}">
-      <a class="proof-card-link" href="#/proofs/${encodeURIComponent(p.id)}">
-        <div class="proof-card-top">
-          <span class="proof-type-badge proof-type-${escapeHtml(p.proofType)}" data-type-label></span>
-          <span class="proof-card-claim">${tex(p.claim || '')}</span>
-        </div>
-        <h3 class="proof-card-title">${escapeHtml(p.title)}</h3>
-        <p class="proof-card-summary">${escapeHtml(p.summary || '')}</p>
-        <div class="proof-card-foot">${escapeHtml(p.courseTitle || p.course)} · ${escapeHtml(p.topic || '')}</div>
-      </a>
-    </li>`;
 }
 
 export async function renderProofsIndex(root) {
@@ -57,29 +36,26 @@ export async function renderProofsIndex(root) {
   const proofs = index.proofs || [];
   const typeNames = index.proofTypes || {};
 
-  // Filter chips — "All" plus every proof type that actually appears.
-  const usedTypes = [...new Set(proofs.map((p) => p.proofType))];
-  const chips = ['all', ...usedTypes]
-    .map((t, i) => {
-      const label = t === 'all' ? 'All proofs' : (typeNames[t] || t);
-      return `<button class="proof-chip ${i === 0 ? 'active' : ''}" data-filter="${escapeHtml(t)}">${escapeHtml(label)}</button>`;
-    })
-    .join('');
-
-  // Group cards by course, preserving index order.
-  const byCourse = new Map();
+  // Group proofs by course, preserving first-seen order.
+  const courses = new Map(); // courseId -> { title, items: [] }
   for (const p of proofs) {
-    if (!byCourse.has(p.course)) byCourse.set(p.course, { title: p.courseTitle || p.course, items: [] });
-    byCourse.get(p.course).items.push(p);
+    if (!courses.has(p.course)) {
+      courses.set(p.course, { id: p.course, title: p.courseTitle || p.course, items: [] });
+    }
+    courses.get(p.course).items.push(p);
   }
-  let sections = '';
-  for (const { title, items } of byCourse.values()) {
-    sections += `
-      <section class="proof-section">
-        <h2 class="proof-section-title">${escapeHtml(title)}</h2>
-        <ul class="proof-grid">${items.map(proofCard).join('')}</ul>
-      </section>`;
-  }
+  const courseList = [...courses.values()];
+
+  // Left rail.
+  const railHtml = courseList
+    .map(
+      (c, i) => `
+      <button class="proofs-rail-item ${i === 0 ? 'active' : ''}" data-course="${escapeHtml(c.id)}">
+        <span class="proofs-rail-name">${escapeHtml(c.title)}</span>
+        <span class="proofs-rail-count">${c.items.length}</span>
+      </button>`,
+    )
+    .join('');
 
   root.innerHTML = `
     ${renderHeader({})}
@@ -87,38 +63,98 @@ export async function renderProofsIndex(root) {
       <section class="widgets-hero">
         <h1>Proofs</h1>
         <p class="widgets-hero-sub">${proofs.length} visual, interactive walkthroughs of <em>why</em> the formulas are true — the most rewarding part of math. No quizzes here; just explore.</p>
-        <div class="proof-filter">${chips}</div>
       </section>
-      ${sections}
-      <section class="proof-empty" data-proof-empty hidden>
-        <p>No proofs of that type yet — more on the way.</p>
-      </section>
+      <div class="proofs-layout">
+        <nav class="proofs-rail" aria-label="Courses" data-proofs-rail>${railHtml}</nav>
+        <div class="proofs-main" data-proofs-main></div>
+      </div>
     </main>
   `;
 
-  // Fill in type badge labels from the index.
-  for (const el of root.querySelectorAll('[data-type-label]')) {
-    const card = el.closest('[data-proof-type]');
-    const t = card?.dataset.proofType;
-    el.textContent = typeNames[t] || t || '';
+  const mainEl = root.querySelector('[data-proofs-main]');
+
+  // Render one course's proofs into the right pane, grouped by topic.
+  function renderCourse(courseId) {
+    const course = courses.get(courseId);
+    if (!course) return;
+
+    // Group this course's proofs by topic (first-seen order).
+    const topics = new Map();
+    for (const p of course.items) {
+      const t = p.topic || 'Other';
+      if (!topics.has(t)) topics.set(t, []);
+      topics.get(t).push(p);
+    }
+
+    // Type-filter chips: "All" + every type used in this course.
+    const usedTypes = [...new Set(course.items.map((p) => p.proofType))];
+    const chips = ['all', ...usedTypes]
+      .map(
+        (t, i) =>
+          `<button class="proof-chip ${i === 0 ? 'active' : ''}" data-filter="${escapeHtml(t)}">${escapeHtml(t === 'all' ? 'All' : typeNames[t] || t)}</button>`,
+      )
+      .join('');
+
+    let topicsHtml = '';
+    for (const [topicName, items] of topics) {
+      const rows = items
+        .map(
+          (p) => `
+          <li class="proof-row" data-proof-type="${escapeHtml(p.proofType)}">
+            <a class="proof-row-link" href="#/proofs/${encodeURIComponent(p.id)}">
+              <span class="proof-row-text">
+                <span class="proof-row-title">${escapeHtml(p.title)}</span>
+                <span class="proof-row-summary">${escapeHtml(p.summary || '')}</span>
+              </span>
+              <span class="proof-type-badge proof-type-${escapeHtml(p.proofType)}">${escapeHtml(typeNames[p.proofType] || p.proofType)}</span>
+            </a>
+          </li>`,
+        )
+        .join('');
+      topicsHtml += `
+        <section class="proof-topic">
+          <h3 class="proof-topic-title">${escapeHtml(topicName)}</h3>
+          <ul class="proof-rows">${rows}</ul>
+        </section>`;
+    }
+
+    mainEl.innerHTML = `
+      <div class="proofs-course-head">
+        <h2>${escapeHtml(course.title)} <span class="proofs-course-count">· ${course.items.length} proof${course.items.length === 1 ? '' : 's'}</span></h2>
+      </div>
+      <div class="proof-filter">${chips}</div>
+      ${topicsHtml}
+      <p class="proof-empty" data-proof-empty hidden>No proofs of that type in this course yet.</p>
+    `;
+
+    // Wire the type filter for this course.
+    const empty = mainEl.querySelector('[data-proof-empty]');
+    for (const btn of mainEl.querySelectorAll('.proof-chip')) {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+        mainEl.querySelectorAll('.proof-chip').forEach((b) => b.classList.toggle('active', b === btn));
+        let visible = 0;
+        for (const row of mainEl.querySelectorAll('.proof-row')) {
+          const show = filter === 'all' || row.dataset.proofType === filter;
+          row.hidden = !show;
+          if (show) visible++;
+        }
+        for (const sec of mainEl.querySelectorAll('.proof-topic')) {
+          sec.hidden = ![...sec.querySelectorAll('.proof-row')].some((r) => !r.hidden);
+        }
+        empty.hidden = visible > 0;
+      });
+    }
   }
 
-  // Client-side filtering.
-  const empty = root.querySelector('[data-proof-empty]');
-  for (const btn of root.querySelectorAll('.proof-chip')) {
+  // Rail selection.
+  for (const btn of root.querySelectorAll('.proofs-rail-item')) {
     btn.addEventListener('click', () => {
-      const filter = btn.dataset.filter;
-      root.querySelectorAll('.proof-chip').forEach((b) => b.classList.toggle('active', b === btn));
-      let visible = 0;
-      for (const card of root.querySelectorAll('.proof-card')) {
-        const show = filter === 'all' || card.dataset.proofType === filter;
-        card.hidden = !show;
-        if (show) visible++;
-      }
-      for (const sec of root.querySelectorAll('.proof-section')) {
-        sec.hidden = ![...sec.querySelectorAll('.proof-card')].some((c) => !c.hidden);
-      }
-      empty.hidden = visible > 0;
+      root.querySelectorAll('.proofs-rail-item').forEach((b) => b.classList.toggle('active', b === btn));
+      renderCourse(btn.dataset.course);
+      mainEl.scrollIntoView({ block: 'nearest' });
     });
   }
+
+  if (courseList.length) renderCourse(courseList[0].id);
 }
