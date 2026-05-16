@@ -39,8 +39,8 @@ export function mountCompoundGrowth(target, userConfig = {}) {
           <span class="val" data-cg-periodsval>${state.periods}</span>
         </div>
         <div class="cg-legend">
-          <span><span class="cg-key" style="background:${COLORS.simple}"></span> simple — adds a fixed amount (a straight line)</span>
-          <span><span class="cg-key" style="background:${COLORS.compound}"></span> compound — multiplies by $(1+r)$ (a curve)</span>
+          <span><span class="cg-key" style="background:${COLORS.simple}"></span> simple: adds a fixed amount (a straight line)</span>
+          <span><span class="cg-key" style="background:${COLORS.compound}"></span> compound: multiplies by $(1+r)$ (a curve)</span>
         </div>
       </div>
     </div>

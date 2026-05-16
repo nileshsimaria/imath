@@ -36,7 +36,7 @@ export function mountStaircaseSum(target, userConfig = {}) {
         </div>
         <div class="staircase-legend">
           <span><span class="staircase-key" style="background:${COLORS.stair}"></span> the staircase: $1+2+\\cdots+n$</span>
-          <span><span class="staircase-key" style="background:${COLORS.mirror}"></span> a rotated copy — same number of squares</span>
+          <span><span class="staircase-key" style="background:${COLORS.mirror}"></span> a rotated copy with the same number of squares</span>
         </div>
         <div class="staircase-helper">Together the two staircases tile a solid $n \\times (n{+}1)$ rectangle, so one staircase is half of it.</div>
       </div>

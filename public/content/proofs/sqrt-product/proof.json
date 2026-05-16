@@ -5,7 +5,7 @@
       "type": "text",
       "md": [
         "To simplify a surd like $\\sqrt{72}$, you split it: $\\sqrt{72} = \\sqrt{36 \\times 2} = \\sqrt{36}\\,\\sqrt{2} = 6\\sqrt{2}$.",
-        "That splitting step relies on a rule — $\\sqrt{ab} = \\sqrt{a}\\,\\sqrt{b}$. Where does it come from, and is it *always* safe to use?"
+        "That splitting step relies on a rule, $\\sqrt{ab} = \\sqrt{a}\\,\\sqrt{b}$. Where does it come from, and is it *always* safe to use?"
       ]
     },
     { "type": "callout", "title": "The claim", "body": "For any two numbers $a, b \\ge 0$,  $\\;\\sqrt{ab} = \\sqrt{a}\\,\\sqrt{b}.$" },
@@ -20,14 +20,14 @@
       "type": "text",
       "md": [
         "### The proof: square the right-hand side",
-        "Take the candidate $\\sqrt{a}\\,\\sqrt{b}$ and square it. The key fact is that squaring a product squares each factor — $(xy)^2 = x^2 y^2$:"
+        "Take the candidate $\\sqrt{a}\\,\\sqrt{b}$ and square it. The key fact is that squaring a product squares each factor, $(xy)^2 = x^2 y^2$:"
       ]
     },
     { "type": "math", "tex": "\\big(\\sqrt{a}\\,\\sqrt{b}\\big)^2 = \\big(\\sqrt{a}\\big)^2 \\cdot \\big(\\sqrt{b}\\big)^2" },
     {
       "type": "text",
       "md": [
-        "But $\\big(\\sqrt{a}\\big)^2 = a$ and $\\big(\\sqrt{b}\\big)^2 = b$ — that's exactly what a square root *is*. So:"
+        "But $\\big(\\sqrt{a}\\big)^2 = a$ and $\\big(\\sqrt{b}\\big)^2 = b$, that's exactly what a square root *is*. So:"
       ]
     },
     { "type": "math", "tex": "\\big(\\sqrt{a}\\,\\sqrt{b}\\big)^2 = a \\cdot b" },
@@ -35,14 +35,14 @@
       "type": "text",
       "md": [
         "So $\\sqrt{a}\\,\\sqrt{b}$ is a number whose square is $ab$. It is also **non-negative**, because $\\sqrt{a}$ and $\\sqrt{b}$ are each non-negative and a product of non-negatives is non-negative.",
-        "A non-negative number that squares to $ab$ — that is the definition of $\\sqrt{ab}$. There is only one such number, so the two must be equal:"
+        "A non-negative number that squares to $ab$, that is the definition of $\\sqrt{ab}$. There is only one such number, so the two must be equal:"
       ]
     },
     { "type": "math", "tex": "\\sqrt{ab} = \\sqrt{a}\\,\\sqrt{b} \\qquad\\blacksquare" },
     {
       "type": "callout",
       "title": "The condition that's easy to forget",
-      "body": "The proof needed $a, b \\ge 0$ — twice. Drop it and the rule breaks: $\\sqrt{(-1)(-1)} = \\sqrt{1} = 1$, but $\\sqrt{-1}\\,\\sqrt{-1}$ is not a real number at all. The split is only valid for non-negative numbers."
+      "body": "The proof needed $a, b \\ge 0$, twice. Drop it and the rule breaks: $\\sqrt{(-1)(-1)} = \\sqrt{1} = 1$, but $\\sqrt{-1}\\,\\sqrt{-1}$ is not a real number at all. The split is only valid for non-negative numbers."
     }
   ]
 }

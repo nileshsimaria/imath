@@ -4,7 +4,7 @@
     {
       "type": "text",
       "md": [
-        "Faced with a proportion like $\\dfrac{3}{4} = \\dfrac{x}{20}$, students are taught to multiply **diagonally** — $3 \\times 20$ and $4 \\times x$ — set them equal, and solve.",
+        "Faced with a proportion like $\\dfrac{3}{4} = \\dfrac{x}{20}$, students are taught to multiply **diagonally**, $3 \\times 20$ and $4 \\times x$, set them equal, and solve.",
         "It feels like a trick with no reason behind it. In fact it's a single, ordinary move on an equation. Here's the move."
       ]
     },
@@ -13,7 +13,7 @@
       "type": "text",
       "md": [
         "### The proof: clear the denominators",
-        "Start with the proportion. The only thing making it awkward is the two denominators, $b$ and $d$. So get rid of them — by multiplying **both sides by $bd$**. (Whatever you do to one side of an equation, you may do to the other; the balance is preserved.)"
+        "Start with the proportion. The only thing making it awkward is the two denominators, $b$ and $d$. So get rid of them, by multiplying **both sides by $bd$**. (Whatever you do to one side of an equation, you may do to the other; the balance is preserved.)"
       ]
     },
     { "type": "math", "tex": "\\frac{a}{b} = \\frac{c}{d}" },
@@ -35,7 +35,7 @@
     {
       "type": "text",
       "md": [
-        "That's the whole \"trick.\" The diagonal arrows of cross-multiplication are just a picture of *which* terms survive after the denominators cancel — $a$ pairs with $d$, and $b$ pairs with $c$.",
+        "That's the whole \"trick.\" The diagonal arrows of cross-multiplication are just a picture of *which* terms survive after the denominators cancel, $a$ pairs with $d$, and $b$ pairs with $c$.",
         "Every step is reversible, so it works both directions: equal fractions force equal cross-products, and equal cross-products force equal fractions."
       ]
     },

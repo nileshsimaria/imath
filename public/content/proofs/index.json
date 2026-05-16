@@ -16,7 +16,7 @@
       "topic": "Number Operations",
       "proofType": "contradiction",
       "claim": "\\sqrt{2}",
-      "summary": "Assume √2 is a fraction in lowest terms — then watch that assumption destroy itself.",
+      "summary": "Assume √2 is a fraction in lowest terms, then watch that assumption destroy itself.",
       "prerequisites": ["Even and odd numbers", "Fractions in lowest terms"],
       "relatedSubtopics": ["pre-algebra/numbers/square-roots-surds"]
     },
@@ -28,7 +28,7 @@
       "topic": "Decimals & Percents",
       "proofType": "algebraic",
       "claim": "0.\\overline{9} = 1",
-      "summary": "The most argued-about equation in school math — settled three different ways.",
+      "summary": "The most argued-about equation in school math, settled three different ways.",
       "prerequisites": ["Repeating decimals", "Solving a simple equation"],
       "relatedSubtopics": ["pre-algebra/decimals-percents/decimal-fraction"]
     },
@@ -40,7 +40,7 @@
       "topic": "Integers & Operations",
       "proofType": "visual",
       "claim": "1+2+\\cdots+n = \\tfrac{n(n+1)}{2}",
-      "summary": "The trick a 7-year-old Gauss used to stun his teacher — and the picture that makes it obvious.",
+      "summary": "The trick a 7-year-old Gauss used to stun his teacher, and the picture that makes it obvious.",
       "prerequisites": ["Adding integers"],
       "relatedSubtopics": ["pre-algebra/integers/integer-add-sub"]
     },
@@ -52,7 +52,7 @@
       "topic": "Integers & Operations",
       "proofType": "algebraic",
       "claim": "(-a)(-b) = ab",
-      "summary": "Not an arbitrary rule — it is the only answer that keeps arithmetic consistent.",
+      "summary": "Not an arbitrary rule, it is the only answer that keeps arithmetic consistent.",
       "prerequisites": ["Multiplying integers", "The distributive law"],
       "relatedSubtopics": ["pre-algebra/integers/integer-mul-div"]
     },
@@ -76,7 +76,7 @@
       "topic": "Integers & Operations",
       "proofType": "algebraic",
       "claim": "a - (-b) = a + b",
-      "summary": "Two minus signs in a row become a plus — and the number line shows exactly why.",
+      "summary": "Two minus signs in a row become a plus, and the number line shows exactly why.",
       "prerequisites": ["Negative numbers", "The number line"],
       "relatedSubtopics": ["pre-algebra/integers/integer-add-sub"]
     },
@@ -100,7 +100,7 @@
       "topic": "Integers & Operations",
       "proofType": "algebraic",
       "claim": "\\gcd(a,b)\\cdot\\operatorname{lcm}(a,b) = ab",
-      "summary": "Multiply two numbers' GCD and LCM and you get the numbers' product — prime factorization shows why.",
+      "summary": "Multiply two numbers' GCD and LCM and you get the numbers' product, prime factorization shows why.",
       "prerequisites": ["Prime factorization", "GCD and LCM"],
       "relatedSubtopics": ["pre-algebra/integers/factors-multiples"]
     },
@@ -112,7 +112,7 @@
       "topic": "Fractions",
       "proofType": "visual",
       "claim": "\\frac{a}{b}+\\frac{c}{d} = \\frac{ad+bc}{bd}",
-      "summary": "The cross-multiply formula for adding fractions isn't a rule to memorize — it's just re-slicing the pie.",
+      "summary": "The cross-multiply formula for adding fractions isn't a rule to memorize, it's just re-slicing the pie.",
       "prerequisites": ["Equivalent fractions", "Common denominators"],
       "relatedSubtopics": ["pre-algebra/fractions/adding-fractions"]
     },
@@ -136,7 +136,7 @@
       "topic": "Decimals & Percents",
       "proofType": "algebraic",
       "claim": "x\\%\\text{ of }y = y\\%\\text{ of }x",
-      "summary": "Stuck on 18% of 50? Compute 50% of 18 instead — same answer. Here's the proof, and the mental-math superpower it unlocks.",
+      "summary": "Stuck on 18% of 50? Compute 50% of 18 instead, same answer. Here's the proof, and the mental-math superpower it unlocks.",
       "prerequisites": ["Percent as a fraction of 100"],
       "relatedSubtopics": ["pre-algebra/decimals-percents/percent-basics"]
     },
@@ -160,7 +160,7 @@
       "topic": "Number Operations",
       "proofType": "algebraic",
       "claim": "\\sqrt{ab} = \\sqrt{a}\\,\\sqrt{b}",
-      "summary": "The rule that lets you simplify surds like √72 — and the one condition it quietly needs.",
+      "summary": "The rule that lets you simplify surds like √72, and the one condition it quietly needs.",
       "prerequisites": ["Square roots", "Squaring a product"],
       "relatedSubtopics": ["pre-algebra/numbers/square-roots-surds"]
     },
@@ -172,7 +172,7 @@
       "topic": "Decimals & Percents",
       "proofType": "algebraic",
       "claim": "\\tfrac{1}{n}\\text{ terminates} \\iff n = 2^a 5^b",
-      "summary": "Why 1/8 stops dead but 1/3 runs forever — it's all about the denominator's prime factors.",
+      "summary": "Why 1/8 stops dead but 1/3 runs forever, it's all about the denominator's prime factors.",
       "prerequisites": ["Prime factorization", "Place value"],
       "relatedSubtopics": ["pre-algebra/decimals-percents/decimal-fraction"]
     },
@@ -184,7 +184,7 @@
       "topic": "Coordinate Plane",
       "proofType": "visual",
       "claim": "d = \\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}",
-      "summary": "The distance formula isn't new — it's the Pythagorean theorem wearing coordinates.",
+      "summary": "The distance formula isn't new, it's the Pythagorean theorem wearing coordinates.",
       "prerequisites": ["Plotting points", "The Pythagorean theorem"],
       "relatedSubtopics": ["pre-algebra/coordinate-plane/plotting-points"]
     },
@@ -196,7 +196,7 @@
       "topic": "Coordinate Plane",
       "proofType": "visual",
       "claim": "M = \\left(\\tfrac{x_1+x_2}{2},\\ \\tfrac{y_1+y_2}{2}\\right)",
-      "summary": "To find the point halfway between two points, just average the coordinates — here's why that works.",
+      "summary": "To find the point halfway between two points, just average the coordinates, here's why that works.",
       "prerequisites": ["Plotting points", "Averages"],
       "relatedSubtopics": ["pre-algebra/coordinate-plane/plotting-points"]
     },
@@ -208,7 +208,7 @@
       "topic": "Arithmetic Applications",
       "proofType": "pattern",
       "claim": "A = P(1+r)^n",
-      "summary": "Why money grows by a power — and how compound interest pulls away from simple interest.",
+      "summary": "Why money grows by a power, and how compound interest pulls away from simple interest.",
       "prerequisites": ["Percent", "Powers"],
       "relatedSubtopics": ["pre-algebra/arithmetic-applications/simple-compound-interest"]
     },
@@ -220,7 +220,7 @@
       "topic": "Ratios & Proportions",
       "proofType": "algebraic",
       "claim": "\\dfrac{12\\text{ in}}{1\\text{ ft}} = 1",
-      "summary": "Every conversion factor secretly equals the number 1 — which is why converting units never changes the amount.",
+      "summary": "Every conversion factor secretly equals the number 1, which is why converting units never changes the amount.",
       "prerequisites": ["Ratios", "Multiplying by 1"],
       "relatedSubtopics": ["pre-algebra/ratios-proportions/unit-conversion"]
     }

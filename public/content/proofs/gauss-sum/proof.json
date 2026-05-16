@@ -4,7 +4,7 @@
     {
       "type": "text",
       "md": [
-        "There's a famous story: a teacher, hoping for a quiet hour, told the class to add up every number from $1$ to $100$. Within seconds a young boy — Carl Friedrich Gauss — wrote a single number on his slate: **5050**.",
+        "There's a famous story: a teacher, hoping for a quiet hour, told the class to add up every number from $1$ to $100$. Within seconds a young boy, Carl Friedrich Gauss, wrote a single number on his slate: **5050**.",
         "He hadn't added $100$ numbers. He'd spotted a pattern. Here's the pattern, and the picture that proves it."
       ]
     },
@@ -12,7 +12,7 @@
     {
       "type": "text",
       "md": [
-        "### Proof 1 — Fold the list in half",
+        "### Proof 1: Fold the list in half",
         "Write the sum forwards, and underneath it write the *same* sum backwards. Call the sum $S$:"
       ]
     },
@@ -33,9 +33,9 @@
     {
       "type": "text",
       "md": [
-        "### Proof 2 — The picture",
+        "### Proof 2: The picture",
         "Stack the numbers as a **staircase**: a column of height $1$, then $2$, then $3$, up to $n$. The number of squares in the staircase is exactly $1+2+\\cdots+n = S$.",
-        "Take a second, identical staircase, rotate it $180°$, and slot it on top. The two staircases interlock perfectly into a solid **rectangle** — $n$ wide and $(n+1)$ tall. Drag the slider and watch them fit:"
+        "Take a second, identical staircase, rotate it $180°$, and slot it on top. The two staircases interlock perfectly into a solid **rectangle**, $n$ wide and $(n+1)$ tall. Drag the slider and watch them fit:"
       ]
     },
     {
@@ -53,7 +53,7 @@
     {
       "type": "callout",
       "title": "Back to Gauss",
-      "body": "For $1$ to $100$: $\\;\\dfrac{100 \\times 101}{2} = \\dfrac{10100}{2} = 5050.$ One multiplication, one halving — exactly what the boy did in his head."
+      "body": "For $1$ to $100$: $\\;\\dfrac{100 \\times 101}{2} = \\dfrac{10100}{2} = 5050.$ One multiplication, one halving, exactly what the boy did in his head."
     }
   ]
 }

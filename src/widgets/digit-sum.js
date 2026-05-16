@@ -69,7 +69,7 @@ export function mountDigitSum(target, userConfig = {}) {
     const badge = (label, ok) =>
       `<span class="digitsum-badge ${ok ? 'is-yes' : 'is-no'}">${ok ? '✓' : '✗'} ${label}</span>`;
     verdictEl.innerHTML = `
-      <p>Digit sum is <strong>${digitSum}</strong> — so ${n.toLocaleString()} is:</p>
+      <p>Digit sum is <strong>${digitSum}</strong>, so ${n.toLocaleString()} is:</p>
       <div class="digitsum-badges">
         ${badge('divisible by 3', by3)}
         ${badge('divisible by 9', by9)}

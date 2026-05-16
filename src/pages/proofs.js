@@ -62,7 +62,7 @@ export async function renderProofsIndex(root) {
     <main>
       <section class="widgets-hero">
         <h1>Proofs</h1>
-        <p class="widgets-hero-sub">${proofs.length} visual, interactive walkthroughs of <em>why</em> the formulas are true — the most rewarding part of math. No quizzes here; just explore.</p>
+        <p class="widgets-hero-sub">${proofs.length} visual, interactive walkthroughs of <em>why</em> the formulas are true. No quizzes here; just explore.</p>
       </section>
       <div class="proofs-layout">
         <nav class="proofs-rail" aria-label="Courses" data-proofs-rail>${railHtml}</nav>

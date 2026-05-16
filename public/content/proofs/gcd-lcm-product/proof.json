@@ -5,7 +5,7 @@
       "type": "text",
       "md": [
         "Take two numbers, say $12$ and $18$. Their greatest common divisor is $\\gcd(12,18) = 6$. Their least common multiple is $\\operatorname{lcm}(12,18) = 36$.",
-        "Now multiply those two results: $6 \\times 36 = 216$. And the two original numbers? $12 \\times 18 = 216$. **Same number.** This works for *every* pair — here's why."
+        "Now multiply those two results: $6 \\times 36 = 216$. And the two original numbers? $12 \\times 18 = 216$. **Same number.** This works for *every* pair, here's why."
       ]
     },
     { "type": "callout", "title": "The claim", "body": "For any two positive whole numbers, $\\;\\gcd(a,b)\\cdot\\operatorname{lcm}(a,b) = a\\cdot b.$" },
@@ -31,7 +31,7 @@
     {
       "type": "text",
       "md": [
-        "Here's how GCD and LCM are *built* from these — prime by prime:",
+        "Here's how GCD and LCM are *built* from these, prime by prime:",
         "- the **GCD** takes the **smaller** exponent of each prime (the most you can share),",
         "- the **LCM** takes the **larger** exponent of each prime (the least that covers both)."
       ]
@@ -48,15 +48,15 @@
     {
       "type": "text",
       "md": [
-        "(One of them is the smaller, the other the larger — together they're just the two values, in some order.)",
-        "When you **multiply** $\\gcd \\times \\operatorname{lcm}$, the exponents of each prime **add**. So each prime ends up with exponent $\\min + \\max = x + y$ — which is exactly the exponent that prime has in $a \\times b$."
+        "(One of them is the smaller, the other the larger, together they're just the two values, in some order.)",
+        "When you **multiply** $\\gcd \\times \\operatorname{lcm}$, the exponents of each prime **add**. So each prime ends up with exponent $\\min + \\max = x + y$, which is exactly the exponent that prime has in $a \\times b$."
       ]
     },
     { "type": "math", "tex": "\\gcd(a,b)\\cdot\\operatorname{lcm}(a,b) = \\prod_{\\text{primes}} p^{\\,\\min + \\max} = \\prod_{\\text{primes}} p^{\\,x+y} = a\\cdot b \\qquad\\blacksquare" },
     {
       "type": "callout",
       "title": "Why this is useful",
-      "body": "It gives a shortcut: once you know the GCD (easy to find with the Euclidean algorithm), the LCM is free — $\\operatorname{lcm}(a,b) = \\dfrac{a\\,b}{\\gcd(a,b)}$. No need to list multiples at all."
+      "body": "It gives a shortcut: once you know the GCD (easy to find with the Euclidean algorithm), the LCM is free, $\\operatorname{lcm}(a,b) = \\dfrac{a\\,b}{\\gcd(a,b)}$. No need to list multiples at all."
     }
   ]
 }

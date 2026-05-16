@@ -6,22 +6,22 @@
       "md": [
         "To convert $3$ feet into inches, you multiply by a **conversion factor**:",
         "$$3\\text{ ft} \\times \\frac{12\\text{ in}}{1\\text{ ft}} = 36\\text{ in}$$",
-        "But hold on — multiplying changes a number. How can $3$ \"become\" $36$ without changing the actual length? The resolution: that conversion factor is secretly equal to **$1$**."
+        "But hold on, multiplying changes a number. How can $3$ \"become\" $36$ without changing the actual length? The resolution: that conversion factor is secretly equal to **$1$**."
       ]
     },
-    { "type": "callout", "title": "The claim", "body": "Every conversion factor, like $\\dfrac{12\\text{ in}}{1\\text{ ft}}$, equals the number $1$ — so multiplying by it never changes the quantity, only its units." },
+    { "type": "callout", "title": "The claim", "body": "Every conversion factor, like $\\dfrac{12\\text{ in}}{1\\text{ ft}}$, equals the number $1$, so multiplying by it never changes the quantity, only its units." },
     {
       "type": "text",
       "md": [
-        "### Step 1 — A conversion fact is an equation",
-        "\"$12$ inches make a foot\" isn't a fraction — it's a statement that two lengths are **the same**:"
+        "### Step 1: A conversion fact is an equation",
+        "\"$12$ inches make a foot\" isn't a fraction, it's a statement that two lengths are **the same**:"
       ]
     },
     { "type": "math", "tex": "12\\text{ in} = 1\\text{ ft}" },
     {
       "type": "text",
       "md": [
-        "### Step 2 — Divide both sides by the same thing",
+        "### Step 2: Divide both sides by the same thing",
         "Take that equation and divide both sides by $1\\text{ ft}$. Whatever you do to one side of a true equation, you may do to the other:"
       ]
     },
@@ -29,14 +29,14 @@
     {
       "type": "text",
       "md": [
-        "The conversion factor literally **equals $1$**. (Divide the other way and you get $\\dfrac{1\\text{ ft}}{12\\text{ in}} = 1$ too — both directions are $1$.)"
+        "The conversion factor literally **equals $1$**. (Divide the other way and you get $\\dfrac{1\\text{ ft}}{12\\text{ in}} = 1$ too, both directions are $1$.)"
       ]
     },
     {
       "type": "text",
       "md": [
-        "### Step 3 — Multiplying by 1 changes nothing",
-        "So when you write $3\\text{ ft} \\times \\dfrac{12\\text{ in}}{1\\text{ ft}}$, you are multiplying by $1$. The *amount* of length is untouched — exactly as $5 \\times 1 = 5$.",
+        "### Step 3: Multiplying by 1 changes nothing",
+        "So when you write $3\\text{ ft} \\times \\dfrac{12\\text{ in}}{1\\text{ ft}}$, you are multiplying by $1$. The *amount* of length is untouched, exactly as $5 \\times 1 = 5$.",
         "What the factor *does* change is the **bookkeeping**: the \"ft\" on top of $3\\text{ ft}$ cancels the \"ft\" on the bottom of the factor, the way identical numbers cancel in a fraction:"
       ]
     },
@@ -44,7 +44,7 @@
     {
       "type": "callout",
       "title": "The practical rule",
-      "body": "Always write the conversion factor with the **old unit on the bottom**, so it cancels — and the **new unit on top**, so it survives. Pick that orientation and the units do the thinking for you. $\\blacksquare$"
+      "body": "Always write the conversion factor with the **old unit on the bottom**, so it cancels, and the **new unit on top**, so it survives. Pick that orientation and the units do the thinking for you. $\\blacksquare$"
     }
   ]
 }

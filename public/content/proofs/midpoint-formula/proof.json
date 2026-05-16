@@ -13,8 +13,8 @@
     {
       "type": "text",
       "md": [
-        "### Step 1 — The middle of two numbers is their average",
-        "Forget the grid for a moment. On a plain number line, what sits exactly halfway between $4$ and $10$? It's $7$ — and $7 = \\dfrac{4+10}{2}$.",
+        "### Step 1: The middle of two numbers is their average",
+        "Forget the grid for a moment. On a plain number line, what sits exactly halfway between $4$ and $10$? It's $7$, and $7 = \\dfrac{4+10}{2}$.",
         "That's no accident. The average $\\dfrac{x_1+x_2}{2}$ is *defined* to be the same distance from $x_1$ as from $x_2$:"
       ]
     },
@@ -22,17 +22,17 @@
     {
       "type": "text",
       "md": [
-        "Both gaps equal $\\dfrac{x_2-x_1}{2}$ — the average is genuinely in the middle."
+        "Both gaps equal $\\dfrac{x_2-x_1}{2}$, the average is genuinely in the middle."
       ]
     },
     {
       "type": "text",
       "md": [
-        "### Step 2 — A point's two coordinates move independently",
+        "### Step 2: A point's two coordinates move independently",
         "Travelling from one point to the other, your horizontal position and your vertical position change **separately**. To be halfway along the journey, you must be halfway in the horizontal direction *and* halfway in the vertical direction.",
         "- Halfway between the $x$-coordinates: the average $\\dfrac{x_1+x_2}{2}$.",
         "- Halfway between the $y$-coordinates: the average $\\dfrac{y_1+y_2}{2}$.",
-        "Below, $A$ and $B$ are the endpoints and $M$ is their midpoint — check that $M$'s coordinates are exactly the averages of $A$'s and $B$'s."
+        "Below, $A$ and $B$ are the endpoints and $M$ is their midpoint, check that $M$'s coordinates are exactly the averages of $A$'s and $B$'s."
       ]
     },
     {
@@ -50,7 +50,7 @@
     {
       "type": "callout",
       "title": "A geometric echo",
-      "body": "The midpoint also cuts the rise/run right triangle (from the distance proof) into two identical smaller triangles — half the horizontal leg, half the vertical leg. Same idea, seen as similar triangles instead of averages."
+      "body": "The midpoint also cuts the rise/run right triangle (from the distance proof) into two identical smaller triangles, half the horizontal leg, half the vertical leg. Same idea, seen as similar triangles instead of averages."
     }
   ]
 }

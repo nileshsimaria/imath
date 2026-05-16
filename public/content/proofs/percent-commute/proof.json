@@ -4,7 +4,7 @@
     {
       "type": "text",
       "md": [
-        "Quick — what is $18\\%$ of $50$? That looks unpleasant. But $50\\%$ of $18$ is just *half of 18*, which is $9$.",
+        "Quick, what is $18\\%$ of $50$? That looks unpleasant. But $50\\%$ of $18$ is just *half of 18*, which is $9$.",
         "And here's the secret: those two questions have the **same answer**. $18\\%$ of $50$ *is* $9$. You're allowed to swap the numbers whenever it makes the arithmetic easier."
       ]
     },
@@ -28,14 +28,14 @@
     {
       "type": "text",
       "md": [
-        "Both phrases collapsed to the **same expression** — because multiplication doesn't care about order ($xy = yx$). Two things equal to $\\dfrac{xy}{100}$ are equal to each other:"
+        "Both phrases collapsed to the **same expression**, because multiplication doesn't care about order ($xy = yx$). Two things equal to $\\dfrac{xy}{100}$ are equal to each other:"
       ]
     },
     { "type": "math", "tex": "x\\%\\text{ of }y \\;=\\; \\frac{xy}{100} \\;=\\; y\\%\\text{ of }x \\qquad\\blacksquare" },
     {
       "type": "text",
       "md": [
-        "On a $100$-square, \"$x\\%$ of $y$\" and \"$y\\%$ of $x$\" shade the *same rectangle* — one counts it by rows, the other by columns. Same shaded area, every time."
+        "On a $100$-square, \"$x\\%$ of $y$\" and \"$y\\%$ of $x$\" shade the *same rectangle*, one counts it by rows, the other by columns. Same shaded area, every time."
       ]
     },
     {
@@ -46,7 +46,7 @@
     {
       "type": "callout",
       "title": "Your new mental-math superpower",
-      "body": "Whenever a percent looks ugly, flip it. $4\\%$ of $75$? Swap to $75\\%$ of $4 = 3$. $12\\%$ of $25$? That's $25\\%$ of $12 = 3$. Pick whichever order your brain finds easy — the answer is identical."
+      "body": "Whenever a percent looks ugly, flip it. $4\\%$ of $75$? Swap to $75\\%$ of $4 = 3$. $12\\%$ of $25$? That's $25\\%$ of $12 = 3$. Pick whichever order your brain finds easy, the answer is identical."
     }
   ]
 }

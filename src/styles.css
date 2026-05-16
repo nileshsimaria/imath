@@ -191,6 +191,17 @@ button {
   color: var(--text-muted);
   margin-top: 2px;
 }
+.search-result-kind {
+  flex: 0 0 auto;
+  padding: 1px 7px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.search-kind-proof { background: var(--accent-soft); color: var(--accent); }
+.search-kind-blog { background: #f1f5f9; color: var(--text-muted); }
 .search-empty {
   padding: 16px;
   font-size: 13px;

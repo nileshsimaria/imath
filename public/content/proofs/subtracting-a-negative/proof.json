@@ -4,7 +4,7 @@
     {
       "type": "text",
       "md": [
-        "\"Two negatives make a positive\" — students hear it for multiplication, then get told it works for subtraction too: $7 - (-3) = 7 + 3 = 10$.",
+        "\"Two negatives make a positive\", students hear it for multiplication, then get told it works for subtraction too: $7 - (-3) = 7 + 3 = 10$.",
         "But *why* does taking away a negative make a number **bigger**? Here are two ways to be sure it must."
       ]
     },
@@ -12,7 +12,7 @@
     {
       "type": "text",
       "md": [
-        "### Proof 1 — Follow the pattern",
+        "### Proof 1: Follow the pattern",
         "Hold the first number at $7$ and subtract a column of shrinking numbers. Each time the number being subtracted drops by $1$, the answer goes **up** by $1$:"
       ]
     },
@@ -27,23 +27,23 @@
     {
       "type": "text",
       "md": [
-        "Subtracting $-3$ landed on $10$ — exactly where $7 + 3$ lands."
+        "Subtracting $-3$ landed on $10$, exactly where $7 + 3$ lands."
       ]
     },
     {
       "type": "text",
       "md": [
-        "### Proof 2 — Subtraction *is* adding the opposite",
+        "### Proof 2: Subtraction *is* adding the opposite",
         "Subtraction has a precise definition: to subtract a number means to **add its opposite**.",
         "$$a - x = a + (-x)$$",
-        "Now substitute $x = -b$. The opposite of $-b$ is $+b$ — flipping a sign twice returns you to the start:"
+        "Now substitute $x = -b$. The opposite of $-b$ is $+b$, flipping a sign twice returns you to the start:"
       ]
     },
     { "type": "math", "tex": "a - (-b) = a + \\big(-(-b)\\big) = a + b" },
     {
       "type": "text",
       "md": [
-        "On the number line this is the cleanest picture: adding a positive number is a step to the **right**. Subtracting $-b$ reverses the leftward pull of a negative — so it, too, steps right. Try it: set the start, then add a positive amount."
+        "On the number line this is the cleanest picture: adding a positive number is a step to the **right**. Subtracting $-b$ reverses the leftward pull of a negative, so it, too, steps right. Try it: set the start, then add a positive amount."
       ]
     },
     {
@@ -54,7 +54,7 @@
     {
       "type": "callout",
       "title": "The takeaway",
-      "body": "A negative number pulls you left; *removing* that pull lets you go right. \"Minus a minus\" is plus — not by decree, but because subtraction was defined as adding the opposite. $\\blacksquare$"
+      "body": "A negative number pulls you left; *removing* that pull lets you go right. \"Minus a minus\" is plus, not by decree, but because subtraction was defined as adding the opposite. $\\blacksquare$"
     }
   ]
 }
