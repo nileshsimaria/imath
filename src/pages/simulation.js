@@ -31,6 +31,15 @@ export async function renderSimulation(root, id) {
         .join('')}</div>`
     : '';
 
+  // "Next simulation" link, wrapping around the list so the tour never ends.
+  const sims = index?.simulations || [];
+  let nextLink = '';
+  if (meta && sims.length > 1) {
+    const i = sims.findIndex((s) => s.id === id);
+    const next = sims[(i + 1) % sims.length];
+    nextLink = `<a class="btn btn-primary" href="#/simulations/${encodeURIComponent(next.id)}">Next simulation: ${escapeHtml(next.title)} →</a>`;
+  }
+
   root.innerHTML = `
     ${renderHeader({})}
     <main>
@@ -39,8 +48,9 @@ export async function renderSimulation(root, id) {
         <h1>${escapeHtml(meta?.title || 'Simulation')}</h1>
         ${tags}
         <div data-sim-body><p>Loading…</p></div>
-        <div class="lesson-actions">
+        <div class="lesson-actions proof-page-actions">
           <a class="btn" href="#/simulations">← All simulations</a>
+          ${nextLink}
         </div>
       </article>
     </main>

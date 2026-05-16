@@ -6,6 +6,12 @@
       "title": "Estimating π with Monte Carlo",
       "summary": "Throw random darts at a circle and watch the number π emerge out of pure chance.",
       "tags": ["Monte Carlo", "Probability", "Geometry"]
+    },
+    {
+      "id": "monty-hall",
+      "title": "The Monty Hall Problem",
+      "summary": "A game-show puzzle so counterintuitive it fooled mathematicians. Let 10,000 simulated games settle it.",
+      "tags": ["Monte Carlo", "Probability", "Paradox"]
     }
   ]
 }

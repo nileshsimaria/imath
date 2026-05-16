@@ -1,0 +1,70 @@
+{
+  "title": "The Monty Hall Problem",
+  "blocks": [
+    {
+      "type": "text",
+      "md": [
+        "### A puzzle that fooled the experts",
+        "You are on a game show. There are **three doors**. Behind one is a car; behind the other two are goats. You want the car.",
+        "You pick a door, say Door 1. The host, who knows what is behind every door, opens one of the other two doors, say Door 3, and reveals a goat. Two doors are still shut: your Door 1, and Door 2.",
+        "Then the host offers you a choice: **stick with your door, or switch to the other closed one.** Should you switch?"
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### What does your gut say?",
+        "Most people answer instantly: it makes no difference. Two doors are left, one hides the car, so it is a 50/50 coin flip. Switching cannot possibly help.",
+        "That feels obvious. It is also wrong. Hold that thought."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The surprising answer",
+      "body": "If you switch, you win the car 2 out of 3 times. If you stay, you win only 1 out of 3 times. Switching *doubles* your chances. When this answer was published in 1990, thousands of readers wrote in to insist it was wrong, including people holding mathematics PhDs."
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Why switching wins",
+        "The trick is to look at the moment you **first** picked, before any door was opened.",
+        "Your door had a **1 in 3** chance of hiding the car. That means the **other two doors together** held a **2 in 3** chance. Nothing the host does afterwards changes what was true at that moment.",
+        "Now the important part: the host does **not** open a door at random. He knows where the car is, and he *always* opens a goat. So he is not adding luck, he is doing you a favour. He takes that whole **2 in 3** chance, which was spread across two doors, and squeezes it onto the **single** door he leaves closed.",
+        "Stay, and you keep your original 1 in 3. Switch, and you collect the full 2 in 3."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### The 1000-door version",
+        "Still feels strange? Make the numbers bigger.",
+        "Imagine **1000 doors**. One car, 999 goats. You pick a single door. Your chance of being right is **1 in 1000**, almost hopeless.",
+        "Now the host, who knows everything, opens **998** other doors, every single one a goat, leaving just your door and one other still closed.",
+        "Would you switch? Of course you would. Your first guess was a 1-in-1000 long shot, while that one remaining door is carrying the other **999 in 1000**. The three-door version is the very same idea, just harder to feel."
+      ]
+    },
+    {
+      "type": "text",
+      "md": [
+        "### Do not argue. Simulate.",
+        "Here is where Monte Carlo earns its keep. We do not need to win this argument with clever words. We can just **play the game thousands of times and count**.",
+        "First, play a few rounds by hand below: pick a door, watch the host reveal a goat, then choose to stay or switch. When you have a feel for it, hand the game to the computer: press *+1000* or *Run* and watch the two win rates settle."
+      ]
+    },
+    { "type": "widget", "kind": "monty-hall" },
+    {
+      "type": "text",
+      "md": [
+        "### What you will see",
+        "Played by hand, the result feels random: a few wins, a few losses. That is the trap. A handful of rounds is far too few to reveal the truth, exactly like a single dart in the π simulation.",
+        "Then let the computer play thousands of games. The green *switch* line climbs and settles at **66.7%**. The rose *stay* line settles at **33.3%**. An argument that raged for years is over in a few seconds."
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "spotlight",
+      "title": "🎯 A second superpower of Monte Carlo",
+      "body": "Notice that this simulation did something new. The π experiment used Monte Carlo to **estimate a number**. Here, Monte Carlo did something arguably more powerful: it **settled a dispute**.\nThe Monty Hall problem is famous because human intuition gets it *confidently wrong*. Clever people argued about it for years. But a simulation does not care how strong your gut feeling is. Run 100,000 honest games and the truth is simply there, sitting in the counts.\nThat is the second superpower of Monte Carlo: when reasoning and intuition disagree, it is an **honest referee**. Build the experiment fairly, run it enough times, and the right answer has nowhere left to hide."
+    }
+  ]
+}

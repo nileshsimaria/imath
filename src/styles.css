@@ -3662,3 +3662,61 @@ main:has(.lesson-wide) { max-width: min(1500px, calc(100vw - 32px)); }
 .mc-speed input[type="range"] { width: 110px; }
 .mc-speed .val { font-size: 12px; color: var(--accent); font-weight: 700; min-width: 64px; }
 
+/* ── monty-hall simulation widget ───────────────────── */
+.mh-wrap { display: flex; flex-direction: column; gap: 14px; }
+.mh-doors { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.mh-door {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 104px;
+  padding: 14px 8px;
+  border: 2px solid var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  cursor: pointer;
+  transition: border-color 0.12s ease, background 0.12s ease, transform 0.1s ease;
+}
+.mh-door:not(:disabled):hover { border-color: var(--accent); transform: translateY(-2px); }
+.mh-door:disabled { cursor: default; }
+.mh-door-face { font-size: 42px; line-height: 1; }
+.mh-door-label { font-size: 12px; font-weight: 600; color: var(--text-muted); }
+.mh-door-open { background: var(--bg-soft); }
+.mh-door-pick { border-color: var(--accent); background: var(--accent-soft); }
+.mh-door-final { border-color: #16a34a; box-shadow: 0 0 0 3px #dcfce7; }
+.mh-status {
+  text-align: center;
+  font-size: 15px;
+  margin: 4px 0;
+  min-height: 44px;
+}
+.mh-choice { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.mh-btn-choice {
+  padding: 9px 18px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+}
+.mh-btn-choice:hover { background: var(--bg-soft); }
+.mh-btn-switch { background: var(--accent); border-color: var(--accent); color: #fff; }
+.mh-btn-switch:hover { background: var(--accent-hover); }
+.mh-score { text-align: center; font-size: 13px; color: var(--text-muted); margin: 0; }
+.mh-sim {
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.mh-sim-head { font-size: 14px; font-weight: 700; color: var(--text); }
+.mh-chart { width: 100%; height: auto; }
+.mh-stat-switch { background: #dcfce7; border-color: #86efac; }
+.mh-stat-switch .mc-stat-val { color: #15803d; }
+.mh-stat-stay { background: #ffe4e6; border-color: #fecdd3; }
+.mh-stat-stay .mc-stat-val { color: #be123c; }
+
